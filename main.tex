@@ -97,7 +97,7 @@
 
 The CERN Proton Synchrotron (PS), alongside providing intermediary acceleration for hadron and ion beams for the Super Proton Synchrotron (SPS) and eventually the Large Hadron Collider (LHC), provides beams for the many fixed target experiments located at the East Area (EA) experimental facility. This facility, as illustrated in \autoref{fig:eadiagram}, consists of the proton (IRRAD) and mixed-field (CHARM) irradiation facilities, via a dedicated \qty{24}{GeV/c} beamline, in addition to a multi-target beamline providing three secondary beams.
 
-Ongoing experiments in these facilities such as the CHARM High-energy Ions for Micro Electronics Reliability Assurance (CHIMERA)~\cite{Fraser:feasibility} use high-Z ions (Pb) to simulate the harsh radiation environment of cosmic rays which satellites experience. Using low-intensity (\qty{<e6}{ions/spill}), high-energy (\qty{>100}{\MeV / u}) beams, customers such as the European Space Agency can assess the reliability of new materials in these environments. \autoref{fig:p_pb_injection} illustrates the two injection chains of the PS, either with Lead Ions sourced from the Linear Accelerator 3 (Linac3) and Low Energy Ion Ring (LEIR) chain, or Protons from the Linac4 and the Proton Synchrotron Booster (PSB).
+Ongoing experiments in these facilities such as the CHARM High-energy Ions for Micro Electronics Reliability Assurance (CHIMERA)~\cite{Fraser:feasibility} use high-Z ions (Pb) to simulate the harsh radiation environment of cosmic rays which satellites experience. Using low-intensity (\qty{<e6}{ions/spill}), high-energy (\qty{>100}{\MeV / u}) beams, customers such as the European Space Agency can assess the reliability of new materials in these environments. \autoref{fig:chain} illustrates the two injection chains of the PS, either with Lead Ions sourced from the Linear Accelerator 3 (Linac3) and Low Energy Ion Ring (LEIR) chain, or Protons from the Linac4 and the Proton Synchrotron Booster (PSB).
 
 \begin{figure}\label{fig:eadiagram}
 
@@ -159,65 +159,120 @@ Ongoing experiments in these facilities such as the CHARM High-energy Ions for M
 
 \end{figure}
 
-\begin{figure}\label{fig:p_pb_injection}
+\begin{figure}\label{fig:chain}
 \centering
-
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+%uncomment if require: \path (0,715); %set diagram left start at 0, and has height of 715
 
+%Straight Lines [id:da7540653615577577] 
+\draw [line width=3]    (265,50) -- (420,50) ;
+%Straight Lines [id:da8486953376571773] 
+\draw [line width=3]    (250,438.1) -- (250,350) ;
+%Straight Lines [id:da45889358113716705] 
+\draw [color={rgb, 255:red, 255; green, 255; blue, 255 }  ,draw opacity=1 ][line width=6]    (223.75,360.6) -- (283.75,360.6) ;
 %Straight Lines [id:da5948952889631192] 
-\draw [line width=3]    (100,205) -- (164,204.6) ;
+\draw [line width=3]    (90,515.6) -- (154,515.2) ;
 %Straight Lines [id:da30159595859877464] 
-\draw [line width=3]    (100,50) -- (190,50) ;
+\draw [line width=3]    (90,360.6) -- (180,360.6) ;
 %Curve Lines [id:da1754170813900049] 
-\draw [line width=3]    (223,204.6) .. controls (262,204.6) and (261,163.6) .. (260,127.5) ;
+\draw [line width=3]    (213,515.2) .. controls (252,515.2) and (251,474.2) .. (250,438.1) ;
 %Shape: Parallelogram [id:dp44360400170472825] 
-\draw  [fill={rgb, 255:red, 248; green, 200; blue, 220 }  ,fill opacity=1 ] (35.24,39.4) -- (110,39.4) -- (100.76,60) -- (26,60) -- cycle ;
+\draw  [fill={rgb, 255:red, 248; green, 200; blue, 220 }  ,fill opacity=1 ] (25.24,350) -- (100,350) -- (90.76,370.6) -- (16,370.6) -- cycle ;
 %Shape: Circle [id:dp8675903510876994] 
-\draw  [line width=3]  (157.5,82.5) .. controls (157.5,64.55) and (172.05,50) .. (190,50) .. controls (207.95,50) and (222.5,64.55) .. (222.5,82.5) .. controls (222.5,100.45) and (207.95,115) .. (190,115) .. controls (172.05,115) and (157.5,100.45) .. (157.5,82.5) -- cycle ;
+\draw  [line width=3]  (147.5,393.1) .. controls (147.5,375.15) and (162.05,360.6) .. (180,360.6) .. controls (197.95,360.6) and (212.5,375.15) .. (212.5,393.1) .. controls (212.5,411.05) and (197.95,425.6) .. (180,425.6) .. controls (162.05,425.6) and (147.5,411.05) .. (147.5,393.1) -- cycle ;
 %Straight Lines [id:da8930952466167899] 
-\draw [line width=3]    (190,50) -- (337.5,50) ;
+\draw [line width=3]    (180,360.6) -- (327.5,360.6) ;
 %Shape: Circle [id:dp4778308606413135] 
-\draw  [line width=3]  (260,127.5) .. controls (260,84.7) and (294.7,50) .. (337.5,50) .. controls (380.3,50) and (415,84.7) .. (415,127.5) .. controls (415,170.3) and (380.3,205) .. (337.5,205) .. controls (294.7,205) and (260,170.3) .. (260,127.5) -- cycle ;
+\draw  [line width=3]  (250,438.1) .. controls (250,395.3) and (284.7,360.6) .. (327.5,360.6) .. controls (370.3,360.6) and (405,395.3) .. (405,438.1) .. controls (405,480.9) and (370.3,515.6) .. (327.5,515.6) .. controls (284.7,515.6) and (250,480.9) .. (250,438.1) -- cycle ;
 %Shape: Parallelogram [id:dp4706219846500248] 
-\draw  [fill={rgb, 255:red, 200; green, 209; blue, 248 }  ,fill opacity=1 ] (35.24,194) -- (110,194) -- (100.76,214.6) -- (26,214.6) -- cycle ;
+\draw  [fill={rgb, 255:red, 200; green, 209; blue, 248 }  ,fill opacity=1 ] (25.24,504.6) -- (100,504.6) -- (90.76,525.2) -- (16,525.2) -- cycle ;
 %Rounded Rect [id:dp7461155691700883] 
-\draw  [line width=3]  (147,221.6) .. controls (147,212.21) and (154.61,204.6) .. (164,204.6) -- (223,204.6) .. controls (232.39,204.6) and (240,212.21) .. (240,221.6) -- (240,241.6) .. controls (240,250.99) and (232.39,258.6) .. (223,258.6) -- (164,258.6) .. controls (154.61,258.6) and (147,250.99) .. (147,241.6) -- cycle ;
+\draw  [line width=3]  (137,532.2) .. controls (137,522.81) and (144.61,515.2) .. (154,515.2) -- (213,515.2) .. controls (222.39,515.2) and (230,522.81) .. (230,532.2) -- (230,552.2) .. controls (230,561.59) and (222.39,569.2) .. (213,569.2) -- (154,569.2) .. controls (144.61,569.2) and (137,561.59) .. (137,552.2) -- cycle ;
 %Straight Lines [id:da3035707453022254] 
-\draw [line width=3]    (337.5,50) -- (437,50) ;
+\draw [line width=3]    (330,360) -- (429.5,360) ;
 %Shape: Parallelogram [id:dp16470111074124638] 
-\draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (417.7,41) -- (480,41) -- (472.3,61) -- (410,61) -- cycle ;
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (123,40) -- (143,50) -- (123,60) -- (133,50) -- cycle ;
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (123,195) -- (143,205) -- (123,215) -- (133,205) -- cycle ;
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (386,40) -- (406,50) -- (386,60) -- (396,50) -- cycle ;
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (411.14,175.85) -- (390,183.14) -- (396.85,161.86) -- (397,176) -- cycle ;
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (229.14,102.85) -- (208,110.14) -- (214.85,88.86) -- (215,103) -- cycle ;
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (250.14,249.85) -- (229,257.14) -- (235.85,235.86) -- (236,250) -- cycle ;
+\draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (407.7,351.6) -- (470,351.6) -- (462.3,371.6) -- (400,371.6) -- cycle ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (113,350.6) -- (133,360.6) -- (113,370.6) -- (123,360.6) -- cycle ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (113,505.6) -- (133,515.6) -- (113,525.6) -- (123,515.6) -- cycle ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (378.5,350) -- (398.5,360) -- (378.5,370) -- (388.5,360) -- cycle ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (401.14,487.45) -- (380,494.74) -- (386.85,473.46) -- (387,487.6) -- cycle ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (219.14,413.45) -- (198,420.74) -- (204.85,399.46) -- (205,413.6) -- cycle ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (240.14,560.45) -- (219,567.74) -- (225.85,546.46) -- (226,560.6) -- cycle ;
+%Shape: Circle [id:dp9901097507710332] 
+\draw  [line width=3]  (140,175) .. controls (140,105.96) and (195.96,50) .. (265,50) .. controls (334.04,50) and (390,105.96) .. (390,175) .. controls (390,244.04) and (334.04,300) .. (265,300) .. controls (195.96,300) and (140,244.04) .. (140,175) -- cycle ;
+%Curve Lines [id:da3054372073829419] 
+\draw [line width=3]    (250,350) .. controls (253.6,291.4) and (140.6,344.4) .. (140,175) ;
+%Shape: Parallelogram [id:dp3214585127401499] 
+\draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (407.7,40.5) -- (470,40.5) -- (462.3,60.5) -- (400,60.5) -- cycle ;
+
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (350,40) -- (370,50) -- (350,60) -- (360,50) -- cycle ;
+%Straight Lines [id:da08946820940627909] 
+\draw [line width=3]    (140,70) -- (140,175) ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (130,110) -- (140,90) -- (150,110) -- (140,100) -- cycle ;
+%Shape: Parallelogram [id:dp6128077419955296] 
+\draw  [fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (113.7,50.5) -- (176,50.5) -- (168.3,70.5) -- (106,70.5) -- cycle ;
+
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (192.89,313.84) -- (181.63,294.52) -- (203.84,297.11) -- (190,300) -- cycle ;
+%Straight Lines [id:da40039089790556215] 
+\draw [line width=3]    (362.47,96.47) -- (468,210) ;
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (429.66,151.92) -- (435.96,173.38) -- (415.02,165.54) -- (429.15,166.05) -- cycle ;
+%Shape: Parallelogram [id:dp61951246512983] 
+\draw  [fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (427.7,200.5) -- (490,200.5) -- (482.3,220.5) -- (420,220.5) -- cycle ;
+
+%Shape: Diamond [id:dp5968775206687464] 
+\draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (140,162) -- (153,175) -- (140,188) -- (127,175) -- cycle ;
+%Shape: Diamond [id:dp5096879765629276] 
+\draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (362.47,83.47) -- (375.47,96.47) -- (362.47,109.47) -- (349.47,96.47) -- cycle ;
+%Shape: Diamond [id:dp9430644146592169] 
+\draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (250,425.1) -- (263,438.1) -- (250,451.1) -- (237,438.1) -- cycle ;
+%Shape: Diamond [id:dp25472441854506345] 
+\draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (180,347.6) -- (193,360.6) -- (180,373.6) -- (167,360.6) -- cycle ;
+%Shape: Diamond [id:dp9608622058446399] 
+\draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (213,502.2) -- (226,515.2) -- (213,528.2) -- (200,515.2) -- cycle ;
+%Shape: Circle [id:dp5729820439414828] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (252.5,50) .. controls (252.5,43.1) and (258.1,37.5) .. (265,37.5) .. controls (271.9,37.5) and (277.5,43.1) .. (277.5,50) .. controls (277.5,56.9) and (271.9,62.5) .. (265,62.5) .. controls (258.1,62.5) and (252.5,56.9) .. (252.5,50) -- cycle ;
+%Shape: Circle [id:dp7472646822981175] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (315,360.6) .. controls (315,353.7) and (320.6,348.1) .. (327.5,348.1) .. controls (334.4,348.1) and (340,353.7) .. (340,360.6) .. controls (340,367.5) and (334.4,373.1) .. (327.5,373.1) .. controls (320.6,373.1) and (315,367.5) .. (315,360.6) -- cycle ;
 
 % Text Node
-\draw (327,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {PS};
+\draw (317,430.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {PS};
 % Text Node
-\draw (41,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {Protons};
+\draw (31,372.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Protons};
 % Text Node
-\draw (424.7,43) node [anchor=north west][inner sep=0.75pt]   [align=left] {EAST};
+\draw (414.7,353.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {EAST};
 % Text Node
-\draw (41,42) node [anchor=north west][inner sep=0.75pt]   [align=left] {LINAC4};
+\draw (31,352.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {LINAC4};
 % Text Node
-\draw (174,74) node [anchor=north west][inner sep=0.75pt]   [align=left] {PSB};
+\draw (164,384.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {PSB};
 % Text Node
-\draw (41,196.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {LINAC3};
+\draw (31,507.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {LINAC3};
 % Text Node
-\draw (39,175) node [anchor=north west][inner sep=0.75pt]   [align=left] {Lead Ions};
+\draw (29,485.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Lead Ions};
 % Text Node
-\draw (175,223) node [anchor=north west][inner sep=0.75pt]   [align=left] {LEIR};
+\draw (165,533.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {LEIR};
 % Text Node
-\draw (180,122) node [anchor=north west][inner sep=0.75pt]   [align=left] {H+};
+\draw (170,432.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {H+};
 % Text Node
-\draw (171,182) node [anchor=north west][inner sep=0.75pt]   [align=left] {Pb+54};
+\draw (161,492.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Pb+54};
+% Text Node
+\draw (249,166.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{23.13pt}\setlength\topsep{0pt}
+\begin{center}
+SPS
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (407.5,42) node [anchor=north west][inner sep=0.75pt]   [align=left] {NORTH};
+% Text Node
+\draw (119,52) node [anchor=north west][inner sep=0.75pt]   [align=left] {LHC 1};
+% Text Node
+\draw (433,202) node [anchor=north west][inner sep=0.75pt]   [align=left] {LHC 2};
+
+
 \end{tikzpicture}
-\caption{Layout diagram of the two injection chains for the PS: either Protons (H+ ions) from Linac4, accelerated by the PSB; or Ions (Pb+54) from Linac 3, accelerated by the LEIR.}
+
+\caption{Layout diagram of the primary acceleration chain at CERN. Particles are sourced from either Linac 3 (for Lead ions) or Linac4 (for Protons), and accelerated through the LEIR or PSB respectively. After injection and acceleration in the PS, beams are extracted either to the SPS or East Area (EA). Particles at the SPS are either extracted at two LHC extraction locations, or towards the North area. Red diamonds mark Fast extraction locations, and blue circles mark Slow extraction regions.}
 
 \end{figure}
 
@@ -234,8 +289,17 @@ The CHIMERA experiment, and other experiments located at the East Area and its S
   \item \todo{Electronics reliability: CHIMERA STATUS \url{https://indico.cern.ch/event/1116677/contributions/4695314/attachments/2400040/4104314/CHIMERA\%20status\%20and\%20outlook.pdf}}
 \end{enumerate}
 
+To move particles between successive accelerators along the primary CERN acceleration chain, the PSB, PS, and SPS are equipped with fast extraction systems. The theory and methodology of these processes will be fully explored in the next section, but a general overview and understanding of its benefits and disadvantages can help motivate the use of \textit{slow} extraction. 
 
-In order to provide a long-duration spill, {\it slow extraction} must be used. Where fast extraction and injection methods utilise kicker magnets to move entire particle bunches between successive accelerators, slow extraction regimes rely on manipulating the beam to extract a small fraction of the available particles over a large number of turns. This regime produces the desired spill, but can be very sensitive to small changes of parameters. Accurately simulating the entire extraction process can often take tremendous processing power, as each of the $~10^{12}$ particles need to be tracked for many thousands of turns.
+As previously mentioned, fast extraction provides a spill of particles typically over the duration of one turn. A strong magnet, at a suitable location in the machine, imparts a large ``outwards'' (away from the centre of revolution) deflective force to a bunch of particles. This ejects the particle bunch from the nominal orbit trajectory, where it encounters a second magnet---called a septum---to align the particle bunch along a transfer line. The opposite effect is then used to inject the bunch into the next machine: a magnet ``kicks'' the particles onto the circulating beam trajectory.
+
+This general method of fast \textit{single-turn} extraction is performed at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating beamlines in the LHC~\cite{Fraser:CAS}. The PSB performs similar extraction, but has the added complexity of ``merging'' four seperate stacked accelerators to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems are shown in~\ref{fig:chain}, where red diamonds mark fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain.
+
+In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched. Multi-turn fast extraction extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is almost approximately 11 times longer in circumference than the PS (\qty{628}{m})\footnote{The PS is 100 meters across, and therefore $200\pi$\si{m}}, the entire SPS can be filled by 11 successive extractions of the full PS. This method, coined as \textit{continuous transfer} (CT)
+
+%-----------------------------------------------------------%
+
+In order to provide a long-duration spill, \textit{slow extraction} must be used. Where fast extraction and injection methods utilise kicker magnets to move entire particle bunches between successive accelerators, slow extraction regimes rely on manipulating the beam to extract a small fraction of the available particles over a large number of turns. This regime produces the desired spill, but can be very sensitive to small changes of parameters. Accurately simulating the entire extraction process can often take tremendous processing power, as each of the $~10^{12}$ particles need to be tracked for many thousands of turns.
 
 Therefore, to accurately simulate the spill produced by these extraction methods, one must first understand the fundamentals of accelerator beam dynamics, and grasp the technical challenges faced with simulation efforts. This thesis will first construct the required dynamic system of particle motion in a circular accelerator, and then introduce the theory behind slow extraction and the method used in this paper. Establishing a motivation for accurate and fast simulations slow extraction, various simulation methods will be presented, compared, and benchmarked with real-world data taken with the CERN PS.
 
@@ -493,7 +557,7 @@ K(s)=-\left(k(s)-\frac 1{\rho(s)^2}\right)
 
 \nocite{*}
 \bibliographystyle{IEEEtran} % We choose the "plain" reference style
-\bibliography{refs} % Entries are in the refs.bib file
+\bibliography{refs.bib} % Entries are in the refs.bib file
 
 \begin{appendices}
 
