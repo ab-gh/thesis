@@ -1,0 +1,31 @@
+lb1: laser, wavelength=1064.0*nm,
+m2=1.8,
+pulseDuration=106*ns,
+pulseEnergy=64.7*uJ,
+w0=0.055*mm;
+l1: laserwire, l=3.0*mm, wireLength=0.1, laserOffsetTheta=pi/2, laserOffsetPhi = 0,laserOffsetY=%OFFSET%*mm, laserBeam="lb1";
+
+d1: drift, l=0.25*m;
+d2: drift, l=0.25*m;
+d3: drift, l=0.25*m;
+d4: drift, l=0.25*m;
+d5: drift, l=0.25*m;
+d6: drift, l=0.25*m;
+d7: drift, l=0.25*m;
+d8: drift, l=0.25*m;
+d9: drift, l=0.25*m;
+d10: drift, l=0.25*m;
+d11: drift, l=0.25*m;
+d12: drift, l=0.25*m;
+d13: drift, l=0.25*m;
+d14: drift, l=0.25*m;
+s1: sbend, angle=0.407243448374, e1=0.203621724187, e2=0.203621724187, fint=0.0, fintx=0, hgap=0.0, l=0.876041170759;
+lat : line=(l1,d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14);
+use, lat;
+
+include beam.gmad;
+
+option, aper1=4.0*cm, aper2=2.5*cm, physicsList="laser_photo_detachment",scaleFactorLaser=100,storeSamplerCharge=1;
+
+sample, all;
+

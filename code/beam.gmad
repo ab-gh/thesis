@@ -1,0 +1,5 @@
+beam,  particle="ion 1 1 -1",
+energy=(0.93929401082+0.003) * GeV,
+distrFile="input_beam.txt",
+distrType="userfile",
+distrFileFormat="x[m]:y[m]:xp[rad]:yp[rad]:zp[rad]:t[s]:P[GeV]";
