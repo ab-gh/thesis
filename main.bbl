@@ -38,6 +38,29 @@ K.~D. Metzmacher and L.~Sermeus, ``{The PSB Ejection and Recombination Kicker Sy
 \bibitem{Ghithan:2017wpd}
 S.~Ghithan, G.~Roy, and S.~Schuh, ``{Design study of beam transport lines for BioLEIR facility at CERN},'' \emph{JINST}, vol.~12, no.~09, p. P09019, 2017.
 
+\bibitem{Couteur_1951}
+\BIBentryALTinterwordspacing
+K.~J. le~Couteur, ``The regenerative deflector for synchro-cyclotrons,'' \emph{Proceedings of the Physical Society. Section B}, vol.~64, no.~12, p. 1073, dec 1951. [Online]. Available: \url{https://dx.doi.org/10.1088/0370-1301/64/12/308}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Couteur_1955}
+\BIBentryALTinterwordspacing
+------, ``The extraction of the beam from the liverpool synchrocyclotron i. theoretical,'' \emph{Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences}, vol. 232, no. 1189, pp. 236--241, oct 1955. [Online]. Available: \url{https://doi.org/10.1098/rspa.1955.0214}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ArrutiaSota:2845862}
+\BIBentryALTinterwordspacing
+P.~A. Arrutia~Sota, P.~Burrows, A.~De~Franco, M.~Fraser, B.~Goddard, V.~Kain, F.~Kuehteubl, M.~Pivi, D.~Prokopovich, and F.~Velotti, ``{Implementation of a Tune Sweep Slow Extraction with Constant Optics at MedAustron},'' \emph{JACoW IPAC}, vol. 2022, pp. 1715--1717, 2022. [Online]. Available: \url{https://cds.cern.ch/record/2845862}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Iselin:MAD}
+F.~C. Iselin, ``{THE MAD PROGRAM (METHODICAL ACCELERATOR DESIGN): REFERENCE MANUAL},'' 5 1985.
+
+\bibitem{Wiedemann}
+\BIBentryALTinterwordspacing
+H.~Wiedemann, \emph{Introduction to Accelerator Physics}.\hskip 1em plus 0.5em minus 0.4em\relax Cham: Springer International Publishing, 2015, pp. 3--41. [Online]. Available: \url{https://doi.org/10.1007/978-3-319-18317-6_1}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Rossbach:247501}
 \BIBentryALTinterwordspacing
 J.~Rossbach and P.~Schmüser, ``{Basic course on accelerator optics},'' 1994. [Online]. Available: \url{http://cds.cern.ch/record/247501}
@@ -111,11 +134,6 @@ G.~Sterbini, A.~Blas, and S.~Gilardoni, ``{Beam-based Performance of the CERN PS
 E.~Métral, G.~Arduini, F.~Arnold~Malandain, W.~Höfle, and D.~Manglunki, ``{Controlled Transverse Emittance Blow-up in the CERN SPS},'' 2010. [Online]. Available: \url{https://cds.cern.ch/record/1208359}
 \BIBentrySTDinterwordspacing
 
-\bibitem{ArrutiaSota:2845862}
-\BIBentryALTinterwordspacing
-P.~A. Arrutia~Sota, P.~Burrows, A.~De~Franco, M.~Fraser, B.~Goddard, V.~Kain, F.~Kuehteubl, M.~Pivi, D.~Prokopovich, and F.~Velotti, ``{Implementation of a Tune Sweep Slow Extraction with Constant Optics at MedAustron},'' \emph{JACoW IPAC}, vol. 2022, pp. 1715--1717, 2022. [Online]. Available: \url{https://cds.cern.ch/record/2845862}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Pari:2780495}
 \BIBentryALTinterwordspacing
 M.~Pari, F.~M. Velotti, M.~A. Fraser, V.~Kain, and O.~Michels, ``{Characterization of the slow extraction frequency response},'' \emph{Phys. Rev. Accel. Beams}, vol.~24, no.~8, p. 083501, 2021. [Online]. Available: \url{https://cds.cern.ch/record/2780495}
@@ -153,5 +171,8 @@ M.~Gasior and R.~Jones, ``{High Sensitivity Tune Measurement by Direct Diode Det
 \BIBentryALTinterwordspacing
 ``High throughput condor (htcondor).'' [Online]. Available: \url{https://research.cs.wisc.edu/htcondor}
 \BIBentrySTDinterwordspacing
+
+\bibitem{TLBD}
+W.~Hillert, ``Transverse linear beam dynamics,'' 2021.
 
 \end{thebibliography}
