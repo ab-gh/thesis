@@ -303,7 +303,7 @@ As previously mentioned, \textbf{fast extraction} provides a spill of particles 
 
 This general method of \textbf{\textit{single-turn} fast extraction} (described in~\autoref{fig:fast_diagram}) is performed at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating beamlines in the LHC~\cite{Fraser:CAS}. The PSB performs similar extraction, but has the added complexity of ``merging'' four seperate stacked accelerators to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems are shown in~\ref{fig:chain}, where red diamonds mark fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain.
 
-In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is almost approximately 11 times longer in circumference than the PS (\qty{628}{m})\footnote{The PS is 100 meters across, and therefore $200\pi$\si{m}}, the entire SPS can be filled by 11 successive extractions of the full PS. This method, coined as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum. In its current implementation in the PS, the beam is bumped similarly to single-turn fast extraction, but is instead forced over the blade of an electrostatic septum (ES), such that a segment the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is kicked back onto its orbit. The next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until the finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
+In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is almost approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters across, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, coined as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum. In its current implementation in the PS, the beam is bumped similarly to single-turn fast extraction, but is instead forced over the blade of an electrostatic septum (ES), such that a segment the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is kicked back onto its orbit. The next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until the finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
 
 \begin{figure}[hb]
   \centering
@@ -340,19 +340,15 @@ Simulations can there provide a important tool in understanding slow extraction 
 
 Simulations for fast extraction are well understood; as explained later in \autoref{chap:theory}, the dynamics of particles in a ``static''\footnote{Static referring to the magnets and RF systems (known as the ``optics'' of the machine) being constant over the given time period.} machine can be understood with simple matrix transformations. However, many slow extraction methods rely on dynamic machines---the aforementioned COSE technique, despite its name, is not performed on a static machine, but instead scales the strength of magnets with the change in particle momentum, creating \textit{effectively} constant optics. Therefore, for each successive turn around the machine, the transport matrices must be re-calculated. For a typical slow extraction time of \qty{500}{\milli\second} at the PS, this equates to \qty{\approx235000}{turns}, and orders of magnitudes more calculations.
 
-There are long-standing, well-tested tools for computing these transfer matrices for particle accelerators, which describe the motion of a particle---or ensamble of particles---as it travels through the accelerator, encountering different magnetic and electric fields.
+There are long-standing, well-tested tools for computing these transfer matrices for particle accelerators, which describe the motion of a particle---or ensemble of particles---as it travels through the accelerator, encountering different magnetic and electric fields.
 
 To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters and initial conditions, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard amongst particle accelerator institutions across the globe. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
 
-%-----------------------------------------------------------%
-\todo{Improvements here}
-
-To accurately simulate the spill produced by slow extraction methods, one must first understand the fundamentals of accelerator beam dynamics, and grasp the technical challenges faced with simulation efforts. This thesis will first construct the required dynamic system of particle motion in a circular accelerator, and then introduce the theory behind slow extraction and the method used in this paper. Establishing a motivation for accurate and fast simulations slow extraction, various simulation methods will be presented, compared, and benchmarked with real-world data taken with the CERN PS.
-%-----------------------------------------------------------%
+One particular improvement found in many new simulation programs is ``ready-to-go'' General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations, initially intended for vector-based ray-tracing calculations. Where typical Central Processing Units have a wide range of general-purpose, unspecialised instructions and circuitry, GPUs are designed to perform a small set of highly optimised instructions on large arrays of data. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, where a typical CPU may contain anywhere from 4 to 64 cores, GPUs can contain many thousands of cores, capable of performing \textit{embarassingly parallel}\footnote{An \textit{embarassingly parallelisable} problem requires almost no effort to be separated into a large number of independent tasks which can be calculated concurrently.} calculations many orders of magnitude faster than a CPU.
 
 \chapter{Theory}\label{chap:theory}
 
-This chapter will introduce the theory required to understand the motion of ensembles of particles as they travel through an accelerator, and how such oscillatory motion can be exploited to perform slow extraction. For a more in-depth treatment of beam dynamics and accelerator physics, the reader is referred to~\cite{Wiedemann}.
+To construct accurate simulations of slow extraction methods, one must first understand the fundamental theory behind particle motion in a circular accelerator. This chapter will introduce the theory required to understand the motion of ensembles of particles as they travel through an accelerator, and how such oscillatory motion can be exploited to perform slow extraction. For a more in-depth treatment of beam dynamics and accelerator physics, the reader is referred to Wiedmann's \textit{Introduction to Accelerator Physics}~\cite{Wiedemann}.
 \section{Single-Particle Transverse Beam Dynamics}
 
 \subsection{Coordinate System}
@@ -447,7 +443,7 @@ All descriptions of particle accelerators are build upon the Lorentz force, desc
 \end{equation}
 This equation can already show why magnetic fields are used in almost all areas of particle acceleration, and not electric fields; a particle with higher velocity $v$ will experience a greater force from a constant magnetic field $\vec B$, whereas the contribution from the electric field $\vec E$ will remain constant. Therefore, at velocities approaching the speed of light ($v \rightarrow c$), we can begin to neglect $\vec E$ for some derivations.
 
-The other force experienced by a particle in an accelerator is the centripetal\footnote{while the coordinate system used allows for a reference frame whose orientation follows the orbit, this frame is not co-moving with the particles, but still fixed in the ``laboratory'' frame - otherwise, complex Lorentz transformations would be required.} force:
+The other force experienced by a particle in an accelerator is the centripetal\footnote{While the coordinate system used allows for a reference frame whose orientation follows the orbit, this frame is not co-moving with the particles, but still fixed in the ``laboratory'' frame---otherwise, complex Lorentz transformations would be required.} force:
 \begin{equation}
 \vec F_{\text{centrif.}}=\frac{m_0v^2}{\rho}\label{eq:centrifugal}
 \end{equation} where $m_0$ is the particle's rest mass, and $\rho$ is the radius of the particle's orbit inside the accelerator.
@@ -552,8 +548,7 @@ The arrangements of these bending magnets---referred to as Main Units (MU)---wil
   
   \end{tikzpicture}
   
-  \caption{A dipole magnet, showing the direction of the magnetic field, $\vec B$, the current of the particle, $\vec I$, and the force, $\vec F$, on a positively charged particle.}
-  \label{fig:dipole}
+  \caption{A dipole magnet, showing the direction of the magnetic field, $\vec B$, the current of the particle, $\vec I$, and the force, $\vec F$, on a positively charged particle.}\label{fig:dipole}
 \end{figure}
 
 If $\alpha$ is the bending angle of a single MU, then $\alpha$ can be related to the momentum rigidity by
@@ -703,7 +698,7 @@ To correct for this, synchrotrons use quadrupole elements to ``focus'' the beam 
 \label{fig:quadrupole}
 \end{figure}
 
-Sextupoles---third order magnets---provide additional correction to the beam. Here, we can begin to expand on the optical analogy used thus far.~\autoref{fig:optics} shows a full arrangement of a dipole, sextupole, and focussing quadrupole. In the optical analogy, the Dipole takes the role of a prism, bending the light. As with prisms, beams with higher energy are bent less than low energy, and so the beam is dispersed. The sextupole is analogous to an asypherical element, correcting for chromatic aberration introduced by the focussing quadrupole. Again, as with its optical analogue---a focussing lens--- the quadrupole has shorter focal length for higher energy particles. The sextupole acts as a focussing lens at high energy and diverging lens at low energy, correcting for this chromatic effect.
+Sextupoles---third order magnets---provide additional correction to the beam. Here, we can begin to expand on the optical analogy used thus far.~\autoref{fig:optics} shows a full arrangement of a dipole, sextupole, and focussing quadrupole. In the optical analogy, the Dipole takes the role of a prism, bending the light. As with prisms, beams with higher energy are bent less than low energy, and so the component wavelengths (or energies) in the beam beam are dispersed. The sextupole is analogous to an aspherical element, correcting for chromatic aberration introduced by the focussing quadrupole. Again, as with its optical analogue---a focussing lens---the quadrupole has shorter focal length for higher energy particles. The sextupole acts as a focussing lens at high energy and diverging lens at low energy, correcting for this chromatic effect.
 
 \begin{figure}
 \centering
@@ -799,28 +794,236 @@ Sextupoles---third order magnets---provide additional correction to the beam. He
 
 Now that the basic magnetic elements have been introduced, and an understanding of the beam's momentum $p$ has been formed, we can redefine our transverse coordinates in terms of momentum: $p_x=x'\cdot p$ and $p_y=y'\cdot p$ now define our transverse coordinates. These coordinates will allow us to build a picture of the multi-particle transverse dynamics of the beam.
 
-\section{Multi-particle Transverse Beam Dynamics}
+\subsection{Single-Particle Oscillatory Motion}
 
-In the transverse dynamics of an accelerated beam, the {\it betatron function} refers to one of the three functions ($\alpha$, $\beta$, and $\gamma$), which, along with betatron phase $\mu$, can provide an emittance-independent representation of the properties of the beam. These functions are known as the {\it Twiss} or {\it Courant-Snyder} parameters of a transverse dynamics system. In a periodic (circular) accelerator, the linear equation for transverse equation takes the form of a Hill differential equation:
+% In the transverse dynamics of an accelerated beam, the {\it betatron function} refers to one of the three functions ($\alpha$, $\beta$, and $\gamma$), which, along with betatron phase $\mu$, can provide an emittance-independent representation of the properties of the beam. These functions are known as the {\it Twiss} or {\it Courant-Snyder} parameters of a transverse dynamics system. 
+
+
+In a periodic (circular) accelerator, the linear equation for transverse motion takes the form of a differential equation:
+
 \begin{equation}
-\frac{d^2x}{ds^2}-K(s)\cdot x(s)=0
-\end{equation} where $x$ is the transverse displacement as a function of longitudinal position $s$, and $K$ is the focussing coefficient. Following Floquet's theorem \cite{Rossbach:247501}, general solution to this equation takes the form of the harmonic oscillator 
+  x''(s)-x\cdot\left(k-\frac{1}{\rho^2}\right)=0
+  \label{eq:diff_motion}
+\end{equation} 
+where $x$ is the transverse displacement as a function of longitudinal position $s$, and $k$ is the quadrupole focussing coefficient, defined as
+\begin{equation}
+  k=\frac{q}{p}\cdot\frac{dB_y}{dx}
+  \label{eq:quadrupole}
+\end{equation} where $q$ is the particle's charge, $p$ is the longitudinal momentum, and $B_y$ is the vertical component of the magnetic field. The $1/\rho^2$ term represents the effect of the dipole bending field, providing a weak focussing component.
+From here, it is clear that the transverse motion of particles, in a circular accelerator and under the influence of dipole focussing $1/\rho^2$ and quadrupole focussing $k$, follows a harmonic oscillator. If we enforce the periodicity\footnote{i.e. that the quadrupoles do not change between successive revolutions} in $s$ of $k$, Equation~\ref{eq:diff_motion} can be rewritten in a compact form
+\begin{equation}
+  x''(s)-\tilde{k}(s)x(s)=0
+  \label{eq:hill}
+\end{equation} where the quadrupole focussing component $\tilde{k}(s)$ is now a function of $s$. With the given periodic boundary condition $\tilde k(s+L)=\tilde{k}(s)$,~\ref{eq:hill} is known as the Hill's equation. 
+
+Following Floquet's theorem~\cite{Rossbach:247501}, general solution to this equation takes the form of
 \begin{equation}
 x(s) =\sqrt{\varepsilon}\sqrt{\beta(s)}\cos(\varphi(s)-\varphi_0)
-\end{equation} where $\varphi$ is the phase of oscillation, $\varphi_0$ is the initial condition, $\varepsilon$ is an invariant property of the ensemble of particles (emittance), and $\beta(s)$ is an amplitude function. Taking the derivative with respect to $s$ gives an equation for the angle of the trajectory:
+\label{eq:motion_x}
+\end{equation} where $\varepsilon$ and $\varphi_0$ are integration constants characterising the initial conditions of the particle, and $\beta(s)$ and $\varphi(s)$ are the amplitude and phase functions (respectively) of the oscillation.
+
+The $\beta$ amplitude function must also satisfy the periodic constraint $\beta(s+L)=\beta(s)$, and can be related to the $\varphi$ phase function by the following equation:
+\begin{eqnarray}
+  \varphi(s) = \int^s_0\frac{ds}{\beta(s)}
+  \label{eq:phase_and_beta}
+\end{eqnarray}
+
+
+Taking the derivative of~\eqref{eq:motion_x} with respect to $s$ gives an equation for the angle of the trajectory:
 \begin{equation}
 x'(s)=\sqrt{\varepsilon}\sqrt{\beta(s)}\left(\frac12\beta'(s)\cos(\varphi(s)-\varphi_0)+\sin(\varphi(s))\right)
+\label{eq:motion_px}
 \end{equation}
 
-From these solutions, we can obtain an equation to describe phase advance of the oscillation:
+A basic analysis of~\eqref{eq:phase_and_beta} shows that at locations with large $\beta$ amplitude (and thus a large transverse displacement), phase advance $\varphi$ is small, and vice versa. The overall phase advance of transverse oscillations over one revolution of $2\pi$ is known as the \textit{betatron tune} of the accelerator, and is defined as
 \begin{equation}
-\varphi(s)=\int^s_0\frac{ds}{\beta(s)}
+  Q=\frac12\oint\frac{ds}{\beta(s)}
+  \label{eq:betatron_tune}
+\end{equation}
+This quantity, often simply referred to as \textit{tune}, effectively indicates how many complete transverse oscillations a particle makes in one turn. The fractional part of this value is the most significant, and often a tune will be reference to the integer part; a tune of $Q=6.\dot 3=19/3$ is, for the purposes of this thesis, equivalent to $Q=1/3$.
+\clearpage
+
+\section{Multi-Particle Transverse Beam Dynamics}\label{sec:theory-transverse}
+
+\subsection{Phase Space}
+
+\autoref{eq:motion_x} and~\autoref{eq:motion_px} introduced an integration constant $\varepsilon$, which is a characteristic parameter of the particle or ensemble of particles. It is known as (transverse) emittance, and is usually considered with particle ensembles in mind. These two equations can be manipulated to provide an expression for $\varepsilon$:
+\begin{equation}
+  \varepsilon = \gamma(s)x^2(s)+2\alpha x(s)x'(s)+\beta(s)x'^2(s)
+  \label{eq:emittance}
+\end{equation} where 
+\begin{equation}
+  \alpha(s) = -\frac12\frac{d\beta(s)}{ds}
+  \label{eq:alpha}
+\end{equation} and
+\begin{eqnarray}
+  \gamma(s) = \frac{1+\alpha^2(s)}{\beta(s)}
+  \label{eq:gamma}
+\end{eqnarray}
+
+These further two constants, along with $\beta$, form the \textit{Courant-Snyder Parameters}~\cite{courantsnyder}, commonly referred to as the \textit{twiss} parameters\footnote{Even Richard Q. Twiss, a British astronomer, was himself unsure as to how the parameters became attributed to him~\cite{richardtwiss}.}. 
+
+These parameters can be readily understood in the \textit{phase space}\footnote{This is opposed to the more formal phase space $(x, p_x)$, which does not provide these insights as succinctly.} of $(x, x')$. Illustrated in~\autoref{fig:twiss-phase-space}, \autoref{eq:emittance} describes an ellipse, which covers the area of the particle ensemble in phase space. The area of this ellipse is given by $\pi\cdot\varepsilon$, and may be interchangeably defined as the emittance. 
+
+\begin{figure}[h]
+  \centering
+  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+  %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+  
+  %Straight Lines [id:da9035065264450608] 
+  \draw    (330,290) -- (330,12) ;
+  \draw [shift={(330,10)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+  %Straight Lines [id:da452302761105561] 
+  \draw    (190,150) -- (468,150) ;
+  \draw [shift={(470,150)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+  %Shape: Ellipse [id:dp6041133983422828] 
+  \draw   (407.78,72.22) .. controls (419.93,84.37) and (394.95,129.04) .. (352,172) .. controls (309.04,214.95) and (264.37,239.93) .. (252.22,227.78) .. controls (240.07,215.63) and (265.05,170.96) .. (308,128) .. controls (350.96,85.05) and (395.63,60.07) .. (407.78,72.22) -- cycle ;
+  %Straight Lines [id:da2286251239967374] 
+  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (410,80) -- (410,260) ;
+  %Straight Lines [id:da9188194183446701] 
+  \draw    (350,250) -- (332,250) ;
+  \draw [shift={(330,250)}, rotate = 360] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  %Straight Lines [id:da052944294077684084] 
+  \draw    (390,250) -- (408,250) ;
+  \draw [shift={(410,250)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  %Straight Lines [id:da26164850536705697] 
+  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (400,70) -- (220,70) ;
+  %Straight Lines [id:da5891228483681046] 
+  \draw    (230,100) -- (230,72) ;
+  \draw [shift={(230,70)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  %Straight Lines [id:da503222730024451] 
+  \draw    (230,120) -- (230,148) ;
+  \draw [shift={(230,150)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  %Straight Lines [id:da3735583359226975] 
+  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (430,50) -- (220,260) ;
+  %Straight Lines [id:da030558782090539305] 
+  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (400,70) -- (400,30) ;
+  %Straight Lines [id:da1130230393821896] 
+  \draw    (332,50) -- (398,50) ;
+  \draw [shift={(400,50)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  \draw [shift={(330,50)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  %Straight Lines [id:da9823091980720369] 
+  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (410,80) -- (460,80) ;
+  %Straight Lines [id:da26364391504483] 
+  \draw    (440,148) -- (440,82) ;
+  \draw [shift={(440,80)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  \draw [shift={(440,150)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+  
+  % Text Node
+  \draw (475,139) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+  % Text Node
+  \draw (304,2) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x'$};
+  % Text Node
+  \draw (352,237) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sqrt{\varepsilon \beta }$};
+  % Text Node
+  \draw (214,99) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sqrt{\varepsilon \gamma }$};
+  % Text Node
+  \draw (441,21.4) node [anchor=north west][inner sep=0.75pt]    {$\tan 2\theta =\frac{2\alpha }{\gamma -\beta }$};
+  % Text Node
+  \draw (331,11) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle -\alpha \sqrt{\nicefrac{\varepsilon}{\gamma}}$};
+  % Text Node
+  \draw (447,92) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle -\alpha \sqrt{\nicefrac{\varepsilon}{\beta}}$};
+  % Text Node
+  \draw (181,180) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A=\pi \varepsilon $};
+  
+  
+  \end{tikzpicture}
+  \caption{Phase space in $(x, x')$ showing the ellipse formed by a particle, and its relation to the Twiss parameters.}
+  \label{fig:twiss-phase-space}
+\end{figure}
+
+Liouville's theorem states that, under conservative forces, this emittance is conserved, and no external field can change it, and hence~\autoref{eq:motion_x} provides it as an invariant of motion. 
+
+\subsection{Matrix Formalism}
+
+% =============================================================== %
+
+Outside of the context of periodic boundary conditions, \autoref{eq:motion_x} and \autoref{eq:motion_px} can be solved by imposing initial conditions $x_0$ and $x'_0$:
+\begin{equation}
+  x(s)=x_0\cos\left(\sqrt{K}\cdot s\right)+\frac{x'_0}{\sqrt{K}}\sin\left(\sqrt{K}\cdot s\right)
+\end{equation}
+\begin{equation}
+  x'(s)=-x_0\sqrt{K}\sin\left(\sqrt{K}\cdot s\right)+x'_0\cos\left(\sqrt{K}\cdot s\right)
+\end{equation}
+where $K$ now defines the quadrupole focussing effect $k$ (\autoref{eq:quadrupole}) and the dipole weak focussing effect:
+\begin{eqnarray}
+  K=\frac1{\rho^2}-k
+\end{eqnarray}
+
+These two equations can be combined into a matrix equation:
+\begin{equation}
+  \begin{pmatrix}
+    x \\
+    x'
+  \end{pmatrix}
+  =
+  \bf{M}
+  \begin{pmatrix}
+    x_0 \\
+    x'_0
+  \end{pmatrix}
+\end{equation}
+where $\bf{M}$ is the transfer matrix
+\begin{equation}
+  \bf{M}=
+  \begin{pmatrix}
+    \cos\left(\sqrt{K}\cdot s\right) & \frac1{\sqrt{K}}\sin\left(\sqrt{K}\cdot s\right) \\
+    -\sqrt{K}\sin\left(\sqrt{K}\cdot s\right) & \cos\left(\sqrt{K}\cdot s\right)
+  \end{pmatrix}
 \end{equation}
 
-Basic analysis of this equation shows that at locations with large $\beta$ amplitude (and thus a large transverse displacement), phase advance $\varphi$ is small, and vice versa. The number of transverse oscillations per turn, the {\it tune} of the machine, is therefore defined as
+The definition of this transfer matrix $\bf M$ can be expanded to define the variety of magnets used in an accelerator. In the simple case, where no magnet is present, we define the transfer matrix for a drift space of length $L$:
 \begin{equation}
-Q=\frac1{2\pi}\oint\frac{ds}{\beta(s)}
+  \bf{M}_{drift,x}=\bf{M}_{drift,y}=
+  \begin{pmatrix}
+    1 & L \\
+    0 & 1
+  \end{pmatrix}
 \end{equation}
+
+For a normal dipole magnet bending only horizontally, where $k=0$ and $K_x=1/\rho^2$, the transfer matrix is:
+\begin{equation}
+  \bf{M}_{dipole,x}=
+  \begin{pmatrix}
+    \cos\left(\frac L\rho\right) & \rho\sin\left(\frac L\rho\right) \\
+    -\frac{\sin\left(\frac L\rho\right)}{\rho} & \cos\left(\frac L\rho\right)
+  \end{pmatrix}
+\end{equation}
+\begin{equation}
+  \bf{M}_{dipole,y}=\bf{M}_{drift,y}
+\end{equation}
+
+For a normal quadrupole, where $K_x=-k$ and $K_y=k$, the transfer matrix is:
+\begin{equation}
+  \bf{M}_{quad,x}=
+  \begin{pmatrix}
+    \cos\left(\sqrt{-k}\cdot L\right) & \frac1{\sqrt{-k}}\sin\left(\sqrt{-k}\cdot L\right) \\
+    -\sqrt{-k}\sin\left(\sqrt{-k}\cdot L\right) & \cos\left(\sqrt{-k}\cdot L\right)
+  \end{pmatrix}
+\end{equation}
+\begin{equation}
+  \bf{M}_{quad,y}=
+  \begin{pmatrix}
+    \cos\left(\sqrt{k}\cdot L\right) & \frac1{\sqrt{k}}\sin\left(\sqrt{k}\cdot L\right) \\
+    -\sqrt{k}\sin\left(\sqrt{k}\cdot L\right) & \cos\left(\sqrt{k}\cdot L\right)
+  \end{pmatrix}
+\end{equation}
+
+If we define the properties of each element in the accelerator (the lattice), we can then define the transfer matrix for the entire accelerator as the product of the transfer matrices of each element. For example, a FODO lattice with an initial bending dipole can be defined as:
+\begin{equation}
+  \bf{M}_{total} = \bf{M}_{dipole} + \bf{M}_{quad} + \bf{M}_{drift} - \bf{M}_{quad} + \bf{M}_{drift} +\cdots
+\end{equation}
+\begin{enumerate}
+    \item \todo{Twiss, momentum compaction, emittance, constant emittance (e.g. adiabatic damping)}
+\end{enumerate}
+
+\subsection{Multi-particle Longitudinal Dynamics}
+\begin{enumerate}
+    \item \todo{Tomography and Tomoscope}
+    \item \todo{Longitudinal Emittance}
+\end{enumerate}
+
 
 Momentum compaction factor
 
@@ -831,20 +1034,6 @@ Transverse tune = betatron tune
 Long tune = synchrotron tune
 
 Normalised emittance is constant under adiabatic damping
-
-\subsection{Multi-particle Transverse Dynamics}\label{sec:theory-transverse}
-\begin{enumerate}
-    \item \todo{1. Relativistic beta, gamma}
-    \item \todo{Twiss, momentum compaction, emittance, constant emittance (e.g. adiabatic damping)}
-    \item \todo{How tune emerges, Adiabatic tune changes}
-\end{enumerate}
-
-\subsection{Multi-particle Longitudinal Dynamics}
-\begin{enumerate}
-    \item \todo{Tomography and Tomoscope}
-    \item \todo{Longitudinal Emittance}
-\end{enumerate}
-
 
 \section{Slow Extraction}
 

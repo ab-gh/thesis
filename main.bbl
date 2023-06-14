@@ -66,6 +66,16 @@ H.~Wiedemann, \emph{Introduction to Accelerator Physics}.\hskip 1em plus 0.5em m
 J.~Rossbach and P.~Schmüser, ``{Basic course on accelerator optics},'' 1994. [Online]. Available: \url{http://cds.cern.ch/record/247501}
 \BIBentrySTDinterwordspacing
 
+\bibitem{courantsnyder}
+\BIBentryALTinterwordspacing
+E.~Courant and H.~Snyder, ``Theory of the alternating-gradient synchrotron,'' \emph{Annals of Physics}, vol.~3, no.~1, pp. 1--48, 1958. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/0003491658900125}
+\BIBentrySTDinterwordspacing
+
+\bibitem{richardtwiss}
+\BIBentryALTinterwordspacing
+R.~D. Ruth, ``{ An Introduction to Particle Accelerators },'' \emph{Physics Today}, vol.~55, no.~8, pp. 52--52, 08 2002. [Online]. Available: \url{https://doi.org/10.1063/1.1510283}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Weidermann}
 \BIBentryALTinterwordspacing
 H.~Wiedemann, \emph{Particle Accelerator Physics}.\hskip 1em plus 0.5em minus 0.4em\relax Springer International Publishing, 2015. [Online]. Available: \url{https://doi.org/10.1007/978-3-319-18317-6}
