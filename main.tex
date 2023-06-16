@@ -451,6 +451,7 @@ The other force experienced by a particle in an accelerator is the centripetal\f
 Equating equations~\ref{eq:centrifugal} and~\ref{eq:lorentz} yields
 \begin{equation}
 B\rho=\frac pq
+\label{eq:brho}
 \end{equation}
 The quantity $B\rho$ is known as the \textit{momentum rigidity} of a beam, and defines the bending angle of a particle for a given magnetic field. 
 
@@ -790,8 +791,6 @@ Sextupoles---third order magnets---provide additional correction to the beam. He
 \label{fig:optics}
 \end{figure}
 
-%============================================================================================%
-
 Now that the basic magnetic elements have been introduced, and an understanding of the beam's momentum $p$ has been formed, we can redefine our transverse coordinates in terms of momentum: $p_x=x'\cdot p$ and $p_y=y'\cdot p$ now define our transverse coordinates. These coordinates will allow us to build a picture of the multi-particle transverse dynamics of the beam.
 
 \subsection{Single-Particle Oscillatory Motion}
@@ -945,6 +944,24 @@ These parameters can be readily understood in the \textit{phase space}\footnote{
 
 Liouville's theorem states that, under conservative forces, this emittance is conserved, and no external field can change it, and hence~\autoref{eq:motion_x} provides it as an invariant of motion. 
 
+\subsection{Dispersion}\label{sec:transdisp}
+
+We now consider the oscillatory motion of \textit{multiple} particles, with reference to the ideal particle. This ideal particle, with momentum $p_0$ and initial conditions all equating to zero, has a path through the field centre of all quadrupoles, and so experiences no quadrupole effect $k$. This means that its motion is controlled by the weak dipole focussing $1/\rho^2$. A nominal particle, still with momentum $p_0$ but with initial displacement and/or angle conditions, will perform closed-loop betatron oscillations around this path. 
+
+A particle with a momentum offset, $\Delta p = p-p_0 > 0$, will still satisfy~\ref{eq:diff_motion} from before, but the inhomogeneous form
+\begin{equation}
+  x''(s)-x\left(k-\frac 1{\rho^2}\right)=\frac 1\rho\frac{\Delta p}{p_0}
+\end{equation}
+We can use the homogenous solution previously found to form the complete solution $x(s)=x_h(s)+x_i(s)$. This inhomogeneous term $x_i(s)$, is normalised by the momentum difference to produce the Dispersion function
+\begin{equation}
+  D(s)=\frac{x_i(s)}{\nicefrac{\Delta p}{p_0}}
+  \label{eq:dispersion}
+\end{equation} describing how the additional amplitude of an off-momentum particle depends on the momentum difference. 
+This dispersion function satisfies, for the circumference of the machine:
+\begin{equation}
+  D''-D\left(x-\frac1{\rho^2}\right)=\frac 1{\rho(s)}
+\end{equation}
+
 \subsection{Matrix Formalism}
 
 
@@ -1046,7 +1063,7 @@ Expanding on the idea of matrix formalism and the phase space ellipse, many part
 % =============================================================== %
 
 
-\subsection{Multi-particle Longitudinal Dynamics}
+\section{Multi-particle Longitudinal Dynamics}
 
 We will complete the initial picture of accelerator dynamics by considering the longitudinal dynamics of a beam. This is largely understood separately from the transverse motion, but with similar concepts.
 
@@ -1058,6 +1075,7 @@ Returning again to~\autoref{eq:lorentz}, we instead now neglect the \textit{magn
 \end{equation} where, again, $q$ is the charge of the particle, and $\vec E$ is the electric field. Using the relativistic formula
 \begin{equation}
   E^2=E_0^2 + p^2c^2
+  \label{eq:rel_long}
 \end{equation} and taking its derivative, we obtain 
 \begin{equation}
   2E\ dE = 2pc^2\ dp \Rightarrow dE = \frac{c^2mv}{E}\ dp = v\ dp
@@ -1076,13 +1094,83 @@ An electric field of magnitude $E_0$ travelling in the $s$ direction can be defi
   E_s = E_0\cos(\omega_{RF}t-ks)
 \end{equation} where $\omega_{RF}$ is the RF frequency, related to the wave number $k$ by $k=\omega_{RF}/v_\phi$, where $v_\phi$ is the phase velocity of the wave. In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must increase as the particle gains energy. This synchronous condition, for velocities $v\ll c$, is defined as
 \begin{equation}
-  \frac{2\pi\rho}{v_s}=\frac h\omega
-\end{equation} where $\omega$ is the particle revolution frequency, and $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference.
+  \frac{2\pi\rho}{v_s}=\frac h\omega_{RF}
+\end{equation} where $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference. 
 
+\subsection{Magnetic Ramping}
+
+To keep a particle with increasing energy bent along a path of constant radius, the magnetic field $B$ of the bending dipoles must increase as RF acceleration occurs. Recalling~\autoref{eq:brho}, and deriving by time, obtains
+\begin{equation}
+  \frac{dp}{dt} = q\rho\dot B
+\end{equation}
+For one turn in a synchrotron, this results in a momentum gain
+\begin{equation}
+  \Delta p_{rev} = q\rho\dot B T_{rev}=\frac{Lq\rho~R\dot B}v
+\end{equation} where $L$ is the machine length. Recalling~\autoref{eq:rel_long}, $\Delta E=v\Delta p$, and so the energy gain per revolution is
+\begin{equation}
+  \Delta E_{rev} = Lq\rho~R\dot B=qV\sin \phi_s
+\end{equation} where $\phi_s$ is the synchronous phase. This stable phase therefore changes while energy is ramped:
+\begin{equation}
+  \phi_s=\arcsin\left(L\rho\frac{\dot B}{V_{RF}}\right)
+\end{equation}
+
+\subsection{RF Ramping}
+
+The RF frequency must also ramp as particles increase in energy, and revolution frequency increases. From the earlier definition $\omega_{RF} = \omega h$:
+\begin{equation}
+  \frac{f_{RF}}h = f_{rev} = \frac{v}{2\pi R} = \frac 1{2\pi}\frac{qc^2}E\frac\rho R B
+\end{equation}
+
+\subsection{Dispersion}
+
+Next, akin to~\autoref{sec:transdisp}, we consider small perturbations in momentum with respect to an ideal path. We define two parameters:
+\begin{equation}
+  \alpha_p = \frac{\Delta L/L}{\Delta p/p}
+\end{equation} where $\alpha_c$, the \textit{momentum compaction factor}, is distinct from the relativistic $\alpha_c$ and Twiss parameter $\alpha$.
+\begin{equation}
+  \eta = \frac{\Delta f_{rev}/f_{rev}}{\Delta p/p}
+\end{equation} where $\eta$, the \textit{slip factor}, is the relative change of revolution frequency with momentum.
+
+Using the dispersion function~\autoref{eq:dispersion}, we can relate the momentum compaction factor to its effect on orbit length $s_0$~\cite[5.1]{lbd:tecker}
+\begin{equation}
+  \alpha_c=\frac 1L\int\frac{D_x(s)}{\rho(s)}\ ds_0
+\end{equation}
+
+Using the revolution frequency\footnote{NB: $\beta_c$ here refers to the relativistic Lorentz factor $v/c$ } $f_{rev}=\beta_c c/2\pi R$, we define the relative revolution frequency change $\Delta f_{rev}$ as
+\begin{equation}
+  \Delta f_{rev} = \frac{d\beta_c}{\beta_c}-\frac{dR}R=\frac{d\beta_c}{\beta_c}-\alpha_c\frac{dp}p
+\end{equation} 
+We recall the gamma Lorentz factor $\gamma_c =1/\sqrt{1-\beta_c^2}$, and, via $p=mv$ obtain
+\begin{equation}
+  p=mv=\frac {E_0}c \beta_c\gamma_c
+\end{equation}
+\begin{equation}
+  \frac{dp}p =\frac{d\beta_c}{\beta_c}+\frac{d(1-\beta_c)^{-1/2}}{(1-\beta_c)^{-1/2}}=\gamma_c\frac{d\beta_c}{\beta_c}
+\end{equation}
+Therefore, the relative change in frequency can also be defined as
+\begin{equation}
+  \frac{\Delta f_{rev}}{f_{rev}}=\left(\frac 1{\gamma_c^2}-\alpha_c\right)\frac{\Delta p}p
+\end{equation}
+and so the slip factor can be defined in terms of $\alpha_c$ and $\gamma_c$ as
+\begin{equation}
+  \eta = \frac 1{\gamma_c^2}-\alpha_c
+\end{equation}
+This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, causing no change in revolution frequency $f_{rev}$ for a small momentum change $\Delta p$:
+\begin{equation}
+  \gamma_{tr}=\frac 1{\sqrt{\alpha_c}}
+\end{equation}
+\textit{Above} this transition energy, where $\eta<0$, the particle has velocity $v\rightarrow c$, and so the path-length change dominates the velocity change. This is the standard configuration of accelerators.
+\textit{Below} this transition energy, where $\eta >0$, the increase of velocity is significantly larger than the path-length change effect.
+\textit{At} this transition energy, both effects compensate, and so $f_{rev}$ becomes independent of $\Delta p$. Here, the synchrotron longitudinal oscillations stop, and particles not on the synchronous phase $\phi_s$ will rapidly gain energy, and become lost due to dispersion $D$.
+
+\subsection{Longitudinal Phase Space}
+
+These effects can be analysed by, again, considering phase space coordinates---this time in the longitudinal plane. 
 
 \begin{enumerate}
+    \item{Stable synchronous particle phase above and below transition energy}
+    \item \todo{Longitudinal Emittance, bucket, acceptance}
     \item \todo{Tomography and Tomoscope}
-    \item \todo{Longitudinal Emittance}
     \item \todo{Long tune = synchrotron tune}
 \end{enumerate}
 

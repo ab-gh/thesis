@@ -13,6 +13,7 @@ Database file #1: refs.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in Iselin:MAD
 Warning--empty journal in Rossbach:247501
+Warning--empty journal in psrf
 Warning--empty journal in Feldbauer:1379901
 Warning--empty journal in Sterbini:2158994
 Warning--empty journal in Metral:1208359
@@ -23,45 +24,45 @@ Warning--empty journal in Deghaye:oasis
 Warning--empty journal in Gasior:895142
 
 Done.
-You've used 35 entries,
+You've used 38 entries,
             4087 wiz_defined-function locations,
-            1054 strings with 15581 characters,
-and the built_in function-call counts, 24331 in all, are:
-= -- 1915
-> -- 795
-< -- 103
-+ -- 411
-- -- 177
-* -- 1217
-:= -- 3793
-add.period$ -- 72
-call.type$ -- 35
-change.case$ -- 35
+            1072 strings with 16123 characters,
+and the built_in function-call counts, 25808 in all, are:
+= -- 2044
+> -- 817
+< -- 105
++ -- 421
+- -- 182
+* -- 1284
+:= -- 4052
+add.period$ -- 78
+call.type$ -- 38
+change.case$ -- 38
 chr.to.int$ -- 201
-cite$ -- 45
-duplicate$ -- 1803
-empty$ -- 1841
-format.name$ -- 196
-if$ -- 5559
+cite$ -- 49
+duplicate$ -- 1931
+empty$ -- 1976
+format.name$ -- 203
+if$ -- 5897
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 390
-newline$ -- 188
-num.names$ -- 32
-pop$ -- 1002
+int.to.str$ -- 38
+missing$ -- 412
+newline$ -- 201
+num.names$ -- 35
+pop$ -- 1057
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1862
+skip$ -- 1985
 stack$ -- 0
-substring$ -- 614
-swap$ -- 1403
-text.length$ -- 36
+substring$ -- 629
+swap$ -- 1484
+text.length$ -- 38
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 35
-warning$ -- 10
-while$ -- 69
-width$ -- 37
-write$ -- 412
-(There were 10 warnings)
+type$ -- 38
+warning$ -- 11
+while$ -- 73
+width$ -- 40
+write$ -- 443
+(There were 11 warnings)
