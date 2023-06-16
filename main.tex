@@ -814,7 +814,17 @@ From here, it is clear that the transverse motion of particles, in a circular ac
 \begin{equation}
   x''(s)-\tilde{k}(s)x(s)=0
   \label{eq:hill}
-\end{equation} where the quadrupole focussing component $\tilde{k}(s)$ is now a function of $s$. With the given periodic boundary condition $\tilde k(s+L)=\tilde{k}(s)$,~\ref{eq:hill} is known as the Hill's equation. 
+\end{equation} where the quadrupole focussing component $\tilde{k}(s)$ is now a function of $s$. 
+
+This equation can be physically understood with another analogous example: one where the weak focussing effect of the dipoles are modelled as the curved sides of a toroidal, akin to a circular gutter pipe, illustrated in~\ref{fig:guttering}. The weak focussing effect creates harmonic motion for particles not on the ideal zero-amplitude path. This describes how the harmonic motion, described by~\autoref{eq:hill}, relates to motion around an ideal orbit.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics*[width=0.6\linewidth]{guttering}
+  \caption{A diagram showing the analogy between the transverse motion of a particle in a circular accelerator and a ball rolling in a circular gutter.}\label{fig:guttering}
+\end{figure}
+
+With the given periodic boundary condition $\tilde k(s+L)=\tilde{k}(s)$,~\ref{eq:hill} is known as the Hill's equation. 
 
 Following Floquet's theorem~\cite{Rossbach:247501}, general solution to this equation takes the form of
 \begin{equation}
@@ -937,7 +947,6 @@ Liouville's theorem states that, under conservative forces, this emittance is co
 
 \subsection{Matrix Formalism}
 
-% =============================================================== %
 
 Outside of the context of periodic boundary conditions, \autoref{eq:motion_x} and \autoref{eq:motion_px} can be solved by imposing initial conditions $x_0$ and $x'_0$:
 \begin{equation}
@@ -1014,26 +1023,69 @@ If we define the properties of each element in the accelerator (the lattice), we
 \begin{equation}
   \bf{M}_{total} = \bf{M}_{dipole} + \bf{M}_{quad} + \bf{M}_{drift} - \bf{M}_{quad} + \bf{M}_{drift} +\cdots
 \end{equation}
-\begin{enumerate}
-    \item \todo{Twiss, momentum compaction, emittance, constant emittance (e.g. adiabatic damping)}
-\end{enumerate}
+
+This is the principle by which \textit{particle tracking codes}, such as \verb|MAD-X|, operate. An input lattice file defines the structure and properties of the magnets composing the accelerator, and particle variables are then computed with matrix multiplication. 
+
+\subsection{Normalised Phase Space}
+
+Expanding on the idea of matrix formalism and the phase space ellipse, many particle tracking codes operate in \textit{normalised} phase space $(x_n, x'_n)$---that is, where the phase space of $(x, x')$ is linearly transformed in a way which results in the phase space ellipse becoming circular. The matrix transformation is therefore defined as
+\begin{equation}
+  \begin{pmatrix}
+    x \\
+    x'
+  \end{pmatrix} = 
+  \begin{pmatrix}
+    \frac{1}{\sqrt{\beta_x}} & 0 \\
+    \frac{\alpha_x}{\sqrt{\beta_x}} & \sqrt{\beta_x}
+  \end{pmatrix} \begin{pmatrix}
+    x_n \\
+    x'_n
+  \end{pmatrix}
+\end{equation}
+
+% =============================================================== %
+
 
 \subsection{Multi-particle Longitudinal Dynamics}
+
+We will complete the initial picture of accelerator dynamics by considering the longitudinal dynamics of a beam. This is largely understood separately from the transverse motion, but with similar concepts.
+
+Where the transverse planes principally consider bending and focussing effects from magnetic fields, the longitudinal plane considers acceleration effects from standing RF fields. RF cavities are engineered to create a steady-state field at the cavity's resonance. This resonant frequency defines the RF structure of the device---the SPS, for example, employs \qty{200}{\mega\hertz} RF system for acceleration, and a \qty{800}{\mega\hertz} system for beam stabilisation~\cite{spsrf}, where the PS similarly uses a \qty{10}{\mega\hertz} system~\cite{psrf}.
+
+Returning again to~\autoref{eq:lorentz}, we instead now neglect the \textit{magnetic} component; this term is always perpendicular to the direction of motion, so has no acceleration component. This equation can then be used with the potential of the electric field. From~\autoref{eq:lorentz}:
+\begin{equation}
+  \vec F = q\vec E = \frac{dp}{dt}
+\end{equation} where, again, $q$ is the charge of the particle, and $\vec E$ is the electric field. Using the relativistic formula
+\begin{equation}
+  E^2=E_0^2 + p^2c^2
+\end{equation} and taking its derivative, we obtain 
+\begin{equation}
+  2E\ dE = 2pc^2\ dp \Rightarrow dE = \frac{c^2mv}{E}\ dp = v\ dp
+\end{equation}
+Taking the derivative again, along the longitudinal axis $s$:
+\begin{equation}
+  \frac{dE}{ds} = v\frac{dp}{ds} = \frac{dp}{dt} = qE_s
+\end{equation}
+This defines the kinetic energy $W$ gained along the $s$ axis as 
+\begin{equation}
+  W=q\int E_s \ ds =qV
+\end{equation} where $V$ is the electric field potential.
+
+An electric field of magnitude $E_0$ travelling in the $s$ direction can be defined as
+\begin{equation}
+  E_s = E_0\cos(\omega_{RF}t-ks)
+\end{equation} where $\omega_{RF}$ is the RF frequency, related to the wave number $k$ by $k=\omega_{RF}/v_\phi$, where $v_\phi$ is the phase velocity of the wave. In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must increase as the particle gains energy. This synchronous condition, for velocities $v\ll c$, is defined as
+\begin{equation}
+  \frac{2\pi\rho}{v_s}=\frac h\omega
+\end{equation} where $\omega$ is the particle revolution frequency, and $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference.
+
+
 \begin{enumerate}
     \item \todo{Tomography and Tomoscope}
     \item \todo{Longitudinal Emittance}
+    \item \todo{Long tune = synchrotron tune}
 \end{enumerate}
 
-
-Momentum compaction factor
-
-Gamma factor
-
-Transverse tune = betatron tune
-
-Long tune = synchrotron tune
-
-Normalised emittance is constant under adiabatic damping
 
 \section{Slow Extraction}
 
@@ -1049,22 +1101,6 @@ Normalised emittance is constant under adiabatic damping
   \item \textcolor{teal}{How i actually do RFKO at the PS - the PFW, XSE, and QSE over the cycle, the beam parameters}
 \end{enumerate}
 
-An analysis of RFKO begins with understanding transverse resonance effects in an accelerator. Particles which start with non-zero initial conditions are subject to transverse oscillations as they progress longitudinally - this is known as {\it betatron} oscillation. A consequence of this oscillation is that particles at different transverse positions will experience different bending (dipole) and focussing (quadrupole) forces \textcolor{red}{due to fringe fields or errors in magnets.} This leads to an energy spread in the machine. A {\it multi-energetic} beam will therefore have a spread of momenta, referred to as $dp-d-p_0$, the relative momentum deviation. A particle with $dp>0$ will require an orbit with large radius, and vica-versa.
-
-It is easily understood that magnets of order $n$ create instabilities at the $n^{{th}}$ order tune. We start with an understanding of how slight variations in initial conditions of a beam causes dispersion. With reference to an {\it equilibrium orbit} (an orbit which passes through the exact centre of all dipoles and quadrupoles), a range of initial position distributions will cause particles at different spatial coordinates to experience different forces from magnets. This leads to a transverse oscillation around the equilibrium orbit which we understand as {\it betatron oscillation}, with the tune $Q$ of a machine being the number of betatron oscillations completed per revolution.
-
-This ``energy spread'' necessarily leads to a momentum spread, which we understand as either purely relative or normalised deviation from the equilibrium momentum $p_0$:
-\begin{equation}
- dp=p-p_0;\ \frac{dp}{p_0}=\frac{p-p_0}{p}
-\end{equation}
-We already understand that the particle's trajectories are defined by a differential equation\textcolor{red}{CITE}, which takes the form of
-\begin{equation}
-\frac{d^2x}{ds^2}+K(s)x=\frac 1\rho\frac{\Delta p}{p_0}
-\end{equation} where $K(s)$ the normalised quadrupole strength;
-\begin{equation}
-K(s)=-\left(k(s)-\frac 1{\rho(s)^2}\right)
-\end{equation}
- $\frac 1\rho$ is the dipole strength (the reciprocal of the equilibrium radius). The solution to this equation is the sum of the general and particular solutions, the first of which.
 
 \chapter{Simulation and Benchmarking}
 \section{Simulation Methodology}
