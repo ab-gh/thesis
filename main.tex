@@ -854,7 +854,7 @@ This quantity, often simply referred to as \textit{tune}, effectively indicates 
 
 \section{Multi-Particle Transverse Beam Dynamics}\label{sec:theory-transverse}
 
-\subsection{Phase Space}
+\subsection{Phase Space}\label{subsec:trans_phase_space}
 
 \autoref{eq:motion_x} and~\autoref{eq:motion_px} introduced an integration constant $\varepsilon$, which is a characteristic parameter of the particle or ensemble of particles. It is known as (transverse) emittance, and is usually considered with particle ensembles in mind. These two equations can be manipulated to provide an expression for $\varepsilon$:
 \begin{equation}
@@ -1109,9 +1109,11 @@ For one turn in a synchrotron, this results in a momentum gain
 \end{equation} where $L$ is the machine length. Recalling~\autoref{eq:rel_long}, $\Delta E=v\Delta p$, and so the energy gain per revolution is
 \begin{equation}
   \Delta E_{rev} = Lq\rho~R\dot B=qV\sin \phi_s
+  \label{eq:ef_sin}
 \end{equation} where $\phi_s$ is the synchronous phase. This stable phase therefore changes while energy is ramped:
 \begin{equation}
   \phi_s=\arcsin\left(L\rho\frac{\dot B}{V_{RF}}\right)
+  \label{eq:sync_phase}
 \end{equation}
 
 \subsection{RF Ramping}
@@ -1161,155 +1163,148 @@ This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, caus
 \end{equation}
 \textit{Above} this transition energy, where $\eta<0$, the particle has velocity $v\rightarrow c$, and so the path-length change dominates the velocity change. This is the standard configuration of accelerators.
 \textit{Below} this transition energy, where $\eta >0$, the increase of velocity is significantly larger than the path-length change effect.
-\textit{At} this transition energy, both effects compensate, and so $f_{rev}$ becomes independent of $\Delta p$. Here, the synchrotron longitudinal oscillations stop, and particles not on the synchronous phase $\phi_s$ will rapidly gain energy, and become lost due to dispersion $D$.
+\textit{At} this transition energy, both effects compensate, and so $f_{rev}$ becomes independent of $\Delta p$. Here, the \textit{synchrotron} longitudinal oscillations stop, and particles not on the synchronous phase $\phi_s$ will rapidly gain energy, and become lost due to dispersion $D$.
+
+The effect of crossing the transition energy can be visualised with the typical electric field oscillator from~\autoref{eq:ef_sin}. Shown in~\autoref{fig:long_phase}, the energy gain of a particle is plotted as a function of its phase $\phi$. The synchronous phase, $\phi_s$~(\autoref{eq:sync_phase}), is found on the ``falling'' edge of the $\sin$ RF signal; a particle which arrives too ``early'' ($\phi<\phi_s$) will receive a \textit{higher} energy gain than the synchronous particle $\phi_s$, and so its revolution time will increase due to the dominant effect of path length. On the next turn, it will arrive slightly later, and gradually tend towards a phase of $\phi_s$. Correspondingly, a ``late'' particle $\phi > \phi_s$ will receive less energy gain than $\phi_s$, arrive earlier, and tend towards $\phi_s$.
+
+Below transition energy, $\eta > 0$, this effect is reversed, and the synchronous phase is stable on the rising RF slope.
+
+\begin{figure}[h]
+  \centering
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,568); %set diagram left start at 0, and has height of 568
+    
+    %Shape: Circle [id:dp01813829482337459] 
+    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (144,71) .. controls (144,68.24) and (146.24,66) .. (149,66) .. controls (151.76,66) and (154,68.24) .. (154,71) .. controls (154,73.76) and (151.76,76) .. (149,76) .. controls (146.24,76) and (144,73.76) .. (144,71) -- cycle ;
+    %Straight Lines [id:da7293991174090055] 
+    \draw  [dash pattern={on 4.5pt off 4.5pt}]  (149,78) -- (149,116.6) ;
+    %Shape: Circle [id:dp43302503178851737] 
+    \draw   (171,55) .. controls (171,52.24) and (173.24,50) .. (176,50) .. controls (178.76,50) and (181,52.24) .. (181,55) .. controls (181,57.76) and (178.76,60) .. (176,60) .. controls (173.24,60) and (171,57.76) .. (171,55) -- cycle ;
+    %Shape: Circle [id:dp6749241087876581] 
+    \draw   (118,89) .. controls (118,86.24) and (120.24,84) .. (123,84) .. controls (125.76,84) and (128,86.24) .. (128,89) .. controls (128,91.76) and (125.76,94) .. (123,94) .. controls (120.24,94) and (118,91.76) .. (118,89) -- cycle ;
+    %Straight Lines [id:da44471456218437533] 
+    \draw    (107.43,86.44) -- (126.8,72.6) ;
+    \draw [shift={(105.8,87.6)}, rotate = 324.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da4180739230954549] 
+    \draw    (176.17,39.76) -- (156.8,53.6) ;
+    \draw [shift={(177.8,38.6)}, rotate = 144.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Shape: Circle [id:dp048304043407451314] 
+    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (350,74) .. controls (350,71.24) and (352.24,69) .. (355,69) .. controls (357.76,69) and (360,71.24) .. (360,74) .. controls (360,76.76) and (357.76,79) .. (355,79) .. controls (352.24,79) and (350,76.76) .. (350,74) -- cycle ;
+    %Straight Lines [id:da9088534646803019] 
+    \draw  [dash pattern={on 4.5pt off 4.5pt}]  (355,79) -- (355,117.6) ;
+    %Shape: Circle [id:dp4240414343094452] 
+    \draw   (323,56) .. controls (323,53.24) and (325.24,51) .. (328,51) .. controls (330.76,51) and (333,53.24) .. (333,56) .. controls (333,58.76) and (330.76,61) .. (328,61) .. controls (325.24,61) and (323,58.76) .. (323,56) -- cycle ;
+    %Shape: Circle [id:dp11024292643644507] 
+    \draw   (375,92) .. controls (375,89.24) and (377.24,87) .. (380,87) .. controls (382.76,87) and (385,89.24) .. (385,92) .. controls (385,94.76) and (382.76,97) .. (380,97) .. controls (377.24,97) and (375,94.76) .. (375,92) -- cycle ;
+    %Straight Lines [id:da8628987876360046] 
+    \draw    (350.12,54.52) -- (326.8,39.6) ;
+    \draw [shift={(351.8,55.6)}, rotate = 212.62] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da2064257804418015] 
+    \draw    (378.37,72.84) -- (400.8,90.6) ;
+    \draw [shift={(376.8,71.6)}, rotate = 38.37] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da9690383042630335] 
+    \draw    (206,197) -- (321.8,197) ;
+    \draw [shift={(324.8,197)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+    \draw [shift={(203,197)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+    %Shape: Axis 2D [id:dp514212506835241] 
+    \draw  (20,118.6) -- (480,118.6)(91.2,20) -- (91.2,200) (473,113.6) -- (480,118.6) -- (473,123.6) (86.2,27) -- (91.2,20) -- (96.2,27)  ;
+    %Curve Lines [id:da6489545919608943] 
+    \draw    (21.2,171.6) .. controls (70.2,151.6) and (145.2,37.6) .. (250.2,35.6) .. controls (355.2,33.6) and (438.2,158.6) .. (480.2,170.6) ;
+    
+    % Text Node
+    \draw (130,119) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \pi-\phi_s$};
+    % Text Node
+    \draw (345,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \phi_s$};
+    % Text Node
+    \draw (139,6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Above Transition, $\displaystyle \gamma  >\gamma _{t}{}_{r}$, $\displaystyle \eta < 0$ };
+    % Text Node
+    \draw (333,146) node [anchor=north west][inner sep=0.75pt]   [align=left] {Stable};
+    % Text Node
+    \draw (128,143) node [anchor=north west][inner sep=0.75pt]   [align=left] {Unstable};
+    % Text Node
+    \draw (190,208) node [anchor=north west][inner sep=0.75pt]   [align=left] {Early};
+    % Text Node
+    \draw (305,209) node [anchor=north west][inner sep=0.75pt]   [align=left] {Late};
+    % Text Node
+    \draw (490,109) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \phi $};
+    % Text Node
+    \draw (63,13) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle eV$};
+    
+    
+    \end{tikzpicture}
+  \caption{The energy gain of a particle in a standing wave cavity \textbf{above transition energy} as a function of phase. Above transition energy, longitudinal oscillations are stable on the \textit{falling slope}. Four non-synchronous particles are shown, two stable around $\phi_s$, and two unstable around $\pi-\phi_s$.}\label{fig:long_phase}
+\end{figure}
 
 \subsection{Longitudinal Phase Space}
 
-These effects can be analysed by, again, considering phase space coordinates---this time in the longitudinal plane. 
+These effects can be analysed by, again, considering phase space coordinates---this time in the longitudinal plane. Again, akin to~\autoref{subsec:trans_phase_space}, this space is constructed with variables $(\phi , \Delta p/p)$. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, but the effect of phase instability can be seen in~\autoref{fig:long_phase}, where a phase greater than $\pi-\phi_s$ no longer provides the stabilising restoring force. 
 
+Outside of this stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
 
-\begin{figure}
-\centering
+\begin{figure}[h]
+  \centering
   \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
   \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-  %uncomment if require: \path (0,568); %set diagram left start at 0, and has height of 568
-  
-  %Shape: Circle [id:dp01813829482337459] 
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (144,71) .. controls (144,68.24) and (146.24,66) .. (149,66) .. controls (151.76,66) and (154,68.24) .. (154,71) .. controls (154,73.76) and (151.76,76) .. (149,76) .. controls (146.24,76) and (144,73.76) .. (144,71) -- cycle ;
-  %Straight Lines [id:da7293991174090055] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (149,78) -- (149,116.6) ;
-  %Shape: Circle [id:dp43302503178851737] 
-  \draw   (171,55) .. controls (171,52.24) and (173.24,50) .. (176,50) .. controls (178.76,50) and (181,52.24) .. (181,55) .. controls (181,57.76) and (178.76,60) .. (176,60) .. controls (173.24,60) and (171,57.76) .. (171,55) -- cycle ;
-  %Shape: Circle [id:dp6749241087876581] 
-  \draw   (118,89) .. controls (118,86.24) and (120.24,84) .. (123,84) .. controls (125.76,84) and (128,86.24) .. (128,89) .. controls (128,91.76) and (125.76,94) .. (123,94) .. controls (120.24,94) and (118,91.76) .. (118,89) -- cycle ;
-  %Straight Lines [id:da44471456218437533] 
-  \draw    (107.43,86.44) -- (126.8,72.6) ;
-  \draw [shift={(105.8,87.6)}, rotate = 324.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Straight Lines [id:da4180739230954549] 
-  \draw    (176.17,39.76) -- (156.8,53.6) ;
-  \draw [shift={(177.8,38.6)}, rotate = 144.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Shape: Circle [id:dp048304043407451314] 
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (350,74) .. controls (350,71.24) and (352.24,69) .. (355,69) .. controls (357.76,69) and (360,71.24) .. (360,74) .. controls (360,76.76) and (357.76,79) .. (355,79) .. controls (352.24,79) and (350,76.76) .. (350,74) -- cycle ;
-  %Straight Lines [id:da9088534646803019] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (355,79) -- (355,117.6) ;
-  %Shape: Circle [id:dp4240414343094452] 
-  \draw   (323,56) .. controls (323,53.24) and (325.24,51) .. (328,51) .. controls (330.76,51) and (333,53.24) .. (333,56) .. controls (333,58.76) and (330.76,61) .. (328,61) .. controls (325.24,61) and (323,58.76) .. (323,56) -- cycle ;
-  %Shape: Circle [id:dp11024292643644507] 
-  \draw   (375,92) .. controls (375,89.24) and (377.24,87) .. (380,87) .. controls (382.76,87) and (385,89.24) .. (385,92) .. controls (385,94.76) and (382.76,97) .. (380,97) .. controls (377.24,97) and (375,94.76) .. (375,92) -- cycle ;
-  %Straight Lines [id:da8628987876360046] 
-  \draw    (350.12,54.52) -- (326.8,39.6) ;
-  \draw [shift={(351.8,55.6)}, rotate = 212.62] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Straight Lines [id:da2064257804418015] 
-  \draw    (378.37,72.84) -- (400.8,90.6) ;
-  \draw [shift={(376.8,71.6)}, rotate = 38.37] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Straight Lines [id:da9690383042630335] 
-  \draw    (206,197) -- (321.8,197) ;
-  \draw [shift={(324.8,197)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  \draw [shift={(203,197)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  %Shape: Axis 2D [id:dp514212506835241] 
-  \draw  (20,118.6) -- (480,118.6)(91.2,20) -- (91.2,200) (473,113.6) -- (480,118.6) -- (473,123.6) (86.2,27) -- (91.2,20) -- (96.2,27)  ;
-  %Curve Lines [id:da6489545919608943] 
-  \draw    (21.2,171.6) .. controls (70.2,151.6) and (145.2,37.6) .. (250.2,35.6) .. controls (355.2,33.6) and (438.2,158.6) .. (480.2,170.6) ;
-  
+  %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+  %Shape: Axis 2D [id:dp650692499821311] 
+  \draw  (29.2,137.04) -- (531,137.04)(133.57,45.4) -- (133.57,223) (524,132.04) -- (531,137.04) -- (524,142.04) (128.57,52.4) -- (133.57,45.4) -- (138.57,52.4)  ;
+  %Shape: Ellipse [id:dp962064306053843] 
+  \draw   (311,138) .. controls (311,118.67) and (335.62,103) .. (366,103) .. controls (396.38,103) and (421,118.67) .. (421,138) .. controls (421,157.33) and (396.38,173) .. (366,173) .. controls (335.62,173) and (311,157.33) .. (311,138) -- cycle ;
+  %Shape: Ellipse [id:dp42298450906410845] 
+  \draw   (241,138) .. controls (241,102.1) and (288.01,73) .. (346,73) .. controls (403.99,73) and (451,102.1) .. (451,138) .. controls (451,173.9) and (403.99,203) .. (346,203) .. controls (288.01,203) and (241,173.9) .. (241,138) -- cycle ;
+  %Curve Lines [id:da48360196382099097] 
+  \draw [line width=1.5]    (164.47,137.04) .. controls (203.07,100.6) and (259.03,53.6) .. (321,53) ;
+  %Curve Lines [id:da022264838147681987] 
+  \draw [line width=1.5]    (164.47,137.04) .. controls (127.07,175.6) and (107.03,198.6) .. (78.8,213) ;
+  %Curve Lines [id:da025245126351781666] 
+  \draw [line width=1.5]    (493.11,138) .. controls (468.06,103.6) and (414.52,50.6) .. (321,53) ;
+  %Curve Lines [id:da5340411120336765] 
+  \draw [line width=1.5]    (493.11,138) .. controls (502.48,147.6) and (510.13,155.6) .. (521.8,163) ;
+  %Curve Lines [id:da8940900702477439] 
+  \draw [line width=1.5]    (164.47,137.96) .. controls (203.07,174.4) and (259.03,221.4) .. (321,222) ;
+  %Curve Lines [id:da20522381968541414] 
+  \draw [line width=1.5]    (164.47,137.96) .. controls (127.07,99.4) and (107.03,76.4) .. (78.8,62) ;
+  %Curve Lines [id:da7107422824952221] 
+  \draw [line width=1.5]    (493.11,137) .. controls (465.19,180.6) and (436.51,224.6) .. (321,222) ;
+  %Curve Lines [id:da16381474238957106] 
+  \draw [line width=1.5]    (493.11,137) .. controls (502.48,127.4) and (510.13,119.4) .. (521.8,112) ;
+  %Shape: Circle [id:dp7206380160494676] 
+  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (361,138) .. controls (361,135.24) and (363.24,133) .. (366,133) .. controls (368.76,133) and (371,135.24) .. (371,138) .. controls (371,140.76) and (368.76,143) .. (366,143) .. controls (363.24,143) and (361,140.76) .. (361,138) -- cycle ;
+  %Shape: Circle [id:dp4946649169960704] 
+  \draw   (384,91) .. controls (384,88.24) and (386.24,86) .. (389,86) .. controls (391.76,86) and (394,88.24) .. (394,91) .. controls (394,93.76) and (391.76,96) .. (389,96) .. controls (386.24,96) and (384,93.76) .. (384,91) -- cycle ;
+  %Shape: Circle [id:dp3701340668351334] 
+  \draw   (148,177) .. controls (148,174.24) and (150.24,172) .. (153,172) .. controls (155.76,172) and (158,174.24) .. (158,177) .. controls (158,179.76) and (155.76,182) .. (153,182) .. controls (150.24,182) and (148,179.76) .. (148,177) -- cycle ;
+  %Straight Lines [id:da8814571161987692] 
+  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (195.8,53.6) -- (186.52,77.73) ;
+  \draw [shift={(185.8,79.6)}, rotate = 291.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+  %Straight Lines [id:da4939647425580147] 
+  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (450.2,59.6) -- (400.54,87.62) ;
+  \draw [shift={(398.8,88.6)}, rotate = 330.57] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+  %Shape: Circle [id:dp39758145155315083] 
+  \draw   (176,94) .. controls (176,91.24) and (178.24,89) .. (181,89) .. controls (183.76,89) and (186,91.24) .. (186,94) .. controls (186,96.76) and (183.76,99) .. (181,99) .. controls (178.24,99) and (176,96.76) .. (176,94) -- cycle ;
+  %Shape: Circle [id:dp9212570769255528] 
+  \draw   (331,177) .. controls (331,174.24) and (333.24,172) .. (336,172) .. controls (338.76,172) and (341,174.24) .. (341,177) .. controls (341,179.76) and (338.76,182) .. (336,182) .. controls (333.24,182) and (331,179.76) .. (331,177) -- cycle ;
+  %Shape: Circle [id:dp05255760054649272] 
+  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (160,138) .. controls (160,135.24) and (162.24,133) .. (165,133) .. controls (167.76,133) and (170,135.24) .. (170,138) .. controls (170,140.76) and (167.76,143) .. (165,143) .. controls (162.24,143) and (160,140.76) .. (160,138) -- cycle ;
+
   % Text Node
-  \draw (141,119) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \phi _{s}$};
+  \draw (190,35) node [anchor=north west][inner sep=0.75pt]   [align=left] {Unstable};
   % Text Node
-  \draw (332,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \pi -\phi _{s}$};
+  \draw (430,41) node [anchor=north west][inner sep=0.75pt]   [align=left] {Stable};
   % Text Node
-  \draw (139,6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Above Transition, $\displaystyle \gamma  >\gamma _{t}{}_{r}$, $\displaystyle \eta < 0$ };
+  \draw (540,130.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
   % Text Node
-  \draw (333,146) node [anchor=north west][inner sep=0.75pt]   [align=left] {Stable};
+  \draw (114,20.4) node [anchor=north west][inner sep=0.75pt]    {$\Delta p/p$};
   % Text Node
-  \draw (128,143) node [anchor=north west][inner sep=0.75pt]   [align=left] {Unstable};
+  \draw (359,113.4) node [anchor=north west][inner sep=0.75pt]    {$\phi _{s}$};
   % Text Node
-  \draw (190,208) node [anchor=north west][inner sep=0.75pt]   [align=left] {Early};
-  % Text Node
-  \draw (305,209) node [anchor=north west][inner sep=0.75pt]   [align=left] {Late};
-  % Text Node
-  \draw (490,109) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \phi $};
-  % Text Node
-  \draw (63,13) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle eV$};
-  
-  
+  \draw (385,221) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Separatrix}};
   \end{tikzpicture}
-  
+  \caption{Longitudinal Phase Space, equivalent to~\autoref{fig:long_phase}. The separatrix, bold, separates the stable and unstable regions. The four non-synchronous particles, two unstable and two stable, from~\autoref{fig:long_phase} are shown.}
 \end{figure}
 
-
-%%%%%%%%
-
-\begin{figure}
-  \centering
-
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-
-%Shape: Axis 2D [id:dp650692499821311] 
-\draw  (29.2,137.04) -- (531,137.04)(133.57,45.4) -- (133.57,223) (524,132.04) -- (531,137.04) -- (524,142.04) (128.57,52.4) -- (133.57,45.4) -- (138.57,52.4)  ;
-%Shape: Ellipse [id:dp962064306053843] 
-\draw   (271,138) .. controls (271,118.67) and (295.62,103) .. (326,103) .. controls (356.38,103) and (381,118.67) .. (381,138) .. controls (381,157.33) and (356.38,173) .. (326,173) .. controls (295.62,173) and (271,157.33) .. (271,138) -- cycle ;
-%Shape: Ellipse [id:dp42298450906410845] 
-\draw   (221,138) .. controls (221,102.1) and (268.01,73) .. (326,73) .. controls (383.99,73) and (431,102.1) .. (431,138) .. controls (431,173.9) and (383.99,203) .. (326,203) .. controls (268.01,203) and (221,173.9) .. (221,138) -- cycle ;
-%Curve Lines [id:da9789801876882891] 
-\draw [line width=1.5]    (133.57,137.04) .. controls (179.8,100.6) and (246.8,53.6) .. (321,53) ;
-%Curve Lines [id:da13655808869822939] 
-\draw [line width=1.5]    (133.57,137.04) .. controls (88.8,175.6) and (64.8,198.6) .. (31,213) ;
-%Curve Lines [id:da8042891125924323] 
-\draw [line width=1.5]    (501,138) .. controls (464.8,101.6) and (403.8,53.6) .. (321,53) ;
-%Curve Lines [id:da5506874788137697] 
-\draw [line width=1.5]    (501,138) .. controls (510.8,147.6) and (518.8,155.6) .. (531,163) ;
-
-%Curve Lines [id:da7022957081327477] 
-\draw [line width=1.5]    (133.57,137.96) .. controls (179.8,174.4) and (246.8,221.4) .. (321,222) ;
-%Curve Lines [id:da923029544743244] 
-\draw [line width=1.5]    (133.57,137.96) .. controls (88.8,99.4) and (64.8,76.4) .. (31,62) ;
-%Curve Lines [id:da7237658383284393] 
-\draw [line width=1.5]    (501,137) .. controls (464.8,173.4) and (403.8,221.4) .. (321,222) ;
-%Curve Lines [id:da8228274023420452] 
-\draw [line width=1.5]    (501,137) .. controls (510.8,127.4) and (518.8,119.4) .. (531,112) ;
-
-%Shape: Circle [id:dp7206380160494676] 
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (321,138) .. controls (321,135.24) and (323.24,133) .. (326,133) .. controls (328.76,133) and (331,135.24) .. (331,138) .. controls (331,140.76) and (328.76,143) .. (326,143) .. controls (323.24,143) and (321,140.76) .. (321,138) -- cycle ;
-%Shape: Circle [id:dp4946649169960704] 
-\draw   (391,90) .. controls (391,87.24) and (393.24,85) .. (396,85) .. controls (398.76,85) and (401,87.24) .. (401,90) .. controls (401,92.76) and (398.76,95) .. (396,95) .. controls (393.24,95) and (391,92.76) .. (391,90) -- cycle ;
-%Shape: Circle [id:dp3701340668351334] 
-\draw   (128,118) .. controls (128,115.24) and (130.24,113) .. (133,113) .. controls (135.76,113) and (138,115.24) .. (138,118) .. controls (138,120.76) and (135.76,123) .. (133,123) .. controls (130.24,123) and (128,120.76) .. (128,118) -- cycle ;
-%Straight Lines [id:da8814571161987692] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (167.2,78.6) -- (145.42,107.01) ;
-\draw [shift={(144.2,108.6)}, rotate = 307.48] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da4939647425580147] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (450.2,59.6) -- (405.96,83.64) ;
-\draw [shift={(404.2,84.6)}, rotate = 331.48] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-
-% Text Node
-\draw (145,56) node [anchor=north west][inner sep=0.75pt]   [align=left] {Unstable};
-% Text Node
-\draw (430,41) node [anchor=north west][inner sep=0.75pt]   [align=left] {Stable};
-% Text Node
-\draw (540,130.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
-% Text Node
-\draw (114,20.4) node [anchor=north west][inner sep=0.75pt]    {$\Delta p/p$};
-% Text Node
-\draw (339,114.4) node [anchor=north west][inner sep=0.75pt]    {$\phi _{s}$};
-% Text Node
-\draw (164,203) node [anchor=north west][inner sep=0.75pt]   [align=left] {Separatrix};
-
-
-\end{tikzpicture}
-
-\end{figure}
-
-
-\begin{enumerate}
-    \item{Stable synchronous particle phase above and below transition energy}
-    \item \todo{Longitudinal Emittance, bucket, acceptance}
-    \item \todo{Tomography and Tomoscope}
-    \item \todo{Long tune = synchrotron tune}
-\end{enumerate}
-
+\todo{Tomography? or is that too detailed.}
 
 \section{Slow Extraction}
 
