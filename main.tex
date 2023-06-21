@@ -83,14 +83,16 @@
 \newpage
 \thispagestyle{empty}
 \begin{abstract}
-	\par{Resonant slow extraction is a beam extraction method which provides a continuous spill over a longer duration than can be achieved with fast single-turn or non-resonant multi-turn extraction. By using transverse excitation to drive the circulating particles onto the resonance, a beam can be delivered to fixed target experiments which require long-duration spills.}
-\newline
-	\par{In order to accurately and efficiently simulate the extraction process over a wide range of timescales, new modelling tools and computing platforms must be explored. By utilising optimised computational hardware - such as General Purpose Graphics Processing Units (GPGPUs), and next-generation simulation software (such as Xsuite), computation times for simulations can be reduced by several orders of magnitude.}
-\newline
-	\par{This thesis presents recent developments of resonant slow extraction modelling and benchmarking with a comparison to measurements made at CERN’s Proton Synchrotron (PS), with a particular focus on understanding the dynamics of transverse RF excitation and effect on spill quality.}
+  \setlength{\parindent}{20pt}
+Resonant slow extraction is a beam extraction method which provides a continuous spill over a longer duration than can be achieved with fast single-turn or non-resonant multi-turn extraction. By using transverse excitation to drive the circulating particles onto the resonance, long-duration spills can be produced, and delivered to facilities such as fixed-target experiments, or hadron therapy gantries.
+
+\par In order to accurately and efficiently simulate the extraction process over a wide range of timescales, new modelling tools and computing platforms must be explored. By utilising optimised computational hardware---such as General Purpose Graphics Processing Units (GPGPUs), and next-generation simulation software (such as \verb|Xsuite|), computation times for simulations can be reduced by several orders of magnitude.
+
+\par This thesis presents recent developments of resonant slow extraction modelling and benchmarking with a comparison to measurements made at CERN’s Proton Synchrotron (PS), with a particular focus on understanding the dynamics of transverse RF excitation and effect on spill quality.
+
 \end{abstract}
 \vspace*{\fill}
-\keywords{Beam Physics, Slow Extraction, Radio-Frequency Knockout, Simulation}
+\keywords{Beam Physics, Slow Extraction, Radio-Frequency Knockout, Simulation, Xsuite}
 \vspace*{\fill}
 \newpage
 %\setcounter{page}{1}
@@ -99,7 +101,7 @@
 
 The CERN Proton Synchrotron (PS), alongside providing intermediary acceleration for hadron and ion beams for the Super Proton Synchrotron (SPS) and eventually the Large Hadron Collider (LHC), provides beams for the many fixed target experiments located at the East Area (EA) experimental facility. This facility, as illustrated in~\autoref*{fig:eadiagram}, consists of the proton (IRRAD) and mixed-field (CHARM) irradiation facilities, via a dedicated \qty{24}{GeV/c} beamline, in addition to a multi-target beamline providing three secondary beams.
 
-Ongoing experiments in these facilities such as the CHARM High-energy Ions for Micro Electronics Reliability Assurance (CHIMERA)~\cite{Fraser:feasibility} use high-Z ions (Pb) to simulate the harsh radiation environment of cosmic rays which satellites experience. Using low-intensity (\qty{<e6}{ions/spill}), high-energy (\qty{>100}{\MeV / u}) beams, customers such as the European Space Agency can assess the reliability of new materials in these environments. \autoref{fig:chain} illustrates the two injection chains of the PS, either with Lead Ions sourced from the Linear Accelerator 3 (Linac3) and Low Energy Ion Ring (LEIR) chain, or Protons from the Linac4 and the Proton Synchrotron Booster (PSB).
+Ongoing experiments in these facilities such as the CHARM High-energy Ions for Micro Electronics Reliability Assurance (CHIMERA)~\cite{Fraser:feasibility} use high-Z ions (Pb) to simulate the harsh radiation environment of cosmic rays which satellites experience. Using low-intensity (\qty{<e6}{ions/spill}), high-energy (\qty{>100}{\MeV / u}) beams, customers such as the European Space Agency can assess the reliability of new materials in these environments.~\autoref{fig:chain} illustrates the two injection chains of the PS, either with Lead ions sourced from the Linear Accelerator 3 (Linac3) and Low Energy Ion Ring (LEIR) chain, or protons from the Linac4 and the Proton Synchrotron Booster (PSB).
 
 \begin{figure}
   \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        

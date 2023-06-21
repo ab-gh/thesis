@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  21 JUN 2023 10:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  21 JUN 2023 10:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -903,46 +903,7 @@ l.25 ...imulation and Benchmarking}{24}{chapter.3}
 \openout5 = `main.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
-
- []
-
-[3]
-Chapter 1.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4
-
-] [5]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 305.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-<fast.png, id=213, 403.2666pt x 148.51485pt>
-File: fast.png Graphic file (type png)
-<use fast.png>
-Package pdftex.def Info: fast.png  used on input line 315.
-(pdftex.def)             Requested size: 469.75499pt x 173.00702pt.
- [6 <./fast.png>]
-<fastmulti.png, id=232, 373.27455pt x 172.2435pt>
-File: fastmulti.png Graphic file (type png)
-<use fastmulti.png>
-Package pdftex.def Info: fastmulti.png  used on input line 326.
-(pdftex.def)             Requested size: 469.75499pt x 216.77563pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./fastmulti.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 361.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 89.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -950,7 +911,36 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+ [3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Chapter 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4
+
+] [5]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 307.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<fast.png, id=214, 403.2666pt x 148.51485pt>
+File: fast.png Graphic file (type png)
+<use fast.png>
+Package pdftex.def Info: fast.png  used on input line 317.
+(pdftex.def)             Requested size: 469.75499pt x 173.00702pt.
+ [6 <./fast.png>]
+<fastmulti.png, id=233, 373.27455pt x 172.2435pt>
+File: fastmulti.png Graphic file (type png)
+<use fastmulti.png>
+Package pdftex.def Info: fastmulti.png  used on input line 328.
+(pdftex.def)             Requested size: 469.75499pt x 216.77563pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./fastmulti.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8] [9]
 Chapter 2.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -961,7 +951,7 @@ pdfTeX warning: pdflatex (file ./rhr.pdf): PDF inclusion: found PDF version <1.7
 <rhr.pdf, id=275, 463.7325pt x 457.71pt>
 File: rhr.pdf Graphic file (type pdf)
 <use rhr.pdf>
-Package pdftex.def Info: rhr.pdf  used on input line 434.
+Package pdftex.def Info: rhr.pdf  used on input line 436.
 (pdftex.def)             Requested size: 115.93283pt x 114.42722pt.
 [10
 
@@ -1000,7 +990,7 @@ Underfull \vbox (badness 1910) has occurred while \output is active []
 <guttering.png, id=336, 149.96025pt x 135.26535pt>
 File: guttering.png Graphic file (type png)
 <use guttering.png>
-Package pdftex.def Info: guttering.png  used on input line 838.
+Package pdftex.def Info: guttering.png  used on input line 840.
 (pdftex.def)             Requested size: 281.85585pt x 254.27408pt.
  [15 <./guttering.png>] [16] [17
 
@@ -1110,7 +1100,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (34 pages, 1146388 bytes).
+Output written on main.pdf (34 pages, 1148276 bytes).
 PDF statistics:
  726 PDF objects out of 1000 (max. 8388607)
  630 compressed objects within 7 object streams
