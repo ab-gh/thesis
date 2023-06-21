@@ -25,12 +25,12 @@
 \contentsline {subsection}{\numberline {2.4.1}Sextupoles and $\nicefrac 13$-Integer Resonance}{23}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Slow Extraction Principles}{26}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Steinbach Diagram}{26}{subsection.2.4.3}%
-\contentsline {chapter}{\numberline {3}Simulation and Benchmarking}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Simulation Methodology}{27}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Conclusion}{28}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Acknowledgements}{29}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Bibliography}{30}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Derivations}{34}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{34}{section.1.A.1}%
-\contentsline {chapter}{\numberline {B}Code Snippets}{35}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}Data and Plots}{36}{appendix.1.C}%
+\contentsline {chapter}{\numberline {3}Simulation and Benchmarking}{28}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Simulation Methodology}{28}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Conclusion}{29}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Acknowledgements}{30}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Bibliography}{31}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Derivations}{35}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{35}{section.1.A.1}%
+\contentsline {chapter}{\numberline {B}Code Snippets}{36}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Data and Plots}{37}{appendix.1.C}%

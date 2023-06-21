@@ -13,6 +13,7 @@
 \usepackage{doi}
 \usepackage{tikz}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{chemformula}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -20,6 +21,9 @@
 \usepackage{siunitx}
 \usepackage{appendix}
 \usepackage{setspace}
+\usepackage{subcaption}
+
+
 
 \usepackage[capitalise]{cleveref}
 \creflabelformat{equation}{#2\textup{#1}#3}
@@ -1320,8 +1324,6 @@ Outside of this stable envelope, demarcated by the \textit{separatrix}, particle
 
 \todo{Tomography? or is that too detailed.}
 
-% =============================================================== %
-
 \section{Slow Extraction}
 Now that the fundamentals of accelerator beam physics are established, this section will introduce the principles behind \textit{slow extraction} (SX). Various methods of performing SX will be covered, but the particular method covered in this thesis---\textit{Radio-Frequency Knockout} (RFKO)---will be described in detail.
 
@@ -1439,11 +1441,24 @@ There are a variety of methods to provide the acceleration towards resonance, wh
 
 \subsection{Steinbach Diagram}
 
-These two methods can be compared using a Stienbach diagram
+These two methods can be compared using a Stienbach\footnote{Attributed to C. Steinbach, CERN} diagram. This plots the beam amplitude $A_x$ as a function of momentum $\Delta p/p_0$. The sextupole instability is shown as a triangle, within which is the unstable region beyond the phase-space map separatrices.~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} illustrate \textit{momentum} and \textit{amplitude} driven slow extraction respectively.
 
+% =============================================================== %
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.6\linewidth]{momentum-driven.png}
+  \caption{Stienbach diagram of momentum-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:momentum-driven}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.6\linewidth]{amplitude-driven.png}
+  \caption{Stienbach diagram of amplitude-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:amplitude-driven}
+\end{figure}
 
 \begin{enumerate}
-  \item \todo{Machine resonance at third order, leading to a derivation of the Kobayashi Hamiltonian and Steinbach diagram}
+  \item \todo{Machine resonance at third order, leading to a derivation of the Kobayashi Hamiltonian and Steinbach diagram} \checkmark
   \item \todo{COSE (chromatic)}
   \item \todo{Q-sweep}
   \item \todo{Betatron}
