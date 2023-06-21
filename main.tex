@@ -964,7 +964,7 @@ Liouville's theorem states that, under conservative forces, this emittance is co
 
 \subsection{Dispersion}\label{sec:transdisp}
 
-We now consider the oscillatory motion of \textit{multiple} particles, with reference to the ideal particle. This ideal particle, with momentum $p_0$ and initial conditions all equating to zero, has a path through the field centre of all quadrupoles, and so experiences no quadrupole effect $k$. This means that its motion is controlled by the weak dipole focussing $1/\rho^2$. A nominal particle, still with momentum $p_0$ but with initial displacement and/or angle conditions, will perform closed-loop betatron oscillations around this path. 
+We now consider the oscillatory motion of \textit{multiple} multi-energetic particles, with reference to the ideal particle. This ideal particle, with momentum $p_0$ and initial conditions all equating to zero, has a path through the field centre of all quadrupoles, and so experiences no quadrupole effect $k$. This means that its motion is controlled by the weak dipole focussing $1/\rho^2$. A nominal particle, still with momentum $p_0$ but with initial displacement and/or angle conditions, will perform closed-loop betatron oscillations around this path. 
 
 A particle with a momentum offset, $\Delta p = p-p_0 > 0$, will still satisfy~\ref{eq:diff_motion} from before, but the inhomogeneous form
 \begin{equation}
@@ -980,8 +980,7 @@ This dispersion function satisfies, for the circumference of the machine:
   D''-D\left(x-\frac1{\rho^2}\right)=\frac 1{\rho(s)}
 \end{equation}
 
-\subsection{Matrix Formalism}
-
+\subsection{Matrix Formalism}\label{sec:matrix}
 
 Outside of the context of periodic boundary conditions, \autoref{eq:motion_x} and \autoref{eq:motion_px} can be solved by imposing initial conditions $x_0$ and $x'_0$:
 \begin{equation}
@@ -1061,7 +1060,7 @@ If we define the properties of each element in the accelerator (the lattice), we
 
 This is the principle by which \textit{particle tracking codes}, such as \verb|MAD-X|, operate. An input lattice file defines the structure and properties of the magnets composing the accelerator, and particle variables are then computed with matrix multiplication. 
 
-\subsection{Normalised Phase Space}
+\subsection{Normalised Phase Space}\label{sec:normalised}
 
 Expanding on the idea of matrix formalism and the phase space ellipse, many particle tracking codes operate in \textit{normalised} phase space $(x_n, x'_n)$---that is, where the phase space of $(x, x')$ is linearly transformed in a way which results in the phase space ellipse becoming circular. The matrix transformation is therefore defined as
 \begin{equation}
@@ -1077,9 +1076,6 @@ Expanding on the idea of matrix formalism and the phase space ellipse, many part
     x'_n
   \end{pmatrix}
 \end{equation}
-
-% =============================================================== %
-
 
 \section{Multi-particle Longitudinal Dynamics}
 
@@ -1324,7 +1320,127 @@ Outside of this stable envelope, demarcated by the \textit{separatrix}, particle
 
 \todo{Tomography? or is that too detailed.}
 
+% =============================================================== %
+
 \section{Slow Extraction}
+Now that the fundamentals of accelerator beam physics are established, this section will introduce the principles behind \textit{slow extraction} (SX). Various methods of performing SX will be covered, but the particular method covered in this thesis---\textit{Radio-Frequency Knockout} (RFKO)---will be described in detail.
+
+\subsection{Sextupoles and $\nicefrac 13$-Integer Resonance}
+
+\autoref{sec:transdisp} introduced the concept of dispersion in reference to a multi-energetic beam. A simplified mono-energetic accelerator model can be constructed using only dipoles and quadrupoles, but dispersive effects require the use of sextupole magnets. The transverse field of a sextupole magnet has the form
+\begin{equation}
+  B_x = -6B_3xy
+\end{equation}
+\begin{equation}
+  B_y = -3B_3(x^2-y^2)
+\end{equation} where
+\begin{equation}
+  B_3=-\frac 16\left(\frac{d^2B_y}{dx^2}\right)_0
+\end{equation}
+\todo{Taylor Expansion?}
+In \textit{normalised} coordinates (\autoref{sec:normalised}), these effect of these fields (in a thin-lens approximation) becomes
+\begin{align*}
+  \Delta x&=0 & \Delta x'&=S(x^2-\frac{\beta_y}{\beta_x}y^2) \\
+  \Delta y&=0 & \Delta y'&=-2S\frac{\beta_y}{\beta_x}xy
+\end{align*}
+where $S$, the normalised sextupole strength, is
+\begin{equation}
+  S=\frac 12\beta_x^{\nicefrac 23}l_sk'
+  \label{eq:normalised_sextupole_strength}
+\end{equation} where $l_s$ is the sextupole equivalent length, and $k'$ is the normalised sexutpole field:
+\begin{equation}
+  k'=-6\frac{B_3}{B\rho}
+\end{equation}
+For horizontal transverse extraction, such as will be studied in this thesis, the vertical $y$ component if the sextupole field is neglected, as the ratio on which it depends,  $\beta_y/\beta_x$, is vanishingly small: the amplitude of oscillations in the vertical plane is significantly less than in horizontal.
+
+Recalling the matrix formalism established in~\autoref{sec:matrix}, we use a general transfer matrix for $n$ turns with a betatron tune $Q$:
+\begin{equation}
+  \bf M_n=
+  \begin{pmatrix}
+    \cos(2\pi nQ_x)  & \sin(2\pi nQ_x) \\
+    -\sin(2\pi nQ_x) & \cos(2\pi nQ_x)
+  \end{pmatrix}
+\end{equation}
+The tune of a particle is then defined as a third-integer, i.e.
+\begin{equation}
+  Q_x=i\pm\nicefrac 13 +\delta Q,\ i\in\mathbb{Z}, |\delta Q|\ll\nicefrac 13
+\end{equation} 
+The tune distance, $\delta Q$, is therefore the distance of the particle from the resonance. The $n$-turn matrix can then be approximated for \textit{modulo}-3 turns:
+\begin{equation}
+  \begin{pmatrix}
+    x\\x'
+  \end{pmatrix}_1=
+  \begin{pmatrix}
+    -1/2 & \pm\sqrt{3}/2 \\
+    \mp\sqrt{3}/2 & -1/2
+  \end{pmatrix}\begin{pmatrix}
+    x\\x'
+  \end{pmatrix}_0
+\end{equation}
+\begin{equation}
+  \begin{pmatrix}
+    x\\x'
+  \end{pmatrix}_2=
+  \begin{pmatrix}
+    -1/2 & \mp\sqrt{3}/2 \\
+    \pm\sqrt{3}/2 & -1/2
+  \end{pmatrix}\begin{pmatrix}
+    x\\x'
+  \end{pmatrix}_0
+\end{equation}
+\begin{equation}
+  \begin{pmatrix}
+    x\\x'
+  \end{pmatrix}_3=
+  \begin{pmatrix}
+    1 & 6\pi\cdot\delta Q \\
+    -6\pi\cdot\delta Q & 1
+  \end{pmatrix}\begin{pmatrix}
+    x\\x'
+  \end{pmatrix}_0
+\end{equation}
+Therefore, a particle with $\delta Q=0$, i.e.\ exactly on resonance, will return to its original position after three turns. For such a particle, the change in normalised position $x$ and divergence $x'$ from initial conditions $(x_0, x'_0)$ after three turns is therefore calculated as
+\begin{equation}
+  \Delta x_3 = \mu x'_0 + \frac 23 S x_0x'_0
+\end{equation}
+\begin{equation}
+  \Delta x'_3 = -\mu x_0 + \frac 34 S (x_0^2-x'^2_0)
+\end{equation}
+where $\mu$, the \textit{modified tune distance}, is defined as $\mu = 6\pi\cdot\delta Q$, and $S$ is the normalised sextupole strength (\autoref{eq:normalised_sextupole_strength}).
+
+The values of $\Delta x_3$ and $\Delta x'_3$ are known as the \textit{spiral step} and \textit{spiral kick}.
+The \textit{Hamiltonian} is now used to analyse this motion in phase-space. The Hamiltonian, $\bf H$ is a time-independent constant of motion, the contours of which describe the \textit{phase-space map}, the motion of a particle in normalised phase-space. Assuming the 3-turn time is small enough to be continuous, the \textit{Kobayashi Hamiltonian}~\cite{kobayashi} is defined as
+\begin{equation}
+  \textbf{H} =\frac\mu 2(x^2+x'^2)+\frac S4(3xx'^2-x^3)
+\end{equation}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{kobayashi.png}
+  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio $\mu/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines. The value of $-h$, which defines the $P_2, P_3$ line, is dashed.}\label{fig:kobayashi}
+\end{figure}
+
+The first term describes the typical circular phase-space motion familiar from~\autoref{subsec:trans_phase_space}, with a sextupole strength $S=0$ (i.e. a linear machine). The second term describes the sextupole effect, transforming the elliptical map into a triangular trajectory for increasing values of $x$ and $x'$. The phase-space map is shown in~\autoref{fig:kobayashi}. A boundary triangle is easily identified from the map, which defines the trajectory of the stable particle with greatest possible amplitude, before the motion becomes unstable. Outside of this stable region, the particle trajectories do not close on themselves, and the particle will rapidly gain amplitude. The region bounded by this \textit{separatrix} is known as the \textit{acceptance} the size of which is defined by $|\mu /S|$, and can be found by factorising $\bf H$ at at a value of $(2\mu /3)^3/S^2$, which factorisses to three points:
+\begin{eqnarray}
+  P_1 &=& \left(\frac 43 \frac\mu S,    0                       \right) \\
+  P_2 &=& \left(-\frac 23 \frac \mu S,  -\frac{2\mu}{\sqrt 3 S} \right) \\
+  P_3 &=& \left(-\frac 23 \frac \mu S,  \frac{2\mu}{\sqrt 3 S} \right)
+\end{eqnarray}
+The $x$ location of the stable particle, $h$ can also be defined as
+\begin{equation}
+  h=\frac 23 \frac \mu S = \frac{4\pi}S\delta Q
+\end{equation}
+Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$, along with the vertical line at $-h$, define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 4 h^2$.
+
+\subsection{Slow Extraction Principles}
+The fundamental principle of slow extraction exploits the unstable boundary created by sextupolar fields. After a beam is injected and stable, this \textit{waiting} beam is accelerated towards the $\nicefrac 13$-integer resonance. A particle at resonance will then ``lock on'' to one of the separatrix arms, and its amplitude will grow in steps of three turns, rotating around the three separatrices. By carefully controlling the rate at which particles enter resonance, the 3-turn amplitude growth (spiral step) can be adjusted to create a desired flux of particles entering resonance. After a number of turns of amplitude growth (typically hundreds), an electrostatic septum located at some distance from the waiting beam will provide a kick necessary to extract the particles.
+
+There are a variety of methods to provide the acceleration towards resonance, which fall into two categories: \textit{momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$, whereas \textit{amplitude-driven} methods use transverse noise or RF excitation at the beam's revolution frequency to create increasing betatron amplitudes.
+
+\subsection{Steinbach Diagram}
+
+These two methods can be compared using a Stienbach diagram
+
 
 \begin{enumerate}
   \item \todo{Machine resonance at third order, leading to a derivation of the Kobayashi Hamiltonian and Steinbach diagram}

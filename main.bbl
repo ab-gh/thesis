@@ -89,6 +89,11 @@ H.~Damerau and S.~Hancock, ``{New Control Structure of the 10 MHz RF System in t
 \bibitem{lbd:tecker}
 F.~Tecker, ``{Longitudinal Beam Dynamics in Circular Accelerators},'' in \emph{{CAS - CERN Accelerator School 2019}: {Introduction to Accelerator Physics}}, 11 2020.
 
+\bibitem{kobayashi}
+\BIBentryALTinterwordspacing
+Y.~Kobayashi, ``Theory of the resonant beam ejection from synchrotrons,'' \emph{Nuclear Instruments and Methods}, vol.~83, no.~1, pp. 77--87, 1970. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/0029554X70905379}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Weidermann}
 \BIBentryALTinterwordspacing
 H.~Wiedemann, \emph{Particle Accelerator Physics}.\hskip 1em plus 0.5em minus 0.4em\relax Springer International Publishing, 2015. [Online]. Available: \url{https://doi.org/10.1007/978-3-319-18317-6}

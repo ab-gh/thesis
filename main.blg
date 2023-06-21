@@ -24,45 +24,45 @@ Warning--empty journal in Deghaye:oasis
 Warning--empty journal in Gasior:895142
 
 Done.
-You've used 38 entries,
+You've used 39 entries,
             4087 wiz_defined-function locations,
-            1072 strings with 16123 characters,
-and the built_in function-call counts, 25808 in all, are:
-= -- 2044
-> -- 817
-< -- 105
-+ -- 421
-- -- 182
-* -- 1284
-:= -- 4052
-add.period$ -- 78
-call.type$ -- 38
-change.case$ -- 38
-chr.to.int$ -- 201
-cite$ -- 49
-duplicate$ -- 1931
-empty$ -- 1976
-format.name$ -- 203
-if$ -- 5897
+            1080 strings with 16306 characters,
+and the built_in function-call counts, 26581 in all, are:
+= -- 2117
+> -- 826
+< -- 113
++ -- 427
+- -- 183
+* -- 1323
+:= -- 4187
+add.period$ -- 80
+call.type$ -- 39
+change.case$ -- 39
+chr.to.int$ -- 216
+cite$ -- 50
+duplicate$ -- 1985
+empty$ -- 2030
+format.name$ -- 204
+if$ -- 6075
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 412
-newline$ -- 201
-num.names$ -- 35
-pop$ -- 1057
+int.to.str$ -- 39
+missing$ -- 420
+newline$ -- 206
+num.names$ -- 36
+pop$ -- 1067
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1985
+skip$ -- 2048
 stack$ -- 0
-substring$ -- 629
-swap$ -- 1484
-text.length$ -- 38
+substring$ -- 665
+swap$ -- 1532
+text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 38
+type$ -- 39
 warning$ -- 11
-while$ -- 73
-width$ -- 40
-write$ -- 443
+while$ -- 77
+width$ -- 41
+write$ -- 457
 (There were 11 warnings)
