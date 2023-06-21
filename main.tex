@@ -278,7 +278,7 @@ SPS
 
 
 \end{tikzpicture}
-\caption{Layout diagram of the primary acceleration chain at CERN. Particles are sourced from either Linac 3 (for Lead ions) or Linac4 (for Protons), and accelerated through the LEIR or PSB respectively. After injection and acceleration in the PS, beams are extracted either to the SPS or East Area (EA). Particles at the SPS are either extracted at two LHC extraction locations, or towards the North area. Red diamonds mark Fast extraction locations, and blue circles mark Slow extraction regions.}
+\caption{Layout diagram of the primary injection chain at CERN. Particles are sourced from either Linac 3 (for Lead ions) or Linac 4 (for Protons), and accelerated through the LEIR or PSB respectively. After injection and acceleration in the PS, beams are extracted either to the SPS or East Area (EA). Particles at the SPS are either extracted at two LHC extraction locations, or towards the North area. Red diamonds mark Fast extraction locations, and blue circles mark Slow extraction regions.}
 \label{fig:chain}
 \end{figure}
 
@@ -286,7 +286,9 @@ SPS
 
 The CHIMERA experiment, and other experiments located at the East Area and its SPS-sister-site North Area, are referred to as fixed-target experiments, to distinguish them from the collision experiments for which the LHC is most famous. The nature of these fixed-target experiments requires that a semi-continuous beam is delivered: if the entire energy of the PS was delivered to a material sample, for example, in an effectively instantaneous ``spill'' (a controlled removal of particles from the circular accelerator), any sensitive acquisition equipment would become saturated, and the fixed target itself likely destroyed.
 
-With the PS's revolution frequency typically around \qty{470}{kHz}, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as ``fast'' extraction, is commonly used to transfer particles between successive accelerators, where the bunched time-structure of the beam must be preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, a ``slow'' extraction system is employed.
+%At a beam momentum of \qty{5.4}{\giga\meter}
+
+With the PS's revolution frequency typically around \qty{470}{kHz}, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as \texit{fast} extraction, is commonly used to transfer particles between successive accelerators, where the bunched time-structure of the beam must be preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, a ``slow'' extraction system is employed.
 
 \subsection{Extraction Methods}
 
@@ -1128,7 +1130,7 @@ The RF frequency must also ramp as particles increase in energy, and revolution 
 Next, akin to~\autoref{sec:transdisp}, we consider small perturbations in momentum with respect to an ideal path. We define two parameters:
 \begin{equation}
   \alpha_p = \frac{\Delta L/L}{\Delta p/p}
-\end{equation} where $\alpha_c$, the \textit{momentum compaction factor}, is distinct from the relativistic $\alpha_c$ and Twiss parameter $\alpha$.
+\end{equation} where $\alpha_p$, the \textit{momentum compaction factor}, is distinct from the relativistic $\alpha_c$ and Twiss parameter $\alpha$.
 \begin{equation}
   \eta = \frac{\Delta f_{rev}/f_{rev}}{\Delta p/p}
 \end{equation} where $\eta$, the \textit{slip factor}, is the relative change of revolution frequency with momentum.
