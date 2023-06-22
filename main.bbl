@@ -116,4 +116,9 @@ L.~Badano, M.~Benedikt, P.~J. Bryant, M.~Crescenti, P.~Holy, A.~T. Maier, M.~Pul
 L.~Badano and S.~Rossi, ``{Characteristics of a betatron core for extraction in a proton-ion medical synchrotron},'' CERN, Geneva, Tech. Rep., 1997. [Online]. Available: \url{http://cds.cern.ch/record/327305}
 \BIBentrySTDinterwordspacing
 
+\bibitem{hardt}
+\BIBentryALTinterwordspacing
+M.~Pullia, ``{Hardt condition for superposition of separatrices},'' 1996. [Online]. Available: \url{https://cds.cern.ch/record/1425424}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

@@ -17,47 +17,48 @@ Warning--empty journal in Iselin:MAD
 Warning--empty journal in Rossbach:247501
 Warning--empty journal in psrf
 Warning--missing publisher in PIMMS
+Warning--empty journal in hardt
 
 Done.
-You've used 20 entries,
+You've used 21 entries,
             4087 wiz_defined-function locations,
-            978 strings with 11838 characters,
-and the built_in function-call counts, 14674 in all, are:
-= -- 1274
-> -- 343
+            983 strings with 11941 characters,
+and the built_in function-call counts, 15023 in all, are:
+= -- 1303
+> -- 347
 < -- 84
-+ -- 182
-- -- 69
-* -- 741
-:= -- 2382
-add.period$ -- 40
-call.type$ -- 20
-change.case$ -- 20
++ -- 184
+- -- 70
+* -- 757
+:= -- 2456
+add.period$ -- 42
+call.type$ -- 21
+change.case$ -- 21
 chr.to.int$ -- 165
-cite$ -- 24
-duplicate$ -- 1071
-empty$ -- 1088
-format.name$ -- 81
-if$ -- 3365
+cite$ -- 26
+duplicate$ -- 1101
+empty$ -- 1119
+format.name$ -- 82
+if$ -- 3438
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 199
-newline$ -- 119
-num.names$ -- 20
-pop$ -- 435
+int.to.str$ -- 21
+missing$ -- 204
+newline$ -- 124
+num.names$ -- 21
+pop$ -- 449
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1170
+skip$ -- 1197
 stack$ -- 0
-substring$ -- 483
-swap$ -- 878
+substring$ -- 484
+swap$ -- 892
 text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 20
-warning$ -- 4
-while$ -- 51
-width$ -- 22
-write$ -- 267
-(There were 5 warnings)
+type$ -- 21
+warning$ -- 5
+while$ -- 52
+width$ -- 23
+write$ -- 277
+(There were 6 warnings)

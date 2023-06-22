@@ -1470,9 +1470,10 @@ There are a variety of methods to provide the acceleration towards resonance, wh
 \end{figure}
 
 These two methods can be compared using a Stienbach\footnote{Attributed to C. Steinbach, CERN} diagram. This plots the beam amplitude $A_x$ as a function of momentum $\Delta p/p_0$. The sextupole instability is shown as a triangle, within which is the unstable region beyond the phase-space map separatrices.~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} illustrate \textit{momentum} and \textit{amplitude} driven slow extraction respectively.
-In order for a particle to be considered stable, its single-particle emittance $\epsilon$ must be lower or equal to the area of the separatrix triangle (acceptance, $A$). Using~\autoref{eq:apothem}, this condition is expressed as
+In order for a particle to be considered stable, its single-particle emittance $\epsilon$ must be lower or equal to the area of the separatrix triangle. Using~\autoref{eq:apothem}, this condition is expressed as
 \begin{equation}
   A^2\pi\le\frac{48\sqrt 3\pi}{S^2}\delta Q^2\pi
+  \label{eq:steinbach}
 \end{equation} 
 If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} is seen. The width of this unstable triangle, known as the \textit{stopband}, is proportional to $S$.
 
@@ -1497,10 +1498,22 @@ Tune sweep operates somewhat as the opposite of Betatron Core: rather than contr
 
 For a small momentum spread $\Delta p/p$, the tune's dependency on quadrupole strength can be assumed as linear, so a simple quadrupole strength sweep is all that is required for tune-sweep.
 
-There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of momentum rigidity ($B\rho$,~\autoref{eq:brho}) in the beam.
+There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of momentum rigidity ($B\rho$,~\autoref{eq:brho}) in the beam. The effect of this is illustrated in~\autoref{fig:hardt}: particles excited into instability with different amplitudes will ``lock on'' to separatrices at different phase-space locations. The result is a range in angle of particles extracted at the electrostatic septum (located at, for example $x=0.3$ in~\autoref{fig:hardt}).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{hardt.png}
+  \caption{Phase-space map of three initial particles on the Kobayashi Hamiltonian, and one of their separatrices. An example electrostatic septum location is shown (dashed line).}\label{fig:hardt}
+\end{figure}
+
+Recalling~\autoref{eq:steinbach}, amplitude $A$ is correlated with momentum difference $\Delta p/p$. Given a real dispersion value (\autoref{eq:dispersion}), a condition can be computed which would align all separatrices on the septum:
+\begin{equation}
+  D_n\cos(\pi-\Delta\phi)+D'_n\sin(\pi-\Delta\phi)=-\frac{4\pi}3Q'_x
+\end{equation}
+This condition, known as the Hardt condition~\cite{hardt}, will align the separatrices, given a phase advance $\Delta\phi$ and dispersion coefficients $D_n, D'_n$. However, in the context of tune-sweep extraction, the Hardt condition proves ineffective: a changing momentum will change dispersion coefficients, causing the separatrices to misalign.
 
 \subsubsection{COSE}
-
+To combat this effect, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the momentum rigidity of the beam, $B\rho$, is increased simultaneously with the tune-sweep.
 
 \subsubsection{Radio-Frequency Knock-Out}
 
