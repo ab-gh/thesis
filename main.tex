@@ -1487,13 +1487,32 @@ A simple treatment of momentum-driven slow extraction is through the use of a \t
 Recalling~\autoref{eq:chroma}, a beam with non-zero (and typically negative) chromaticity $Q'$ can have its tune distance $\delta Q$ controlled by momentum $\Delta p/p$. The longitudinal voltage from the betatron core provides the resonance driving effect (red arrow in~\autoref{fig:momentum-driven}), accelerating particles into resonance. Particles then experience unstable betatron oscillation, jumping between separatrices, before encountering an electrostatic septum, where they receive an extraction kick.
 
 \subsubsection{Tune Sweep}
-Tune sweep operates somewhat as the opposite of Betatron Core: 
+Tune sweep operates somewhat as the opposite of Betatron Core: rather than controlling the beam's tune distance away from resonance ($\delta Q$), moving the beam into resonance, the reference transverse tune of the machine ($Q_x$) is moved through the stationary waiting beam. This is illustrated, with a Stienbach diagram, in~\autoref{fig:tune-sweep}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{tune-sweep.png}
+  \caption{Stienbach diagram of tune-sweep slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:tune-sweep}
+\end{figure}
+
+For a small momentum spread $\Delta p/p$, the tune's dependency on quadrupole strength can be assumed as linear, so a simple quadrupole strength sweep is all that is required for tune-sweep.
+
+There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of momentum rigidity ($B\rho$,~\autoref{eq:brho}) in the beam.
 
 \subsubsection{COSE}
+
 
 \subsubsection{Radio-Frequency Knock-Out}
 
 \subsection{Slow Extraction at the CERN PS}
+
+\begin{enumerate}
+  \item \todo{Sextupoles controlled with XSE}
+  \item \todo{Quadrupoles controlled with QSE}
+  \item \todo{Tune trim with PFWs}
+  \item \todo{Extraction ES at 57, then 61}
+  \item \todo{Down F61, into F61D}
+\end{enumerate}
 
 \begin{enumerate}
   \item \todo{Machine resonance at third order, leading to a derivation of the Kobayashi Hamiltonian and Steinbach diagram} \checkmark

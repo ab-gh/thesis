@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  22 JUN 2023 14:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  22 JUN 2023 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1069,30 +1069,39 @@ File: real-world.png Graphic file (type png)
 <use real-world.png>
 Package pdftex.def Info: real-world.png  used on input line 1452.
 (pdftex.def)             Requested size: 281.85585pt x 161.82008pt.
-<momentum-driven.png, id=538, 998.73125pt x 716.6775pt>
+<momentum-driven.png, id=538, 1331.97626pt x 994.71625pt>
 File: momentum-driven.png Graphic file (type png)
 <use momentum-driven.png>
 Package pdftex.def Info: momentum-driven.png  used on input line 1462.
-(pdftex.def)             Requested size: 281.85585pt x 202.254pt.
-<amplitude-driven.png, id=539, 998.73125pt x 716.6775pt>
+(pdftex.def)             Requested size: 281.85585pt x 210.4751pt.
+<amplitude-driven.png, id=539, 1331.97626pt x 978.65625pt>
 File: amplitude-driven.png Graphic file (type png)
 <use amplitude-driven.png>
 Package pdftex.def Info: amplitude-driven.png  used on input line 1468.
-(pdftex.def)             Requested size: 281.85585pt x 202.254pt.
+(pdftex.def)             Requested size: 281.85585pt x 207.07692pt.
  [26 <./real-world.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27 <./momentum-driven.png> <./amplitude-driven.png>] [28]
-Chapter 3.
-[29
+ [27 <./momentum-driven.png> <./amplitude-driven.png>]
+<tune-sweep.png, id=571, 1331.97626pt x 994.71625pt>
+File: tune-sweep.png Graphic file (type png)
+<use tune-sweep.png>
+Package pdftex.def Info: tune-sweep.png  used on input line 1494.
+(pdftex.def)             Requested size: 281.85585pt x 210.4751pt.
 
-]
-Chapter 4.
+Underfull \vbox (badness 1314) has occurred while \output is active []
+
+ [28 <./tune-sweep.png>] [29]
+Chapter 3.
 [30
 
 ]
+Chapter 4.
+[31
+
+]
 Chapter 5.
-(./main.bbl [31
+(./main.bbl [32
 
 ]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
@@ -1101,29 +1110,29 @@ Chapter 5.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
-[32
+[33
 
-]) [33]
+]) [34]
 Appendix A.
-[34
-
-]
-Appendix B.
 [35
 
 ]
-Appendix C.
+Appendix B.
 [36
+
+]
+Appendix C.
+[37
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0F0C4DD185F4FEEF291672DC2C491E04;6023.
  ) 
 Here is how much of TeX's memory you used:
- 34934 strings out of 476025
- 711170 string characters out of 5790017
+ 34950 strings out of 476025
+ 711395 string characters out of 5790017
  1871388 words of memory out of 5000000
- 54233 multiletter control sequences out of 15000+600000
+ 54241 multiletter control sequences out of 15000+600000
  620438 words of font info for 345 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,1360b,1050s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1164,10 +1173,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (37 pages, 2294688 bytes).
+Output written on main.pdf (38 pages, 2357769 bytes).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 681 compressed objects within 7 object streams
- 214 named destinations out of 1000 (max. 500000)
- 108392 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 810 PDF objects out of 1000 (max. 8388607)
+ 696 compressed objects within 7 object streams
+ 221 named destinations out of 1000 (max. 500000)
+ 108397 words of extra memory for PDF output out of 128383 (max. 10000000)
 
