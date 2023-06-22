@@ -45,7 +45,7 @@ K.~J. le~Couteur, ``The regenerative deflector for synchro-cyclotrons,'' \emph{P
 
 \bibitem{Couteur_1955}
 \BIBentryALTinterwordspacing
-------, ``The extraction of the beam from the liverpool synchrocyclotron i. theoretical,'' \emph{Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences}, vol. 232, no. 1189, pp. 236--241, oct 1955. [Online]. Available: \url{https://doi.org/10.1098/rspa.1955.0214}
+K.~J.~L. Couteur, ``The extraction of the beam from the liverpool synchrocyclotron.'' \emph{Proceedings of the Royal Society of London. Series A, Mathematical and Physical Sciences}, vol. 232, no. 1189, pp. 236--241, 1955. [Online]. Available: \url{http://www.jstor.org/stable/99763}
 \BIBentrySTDinterwordspacing
 
 \bibitem{ArrutiaSota:2845862}
@@ -54,7 +54,9 @@ P.~A. Arrutia~Sota, P.~Burrows, A.~De~Franco, M.~Fraser, B.~Goddard, V.~Kain, F.
 \BIBentrySTDinterwordspacing
 
 \bibitem{Iselin:MAD}
-F.~C. Iselin, ``{THE MAD PROGRAM (METHODICAL ACCELERATOR DESIGN): REFERENCE MANUAL},'' 5 1985.
+\BIBentryALTinterwordspacing
+F.~C. Iselin, ``{The MAD Program (Methodical Accelerator Design): Reference Manual},'' 5 1985. [Online]. Available: \url{https://inspirehep.net/literature/214504}
+\BIBentrySTDinterwordspacing
 
 \bibitem{Wiedemann}
 \BIBentryALTinterwordspacing
@@ -94,113 +96,24 @@ F.~Tecker, ``{Longitudinal Beam Dynamics in Circular Accelerators},'' in \emph{{
 Y.~Kobayashi, ``Theory of the resonant beam ejection from synchrotrons,'' \emph{Nuclear Instruments and Methods}, vol.~83, no.~1, pp. 77--87, 1970. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/0029554X70905379}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Weidermann}
+\bibitem{Falbo:IPAC2018-TUZGBF3}
 \BIBentryALTinterwordspacing
-H.~Wiedemann, \emph{Particle Accelerator Physics}.\hskip 1em plus 0.5em minus 0.4em\relax Springer International Publishing, 2015. [Online]. Available: \url{https://doi.org/10.1007/978-3-319-18317-6}
+L.~Falbo, E.~Bressi, S.~Foglio, and C.~Priano, ``\BIBforeignlanguage{english}{{B}etatron {C}ore {S}low {E}xtraction at {CNAO}},'' in \emph{\BIBforeignlanguage{english}{Proc. 9th International Particle Accelerator Conference (IPAC'18), Vancouver, BC, Canada, April 29-May 4, 2018}}, ser. International Particle Accelerator Conference, no.~9.\hskip 1em plus 0.5em minus 0.4em\relax Geneva, Switzerland: JACoW Publishing, June 2018, paper TUZGBF3, pp. 1237--1239, https://doi.org/10.18429/JACoW-IPAC2018-TUZGBF3. [Online]. Available: \url{http://jacow.org/ipac2018/papers/tuzgbf3.pdf}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Hillert:2107.02614}
+\bibitem{pablo}
 \BIBentryALTinterwordspacing
-W.~Hillert, ``Transverse linear beam dynamics,'' 2021. [Online]. Available: \url{https://arxiv.org/abs/2107.02614}
+P.~A. Arrutia~Sota and M.~A. Fraser, ``{Optimisation of Slow Extraction and Beam Delivery from Synchrotrons},'' 2020, presented 2020. [Online]. Available: \url{https://cds.cern.ch/record/2749240}
 \BIBentrySTDinterwordspacing
 
-\bibitem{russo_2019}
+\bibitem{PIMMS}
 \BIBentryALTinterwordspacing
-G.~Russo, ``Radio frequency knockout (rfko) extraction: Hardware analysis and beam optics simulation and optimization,'' Mar 2019. [Online]. Available: \url{https://webthesis.biblio.polito.it/10253/}
+L.~Badano, M.~Benedikt, P.~J. Bryant, M.~Crescenti, P.~Holy, A.~T. Maier, M.~Pullia, S.~Rossi, and P.~Knaus, \emph{{Proton-Ion Medical Machine Study (PIMMS), 1}}, 2000. [Online]. Available: \url{https://cds.cern.ch/record/385378}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Savazzi:IPAC2019-THPMP010}
+\bibitem{betatroncore}
 \BIBentryALTinterwordspacing
-S.~Savazzi \emph{et~al.}, ``\BIBforeignlanguage{english}{{I}mplementation of {RF-KO} {E}xtraction at {CNAO}},'' in \emph{\BIBforeignlanguage{english}{Proc. 10th International Particle Accelerator Conference (IPAC'19), Melbourne, Australia, 19-24 May 2019}}, ser. International Particle Accelerator Conference, no.~10.\hskip 1em plus 0.5em minus 0.4em\relax Geneva, Switzerland: JACoW Publishing, Jun. 2019, paper THPMP010, pp. 3469--3471, https://doi.org/10.18429/JACoW-IPAC2019-THPMP010. [Online]. Available: \url{http://jacow.org/ipac2019/papers/thpmp010.pdf}
+L.~Badano and S.~Rossi, ``{Characteristics of a betatron core for extraction in a proton-ion medical synchrotron},'' CERN, Geneva, Tech. Rep., 1997. [Online]. Available: \url{http://cds.cern.ch/record/327305}
 \BIBentrySTDinterwordspacing
-
-\bibitem{xsuite}
-\BIBentryALTinterwordspacing
-``Xsuite.'' [Online]. Available: \url{xsuite.web.cern.ch}
-\BIBentrySTDinterwordspacing
-
-\bibitem{optics-repo}
-\BIBentryALTinterwordspacing
-``Cern optics repository.'' [Online]. Available: \url{https://acc-models.web.cern.ch/acc-models/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{SciPy}
-P.~Virtanen, R.~Gommers, T.~E. Oliphant, M.~Haberland, T.~Reddy, D.~Cournapeau, E.~Burovski, P.~Peterson, W.~Weckesser, J.~Bright, S.~J. {van der Walt}, M.~Brett, J.~Wilson, K.~J. Millman, N.~Mayorov, A.~R.~J. Nelson, E.~Jones, R.~Kern, E.~Larson, C.~J. Carey, {\.I}.~Polat, Y.~Feng, E.~W. Moore, J.~{VanderPlas}, D.~Laxalde, J.~Perktold, R.~Cimrman, I.~Henriksen, E.~A. Quintero, C.~R. Harris, A.~M. Archibald, A.~H. Ribeiro, F.~Pedregosa, P.~{van Mulbregt}, and {SciPy 1.0 Contributors}, ``{{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in Python},'' \emph{Nature Methods}, vol.~17, pp. 261--272, 2020.
-
-\bibitem{Duplissy:1359385}
-\BIBentryALTinterwordspacing
-J.~Duplissy, F.~Hahn, U.~Reichl, P.~M. Winkler, E.~Pedersen, V.~Makhmutov, Y.~Viisanen, M.~Kulmala, M.~Wilhelmsson, E.~Weingartner, M.~Avngaard, J.~Curtius, R.~Veenhof, L.~Laakso, S.~Gagne, R.~G. Harrison, M.~Sipila, A.~David, J.~H. Seinfeld, T.~Nieminen, B.~Verheggen, K.~L. Aplin, F.~Stratmann, F.~Arnold, J.~Makela, B.~Kellett, B.~Fastrup, N.~D. Marsh, M.~Lockwood, K.~Carslaw, G.~Wehrle, H.~Aufmhoff, J.~O.~P. Pedersen, U.~Baltensperger, A.~Onnela, A.~Laaksonen, M.~B. Enghoff, J.~Svensmark, H.~Wex, E.~Lillestol, P.~E. Wagner, J.~Kirkby, Y.~Stozhkov, J.~Polny, T.~Bondo, R.~Bingham, and H.~Svensmark, ``{Results from the CERN pilot CLOUD experiment},'' \emph{Atmos. Chem. Phys.}, vol.~10, no.~4, pp. 1635--1647, 2010. [Online]. Available: \url{http://cds.cern.ch/record/1359385}
-\BIBentrySTDinterwordspacing
-
-\bibitem{cyrsp-2018-005}
-\BIBentryALTinterwordspacing
-{CERN}, ``\BIBforeignlanguage{en}{Cern yellow reports: School proceedings, vol 5 (2018): Proceedings of the cas-cern accelerator school on beam injection, extraction and transfer},'' 2018. [Online]. Available: \url{https://e-publishing.cern.ch/index.php/CYRSP/issue/view/62}
-\BIBentrySTDinterwordspacing
-
-\bibitem{russo}
-\BIBentryALTinterwordspacing
-G.~Russo, ``Radio frequency knockout (rfko) extraction: Hardware analysis and beam optics simulation and optimization,'' Mar 2019. [Online]. Available: \url{http://webthesis.biblio.polito.it/id/eprint/10253}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Nagaslaev:2011zz}
-\BIBentryALTinterwordspacing
-V.~Nagaslaev, J.~Amundson, J.~Johnstone, C.~Park, and S.~Werkema, ``Third integer resonance slow extraction using rfko at high space charge.'' 2011. [Online]. Available: \url{https://accelconf.web.cern.ch/IPAC2011/papers/thps058.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Feldbauer:1379901}
-\BIBentryALTinterwordspacing
-G.~Feldbauer, M.~Benedikt, and U.~Dorda, ``{Simulations of Various Driving Mechanisms for the 3rd Order Resonant Extraction from the MedAustron Medical Synchrotron},'' 2011. [Online]. Available: \url{https://cds.cern.ch/record/1379901}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Sterbini:2158994}
-\BIBentryALTinterwordspacing
-G.~Sterbini, A.~Blas, and S.~Gilardoni, ``{Beam-based Performance of the CERN PS Transverse Feedback},'' p. MOPAB10, 2015. [Online]. Available: \url{https://cds.cern.ch/record/2158994}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Metral:1208359}
-\BIBentryALTinterwordspacing
-E.~Métral, G.~Arduini, F.~Arnold~Malandain, W.~Höfle, and D.~Manglunki, ``{Controlled Transverse Emittance Blow-up in the CERN SPS},'' 2010. [Online]. Available: \url{https://cds.cern.ch/record/1208359}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Pari:2780495}
-\BIBentryALTinterwordspacing
-M.~Pari, F.~M. Velotti, M.~A. Fraser, V.~Kain, and O.~Michels, ``{Characterization of the slow extraction frequency response},'' \emph{Phys. Rev. Accel. Beams}, vol.~24, no.~8, p. 083501, 2021. [Online]. Available: \url{https://cds.cern.ch/record/2780495}
-\BIBentrySTDinterwordspacing
-
-\bibitem{wepmp008}
-\BIBentryALTinterwordspacing
-K.~Okamura, Y.~Arakaki, T.~Kimura, S.~Murasugi, R.~Muto, Y.~Shirakabe, M.~Tomizawa, and E.~Yanaoka, ``\BIBforeignlanguage{en}{A consideration on the transfer function between rq field and slow extraction spill in the main ring of j-parc},'' \emph{\BIBforeignlanguage{en}{Proceedings of the 10th Int. Particle Accelerator Conf.}}, vol. IPAC2019, p. Australia, 2019. [Online]. Available: \url{http://jacow.org/ipac2019/doi/JACoW-IPAC2019-WEPMP008.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Agoritsas:SEM}
-\BIBentryALTinterwordspacing
-V.~Agoritsas, ``{Secondary emission chambers for monitoring the CERN Proton Synchrotron ejected beams. Secondary emission chambers for monitoring the CPS ejected beams},'' 1968. [Online]. Available: \url{https://cds.cern.ch/record/299104}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Actis:bxscint}
-\BIBentryALTinterwordspacing
-P.~Actis, T.~Dorenbos, and C.~Johnson, ``{An optically coupled differential beam time structure monitor for slow extraction},'' CERN, Geneva, Tech. Rep., 1976. [Online]. Available: \url{https://cds.cern.ch/record/2831368}
-\BIBentrySTDinterwordspacing
-
-\bibitem{mopa11}
-E.~P. Johnson \emph{et~al.}, ``\BIBforeignlanguage{english}{{Beam delivery of high-energy ion beams for irradiation experiments at the CERN Proton Synchrotron}},'' ser. International Particle Accelerator Conference, no.~14.\hskip 1em plus 0.5em minus 0.4em\relax JACoW Publishing, Geneva, Switzerland, paper MOPA115, presented at IPAC'23, Venice, Italy, May. 2023, paper MOPA115, this conference.
-
-\bibitem{Deghaye:oasis}
-\BIBentryALTinterwordspacing
-S.~Deghaye, D.~Jacquet, J.~Kozar, and J.~Serrano, ``{Oasis: A New System to Acquire and Display the Analog Signals for LHC},'' 2003. [Online]. Available: \url{http://cds.cern.ch/record/693174}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Gasior:895142}
-\BIBentryALTinterwordspacing
-M.~Gasior and R.~Jones, ``{High Sensitivity Tune Measurement by Direct Diode Detection},'' 2005. [Online]. Available: \url{https://cds.cern.ch/record/895142}
-\BIBentrySTDinterwordspacing
-
-\bibitem{htcondor}
-\BIBentryALTinterwordspacing
-``High throughput condor (htcondor).'' [Online]. Available: \url{https://research.cs.wisc.edu/htcondor}
-\BIBentrySTDinterwordspacing
-
-\bibitem{TLBD}
-W.~Hillert, ``Transverse linear beam dynamics,'' 2021.
 
 \end{thebibliography}

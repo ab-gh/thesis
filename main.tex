@@ -25,6 +25,7 @@
 
 
 
+
 \usepackage[capitalise]{cleveref}
 \creflabelformat{equation}{#2\textup{#1}#3}
 \usepackage{amsthm}
@@ -96,7 +97,7 @@ Resonant slow extraction is a beam extraction method which provides a continuous
 
 \end{abstract}
 \vspace*{\fill}
-\keywords{Beam Physics, Slow Extraction, Radio-Frequency Knockout, Simulation, Xsuite}
+\keywords{Beam Physics, Slow Extraction, Radio-Frequency Knock-Out, Simulation, Xsuite}
 \vspace*{\fill}
 \newpage
 %\setcounter{page}{1}
@@ -346,7 +347,7 @@ In order to provide spills over a longer duration, approaching many thousands of
 
 This resonant effect is usually carefully avoided in particle accelerators. However, with the right configuration, this amplitude growth can be used instead of an ES to separate particles from their orbit, towards an MS, and into the extraction transfer line. Should the effect be slow enough, a tiny fraction of particles will reach the MS per turn, and with a large enough per-turn amplitude growth to reliably clear the blade thickness.
 
-The exploitation of resonance to induce extraction is by no means novel; a method akin to slow extraction was first proposed by J. Tuck and L. Teng in 1951~\cite{Couteur_1951}, and performed by Le Couteur at the Liverpool cyclotron in 1954~\cite{Couteur_1955}. Many such applications of slow extraction exist, using different effects to drive particles into resonance. This thesis will explore some of these methods, particularly focussing on Radio-Frequency Knockout slow extraction.
+The exploitation of resonance to induce extraction is by no means novel; a method akin to slow extraction was first proposed by J. Tuck and L. Teng in 1951~\cite{Couteur_1951}, and performed by Le Couteur at the Liverpool cyclotron in 1954~\cite{Couteur_1955}. Many such applications of slow extraction exist, using different effects to drive particles into resonance. This thesis will explore some of these methods, particularly focussing on Radio-Frequency Knock-out slow extraction.
 
 \subsection{Simulating Slow Extraction}
 
@@ -872,6 +873,14 @@ A basic analysis of~\eqref{eq:phase_and_beta} shows that at locations with large
   \label{eq:betatron_tune}
 \end{equation}
 This quantity, often simply referred to as \textit{tune}, effectively indicates how many complete transverse oscillations a particle makes in one turn. The fractional part of this value is the most significant, and often a tune will be reference to the integer part; a tune of $Q=6.\dot 3=19/3$ is, for the purposes of this thesis, equivalent to $Q=1/3$.
+
+The final quantity of interest from these expressions is an effect of non-linearities in quadrupoles. Particles with momentum different to the reference particle $p_0$ will experience different focussing effects in quadrupoles. This slight change in focussing will effect the oscillatory motion of off-momentum particles, and result in a spread of tunes throughout a distribution of particles. The variation of this tune, with respect to the variation in momentum, is characterised by the \textit{chromaticity}, variously defined as $Q'$ or $\eta$:
+\begin{equation}
+  Q' = \frac{\delta Q/Q}{\delta p/p}
+  \label{eq:chroma}
+\end{equation}
+A machine with non-zero chromaticity will necessarily have a tune spread, which can be controlled with the use of sextupoles.
+
 \clearpage
 
 \section{Multi-Particle Transverse Beam Dynamics}\label{sec:theory-transverse}
@@ -1325,7 +1334,7 @@ Outside of this stable envelope, demarcated by the \textit{separatrix}, particle
 \todo{Tomography? or is that too detailed.}
 
 \section{Slow Extraction}
-Now that the fundamentals of accelerator beam physics are established, this section will introduce the principles behind \textit{slow extraction} (SX). Various methods of performing SX will be covered, but the particular method covered in this thesis---\textit{Radio-Frequency Knockout} (RFKO)---will be described in detail.
+Now that the fundamentals of accelerator beam physics are established, this section will introduce the principles behind \textit{slow extraction} (SX). Various methods of performing SX will be covered, but the particular method covered in this thesis---\textit{Radio-Frequency Knock-Out} (RFKO)---will be described in detail.
 
 \subsection{Sextupoles and $\nicefrac 13$-Integer Resonance}
 
@@ -1431,19 +1440,22 @@ The first term describes the typical circular phase-space motion familiar from~\
 The $x$ location of the stable particle, $h$ can also be defined as
 \begin{equation}
   h=\frac 23 \frac \mu S = \frac{4\pi}S\delta Q
+  \label{eq:apothem}
 \end{equation}
 Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$, along with the vertical line at $-h$, define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 4 h^2$.
 
 \subsection{Slow Extraction Principles}
-The fundamental principle of slow extraction exploits the unstable boundary created by sextupolar fields. After a beam is injected and stable, this \textit{waiting} beam is accelerated towards the $\nicefrac 13$-integer resonance. A particle at resonance will then ``lock on'' to one of the separatrix arms, and its amplitude will grow in steps of three turns, rotating around the three separatrices. By carefully controlling the rate at which particles enter resonance, the 3-turn amplitude growth (spiral step) can be adjusted to create a desired flux of particles entering resonance. After a number of turns of amplitude growth (typically hundreds), an electrostatic septum located at some distance from the waiting beam will provide a kick necessary to extract the particles.
+The fundamental principle of slow extraction exploits the unstable boundary created by sextupolar fields. After a beam is injected and stable, this \textit{waiting} beam is accelerated towards the $\nicefrac 13$-integer resonance. A particle at resonance will then ``lock on'' to one of the separatrix arms, and its amplitude will grow in steps of three turns, rotating around the three separatrices. By carefully controlling the rate at which particles enter resonance, the 3-turn amplitude growth (spiral step) can be adjusted to create a desired flux of particles entering resonance. After a number of turns of amplitude growth (typically hundreds), an electrostatic septum located at some distance from the waiting beam will provide a kick necessary to extract the particles. A real-world diagram of slow extraction is shown in~\autoref{fig:real-world}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{real-world.png}
+  \caption{A real-world diagram of momentum-driven slow extraction, looking along the $s$ direction at the magnetic septum location. The waiting beam approaches resonance (dashed), and some particles begin large turn-by-turn oscillations (increasing shaded gradient with turn number) before they jump the septum blade (thick black line) and will be extracted.}\label{fig:real-world}
+\end{figure}
 
 There are a variety of methods to provide the acceleration towards resonance, which fall into two categories: \textit{momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$, whereas \textit{amplitude-driven} methods use transverse noise or RF excitation at the beam's revolution frequency to create increasing betatron amplitudes.
 
 \subsection{Steinbach Diagram}
-
-These two methods can be compared using a Stienbach\footnote{Attributed to C. Steinbach, CERN} diagram. This plots the beam amplitude $A_x$ as a function of momentum $\Delta p/p_0$. The sextupole instability is shown as a triangle, within which is the unstable region beyond the phase-space map separatrices.~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} illustrate \textit{momentum} and \textit{amplitude} driven slow extraction respectively.
-
-% =============================================================== %
 
 \begin{figure}[ht]
   \centering
@@ -1457,11 +1469,37 @@ These two methods can be compared using a Stienbach\footnote{Attributed to C. St
   \caption{Stienbach diagram of amplitude-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:amplitude-driven}
 \end{figure}
 
+These two methods can be compared using a Stienbach\footnote{Attributed to C. Steinbach, CERN} diagram. This plots the beam amplitude $A_x$ as a function of momentum $\Delta p/p_0$. The sextupole instability is shown as a triangle, within which is the unstable region beyond the phase-space map separatrices.~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} illustrate \textit{momentum} and \textit{amplitude} driven slow extraction respectively.
+In order for a particle to be considered stable, its single-particle emittance $\epsilon$ must be lower or equal to the area of the separatrix triangle (acceptance, $A$). Using~\autoref{eq:apothem}, this condition is expressed as
+\begin{equation}
+  A^2\pi\le\frac{48\sqrt 3\pi}{S^2}\delta Q^2\pi
+\end{equation} 
+If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} is seen. The width of this unstable triangle, known as the \textit{stopband}, is proportional to $S$.
+
+% =============================================================== %
+
+\subsection{Slow Extraction Methods}
+
+\subsubsection{Betatron Core}
+
+A simple treatment of momentum-driven slow extraction is through the use of a \textit{betatron core}. Used by accelerators such as the \textit{National Center for Oncological Hadrontherapy}~\cite{Falbo:IPAC2018-TUZGBF3} (CNAO) and MedAustron~\cite{pablo}, a beatron core is a circular magnet placed around the beam to produce a longitudinal voltage along $s$. Both the CNAO and MedAustron designs, and many more medical machines, were based on a landmark report \textit{Proton-Ion Medical Machine Study}~\cite{PIMMS} (PIMMS), with the Betatron Core particularly referencing earlier work~\cite{betatroncore}.
+
+Recalling~\autoref{eq:chroma}, a beam with non-zero (and typically negative) chromaticity $Q'$ can have its tune distance $\delta Q$ controlled by momentum $\Delta p/p$. The longitudinal voltage from the betatron core provides the resonance driving effect (red arrow in~\autoref{fig:momentum-driven}), accelerating particles into resonance. Particles then experience unstable betatron oscillation, jumping between separatrices, before encountering an electrostatic septum, where they receive an extraction kick.
+
+\subsubsection{Tune Sweep}
+Tune sweep operates somewhat to the opposite of Betatron Core: 
+
+\subsubsection{COSE}
+
+\subsubsection{Radio-Frequency Knock-Out}
+
+\subsection{Slow Extraction at the CERN PS}
+
 \begin{enumerate}
   \item \todo{Machine resonance at third order, leading to a derivation of the Kobayashi Hamiltonian and Steinbach diagram} \checkmark
+  \item \todo{Betatron} \checkmark
   \item \todo{COSE (chromatic)}
   \item \todo{Q-sweep}
-  \item \todo{Betatron}
   \item \todo{\textbf{RFKO} INTRODUCE RFKO FORMALLY HERE}
   \item \textcolor{teal}{Mathematical description of the four regimes}
   
@@ -1485,8 +1523,8 @@ These two methods can be compared using a Stienbach\footnote{Attributed to C. St
 
 \chapter{Acknowledgements}
 
-\nocite{*}
-\bibliographystyle{IEEEtran} % We choose the "plain" reference style
+\bibliographystyle{IEEEtran} 
+
 \bibliography{refs.bib} % Entries are in the refs.bib file
 
 \begin{appendices}
