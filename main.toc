@@ -1,16 +1,16 @@
-\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Motivation}{6}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Extraction Methods}{6}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Performing Slow Extraction}{8}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Simulating Slow Extraction}{8}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Challenges}{9}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Theory}{10}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Single-Particle Transverse Beam Dynamics}{10}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Coordinate System}{10}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Orbital Variable Space}{11}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Design orbit and Dipoles}{12}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Focussing and Multipoles}{13}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Single-Particle Oscillatory Motion}{14}{subsection.2.1.5}%
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivation}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Extraction Methods}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Introduction to Slow Extraction}{7}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Modelling Slow Extraction}{7}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Accelerator Physics Theory}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Single-Particle Transverse Beam Dynamics}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Coordinate System}{9}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Special Relativity}{10}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Particle Variables}{11}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Design orbit and Dipoles}{11}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Focussing and Multipoles}{13}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Single-Particle Oscillatory Motion}{14}{subsection.2.1.6}%
 \contentsline {section}{\numberline {2.2}Multi-Particle Transverse Beam Dynamics}{17}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Phase Space}{17}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Dispersion}{18}{subsection.2.2.2}%

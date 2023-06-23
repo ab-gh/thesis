@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  22 JUN 2023 17:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  23 JUN 2023 16:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/ash/cernbox/publications/MSc/main.tex
+**/Users/ash/cernbox/publications/MSc/main
 (/Users/ash/cernbox/publications/MSc/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/base/report.cls
@@ -755,7 +755,8 @@ Package: amsthm 2020/05/29 v2.20.6
 Package: draftwatermark 2020/12/08 3.0 Put a gray textual watermark on document pages
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 81.
- (./main.aux)
+
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
@@ -776,7 +777,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -844,14 +844,12 @@ LaTeX Font Info:    ... okay on input line 81.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 81.
-(./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 LaTeX Info: Redefining \microtypecontext on input line 81.
 Package microtype Info: Applying patch `item' on input line 81.
 Package microtype Info: Applying patch `toc' on input line 81.
-
 
 Package microtype Warning: Unable to apply patch `eqnum' on input line 81.
 
@@ -912,7 +910,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<Royal_Holloway_coat_of_arms.png, id=155, 200.75pt x 318.18875pt>
+<Royal_Holloway_coat_of_arms.png, id=7, 200.75pt x 318.18875pt>
 File: Royal_Holloway_coat_of_arms.png Graphic file (type png)
 <use Royal_Holloway_coat_of_arms.png>
 Package pdftex.def Info: Royal_Holloway_coat_of_arms.png  used on input line 89.
@@ -920,18 +918,19 @@ Package pdftex.def Info: Royal_Holloway_coat_of_arms.png  used on input line 89.
  [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
- <./Royal_Holloway_coat_of_arms.png>]) (./main.toc
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.26 ...traction Principles}{26}{subsection.2.4.2}
-                                                  % [1
-
-])
+ <./Royal_Holloway_coat_of_arms.png>])
+No file main.toc.
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.88 \newpage
+              [1
+
+]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 94.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
@@ -940,51 +939,148 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+ [2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 Chapter 1.
+
+LaTeX Warning: Reference `fig:eadiagram' on page 3 undefined on input line 107.
+
+
+LaTeX Warning: Citation `Fraser:feasibility' on page 3 undefined on input line 109.
+
+
+LaTeX Warning: Reference `fig:chain' on page 3 undefined on input line 109.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4
+ [3
 
-] [5]
+] [4]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 312.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<fast.png, id=234, 403.2666pt x 148.51485pt>
+<fast.png, id=42, 403.2666pt x 148.51485pt>
 File: fast.png Graphic file (type png)
 <use fast.png>
 Package pdftex.def Info: fast.png  used on input line 322.
 (pdftex.def)             Requested size: 469.75499pt x 173.00702pt.
- [6 <./fast.png>]
-<fastmulti.png, id=254, 373.27455pt x 172.2435pt>
+
+
+LaTeX Warning: Citation `Fraser:CAS' on page 5 undefined on input line 323.
+
+
+LaTeX Warning: Citation `Fraser:CAS' on page 5 undefined on input line 323.
+
+
+LaTeX Warning: Reference `fig:fast_diagram' on page 5 undefined on input line 327.
+
+
+LaTeX Warning: Citation `Fraser:CAS' on page 5 undefined on input line 327.
+
+
+LaTeX Warning: Citation `Metzmacher:2061508' on page 5 undefined on input line 327.
+
+
+LaTeX Warning: Citation `Ghithan:2017wpd' on page 5 undefined on input line 327.
+
+
+LaTeX Warning: Reference `fig:chain' on page 5 undefined on input line 327.
+
+[5 <./fast.png>]
+<fastmulti.png, id=53, 373.27455pt x 172.2435pt>
 File: fastmulti.png Graphic file (type png)
 <use fastmulti.png>
 Package pdftex.def Info: fastmulti.png  used on input line 333.
 (pdftex.def)             Requested size: 469.75499pt x 216.77563pt.
 
+
+LaTeX Warning: Citation `Fraser:CAS' on page 6 undefined on input line 334.
+
+
+LaTeX Warning: Citation `Fraser:CAS' on page 6 undefined on input line 334.
+
+
+LaTeX Warning: Reference `chap:theory' on page 6 undefined on input line 346.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <./fastmulti.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [6 <./fastmulti.png>]
 
- [8] [9]
+LaTeX Warning: Citation `Couteur_1951' on page 7 undefined on input line 350.
+
+
+LaTeX Warning: Citation `Couteur_1955' on page 7 undefined on input line 350.
+
+
+LaTeX Warning: Citation `ArrutiaSota:2845862' on page 7 undefined on input line 352.
+
+
+LaTeX Warning: Citation `Iselin:MAD' on page 7 undefined on input line 362.
+
+[7] [8]
 Chapter 2.
+
+LaTeX Warning: Citation `Wiedemann' on page 9 undefined on input line 368.
+
+
+LaTeX Warning: Citation `BDSIM' on page 9 undefined on input line 373.
+
+
+LaTeX Warning: Reference `fig:frenet-serret' on page 9 undefined on input line 375.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
+LaTeX Warning: Reference `fig:rhr' on page 9 undefined on input line 431.
+
+
 
 pdfTeX warning: pdflatex (file ./rhr.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<rhr.pdf, id=297, 463.7325pt x 457.71pt>
+<rhr.pdf, id=82, 463.7325pt x 457.71pt>
 File: rhr.pdf Graphic file (type pdf)
 <use rhr.pdf>
-Package pdftex.def Info: rhr.pdf  used on input line 441.
+Package pdftex.def Info: rhr.pdf  used on input line 435.
 (pdftex.def)             Requested size: 115.93283pt x 114.42722pt.
-[10
 
-] [11 <./rhr.pdf>]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9
+
+]
+
+LaTeX Warning: Reference `subsec:trans_phase_space' on page 10 undefined on input line 458.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./rhr.pdf>]
+
+/Users/ash/cernbox/publications/MSc/main.tex:493: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.493 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 493
+[][]
+ []
+
+[11]
+
+LaTeX Warning: Reference `eq:centrifugal' on page 12 undefined on input line 510.
+
+
+LaTeX Warning: Reference `eq:lorentz' on page 12 undefined on input line 510.
+
 
 Package siunitx Warning: Unit macro \clight has been deprecated in this
 (siunitx)                release.
@@ -997,103 +1093,309 @@ Package siunitx Warning: Unit macro \clight has been deprecated in this
 (siunitx)                \ensuremath  {c}}_{0}}
 
 
-Package siunitx Warning: Unit macro \atomicmassunit has been deprecated in
-(siunitx)                this release.
-(siunitx)                
-(siunitx)                The BIPM have removed this unit from the SI Brochure.
-(siunitx)                You should define it yourself using \DeclareSIUnit in
-(siunitx)                your source. The current definition is
-(siunitx)                
-(siunitx)                \DeclareSIUnit\atomicmassunit{u}
+LaTeX Warning: Reference `eq:lorentz' on page 12 undefined on input line 521.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:rhr' on page 12 undefined on input line 521.
+
+
+LaTeX Warning: Reference `fig:dipole' on page 12 undefined on input line 521.
+
+[12]
+
+LaTeX Warning: Reference `fig:dipole_error' on page 13 undefined on input line 652.
+
+
+LaTeX Warning: Reference `fig:quadrupole' on page 13 undefined on input line 654.
+
+<optics-example.png, id=134, 386.6445pt x 351.2322pt>
+File: optics-example.png Graphic file (type png)
+<use optics-example.png>
+Package pdftex.def Info: optics-example.png  used on input line 760.
+(pdftex.def)             Requested size: 281.85585pt x 256.04901pt.
+
+LaTeX Warning: Reference `fig:optics' on page 13 undefined on input line 764.
+
+[13]
+
+LaTeX Warning: Reference `eq:diff_motion' on page 14 undefined on input line 875.
+
+
+LaTeX Warning: Reference `fig:guttering' on page 14 undefined on input line 881.
+
+
+LaTeX Warning: Reference `eq:hill' on page 14 undefined on input line 881.
+
+[14 <./optics-example.png>]
+<guttering.png, id=154, 149.96025pt x 135.26535pt>
+File: guttering.png Graphic file (type png)
+<use guttering.png>
+Package pdftex.def Info: guttering.png  used on input line 885.
+(pdftex.def)             Requested size: 281.85585pt x 254.27408pt.
+
+
+LaTeX Warning: Reference `eq:hill' on page 15 undefined on input line 889.
+
+
+LaTeX Warning: Citation `Rossbach:247501' on page 15 undefined on input line 891.
+
+
+LaTeX Warning: Reference `eq:motion_x' on page 15 undefined on input line 904.
+
+
+LaTeX Warning: Reference `eq:phase_and_beta' on page 15 undefined on input line 910.
+
+[15 <./guttering.png>] [16]
+
+LaTeX Warning: Reference `eq:motion_x' on page 17 undefined on input line 930.
+
+
+LaTeX Warning: Reference `eq:motion_px' on page 17 undefined on input line 930.
+
+
+LaTeX Warning: Citation `courantsnyder' on page 17 undefined on input line 944.
+
+
+LaTeX Warning: Citation `richardtwiss' on page 17 undefined on input line 944.
+
+
+LaTeX Warning: Reference `fig:twiss-phase-space' on page 17 undefined on input line 946.
+
+
+LaTeX Warning: Reference `eq:emittance' on page 17 undefined on input line 946.
+
+
+LaTeX Warning: Reference `eq:motion_x' on page 17 undefined on input line 1016.
+
+[17
+
+]
+
+LaTeX Warning: Reference `eq:diff_motion' on page 18 undefined on input line 1022.
+
+
+LaTeX Warning: Reference `eq:motion_x' on page 18 undefined on input line 1038.
+
+
+LaTeX Warning: Reference `eq:motion_px' on page 18 undefined on input line 1038.
+
+
+LaTeX Warning: Reference `eq:quadrupole' on page 18 undefined on input line 1045.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12] [13]
-Underfull \vbox (badness 3623) has occurred while \output is active []
-
- [14]
-<guttering.png, id=358, 149.96025pt x 135.26535pt>
-File: guttering.png Graphic file (type png)
-<use guttering.png>
-Package pdftex.def Info: guttering.png  used on input line 845.
-(pdftex.def)             Requested size: 281.85585pt x 254.27408pt.
- [15 <./guttering.png>] [16] [17
-
-]
-Underfull \vbox (badness 1888) has occurred while \output is active []
-
  [18]
+
+LaTeX Warning: Citation `spsrf' on page 19 undefined on input line 1137.
+
+
+LaTeX Warning: Citation `psrf' on page 19 undefined on input line 1137.
+
+
 Underfull \vbox (badness 2245) has occurred while \output is active []
 
  [19]
+
+LaTeX Warning: Reference `eq:lorentz' on page 20 undefined on input line 1139.
+
+
+LaTeX Warning: Reference `eq:lorentz' on page 20 undefined on input line 1139.
+
+
+LaTeX Warning: Reference `eq:brho' on page 20 undefined on input line 1169.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20] [21]
+ [20]
+
+LaTeX Warning: Reference `eq:rel_long' on page 21 undefined on input line 1176.
+
+
+LaTeX Warning: Reference `sec:transdisp' on page 21 undefined on input line 1195.
+
+
+LaTeX Warning: Reference `eq:dispersion' on page 21 undefined on input line 1203.
+
+
+LaTeX Warning: Citation `lbd:tecker' on page 21 undefined on input line 1203.
+
+[21]
+
+LaTeX Warning: Reference `eq:ef_sin' on page 22 undefined on input line 1235.
+
+
+LaTeX Warning: Reference `fig:long_phase' on page 22 undefined on input line 1235.
+
+
+LaTeX Warning: Reference `eq:sync_phase' on page 22 undefined on input line 1235.
+
+
+LaTeX Warning: Reference `subsec:trans_phase_space' on page 22 undefined on input line 1308.
+
+
+LaTeX Warning: Citation `lbd:tecker' on page 22 undefined on input line 1308.
+
+
+LaTeX Warning: Reference `fig:long_phase' on page 22 undefined on input line 1308.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1339.
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1371.
+
+
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1371.
+
+
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1371.
+
+
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1371.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@UnitsNiceFrac ' on input line 1339.
+(hyperref)                removing `math shift' on input line 1379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1339.
+(hyperref)                removing `\@UnitsNiceFrac ' on input line 1379.
 
 
-Underfull \vbox (badness 1990) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1379.
+
+
+LaTeX Warning: Reference `sec:transdisp' on page 23 undefined on input line 1381.
+
+
+LaTeX Warning: Reference `sec:normalised' on page 23 undefined on input line 1392.
+
+
+Underfull \vbox (badness 4981) has occurred while \output is active []
 
  [23]
+
+LaTeX Warning: Reference `sec:matrix' on page 24 undefined on input line 1407.
+
+
+LaTeX Warning: Reference `eq:normalised_sextupole_strength' on page 24 undefined on input line 1460.
+
+
+LaTeX Warning: Citation `kobayashi' on page 24 undefined on input line 1463.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-<kobayashi.png, id=524, 459.6372pt x 449.88075pt>
+<kobayashi.png, id=284, 459.6372pt x 449.88075pt>
 File: kobayashi.png Graphic file (type png)
 <use kobayashi.png>
-Package pdftex.def Info: kobayashi.png  used on input line 1430.
+Package pdftex.def Info: kobayashi.png  used on input line 1470.
 (pdftex.def)             Requested size: 281.85585pt x 275.87529pt.
+
+
+LaTeX Warning: Reference `subsec:trans_phase_space' on page 25 undefined on input line 1474.
+
+
+LaTeX Warning: Reference `fig:kobayashi' on page 25 undefined on input line 1474.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./kobayashi.png>]
-<real-world.png, id=537, 1008.76875pt x 579.16376pt>
+
+LaTeX Warning: Reference `fig:real-world' on page 26 undefined on input line 1488.
+
+<real-world.png, id=293, 1008.76875pt x 579.16376pt>
 File: real-world.png Graphic file (type png)
 <use real-world.png>
-Package pdftex.def Info: real-world.png  used on input line 1452.
+Package pdftex.def Info: real-world.png  used on input line 1492.
 (pdftex.def)             Requested size: 281.85585pt x 161.82008pt.
-<momentum-driven.png, id=538, 1331.97626pt x 994.71625pt>
+<momentum-driven.png, id=294, 1331.97626pt x 994.71625pt>
 File: momentum-driven.png Graphic file (type png)
 <use momentum-driven.png>
-Package pdftex.def Info: momentum-driven.png  used on input line 1462.
+Package pdftex.def Info: momentum-driven.png  used on input line 1502.
 (pdftex.def)             Requested size: 281.85585pt x 210.4751pt.
-<amplitude-driven.png, id=539, 1331.97626pt x 978.65625pt>
+<amplitude-driven.png, id=295, 1331.97626pt x 978.65625pt>
 File: amplitude-driven.png Graphic file (type png)
 <use amplitude-driven.png>
-Package pdftex.def Info: amplitude-driven.png  used on input line 1468.
+Package pdftex.def Info: amplitude-driven.png  used on input line 1508.
 (pdftex.def)             Requested size: 281.85585pt x 207.07692pt.
- [26 <./real-world.png>]
+
+LaTeX Warning: Reference `fig:momentum-driven' on page 26 undefined on input line 1512.
+
+
+LaTeX Warning: Reference `fig:amplitude-driven' on page 26 undefined on input line 1512.
+
+
+LaTeX Warning: Reference `eq:apothem' on page 26 undefined on input line 1513.
+
+[26 <./real-world.png>]
+
+LaTeX Warning: Reference `fig:momentum-driven' on page 27 undefined on input line 1518.
+
+
+LaTeX Warning: Reference `fig:amplitude-driven' on page 27 undefined on input line 1518.
+
+
+LaTeX Warning: Citation `Falbo:IPAC2018-TUZGBF3' on page 27 undefined on input line 1526.
+
+
+LaTeX Warning: Citation `pablo' on page 27 undefined on input line 1526.
+
+
+LaTeX Warning: Citation `PIMMS' on page 27 undefined on input line 1526.
+
+
+LaTeX Warning: Citation `betatroncore' on page 27 undefined on input line 1526.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./momentum-driven.png> <./amplitude-driven.png>]
-<tune-sweep.png, id=571, 1331.97626pt x 994.71625pt>
+
+LaTeX Warning: Reference `eq:chroma' on page 28 undefined on input line 1528.
+
+
+LaTeX Warning: Reference `fig:momentum-driven' on page 28 undefined on input line 1528.
+
+
+LaTeX Warning: Reference `fig:tune-sweep' on page 28 undefined on input line 1531.
+
+<tune-sweep.png, id=316, 1331.97626pt x 994.71625pt>
 File: tune-sweep.png Graphic file (type png)
 <use tune-sweep.png>
-Package pdftex.def Info: tune-sweep.png  used on input line 1495.
+Package pdftex.def Info: tune-sweep.png  used on input line 1535.
 (pdftex.def)             Requested size: 281.85585pt x 210.4751pt.
-<hardt.png, id=575, 516.7305pt x 494.3268pt>
+
+LaTeX Warning: Reference `eq:brho' on page 28 undefined on input line 1541.
+
+
+LaTeX Warning: Reference `fig:hardt' on page 28 undefined on input line 1541.
+
+
+LaTeX Warning: Reference `fig:hardt' on page 28 undefined on input line 1541.
+
+<hardt.png, id=317, 516.7305pt x 494.3268pt>
 File: hardt.png Graphic file (type png)
 <use hardt.png>
-Package pdftex.def Info: hardt.png  used on input line 1505.
+Package pdftex.def Info: hardt.png  used on input line 1545.
 (pdftex.def)             Requested size: 281.85585pt x 269.64035pt.
- [28 <./tune-sweep.png>] [29 <./hardt.png>] [30]
+[28 <./tune-sweep.png>]
+
+LaTeX Warning: Reference `eq:steinbach' on page 29 undefined on input line 1549.
+
+
+LaTeX Warning: Reference `eq:dispersion' on page 29 undefined on input line 1549.
+
+
+LaTeX Warning: Citation `hardt' on page 29 undefined on input line 1553.
+
+[29 <./hardt.png>] [30]
 Chapter 3.
 [31
 
@@ -1127,20 +1429,29 @@ Appendix C.
 [38
 
 ] (./main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0F0C4DD185F4FEEF291672DC2C491E04;6023.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  AF601ACEFA00814047C5B365C628CD67;6172.
  ) 
 Here is how much of TeX's memory you used:
- 34966 strings out of 476025
- 711605 string characters out of 5790017
- 1871388 words of memory out of 5000000
- 54252 multiletter control sequences out of 15000+600000
- 620438 words of font info for 345 fonts, out of 8000000 for 9000
+ 34926 strings out of 476025
+ 711053 string characters out of 5790017
+ 1869388 words of memory out of 5000000
+ 54218 multiletter control sequences out of 15000+600000
+ 620300 words of font info for 341 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,1360b,1050s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exist, replaced by a fixed one
-
+ 84i,13n,89p,1356b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
 
@@ -1175,10 +1486,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (39 pages, 2404441 bytes).
+Output written on main.pdf (39 pages, 2430965 bytes).
 PDF statistics:
- 827 PDF objects out of 1000 (max. 8388607)
- 709 compressed objects within 8 object streams
- 225 named destinations out of 1000 (max. 500000)
- 108402 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 478 compressed objects within 5 object streams
+ 230 named destinations out of 1000 (max. 500000)
+ 108111 words of extra memory for PDF output out of 128383 (max. 10000000)
 
