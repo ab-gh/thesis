@@ -320,11 +320,11 @@ As previously mentioned, \textit{fast} extraction provides a spill of particles 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{fast.png}
-  \caption{Diagram of a general single-turn fast extraction system.~\cite{Fraser:CAS}}
+  \caption{Schematic of a general single-turn fast extraction system.~\cite{Fraser:CAS}}
   \label{fig:fast_diagram}
 \end{figure}
 
-This general method of \textbf{\textit{single-turn} fast extraction} (described in~\autoref{fig:fast_diagram}) is performed at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating beamlines in the LHC~\cite{Fraser:CAS}. The PSB performs similar extraction, but has the added complexity of ``merging'' four seperate stacked accelerators to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems are shown in~\ref{fig:chain}, where red diamonds mark fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain.
+This method of \textbf{\textit{single-turn} fast extraction} (~\autoref{fig:fast_diagram}) is used at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating rings in the LHC~\cite{Fraser:CAS}. The PSB uses the same method, but has the added complexity of ``merging'' four seperate stacked rings to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems are shown in~\ref{fig:chain}, where red diamonds mark fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain to discard the circulating beam at the SPS and LHC.
 
 In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is almost approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters across, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, coined as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum. In its current implementation in the PS, the beam is bumped similarly to single-turn fast extraction, but is instead forced over the blade of an electrostatic septum (ES), such that a segment the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is kicked back onto its orbit. The next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until the finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
 
@@ -335,50 +335,44 @@ In accelerator-to-accelerator contexts, the synchronous nature of fast extractio
   \label{fig:fast_multi_diagram}
 \end{figure}
 
-This method of increasing the spill time is, however, limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost \textit{on} the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large.
+This method of increasing the spill time is, however, limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large.
 
 For example, if a 50\% extraction efficiency is desired over $10^4$ turns, the beam thickness sliced off by the ES must be the same as the thickness of the blade itself. For the SPS, the ES has blade thickness of \qty{25}{\micro\meter}. The required diameter of the beam, therefore, would be $2\cdot 25\mu m\cdot 10^4 = $ \qty{0.5}{\meter}. This diameter is already lager than the beam pipes, clearly physically impossible.
 
-In order to provide spills over a longer duration, approaching many thousands of turns, \textit{slow extraction} must be used. 
+In order to provide spills over a longer duration, over many thousands of turns, \textit{slow extraction} must be used. 
 
-\subsection{Performing Slow Extraction}
+\subsection{Introduction to Slow Extraction}
 
-\textbf{Slow extraction (SX)} instead relies on exploiting resonance of the beam as it oscillates around the orbit of the machine. A full theoretical description of these effects will be detailed in \autoref{chap:theory}, but a brief explanation is offered here: the oscillatory motion of a beam can be controlled such that it returns to the same point along the accelerators circumference with the same oscillation phase. The particles will, therefore, travel through the same field of a magnet, and experience the same force on consecutive turns. Akin to a child pushed on a swing in time with the peak of their oscillation, these particles will rapidly become unstable, the amplitude of their oscillations exponentially increasing. 
+\textbf{Slow extraction} instead relies on exploiting resonance of the beam as it oscillates around the orbit of the machine. A full theoretical description of these effects will be detailed in \autoref{chap:theory}, but a brief explanation is offered here: the oscillatory motion of a beam can be controlled such that it returns to the same point along the accelerators circumference with the same oscillation phase. The particles will, therefore, travel through the same field of a magnet, and experience the same force on consecutive turns, rapidly becoming unstable.
 
-This resonant effect is usually carefully avoided in particle accelerators. However, with the right configuration, this amplitude growth can be used instead of an ES to separate particles from their orbit, towards an MS, and into the extraction transfer line. Should the effect be slow enough, a tiny fraction of particles will reach the MS per turn, and with a large enough per-turn amplitude growth to reliably clear the blade thickness.
+This resonant effect is usually carefully avoided in particle accelerators. However, with the right configuration, this amplitude growth can be used alongside an ES to separate particles from their orbit, towards an MS, and into the extraction transfer line. Should the effect be slow enough, a small fraction of particles will reach the MS per turns.
 
-The exploitation of resonance to induce extraction is by no means novel; a method akin to slow extraction was first proposed by J. Tuck and L. Teng in 1951~\cite{Couteur_1951}, and performed by Le Couteur at the Liverpool cyclotron in 1954~\cite{Couteur_1955}. Many such applications of slow extraction exist, using different effects to drive particles into resonance. This thesis will explore some of these methods, particularly focussing on Radio-Frequency Knock-out slow extraction.
+The exploitation of resonance to induce extraction is by no means novel; a method akin to slow extraction was first proposed by J. Tuck and L. Teng in 1951~\cite{Couteur_1951}, and performed by Le Couteur at the Liverpool cyclotron in 1954~\cite{Couteur_1955}. Many such applications of slow extraction exist, using different effects to drive particles into resonance. This thesis will present some of these methods, particularly focussing on Radio-Frequency Knock-Out slow extraction.
 
-\subsection{Simulating Slow Extraction}
+Many medical synchrotrons, such as the MedAustron Synchrotron, use slow extraction to deliver beam to patients for ion beam cancer therapy~\cite{ArrutiaSota:2845862}, producing spills of up to \qty{30}{\second} can be produced\footnote{Limited to \qty{10}{\second} for patient treatment}. In human medical applications, safety is paramount. Therefore, the slow extraction process must be fully understood. Ripples in the intensity of beam have to be carefully controlled in order to provide a steady, predictable irradiation dose to patients.
 
-There are many applications for slow extraction systems beyond those currently used at CERN's experimental areas. Many medical synchrotrons, such as the MedAustron Synchrotron, use slow extraction to deliver beam to patients for ion beam cancer therapy~\cite{ArrutiaSota:2845862}. Using the \textit{Constant Optics Slow Extraction} (COSE) technique, spills of up to \qty{30}{\second} can be produced\footnote{Limited to \qty{10}{\second} for patient treatment}.
+Small medical synchrotrons are simpler\footnote{The PS contains 100 bending magnets along its circumference, as opposed to MedAustron's 16}, newer\footnote{The PS began operation in 1959, and is CERN's oldest accelerator still in operation. MedAustron was first certified in 2016.}, and having a far higher operational availability requirement than research accelerators such as the PS. At CERN's PS, however, that benefit cannot be relied upon. Machine time is in high demand, and studies are time-shared between machine development (MD), fixed-target experimental areas, LHC physics injection, and a wide array of other facilities. 
 
-Obviously, in human medical applications, safety is extremely important. Therefore, the slow extraction process must be fully understood. Ripples in the intensity of beam have to be carefully controlled in order to provide a steady, predictable irradiation dose to patients.
+Simulations can there provide an important tool in understanding slow extraction spills. New methods can be rapidly developed and tested without requiring extensive (and expensive) machine studies, and wide parameter spaces can be explored to construct functional relationships between input parameters and spill output characteristics. 
 
-Small medical synchrotrons are usually afforded the benefit of being simpler\footnote{The PS contains 100 bending magnets along its circumference, as opposed to MedAustron's 16}, newer\footnote{The PS began operation in 1959, and is CERN's oldest accelerator still in operation. MedAustron was first certified in 2016.}, and having less demand for availability than larger research synchrotrons such as the PS. At such machines, extensive machine tests can be carried out to fully understand the extraction process. At CERN's PS, however, that benefit cannot be relied upon. Availability is in high demand, and studies are time-shared between machine development (MD), fixed-target experimental areas, LHC physics injection, and a wide array of other facilities. 
+\section{Modelling Slow Extraction}
 
-Simulations can there provide a important tool in understanding slow extraction spills. New methods can be rapidly developed and tested without requiring extensive machine studies, and wide parameter spaces can be explored to construct functional relationships between input parameters and spill output characteristics. 
+\label{sec:matrix} will introduce a mathematical model which can be used to numerically calculate particle trajectories in simple machines. However, with even the simplest of accelerators at CERN containing hundreds of components, computational models quickly become necessary. In addition, slow extraction can operate over many more accelerator turns than other processes, such as fast single-turn injection. In the PS, a spill length of \qty{0.5}{\second} would require approximate 230,000 turns. For even a reasonably powerful machine, these computational simulations quickly become time-consuming. 
 
-\section{Challenges}
+To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard within CERN's beam physics community. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
 
-Simulations for fast extraction are well understood; as explained later in \autoref{chap:theory}, the dynamics of particles in a ``static''\footnote{Static referring to the magnets and RF systems (known as the ``optics'' of the machine) being constant over the given time period.} machine can be understood with simple matrix transformations. However, many slow extraction methods rely on dynamic machines---the aforementioned COSE technique, despite its name, is not performed on a static machine, but instead scales the strength of magnets with the change in particle momentum, creating \textit{effectively} constant optics. Therefore, for each successive turn around the machine, the transport matrices must be re-calculated. For a typical slow extraction time of \qty{500}{\milli\second} at the PS, this equates to \qty{\approx235000}{turns}, and orders of magnitudes more calculations.
+However, newer tools are introducing improvements, such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarassingly parallel}\footnote{A problem which requires minimal no effort to be separated into a large number of independent, concurrently-processed tasks.} can be run on large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or discrete computer host on a batch-processing network.
 
-There are long-standing, well-tested tools for computing these transfer matrices for particle accelerators, which describe the motion of a particle---or ensemble of particles---as it travels through the accelerator, encountering different magnetic and electric fields.
+\chapter{Accelerator Physics Theory}\label{chap:theory}
 
-To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters and initial conditions, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard amongst particle accelerator institutions across the globe. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
-
-One particular improvement found in many new simulation programs is ``ready-to-go'' General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations, initially intended for vector-based ray-tracing calculations. Where typical Central Processing Units have a wide range of general-purpose, unspecialised instructions and circuitry, GPUs are designed to perform a small set of highly optimised instructions on large arrays of data. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, where a typical CPU may contain anywhere from 4 to 64 cores, GPUs can contain many thousands of cores, capable of performing \textit{embarassingly parallel}\footnote{An \textit{embarassingly parallelisable} problem requires almost no effort to be separated into a large number of independent tasks which can be calculated concurrently.} calculations many orders of magnitude faster than a CPU.
-
-\chapter{Theory}\label{chap:theory}
-
-To construct accurate simulations of slow extraction methods, one must first understand the fundamental theory behind particle motion in a circular accelerator. This chapter will introduce the theory required to understand the motion of ensembles of particles as they travel through an accelerator, and how such oscillatory motion can be exploited to perform slow extraction. For a more in-depth treatment of beam dynamics and accelerator physics, the reader is referred to Wiedmann's \textit{Introduction to Accelerator Physics}~\cite{Wiedemann}.
+To construct accurate simulations of slow extraction methods, one must first understand the fundamental theory behind particle motion in a circular accelerator. This chapter will introduce the theory required to understand the motion of particles as they travel through an accelerator, and how such oscillatory motion can be exploited to perform slow extraction~\cite{Wiedemann}.
 \section{Single-Particle Transverse Beam Dynamics}
 
 \subsection{Coordinate System}
 
-The coordinate systems used to describe the dynamic motion of particles in a particle accelerator such as the PS relies on the periodic nature of a circular accelerator. Using a traditional Cartesian $x, y, z$ coordinate system would quickly introduce complications when describing circular trajectories, and so a local curvilinear coordinate system is used.
+The coordinate systems used to describe the dynamic motion of particles in an accelerator such as the PS relies on the periodic nature of a circular accelerator. Using a traditional Cartesian coordinate system would quickly introduce complications when describing circular trajectories, and so a local curvilinear coordinate system is used~\cite{BDSIM}.
 
-The basis vectors for this system, $(\hat x, \hat y, \hat s)$, constantly rotate in Cartesian space as the reference particle moves along the orbit of the accelerator. The longitudinal vector $\hat s$ is tangent to the particle's orbit, and the $\hat x$ direction is parallel to the radius of the accelerator. The absolute direction of $\hat y$ does not change, but makes one complete rotation in one closed orbit of the reference particle through the accelerator. This system is shown in Figure~\ref{fig:frenet-serret}, along with the radius of the circular trajectory $\rho$, and the angle from the origin $s=0$. 
+The basis vectors for this system, $(\hat x, \hat y, \hat s)$, rotate in space as the reference particle moves along the accelerator. The longitudinal vector $\hat s$ is tangent to the particle's orbit, and the $\hat x$ direction is parallel to the radius of the accelerator. The absolute direction of $\hat y$ does not change, but makes one complete rotation in one closed orbit of the reference particle through the accelerator. This system is shown in Figure~\ref{fig:frenet-serret}, along with the radius of the circular trajectory $\rho$, and the angle from the origin $s=0$. 
 
 \begin{figure}[!h]
 \begin{center}
@@ -426,10 +420,10 @@ The basis vectors for this system, $(\hat x, \hat y, \hat s)$, constantly rotate
 
 \end{tikzpicture}
 \end{center}
-\caption{The \textit{Frenet-Serret} vectors used to define the coordinate system used in particle beam dynamics.}\label{fig:frenet-serret}
+\caption{The vectors used to define the Frenet-Serret coordinate system.}\label{fig:frenet-serret}
 \end{figure}
 
-This coordinate system is academically known as a {\it Frenet-Serret} type coordinate system, and can be rigorously defined by the unit vector {\it tangent} to the curve $\hat T$ (pointing in the direction of motion), the unit vector {\it normal} to the tangent and on the tangential plane $\hat N$, and the binormal unit vector $\hat B$, the cross product of $\hat T$ and $\hat N$. These unit vectors, forming an orthonormal basis spanning $\mathbb{R}^3$, and known collectively as the {\bf TNB} frame, are equal to the vectors $\hat x, \hat y, \hat s$ by:
+This coordinate system is known as a {\it Frenet-Serret} coordinate system, and can be rigorously defined by the unit vector {\it tangent} to the curve $\hat T$ (pointing in the direction of motion), the unit vector {\it normal} to the tangent and on the tangential plane $\hat N$, and the binormal unit vector $\hat B$, the cross product of $\hat T$ and $\hat N$. These unit vectors, forming an orthonormal basis spanning $\mathbb{R}^3$ are equal to the vectors $\hat x, \hat y, \hat s$ by:
 \begin{equation}
 \begin{pmatrix}\hat T\\\hat N\\\hat B \end{pmatrix}=\begin{pmatrix}\hat s\\-\hat x\\\hat y \end{pmatrix}
 \end{equation}
@@ -444,29 +438,71 @@ The coordinate system $(\hat x, \hat y, \hat s)$ relies on the right-hand chiral
 \end{center}
 \end{figure}
 
-\subsection{Orbital Variable Space}
+\subsection{Special Relativity}
+
+The equations of motion in this thesis consider particles moving at extremely high velocity, approaching the speed of light $c$. At CERN, before injection into the PS, particles are accelerated to \qty{2}{\giga\electronvolt}, and reach 94.8\% of the speed of light. At such speeds, relativistic effects are significant.
+
+The Lorentz factor $\gamma$ is defined as the derivative of \textit{coordinate} time $t$ in the relativistic particle's reference frame, with respect to the \textit{proper} or \textit{lab} time $\tau$ in the observer's reference frame. It is calculated as:
+\begin{equation}
+    \gamma = \frac 1{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+Also defined is the $\beta$ factor
+\begin{equation}
+    \beta = \frac vc
+\end{equation}
+and the $\alpha$ factor
+\begin{equation}
+    \alpha = \frac 1\gamma
+\end{equation}
+
+For reasons that will become clear in \autoref{subsec:trans_phase_space}, these factors will be referred to as $\alpha_c, \beta_c, \gamma_c$.
+
+One important distinction in a relativistic reference frame is the \textit{invariant} mass $m_0$ versus the \text{relativistic} mass $m$. The invariant mass, or \text{rest} mass of any object is the Newtonian mass measured in its own reference frame. From the \textit{lab} reference frame, this mass is measured as the relativistic mass, defined as
+\begin{equation}
+    m=\gamma m_0
+\end{equation}
+This relativistic mass is conserved just the same as rest mass, and follows the $p=mv$ formula the same as in the rest frame. 
+The rest \text{energy} $E_0$ and \textit{momentum} $m_0$ are likewise defined in the relativistic frame:
+\begin{equation}
+    E=\gamma m_0c^2
+\end{equation}
+\begin{equation}
+    p=\gamma m_0v
+\end{equation}
+For brevity, this report will always assume a relativistic frame, and all mentions of mass $m$, momentum $p$, or energy $E$ should be assumed to be relativistic unless otherwise stated.
+
+\subsection{Particle Variables}
 
 Following the basis vectors defining the coordinate system, the following variables are used to characterise the orbit of particles, dependent on $s$:
+
+\noindent \textbf{In the transverse plane:}
 \begin{itemize}
   \item $x(s)$ [m]~---~the particle's horizontal position with respect to the reference orbit.
   \item $y(s)$ [m]~---~the particle's vertical position with respect to the reference orbit.
-  \item $t(s)=-c\Delta t$ [m]~---~the particle's arrival delay with respect to the reference orbit, multiplied by the speed of light $c$.
   \item $x'(s)=\frac{dx}{ds}$ [rad]~---~the particle's horizontal angle with respect to the reference orbit.
   \item $y'(s)=\frac{dy}{ds}$ [rad]~---~the particle's vertical angle with respect to the reference orbit.
-  \item $p_t(s)=\Delta E/pc$~---~the particle's energy difference, divided by the reference momentum times the speed of light $c$.
 \end{itemize}
+\textbf{In the longitudinal plane:}
+\begin{itemize}
+    \item $z=s-s_0$~---~the particle's longitudinal position with respect to the reference particle $s_0$.
+    \item $\delta = \Delta p/p_0$~---~the particle's momentum difference with respect to the reference particle $p_0$.
+    %\item $t(s)=-c\Delta t$ [m]~---~the particle's arrival delay with respect to the reference orbit, multiplied by the speed of light $c$.
+    %\item $p_t(s)=\Delta E/pc$~---~the particle's energy difference, divided by the reference momentum times the speed of light $c$.
+\end{itemize}
+\item 
 
-These variables provide a 6-tuple fully describing the trajectory of a particle. However, for the remainder of this thesis, the pair longitudinal variables $t, p_t$ will be treated separately to the transverse variable pairs $(x, x')$ and $(y, y')$. This enables a simpler understanding of the effects of beam bending and focussing magnets, as these effects are independent of the longitudinal variables. Conversely, longitudinal beam dynamics requires understanding or RF devices.
+These variables provide a 6-tuple fully describing the position of a particle. However, for the remainder of this thesis, the pair of longitudinal variables $(z, \delta)$ will be treated separately to the transverse variable pairs $(x, x')$ and $(y, y')$. This enables a simpler understanding of the effects of beam bending and focussing magnets, as these effects are independent of the longitudinal variables. Conversely, longitudinal beam dynamics requires understanding or RF devices.
 
 \subsection{Design orbit and Dipoles}
 
-All descriptions of particle accelerators are build upon the Lorentz force, describing the force $\vec F$ acting on a charged particle with charge $q$ as it moves through an electric field $\vec E$ and magnetic field $\vec B$ with velocity $\vec v$, given as
+An understanding of particle dynamics in an accelerator can be built upon the Lorentz force, describing the force $\vec F$ acting on a charged particle with charge $q$ as it moves through an electric field $\vec E$ and magnetic field $\vec B$ with velocity $\vec v$, given as
 \begin{equation}
 \vec F_{\text{lorentz}} = q\cdot(\vec E+ \vec v\times\vec B)\label{eq:lorentz}
 \end{equation}
-This equation can already show why magnetic fields are used in almost all areas of particle acceleration, and not electric fields; a particle with higher velocity $v$ will experience a greater force from a constant magnetic field $\vec B$, whereas the contribution from the electric field $\vec E$ will remain constant. Therefore, at velocities approaching the speed of light ($v \rightarrow c$), we can begin to neglect $\vec E$ for some derivations.
+This equation can already show why magnetic fields are used in almost all areas of particle acceleration, and not electric fields; a particle with higher velocity $v$ will experience a greater force from a constant magnetic field $\vec B$, whereas the contribution from the electric field $\vec E$ will remain constant.
 
-The other force experienced by a particle in an accelerator is the centripetal\footnote{While the coordinate system used allows for a reference frame whose orientation follows the orbit, this frame is not co-moving with the particles, but still fixed in the ``laboratory'' frame---otherwise, complex Lorentz transformations would be required.} force:
+The other force experienced by a particle in an accelerator is a consequence of conservation of momentum:
+%centripetal\footnote{While the coordinate system used allows for a reference frame whose orientation follows the orbit, this frame is not co-moving with the particles, but still fixed in the ``laboratory'' frame---otherwise, complex Lorentz transformations would be required.} force:
 \begin{equation}
 \vec F_{\text{centrif.}}=\frac{m_0v^2}{\rho}\label{eq:centrifugal}
 \end{equation} where $m_0$ is the particle's rest mass, and $\rho$ is the radius of the particle's orbit inside the accelerator.
@@ -476,17 +512,13 @@ Equating equations~\ref{eq:centrifugal} and~\ref{eq:lorentz} yields
 B\rho=\frac pq
 \label{eq:brho}
 \end{equation}
-The quantity $B\rho$ is known as the \textit{momentum rigidity} of a beam, and defines the bending angle of a particle for a given magnetic field. 
+The quantity $B\rho$ is known as the \textit{magnetic rigidity} of a beam, and defines the bending angle of a particle for a given magnetic field. 
 
-If the momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight\per amu}, and A and Ze are the atomic mass number and charge of the particle, the momentum rigidity can be expressed in Tesla-meters:
-
+If the relativistic momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight\per amu}, the magnetic rigidity can be expressed in Tesla-meters:
 \begin{equation}
-B\rho\ \left[\unit{\tesla\meter}\right]=\frac pq=\frac AZ\times3.33564\times q\ \left[\unit[per-mode=symbol]{\GeV\per\clight\per\atomicmassunit}\right]
-\end{equation}
-
-However, this formulation only describes a single magnetic field. In order to bend the particles along a circular trajectory, dipole magnets are used to create near-constant fields through which the particles travel. Again referring to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a magnetic field pointed vertically upwards (along the $\hat y$ vector) will cause a particle with motion along the $\hat s$ vector to experience a bending force along the $-\hat x$ direction (illustrated in~\autoref{fig:dipole}).
-
-The arrangements of these bending magnets---referred to as Main Units (MU)---will define the closed loop of one orbit in the accelerator---the {\it design orbit}.
+B\rho \left[\unit{\tesla\meter}\right] = 3.3356\cdot p\left[\unit{\giga\electronvolt\per\clight}\right]
+\end{equation} %B\rho\ \left[\unit{\tesla\meter}\right]=\frac pq=\frac AZ\times3.33564\times q\ \left[\unit[per-mode=symbol]{\GeV\per\clight\per\atomicmassunit}\right]
+Again referring to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a magnetic field pointed vertically upwards (along the $\hat y$ vector) will cause a positively-charged particle with motion along the $\hat s$ vector to experience a bending force along the $-\hat x$ direction (illustrated in~\autoref{fig:dipole}). This formulation, however, only considers a single dipole. In reality, the bending magnet structure of accelerators typically consist of multiple dipoles placed around the ring, their power converters connecting in series. The arrangements of these bending magnets---referred to as Main Units (MU) in the context of the PS---will define the reference\footnote{Sometimes referred to as \textit{design} orbit} orbit in the accelerator.
 
 \begin{figure}[h]
   \centering
@@ -575,7 +607,7 @@ The arrangements of these bending magnets---referred to as Main Units (MU)---wil
   \caption{A dipole magnet, showing the direction of the magnetic field, $\vec B$, the current of the particle, $\vec I$, and the force, $\vec F$, on a positively charged particle.}\label{fig:dipole}
 \end{figure}
 
-If $\alpha$ is the bending angle of a single MU, then $\alpha$ can be related to the momentum rigidity by
+If $\alpha$ is the bending angle of a single MU, then $\alpha$ can be related to the magnetic rigidity by
 \begin{equation}
 \alpha=\frac{ds}\rho=\frac{B\ ds}{B\rho}
 \end{equation}
@@ -584,7 +616,7 @@ Integrating this over all magnets in the ring, therefore, must be equal to one f
 \frac{\int B\ ds}{B\rho}\equiv2\pi
 \end{equation}
 
-This provides one of the first key insights which is not obvious at first---that ``circular'' accelerators are in fact n-sided polygons, with bending magnets at each vertex, and a \textit{drift} (accelerator sections without any significant electromagnetic field) or other non-bending multipole magnet at each side: in the case of the LHC, 1,232 dipole magnets are used to keep the beam on it's circular path; in the PS---100.
+This provides one of the first key insights which is not obvious at first---that ``circular'' accelerators are in fact more complex shapes, with bending magnets at each vertex, and a \textit{drift} (accelerator sections without any significant electromagnetic field) or other non-bending multipole magnet at each side: in the case of the LHC, 1,232 dipole magnets are used to keep the beam on it's circular path; in the PS---100.
 
 \subsection{Focussing and Multipoles}
 
@@ -724,95 +756,95 @@ To correct for this, synchrotrons use quadrupole elements to ``focus'' the beam 
 
 Sextupoles---third order magnets---provide additional correction to the beam. Here, we can begin to expand on the optical analogy used thus far.~\autoref{fig:optics} shows a full arrangement of a dipole, sextupole, and focussing quadrupole. In the optical analogy, the Dipole takes the role of a prism, bending the light. As with prisms, beams with higher energy are bent less than low energy, and so the component wavelengths (or energies) in the beam beam are dispersed. The sextupole is analogous to an aspherical element, correcting for chromatic aberration introduced by the focussing quadrupole. Again, as with its optical analogue---a focussing lens---the quadrupole has shorter focal length for higher energy particles. The sextupole acts as a focussing lens at high energy and diverging lens at low energy, correcting for this chromatic effect.
 
-\begin{figure}
-\centering
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,420); %set diagram left start at 0, and has height of 420
+% \begin{figure}
+% \centering
+% \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+% \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+% %uncomment if require: \path (0,420); %set diagram left start at 0, and has height of 420
 
-%Straight Lines [id:da5032125547450867] 
-\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=2.25]    (20,250) -- (40,200) ;
-%Straight Lines [id:da7193947806706618] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (210,170) -- (310,170) ;
-%Straight Lines [id:da9130386432813542] 
-\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=2.25]    (40,250) -- (60,200) ;
-%Straight Lines [id:da27606687123687523] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (310,70) -- (438.8,75.6) ;
-%Flowchart: Preparation [id:dp23094783659480855] 
-\draw   (290,130) -- (297.5,60) -- (322.5,60) -- (330,130) -- (322.5,200) -- (297.5,200) -- cycle ;
-%Straight Lines [id:da18224121501659596] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (210,70) -- (310,70) ;
-%Straight Lines [id:da07220877512576229] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (310,90) -- (439.8,88.6) ;
-%Straight Lines [id:da4744481623787409] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (210,90) -- (310,90) ;
-%Straight Lines [id:da7680471071414616] 
-\draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (210,110) -- (310,110) ;
-%Straight Lines [id:da7247321208701782] 
-\draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (310,110) -- (440,110) ;
-%Straight Lines [id:da28519750675372135] 
-\draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (210,150) -- (440,150) ;
-%Straight Lines [id:da8241694279527554] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (210,191) -- (310,191) ;
-%Straight Lines [id:da6175125823498442] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (310,170) -- (439.2,175.6) ;
-%Straight Lines [id:da5918352005930418] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (310,191) -- (440,200) ;
-%Shape: Ellipse [id:dp03595429672574735] 
-\draw   (430,130) .. controls (430,85.82) and (434.48,50) .. (440,50) .. controls (445.52,50) and (450,85.82) .. (450,130) .. controls (450,174.18) and (445.52,210) .. (440,210) .. controls (434.48,210) and (430,174.18) .. (430,130) -- cycle ;
-%Straight Lines [id:da1814744582158785] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (439.8,88.6) -- (610,130) ;
-%Straight Lines [id:da46080486956508504] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (438.8,75.6) -- (610,130) ;
-%Straight Lines [id:da7978877411725234] 
-\draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (440,110) -- (610,130) ;
-%Straight Lines [id:da45611278933138877] 
-\draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (440,150) -- (610,130) ;
-%Straight Lines [id:da47306718166192696] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (439.2,175.6) -- (610,130) ;
-%Straight Lines [id:da8057830718576857] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (440,200) -- (610,130) ;
-%Shape: Ellipse [id:dp869139000293633] 
-\draw   (305,82) .. controls (305,70.95) and (307.24,62) .. (310,62) .. controls (312.76,62) and (315,70.95) .. (315,82) .. controls (315,93.05) and (312.76,102) .. (310,102) .. controls (307.24,102) and (305,93.05) .. (305,82) -- cycle ;
-%Shape: Path Data [id:dp22450547395269504] 
-\draw   (304,195) .. controls (305.38,195) and (306.5,188.28) .. (306.5,180) .. controls (306.5,171.72) and (305.38,165) .. (304,165) -- (314,165) .. controls (312.62,165) and (311.5,171.72) .. (311.5,180) .. controls (311.5,188.28) and (312.62,195) .. (314,195) -- (304,195) -- cycle ;
-%Curve Lines [id:da9020894578602425] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (48.2,177.6) and (87.2,71.6) .. (210,70) ;
-%Curve Lines [id:da8005791954562751] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (74.2,176.6) and (83.2,96.6) .. (210,90) ;
-%Curve Lines [id:da7337546567844901] 
-\draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (54.2,176.6) and (83.2,116.6) .. (210,110) ;
-%Curve Lines [id:da37909296710645] 
-\draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (74.2,176.6) and (83.2,156.6) .. (210,150) ;
-%Curve Lines [id:da1812313073325389] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (68.2,164.6) and (147.2,169.6) .. (210,170) ;
-%Curve Lines [id:da9550611143964061] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (62.2,192.6) and (149.2,189.6) .. (210,191) ;
-%Straight Lines [id:da7770063556142277] 
-\draw    (210,60) -- (100,220) ;
-%Straight Lines [id:da5255637367733044] 
-\draw    (30,60) -- (10,220) ;
-%Straight Lines [id:da8889577051375981] 
-\draw    (210,60) -- (30,60) ;
-%Straight Lines [id:da09835929734762772] 
-\draw    (100,220) -- (10,220) ;
+% %Straight Lines [id:da5032125547450867] 
+% \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=2.25]    (20,250) -- (40,200) ;
+% %Straight Lines [id:da7193947806706618] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (210,170) -- (310,170) ;
+% %Straight Lines [id:da9130386432813542] 
+% \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=2.25]    (40,250) -- (60,200) ;
+% %Straight Lines [id:da27606687123687523] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (310,70) -- (438.8,75.6) ;
+% %Flowchart: Preparation [id:dp23094783659480855] 
+% \draw   (290,130) -- (297.5,60) -- (322.5,60) -- (330,130) -- (322.5,200) -- (297.5,200) -- cycle ;
+% %Straight Lines [id:da18224121501659596] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (210,70) -- (310,70) ;
+% %Straight Lines [id:da07220877512576229] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (310,90) -- (439.8,88.6) ;
+% %Straight Lines [id:da4744481623787409] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (210,90) -- (310,90) ;
+% %Straight Lines [id:da7680471071414616] 
+% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (210,110) -- (310,110) ;
+% %Straight Lines [id:da7247321208701782] 
+% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (310,110) -- (440,110) ;
+% %Straight Lines [id:da28519750675372135] 
+% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (210,150) -- (440,150) ;
+% %Straight Lines [id:da8241694279527554] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (210,191) -- (310,191) ;
+% %Straight Lines [id:da6175125823498442] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (310,170) -- (439.2,175.6) ;
+% %Straight Lines [id:da5918352005930418] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (310,191) -- (440,200) ;
+% %Shape: Ellipse [id:dp03595429672574735] 
+% \draw   (430,130) .. controls (430,85.82) and (434.48,50) .. (440,50) .. controls (445.52,50) and (450,85.82) .. (450,130) .. controls (450,174.18) and (445.52,210) .. (440,210) .. controls (434.48,210) and (430,174.18) .. (430,130) -- cycle ;
+% %Straight Lines [id:da1814744582158785] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (439.8,88.6) -- (610,130) ;
+% %Straight Lines [id:da46080486956508504] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (438.8,75.6) -- (610,130) ;
+% %Straight Lines [id:da7978877411725234] 
+% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (440,110) -- (610,130) ;
+% %Straight Lines [id:da45611278933138877] 
+% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (440,150) -- (610,130) ;
+% %Straight Lines [id:da47306718166192696] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (439.2,175.6) -- (610,130) ;
+% %Straight Lines [id:da8057830718576857] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (440,200) -- (610,130) ;
+% %Shape: Ellipse [id:dp869139000293633] 
+% \draw   (305,82) .. controls (305,70.95) and (307.24,62) .. (310,62) .. controls (312.76,62) and (315,70.95) .. (315,82) .. controls (315,93.05) and (312.76,102) .. (310,102) .. controls (307.24,102) and (305,93.05) .. (305,82) -- cycle ;
+% %Shape: Path Data [id:dp22450547395269504] 
+% \draw   (304,195) .. controls (305.38,195) and (306.5,188.28) .. (306.5,180) .. controls (306.5,171.72) and (305.38,165) .. (304,165) -- (314,165) .. controls (312.62,165) and (311.5,171.72) .. (311.5,180) .. controls (311.5,188.28) and (312.62,195) .. (314,195) -- (304,195) -- cycle ;
+% %Curve Lines [id:da9020894578602425] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (48.2,177.6) and (87.2,71.6) .. (210,70) ;
+% %Curve Lines [id:da8005791954562751] 
+% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (74.2,176.6) and (83.2,96.6) .. (210,90) ;
+% %Curve Lines [id:da7337546567844901] 
+% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (54.2,176.6) and (83.2,116.6) .. (210,110) ;
+% %Curve Lines [id:da37909296710645] 
+% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (74.2,176.6) and (83.2,156.6) .. (210,150) ;
+% %Curve Lines [id:da1812313073325389] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (68.2,164.6) and (147.2,169.6) .. (210,170) ;
+% %Curve Lines [id:da9550611143964061] 
+% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (62.2,192.6) and (149.2,189.6) .. (210,191) ;
+% %Straight Lines [id:da7770063556142277] 
+% \draw    (210,60) -- (100,220) ;
+% %Straight Lines [id:da5255637367733044] 
+% \draw    (30,60) -- (10,220) ;
+% %Straight Lines [id:da8889577051375981] 
+% \draw    (210,60) -- (30,60) ;
+% %Straight Lines [id:da09835929734762772] 
+% \draw    (100,220) -- (10,220) ;
 
-% Text Node
-\draw (81,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Dipole};
-% Text Node
-\draw (278,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Sextupole};
-% Text Node
-\draw (401,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Quadrupole};
-% Text Node
-\draw (41,72) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small High-Energy}};
-% Text Node
-\draw (121,193) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Low-Energy}};
+% % Text Node
+% \draw (81,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Dipole};
+% % Text Node
+% \draw (278,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Sextupole};
+% % Text Node
+% \draw (401,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Quadrupole};
+% % Text Node
+% \draw (41,72) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small High-Energy}};
+% % Text Node
+% \draw (121,193) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Low-Energy}};
 
 
-\end{tikzpicture}
-\caption{A diagram showing how Dipoles, Quadrupoles, and Sextupoles are used together to create the desired beam dynamics for particles with different energies.}
-\label{fig:optics}
-\end{figure}
+% \end{tikzpicture}
+% \caption{A diagram showing how Dipoles, Quadrupoles, and Sextupoles are used together to create the desired beam dynamics for particles with different energies.}
+% \label{fig:optics}
+% \end{figure}
 
 Now that the basic magnetic elements have been introduced, and an understanding of the beam's momentum $p$ has been formed, we can redefine our transverse coordinates in terms of momentum: $p_x=x'\cdot p$ and $p_y=y'\cdot p$ now define our transverse coordinates. These coordinates will allow us to build a picture of the multi-particle transverse dynamics of the beam.
 
@@ -1498,7 +1530,7 @@ Tune sweep operates somewhat as the opposite of Betatron Core: rather than contr
 
 For a small momentum spread $\Delta p/p$, the tune's dependency on quadrupole strength can be assumed as linear, so a simple quadrupole strength sweep is all that is required for tune-sweep.
 
-There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of momentum rigidity ($B\rho$,~\autoref{eq:brho}) in the beam. The effect of this is illustrated in~\autoref{fig:hardt}: particles excited into instability with different amplitudes will ``lock on'' to separatrices at different phase-space locations. The result is a range in angle of particles extracted at the electrostatic septum (located at, for example $x=0.3$ in~\autoref{fig:hardt}).
+There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of magnetic rigidity ($B\rho$,~\autoref{eq:brho}) in the beam. The effect of this is illustrated in~\autoref{fig:hardt}: particles excited into instability with different amplitudes will ``lock on'' to separatrices at different phase-space locations. The result is a range in angle of particles extracted at the electrostatic septum (located at, for example $x=0.3$ in~\autoref{fig:hardt}).
 
 \begin{figure}
   \centering
@@ -1513,7 +1545,7 @@ Recalling~\autoref{eq:steinbach}, amplitude $A$ is correlated with momentum diff
 This condition, known as the Hardt condition~\cite{hardt}, will align the separatrices, given a phase advance $\Delta\phi$ and dispersion coefficients $D_n, D'_n$. However, in the context of tune-sweep extraction, the Hardt condition proves ineffective: a changing momentum will change dispersion coefficients, causing the separatrices to misalign.
 
 \subsubsection{COSE}
-To combat this effect, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the momentum rigidity of the beam, $B\rho$, is increased simultaneously with the tune-sweep.
+To combat this effect, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the magnetc rigidity of the beam, $B\rho$, is increased simultaneously with the tune-sweep.
 
 \subsubsection{Radio-Frequency Knock-Out}
 
