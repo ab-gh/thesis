@@ -63,6 +63,9 @@ F.~C. Iselin, ``{The MAD Program (Methodical Accelerator Design): Reference Manu
 H.~Wiedemann, \emph{Introduction to Accelerator Physics}.\hskip 1em plus 0.5em minus 0.4em\relax Cham: Springer International Publishing, 2015, pp. 3--41. [Online]. Available: \url{https://doi.org/10.1007/978-3-319-18317-6_1}
 \BIBentrySTDinterwordspacing
 
+\bibitem{BDSIM}
+L.~Nevay, J.~Snuverink, A.~Abramov, L.~Deacon, H.~Garcia-Morales, H.~Lefebvre, S.~Gibson, R.~Kwee-Hinzmann, W.~Shields, S.~Walker, and S.~Boogert, ``Bdsim: An accelerator tracking code with particle-matter interactions,'' \emph{Computer Physics Communications}, vol. 252, p. 107200, 02 2020.
+
 \bibitem{Rossbach:247501}
 \BIBentryALTinterwordspacing
 J.~Rossbach and P.~Schmüser, ``{Basic course on accelerator optics},'' 1994. [Online]. Available: \url{http://cds.cern.ch/record/247501}
