@@ -27,7 +27,7 @@ M.~Fraser, P.~A. Arrutia~Sota, K.~Biłko, N.~Charitonidis, S.~Danzeca, M.~Delrie
 
 \bibitem{Fraser:CAS}
 \BIBentryALTinterwordspacing
-M.~A. Fraser, ``\BIBforeignlanguage{en}{Fast extraction: single and multi-turn},'' \emph{\BIBforeignlanguage{en}{CERN Yellow Reports: School Proceedings}}, vol. Vol 5, p. Extraction and Transfer, 2018. [Online]. Available: \url{https://e-publishing.cern.ch/index.php/CYRSP/article/view/703}
+M.~A. Fraser, ``\BIBforeignlanguage{en}{Fast extraction: single and multi-turn},'' vol. Vol 5.\hskip 1em plus 0.5em minus 0.4em\relax CERN, 2018, p. Extraction and Transfer. [Online]. Available: \url{https://doi.org/10.23730/CYRSP-2018-005.285}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Metzmacher:2061508}
@@ -123,5 +123,13 @@ L.~Badano and S.~Rossi, ``{Characteristics of a betatron core for extraction in 
 \BIBentryALTinterwordspacing
 M.~Pullia, ``{Hardt condition for superposition of separatrices},'' \emph{Informal Meeting on Slow Extraction from Synchrotrons for Cancer Therapy}, 1996. [Online]. Available: \url{https://cds.cern.ch/record/1425424}
 \BIBentrySTDinterwordspacing
+
+\bibitem{brown:ripples}
+\BIBentryALTinterwordspacing
+K.~A. Brown, ``Third integer resonant extraction: Ripple compensation and bunched beams,'' 7 2021. [Online]. Available: \url{https://www.osti.gov/biblio/1805240}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Bernhard:east-area}
+J.~B. Bernhard, G.~Dogru, S.~Evrard, R.~Froeschl, E.~Harrouch, and M.~Lazzaroni, ``{Chapter 3: Design of the East Area facility after renovation},'' \emph{CERN Yellow Rep. Monogr.}, vol.~4, pp. 17--42, 2021.
 
 \end{thebibliography}
