@@ -508,6 +508,7 @@ The quantity $B\rho$ is known as the \textit{magnetic rigidity} of a beam, and d
 If the relativistic momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight\per amu}, the magnetic rigidity can be expressed in Tesla-meters:
 \begin{equation}
 B\rho \left[\unit{\tesla\meter}\right] = 3.3356\cdot p\left[\unit{\giga\electronvolt\per\clight}\right]
+\label{tesla-meters}
 \end{equation} %B\rho\ \left[\unit{\tesla\meter}\right]=\frac pq=\frac AZ\times3.33564\times q\ \left[\unit[per-mode=symbol]{\GeV\per\clight\per\atomicmassunit}\right]
 Again referring to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a magnetic field pointed vertically upwards (along the $\hat y$ vector) will cause a positively-charged particle with motion along the $\hat s$ vector to experience a bending force along the $-\hat x$ direction (illustrated in~\autoref{fig:dipole}). This formulation, however, only considers a single dipole. In reality, the bending magnet structure of accelerators typically consist of multiple dipoles placed around the ring, their power converters connecting in series. The arrangements of these bending magnets---referred to as Main Units (MU) in the context of the PS---will define the reference\footnote{Sometimes referred to as \textit{design} orbit} orbit in the accelerator.
 
@@ -1575,6 +1576,7 @@ There are, however disadvantages to this approach. Changing the quadrupole stren
 Recalling~\autoref{eq:steinbach}, amplitude $A$ is correlated with momentum difference $\Delta p/p$. Given a real dispersion value (\autoref{eq:dispersion}), a condition can be computed which would align all separatrices on the septum:
 \begin{equation}
   D_n\cos(\pi-\Delta\phi)+D'_n\sin(\pi-\Delta\phi)=-\frac{4\pi}3Q'_x
+  \label{eq:hardt}
 \end{equation}
 This condition, known as the Hardt condition~\cite{hardt}, will align the separatrices, given a phase advance $\Delta\phi$ and dispersion coefficients $D_n, D'_n$. However, in the context of tune-sweep extraction, the Hardt condition proves ineffective: a changing momentum will change dispersion coefficients, causing the separatrices to misalign.
 
@@ -1691,15 +1693,6 @@ A variety of different signals can be used to drive the excitation: theoreticall
   \item \textcolor{teal}{Demonstrate why RFKO is of interest}
 \end{enumerate}
 
-\subsection{RFKO Slow Extraction at the CERN PS}
-
-For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. A beam momentum of \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} was chosen for this study, as it is equivalent to the \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c} Lead (\ch{Pb^{+54}}) ions used for the CHIMERA experiment, with whom studies were carried out alongside, and it equates to a low enough energy as to not damage components during testing. Likewise, a low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch}) was chosen. The beam was configured to last for two standard beam-cycle periods, in order to extend the window available for a spill to \qty{500}{\milli\second}.
-
-\subsubsection{Septa}
-
-The East Area magnetic extraction septa in the PS are located at sections 57 and 61, and refered to as \verb|SMH57| and \verb|SMH61|~\cite{Bernhard:east-area}. 
-
-
 
 
 
@@ -1711,10 +1704,64 @@ The East Area magnetic extraction septa in the PS are located at sections 57 and
   \item \todo{Down F61, into F61D}
 \end{enumerate}
 
+\chapter{Implementation and Simulation}
+
+\section{RFKO Slow Extraction at the CERN PS}
+
+For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. A beam momentum of \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} was chosen for this study, as it is equivalent to the \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c} Lead (\ch{Pb^{+54}}) ions used for the CHIMERA experiment, with whom studies were carried out alongside, and it equates to a low enough energy as to not damage components during testing. This proton equivalent momentum is calculated as
+\begin{equation}
+  B\rho = \frac pq = \frac{\sqrt{\left(\frac{E\cdot A}{E_0}+1\right)^2-1}}q
+  \label{eq:proton-equivalent}
+\end{equation}
+where $A$ is the atomic mass, $E$ is the proton energy per nucleon (\qty{0.75}{\giga\electronvolt}), and $E_0$ is the equivalent proton rest energy as calculated by
+\begin{equation}
+  E_0 = Zm_p + Nm_n - \delta M
+\end{equation} where $Z$ and $N$ are the proton and neutron numbers, $m_p$ and $m_n$ are the proton and neutron rest masses, and $\delta M$ is the mass defect of the nucleus.
+
+Likewise, a low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch}) was chosen. The beam was configured to last for two standard beam-cycle periods, in order to extend the window available for a spill to \qty{500}{\milli\second}.
+
+\subsection{Septa}
+
+The East Area magnetic extraction septa in the PS are located at sections 57 and 61, and refered to as \verb|SMH57| and \verb|SMH61|~\cite{Bernhard:east-area}. The electrostatic septum, placed before the magnetic septa, is not used in this study, as it is skipped by the beam during ion extraction. It was decided that a proton implementation closer to the ion configuration would be advtangeous, so that results can be compared to work carried out by CHIMERA.
+
+\subsection{Magnetic Cycle}
+
+The dipole magnetic field, equivalent to \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c}, is calculated by converting the proton equivalent momentum (\autoref{eq:proton-equivalent}) in tesla-meters (\autoref{tesla-meters}), and dividing by the product of the bending radius (\qty{70.0789}{\meter} for the PS) and the particle charge (54 for lead ions). For the \qty{750}{\mega\electronvolt}-equivalent proton cycle, this was a field of \qty{0.257}{\tesla}.
+
+In order to create the third-order instability, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07|. 
+
+A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles. These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x(s)$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x(s)$ satisfies the Hardt condition (\autoref{eq:hardt}). These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
+
+Also present in this table are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in ever PS Main Unit dipole to control the horizontal and vertical betatron tune $Q_{x, y}$ and chromaticity $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid fractions of the waiting beam being at resonance before the RFKO was activated, which would cause a low-level initial uncontrolled spill. Meanwhile, the vertical tune was kept away from any resonances. This tune control is shown in~\autoref{fig:tunemap}, which plots hoizontal tune against vertical tune. This provides an easy understanding of first, second, and third order resonances caused by 
+
+%==============================
+%https://cds.cern.ch/record/1213281/files/p317.pdf
+%http://cds.cern.ch/record/185921
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{tunemap.png}
+  \caption{A tune map, plotting horizontal tune $Q_x$ against vertical tune $Q_y$. Dashed lines indicate first order (red), second order (green) and third order (blue) resonances.}\label{fig:tunemap}
+\end{figure}
+
+\begin{center}
+  \centering
+  \begin{table}[]
+    \centering
+    \begin{tabular}{lllll}
+    Parameter & Value   & Ramp Up Time & Ramp Down Time & Ramp Time Length \\ \hline\hline
+    \verb|QSE|& 0.1225  & 800          & 1690           & 200              \\
+    \verb|XSE|& 0.7097  & 410          & 1845           & 90               \\
+    $Q_x$     & 0.0302  & 460          & 2300           & 40               \\
+    $Q'_x$    & -0.3211 & 410          & 2000           & 90               \\
+    $Q_y$     & -0.02   & 0            & 2200           & 80               \\
+    $Q'_y$    & 0       & \textit{n/a} & \textit{n/a}   & \textit{n/a}     \\
+    \end{tabular}
+    \caption{Table of configured high-level parameters for the implementation of the East Area RFKO slow extraction.}\label{tab:params}
+    \end{table}
+\end{center}
 
 
-
-\chapter{Simulation and Benchmarking}
 \section{Simulation Methodology}
 \todo{\textbf{Focussed on original contribution}}
 \begin{enumerate}

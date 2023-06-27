@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1687874790 "main.aux" "main.bbl" "main" 1687874794 0
+["bibtex main"] 1687880262 "main.aux" "main.bbl" "main" 1687880359 0
   "./refs.bib" 1687874773 27089 cb125a8c4f9088be701fa5c229548340 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1687874794 25503 98fd97259d27910129e4492bb7324a81 "pdflatex"
+  "main.aux" 1687880358 27135 287d3756775ca979598876c565ef2d16 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1687874790 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1687874794 0
-  "/Users/ash/cernbox/publications/MSc/main.tex" 1687874780 138572 f9ac10991c1d76eaacb44e9739c4fbb6 ""
+["pdflatex"] 1687880353 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1687880359 0
+  "/Users/ash/cernbox/publications/MSc/main.tex" 1687880353 142851 59cc7696045ccbb1bb30cd1daf15ec29 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -255,17 +255,18 @@
   "guttering.png" 1686915137 474936 fd6a9042e5d4cc50cf53e175565b3f62 ""
   "hardt.png" 1687442203 60723 aaae5152a87cafac3a7706de88004f4f ""
   "kobayashi.png" 1687351062 1391763 2349f12b5e5181c80e65ad2e20ce86fd ""
-  "main.aux" 1687874794 25503 98fd97259d27910129e4492bb7324a81 "pdflatex"
-  "main.bbl" 1687874790 8469 39d4ec72dfa5eb6da54d8c7e47827c81 "bibtex main"
-  "main.out" 1687874794 6200 571c28562596a7d9e3f01902950c3e5f "pdflatex"
-  "main.tex" 1687874780 138572 f9ac10991c1d76eaacb44e9739c4fbb6 ""
-  "main.toc" 1687874794 3546 c4ee18e8de9c0189d80b87193e46f5dd "pdflatex"
+  "main.aux" 1687880358 27135 287d3756775ca979598876c565ef2d16 "pdflatex"
+  "main.bbl" 1687880262 8469 39d4ec72dfa5eb6da54d8c7e47827c81 "bibtex main"
+  "main.out" 1687880358 6425 ec02baa21b0ceddd57183e7fc06b475e "pdflatex"
+  "main.tex" 1687880353 142851 59cc7696045ccbb1bb30cd1daf15ec29 ""
+  "main.toc" 1687880358 3644 711699048c3f319d5e8a554b38bad332 "pdflatex"
   "momentum-driven.png" 1687859000 69578 757f4377b1e25144e1aa6dd0cb91e558 ""
   "real-world.png" 1687426138 39847 0eda19ba3370e54de22f001a512bf7b5 ""
   "report.sty" 1686046036 7714 be5ebb972d70d769cb9901da53e5949a ""
   "rhr.pdf" 1686640471 8233 608d29d5b2f922782db365fad1484bd2 ""
   "titlepage.tex" 1686646305 3861 452e81ae67984f14c2219c97db58b74e ""
   "tune-sweep.png" 1687440206 62060 9e6aea7f5712267753a1f86e9d125096 ""
+  "tunemap.png" 1687880134 60884 93f8e82d00b8fa1cd6c634b79b196bdf ""
   (generated)
   "main.aux"
   "main.log"
