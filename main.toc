@@ -29,8 +29,8 @@
 \contentsline {subsubsection}{Betatron Core}{28}{section*.19}%
 \contentsline {subsubsection}{Tune Sweep}{28}{section*.20}%
 \contentsline {subsubsection}{COSE}{29}{section*.23}%
-\contentsline {subsubsection}{Radio-Frequency Knock-Out}{29}{section*.24}%
-\contentsline {subsection}{\numberline {2.4.5}Slow Extraction at the CERN PS}{29}{subsection.2.4.5}%
+\contentsline {subsubsection}{Radio-Frequency Knock-Out}{30}{section*.24}%
+\contentsline {subsection}{\numberline {2.4.5}Slow Extraction at the CERN PS}{30}{subsection.2.4.5}%
 \contentsline {chapter}{\numberline {3}Simulation and Benchmarking}{31}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Simulation Methodology}{31}{section.3.1}%
 \contentsline {chapter}{\numberline {4}Conclusion}{32}{chapter.4}%

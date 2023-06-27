@@ -23,13 +23,9 @@
 \usepackage{setspace}
 \usepackage{subcaption}
 
-
-
-
 \usepackage[capitalise]{cleveref}
 \creflabelformat{equation}{#2\textup{#1}#3}
 \usepackage{amsthm}
-
 
 
 \makeatletter
@@ -104,7 +100,7 @@ Resonant slow extraction is a beam extraction method which provides a continuous
 \chapter{Introduction}
 
 
-The CERN Proton Synchrotron (PS), alongside providing intermediary acceleration for hadron and ion beams for the Super Proton Synchrotron (SPS) and eventually the Large Hadron Collider (LHC), provides beams for the many fixed target experiments located at the East Area (EA) experimental facility. This facility, as illustrated in~\autoref*{fig:eadiagram}, consists of the proton (IRRAD) and mixed-field (CHARM) irradiation facilities, via a dedicated \qty{24}{GeV/c} beamline, in addition to a multi-target beamline providing three secondary beams.
+The CERN Proton Synchrotron (PS), alongside providing intermediary acceleration for hadron and ion beams for the Super Proton Synchrotron (SPS) and eventually the Large Hadron Collider (LHC), provides beams for the many fixed target experiments located at the East Area (EA) experimental facility. This facility, as illustrated in~\autoref{fig:eadiagram}, consists of the proton (IRRAD) and mixed-field (CHARM) irradiation facilities, via a dedicated \qty{24}{GeV/c} beamline, in addition to a multi-target beamline providing three secondary beams.
 
 Ongoing experiments in these facilities such as the CHARM High-energy Ions for Micro Electronics Reliability Assurance (CHIMERA)~\cite{Fraser:feasibility} use high-Z ions (Pb) to simulate the harsh radiation environment of cosmic rays which satellites experience. Using low-intensity (\qty{<e6}{ions/spill}), high-energy (\qty{>100}{\MeV / u}) beams, customers such as the European Space Agency can assess the reliability of new materials in these environments.~\autoref{fig:chain} illustrates the two injection chains of the PS, either with Lead ions sourced from the Linear Accelerator 3 (Linac3) and Low Energy Ion Ring (LEIR) chain, or protons from the Linac4 and the Proton Synchrotron Booster (PSB).
 
@@ -169,8 +165,7 @@ Ongoing experiments in these facilities such as the CHARM High-energy Ions for M
   
   \end{tikzpicture}
   
-\caption{Layout diagram of the CERN East Area (EA) beamlines, their proton momenta, and experiments.}
-\label{fig:eadiagram}
+\caption{Layout diagram of the CERN East Area (EA) beamlines, their proton momenta, and experiments.}\label{fig:eadiagram}
 \end{figure}
 
 \begin{figure}
@@ -320,8 +315,7 @@ As previously mentioned, \textit{fast} extraction provides a spill of particles 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{fast.png}
-  \caption{Schematic of a general single-turn fast extraction system.~\cite{Fraser:CAS}}
-  \label{fig:fast_diagram}
+  \caption{Schematic of a general single-turn fast extraction system~\cite{Fraser:CAS}.}\label{fig:fast_diagram}
 \end{figure}
 
 This method of \textbf{\textit{single-turn} fast extraction} (~\autoref{fig:fast_diagram}) is used at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating rings in the LHC~\cite{Fraser:CAS}. The PSB uses the same method, but has the added complexity of ``merging'' four seperate stacked rings to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems are shown in~\ref{fig:chain}, where red diamonds mark fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain to discard the circulating beam at the SPS and LHC.
@@ -331,8 +325,7 @@ In accelerator-to-accelerator contexts, the synchronous nature of fast extractio
 \begin{figure}[hb]
   \centering
   \includegraphics[width=\linewidth]{fastmulti.png}
-  \caption{Diagram of a general multi-turn fast extraction system.~\cite{Fraser:CAS}}
-  \label{fig:fast_multi_diagram}
+  \caption{Diagram of a general multi-turn fast extraction system~\cite{Fraser:CAS}.}\label{fig:fast_multi_diagram}
 \end{figure}
 
 This method of increasing the spill time is, however, limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large.
@@ -357,7 +350,7 @@ Simulations can there provide an important tool in understanding slow extraction
 
 \section{Modelling Slow Extraction}
 
-\label{sec:matrix} will introduce a mathematical model which can be used to numerically calculate particle trajectories in simple machines. However, with even the simplest of accelerators at CERN containing hundreds of components, computational models quickly become necessary. In addition, slow extraction can operate over many more accelerator turns than other processes, such as fast single-turn injection. In the PS, a spill length of \qty{0.5}{\second} would require approximate 230,000 turns. For even a reasonably powerful machine, these computational simulations quickly become time-consuming. 
+\autoref{sec:matrix} will introduce a mathematical model which can be used to numerically calculate particle trajectories in simple machines. However, with even the simplest of accelerators at CERN containing hundreds of components, computational models quickly become necessary. In addition, slow extraction can operate over many more accelerator turns than other processes, such as fast single-turn injection. In the PS, a spill length of \qty{0.5}{\second} would require approximate 230,000 turns. For even a reasonably powerful machine, these computational simulations quickly become time-consuming. 
 
 To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard within CERN's beam physics community. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
 
@@ -433,8 +426,7 @@ The coordinate system $(\hat x, \hat y, \hat s)$ relies on the right-hand chiral
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=.25]{rhr.pdf}
-\caption{The right-hand chirality rule defining the direction of $\hat x = \hat y \times \hat s$}
-\label{fig:rhr}
+\caption{The right-hand chirality rule defining the direction of $\hat x = \hat y \times \hat s$}\label{fig:rhr}
 \end{center}
 \end{figure}
 
@@ -656,8 +648,7 @@ This provides one of the first key insights which is not obvious at first---that
 
 
 \end{tikzpicture}
-\caption{A top-down diagram of a dipole illustrating how small changes in the beam's position, $x$, are amplified by the bending effect of the magnet.}
-\label{fig:dipole_error}
+\caption{A top-down diagram of a dipole illustrating how small changes in the beam's position, $x$, are amplified by the bending effect of the magnet.}\label{fig:dipole_error}
 \end{figure}
 
 \autoref{fig:dipole_error} illustrates the need for corrective elements in the beamline. If a particle is displaced slightly from the design orbit ($x=0$) before a dipole element (marked with a downwards magnetic field $\vec B$), the bending effect will be greater, and the particle will be displaced further from the design orbit after the dipole. 
@@ -761,108 +752,11 @@ To correct for this, synchrotrons use quadrupole elements to ``focus'' the beam 
 % Text Node
 \draw (511,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {Focus};
 \end{tikzpicture}
-\caption{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. Right-hand diagram illustrates a FODO cell.}
-\label{fig:quadrupole}
+\caption{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. Right-hand diagram illustrates a FODO cell.}\label{fig:quadrupole}
 \end{figure}
 
 
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.6\linewidth]{optics-example.png}
-%   \caption{A diagram showing how Dipoles, Quadrupoles, and Sextupoles are used together to create the desired beam dynamics for particles with different energies.}\label{fig:optics}
-% \end{figure}
-
 Sextupoles---third order magnets---provide additional correction to the beam. These can be understood by expanding on the optical analogy used thus far, where the Dipole takes the role of a prism, bending the light. As with prisms, beams with higher energy are bent less than low energy, and so the component wavelengths (or energies) in the beam beam are dispersed. The sextupole is analogous to an aspherical element, correcting for chromatic aberration introduced by the focussing quadrupole. Again, as with its optical analogue---a focussing lens---the quadrupole has shorter focal length for higher energy particles. The sextupole acts as a focussing lens at high energy and diverging lens at low energy, correcting for this chromatic effect.
-
-% \begin{figure}
-% \centering
-% \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-% \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-% %uncomment if require: \path (0,420); %set diagram left start at 0, and has height of 420
-
-% %Straight Lines [id:da5032125547450867] 
-% \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=2.25]    (20,250) -- (40,200) ;
-% %Straight Lines [id:da7193947806706618] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (210,170) -- (310,170) ;
-% %Straight Lines [id:da9130386432813542] 
-% \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=2.25]    (40,250) -- (60,200) ;
-% %Straight Lines [id:da27606687123687523] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (310,70) -- (438.8,75.6) ;
-% %Flowchart: Preparation [id:dp23094783659480855] 
-% \draw   (290,130) -- (297.5,60) -- (322.5,60) -- (330,130) -- (322.5,200) -- (297.5,200) -- cycle ;
-% %Straight Lines [id:da18224121501659596] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (210,70) -- (310,70) ;
-% %Straight Lines [id:da07220877512576229] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (310,90) -- (439.8,88.6) ;
-% %Straight Lines [id:da4744481623787409] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (210,90) -- (310,90) ;
-% %Straight Lines [id:da7680471071414616] 
-% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (210,110) -- (310,110) ;
-% %Straight Lines [id:da7247321208701782] 
-% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (310,110) -- (440,110) ;
-% %Straight Lines [id:da28519750675372135] 
-% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (210,150) -- (440,150) ;
-% %Straight Lines [id:da8241694279527554] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (210,191) -- (310,191) ;
-% %Straight Lines [id:da6175125823498442] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (310,170) -- (439.2,175.6) ;
-% %Straight Lines [id:da5918352005930418] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (310,191) -- (440,200) ;
-% %Shape: Ellipse [id:dp03595429672574735] 
-% \draw   (430,130) .. controls (430,85.82) and (434.48,50) .. (440,50) .. controls (445.52,50) and (450,85.82) .. (450,130) .. controls (450,174.18) and (445.52,210) .. (440,210) .. controls (434.48,210) and (430,174.18) .. (430,130) -- cycle ;
-% %Straight Lines [id:da1814744582158785] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (439.8,88.6) -- (610,130) ;
-% %Straight Lines [id:da46080486956508504] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (438.8,75.6) -- (610,130) ;
-% %Straight Lines [id:da7978877411725234] 
-% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (440,110) -- (610,130) ;
-% %Straight Lines [id:da45611278933138877] 
-% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (440,150) -- (610,130) ;
-% %Straight Lines [id:da47306718166192696] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (439.2,175.6) -- (610,130) ;
-% %Straight Lines [id:da8057830718576857] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (440,200) -- (610,130) ;
-% %Shape: Ellipse [id:dp869139000293633] 
-% \draw   (305,82) .. controls (305,70.95) and (307.24,62) .. (310,62) .. controls (312.76,62) and (315,70.95) .. (315,82) .. controls (315,93.05) and (312.76,102) .. (310,102) .. controls (307.24,102) and (305,93.05) .. (305,82) -- cycle ;
-% %Shape: Path Data [id:dp22450547395269504] 
-% \draw   (304,195) .. controls (305.38,195) and (306.5,188.28) .. (306.5,180) .. controls (306.5,171.72) and (305.38,165) .. (304,165) -- (314,165) .. controls (312.62,165) and (311.5,171.72) .. (311.5,180) .. controls (311.5,188.28) and (312.62,195) .. (314,195) -- (304,195) -- cycle ;
-% %Curve Lines [id:da9020894578602425] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (48.2,177.6) and (87.2,71.6) .. (210,70) ;
-% %Curve Lines [id:da8005791954562751] 
-% \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (74.2,176.6) and (83.2,96.6) .. (210,90) ;
-% %Curve Lines [id:da7337546567844901] 
-% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (54.2,176.6) and (83.2,116.6) .. (210,110) ;
-% %Curve Lines [id:da37909296710645] 
-% \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (74.2,176.6) and (83.2,156.6) .. (210,150) ;
-% %Curve Lines [id:da1812313073325389] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (40,200) .. controls (68.2,164.6) and (147.2,169.6) .. (210,170) ;
-% %Curve Lines [id:da9550611143964061] 
-% \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=2.25]    (60,200) .. controls (62.2,192.6) and (149.2,189.6) .. (210,191) ;
-% %Straight Lines [id:da7770063556142277] 
-% \draw    (210,60) -- (100,220) ;
-% %Straight Lines [id:da5255637367733044] 
-% \draw    (30,60) -- (10,220) ;
-% %Straight Lines [id:da8889577051375981] 
-% \draw    (210,60) -- (30,60) ;
-% %Straight Lines [id:da09835929734762772] 
-% \draw    (100,220) -- (10,220) ;
-
-% % Text Node
-% \draw (81,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Dipole};
-% % Text Node
-% \draw (278,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Sextupole};
-% % Text Node
-% \draw (401,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {Quadrupole};
-% % Text Node
-% \draw (41,72) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small High-Energy}};
-% % Text Node
-% \draw (121,193) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Low-Energy}};
-
-
-% \end{tikzpicture}
-% \caption{A diagram showing how Dipoles, Quadrupoles, and Sextupoles are used together to create the desired beam dynamics for particles with different energies.}
-% \label{fig:optics}
-% \end{figure}
 
 
 Now that the basic magnetic elements have been introduced, and an understanding of the beam's momentum $p$ has been formed, we can redefine our transverse coordinates in terms of momentum: $p_x=x'\cdot p$ and $p_y=y'\cdot p$ now define our transverse coordinates. These coordinates will allow us to build a picture of the multi-particle transverse dynamics of the beam.
@@ -1564,7 +1458,12 @@ Recalling~\autoref{eq:steinbach}, amplitude $A$ is correlated with momentum diff
 This condition, known as the Hardt condition~\cite{hardt}, will align the separatrices, given a phase advance $\Delta\phi$ and dispersion coefficients $D_n, D'_n$. However, in the context of tune-sweep extraction, the Hardt condition proves ineffective: a changing momentum will change dispersion coefficients, causing the separatrices to misalign.
 
 \subsubsection{COSE}
-To combat this effect, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the magnetc rigidity of the beam, $B\rho$, is increased simultaneously with the tune-sweep.
+To combat the effect of misaligned separatrices and differences in optics, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the magnetc rigidity $B\rho$ (or reference momentum) of the beam is increased simultaneously with the tune-sweep. 
+
+This extraction method can be considered as betatron core extraction in the $p_0$ frame of reference, rather than the $p$ frame of reference. By reformulating~\autoref{eq:chroma} using $p_0$, the following equation for tune distance $\delta Q$ is obtained:
+\begin{equation}
+  \delta Q=Q'_x\frac{p-p_0}{p_0}
+\end{equation}
 
 \subsubsection{Radio-Frequency Knock-Out}
 
@@ -1604,11 +1503,12 @@ To combat this effect, \textit{Constant-Optics Slow Extraction} (COSE) employs t
 
 \chapter{Conclusion}
 
+
+TEST
 \chapter{Acknowledgements}
 
 \bibliographystyle{IEEEtran} 
-
-\bibliography{refs.bib} % Entries are in the refs.bib file
+\bibliography{refs} 
 
 \begin{appendices}
 
