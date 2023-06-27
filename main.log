@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  27 JUN 2023 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  27 JUN 2023 10:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1106,300 +1106,298 @@ LaTeX Warning: Reference `fig:dipole' on page 12 undefined on input line 513.
 
 [12]
 
-LaTeX Warning: Reference `fig:dipole_error' on page 13 undefined on input line 654.
+LaTeX Warning: Reference `fig:dipole_error' on page 13 undefined on input line 666.
 
 
-LaTeX Warning: Reference `fig:quadrupole' on page 13 undefined on input line 656.
+LaTeX Warning: Reference `sec:transdisp' on page 13 undefined on input line 666.
+
+
+LaTeX Warning: Reference `fig:quadrupole' on page 13 undefined on input line 668.
+
+
+LaTeX Warning: Reference `fig:sextupole' on page 13 undefined on input line 779.
 
 [13]
 
-LaTeX Warning: Reference `eq:diff_motion' on page 14 undefined on input line 780.
+LaTeX Warning: Reference `eq:diff_motion' on page 14 undefined on input line 898.
 
 
-LaTeX Warning: Reference `fig:guttering' on page 14 undefined on input line 786.
+LaTeX Warning: Reference `fig:guttering' on page 14 undefined on input line 904.
 
 
-LaTeX Warning: Reference `eq:hill' on page 14 undefined on input line 786.
+LaTeX Warning: Reference `eq:hill' on page 14 undefined on input line 904.
 
-<guttering.png, id=142, 149.96025pt x 135.26535pt>
+[14]
+<guttering.png, id=152, 149.96025pt x 135.26535pt>
 File: guttering.png Graphic file (type png)
 <use guttering.png>
-Package pdftex.def Info: guttering.png  used on input line 790.
+Package pdftex.def Info: guttering.png  used on input line 908.
 (pdftex.def)             Requested size: 281.85585pt x 254.27408pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Warning: Reference `eq:hill' on page 15 undefined on input line 912.
 
 
-LaTeX Warning: Reference `eq:hill' on page 14 undefined on input line 794.
+LaTeX Warning: Citation `Rossbach:247501' on page 15 undefined on input line 914.
 
 
-LaTeX Warning: Citation `Rossbach:247501' on page 14 undefined on input line 796.
+LaTeX Warning: Reference `eq:motion_x' on page 15 undefined on input line 927.
 
 
-LaTeX Warning: Reference `eq:motion_x' on page 14 undefined on input line 809.
+LaTeX Warning: Reference `eq:phase_and_beta' on page 15 undefined on input line 933.
+
+[15 <./guttering.png>] [16]
+
+LaTeX Warning: Reference `eq:motion_x' on page 17 undefined on input line 953.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-
-LaTeX Warning: Reference `eq:phase_and_beta' on page 15 undefined on input line 815.
+LaTeX Warning: Reference `eq:motion_px' on page 17 undefined on input line 953.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15 <./guttering.png>] [16]
-
-LaTeX Warning: Reference `eq:motion_x' on page 17 undefined on input line 835.
+LaTeX Warning: Citation `courantsnyder' on page 17 undefined on input line 967.
 
 
-LaTeX Warning: Reference `eq:motion_px' on page 17 undefined on input line 835.
+LaTeX Warning: Citation `richardtwiss' on page 17 undefined on input line 967.
 
 
-LaTeX Warning: Citation `courantsnyder' on page 17 undefined on input line 849.
+LaTeX Warning: Reference `fig:twiss-phase-space' on page 17 undefined on input line 969.
 
 
-LaTeX Warning: Citation `richardtwiss' on page 17 undefined on input line 849.
+LaTeX Warning: Reference `eq:emittance' on page 17 undefined on input line 969.
 
 
-LaTeX Warning: Reference `fig:twiss-phase-space' on page 17 undefined on input line 851.
-
-
-LaTeX Warning: Reference `eq:emittance' on page 17 undefined on input line 851.
-
-
-LaTeX Warning: Reference `eq:motion_x' on page 17 undefined on input line 921.
+LaTeX Warning: Reference `eq:motion_x' on page 17 undefined on input line 1039.
 
 [17
 
 ]
 
-LaTeX Warning: Reference `eq:diff_motion' on page 18 undefined on input line 927.
+LaTeX Warning: Reference `eq:diff_motion' on page 18 undefined on input line 1045.
 
 
-LaTeX Warning: Reference `eq:motion_x' on page 18 undefined on input line 943.
+LaTeX Warning: Reference `eq:motion_x' on page 18 undefined on input line 1061.
 
 
-LaTeX Warning: Reference `eq:motion_px' on page 18 undefined on input line 943.
+LaTeX Warning: Reference `eq:motion_px' on page 18 undefined on input line 1061.
 
 
-LaTeX Warning: Reference `eq:quadrupole' on page 18 undefined on input line 950.
+LaTeX Warning: Reference `eq:quadrupole' on page 18 undefined on input line 1068.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
 
-LaTeX Warning: Citation `spsrf' on page 19 undefined on input line 1042.
+LaTeX Warning: Citation `spsrf' on page 19 undefined on input line 1160.
 
 
-LaTeX Warning: Citation `psrf' on page 19 undefined on input line 1042.
+LaTeX Warning: Citation `psrf' on page 19 undefined on input line 1160.
 
 
 Underfull \vbox (badness 2245) has occurred while \output is active []
 
  [19]
 
-LaTeX Warning: Reference `eq:lorentz' on page 20 undefined on input line 1044.
+LaTeX Warning: Reference `eq:lorentz' on page 20 undefined on input line 1162.
 
 
-LaTeX Warning: Reference `eq:lorentz' on page 20 undefined on input line 1044.
+LaTeX Warning: Reference `eq:lorentz' on page 20 undefined on input line 1162.
 
 
-LaTeX Warning: Reference `eq:brho' on page 20 undefined on input line 1074.
+LaTeX Warning: Reference `eq:brho' on page 20 undefined on input line 1192.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
 
-LaTeX Warning: Reference `eq:rel_long' on page 21 undefined on input line 1081.
+LaTeX Warning: Reference `eq:rel_long' on page 21 undefined on input line 1199.
 
 
-LaTeX Warning: Reference `sec:transdisp' on page 21 undefined on input line 1100.
+LaTeX Warning: Reference `sec:transdisp' on page 21 undefined on input line 1218.
 
 
-LaTeX Warning: Reference `eq:dispersion' on page 21 undefined on input line 1108.
+LaTeX Warning: Reference `eq:dispersion' on page 21 undefined on input line 1226.
 
 
-LaTeX Warning: Citation `lbd:tecker' on page 21 undefined on input line 1108.
+LaTeX Warning: Citation `lbd:tecker' on page 21 undefined on input line 1226.
 
 [21]
 
-LaTeX Warning: Reference `eq:ef_sin' on page 22 undefined on input line 1140.
+LaTeX Warning: Reference `eq:ef_sin' on page 22 undefined on input line 1258.
 
 
-LaTeX Warning: Reference `fig:long_phase' on page 22 undefined on input line 1140.
+LaTeX Warning: Reference `fig:long_phase' on page 22 undefined on input line 1258.
 
 
-LaTeX Warning: Reference `eq:sync_phase' on page 22 undefined on input line 1140.
+LaTeX Warning: Reference `eq:sync_phase' on page 22 undefined on input line 1258.
 
 
-LaTeX Warning: Reference `subsec:trans_phase_space' on page 22 undefined on input line 1213.
+LaTeX Warning: Reference `subsec:trans_phase_space' on page 22 undefined on input line 1331.
 
 
-LaTeX Warning: Citation `lbd:tecker' on page 22 undefined on input line 1213.
+LaTeX Warning: Citation `lbd:tecker' on page 22 undefined on input line 1331.
 
 
-LaTeX Warning: Reference `fig:long_phase' on page 22 undefined on input line 1213.
+LaTeX Warning: Reference `fig:long_phase' on page 22 undefined on input line 1331.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
 
-LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1276.
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1394.
 
 
-LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1276.
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1394.
 
 
-LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1276.
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1394.
 
 
-LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1276.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1284.
+LaTeX Warning: Reference `fig:long_phase' on page 23 undefined on input line 1394.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@UnitsNiceFrac ' on input line 1284.
+(hyperref)                removing `math shift' on input line 1402.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1284.
+(hyperref)                removing `\@UnitsNiceFrac ' on input line 1402.
 
 
-LaTeX Warning: Reference `sec:transdisp' on page 23 undefined on input line 1286.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1402.
 
 
-LaTeX Warning: Reference `sec:normalised' on page 23 undefined on input line 1297.
+LaTeX Warning: Reference `sec:transdisp' on page 23 undefined on input line 1404.
+
+
+LaTeX Warning: Reference `sec:normalised' on page 23 undefined on input line 1415.
 
 
 Underfull \vbox (badness 4981) has occurred while \output is active []
 
  [23]
 
-LaTeX Warning: Reference `sec:matrix' on page 24 undefined on input line 1312.
+LaTeX Warning: Reference `sec:matrix' on page 24 undefined on input line 1430.
 
 
-LaTeX Warning: Reference `eq:normalised_sextupole_strength' on page 24 undefined on input line 1365.
+LaTeX Warning: Reference `eq:normalised_sextupole_strength' on page 24 undefined on input line 1483.
 
 
-LaTeX Warning: Citation `kobayashi' on page 24 undefined on input line 1368.
+LaTeX Warning: Citation `kobayashi' on page 24 undefined on input line 1486.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-<kobayashi.png, id=281, 459.6372pt x 449.88075pt>
+<kobayashi.png, id=282, 459.6372pt x 449.88075pt>
 File: kobayashi.png Graphic file (type png)
 <use kobayashi.png>
-Package pdftex.def Info: kobayashi.png  used on input line 1375.
+Package pdftex.def Info: kobayashi.png  used on input line 1493.
 (pdftex.def)             Requested size: 281.85585pt x 275.87529pt.
 
 
-LaTeX Warning: Reference `subsec:trans_phase_space' on page 25 undefined on input line 1379.
+LaTeX Warning: Reference `subsec:trans_phase_space' on page 25 undefined on input line 1497.
 
 
-LaTeX Warning: Reference `fig:kobayashi' on page 25 undefined on input line 1379.
+LaTeX Warning: Reference `fig:kobayashi' on page 25 undefined on input line 1497.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./kobayashi.png>]
 
-LaTeX Warning: Reference `fig:real-world' on page 26 undefined on input line 1393.
+LaTeX Warning: Reference `fig:real-world' on page 26 undefined on input line 1511.
 
-<real-world.png, id=290, 1008.76875pt x 579.16376pt>
+<real-world.png, id=291, 1008.76875pt x 579.16376pt>
 File: real-world.png Graphic file (type png)
 <use real-world.png>
-Package pdftex.def Info: real-world.png  used on input line 1397.
+Package pdftex.def Info: real-world.png  used on input line 1515.
 (pdftex.def)             Requested size: 281.85585pt x 161.82008pt.
-<momentum-driven.png, id=291, 1331.97626pt x 994.71625pt>
+<momentum-driven.png, id=292, 1331.97626pt x 994.71625pt>
 File: momentum-driven.png Graphic file (type png)
 <use momentum-driven.png>
-Package pdftex.def Info: momentum-driven.png  used on input line 1407.
+Package pdftex.def Info: momentum-driven.png  used on input line 1525.
 (pdftex.def)             Requested size: 281.85585pt x 210.4751pt.
-<amplitude-driven.png, id=292, 1331.97626pt x 978.65625pt>
+<amplitude-driven.png, id=293, 1331.97626pt x 978.65625pt>
 File: amplitude-driven.png Graphic file (type png)
 <use amplitude-driven.png>
-Package pdftex.def Info: amplitude-driven.png  used on input line 1413.
+Package pdftex.def Info: amplitude-driven.png  used on input line 1531.
 (pdftex.def)             Requested size: 281.85585pt x 207.07692pt.
 
-LaTeX Warning: Reference `fig:momentum-driven' on page 26 undefined on input line 1417.
+LaTeX Warning: Reference `fig:momentum-driven' on page 26 undefined on input line 1535.
 
 
-LaTeX Warning: Reference `fig:amplitude-driven' on page 26 undefined on input line 1417.
+LaTeX Warning: Reference `fig:amplitude-driven' on page 26 undefined on input line 1535.
 
 
-LaTeX Warning: Reference `eq:apothem' on page 26 undefined on input line 1418.
+LaTeX Warning: Reference `eq:apothem' on page 26 undefined on input line 1536.
 
 [26 <./real-world.png>]
 
-LaTeX Warning: Reference `fig:momentum-driven' on page 27 undefined on input line 1423.
+LaTeX Warning: Reference `fig:momentum-driven' on page 27 undefined on input line 1541.
 
 
-LaTeX Warning: Reference `fig:amplitude-driven' on page 27 undefined on input line 1423.
+LaTeX Warning: Reference `fig:amplitude-driven' on page 27 undefined on input line 1541.
 
 
-LaTeX Warning: Citation `Falbo:IPAC2018-TUZGBF3' on page 27 undefined on input line 1431.
+LaTeX Warning: Citation `Falbo:IPAC2018-TUZGBF3' on page 27 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `pablo' on page 27 undefined on input line 1431.
+LaTeX Warning: Citation `pablo' on page 27 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `PIMMS' on page 27 undefined on input line 1431.
+LaTeX Warning: Citation `PIMMS' on page 27 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `betatroncore' on page 27 undefined on input line 1431.
+LaTeX Warning: Citation `betatroncore' on page 27 undefined on input line 1549.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./momentum-driven.png> <./amplitude-driven.png>]
 
-LaTeX Warning: Reference `eq:chroma' on page 28 undefined on input line 1433.
+LaTeX Warning: Reference `eq:chroma' on page 28 undefined on input line 1551.
 
 
-LaTeX Warning: Reference `fig:momentum-driven' on page 28 undefined on input line 1433.
+LaTeX Warning: Reference `fig:momentum-driven' on page 28 undefined on input line 1551.
 
 
-LaTeX Warning: Reference `fig:tune-sweep' on page 28 undefined on input line 1436.
+LaTeX Warning: Reference `fig:tune-sweep' on page 28 undefined on input line 1554.
 
-<tune-sweep.png, id=313, 1331.97626pt x 994.71625pt>
+<tune-sweep.png, id=314, 1331.97626pt x 994.71625pt>
 File: tune-sweep.png Graphic file (type png)
 <use tune-sweep.png>
-Package pdftex.def Info: tune-sweep.png  used on input line 1440.
+Package pdftex.def Info: tune-sweep.png  used on input line 1558.
 (pdftex.def)             Requested size: 281.85585pt x 210.4751pt.
 
-LaTeX Warning: Reference `eq:brho' on page 28 undefined on input line 1446.
+LaTeX Warning: Reference `eq:brho' on page 28 undefined on input line 1564.
 
 
-LaTeX Warning: Reference `fig:hardt' on page 28 undefined on input line 1446.
+LaTeX Warning: Reference `fig:hardt' on page 28 undefined on input line 1564.
 
 
-LaTeX Warning: Reference `fig:hardt' on page 28 undefined on input line 1446.
+LaTeX Warning: Reference `fig:hardt' on page 28 undefined on input line 1564.
 
-<hardt.png, id=314, 516.7305pt x 494.3268pt>
+<hardt.png, id=315, 516.7305pt x 494.3268pt>
 File: hardt.png Graphic file (type png)
 <use hardt.png>
-Package pdftex.def Info: hardt.png  used on input line 1450.
+Package pdftex.def Info: hardt.png  used on input line 1568.
 (pdftex.def)             Requested size: 281.85585pt x 269.64035pt.
 [28 <./tune-sweep.png>]
 
-LaTeX Warning: Reference `eq:steinbach' on page 29 undefined on input line 1454.
+LaTeX Warning: Reference `eq:steinbach' on page 29 undefined on input line 1572.
 
 
-LaTeX Warning: Reference `eq:dispersion' on page 29 undefined on input line 1454.
+LaTeX Warning: Reference `eq:dispersion' on page 29 undefined on input line 1572.
 
 
-LaTeX Warning: Citation `hardt' on page 29 undefined on input line 1458.
+LaTeX Warning: Citation `hardt' on page 29 undefined on input line 1576.
 
 
-LaTeX Warning: Reference `eq:chroma' on page 29 undefined on input line 1463.
+LaTeX Warning: Reference `eq:chroma' on page 29 undefined on input line 1581.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1454,10 +1452,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  AF601ACEFA00814047C5B365C628CD67;6172.
  ) 
 Here is how much of TeX's memory you used:
- 34921 strings out of 476025
- 710900 string characters out of 5790017
- 1869388 words of memory out of 5000000
- 54211 multiletter control sequences out of 15000+600000
+ 34944 strings out of 476025
+ 711368 string characters out of 5790017
+ 1871388 words of memory out of 5000000
+ 54233 multiletter control sequences out of 15000+600000
  620300 words of font info for 341 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,1360b,1050s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1495,10 +1493,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (39 pages, 2395462 bytes).
+Output written on main.pdf (39 pages, 2398539 bytes).
 PDF statistics:
- 590 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 231 named destinations out of 1000 (max. 500000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
+ 232 named destinations out of 1000 (max. 500000)
  108106 words of extra memory for PDF output out of 128383 (max. 10000000)
 
