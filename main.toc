@@ -11,31 +11,31 @@
 \contentsline {subsection}{\numberline {2.1.4}Design orbit and Dipoles}{11}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}Focussing and Multipoles}{13}{subsection.2.1.5}%
 \contentsline {subsection}{\numberline {2.1.6}Single-Particle Oscillatory Motion}{14}{subsection.2.1.6}%
-\contentsline {section}{\numberline {2.2}Multi-Particle Transverse Beam Dynamics}{16}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Phase Space}{16}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Dispersion}{17}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Matrix Formalism}{17}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Normalised Phase Space}{18}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Multi-particle Longitudinal Dynamics}{18}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Magnetic Ramping}{19}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}RF Ramping}{20}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Dispersion}{20}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Longitudinal Phase Space}{22}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Slow Extraction}{22}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Sextupoles and $\nicefrac 13$-Integer Resonance}{22}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Slow Extraction Principles}{25}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Steinbach Diagram}{25}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Slow Extraction Methods}{27}{subsection.2.4.4}%
-\contentsline {subsubsection}{Betatron Core}{27}{section*.19}%
-\contentsline {subsubsection}{Tune Sweep}{27}{section*.20}%
-\contentsline {subsubsection}{COSE}{28}{section*.23}%
-\contentsline {subsubsection}{Radio-Frequency Knock-Out}{28}{section*.24}%
-\contentsline {subsection}{\numberline {2.4.5}Slow Extraction at the CERN PS}{28}{subsection.2.4.5}%
-\contentsline {chapter}{\numberline {3}Simulation and Benchmarking}{30}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Simulation Methodology}{30}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Conclusion}{31}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Acknowledgements}{32}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Derivations}{35}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{35}{section.1.A.1}%
-\contentsline {chapter}{\numberline {B}Code Snippets}{36}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}Data and Plots}{37}{appendix.1.C}%
+\contentsline {section}{\numberline {2.2}Multi-Particle Transverse Beam Dynamics}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Phase Space}{17}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Dispersion}{18}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Matrix Formalism}{18}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Normalised Phase Space}{19}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Multi-particle Longitudinal Dynamics}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Magnetic Ramping}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}RF Ramping}{21}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Dispersion}{21}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Longitudinal Phase Space}{23}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Slow Extraction}{23}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Sextupoles and $\nicefrac 13$-Integer Resonance}{23}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Slow Extraction Principles}{26}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Steinbach Diagram}{26}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Slow Extraction Methods}{28}{subsection.2.4.4}%
+\contentsline {subsubsection}{Betatron Core}{28}{section*.19}%
+\contentsline {subsubsection}{Tune Sweep}{28}{section*.20}%
+\contentsline {subsubsection}{COSE}{29}{section*.23}%
+\contentsline {subsubsection}{Radio-Frequency Knock-Out}{29}{section*.24}%
+\contentsline {subsection}{\numberline {2.4.5}Slow Extraction at the CERN PS}{29}{subsection.2.4.5}%
+\contentsline {chapter}{\numberline {3}Simulation and Benchmarking}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Simulation Methodology}{31}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Conclusion}{32}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Acknowledgements}{33}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Derivations}{36}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{36}{section.1.A.1}%
+\contentsline {chapter}{\numberline {B}Code Snippets}{37}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Data and Plots}{38}{appendix.1.C}%
