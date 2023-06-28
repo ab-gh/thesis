@@ -132,4 +132,24 @@ K.~A. Brown, ``Third integer resonant extraction: Ripple compensation and bunche
 \bibitem{Bernhard:east-area}
 J.~B. Bernhard, G.~Dogru, S.~Evrard, R.~Froeschl, E.~Harrouch, and M.~Lazzaroni, ``{Chapter 3: Design of the East Area facility after renovation},'' \emph{CERN Yellow Rep. Monogr.}, vol.~4, pp. 17--42, 2021.
 
+\bibitem{Sterbini:2158994}
+\BIBentryALTinterwordspacing
+G.~Sterbini, A.~Blas, and S.~Gilardoni, ``{Beam-based Performance of the CERN PS Transverse Feedback},'' p. MOPAB10, 2015. [Online]. Available: \url{https://cds.cern.ch/record/2158994}
+\BIBentrySTDinterwordspacing
+
+\bibitem{bouvet}
+\BIBentryALTinterwordspacing
+C.~Bovet, R.~Gouiran, I.~Gumowski, and K.~H. Reich, \emph{{A selection of formulae and data useful for the design of A.G. synchrotrons; rev. version}}.\hskip 1em plus 0.5em minus 0.4em\relax Geneva: CERN, 1970. [Online]. Available: \url{https://cds.cern.ch/record/104153}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Gasior:895142}
+\BIBentryALTinterwordspacing
+M.~Gasior and R.~Jones, ``{High Sensitivity Tune Measurement by Direct Diode Detection},'' 2005. [Online]. Available: \url{https://cds.cern.ch/record/895142}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ipac}
+\BIBentryALTinterwordspacing
+T.~Bass, ``\BIBforeignlanguage{english}{Benchmarking simulations of slow extraction driven by rf transverse excitation at the cern proton synchrotron},'' in \emph{\BIBforeignlanguage{english}{Proc. IPAC'23}}, ser. IPAC'23 - 14th International Particle Accelerator Conference, no.~14.\hskip 1em plus 0.5em minus 0.4em\relax JACoW Publishing, Geneva, Switzerland, 05 2023, paper TUPM116, pp. 2458--2461. [Online]. Available: \url{https://indico.jacow.org/event/41/contributions/1678}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

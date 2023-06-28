@@ -34,11 +34,11 @@
 \contentsline {section}{\numberline {3.1}RFKO Slow Extraction at the CERN PS}{33}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Septa}{33}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Magnetic Cycle}{33}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}}{36}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Simulation Methodology}{36}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion}{38}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Acknowledgements}{39}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Derivations}{42}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{42}{section.1.A.1}%
-\contentsline {chapter}{\numberline {B}Code Snippets}{43}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}Data and Plots}{44}{appendix.1.C}%
+\contentsline {subsection}{\numberline {3.1.3}Transverse Excitation}{36}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Simulation Methodology}{38}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusion}{39}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Acknowledgements}{40}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Derivations}{44}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{44}{section.1.A.1}%
+\contentsline {chapter}{\numberline {B}Code Snippets}{45}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Data and Plots}{46}{appendix.1.C}%

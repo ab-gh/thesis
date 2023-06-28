@@ -1854,9 +1854,9 @@ The East Area magnetic extraction septa in the PS are located at sections 57 and
 
 The dipole magnetic field, equivalent to \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c}, is calculated by converting the proton equivalent momentum (\autoref{eq:proton-equivalent}) in tesla-meters (\autoref{tesla-meters}), and dividing by the product of the bending radius (\qty{70.0789}{\meter} for the PS) and the particle charge (54 for lead ions). For the \qty{750}{\mega\electronvolt}-equivalent proton cycle, this was a field of \qty{0.257}{\tesla}.
 
-In order to create the third-order instability, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07|. 
+In order to create the third-order instability, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
-A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles. These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x(s)$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x(s)$ satisfies the Hardt condition (\autoref{eq:hardt}). These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
+A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x(s)$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x(s)$ satisfies the Hardt condition (\autoref{eq:hardt}). These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
 
 Also present in this table are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in ever PS Main Unit dipole to control the horizontal and vertical betatron tune $Q_{x, y}$ and chromaticity $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid fractions of the waiting beam being at resonance before the RFKO was activated, which would cause a low-level initial uncontrolled spill. Meanwhile, the vertical tune was kept away from any resonances. This tune control is shown in~\autoref{fig:tunemap}, which plots hoizontal tune against vertical tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
 \begin{equation}
@@ -1893,13 +1893,48 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{cyclegraphs.png}
-  \caption{Graphs of the parameters presented in~\autoref{tab:params}, showing the high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Bottom graphs show tune control configuration with the pole face winding (PFW) magnets.}\label{fig:cycle}
+  \caption{Graphs of the parameters presented in~\autoref{tab:params}, showing the high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Second and third graphs show tune control configuration with the pole face winding (PFW) magnets. Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
 \end{figure}
 
+\subsection{Transverse Excitation}
+Once a basic, stable cycle is configured in the PS, the transverse excitation is implemented. This uses a transverse kicker located at section 97 of the PS, \verb|KFB97|, a $\sim$\qty{1}{\meter} long strip-line kicker, with both horizontal and vertical planes~\cite{Sterbini:2158994}. With a peak RF power of \qty{5000}{\watt} across the two electrodes, and an impedance of \qty{100}{\ohm}, the TFB can provide a peak voltage at \qty{1000}{\volt} and current of \qty{10}{\ampere}. The electric and magnetic fields are then, defined as
+\begin{equation}
+  \vec E=\frac Vr
+\end{equation}
+\begin{equation}
+  \vec B=\frac {2I}{2\pi r}\cdot \mu_0
+\end{equation}
+where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and magnetic deflection angles are then
+\begin{equation}
+  \theta_E = \frac{\vec E / 1\times10^9\cdot L}{pc/1\times10^9 \cdot\beta}
+  \label{eq:kick-electric}
+\end{equation}
+\begin{equation}
+  \theta_B = \frac{c/1\times10^9\cdot \vec B\cdot L}{pc/1\times10^9}
+  \label{eq:kick-magnetic}
+\end{equation} where $L$ is the electrode length~\cite[3.1-3.2]{bouvet} \qty{935}{\milli\meter}.
+The summation of these two angles provides a maximum deflection of \qty{10.814605}{\micro\radian}.
 
+To drive this transverse kicker, two systems were used. Initially, the \verb|Qmeter| control program~\cite{Gasior:895142} provided an interface to this kicker. While the program was designed---and used extensively in this study---for tune measurements, it can be exploited to provide a frequency-modulated \textit{chirp} signal across the transverse kicker. The program was used to configure the \textit{start} and \textit{stop} frequencies for the frequency-modulated chirp (as unit interval multiples of the revolution frequency $f_{rev}$), chirp length (in $2^n$ revolutions), and the time after which the chirp would repeat (in milliseconds). This produced the effect of a frequency-modulated chirp windowed by a square signal (\autoref{fig:qmeter-signal}). Previous studies~\cite{ipac} found suitable parameters to produce a baseline RFKO extraction implementation, tabulated in~\autoref{tab:qmeter-params}, and found a significant dependancy of spill quality on the chirp repetition rate.
 
-\subsection{}
+\begin{table}[]
+  \centering
+  \begin{tabular}{ll}
+    \centering
+  Parameter                 & Value                  \\ \hline \hline
+  Chirp Start $[Hz]$        & $0.3\cdot f_{rev}$     \\
+  Chirp Stop $[Hz]$         & $0.35\cdot f_{rev}$    \\
+  Chirp Repetition $[ms]$   & 1                      \\
+  Chirp Turns               & 256                   
+  \end{tabular}
+  \caption{Initial parameters for RFKO extraction using the \textit{Qmeter} control program.}\label{tab:qmeter-params}
+\end{table}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{fake-signal.png}
+  \caption{An example of the chirp signal generated by the \textit{Qmeter} application; a frequency-modulated chirp windowed by a square signal.}\label{fig:qmeter-signal}
+\end{figure}
 
 
 \section{Simulation Methodology}

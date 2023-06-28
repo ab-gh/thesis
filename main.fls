@@ -1391,6 +1391,11 @@ INPUT ./cyclegraphs.png
 INPUT cyclegraphs.png
 INPUT ./cyclegraphs.png
 INPUT ./cyclegraphs.png
+INPUT ./fake-signal.png
+INPUT ./fake-signal.png
+INPUT fake-signal.png
+INPUT ./fake-signal.png
+INPUT ./fake-signal.png
 INPUT ./main.bbl
 INPUT main.bbl
 INPUT ./main.bbl
