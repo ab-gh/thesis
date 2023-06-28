@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  28 JUN 2023 16:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  28 JUN 2023 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -912,7 +912,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<Royal_Holloway_coat_of_arms.png, id=167, 200.75pt x 318.18875pt>
+<Royal_Holloway_coat_of_arms.png, id=171, 200.75pt x 318.18875pt>
 File: Royal_Holloway_coat_of_arms.png Graphic file (type png)
 <use Royal_Holloway_coat_of_arms.png>
 Package pdftex.def Info: Royal_Holloway_coat_of_arms.png  used on input line 89.
@@ -952,13 +952,13 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 30
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<fast.png, id=250, 403.2666pt x 148.51485pt>
+<fast.png, id=255, 403.2666pt x 148.51485pt>
 File: fast.png Graphic file (type png)
 <use fast.png>
 Package pdftex.def Info: fast.png  used on input line 317.
 (pdftex.def)             Requested size: 469.75499pt x 173.00702pt.
  [6 <./fast.png>]
-<fastmulti.png, id=270, 373.27455pt x 172.2435pt>
+<fastmulti.png, id=275, 373.27455pt x 172.2435pt>
 File: fastmulti.png Graphic file (type png)
 <use fastmulti.png>
 Package pdftex.def Info: fastmulti.png  used on input line 327.
@@ -974,7 +974,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 pdfTeX warning: pdflatex (file ./rhr.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<rhr.pdf, id=312, 463.7325pt x 457.71pt>
+<rhr.pdf, id=317, 463.7325pt x 457.71pt>
 File: rhr.pdf Graphic file (type pdf)
 <use rhr.pdf>
 Package pdftex.def Info: rhr.pdf  used on input line 428.
@@ -1000,7 +1000,7 @@ Package siunitx Warning: Unit macro \clight has been deprecated in this
 (siunitx)                \ensuremath  {c}}_{0}}
 
 [13] [14] [15]
-<guttering.png, id=390, 149.96025pt x 135.26535pt>
+<guttering.png, id=395, 149.96025pt x 135.26535pt>
 File: guttering.png Graphic file (type png)
 <use guttering.png>
 Package pdftex.def Info: guttering.png  used on input line 908.
@@ -1039,7 +1039,7 @@ Underfull \vbox (badness 1990) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-<kobayashi.png, id=552, 459.6372pt x 449.88075pt>
+<kobayashi.png, id=557, 459.6372pt x 449.88075pt>
 File: kobayashi.png Graphic file (type png)
 <use kobayashi.png>
 Package pdftex.def Info: kobayashi.png  used on input line 1493.
@@ -1048,7 +1048,7 @@ Package pdftex.def Info: kobayashi.png  used on input line 1493.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26 <./kobayashi.png>]
-<real-world.png, id=566, 1008.76875pt x 579.16376pt>
+<real-world.png, id=571, 1008.76875pt x 579.16376pt>
 File: real-world.png Graphic file (type png)
 <use real-world.png>
 Package pdftex.def Info: real-world.png  used on input line 1515.
@@ -1057,29 +1057,29 @@ Package pdftex.def Info: real-world.png  used on input line 1515.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./real-world.png>]
-<momentum-driven.png, id=574, 1754.555pt x 994.71625pt>
+<momentum-driven.png, id=579, 1754.555pt x 994.71625pt>
 File: momentum-driven.png Graphic file (type png)
 <use momentum-driven.png>
 Package pdftex.def Info: momentum-driven.png  used on input line 1529.
 (pdftex.def)             Requested size: 281.85585pt x 159.79533pt.
-<amplitude-driven.png, id=575, 1766.6pt x 978.65625pt>
+<amplitude-driven.png, id=580, 1766.6pt x 978.65625pt>
 File: amplitude-driven.png Graphic file (type png)
 <use amplitude-driven.png>
 Package pdftex.def Info: amplitude-driven.png  used on input line 1535.
 (pdftex.def)             Requested size: 281.85585pt x 156.1402pt.
  [28 <./momentum-driven.png> <./amplitude-driven.png>]
-<tune-sweep.png, id=599, 1331.97626pt x 994.71625pt>
+<tune-sweep.png, id=604, 1331.97626pt x 994.71625pt>
 File: tune-sweep.png Graphic file (type png)
 <use tune-sweep.png>
 Package pdftex.def Info: tune-sweep.png  used on input line 1562.
 (pdftex.def)             Requested size: 281.85585pt x 210.4751pt.
-<hardt.png, id=603, 516.7305pt x 494.3268pt>
+<hardt.png, id=608, 516.7305pt x 494.3268pt>
 File: hardt.png Graphic file (type png)
 <use hardt.png>
 Package pdftex.def Info: hardt.png  used on input line 1572.
 (pdftex.def)             Requested size: 281.85585pt x 269.64035pt.
  [29 <./tune-sweep.png>]
-<cose.png, id=620, 1682.285pt x 1002.74625pt>
+<cose.png, id=625, 1682.285pt x 1002.74625pt>
 File: cose.png Graphic file (type png)
 <use cose.png>
 Package pdftex.def Info: cose.png  used on input line 1588.
@@ -1104,7 +1104,7 @@ Overfull \hbox (14.30252pt too wide) in paragraph at lines 1845--1846
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34]
-<tunemap.png, id=682, 423.38174pt x 315.94035pt>
+<tunemap.png, id=687, 423.38174pt x 315.94035pt>
 File: tunemap.png Graphic file (type png)
 <use tunemap.png>
 Package pdftex.def Info: tunemap.png  used on input line 1872.
@@ -1114,7 +1114,7 @@ Package pdftex.def Info: tunemap.png  used on input line 1872.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 1878.
 
-<cyclegraphs.png, id=683, 570.81255pt x 932.283pt>
+<cyclegraphs.png, id=688, 570.81255pt x 932.283pt>
 File: cyclegraphs.png Graphic file (type png)
 <use cyclegraphs.png>
 Package pdftex.def Info: cyclegraphs.png  used on input line 1895.
@@ -1124,15 +1124,21 @@ Package pdftex.def Info: cyclegraphs.png  used on input line 1895.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 1920.
 
-<fake-signal.png, id=709, 570.6921pt x 281.853pt>
+<fake-signal.png, id=714, 570.6921pt x 281.853pt>
 File: fake-signal.png Graphic file (type png)
 <use fake-signal.png>
 Package pdftex.def Info: fake-signal.png  used on input line 1935.
 (pdftex.def)             Requested size: 281.85585pt x 139.20155pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2735) has occurred while \output is active []
 
- [37 <./fake-signal.png>] [38]
+ [37 <./fake-signal.png>]
+<both-chirps.png, id=730, 570.933pt x 281.853pt>
+File: both-chirps.png Graphic file (type png)
+<use both-chirps.png>
+Package pdftex.def Info: both-chirps.png  used on input line 1943.
+(pdftex.def)             Requested size: 281.85585pt x 139.14995pt.
+ [38 <./both-chirps.png>]
 Chapter 4.
 [39
 
@@ -1160,14 +1166,14 @@ Appendix C.
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D560444BFB167707F7DB968E35026A32;6595.
+(rerunfilecheck)             Checksum: 1316BD7B78B71FDD9EAF2834F7316FD0;6687.
  ) 
 Here is how much of TeX's memory you used:
- 35093 strings out of 476025
- 713937 string characters out of 5790017
- 1872388 words of memory out of 5000000
- 54346 multiletter control sequences out of 15000+600000
- 617468 words of font info for 337 fonts, out of 8000000 for 9000
+ 35112 strings out of 476025
+ 714257 string characters out of 5790017
+ 1871388 words of memory out of 5000000
+ 54358 multiletter control sequences out of 15000+600000
+ 617693 words of font info for 339 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,1360b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1204,10 +1210,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (47 pages, 4190679 bytes).
+Output written on main.pdf (47 pages, 5495060 bytes).
 PDF statistics:
- 946 PDF objects out of 1000 (max. 8388607)
- 810 compressed objects within 9 object streams
- 264 named destinations out of 1000 (max. 500000)
- 104350 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 961 PDF objects out of 1000 (max. 8388607)
+ 823 compressed objects within 9 object streams
+ 267 named destinations out of 1000 (max. 500000)
+ 104363 words of extra memory for PDF output out of 106986 (max. 10000000)
 

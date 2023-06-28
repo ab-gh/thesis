@@ -152,4 +152,9 @@ M.~Gasior and R.~Jones, ``{High Sensitivity Tune Measurement by Direct Diode Det
 T.~Bass, ``\BIBforeignlanguage{english}{Benchmarking simulations of slow extraction driven by rf transverse excitation at the cern proton synchrotron},'' in \emph{\BIBforeignlanguage{english}{Proc. IPAC'23}}, ser. IPAC'23 - 14th International Particle Accelerator Conference, no.~14.\hskip 1em plus 0.5em minus 0.4em\relax JACoW Publishing, Geneva, Switzerland, 05 2023, paper TUPM116, pp. 2458--2461. [Online]. Available: \url{https://indico.jacow.org/event/41/contributions/1678}
 \BIBentrySTDinterwordspacing
 
+\bibitem{optics-repo}
+\BIBentryALTinterwordspacing
+``Cern optics repository.'' [Online]. Available: \url{https://acc-models.web.cern.ch/acc-models/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

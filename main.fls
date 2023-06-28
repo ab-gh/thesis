@@ -1396,6 +1396,11 @@ INPUT ./fake-signal.png
 INPUT fake-signal.png
 INPUT ./fake-signal.png
 INPUT ./fake-signal.png
+INPUT ./both-chirps.png
+INPUT ./both-chirps.png
+INPUT both-chirps.png
+INPUT ./both-chirps.png
+INPUT ./both-chirps.png
 INPUT ./main.bbl
 INPUT main.bbl
 INPUT ./main.bbl
