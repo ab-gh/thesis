@@ -310,12 +310,12 @@ At a beam momentum of \qty{5.4}{\giga\electronvolt} in the PS, the revolution of
 
 To move particles between consecutive machines along the primary CERN injector chain, the PSB, PS, and SPS are equipped with fast extraction systems. The principles of these processes will be fully explored in the next section, but a general overview and understanding of its benefits and disadvantages can help motivate the use of \textit{slow} extraction. 
 
-As previously mentioned, \textit{fast} extraction provides a spill of particles typically over the duration of one turn. A fast magnet, at a suitable location in the machine, imparts a large deflective force to the beam. This ejects the beam from the nominal orbit, where it encounters a second magnet---called a septum---to deflect the beam into a transfer line. The opposite effect is then used to inject the bunch into the next machine: a magnet ``kicks'' the particles onto the circulating beam trajectory.
+As previously mentioned, \textit{fast} extraction provides a spill of particles typically over the duration of one turn. A fast magnet, at a suitable location in the machine, imparts a large deflective angle to the beam. This ejects the beam from the nominal orbit, where it encounters a second magnet---called a septum---to deflect the beam into a transfer line. The opposite effect is then used to inject the bunch into the next machine: a magnet ``kicks'' the particles onto the circulating beam trajectory.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{fast.png}
-  \caption{Schematic of a general single-turn fast extraction system~\cite{Fraser:CAS}.}\label{fig:fast_diagram}
+  \caption{Schematic of the general principle of single-turn fast extraction~\cite{Fraser:CAS}.}\label{fig:fast_diagram}
 \end{figure}
 
 This method of \textbf{\textit{single-turn} fast extraction} (~\autoref{fig:fast_diagram}) is used at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating rings in the LHC~\cite{Fraser:CAS}. The PSB uses the same method, but has the added complexity of ``merging'' four seperate stacked rings to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems are shown in~\ref{fig:chain}, where red diamonds mark fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain to discard the circulating beam at the SPS and LHC.
@@ -359,7 +359,7 @@ Newer tools are introducing improvements such as ``ready-to-go'' compatibility w
 \chapter{Accelerator Physics Theory}\label{chap:theory}
 
 To construct accurate simulations of slow extraction methods, one must first understand the fundamental theory behind particle motion in a circular accelerator. This chapter will introduce the theory required to understand the motion of particles as they travel through an accelerator, and how such oscillatory motion can be exploited to perform slow extraction~\cite{Wiedemann}.
-\section{Single-Particle Transverse Beam Dynamics}
+\section{Transverse Beam Dynamics}\label{sec:theory-transverse}
 
 \subsection{Coordinate System}
 
@@ -467,7 +467,7 @@ For brevity, this report will always assume a relativistic frame, and all mentio
 
 Following the basis vectors defining the coordinate system, the following variables are used to characterise the orbit of particles, dependent on $s$:
 
-\noindent \textbf{In the transverse plane:}
+\noindent \textbf{In the transverse planes:}
 \begin{itemize}
   \item $x(s)$ [m]~---~the particle's horizontal position with respect to the reference orbit.
   \item $y(s)$ [m]~---~the particle's vertical position with respect to the reference orbit.
@@ -482,7 +482,7 @@ Following the basis vectors defining the coordinate system, the following variab
     %\item $p_t(s)=\Delta E/pc$~---~the particle's energy difference, divided by the reference momentum times the speed of light $c$.
 \end{itemize} 
 
-These variables provide a 6-tuple fully describing the position of a particle. However, for the remainder of this thesis, the pair of longitudinal variables $(z, \delta)$ will be treated separately to the transverse variable pairs $(x, x')$ and $(y, y')$. This enables a simpler understanding of the effects of beam bending and focussing magnets, as these effects are independent of the longitudinal variables. Conversely, longitudinal beam dynamics requires understanding or RF devices.
+These variables provide 6 vectors fully describing the position of a particle. However, for the remainder of this thesis, the pair of longitudinal variables $(z, \delta)$ will be treated separately to the transverse variable pairs $(x, x')$ and $(y, y')$. This enables a simpler understanding of the effects of beam bending and focussing magnets, as these effects are independent of the longitudinal variables.
 
 \subsection{Design orbit and Dipoles}
 
@@ -490,7 +490,7 @@ An understanding of particle dynamics in an accelerator can be built upon the Lo
 \begin{equation}
 \vec F_{\text{lorentz}} = q\cdot(\vec E+ \vec v\times\vec B)\label{eq:lorentz}
 \end{equation}
-This equation can already show why magnetic fields are used in almost all areas of particle acceleration, and not electric fields; a particle with higher velocity $v$ will experience a greater force from a constant magnetic field $\vec B$, whereas the contribution from the electric field $\vec E$ will remain constant.
+This equation can already show why magnetic fields are typically used to bend particles along a circular trajectory and not electric fields; a particle with higher velocity $v$ will experience a greater force from a constant magnetic field $\vec B$, whereas the contribution from the electric field $\vec E$ will not benefit from the increasing velocity of a particle.
 
 The other force experienced by a particle in an accelerator is a consequence of conservation of momentum:
 %centripetal\footnote{While the coordinate system used allows for a reference frame whose orientation follows the orbit, this frame is not co-moving with the particles, but still fixed in the ``laboratory'' frame---otherwise, complex Lorentz transformations would be required.} force:
@@ -505,7 +505,7 @@ B\rho=\frac pq
 \end{equation}
 The quantity $B\rho$ is known as the \textit{magnetic rigidity} of a beam, and defines the bending angle of a particle for a given magnetic field. 
 
-If the relativistic momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight\per amu}, the magnetic rigidity can be expressed in Tesla-meters:
+If the relativistic momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight\per amu} (atomic mass unit), the magnetic rigidity can be expressed in Tesla-meters:
 \begin{equation}
 B\rho \left[\unit{\tesla\meter}\right] = 3.3356\cdot p\left[\unit{\giga\electronvolt\per\clight}\right]
 \label{tesla-meters}
@@ -659,7 +659,7 @@ This provides one of the first key insights which is not obvious at first---that
 \draw (502,254) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle D( s) \delta $};
 
 \end{tikzpicture}
-\caption{A top-down diagram of a sector dipole illustrating how small changes in the beam's momentum ($\delta = (p-p_0)/p_0$), lead to significant changes in the bending effect of a dipole.}
+\caption{A top-down diagram of a sector dipole illustrating how small changes in the beam's momentum ($\delta = (p-p_0)/p_0$), lead to changes in the bending effect of a dipole, known as dispersion.}
 \label{fig:dipole_error}
 \end{figure}
 
@@ -881,21 +881,18 @@ Now that the basic magnetic elements have been introduced, and an understanding 
 
 \subsection{Single-Particle Oscillatory Motion}
 
-% In the transverse dynamics of an accelerated beam, the {\it betatron function} refers to one of the three functions ($\alpha$, $\beta$, and $\gamma$), which, along with betatron phase $\mu$, can provide an emittance-independent representation of the properties of the beam. These functions are known as the {\it Twiss} or {\it Courant-Snyder} parameters of a transverse dynamics system. 
-
-
 In a periodic (circular) accelerator, the linear equation for transverse motion takes the form of a differential equation:
 
 \begin{equation}
-  x''(s)-x\cdot\left(k-\frac{1}{\rho^2}\right)=0
+  x''-x\cdot\left(k-\frac{1}{\rho^2}\right)=0
   \label{eq:diff_motion}
 \end{equation} 
 where $x$ is the transverse displacement as a function of longitudinal position $s$, and $k$ is the quadrupole focussing coefficient, defined as
 \begin{equation}
   k=\frac{q}{p}\cdot\frac{dB_y}{dx}
   \label{eq:quadrupole}
-\end{equation} where $q$ is the particle's charge, $p$ is the longitudinal momentum, and $B_y$ is the vertical component of the magnetic field. The $1/\rho^2$ term represents the effect of the dipole bending field, providing a weak focussing component.
-From here, it is clear that the transverse motion of particles, in a circular accelerator and under the influence of dipole focussing $1/\rho^2$ and quadrupole focussing $k$, follows a harmonic oscillator. If we enforce the periodicity\footnote{i.e. that the quadrupoles do not change between consecutive revolutions} in $s$ of $k$, Equation~\ref{eq:diff_motion} can be rewritten in a compact form
+\end{equation}
+The $1/\rho^2$ term represents the effect of the dipole bending field, providing a weak focussing effect. If we enforce the periodicity\footnote{i.e. that the quadrupoles do not change between consecutive revolutions} in $s$ of $k$, Equation~\ref{eq:diff_motion} can be rewritten in a compact form
 \begin{equation}
   x''(s)-\tilde{k}(s)x(s)=0
   \label{eq:hill}
@@ -917,7 +914,7 @@ x(s) =\sqrt{\varepsilon}\sqrt{\beta(s)}\cos(\varphi(s)-\varphi_0)
 \label{eq:motion_x}
 \end{equation} where $\varepsilon$ and $\varphi_0$ are integration constants characterising the initial conditions of the particle, and $\beta(s)$ and $\varphi(s)$ are the amplitude and phase functions (respectively) of the oscillation.
 
-The $\beta$ amplitude function must also satisfy the periodic constraint $\beta(s+L)=\beta(s)$, and can be related to the $\varphi$ phase function by the following equation:
+The $\beta$ twiss function must also satisfy the periodic constraint $\beta(s+L)=\beta(s)$, and is related to the $\varphi$ phase function by the following equation:
 \begin{eqnarray}
   \varphi(s) = \int^s_0\frac{ds}{\beta(s)}
   \label{eq:phase_and_beta}
@@ -944,9 +941,7 @@ The final quantity of interest from these expressions is an effect of non-linear
 \end{equation}
 A machine with non-zero chromaticity will necessarily have a tune spread, which can be controlled with the use of sextupoles.
 
-\clearpage
 
-\section{Multi-Particle Transverse Beam Dynamics}\label{sec:theory-transverse}
 
 \subsection{Phase Space}\label{subsec:trans_phase_space}
 
@@ -1070,7 +1065,7 @@ where $K$ now defines the quadrupole focussing effect $k$ (\autoref{eq:quadrupol
   K=\frac1{\rho^2}-k
 \end{eqnarray}
 
-These two equations can be combined into a matrix equation:
+These two equations can be written as a matrix equation:
 \begin{equation}
   \begin{pmatrix}
     x \\
@@ -1153,16 +1148,16 @@ Expanding on the idea of matrix formalism and the phase space ellipse, many part
   \end{pmatrix}
 \end{equation}
 
-\section{Multi-particle Longitudinal Dynamics}
+\section{Longitudinal Dynamics}
 
-We will complete the initial picture of accelerator dynamics by considering the longitudinal dynamics of a beam. This is largely understood separately from the transverse motion, but with similar concepts.
-
-Where the transverse planes principally consider bending and focussing effects from magnetic fields, the longitudinal plane considers acceleration effects from standing RF fields. RF cavities are engineered to create a steady-state field at the cavity's resonance. This resonant frequency defines the RF structure of the device---the SPS, for example, employs \qty{200}{\mega\hertz} RF system for acceleration, and a \qty{800}{\mega\hertz} system for beam stabilisation~\cite{spsrf}, where the PS similarly uses a \qty{10}{\mega\hertz} system~\cite{psrf}.
-
-Returning again to~\autoref{eq:lorentz}, we instead now neglect the \textit{magnetic} component; this term is always perpendicular to the direction of motion, so has no acceleration component. This equation can then be used with the potential of the electric field. From~\autoref{eq:lorentz}:
+Where the transverse planes principally consider bending and focussing effects from magnetic fields, the longitudinal plane considers acceleration effects from RF fields. Returning again to~\autoref{eq:lorentz}, we instead now consider the \textit{electric} component:
 \begin{equation}
   \vec F = q\vec E = \frac{dp}{dt}
-\end{equation} where, again, $q$ is the charge of the particle, and $\vec E$ is the electric field. Using the relativistic formula
+\end{equation} 
+
+% vvvv SKIP vvvv %
+
+Using the relativistic formula
 \begin{equation}
   E^2=E_0^2 + p^2c^2
   \label{eq:rel_long}
@@ -1179,13 +1174,23 @@ This defines the kinetic energy $W$ gained along the $s$ axis as
   W=q\int E_s \ ds =qV
 \end{equation} where $V$ is the electric field potential.
 
+% ^^^^ SKIP ^^^^ %
+
+
+
 An electric field of magnitude $E_0$ travelling in the $s$ direction can be defined as
 \begin{equation}
   E_s = E_0\cos(\omega_{RF}t-ks)
-\end{equation} where $\omega_{RF}$ is the RF frequency, related to the wave number $k$ by $k=\omega_{RF}/v_\phi$, where $v_\phi$ is the phase velocity of the wave. In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must increase as the particle gains energy. This synchronous condition, for velocities $v\ll c$, is defined as
+\end{equation} where $\omega_{RF}$ is the RF frequency, related to the wave number $k$ by $k=\omega_{RF}/v_\phi$, where $v_\phi$ is the phase velocity of the wave. In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated.
+
+
+Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must increase as the particle gains energy. This synchronous condition, for velocities $v\ll c$, is defined as
 \begin{equation}
-  \frac{2\pi\rho}{v_s}=\frac h\omega_{RF}
+  \frac{2\pi\rho}{v_s}=\frac h{\omega_{RF}}
 \end{equation} where $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference. 
+
+
+% ==== ==== %
 
 \subsection{Magnetic Ramping}
 
@@ -1206,12 +1211,13 @@ For one turn in a synchrotron, this results in a momentum gain
   \label{eq:sync_phase}
 \end{equation}
 
-\subsection{RF Ramping}
 
 The RF frequency must also ramp as particles increase in energy, and revolution frequency increases. From the earlier definition $\omega_{RF} = \omega h$:
 \begin{equation}
   \frac{f_{RF}}h = f_{rev} = \frac{v}{2\pi R} = \frac 1{2\pi}\frac{qc^2}E\frac\rho R B
 \end{equation}
+
+% ^^^^ Wrap This Up ^^^^ %
 
 \subsection{Dispersion}
 
@@ -1227,6 +1233,8 @@ Using the dispersion function~\autoref{eq:dispersion}, we can relate the momentu
 \begin{equation}
   \alpha_c=\frac 1L\int\frac{D_x(s)}{\rho(s)}\ ds_0
 \end{equation}
+
+% vvvv SKIP vvvv %
 
 Using the revolution frequency\footnote{NB: $\beta_c$ here refers to the relativistic Lorentz factor $v/c$ } $f_{rev}=\beta_c c/2\pi R$, we define the relative revolution frequency change $\Delta f_{rev}$ as
 \begin{equation}
@@ -1247,6 +1255,10 @@ and so the slip factor can be defined in terms of $\alpha_c$ and $\gamma_c$ as
 \begin{equation}
   \eta = \frac 1{\gamma_c^2}-\alpha_c
 \end{equation}
+
+
+% ^^^^ SKIP ^^^^ %
+
 This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, causing no change in revolution frequency $f_{rev}$ for a small momentum change $\Delta p$:
 \begin{equation}
   \gamma_{tr}=\frac 1{\sqrt{\alpha_c}}
@@ -1255,6 +1267,8 @@ This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, caus
 \textit{Below} this transition energy, where $\eta >0$, the increase of velocity is significantly larger than the path-length change effect.
 \textit{At} this transition energy, both effects compensate, and so $f_{rev}$ becomes independent of $\Delta p$. Here, the \textit{synchrotron} longitudinal oscillations stop, and particles not on the synchronous phase $\phi_s$ will rapidly gain energy, and become lost due to dispersion $D$.
 
+
+% ========
 The effect of crossing the transition energy can be visualised with the typical electric field oscillator from~\autoref{eq:ef_sin}. Shown in~\autoref{fig:long_phase}, the energy gain of a particle is plotted as a function of its phase $\phi$. The synchronous phase, $\phi_s$~(\autoref{eq:sync_phase}), is found on the ``falling'' edge of the $\sin$ RF signal; a particle which arrives too ``early'' ($\phi<\phi_s$) will receive a \textit{higher} energy gain than the synchronous particle $\phi_s$, and so its revolution time will increase due to the dominant effect of path length. On the next turn, it will arrive slightly later, and gradually tend towards a phase of $\phi_s$. Correspondingly, a ``late'' particle $\phi > \phi_s$ will receive less energy gain than $\phi_s$, arrive earlier, and tend towards $\phi_s$.
 
 Below transition energy, $\eta > 0$, this effect is reversed, and the synchronous phase is stable on the rising RF slope.
@@ -1326,9 +1340,11 @@ Below transition energy, $\eta > 0$, this effect is reversed, and the synchronou
   \caption{The energy gain of a particle in a standing wave cavity \textbf{above transition energy} as a function of phase. Above transition energy, longitudinal oscillations are stable on the \textit{falling slope}. Four non-synchronous particles are shown, two stable around $\phi_s$, and two unstable around $\pi-\phi_s$.}\label{fig:long_phase}
 \end{figure}
 
+% ======== ^ Don't need as much
+
 \subsection{Longitudinal Phase Space}
 
-These effects can be analysed by, again, considering phase space coordinates---this time in the longitudinal plane. Again, akin to~\autoref{subsec:trans_phase_space}, this space is constructed with variables $(\phi , \Delta p/p)$. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, but the effect of phase instability can be seen in~\autoref{fig:long_phase}, where a phase greater than $\pi-\phi_s$ no longer provides the stabilising restoring force. 
+These effects can be analysed by considering phase space coordinates---this time in the longitudinal plane. Again, akin to~\autoref{subsec:trans_phase_space}, this space is constructed with variables $(\phi , \Delta p/p)$. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, but the effect of phase instability can be seen in~\autoref{fig:long_phase}, where a phase greater than $\pi-\phi_s$ no longer provides the stabilising restoring force. 
 
 Outside of this stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
 
@@ -1393,8 +1409,6 @@ Outside of this stable envelope, demarcated by the \textit{separatrix}, particle
   \end{tikzpicture}
   \caption{Longitudinal Phase Space, equivalent to~\autoref{fig:long_phase}. The separatrix, bold, separates the stable and unstable regions. The four non-synchronous particles, two unstable and two stable, from~\autoref{fig:long_phase} are shown.}
 \end{figure}
-
-\todo{Tomography? or is that too detailed.}
 
 \section{Slow Extraction}
 Now that the fundamentals of accelerator beam physics are established, this section will introduce the principles behind \textit{slow extraction} (SX). Various methods of performing SX will be covered, but the particular method covered in this thesis---\textit{Radio-Frequency Knock-Out} (RFKO)---will be described in detail.
@@ -1985,7 +1999,7 @@ CERN provides a common optics repository, \verb|acc-models|~\cite{optics-repo}, 
 
 % explain this maths
 
-% show some pretty graphss
+% PRESENT some pretty graphss
 
 % explain the consequences of these graphs
 
