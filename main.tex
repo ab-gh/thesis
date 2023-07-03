@@ -1608,7 +1608,7 @@ A variety of different signals can be used to drive the excitation: theoreticall
 
 \section{RFKO Slow Extraction at the CERN PS}
 
-For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. A beam momentum of \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} was chosen for this study, as it is equivalent to the \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c} Lead (\ch{Pb^{+54}}) ions used for the CHIMERA experiment, with whom studies were carried out alongside, and it equates to a low enough energy as to not damage components during testing. This proton equivalent momentum is calculated as
+For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. A proton beam momentum of \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} was chosen for this study, as its magnetic rigidity is equivalent to the \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ions used for the CHIMERA experiment, with whom studies were carried out alongside, and it equates to a low enough energy as to not damage components during testing. This proton equivalent momentum is calculated as
 \begin{equation}
   B\rho = \frac pq = \frac{\sqrt{\left(\frac{E\cdot A}{E_0}+1\right)^2-1}}q
   \label{eq:proton-equivalent}
@@ -1618,7 +1618,7 @@ where $A$ is the atomic mass, $E$ is the proton energy per nucleon (\qty{0.75}{\
   E_0 = Zm_p + Nm_n - \delta M
 \end{equation} where $Z$ and $N$ are the proton and neutron numbers, $m_p$ and $m_n$ are the proton and neutron rest masses, and $\delta M$ is the mass defect of the nucleus.
 
-Likewise, a low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch}) was chosen. The beam was configured to last for two standard beam-cycle periods, in order to extend the window available for a spill to \qty{500}{\milli\second}.
+Likewise, a low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch}) was chosen. The beam was configured to use two standard beam-cycle periods, in order to extend the window available for a spill to \qty{500}{\milli\second}.
 
 \begin{figure}
   \centering
@@ -1754,9 +1754,9 @@ The East Area magnetic extraction septa in the PS are located at sections 57 and
 
 The dipole magnetic field, equivalent to \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c}, is calculated by converting the proton equivalent momentum (\autoref{eq:proton-equivalent}) in tesla-meters (\autoref{tesla-meters}), and dividing by the product of the bending radius (\qty{70.0789}{\meter} for the PS) and the particle charge (54 for lead ions). For the \qty{750}{\mega\electronvolt}-equivalent proton cycle, this was a field of \qty{0.257}{\tesla}.
 
-In order to create the third-order instability, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
+In order to create the third-order resonance, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
-A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x(s)$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x(s)$ satisfies the Hardt condition (\autoref{eq:hardt}). These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
+A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ satisfies the Hardt condition (\autoref{eq:hardt}). These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
 
 Also present in this table are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in ever PS Main Unit dipole to control the horizontal and vertical betatron tune $Q_{x, y}$ and chromaticity $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid fractions of the waiting beam being at resonance before the RFKO was activated, which would cause a low-level initial uncontrolled spill. Meanwhile, the vertical tune was kept away from any resonances. This tune control is shown in~\autoref{fig:tunemap}, which plots hoizontal tune against vertical tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
 \begin{equation}
