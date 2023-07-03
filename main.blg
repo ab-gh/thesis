@@ -16,7 +16,6 @@ Warning--entry type for "pablo" isn't style-file defined
 Warning--empty booktitle in Fraser:CAS
 Warning--empty journal in Iselin:MAD
 Warning--empty journal in Rossbach:247501
-Warning--empty journal in psrf
 Warning--missing publisher in PIMMS
 Warning--empty journal in brown:ripples
 Warning--empty journal in Sterbini:2158994
@@ -25,43 +24,43 @@ Warning--empty journal in Gasior:895142
 Done.
 You've used 29 entries,
             4087 wiz_defined-function locations,
-            1035 strings with 13683 characters,
-and the built_in function-call counts, 20161 in all, are:
-= -- 1710
-> -- 480
-< -- 106
-+ -- 253
-- -- 98
-* -- 1006
-:= -- 3250
+            1030 strings with 13664 characters,
+and the built_in function-call counts, 19980 in all, are:
+= -- 1666
+> -- 484
+< -- 104
++ -- 256
+- -- 99
+* -- 996
+:= -- 3201
 add.period$ -- 60
 call.type$ -- 29
 change.case$ -- 28
 chr.to.int$ -- 210
-cite$ -- 37
-duplicate$ -- 1498
-empty$ -- 1555
+cite$ -- 36
+duplicate$ -- 1482
+empty$ -- 1570
 format.name$ -- 115
-if$ -- 4631
+if$ -- 4592
 int.to.chr$ -- 0
 int.to.str$ -- 29
-missing$ -- 281
+missing$ -- 284
 newline$ -- 160
-num.names$ -- 28
-pop$ -- 654
+num.names$ -- 27
+pop$ -- 676
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1597
+skip$ -- 1575
 stack$ -- 0
-substring$ -- 622
-swap$ -- 1183
-text.length$ -- 36
+substring$ -- 610
+swap$ -- 1159
+text.length$ -- 34
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 29
-warning$ -- 8
-while$ -- 68
+warning$ -- 7
+while$ -- 66
 width$ -- 31
-write$ -- 361
-(There were 9 warnings)
+write$ -- 357
+(There were 8 warnings)

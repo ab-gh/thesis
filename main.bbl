@@ -81,16 +81,6 @@ E.~Courant and H.~Snyder, ``Theory of the alternating-gradient synchrotron,'' \e
 R.~D. Ruth, ``{ An Introduction to Particle Accelerators },'' \emph{Physics Today}, vol.~55, no.~8, pp. 52--52, 08 2002. [Online]. Available: \url{https://doi.org/10.1063/1.1510283}
 \BIBentrySTDinterwordspacing
 
-\bibitem{spsrf}
-\BIBentryALTinterwordspacing
-T.~Mastoridis and P.~Baudrenghien, ``Cern's super proton synchrotron 200 mhz cavity regulation upgrade: Modeling, design optimization, and performance estimation,'' \emph{Phys. Rev. Accel. Beams}, vol.~25, p. 021002, Feb 2022. [Online]. Available: \url{https://link.aps.org/doi/10.1103/PhysRevAccelBeams.25.021002}
-\BIBentrySTDinterwordspacing
-
-\bibitem{psrf}
-\BIBentryALTinterwordspacing
-H.~Damerau and S.~Hancock, ``{New Control Structure of the 10 MHz RF System in the CERN PS},'' 2013. [Online]. Available: \url{https://cds.cern.ch/record/1541972}
-\BIBentrySTDinterwordspacing
-
 \bibitem{lbd:tecker}
 F.~Tecker, ``{Longitudinal Beam Dynamics in Circular Accelerators},'' in \emph{{CAS - CERN Accelerator School 2019}: {Introduction to Accelerator Physics}}, 11 2020.
 
@@ -152,9 +142,19 @@ M.~Gasior and R.~Jones, ``{High Sensitivity Tune Measurement by Direct Diode Det
 T.~Bass, ``\BIBforeignlanguage{english}{Benchmarking simulations of slow extraction driven by rf transverse excitation at the cern proton synchrotron},'' in \emph{\BIBforeignlanguage{english}{Proc. IPAC'23}}, ser. IPAC'23 - 14th International Particle Accelerator Conference, no.~14.\hskip 1em plus 0.5em minus 0.4em\relax JACoW Publishing, Geneva, Switzerland, 05 2023, paper TUPM116, pp. 2458--2461. [Online]. Available: \url{https://indico.jacow.org/event/41/contributions/1678}
 \BIBentrySTDinterwordspacing
 
+\bibitem{xsuite}
+\BIBentryALTinterwordspacing
+``Xsuite.'' [Online]. Available: \url{xsuite.web.cern.ch}
+\BIBentrySTDinterwordspacing
+
 \bibitem{optics-repo}
 \BIBentryALTinterwordspacing
 ``Cern optics repository.'' [Online]. Available: \url{https://acc-models.web.cern.ch/acc-models/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{CuPy}
+\BIBentryALTinterwordspacing
+R.~Okuta, Y.~Unno, D.~Nishino, S.~Hido, and C.~Loomis, ``Cupy: A numpy-compatible library for nvidia gpu calculations,'' in \emph{Proceedings of Workshop on Machine Learning Systems (LearningSys) in The Thirty-first Annual Conference on Neural Information Processing Systems (NIPS)}, 2017. [Online]. Available: \url{http://learningsys.org/nips17/assets/papers/paper_16.pdf}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

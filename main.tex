@@ -22,6 +22,7 @@
 \usepackage{appendix}
 \usepackage{setspace}
 \usepackage{subcaption}
+\usepackage{cprotect}
 
 \usepackage[capitalise]{cleveref}
 \creflabelformat{equation}{#2\textup{#1}#3}
@@ -1154,41 +1155,18 @@ Where the transverse planes principally consider bending and focussing effects f
 \begin{equation}
   \vec F = q\vec E = \frac{dp}{dt}
 \end{equation} 
-
-% vvvv SKIP vvvv %
-
-Using the relativistic formula
-\begin{equation}
-  E^2=E_0^2 + p^2c^2
-  \label{eq:rel_long}
-\end{equation} and taking its derivative, we obtain 
-\begin{equation}
-  2E\ dE = 2pc^2\ dp \Rightarrow dE = \frac{c^2mv}{E}\ dp = v\ dp
-\end{equation}
-Taking the derivative again, along the longitudinal axis $s$:
-\begin{equation}
-  \frac{dE}{ds} = v\frac{dp}{ds} = \frac{dp}{dt} = qE_s
-\end{equation}
-This defines the kinetic energy $W$ gained along the $s$ axis as 
-\begin{equation}
-  W=q\int E_s \ ds =qV
-\end{equation} where $V$ is the electric field potential.
-
-% ^^^^ SKIP ^^^^ %
-
-
-
 An electric field of magnitude $E_0$ travelling in the $s$ direction can be defined as
 \begin{equation}
-  E_s = E_0\cos(\omega_{RF}t-ks)
-\end{equation} where $\omega_{RF}$ is the RF frequency, related to the wave number $k$ by $k=\omega_{RF}/v_\phi$, where $v_\phi$ is the phase velocity of the wave. In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated.
+  E_s = E_0\cos(\omega_{RF}t)
+\end{equation} where $\omega_{RF}$ is the RF frequency. Therefore, for a synchronous particle with synchronous phase $\phi_s$, the rate of energy gain is
+\begin{equation}
+  \frac{dE_s}{ds}=eE_0\sin\phi_s
+\end{equation}
 
-
-Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must increase as the particle gains energy. This synchronous condition, for velocities $v\ll c$, is defined as
+In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must follow the particle's energy gain. This synchronous condition, for velocities $v\ll c$, is defined as
 \begin{equation}
   \frac{2\pi\rho}{v_s}=\frac h{\omega_{RF}}
 \end{equation} where $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference. 
-
 
 % ==== ==== %
 
@@ -1201,7 +1179,9 @@ To keep a particle with increasing energy bent along a path of constant radius, 
 For one turn in a synchrotron, this results in a momentum gain
 \begin{equation}
   \Delta p_{rev} = q\rho\dot B T_{rev}=\frac{Lq\rho~R\dot B}v
-\end{equation} where $L$ is the machine length. Recalling~\autoref{eq:rel_long}, $\Delta E=v\Delta p$, and so the energy gain per revolution is
+\end{equation} where $L$ is the machine length. 
+
+Recalling~\autoref{eq:rel_long}, $\Delta E=v\Delta p$, and so the energy gain per revolution is
 \begin{equation}
   \Delta E_{rev} = Lq\rho~R\dot B=qV\sin \phi_s
   \label{eq:ef_sin}
@@ -1234,30 +1214,12 @@ Using the dispersion function~\autoref{eq:dispersion}, we can relate the momentu
   \alpha_c=\frac 1L\int\frac{D_x(s)}{\rho(s)}\ ds_0
 \end{equation}
 
-% vvvv SKIP vvvv %
-
 Using the revolution frequency\footnote{NB: $\beta_c$ here refers to the relativistic Lorentz factor $v/c$ } $f_{rev}=\beta_c c/2\pi R$, we define the relative revolution frequency change $\Delta f_{rev}$ as
 \begin{equation}
   \Delta f_{rev} = \frac{d\beta_c}{\beta_c}-\frac{dR}R=\frac{d\beta_c}{\beta_c}-\alpha_c\frac{dp}p
 \end{equation} 
-We recall the gamma Lorentz factor $\gamma_c =1/\sqrt{1-\beta_c^2}$, and, via $p=mv$ obtain
-\begin{equation}
-  p=mv=\frac {E_0}c \beta_c\gamma_c
-\end{equation}
-\begin{equation}
-  \frac{dp}p =\frac{d\beta_c}{\beta_c}+\frac{d(1-\beta_c)^{-1/2}}{(1-\beta_c)^{-1/2}}=\gamma_c\frac{d\beta_c}{\beta_c}
-\end{equation}
-Therefore, the relative change in frequency can also be defined as
-\begin{equation}
-  \frac{\Delta f_{rev}}{f_{rev}}=\left(\frac 1{\gamma_c^2}-\alpha_c\right)\frac{\Delta p}p
-\end{equation}
-and so the slip factor can be defined in terms of $\alpha_c$ and $\gamma_c$ as
-\begin{equation}
-  \eta = \frac 1{\gamma_c^2}-\alpha_c
-\end{equation}
 
 
-% ^^^^ SKIP ^^^^ %
 
 This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, causing no change in revolution frequency $f_{rev}$ for a small momentum change $\Delta p$:
 \begin{equation}
@@ -1268,85 +1230,9 @@ This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, caus
 \textit{At} this transition energy, both effects compensate, and so $f_{rev}$ becomes independent of $\Delta p$. Here, the \textit{synchrotron} longitudinal oscillations stop, and particles not on the synchronous phase $\phi_s$ will rapidly gain energy, and become lost due to dispersion $D$.
 
 
-% ========
-The effect of crossing the transition energy can be visualised with the typical electric field oscillator from~\autoref{eq:ef_sin}. Shown in~\autoref{fig:long_phase}, the energy gain of a particle is plotted as a function of its phase $\phi$. The synchronous phase, $\phi_s$~(\autoref{eq:sync_phase}), is found on the ``falling'' edge of the $\sin$ RF signal; a particle which arrives too ``early'' ($\phi<\phi_s$) will receive a \textit{higher} energy gain than the synchronous particle $\phi_s$, and so its revolution time will increase due to the dominant effect of path length. On the next turn, it will arrive slightly later, and gradually tend towards a phase of $\phi_s$. Correspondingly, a ``late'' particle $\phi > \phi_s$ will receive less energy gain than $\phi_s$, arrive earlier, and tend towards $\phi_s$.
-
-Below transition energy, $\eta > 0$, this effect is reversed, and the synchronous phase is stable on the rising RF slope.
-
-\begin{figure}[h]
-  \centering
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,568); %set diagram left start at 0, and has height of 568
-    
-    %Shape: Circle [id:dp01813829482337459] 
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (144,71) .. controls (144,68.24) and (146.24,66) .. (149,66) .. controls (151.76,66) and (154,68.24) .. (154,71) .. controls (154,73.76) and (151.76,76) .. (149,76) .. controls (146.24,76) and (144,73.76) .. (144,71) -- cycle ;
-    %Straight Lines [id:da7293991174090055] 
-    \draw  [dash pattern={on 4.5pt off 4.5pt}]  (149,78) -- (149,116.6) ;
-    %Shape: Circle [id:dp43302503178851737] 
-    \draw   (171,55) .. controls (171,52.24) and (173.24,50) .. (176,50) .. controls (178.76,50) and (181,52.24) .. (181,55) .. controls (181,57.76) and (178.76,60) .. (176,60) .. controls (173.24,60) and (171,57.76) .. (171,55) -- cycle ;
-    %Shape: Circle [id:dp6749241087876581] 
-    \draw   (118,89) .. controls (118,86.24) and (120.24,84) .. (123,84) .. controls (125.76,84) and (128,86.24) .. (128,89) .. controls (128,91.76) and (125.76,94) .. (123,94) .. controls (120.24,94) and (118,91.76) .. (118,89) -- cycle ;
-    %Straight Lines [id:da44471456218437533] 
-    \draw    (107.43,86.44) -- (126.8,72.6) ;
-    \draw [shift={(105.8,87.6)}, rotate = 324.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-    %Straight Lines [id:da4180739230954549] 
-    \draw    (176.17,39.76) -- (156.8,53.6) ;
-    \draw [shift={(177.8,38.6)}, rotate = 144.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-    %Shape: Circle [id:dp048304043407451314] 
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (350,74) .. controls (350,71.24) and (352.24,69) .. (355,69) .. controls (357.76,69) and (360,71.24) .. (360,74) .. controls (360,76.76) and (357.76,79) .. (355,79) .. controls (352.24,79) and (350,76.76) .. (350,74) -- cycle ;
-    %Straight Lines [id:da9088534646803019] 
-    \draw  [dash pattern={on 4.5pt off 4.5pt}]  (355,79) -- (355,117.6) ;
-    %Shape: Circle [id:dp4240414343094452] 
-    \draw   (323,56) .. controls (323,53.24) and (325.24,51) .. (328,51) .. controls (330.76,51) and (333,53.24) .. (333,56) .. controls (333,58.76) and (330.76,61) .. (328,61) .. controls (325.24,61) and (323,58.76) .. (323,56) -- cycle ;
-    %Shape: Circle [id:dp11024292643644507] 
-    \draw   (375,92) .. controls (375,89.24) and (377.24,87) .. (380,87) .. controls (382.76,87) and (385,89.24) .. (385,92) .. controls (385,94.76) and (382.76,97) .. (380,97) .. controls (377.24,97) and (375,94.76) .. (375,92) -- cycle ;
-    %Straight Lines [id:da8628987876360046] 
-    \draw    (350.12,54.52) -- (326.8,39.6) ;
-    \draw [shift={(351.8,55.6)}, rotate = 212.62] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-    %Straight Lines [id:da2064257804418015] 
-    \draw    (378.37,72.84) -- (400.8,90.6) ;
-    \draw [shift={(376.8,71.6)}, rotate = 38.37] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-    %Straight Lines [id:da9690383042630335] 
-    \draw    (206,197) -- (321.8,197) ;
-    \draw [shift={(324.8,197)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-    \draw [shift={(203,197)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-    %Shape: Axis 2D [id:dp514212506835241] 
-    \draw  (20,118.6) -- (480,118.6)(91.2,20) -- (91.2,200) (473,113.6) -- (480,118.6) -- (473,123.6) (86.2,27) -- (91.2,20) -- (96.2,27)  ;
-    %Curve Lines [id:da6489545919608943] 
-    \draw    (21.2,171.6) .. controls (70.2,151.6) and (145.2,37.6) .. (250.2,35.6) .. controls (355.2,33.6) and (438.2,158.6) .. (480.2,170.6) ;
-    
-    % Text Node
-    \draw (130,119) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \pi-\phi_s$};
-    % Text Node
-    \draw (345,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \phi_s$};
-    % Text Node
-    \draw (139,6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Above Transition, $\displaystyle \gamma  >\gamma _{t}{}_{r}$, $\displaystyle \eta < 0$ };
-    % Text Node
-    \draw (333,146) node [anchor=north west][inner sep=0.75pt]   [align=left] {Stable};
-    % Text Node
-    \draw (128,143) node [anchor=north west][inner sep=0.75pt]   [align=left] {Unstable};
-    % Text Node
-    \draw (190,208) node [anchor=north west][inner sep=0.75pt]   [align=left] {Early};
-    % Text Node
-    \draw (305,209) node [anchor=north west][inner sep=0.75pt]   [align=left] {Late};
-    % Text Node
-    \draw (490,109) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \phi $};
-    % Text Node
-    \draw (63,13) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle eV$};
-    
-    
-    \end{tikzpicture}
-  \caption{The energy gain of a particle in a standing wave cavity \textbf{above transition energy} as a function of phase. Above transition energy, longitudinal oscillations are stable on the \textit{falling slope}. Four non-synchronous particles are shown, two stable around $\phi_s$, and two unstable around $\pi-\phi_s$.}\label{fig:long_phase}
-\end{figure}
-
-% ======== ^ Don't need as much
-
 \subsection{Longitudinal Phase Space}
 
-These effects can be analysed by considering phase space coordinates---this time in the longitudinal plane. Again, akin to~\autoref{subsec:trans_phase_space}, this space is constructed with variables $(\phi , \Delta p/p)$. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, but the effect of phase instability can be seen in~\autoref{fig:long_phase}, where a phase greater than $\pi-\phi_s$ no longer provides the stabilising restoring force. 
-
-Outside of this stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
+These effects can be analysed by considering phase space coordinates---this time in the longitudinal plane. This space is constructed with variables $(\phi , \Delta p/p)$, and shown in~\autoref{fig:long_phase_space}. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, where the synchronous phase $\phi_s$ defines the orbit with zero longitudinal oscillation. Outside of the stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
 
 \begin{figure}[h]
   \centering
@@ -1407,7 +1293,7 @@ Outside of this stable envelope, demarcated by the \textit{separatrix}, particle
   % Text Node
   \draw (385,221) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Separatrix}};
   \end{tikzpicture}
-  \caption{Longitudinal Phase Space, equivalent to~\autoref{fig:long_phase}. The separatrix, bold, separates the stable and unstable regions. The four non-synchronous particles, two unstable and two stable, from~\autoref{fig:long_phase} are shown.}
+  \caption{Longitudinal Phase Space, showing particles at the synchronous phase $\phi_s$, inside stability, and in unstable motion. The separatrix, bold, separates these two regions.}\label{fig:long_phase_space}
 \end{figure}
 
 \section{Slow Extraction}
@@ -1911,7 +1797,7 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
 \end{figure}
 
 \subsection{Transverse Excitation}
-Once a basic, stable cycle is configured in the PS, the transverse excitation is implemented. This uses a transverse kicker located at section 97 of the PS, \verb|KFB97|, a $\sim$\qty{1}{\meter} long strip-line kicker, with both horizontal and vertical planes~\cite{Sterbini:2158994}. With a peak RF power of \qty{5000}{\watt} across the two electrodes, and an impedance of \qty{100}{\ohm}, the TFB can provide a peak voltage at \qty{1000}{\volt} and current of \qty{10}{\ampere}. The electric and magnetic fields are then, defined as
+Once a basic, stable cycle is configured in the PS, the transverse excitation is implemented. This uses a transverse kicker located at section 97 of the PS, \verb|KFB97|, a $\sim$\qty{1}{\meter} long strip-line kicker, with both horizontal and vertical planes~\cite{Sterbini:2158994}. With a peak RF power of \qty{5000}{\watt} across the two electrodes, and an impedance of \qty{100}{\ohm}, the transverse feedback (TFB) kicker can provide a peak voltage at \qty{1000}{\volt} and current of \qty{10}{\ampere}. The electric and magnetic fields are then, defined as
 \begin{equation}
   \vec E=\frac Vr
 \end{equation}
@@ -1962,15 +1848,45 @@ To explore chirp repetition rates above the \qty{1}{\kilo\hertz} (below \qty{1}{
 
 As motivated in~\autoref{sec:motivation}, the majority of work surrounding the results presented in this thesis was towards developing a simulation framework to accurately model the spill structure of RFKO at the PS. This section will detail the simulation tools used, the implementation of the RFKO extraction simulation, and the methods used to compare the simulation results to machine data.
 
-\subsection{Optics}
+\subsection{Simulation Tools}
 
-CERN provides a common optics repository, \verb|acc-models|~\cite{optics-repo}, used to model the CERN accelerator complex in \verb|MAD-X| and compatible simulation packages. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction. This scenario was used as the basis for all simulation models, and was modified to include the parameters outlined in~\autoref{tab:params}. 
+A variety of simulation software packages for accelerator physics are available, each having their own optimisations, and application areas amongst the accelerator physics community. For this study, the \verb|MAD-X|~\cite{Iselin:MAD} and \verb|Xsuite|~\cite{xsuite} packages were used.~\verb|MAD-X| remains the standard tool in the area of optics and beam transfer, and CERN provides a common optics repository---\verb|acc-models|~\cite{optics-repo}---containing \verb|MAD-X| \textit{sequence} files which describe the optics lattices for the CERN accelerator complex. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction.
 
-% show optics plots of the bare machine
+\verb|Xsuite|---a relatively new simulation tool, being released in 2021---is a Python package which shares many similarities with \verb|MAD-X|, and can import \verb|MAD-X| sequences into its own lattice definitions.~\verb|Xsuite| provides many functions which build upon \verb|MAD-X|'s capabilities, such as \textit{context} management, which provides the ability to run simulations on different hardware---namely GPUs. This is achieved by using the \verb|cupy|~\cite{CuPy} package, which provides a drop-in replacement for \verb|numpy|, but with optimisations for accelerating workloads on GPUs. Additionally, \verb|Xsuite| also has a pre-defined \verb|Exciter| beam element, which models the time-dependent transverse kicker used in RFKO. These two capabilities motivated its use in this study.
 
-% talk about adding in custom elements
-% talk about Xsuite providing these elements on top of GPU support
-% talk about converting to Xsuite
+\subsection{Lattice Configuration} % needs a better title
+
+The \textit{East Area Extraction} scenario provided by \verb|acc-models| was used as the basis for all simulation models, and was modified to include the parameters outlined in~\autoref{tab:params}. This generated lattice file---defining the strengths and location for all 2664 beam elements---was used to produce the optics plots shown in~\autoref{fig:acc-models-optics}, which displays how the kicker magnets create large displacements at the extraction septa, and how dispersion is controlled by the extraction quadrupoles.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{optics.png}
+  \cprotect\caption{Optics plots of the stable particle for the \verb|acc-models| PS East Area extraction scenario. Top figure shows transverse displacement $x$, middle figure shows twiss beta function $\beta$, and bottom figure shows transverse dispersion $D_x$. Also labelled are key extraction elements: the magnetic septa (\verb|SMH|), the extraction quadrupoles (\verb|QSE|), extraction sextupoles (\verb|XSE|), and kickers (\verb|BSW|)}\label{fig:acc-models-optics}
+\end{figure}
+
+This lattice was then imported to \verb|Xsuite|, where the custom RFKO beam elements could be included. These elements were:
+\begin{itemize}
+  \item An \verb|Exciter|, modelling the TFB kicker \verb|KFB97|.
+  \item A \verb|LimitRect|, modelling the magnetic septum \verb|SMH57|.
+  \item A \verb|Cavity|, modelling the RF cavities providing acceleration and longitudinal focusing, operating at the 8th harmonic.
+\end{itemize}
+
+\subsubsection{Exciter}
+Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function 
+% [TODO) function in appendix
+was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function
+% [TODO) function in appendix
+was written to generate the chirp signal as generated by \textit{Qmeter} and the arbitrary function generator (AFG). This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
+
+\subsubsection{Septum}
+The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular apeture \verb|LimitRect|. By setting this apeture to coordinates corresponding to the window of the septum, particles which are lost to the apeture can be considered as extracted. As this is the only apeture modelled, it can be assumed that particles lost to an apeture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum. 
+
+\subsubsection{RF Cavity}
+
+A single RF cavity was added to the model, corresponding to the RF system of the PS. While the real system comprises of many such cavities, modelling a single cavity with the total RF voltage applied provides an accurate representation of the longitudinal dynamics of the beam, given there are no other longitudinal elements present in the model.
+
+
+
 
 % talk about initial particle distribution generation, matching measurements taken from the machine
 
