@@ -157,4 +157,22 @@ T.~Bass, ``\BIBforeignlanguage{english}{Benchmarking simulations of slow extract
 R.~Okuta, Y.~Unno, D.~Nishino, S.~Hido, and C.~Loomis, ``Cupy: A numpy-compatible library for nvidia gpu calculations,'' in \emph{Proceedings of Workshop on Machine Learning Systems (LearningSys) in The Thirty-first Annual Conference on Neural Information Processing Systems (NIPS)}, 2017. [Online]. Available: \url{http://learningsys.org/nips17/assets/papers/paper_16.pdf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Martini:324553}
+\BIBentryALTinterwordspacing
+M.~Martini and H.~O. Schönauer, ``{Emittance measurements in the CERN PS complex},'' \emph{Part. Accel.}, vol.~58, pp. 137--151, 1997. [Online]. Available: \url{https://cds.cern.ch/record/324553}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Hancock:960231}
+\BIBentryALTinterwordspacing
+S.~Hancock and S.~A. J-L, ``{A pedestrian guide to online phase space tomography in the CERN complex},'' CERN, Geneva, Tech. Rep., 2001. [Online]. Available: \url{http://cds.cern.ch/record/960231}
+\BIBentrySTDinterwordspacing
+
+\bibitem{merkel2014docker}
+D.~Merkel, ``Docker: lightweight linux containers for consistent development and deployment,'' \emph{Linux journal}, vol. 2014, no. 239, p.~2, 2014.
+
+\bibitem{docker}
+\BIBentryALTinterwordspacing
+``Xsuite-batch docker image.'' [Online]. Available: \url{https://gitlab.cern.ch/tbass/xsuite-docker}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
