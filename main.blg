@@ -23,45 +23,45 @@ Warning--empty journal in Gasior:895142
 Warning--empty journal in Schicho:2039579
 
 Done.
-You've used 35 entries,
+You've used 36 entries,
             4087 wiz_defined-function locations,
-            1065 strings with 14426 characters,
-and the built_in function-call counts, 22902 in all, are:
-= -- 1944
-> -- 521
-< -- 111
-+ -- 275
-- -- 107
-* -- 1132
-:= -- 3762
-add.period$ -- 72
-call.type$ -- 35
-change.case$ -- 34
+            1073 strings with 14845 characters,
+and the built_in function-call counts, 23827 in all, are:
+= -- 2027
+> -- 554
+< -- 113
++ -- 291
+- -- 115
+* -- 1182
+:= -- 3895
+add.period$ -- 74
+call.type$ -- 36
+change.case$ -- 35
 chr.to.int$ -- 213
-cite$ -- 43
-duplicate$ -- 1721
-empty$ -- 1793
-format.name$ -- 126
-if$ -- 5239
+cite$ -- 44
+duplicate$ -- 1794
+empty$ -- 1854
+format.name$ -- 135
+if$ -- 5458
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 332
-newline$ -- 190
-num.names$ -- 32
-pop$ -- 780
+int.to.str$ -- 36
+missing$ -- 346
+newline$ -- 195
+num.names$ -- 33
+pop$ -- 814
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1814
+skip$ -- 1892
 stack$ -- 0
-substring$ -- 637
-swap$ -- 1325
-text.length$ -- 40
+substring$ -- 656
+swap$ -- 1387
+text.length$ -- 42
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 35
+type$ -- 36
 warning$ -- 8
-while$ -- 72
-width$ -- 37
-write$ -- 429
+while$ -- 74
+width$ -- 38
+write$ -- 442
 (There were 9 warnings)

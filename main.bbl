@@ -187,4 +187,9 @@ M.~Pari, F.~M. Velotti, M.~A. Fraser, V.~Kain, and O.~Michels, ``{Characterizati
 P.~Actis, T.~Dorenbos, and C.~Johnson, ``{An optically coupled differential beam time structure monitor for slow extraction},'' CERN, Geneva, Tech. Rep., 1976. [Online]. Available: \url{https://cds.cern.ch/record/2831368}
 \BIBentrySTDinterwordspacing
 
+\bibitem{wepmp008}
+\BIBentryALTinterwordspacing
+K.~Okamura, Y.~Arakaki, T.~Kimura, S.~Murasugi, R.~Muto, Y.~Shirakabe, M.~Tomizawa, and E.~Yanaoka, ``\BIBforeignlanguage{en}{A consideration on the transfer function between rq field and slow extraction spill in the main ring of j-parc},'' \emph{\BIBforeignlanguage{en}{Proceedings of the 10th Int. Particle Accelerator Conf.}}, vol. IPAC2019, p. Australia, 2019. [Online]. Available: \url{http://jacow.org/ipac2019/doi/JACoW-IPAC2019-WEPMP008.html}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

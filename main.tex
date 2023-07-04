@@ -2066,7 +2066,7 @@ In order to compare the accuracy of RFKO simulations to the implementation on th
 
 For the real machine implementation, the spill was measured using N2 gas scintillators~\cite{Actis:bxscint} located in the F61 extraction line (see~\autoref{fig:schematic}). These scintillators are measured by various devices: the interface \verb|BXSCAL| was selected, which provided time-series measurements of particle counts at $\sim$\qty{18.8}{\kilo\hertz}. The spill was measured for a range of interval frequencies.
 
-The same was performed for simulations; the turn number at which a particle was lost to the aperture was recorded, along with its longitudinal $zeta$ variable, defined as
+The same was performed for simulations; the turn number at which a particle was lost to the aperture was recorded, along with its longitudinal $\zeta$ variable, defined as
 \begin{equation}
   \zeta = s \frac{\beta}{\beta_0} - \beta c t
 \end{equation}
@@ -2076,16 +2076,17 @@ where $\beta$ is the relativistic lorentz factor. This was used to reconstruct t
 \end{equation}
 where $t_{rev}=1/f_{rev}$, the machine revolution time, and $N$ is the turn at which the particle was lost. This time-series data was then re-binned down to the same frequency of the real machine measurement.
 
-The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. Using a peak-finding algorithm to allow for slight variation in spill measurement frequency---over the measurements used, the \verb|BXSCINT| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). As this variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected.
+The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. Using a peak-finding algorithm to allow for slight variation in spill measurement frequency---over the measurements used, the \verb|BXSCAL| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). As this variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected.
 
 \begin{figure}
   \centering
   \includegraphics*[width=0.8\linewidth]{sample_rate_variation.png}
-  \caption{Variation in sample rate of the \texttt{BXSCINT} device over the course of the measurement.}\label{fig:sample_rate_variation}
+  \caption{Variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement.}\label{fig:sample_rate_variation}
 \end{figure}
 
-Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples), and the magnitude of the resulting complex number was plotted against the interval frequency. This analysis was performed for both the real machine and the simulations, with both the RF systems on (\autoref{fig:rf_on}) and off. 
+Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples), and the magnitude of the resulting complex number was plotted against the interval frequency. This analysis was performed for both the real machine and the simulations, with both a bunched beam (with RF cavities enabled) and a coasting/debunched beam (with RF cavities disabled). The results are shown in~\autoref{fig:rf_on} and~\autoref{fig:rf_off} for the bunched and coasting beams respectively.
 
+A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp008}, is clearly visible in both~\autoref{fig:rf_on} and~\autoref{fig:rf_off}.
 
 \begin{figure}[h]
   \centering
