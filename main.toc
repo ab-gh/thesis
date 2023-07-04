@@ -41,11 +41,13 @@
 \contentsline {subsubsection}{RF Cavity}{39}{section*.37}%
 \contentsline {subsection}{\numberline {3.2.3}Distribution Generation}{39}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Simulation Process}{40}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Simulation Optimisation}{40}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Analysis}{42}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{43}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Acknowledgements}{44}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Derivations}{48}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{48}{section.1.A.1}%
-\contentsline {chapter}{\numberline {B}Code Snippets}{49}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}Data and Plots}{51}{appendix.1.C}%
+\contentsline {section}{\numberline {4.1}Computation Time}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Frequency Response}{42}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Spill Duty Factor}{43}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusion}{46}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Acknowledgements}{47}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Derivations}{51}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{51}{section.1.A.1}%
+\contentsline {chapter}{\numberline {B}Code Snippets}{52}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Data and Plots}{54}{appendix.1.C}%

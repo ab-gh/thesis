@@ -20,47 +20,48 @@ Warning--missing publisher in PIMMS
 Warning--empty journal in brown:ripples
 Warning--empty journal in Sterbini:2158994
 Warning--empty journal in Gasior:895142
+Warning--empty journal in Schicho:2039579
 
 Done.
-You've used 32 entries,
+You've used 35 entries,
             4087 wiz_defined-function locations,
-            1046 strings with 13881 characters,
-and the built_in function-call counts, 21223 in all, are:
-= -- 1788
-> -- 483
-< -- 108
-+ -- 257
-- -- 98
-* -- 1050
-:= -- 3452
-add.period$ -- 66
-call.type$ -- 32
-change.case$ -- 31
+            1065 strings with 14426 characters,
+and the built_in function-call counts, 22902 in all, are:
+= -- 1944
+> -- 521
+< -- 111
++ -- 275
+- -- 107
+* -- 1132
+:= -- 3762
+add.period$ -- 72
+call.type$ -- 35
+change.case$ -- 34
 chr.to.int$ -- 213
-cite$ -- 39
-duplicate$ -- 1587
-empty$ -- 1673
-format.name$ -- 115
-if$ -- 4866
+cite$ -- 43
+duplicate$ -- 1721
+empty$ -- 1793
+format.name$ -- 126
+if$ -- 5239
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 304
-newline$ -- 175
-num.names$ -- 29
-pop$ -- 719
+int.to.str$ -- 35
+missing$ -- 332
+newline$ -- 190
+num.names$ -- 32
+pop$ -- 780
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1678
+skip$ -- 1814
 stack$ -- 0
-substring$ -- 622
-swap$ -- 1228
-text.length$ -- 37
+substring$ -- 637
+swap$ -- 1325
+text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 32
-warning$ -- 7
-while$ -- 68
-width$ -- 34
-write$ -- 392
-(There were 8 warnings)
+type$ -- 35
+warning$ -- 8
+while$ -- 72
+width$ -- 37
+write$ -- 429
+(There were 9 warnings)

@@ -172,4 +172,19 @@ D.~Merkel, ``Docker: lightweight linux containers for consistent development and
 ``Xsuite-batch docker image.'' [Online]. Available: \url{https://gitlab.cern.ch/tbass/xsuite-docker}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Schicho:2039579}
+\BIBentryALTinterwordspacing
+P.~Schicho, ``{Optimizing Simulation Times of SPS Slow Extraction using MAD-X},'' 2015. [Online]. Available: \url{http://cds.cern.ch/record/2039579}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Pari:2780495}
+\BIBentryALTinterwordspacing
+M.~Pari, F.~M. Velotti, M.~A. Fraser, V.~Kain, and O.~Michels, ``{Characterization of the slow extraction frequency response},'' \emph{Phys. Rev. Accel. Beams}, vol.~24, no.~8, p. 083501, 2021. [Online]. Available: \url{https://cds.cern.ch/record/2780495}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Actis:bxscint}
+\BIBentryALTinterwordspacing
+P.~Actis, T.~Dorenbos, and C.~Johnson, ``{An optically coupled differential beam time structure monitor for slow extraction},'' CERN, Geneva, Tech. Rep., 1976. [Online]. Available: \url{https://cds.cern.ch/record/2831368}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

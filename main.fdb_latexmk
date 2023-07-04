@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1688464885 "main.aux" "main.bbl" "main" 1688464930 0
-  "./refs.bib" 1688391382 29849 6b1a26d7c8dd1f7ec41d6e048b1ebb84 ""
+["bibtex main"] 1688482390 "main.aux" "main.bbl" "main" 1688482445 0
+  "./refs.bib" 1688471610 30121 da277f656d0f119217d31786e870dbd8 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1688464930 34445 02baeb505314f729f53150e0a57e7e38 "pdflatex"
+  "main.aux" 1688482445 36696 3e81f430c9123fe667e23e3a76b0ea8e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1688464916 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1688464930 0
-  "/Users/ash/cernbox/publications/MSc/main.tex" 1688464916 167238 cecf8afbdfb9c3805c3c219d62cbee1f ""
+["pdflatex"] 1688482430 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1688482445 0
+  "/Users/ash/cernbox/publications/MSc/main.tex" 1688482430 172163 9642c7b39880d148636a8b02069cbd72 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -267,17 +267,22 @@
   "guttering.png" 1686915137 474936 fd6a9042e5d4cc50cf53e175565b3f62 ""
   "hardt.png" 1687442203 60723 aaae5152a87cafac3a7706de88004f4f ""
   "kobayashi.png" 1687351062 1391763 2349f12b5e5181c80e65ad2e20ce86fd ""
-  "main-1.cpt" 1688464927 429 7f97629642dc4c007d09ef533598941c "pdflatex"
-  "main.aux" 1688464930 34445 02baeb505314f729f53150e0a57e7e38 "pdflatex"
-  "main.bbl" 1688464885 10697 cc5cf6c5f81771dd258112736fdba589 "bibtex main"
-  "main.out" 1688464930 7214 54ea1be291cce24c4770fb360fe8723b "pdflatex"
-  "main.tex" 1688464916 167238 cecf8afbdfb9c3805c3c219d62cbee1f ""
-  "main.toc" 1688464930 4254 d5ba5cac082df078e3dc7675b932abb1 "pdflatex"
+  "machine_rf_off.png" 1688482137 699575 0ba703d02f3947d0b81e8aac80d0df34 ""
+  "machine_rf_on.png" 1688482098 665424 b42cc31c76b1d3c15b6b2562ad5be9b0 ""
+  "main-1.cpt" 1688482440 429 7f97629642dc4c007d09ef533598941c "pdflatex"
+  "main.aux" 1688482445 36696 3e81f430c9123fe667e23e3a76b0ea8e "pdflatex"
+  "main.bbl" 1688482390 11574 6e23d9450d49df9b2485d33d74049cd9 "bibtex main"
+  "main.out" 1688482445 7473 a160afedc23fd65c6c41eed263e52565 "pdflatex"
+  "main.tex" 1688482430 172163 9642c7b39880d148636a8b02069cbd72 ""
+  "main.toc" 1688482445 4404 6bc1add2bfea649c3b256a40986b8b72 "pdflatex"
   "momentum-driven.png" 1687859000 69578 757f4377b1e25144e1aa6dd0cb91e558 ""
   "optics.png" 1688132761 1341413 9ef7ce087d03327fa16f66f73b6d17a3 ""
   "real-world.png" 1687426138 39847 0eda19ba3370e54de22f001a512bf7b5 ""
   "report.sty" 1686046036 7714 be5ebb972d70d769cb9901da53e5949a ""
   "rhr.pdf" 1686640471 8233 608d29d5b2f922782db365fad1484bd2 ""
+  "sample_rate_variation.png" 1688481466 90571 9b74cf5e22b65fe0549ee08c26010e79 ""
+  "sim_rf_off.png" 1688482401 13800 703ac87320ba0f2788374343f656e0b0 ""
+  "sim_rf_on.png" 1688482242 1066209 88d7d92f54e21c08f27ffdc5e70ca37a ""
   "titlepage.tex" 1686646305 3861 452e81ae67984f14c2219c97db58b74e ""
   "tune-sweep.png" 1687440206 62060 9e6aea7f5712267753a1f86e9d125096 ""
   "tunemap.png" 1687944499 393029 63540a53672df990db91dec1ebb506f4 ""
