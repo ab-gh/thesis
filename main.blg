@@ -22,45 +22,45 @@ Warning--empty journal in Sterbini:2158994
 Warning--empty journal in Gasior:895142
 
 Done.
-You've used 33 entries,
+You've used 32 entries,
             4087 wiz_defined-function locations,
-            1053 strings with 14200 characters,
-and the built_in function-call counts, 22130 in all, are:
-= -- 1860
-> -- 514
-< -- 116
-+ -- 273
-- -- 104
-* -- 1095
-:= -- 3583
-add.period$ -- 68
-call.type$ -- 33
-change.case$ -- 32
-chr.to.int$ -- 231
-cite$ -- 40
-duplicate$ -- 1650
-empty$ -- 1737
-format.name$ -- 122
-if$ -- 5077
+            1046 strings with 13881 characters,
+and the built_in function-call counts, 21223 in all, are:
+= -- 1788
+> -- 483
+< -- 108
++ -- 257
+- -- 98
+* -- 1050
+:= -- 3452
+add.period$ -- 66
+call.type$ -- 32
+change.case$ -- 31
+chr.to.int$ -- 213
+cite$ -- 39
+duplicate$ -- 1587
+empty$ -- 1673
+format.name$ -- 115
+if$ -- 4866
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 316
-newline$ -- 178
-num.names$ -- 30
-pop$ -- 747
+int.to.str$ -- 32
+missing$ -- 304
+newline$ -- 175
+num.names$ -- 29
+pop$ -- 719
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1746
+skip$ -- 1678
 stack$ -- 0
-substring$ -- 665
-swap$ -- 1283
-text.length$ -- 39
+substring$ -- 622
+swap$ -- 1228
+text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 33
+type$ -- 32
 warning$ -- 7
-while$ -- 73
-width$ -- 35
-write$ -- 402
+while$ -- 68
+width$ -- 34
+write$ -- 392
 (There were 8 warnings)

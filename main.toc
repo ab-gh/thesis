@@ -30,22 +30,22 @@
 \contentsline {subsubsection}{Radio-Frequency Knock-Out}{29}{section*.25}%
 \contentsline {chapter}{\numberline {3}Implementation and Simulation}{32}{chapter.3}%
 \contentsline {section}{\numberline {3.1}RFKO Slow Extraction at the CERN PS}{32}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Septa}{32}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Magnetic Cycle}{32}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Transverse Excitation}{35}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.1}Closed Orbit and Extraction Trajectory}{32}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Magnetic Cycle}{33}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Transverse Excitation}{36}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}RFKO Slow Extraction in Simulation}{37}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Simulation Tools}{37}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Lattice Configuration}{38}{subsection.3.2.2}%
-\contentsline {subsubsection}{Exciter}{38}{section*.35}%
+\contentsline {subsubsection}{Exciter}{39}{section*.35}%
 \contentsline {subsubsection}{Septum}{39}{section*.36}%
 \contentsline {subsubsection}{RF Cavity}{39}{section*.37}%
 \contentsline {subsection}{\numberline {3.2.3}Distribution Generation}{39}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Simulation Process}{39}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.4}Simulation Process}{40}{subsection.3.2.4}%
 \contentsline {section}{\numberline {3.3}Simulation Optimisation}{40}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Analysis}{41}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{42}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Acknowledgements}{43}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Derivations}{47}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{47}{section.1.A.1}%
-\contentsline {chapter}{\numberline {B}Code Snippets}{48}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}Data and Plots}{49}{appendix.1.C}%
+\contentsline {chapter}{\numberline {4}Analysis}{42}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{43}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Acknowledgements}{44}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Derivations}{48}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Relating longitudinal variables}{48}{section.1.A.1}%
+\contentsline {chapter}{\numberline {B}Code Snippets}{49}{appendix.1.B}%
+\contentsline {chapter}{\numberline {C}Data and Plots}{51}{appendix.1.C}%

@@ -1618,7 +1618,7 @@ where $A$ is the atomic mass, $E$ is the proton energy per nucleon (\qty{0.75}{\
   E_0 = Zm_p + Nm_n - \delta M
 \end{equation} where $Z$ and $N$ are the proton and neutron numbers, $m_p$ and $m_n$ are the proton and neutron rest masses, and $\delta M$ is the mass defect of the nucleus.
 
-Likewise, a low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch}) was chosen. The beam was configured to use two standard beam-cycle periods, in order to extend the window available for a spill to \qty{500}{\milli\second}.
+Likewise, a single-bunch, low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch}) was chosen. The cycle was configured to use two standard beam-cycle periods of \qty{1.2}{\second}, in order to extend the window available for a spill to \qty{500}{\milli\second}.
 
 \begin{figure}
   \centering
@@ -1746,13 +1746,19 @@ Likewise, a low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch
   \caption{A schematic of the PS East extraction system, as configured for RFKO slow extraction. All important beamline elements are labelled with their CERN layout code. Also shown is the nominal orbit trajectory (solid line), the bumped trajectory (dashed line) created by the kicker magnets, and the extracted trajectory (double line) created by the magnetic septa.}\label{fig:schematic}
 \end{figure}
 
-\subsection{Septa}
+\subsection{Closed Orbit and Extraction Trajectory}
 
-The East Area magnetic extraction septa in the PS are located at sections 57 and 61, and refered to as \verb|SMH57| and \verb|SMH61|~\cite{Bernhard:east-area}. The electrostatic septum, placed before the magnetic septa, is not used in this study, as it is skipped by the beam during ion extraction. It was decided that a proton implementation closer to the ion configuration would be advtangeous, so that results can be compared to work carried out by CHIMERA.
+As shown in~\autoref{fig:schematic}, the closed orbit of the PS differs at extraction than to that in normal operation. Four \textit{bump} magnets, (\verb|BSW|) create a large horizontal displacement at the two septa \verb|SMH57| and \verb|SMH61|. This brings the closed orbit within range of the septum blades, where resonant particles can then cross the blade and enter the septum window.
+
+The electrostatic septum, placed before the magnetic septa, is not used in this study, as it is skipped by the beam during ion extraction. It was decided that a proton implementation closer to the ion configuration would be advtangeous, so that results can be compared to work carried out by CHIMERA.
 
 \subsection{Magnetic Cycle}
 
-The dipole magnetic field, equivalent to \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c}, is calculated by converting the proton equivalent momentum (\autoref{eq:proton-equivalent}) in tesla-meters (\autoref{tesla-meters}), and dividing by the product of the bending radius (\qty{70.0789}{\meter} for the PS) and the particle charge (54 for lead ions). For the \qty{750}{\mega\electronvolt}-equivalent proton cycle, this was a field of \qty{0.257}{\tesla}.
+The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} proton beam is calculated by
+\begin{equation}
+  B=\frac{\frac 1c\times 10^9\cdot p}{\rho\cdot q}
+\end{equation}
+where the numerator converts the proton momentum from \si{\giga\electronvolt\per\clight} to \si{\tesla\meter}. This is calculated as a field of \qty{0.257}{\tesla}.
 
 In order to create the third-order resonance, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
@@ -1796,7 +1802,7 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
   \caption{Graphs of the parameters presented in~\autoref{tab:params}, showing the high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Second and third graphs show tune control configuration with the pole face winding (PFW) magnets. Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
 \end{figure}
 
-\subsection{Transverse Excitation}
+\subsection{Transverse Excitation}\label{sec:trans_exc}
 Once a basic, stable cycle is configured in the PS, the transverse excitation is implemented. This uses a transverse kicker located at section 97 of the PS, \verb|KFB97|, a $\sim$\qty{1}{\meter} long strip-line kicker, with both horizontal and vertical planes~\cite{Sterbini:2158994}. With a peak RF power of \qty{5000}{\watt} across the two electrodes, and an impedance of \qty{100}{\ohm}, the transverse feedback (TFB) kicker can provide a peak voltage at \qty{1000}{\volt} and current of \qty{10}{\ampere}. The electric and magnetic fields are then, defined as
 \begin{equation}
   \vec E=\frac Vr
@@ -1860,7 +1866,7 @@ The \textit{East Area Extraction} scenario provided by \verb|acc-models| was use
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\linewidth]{optics.png}
+  \includegraphics[width=1.1\linewidth]{optics.png}
   \cprotect\caption{Optics plots of the stable particle for the \verb|acc-models| PS East Area extraction scenario. Top figure shows transverse displacement $x$, middle figure shows twiss beta function $\beta$, and bottom figure shows transverse dispersion $D_x$. Also labelled are key extraction elements: the magnetic septa (\verb|SMH|), the extraction quadrupoles (\verb|QSE|), extraction sextupoles (\verb|XSE|), and kickers (\verb|BSW|)}\label{fig:acc-models-optics}
 \end{figure}
 
@@ -1872,11 +1878,7 @@ This lattice was then imported to \verb|Xsuite|, where the custom RFKO beam elem
 \end{itemize}
 
 \subsubsection{Exciter}
-Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function 
-% [TODO) function in appendix
-was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function
-% [TODO) function in appendix
-was written to generate the chirp signal as generated by \textit{Qmeter} and the arbitrary function generator (AFG). This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
+Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function (\autoref{lst:kick_angle}) was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function (\autoref{lst:generate_chirp}) was written to generate the chirp signal as generated by \textit{Qmeter} and the arbitrary function generator (AFG). This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
 
 \subsubsection{Septum}
 The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular apeture \verb|LimitRect|. By setting this apeture to coordinates corresponding to the window of the septum, particles which are lost to the apeture can be considered as extracted. As this is the only apeture modelled, it can be assumed that particles lost to an apeture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum. 
@@ -1920,9 +1922,7 @@ To submit the simulation jobs to the batch processing service, the simulation so
 
 \begin{figure}
   \centering
-
     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
     %uncomment if require: \path (0,508); %set diagram left start at 0, and has height of 508
 
@@ -2079,6 +2079,11 @@ In order to relate the dispersive and chromatic functions produced by \verb|MAD-
 \end{equation}, where $p$ is the momentum of the particle, and $p_0$ the momentum of the {\it reference} (or {\it design}) particle, whereas \verb|Xtrack| uses the relative energy error
 
 \chapter{Code Snippets}
+
+\lstinputlisting[language=python, label={lst:kick_angle}, caption=Python code to calculate angle kick produced by the TFB system (\autoref{sec:trans_exc}).]{code/kick_angle.py}
+
+\lstinputlisting[language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Abritary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
+
 
 \chapter{Data and Plots}
 
