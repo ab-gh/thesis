@@ -1392,7 +1392,7 @@ The \textit{Hamiltonian} is now used to analyse this motion in phase-space. The 
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{kobayashi.png}
-  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio $\mu/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines. The value of $-h$, which defines the $P_2, P_3$ line, is dashed.}\label{fig:kobayashi}
+  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio $\mu/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines.}\label{fig:kobayashi}
 \end{figure}
 
 The first term describes the typical circular phase-space motion familiar from~\autoref{subsec:trans_phase_space}, with a sextupole strength $S=0$ (i.e. a linear machine). The second term describes the sextupole effect, transforming the elliptical map into a triangular trajectory for increasing values of $x$ and $x'$. The phase-space map is shown in~\autoref{fig:kobayashi}. A boundary triangle is easily identified from the map, which defines the trajectory of the stable particle with greatest possible amplitude, before the motion becomes unstable. Outside of this stable region, the particle trajectories do not close on themselves, and the particle will rapidly gain amplitude. The region bounded by this \textit{separatrix} is known as the \textit{acceptance} the size of which is defined by $|\mu /S|$, and can be found by factorising $\bf H$ at at a value of $(2\mu /3)^3/S^2$, which factorisses to three points:
@@ -1406,7 +1406,7 @@ The $x$ location of the stable particle, $h$ can also be defined as
   h=\frac 23 \frac \mu S = \frac{4\pi}S\delta Q
   \label{eq:apothem}
 \end{equation}
-Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$, along with the vertical line at $-h$, define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 4 h^2$.
+Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$ (solid lines in \autoref{fig:kobayashi}), along with the vertical line at $-h$ (dashed line in \autoref{fig:kobayashi}), define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 4 h^2$.
 
 \subsection{Slow Extraction Principles}
 The fundamental principle of slow extraction exploits the unstable boundary created by sextupolar fields. After a beam is injected and stable, this \textit{waiting} beam is accelerated towards the $\nicefrac 13$-integer resonance. A particle at resonance will then ``lock on'' to one of the separatrix arms, and its amplitude will grow in steps of three turns, rotating around the three separatrices. By carefully controlling the rate at which particles enter resonance, the 3-turn amplitude growth (spiral step) can be adjusted to create a desired flux of particles entering resonance. After a number of turns of amplitude growth (typically hundreds), an electrostatic septum located at some distance from the waiting beam will provide a kick necessary to extract the particles. A real-world diagram of slow extraction is shown in~\autoref{fig:real-world}.
@@ -1585,27 +1585,6 @@ This method has been chosen for many East Area extraction implementations for a 
 RFKO can also be used with an amplitude modulated (AM) excitation, which can be calibrated to provide a constant particle flux over time. However, for the experimental application in this thesis, AM was not used, as the extraction process took place over a long enough time period where flux was not a concern.
 
 A variety of different signals can be used to drive the excitation: theoretically, white noise (a random signal with equal intensity at all frequencies) would be the ideal signal, providing a purely diffusive effect in phase space. 
-
-\begin{enumerate}
-  \item \todo{Machine resonance at third order, leading to a derivation of the Kobayashi Hamiltonian and Steinbach diagram} \checkmark
-  \item \todo{Betatron} \checkmark
-  \item \todo{COSE (chromatic)}
-  \item \todo{Q-sweep}
-  \item \todo{\textbf{RFKO} INTRODUCE RFKO FORMALLY HERE}
-  \item \textcolor{teal}{Mathematical description of the four regimes}
-  \item \textcolor{teal}{Demonstrate why RFKO is of interest}
-\end{enumerate}
-
-
-
-
-\begin{enumerate}
-  \item \todo{Sextupoles controlled with XSE}
-  \item \todo{Quadrupoles controlled with QSE}
-  \item \todo{Tune trim with PFWs}
-  \item \todo{Extraction ES at 57, then 61}
-  \item \todo{Down F61, into F61D}
-\end{enumerate}
 
 \chapter{Implementation and Simulation}
 
