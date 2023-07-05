@@ -1118,4 +1118,200 @@ Underfull \vbox (badness 7667) has occurred while \output is active []
  [31
 
 ]
-Underfull \vbox (badness 10000) has occurred while \
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+<tunemap.png, id=668, 423.38174pt x 315.94035pt>
+File: tunemap.png Graphic file (type png)
+<use tunemap.png>
+Package pdftex.def Info: tunemap.png  used on input line 1774.
+(pdftex.def)             Requested size: 281.85585pt x 210.32909pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1780.
+
+<cyclegraphs.png, id=669, 570.81255pt x 932.283pt>
+File: cyclegraphs.png Graphic file (type png)
+<use cyclegraphs.png>
+Package pdftex.def Info: cyclegraphs.png  used on input line 1797.
+(pdftex.def)             Requested size: 281.85585pt x 460.36482pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33 <./tunemap.png>] [34 <./cyclegraphs.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1822.
+
+<fake-signal.png, id=693, 570.6921pt x 281.853pt>
+File: fake-signal.png Graphic file (type png)
+<use fake-signal.png>
+Package pdftex.def Info: fake-signal.png  used on input line 1837.
+(pdftex.def)             Requested size: 281.85585pt x 139.20155pt.
+[35]
+<both-chirps.png, id=710, 570.933pt x 281.853pt>
+File: both-chirps.png Graphic file (type png)
+<use both-chirps.png>
+Package pdftex.def Info: both-chirps.png  used on input line 1845.
+(pdftex.def)             Requested size: 281.85585pt x 139.14995pt.
+ [36 <./fake-signal.png> <./both-chirps.png>]
+<optics.png, id=726, 906.14536pt x 490.11105pt>
+File: optics.png Graphic file (type png)
+<use optics.png>
+Package pdftex.def Info: optics.png  used on input line 1865.
+(pdftex.def)             Requested size: 516.73335pt x 279.49333pt.
+\openout4 = `main-1.cpt'.
+
+
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 1865--1866
+ [][] 
+ []
+
+(./main-1.cpt) (./main-1.cpt)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37 <./optics.png>] [38]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1901.
+
+[39] [40]
+Chapter 4.
+[41
+
+]
+<sample_rate_variation.png, id=783, 578.03955pt x 211.87155pt>
+File: sample_rate_variation.png Graphic file (type png)
+<use sample_rate_variation.png>
+Package pdftex.def Info: sample_rate_variation.png  used on input line 2076.
+(pdftex.def)             Requested size: 375.80542pt x 137.7472pt.
+<machine_rf_on.png, id=787, 545.6385pt x 354.123pt>
+File: machine_rf_on.png Graphic file (type png)
+<use machine_rf_on.png>
+Package pdftex.def Info: machine_rf_on.png  used on input line 2085.
+(pdftex.def)             Requested size: 422.77661pt x 274.38844pt.
+<sim_rf_on.png, id=789, 552.02235pt x 354.123pt>
+File: sim_rf_on.png Graphic file (type png)
+<use sim_rf_on.png>
+Package pdftex.def Info: sim_rf_on.png  used on input line 2089.
+(pdftex.def)             Requested size: 422.77661pt x 271.222pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<machine_rf_off.png, id=791, 548.16795pt x 354.123pt>
+File: machine_rf_off.png Graphic file (type png)
+<use machine_rf_off.png>
+Package pdftex.def Info: machine_rf_off.png  used on input line 2098.
+(pdftex.def)             Requested size: 422.77661pt x 273.11862pt.
+<sim_rf_off.png, id=793, 74.2775pt x 50.1875pt>
+File: sim_rf_off.png Graphic file (type png)
+<use sim_rf_off.png>
+Package pdftex.def Info: sim_rf_off.png  used on input line 2102.
+(pdftex.def)             Requested size: 422.77661pt x 285.76456pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42 <./sample_rate_variation.png>] [43 <./machine_rf_on.png> <./sim_rf_on.png>] [44 <./machine_rf_off.png> <./sim_rf_off.png>]
+Chapter 5.
+[45
+
+]
+Chapter 6.
+(./main.bbl [46
+
+]
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+[47
+
+] [48]
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `en'. Using the pattern for
+** the default language instead.
+) [49]
+Appendix A.
+[50
+
+]
+Appendix B.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 2143.
+ (./code/kick_angle.py
+
+LaTeX Font Warning: Font shape `T1/cmtt/m/n' in size <18.42809> not available
+(Font)              size <17.28> substituted on input line 38.
+
+[51
+
+]) (./code/generate_chirp.py) [52]
+Appendix C.
+[53
+
+] (./main.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.14809pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: A160AFEDC23FD65C6C41EED263E52565;7473.
+ ) 
+Here is how much of TeX's memory you used:
+ 35920 strings out of 476025
+ 724799 string characters out of 5790017
+ 2142388 words of memory out of 5000000
+ 55039 multiletter control sequences out of 15000+600000
+ 621878 words of font info for 353 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,13n,89p,1360b,2842s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (54 pages, 9037668 bytes).
+PDF statistics:
+ 1144 PDF objects out of 1200 (max. 8388607)
+ 979 compressed objects within 10 object streams
+ 342 named destinations out of 1000 (max. 500000)
+ 109583 words of extra memory for PDF output out of 128383 (max. 10000000)
+
