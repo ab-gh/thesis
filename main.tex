@@ -1447,13 +1447,18 @@ If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\
 
 \subsection{Slow Extraction Methods}
 
+% [TODO) ========================================================== %
+% I recommend you shorten this part to discuss only discuss RFKO.   %
+% There are just too many method, some which don't accelerate       %
+% the beam in any way                                               %
+% ==================================================================%
+
+
 \subsubsection{Betatron Core}
 
 A simple treatment of momentum-driven slow extraction is through the use of a \textit{betatron core}. Used by accelerators such as the \textit{National Center for Oncological Hadrontherapy}~\cite{Falbo:IPAC2018-TUZGBF3} (CNAO) and MedAustron~\cite{pablo}, a beatron core is a circular magnet placed around the beam to produce a longitudinal voltage along $s$. Both the CNAO and MedAustron designs, and many more medical machines, were based on a landmark report \textit{Proton-Ion Medical Machine Study}~\cite{PIMMS} (PIMMS), with the Betatron Core particularly referencing earlier work~\cite{betatroncore}.
 
 Recalling~\autoref{eq:chroma}, a beam with non-zero (and typically negative) chromaticity $Q'$ can have its tune distance $\delta Q$ controlled by momentum $\Delta p/p$. The longitudinal voltage from the betatron core provides the resonance driving effect (red arrow in~\autoref{fig:momentum-driven}), accelerating particles into resonance. Particles then experience unstable betatron oscillation, jumping between separatrices, before encountering an electrostatic septum, where they receive an extraction kick.
-
-% [TODO) =============================================================== %
 
 \subsubsection{Tune Sweep}
 Tune sweep operates somewhat as the opposite of Betatron Core: rather than controlling the beam's tune distance away from resonance ($\delta Q$), moving the beam into resonance, the reference transverse tune of the machine ($Q_x$) is moved through the stationary waiting beam. This is illustrated, with a Stienbach diagram, in~\autoref{fig:tune-sweep}.
@@ -1499,6 +1504,15 @@ In this equation, betatron core slow extraction reduced $\delta Q$ towards zero 
 The exact process of COSE, and the other methods previously mentioned, varies between implementations. However, all of these methods are momentum-driven extraction, sharing the same principles and similar drawbacks. The most notable of these is high sensitivity to slight variations in machine optics (magnetic strengths). Small power supply ripples can have significant impacts to the ``spill quality'' obtained from these techniques. A betatron core with large inductance can reduce the effect of ripples by ``smoothing out'' current variations, but has the consequence of reducing the response rate, reducing the precision and controllability. 
 
 Another potential drawback arises when the beam is de-bunched during extraction so that the momentum of particles does not change~\cite{brown:ripples}. If the extraction process is not complete and some particles remain in the waiting beam, they may have to be re-bunched and re-accelerated in order to be extracted, a process prone to inefficiency and losses.
+
+
+%
+%
+%
+%
+%
+
+
 
 \subsubsection{Radio-Frequency Knock-Out}\label{sec:rfko}
 
@@ -2086,8 +2100,6 @@ The time-series spill signal was then analysed using a discrete Fourier transfor
 
 Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples), and the magnitude of the resulting complex number was plotted against the interval frequency. This analysis was performed for both the real machine and the simulations, with both a bunched beam (with RF cavities enabled) and a coasting/debunched beam (with RF cavities disabled). The results are shown in~\autoref{fig:rf_on} and~\autoref{fig:rf_off} for the bunched and coasting beams respectively.
 
-A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp008}, is clearly visible in both~\autoref{fig:rf_on} and~\autoref{fig:rf_off}.
-
 \begin{figure}[h]
   \centering
   \begin{subfigure}[b]{0.9\linewidth}
@@ -2114,15 +2126,22 @@ A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp0
   \caption{Frequency response of the RFKO system, \textbf{with RF cavities disabled}, both in the real machine and in simulation.}\label{fig:rf_off}
 \end{figure}
 
+A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp008}, is clearly visible in both~\autoref{fig:rf_on} and~\autoref{fig:rf_off}.
+
+
 % [TODO) explain the consequences of these graphs
 
 \section{Spill Duty Factor}
 
 % [TODO) step 3: ???
-% [TODO) step 4: profit
+
+\begin{equation}
+  \tau = \frac{\langle x\rangle^2}{\langle x^2\rangle}
+\end{equation}
 
 \chapter{Conclusion}
 
+% [TODO) step 4: profit
 
 \chapter{Acknowledgements}
 
