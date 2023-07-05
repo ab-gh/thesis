@@ -94,6 +94,9 @@ Y.~Kobayashi, ``Theory of the resonant beam ejection from synchrotrons,'' \emph{
 L.~Falbo, E.~Bressi, S.~Foglio, and C.~Priano, ``\BIBforeignlanguage{english}{{B}etatron {C}ore {S}low {E}xtraction at {CNAO}},'' in \emph{\BIBforeignlanguage{english}{Proc. 9th International Particle Accelerator Conference (IPAC'18), Vancouver, BC, Canada, April 29-May 4, 2018}}, ser. International Particle Accelerator Conference, no.~9.\hskip 1em plus 0.5em minus 0.4em\relax Geneva, Switzerland: JACoW Publishing, June 2018, paper TUZGBF3, pp. 1237--1239, https://doi.org/10.18429/JACoW-IPAC2018-TUZGBF3. [Online]. Available: \url{http://jacow.org/ipac2018/papers/tuzgbf3.pdf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Yao:2016cnf}
+H.~Yao, X.~Guan, G.~Li, X.~Wang, Q.~Zhang, and S.-x. Zheng, ``{RF-Knockout Slow Extraction Design for XiPAF Synchrotron},'' in \emph{{57th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams}}, 2016, p. MOPR005.
+
 \bibitem{pablo}
 \BIBentryALTinterwordspacing
 P.~A. Arrutia~Sota and M.~A. Fraser, ``{Optimisation of Slow Extraction and Beam Delivery from Synchrotrons},'' 2020, presented 2020. [Online]. Available: \url{https://cds.cern.ch/record/2749240}

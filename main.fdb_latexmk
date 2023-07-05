@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1688560401 "main.aux" "main.bbl" "main" 1688560416 0
-  "./refs.bib" 1688471610 30121 da277f656d0f119217d31786e870dbd8 ""
+["bibtex main"] 1688568725 "main.aux" "main.bbl" "main" 1688568899 0
+  "./refs.bib" 1688564148 30537 326222bd9a4a22f9d6ae29cbb93cf434 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1688560416 36607 8d50e5150c4e0931c076cbfcc9ae868a "pdflatex"
+  "main.aux" 1688568898 36724 85a19633132bd2abc496612255e7dbbc "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1688560401 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1688560416 0
-  "/Users/ash/cernbox/publications/MSc/main.tex" 1688560385 172190 c544cfcacc1a937ec16263aca95e514a ""
+["pdflatex"] 1688568882 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1688568899 0
+  "/Users/ash/cernbox/publications/MSc/main.tex" 1688568882 173392 a460abc1266c1287bf8a9d1d5984ce16 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -260,6 +260,7 @@
   "code/kick_angle.py" 1688464832 1378 ec94285697d0845ba724e9683098bd80 ""
   "cose.png" 1687859036 70263 d4e1bf848ffa3119e5a97630cb64e8b5 ""
   "cyclegraphs.png" 1687944305 764210 724b8d1126d012ebc919e0f5d87ad617 ""
+  "declaration.tex" 1688568641 480 a8547274f9110dda253306f774c0fb97 ""
   "fake-signal.png" 1687962859 468082 1b2994b2dd7adcc450e58dbcfc8c8cff ""
   "fast.png" 1685694831 158315 98e334274c75f5992b619764c6c4f710 ""
   "fastmulti.png" 1685694955 233793 70fa34efa8e94ae675911aa797fc994a ""
@@ -268,21 +269,22 @@
   "kobayashi.png" 1687351062 1391763 2349f12b5e5181c80e65ad2e20ce86fd ""
   "machine_rf_off.png" 1688483041 823393 6ec5fe46088cf604dfebc33b9ad5e672 ""
   "machine_rf_on.png" 1688483025 665872 f7238b370f0651c07ee52689f61640cd ""
-  "main-1.cpt" 1688560411 429 7f97629642dc4c007d09ef533598941c "pdflatex"
-  "main.aux" 1688560416 36607 8d50e5150c4e0931c076cbfcc9ae868a "pdflatex"
-  "main.bbl" 1688560401 12103 af6bd4d3b2fef354fc5695a0bbc946a0 "bibtex main"
-  "main.out" 1688560416 7473 a160afedc23fd65c6c41eed263e52565 "pdflatex"
-  "main.tex" 1688560385 172190 c544cfcacc1a937ec16263aca95e514a ""
-  "main.toc" 1688560416 4404 dcac94220c9564d152d6579d654e4334 "pdflatex"
+  "main-1.cpt" 1688568893 429 7f97629642dc4c007d09ef533598941c "pdflatex"
+  "main.aux" 1688568898 36724 85a19633132bd2abc496612255e7dbbc "pdflatex"
+  "main.bbl" 1688568725 12374 9b81e6b69da51caf34881de6fc6c2775 "bibtex main"
+  "main.out" 1688568898 7488 b3b6fe25342faeb31d210a95059c4ef2 "pdflatex"
+  "main.tex" 1688568882 173392 a460abc1266c1287bf8a9d1d5984ce16 ""
+  "main.toc" 1688568898 4407 df7384eec1c45bc0f956667be3df4b1f "pdflatex"
   "momentum-driven.png" 1687859000 69578 757f4377b1e25144e1aa6dd0cb91e558 ""
   "optics.png" 1688132761 1341413 9ef7ce087d03327fa16f66f73b6d17a3 ""
   "real-world.png" 1687426138 39847 0eda19ba3370e54de22f001a512bf7b5 ""
   "report.sty" 1686046036 7714 be5ebb972d70d769cb9901da53e5949a ""
   "rhr.pdf" 1686640471 8233 608d29d5b2f922782db365fad1484bd2 ""
   "sample_rate_variation.png" 1688481466 90571 9b74cf5e22b65fe0549ee08c26010e79 ""
+  "signature.png" 1688568086 434672 6812dc899e1e96296b0f871e7df395d5 ""
   "sim_rf_off.png" 1688482401 13800 703ac87320ba0f2788374343f656e0b0 ""
   "sim_rf_on.png" 1688482242 1066209 88d7d92f54e21c08f27ffdc5e70ca37a ""
-  "titlepage.tex" 1686646305 3861 452e81ae67984f14c2219c97db58b74e ""
+  "titlepage.tex" 1688567259 718 e35e03c71d38d920743f252eadbca35a ""
   "tune-sweep.png" 1687440206 62060 9e6aea7f5712267753a1f86e9d125096 ""
   "tunemap.png" 1687944499 393029 63540a53672df990db91dec1ebb506f4 ""
   (generated)

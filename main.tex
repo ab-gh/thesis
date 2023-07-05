@@ -78,11 +78,8 @@
 \onehalfspacing
 \begin{document}
 \input{./titlepage.tex}
-
 \newpage
-\tableofcontents
-\thispagestyle{empty}
-
+\input{./declaration.tex}
 \newpage
 \thispagestyle{empty}
 \begin{abstract}
@@ -97,10 +94,14 @@ Resonant slow extraction is a beam extraction method which provides a continuous
 \vspace*{\fill}
 \keywords{Beam Physics, Slow Extraction, Radio-Frequency Knock-Out, Simulation, Xsuite}
 \vspace*{\fill}
-\newpage
-%\setcounter{page}{1}
-\chapter{Introduction}
 
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\chapter{Introduction}
 
 The CERN Proton Synchrotron (PS), alongside providing intermediary acceleration for hadron and ion beams for the Super Proton Synchrotron (SPS) and eventually the Large Hadron Collider (LHC), provides beams for the many fixed target experiments located at the East Area (EA) experimental facility. This facility, as illustrated in~\autoref{fig:eadiagram}, consists of the proton (IRRAD) and mixed-field (CHARM) irradiation facilities, via a dedicated \qty{24}{GeV/c} beamline, in addition to a multi-target beamline providing three secondary beams.
 
@@ -1445,7 +1446,7 @@ In order for a particle to be considered stable, its single-particle emittance $
 \end{equation} 
 If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} is seen. The width of this unstable triangle, known as the \textit{stopband}, is proportional to $S$.
 
-\subsection{Slow Extraction Methods}
+\subsection{Slow Extraction Techniques}
 
 % [TODO) ========================================================== %
 % I recommend you shorten this part to discuss only discuss RFKO.   %
@@ -1453,6 +1454,13 @@ If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\
 % the beam in any way                                               %
 % ==================================================================%
 
+A variety of slow extraction implementations can be found across particle accelerators. While all will vary to some degree, most can be categorised. For example:
+\begin{itemize}
+  \item The \textit{National Center for Oncological Hadrontherapy} (CNAO) uses \textbf{Betatron Core} slow extraction~\cite{Falbo:IPAC2018-TUZGBF3}: a circular magnet produces a longitudinal acceleration, driving particles into 1/3rd-integer resonance.
+  \item The \textit{MedAustron} facility has also used \textbf{Constant Optics Slow Extraction} (COSE)~\cite{ArrutiaSota:2845862}, simultaneously scaling the magnetic strength of bending dipoles, and sweeping the betatron tune. This method allows for the alignment of separatrices at different momentum, improving the spill quality.
+  \item The \textit{Xi’an Proton Application Facility} (XiPAF) uses \textit{Radio-Frequency Knock Out} (RFKO) extraction~\cite{Yao:2016cnf}, an amplitude-driven method which transversely ``heats'' (excites) the beam, increasing emittance and amplitude into unstable regions.
+\end{itemize}
+These accelerators and techniques are mentioned for illustrative purposes: it is not an exhaustive list, and most accelerators employ multiple methods.
 
 \subsubsection{Betatron Core}
 
