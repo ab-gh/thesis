@@ -97,31 +97,6 @@ L.~Falbo, E.~Bressi, S.~Foglio, and C.~Priano, ``\BIBforeignlanguage{english}{{B
 \bibitem{Yao:2016cnf}
 H.~Yao, X.~Guan, G.~Li, X.~Wang, Q.~Zhang, and S.-x. Zheng, ``{RF-Knockout Slow Extraction Design for XiPAF Synchrotron},'' in \emph{{57th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams}}, 2016, p. MOPR005.
 
-\bibitem{pablo}
-\BIBentryALTinterwordspacing
-P.~A. Arrutia~Sota and M.~A. Fraser, ``{Optimisation of Slow Extraction and Beam Delivery from Synchrotrons},'' 2020, presented 2020. [Online]. Available: \url{https://cds.cern.ch/record/2749240}
-\BIBentrySTDinterwordspacing
-
-\bibitem{PIMMS}
-\BIBentryALTinterwordspacing
-L.~Badano, M.~Benedikt, P.~J. Bryant, M.~Crescenti, P.~Holy, A.~T. Maier, M.~Pullia, S.~Rossi, and P.~Knaus, \emph{{Proton-Ion Medical Machine Study (PIMMS), 1}}, 2000. [Online]. Available: \url{https://cds.cern.ch/record/385378}
-\BIBentrySTDinterwordspacing
-
-\bibitem{betatroncore}
-\BIBentryALTinterwordspacing
-L.~Badano and S.~Rossi, ``{Characteristics of a betatron core for extraction in a proton-ion medical synchrotron},'' CERN, Geneva, Tech. Rep., 1997. [Online]. Available: \url{http://cds.cern.ch/record/327305}
-\BIBentrySTDinterwordspacing
-
-\bibitem{hardt}
-\BIBentryALTinterwordspacing
-M.~Pullia, ``{Hardt condition for superposition of separatrices},'' \emph{Informal Meeting on Slow Extraction from Synchrotrons for Cancer Therapy}, 1996. [Online]. Available: \url{https://cds.cern.ch/record/1425424}
-\BIBentrySTDinterwordspacing
-
-\bibitem{brown:ripples}
-\BIBentryALTinterwordspacing
-K.~A. Brown, ``Third integer resonant extraction: Ripple compensation and bunched beams,'' 7 2021. [Online]. Available: \url{https://www.osti.gov/biblio/1805240}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Sterbini:2158994}
 \BIBentryALTinterwordspacing
 G.~Sterbini, A.~Blas, and S.~Gilardoni, ``{Beam-based Performance of the CERN PS Transverse Feedback},'' p. MOPAB10, 2015. [Online]. Available: \url{https://cds.cern.ch/record/2158994}

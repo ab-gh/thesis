@@ -460,9 +460,11 @@ This relativistic mass is conserved just the same as rest mass, and follows the 
 The rest \text{energy} $E_0$ and \textit{momentum} $m_0$ are likewise defined in the relativistic frame:
 \begin{equation}
     E=\gamma m_0c^2
+    \label{eq:relativistic_energy}
 \end{equation}
 \begin{equation}
     p=\gamma m_0v
+    \label{eq:relativistic_momentum}
 \end{equation}
 For brevity, this report will always assume a relativistic frame, and all mentions of mass $m$, momentum $p$, or energy $E$ should be assumed to be relativistic unless otherwise stated.
 
@@ -1458,74 +1460,70 @@ A variety of slow extraction implementations can be found across particle accele
 \begin{itemize}
   \item The \textit{National Center for Oncological Hadrontherapy} (CNAO) uses \textbf{Betatron Core} slow extraction~\cite{Falbo:IPAC2018-TUZGBF3}: a circular magnet produces a longitudinal acceleration, driving particles into 1/3rd-integer resonance.
   \item The \textit{MedAustron} facility has also used \textbf{Constant Optics Slow Extraction} (COSE)~\cite{ArrutiaSota:2845862}, simultaneously scaling the magnetic strength of bending dipoles, and sweeping the betatron tune. This method allows for the alignment of separatrices at different momentum, improving the spill quality.
-  \item The \textit{Xi’an Proton Application Facility} (XiPAF) uses \textit{Radio-Frequency Knock Out} (RFKO) extraction~\cite{Yao:2016cnf}, an amplitude-driven method which transversely ``heats'' (excites) the beam, increasing emittance and amplitude into unstable regions.
+  \item The \textit{Xi’an Proton Application Facility} (XiPAF) uses \textbf{Radio-Frequency Knock Out} (RFKO) extraction~\cite{Yao:2016cnf}, an amplitude-driven method which transversely ``heats'' (excites) the beam, increasing emittance and amplitude into unstable regions.
 \end{itemize}
 These accelerators and techniques are mentioned for illustrative purposes: it is not an exhaustive list, and most accelerators employ multiple methods.
 
-\subsubsection{Betatron Core}
+% \subsubsection{Betatron Core}
 
-A simple treatment of momentum-driven slow extraction is through the use of a \textit{betatron core}. Used by accelerators such as the \textit{National Center for Oncological Hadrontherapy}~\cite{Falbo:IPAC2018-TUZGBF3} (CNAO) and MedAustron~\cite{pablo}, a beatron core is a circular magnet placed around the beam to produce a longitudinal voltage along $s$. Both the CNAO and MedAustron designs, and many more medical machines, were based on a landmark report \textit{Proton-Ion Medical Machine Study}~\cite{PIMMS} (PIMMS), with the Betatron Core particularly referencing earlier work~\cite{betatroncore}.
+% A simple treatment of momentum-driven slow extraction is through the use of a \textit{betatron core}. Used by accelerators such as the \textit{National Center for Oncological Hadrontherapy}~\cite{Falbo:IPAC2018-TUZGBF3} (CNAO) and MedAustron~\cite{pablo}, a beatron core is a circular magnet placed around the beam to produce a longitudinal voltage along $s$. Both the CNAO and MedAustron designs, and many more medical machines, were based on a landmark report \textit{Proton-Ion Medical Machine Study}~\cite{PIMMS} (PIMMS), with the Betatron Core particularly referencing earlier work~\cite{betatroncore}.
 
-Recalling~\autoref{eq:chroma}, a beam with non-zero (and typically negative) chromaticity $Q'$ can have its tune distance $\delta Q$ controlled by momentum $\Delta p/p$. The longitudinal voltage from the betatron core provides the resonance driving effect (red arrow in~\autoref{fig:momentum-driven}), accelerating particles into resonance. Particles then experience unstable betatron oscillation, jumping between separatrices, before encountering an electrostatic septum, where they receive an extraction kick.
+% Recalling~\autoref{eq:chroma}, a beam with non-zero (and typically negative) chromaticity $Q'$ can have its tune distance $\delta Q$ controlled by momentum $\Delta p/p$. The longitudinal voltage from the betatron core provides the resonance driving effect (red arrow in~\autoref{fig:momentum-driven}), accelerating particles into resonance. Particles then experience unstable betatron oscillation, jumping between separatrices, before encountering an electrostatic septum, where they receive an extraction kick.
 
-\subsubsection{Tune Sweep}
-Tune sweep operates somewhat as the opposite of Betatron Core: rather than controlling the beam's tune distance away from resonance ($\delta Q$), moving the beam into resonance, the reference transverse tune of the machine ($Q_x$) is moved through the stationary waiting beam. This is illustrated, with a Stienbach diagram, in~\autoref{fig:tune-sweep}.
+% \subsubsection{Tune Sweep}
+% Tune sweep operates somewhat as the opposite of Betatron Core: rather than controlling the beam's tune distance away from resonance ($\delta Q$), moving the beam into resonance, the reference transverse tune of the machine ($Q_x$) is moved through the stationary waiting beam. This is illustrated, with a Stienbach diagram, in~\autoref{fig:tune-sweep}.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.6\linewidth]{tune-sweep.png}
-  \caption{Stienbach diagram of tune-sweep slow extraction. Waiting beam in black, tune sweep effect in red, unstable beam in grey.}\label{fig:tune-sweep}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.6\linewidth]{tune-sweep.png}
+%   \caption{Stienbach diagram of tune-sweep slow extraction. Waiting beam in black, tune sweep effect in red, unstable beam in grey.}\label{fig:tune-sweep}
+% \end{figure}
 
-For a small momentum spread $\Delta p/p$, the tune's dependency on quadrupole strength can be assumed as linear, so a simple quadrupole strength sweep is all that is required for tune-sweep.
+% For a small momentum spread $\Delta p/p$, the tune's dependency on quadrupole strength can be assumed as linear, so a simple quadrupole strength sweep is all that is required for tune-sweep.
 
-There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of magnetic rigidity ($B\rho$,~\autoref{eq:brho}) in the beam. The effect of this is illustrated in~\autoref{fig:hardt}: particles excited into instability with different amplitudes will ``lock on'' to separatrices at different phase-space locations. The result is a range in angle of particles extracted at the electrostatic septum (located at, for example $x=0.3$ in~\autoref{fig:hardt}).
+% There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of magnetic rigidity ($B\rho$,~\autoref{eq:brho}) in the beam. The effect of this is illustrated in~\autoref{fig:hardt}: particles excited into instability with different amplitudes will ``lock on'' to separatrices at different phase-space locations. The result is a range in angle of particles extracted at the electrostatic septum (located at, for example $x=0.3$ in~\autoref{fig:hardt}).
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.6\linewidth]{hardt.png}
-  \caption{Phase-space map of three initial particles on the Kobayashi Hamiltonian, and one of their separatrices. An example electrostatic septum location is shown (dashed line).}\label{fig:hardt}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.6\linewidth]{hardt.png}
+%   \caption{Phase-space map of three initial particles on the Kobayashi Hamiltonian, and one of their separatrices. An example electrostatic septum location is shown (dashed line).}\label{fig:hardt}
+% \end{figure}
 
-Recalling~\autoref{eq:steinbach}, amplitude $A$ is correlated with momentum difference $\Delta p/p$. Given a real dispersion value (\autoref{eq:dispersion}), a condition can be computed which would align all separatrices on the septum:
-\begin{equation}
-  D_n\cos(\pi-\Delta\phi)+D'_n\sin(\pi-\Delta\phi)=-\frac{4\pi}3Q'_x
-  \label{eq:hardt}
-\end{equation}
-This condition, known as the Hardt condition~\cite{hardt}, will align the separatrices, given a phase advance $\Delta\phi$ and dispersion coefficients $D_n, D'_n$. However, in the context of tune-sweep extraction, the Hardt condition proves ineffective: a changing momentum will change dispersion coefficients, causing the separatrices to misalign.
+% Recalling~\autoref{eq:steinbach}, amplitude $A$ is correlated with momentum difference $\Delta p/p$. Given a real dispersion value (\autoref{eq:dispersion}), a condition can be computed which would align all separatrices on the septum:
+% \begin{equation}
+%   D_n\cos(\pi-\Delta\phi)+D'_n\sin(\pi-\Delta\phi)=-\frac{4\pi}3Q'_x
+%   \label{eq:hardt}
+% \end{equation}
+% This condition, known as the Hardt condition~\cite{hardt}, will align the separatrices, given a phase advance $\Delta\phi$ and dispersion coefficients $D_n, D'_n$. However, in the context of tune-sweep extraction, the Hardt condition proves ineffective: a changing momentum will change dispersion coefficients, causing the separatrices to misalign.
 
-\subsubsection{COSE}
-To combat the effect of misaligned separatrices and differences in optics, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the magnetc rigidity $B\rho$ (or reference momentum) of the beam is increased simultaneously with the tune-sweep. 
+% \subsubsection{COSE}
+% To combat the effect of misaligned separatrices and differences in optics, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the magnetc rigidity $B\rho$ (or reference momentum) of the beam is increased simultaneously with the tune-sweep. 
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\linewidth]{cose.png}
-  \caption{Stienbach diagram of COSE slow extraction. Waiting beam in black, tune sweep and optics ramp effect in red, unstable beam in grey.}\label{fig:cose}
-\end{figure}
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=0.6\linewidth]{cose.png}
+%   \caption{Stienbach diagram of COSE slow extraction. Waiting beam in black, tune sweep and optics ramp effect in red, unstable beam in grey.}\label{fig:cose}
+% \end{figure}
 
-This extraction method can be considered as betatron core extraction in the $p_0$ (reference momentum) frame of reference, rather than the $p$ (particle momentum) frame of reference. By reformulating~\autoref{eq:chroma} using $p_0$, the following equation for tune distance $\delta Q$ is obtained:
-\begin{equation}
-  \delta Q=Q'_x\frac{p-p_0}{p_0}
-\end{equation}
-In this equation, betatron core slow extraction reduced $\delta Q$ towards zero by changing $p$; COSE does this by instead varying $p_0$. 
+% This extraction method can be considered as betatron core extraction in the $p_0$ (reference momentum) frame of reference, rather than the $p$ (particle momentum) frame of reference. By reformulating~\autoref{eq:chroma} using $p_0$, the following equation for tune distance $\delta Q$ is obtained:
+% \begin{equation}
+%   \delta Q=Q'_x\frac{p-p_0}{p_0}
+% \end{equation}
+% In this equation, betatron core slow extraction reduced $\delta Q$ towards zero by changing $p$; COSE does this by instead varying $p_0$. 
 
-The exact process of COSE, and the other methods previously mentioned, varies between implementations. However, all of these methods are momentum-driven extraction, sharing the same principles and similar drawbacks. The most notable of these is high sensitivity to slight variations in machine optics (magnetic strengths). Small power supply ripples can have significant impacts to the ``spill quality'' obtained from these techniques. A betatron core with large inductance can reduce the effect of ripples by ``smoothing out'' current variations, but has the consequence of reducing the response rate, reducing the precision and controllability. 
+% The exact process of COSE, and the other methods previously mentioned, varies between implementations. However, all of these methods are momentum-driven extraction, sharing the same principles and similar drawbacks. The most notable of these is high sensitivity to slight variations in machine optics (magnetic strengths). Small power supply ripples can have significant impacts to the ``spill quality'' obtained from these techniques. A betatron core with large inductance can reduce the effect of ripples by ``smoothing out'' current variations, but has the consequence of reducing the response rate, reducing the precision and controllability. 
 
-Another potential drawback arises when the beam is de-bunched during extraction so that the momentum of particles does not change~\cite{brown:ripples}. If the extraction process is not complete and some particles remain in the waiting beam, they may have to be re-bunched and re-accelerated in order to be extracted, a process prone to inefficiency and losses.
+% Another potential drawback arises when the beam is de-bunched during extraction so that the momentum of particles does not change~\cite{brown:ripples}. If the extraction process is not complete and some particles remain in the waiting beam, they may have to be re-bunched and re-accelerated in order to be extracted, a process prone to inefficiency and losses.
 
 
 %
-%
-%
-%
-%
 
-
-
-\subsubsection{Radio-Frequency Knock-Out}\label{sec:rfko}
-
+%\subsubsection{Radio-Frequency Knock-Out}\label{sec:rfko}
+ 
+% [TODO) Why RFKO?
 % [TODO) Spill Quality
 
+% [TODO) Link this in the flow
 Unlike the previously mentioned slow-extraction methods, Radio-Frequency Knock-Out (RFKO) is an amplitude- and sextupole-driven method. The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to excite particles into the resonant instability region by providing transverse ``heating'' of the beam---using a radio-frequency exciter to provide a small transverse kick to the beam, increasing its amplitude. This kick is provided at a third-integer fraction of the betatron tune, but a range of excitation frequency (frequency modulation, FM) is required as there is a range of momentum in the beam, and thus a range of tunes. 
 
 \begin{figure}
@@ -1612,17 +1610,28 @@ A variety of different signals can be used to drive the excitation: theoreticall
 
 \section{RFKO Slow Extraction at the CERN PS}
 
-For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. A proton beam momentum of \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} was chosen for this study, as its magnetic rigidity is equivalent to the \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ions used for the CHIMERA experiment, with whom studies were carried out alongside, and it equates to a low enough energy as to not damage components during testing. This proton equivalent momentum is calculated as
-\begin{equation}
-  B\rho = \frac pq = \frac{\sqrt{\left(\frac{E\cdot A}{E_0}+1\right)^2-1}}q
-  \label{eq:proton-equivalent}
-\end{equation}
-where $A$ is the atomic mass, $E$ is the proton energy per nucleon (\qty{0.75}{\giga\electronvolt}), and $E_0$ is the equivalent proton rest energy as calculated by
-\begin{equation}
-  E_0 = Zm_p + Nm_n - \delta M
-\end{equation} where $Z$ and $N$ are the proton and neutron numbers, $m_p$ and $m_n$ are the proton and neutron rest masses, and $\delta M$ is the mass defect of the nucleus.
+For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent energy was used.
 
-Likewise, a single-bunch, low intensity beam (\qty[per-mode=symbol]{30d10}{particles\per bunch}) was chosen. The cycle was configured to use two standard beam-cycle periods of \qty{1.2}{\second}, in order to extend the window available for a spill to \qty{500}{\milli\second}.
+This equivalency can be calculated using~\autoref{eq:brho}, \autoref{eq:relativistic_energy}, and \autoref{eq:relativistic_momentum}, producing an equation for the total momentum of an ion beam:
+\begin{equation}
+  pc=E_0\sqrt{\left(\frac{E_{kin}}{E_0}+1\right)^2-1}
+  \label{eq:ion_momentum}
+\end{equation} where $E_0$ is the rest mass of the ion, and the relativistic gamma factor $\gamma = \frac E{E_0}=frac{E_0+E_{kin}}{E_0}=\frac{E_{kin}}{E_0}+1$.
+
+A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at kinetic energy \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} will have an atomic mass $A$ of \qty{208}{\atomicmassunit}, and so a kinetic energy of 
+\begin{equation}
+  E_{kin}=E_{kin/u}*A=\qty{750}{\mega\electronvolt}\cdot 208=\qty{156}{\giga\electronvolt}
+\end{equation}
+This ion will have a rest mass of
+\begin{eqnarray}
+  m_{Pb54+}= Z\cdot m_p + N\cdot m_n + n_e\cdot m_e - m_{binding}
+\end{eqnarray} where $m_p, m_n, m_e$ are the masses of a proton, neutron, and electron. The mass defect $m_{binding}$ is found using
+\begin{eqnarray}
+  m_{binding}=Z\cdot m_p + N\cdot m_n + n_e\cdot m_e - A\cdot m_u
+\end{eqnarray} where $m_u$ is the atomic mass unit. 
+These values, when computed, result in a rest \ch{Pb^{+54}} mass of \qty{193.74}{\giga\electronvolt\per\clight\squared}. The equivalent proton momentum, using~\autoref{eq:ion_momentum} and~\autoref{eq:brho}, is then calculated as \qty{5.397}{\giga\electronvolt}. 
+
+Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles\per bunch}) \qty{5.397}{\giga\electronvolt} proton beam was chosen, injected to the PS through a single PSB ring (ring 3). The cycle was configured to use two basic beam-cycle periods of \qty{1.2}{\second}, in order to extend the window available for a spill to \qty{500}{\milli\second}.
 
 \begin{figure}
   \centering
@@ -1758,17 +1767,11 @@ The electrostatic septum, placed before the magnetic septa, is not used in this 
 
 \subsection{Magnetic Cycle}
 
-The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} proton beam is calculated by
-\begin{equation}
-  B=\frac{\frac 1c\times 10^9\cdot p}{\rho\cdot q}
-\end{equation}
-where the numerator converts the proton momentum from \si{\giga\electronvolt\per\clight} to \si{\tesla\meter}. This is calculated as a field of \qty{0.257}{\tesla}.
+The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} proton beam is \qty{0.257}{\tesla}, which provides the configuration for the PS Main Unit being magnets. In order to control the third-order resonance, and align the separatrices with the septum blade, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
-In order to create the third-order resonance, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
+A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ satisfies the aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
 
-A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ satisfies the Hardt condition (\autoref{eq:hardt}). These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
-
-Also present in this table are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in ever PS Main Unit dipole to control the horizontal and vertical betatron tune $Q_{x, y}$ and chromaticity $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid fractions of the waiting beam being at resonance before the RFKO was activated, which would cause a low-level initial uncontrolled spill. Meanwhile, the vertical tune was kept away from any resonances. This tune control is shown in~\autoref{fig:tunemap}, which plots hoizontal tune against vertical tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
+Also present in~\autoref{tab:params} are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. Meanwhile, the vertical tune was kept away from any resonances. This tune control is shown in~\autoref{fig:tunemap}, which plots hoizontal tune against vertical tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
 \begin{equation}
   m\cdot Q_x+n\cdot Q_y\neq p
 \end{equation} where $m$, $n$, and $p$ are arbitrary integers. Also used is the fractional tune split, $\Delta$, defined as
@@ -1780,7 +1783,7 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{tunemap.png}
-  \caption{A tune map, plotting horizontal tune $Q_x$ against vertical tune $Q_y$. Dashed lines indicate first order (red), second order (green) and third order (blue) resonances.}\label{fig:tunemap}
+  \caption{A fractional tune map, plotting horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$. Dashed lines indicate some of the first order (red), second order (green) and third order (blue) resonances.}\label{fig:tunemap}
 \end{figure}
 
 \begin{center}
