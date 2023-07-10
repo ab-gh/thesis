@@ -155,6 +155,11 @@ D.~Merkel, ``Docker: lightweight linux containers for consistent development and
 P.~Schicho, ``{Optimizing Simulation Times of SPS Slow Extraction using MAD-X},'' 2015. [Online]. Available: \url{http://cds.cern.ch/record/2039579}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Hegglin:2239398}
+\BIBentryALTinterwordspacing
+S.~E. Hegglin, ``{Simulating Collective Effects on GPUs},'' 2016, presented 10 Feb 2016. [Online]. Available: \url{https://cds.cern.ch/record/2239398}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Pari:2780495}
 \BIBentryALTinterwordspacing
 M.~Pari, F.~M. Velotti, M.~A. Fraser, V.~Kain, and O.~Michels, ``{Characterization of the slow extraction frequency response},'' \emph{Phys. Rev. Accel. Beams}, vol.~24, no.~8, p. 083501, 2021. [Online]. Available: \url{https://cds.cern.ch/record/2780495}
@@ -163,6 +168,11 @@ M.~Pari, F.~M. Velotti, M.~A. Fraser, V.~Kain, and O.~Michels, ``{Characterizati
 \bibitem{Actis:bxscint}
 \BIBentryALTinterwordspacing
 P.~Actis, T.~Dorenbos, and C.~Johnson, ``{An optically coupled differential beam time structure monitor for slow extraction},'' CERN, Geneva, Tech. Rep., 1976. [Online]. Available: \url{https://cds.cern.ch/record/2831368}
+\BIBentrySTDinterwordspacing
+
+\bibitem{nxcals}
+\BIBentryALTinterwordspacing
+J.~Wozniak and C.~Roderick, ``{NXCALS - Architecture and Challenges of the Next CERN Accelerator Logging Service},'' p. WEPHA163, 2020. [Online]. Available: \url{https://cds.cern.ch/record/2778529}
 \BIBentrySTDinterwordspacing
 
 \bibitem{wepmp008}

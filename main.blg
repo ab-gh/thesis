@@ -8,6 +8,8 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: refs.bib
+Warning--entry type for "Hegglin:2239398" isn't style-file defined
+--line 659 of file refs.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -17,47 +19,48 @@ Warning--empty journal in Rossbach:247501
 Warning--empty journal in Sterbini:2158994
 Warning--empty journal in Gasior:895142
 Warning--empty journal in Schicho:2039579
+Warning--empty journal in nxcals
 
 Done.
-You've used 32 entries,
+You've used 34 entries,
             4087 wiz_defined-function locations,
-            1056 strings with 14266 characters,
-and the built_in function-call counts, 22266 in all, are:
-= -- 1899
-> -- 516
-< -- 114
-+ -- 273
-- -- 106
-* -- 1102
-:= -- 3561
-add.period$ -- 67
-call.type$ -- 32
-change.case$ -- 31
+            1067 strings with 14577 characters,
+and the built_in function-call counts, 23286 in all, are:
+= -- 1997
+> -- 529
+< -- 115
++ -- 279
+- -- 109
+* -- 1142
+:= -- 3737
+add.period$ -- 71
+call.type$ -- 34
+change.case$ -- 34
 chr.to.int$ -- 213
-cite$ -- 38
-duplicate$ -- 1679
-empty$ -- 1727
-format.name$ -- 124
-if$ -- 5140
+cite$ -- 41
+duplicate$ -- 1765
+empty$ -- 1807
+format.name$ -- 128
+if$ -- 5374
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 317
-newline$ -- 173
-num.names$ -- 29
-pop$ -- 740
+int.to.str$ -- 34
+missing$ -- 332
+newline$ -- 183
+num.names$ -- 31
+pop$ -- 781
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1780
+skip$ -- 1869
 stack$ -- 0
-substring$ -- 665
-swap$ -- 1318
-text.length$ -- 43
+substring$ -- 685
+swap$ -- 1375
+text.length$ -- 44
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 32
-warning$ -- 6
-while$ -- 71
-width$ -- 34
-write$ -- 396
-(There were 6 warnings)
+type$ -- 34
+warning$ -- 7
+while$ -- 74
+width$ -- 36
+write$ -- 418
+(There were 8 warnings)

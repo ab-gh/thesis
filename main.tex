@@ -23,6 +23,7 @@
 \usepackage{setspace}
 \usepackage{subcaption}
 \usepackage{cprotect}
+\usepackage[super]{nth}
 
 \usepackage[capitalise]{cleveref}
 \creflabelformat{equation}{#2\textup{#1}#3}
@@ -1771,7 +1772,8 @@ The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\elec
 
 A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ satisfies the aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
 
-Also present in~\autoref{tab:params} are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. Meanwhile, the vertical tune was kept away from any resonances. This tune control is shown in~\autoref{fig:tunemap}, which plots horizontal tune against vertical tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
+Also present in~\autoref{tab:params} are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. This tune control is shown in~\autoref{fig:tunemap}, which plots vertical tune against horizontal tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
+
 \begin{equation}
   m\cdot Q_x+n\cdot Q_y\neq p
 \end{equation} where $m$, $n$, and $p$ are arbitrary integers. Also used is the fractional tune split, $\Delta$, defined as
@@ -1803,10 +1805,10 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
     \end{table}
 \end{center}
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\linewidth]{cyclegraphs.png}
-  \caption{Graphs of the parameters presented in~\autoref{tab:params}, showing the high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Second and third graphs show tune control configuration with the pole face winding (PFW) magnets. Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
+  \includegraphics[width=\linewidth]{cyclegraphs.png}
+  \caption{Graphs of the parameters presented in~\autoref{tab:params}, showing the high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
 \end{figure}
 
 \subsection{Transverse Excitation}\label{sec:trans_exc}
@@ -1819,14 +1821,13 @@ Once a basic, stable cycle is configured in the PS, the transverse excitation is
 \end{equation}
 where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and magnetic deflection angles are then~\cite[3.1-3.2]{bouvet}
 \begin{equation}
-  \theta_E = \frac{E / 1\times10^9\cdot L}{pc/1\times10^9 \cdot\beta}
+  \theta_E = \frac{E \cdot L}{p\cdot\beta}
   \label{eq:kick-electric}
 \end{equation}
 \begin{equation}
-  \theta_B = \frac{c/1\times10^9\cdot B\cdot L}{pc/1\times10^9}
+  \theta_B = \frac{B\cdot L}{p}
   \label{eq:kick-magnetic}
-\end{equation} where $L$ is the electrode length \qty{935}{\milli\meter}.
-The summation of these two angles provides a maximum deflection of \qty{10.814605}{\micro\radian}.
+\end{equation} where $L$ is the electrode length \qty{935}{\milli\meter}. The stripline components $B$ and $E$ both contribute to the kick, and so the summation of these two angles provides a maximum deflection of \qty{10.814605}{\micro\radian}.
 
 To drive this transverse kicker, two systems were used. Initially, the \verb|Qmeter| control program~\cite{Gasior:895142} provided an interface to this kicker. While the program was designed---and used extensively in this study---for tune measurements, it can be exploited to provide a frequency-modulated \textit{chirp} signal across the transverse kicker. The program was used to configure the \textit{start} and \textit{stop} frequencies for the frequency-modulated chirp (as unit interval multiples of the revolution frequency $f_{rev}$), chirp length (in $2^n$ revolutions), and the time after which the chirp would repeat (in milliseconds). This produced the effect of a frequency-modulated chirp windowed by a square signal (\autoref{fig:qmeter-signal}). Previous studies~\cite{ipac} found suitable parameters to produce a baseline RFKO extraction implementation, tabulated in~\autoref{tab:qmeter-params}, and found a significant dependancy of spill quality on the chirp repetition rate.
 
@@ -1857,6 +1858,10 @@ To explore chirp repetition rates above the \qty{1}{\kilo\hertz} (below \qty{1}{
   \caption{An example of the chirp signal generated by \textit{Qmeter} (top) and by the arbitrary function generator (AFG) (bottom).}\label{eq:both-chirps}
 \end{figure}
 
+To aid in the research in this paper, and future use-cases of RFKO at the PS, a package was written to simplify the interface with the AFG via the \textit{Standard Commands for Programmable Instruments} (SCPI) protocol. This interface---available as part of the \textit{CERN General Devices} package--- % [TODO) Do I need to cite this? 
+configures the AFG for RFKO extraction, and provides a Python class for modifying the chirp-generation parameters in terms of the revolution frequency $f_{rev}$, and the chirp length in milliseconds. This package was used to control the AFG for the results presented in this paper.
+
+
 \section{RFKO Slow Extraction in Simulation}
 
 As motivated in~\autoref{sec:motivation}, the majority of work surrounding the results presented in this thesis was towards developing a simulation framework to accurately model the spill structure of RFKO at the PS. This section will detail the simulation tools used, the implementation of the RFKO extraction simulation, and the methods used to compare the simulation results to machine data.
@@ -1865,7 +1870,7 @@ As motivated in~\autoref{sec:motivation}, the majority of work surrounding the r
 
 A variety of simulation software packages for accelerator physics are available, each having their own optimisations, and application areas amongst the accelerator physics community. For this study, the \verb|MAD-X|~\cite{Iselin:MAD} and \verb|Xsuite|~\cite{xsuite} packages were used.~\verb|MAD-X| remains the standard tool in the area of optics and beam transfer, and CERN provides a common optics repository---\verb|acc-models|~\cite{optics-repo}---containing \verb|MAD-X| \textit{sequence} files which describe the optics lattices for the CERN accelerator complex. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction.
 
-\verb|Xsuite|---a relatively new simulation tool, being released in 2021---is a Python package which shares many similarities with \verb|MAD-X|, and can import \verb|MAD-X| sequences into its own lattice definitions.~\verb|Xsuite| provides many functions which build upon \verb|MAD-X|'s capabilities, such as \textit{context} management, which provides the ability to run simulations on different hardware---namely GPUs. This is achieved by using the \verb|cupy|~\cite{CuPy} package, which provides a drop-in replacement for \verb|numpy|, but with optimisations for accelerating workloads on GPUs. Additionally, \verb|Xsuite| also has a pre-defined \verb|Exciter| beam element, which models the time-dependent transverse kicker used in RFKO. These two capabilities motivated its use in this study.
+\verb|Xsuite|---a relatively recent simulation tool, first made available in 2021---is a Python package which shares many similarities with \verb|MAD-X|, and can import \verb|MAD-X| sequences into its own lattice definitions.~\verb|Xsuite| provides many functions which build upon \verb|MAD-X|'s capabilities, such as \textit{context} management, which provides the ability to run simulations on different hardware---namely GPUs. This is achieved by using the \verb|cupy|~\cite{CuPy} package, which provides a drop-in replacement for \verb|numpy|, but with optimisations for accelerating workloads on GPUs. Additionally, \verb|Xsuite| also has an existing \verb|Exciter| beam element, which can model the time-dependent transverse kicker used in RFKO. These two capabilities motivated its use in this study.
 
 \subsection{Lattice Configuration} % needs a better title
 
@@ -1873,29 +1878,28 @@ The \textit{East Area Extraction} scenario provided by \verb|acc-models| was use
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1.1\linewidth]{optics.png}
-  \cprotect\caption{Optics plots of the stable particle for the \verb|acc-models| PS East Area extraction scenario. Top figure shows transverse displacement $x$, middle figure shows twiss beta function $\beta$, and bottom figure shows transverse dispersion $D_x$. Also labelled are key extraction elements: the magnetic septa (\verb|SMH|), the extraction quadrupoles (\verb|QSE|), extraction sextupoles (\verb|XSE|), and kickers (\verb|BSW|)}\label{fig:acc-models-optics}
+  \includegraphics[width=0.9\linewidth]{optics.png}
+  \cprotect\caption{Optics plots of the closed orbit for the \verb|acc-models| PS East Area extraction scenario. Top figure shows horizontal closed orbit $x$, middle figure shows Twiss beta function $\beta$, and bottom figure shows transverse dispersion $D_x$. Also labelled are key extraction elements: the magnetic septa (\verb|SMH|), the extraction quadrupoles (\verb|QSE|), extraction sextupoles (\verb|XSE|), and kickers (\verb|BSW|)}\label{fig:acc-models-optics}
 \end{figure}
 
 This lattice was then imported to \verb|Xsuite|, where the custom RFKO beam elements could be included. These elements were:
 \begin{itemize}
   \item An \verb|Exciter|, modelling the TFB kicker \verb|KFB97|.
   \item A \verb|LimitRect|, modelling the magnetic septum \verb|SMH57|.
-  \item A \verb|Cavity|, modelling the RF cavities providing acceleration and longitudinal focusing, operating at the 8th harmonic.
+  \item A \verb|Cavity|, modelling the RF cavities providing acceleration and longitudinal focusing, operating at the \nth{8} harmonic.
 \end{itemize}
 
 \subsubsection{Exciter}
-Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function (\autoref{lst:kick_angle}) was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function (\autoref{lst:generate_chirp}) was written to generate the chirp signal as generated by \textit{Qmeter} and the arbitrary function generator (AFG). This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
+Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function (\autoref{lst:kick_angle}) was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function (\autoref{lst:generate_chirp}) was written to generate the chirp signal as generated by \textit{Qmeter} and the AFG. This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
 
 \subsubsection{Septum}
-The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular apeture \verb|LimitRect|. By setting this apeture to coordinates corresponding to the window of the septum, particles which are lost to the apeture can be considered as extracted. As this is the only apeture modelled, it can be assumed that particles lost to an apeture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum. 
+The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular aperture \verb|LimitRect|. By setting this aperture to coordinates corresponding to the window of the septum, particles which are lost to the aperture can be considered as extracted. As this is the only aperture modelled, it can be assumed that particles lost to an aperture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum. 
 
 \subsubsection{RF Cavity}
 
 A single RF cavity was added to the model, corresponding to the RF system of the PS. While the real system comprises of many such cavities, modelling a single cavity with the total RF voltage applied provides an accurate representation of the longitudinal dynamics of the beam, given there are no other longitudinal elements present in the model.
 
 \subsection{Distribution Generation}
-% [TODO) talk about initial particle distribution generation, matching measurements taken from the machine
 
 To accurately simulate the conditions used in the RFKO studies, the initial particle distribution must be generated using machine measurements. The parameters used included:
 \begin{itemize}
@@ -1905,7 +1909,7 @@ To accurately simulate the conditions used in the RFKO studies, the initial part
   \item Longitudinal RMS emittance $\varepsilon_x$ [\si{\electronvolt\second}]
 \end{itemize}  
 
-These values were obtained during machine studies. The beam momentum and intensity were controlled values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the vertical emittance $\varepsilon_z$ using tomography of the Beam Current Transformer (BCT) profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|.
+These values were obtained during machine studies. The beam momentum and intensity were fixed values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the longitudinal emittance $\varepsilon_z$ using tomography of the Beam Current Transformer (BCT) profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|.
 
 It was decided that the simulation code will generate a new distribution each time it was initiated. With a sufficiently large number of particles, these random distributions will be statistically similar. This prevented the need to transfer a large, persistent file to each simulation job; this transfer time was, qualitatively, found to be longer than the time taken to generate a new distribution file of the same size.
 
@@ -1924,11 +1928,13 @@ It was decided that the simulation code will generate a new distribution each ti
 
 \subsection{Simulation Process}\label{sec:sim_process}
 
-Once an initial simulation process was built, one issue became immediately apparent: to simulate the full \qty{0.5}{\second} extraction region (\autoref{fig:cycle}), the simulation needed to process approximately 235,000 turns. To produce a statistically significant extraction rate, the a sufficient number of particles---roughly 500,000---needed to be generated and simulated. A typical desktop computer, for instance, would require over 600 hours to complete such a simulation, at a rate of roughly \qty{13}{\second\per iteration}.
+Once an initial simulation process was built, one issue became immediately apparent: to simulate the full \qty{0.5}{\second} extraction region (\autoref{fig:cycle}), the simulation needed to process approximately 235,000 turns. To produce a statistically significant extraction rate, a sufficient number of particles---roughly 500,000---needed to be generated and simulated. A typical desktop computer, for instance, would require over 600 hours to complete such a simulation, at a rate of roughly \qty{13}{\second\per iteration}.
 
 To accelerate the simulation speed to a more reasonable rate, two tools were employed. While not unique to Xsuite, they are both simplified by the package. The first method was the simplest: as mentioned previously, \verb|Xsuite| provides ready-to-go compatability with \verb|CuPy| and CUDA GPU acceleration. The second method relies on CERN's Batch Service, a high-throughput computing service which allows users to submit jobs via the \textit{HTCondor} framework. 
 
-To submit the simulation jobs to the batch processing service, the simulation software was \textit{containerised} using a Docker~\cite{merkel2014docker} image. This image provides a complete environment for the simulation, including a distribution of Python, the \verb|Xsuite| package, the \verb|CuPy| package, and various other dependencies. This image was made available on CERN's image registry, where it could be used by the batch service for each simulation. This container~\cite{docker} eliminated the need to set up the simulation environment on each machine, and ensures that the simulation is run in a consistent environment, and enabled the use of HTCondor's GPU resources. 
+To submit the simulation jobs to the batch processing service, the simulation software was \textit{containerised} using a Docker~\cite{merkel2014docker} image. This image provides a complete environment for the simulation, including a distribution of Python, the \verb|Xsuite| package, the \verb|CuPy| package, and various other dependencies. 
+
+This image was made available on CERN's image registry using a \textit{continuous integration} platform, allowing the image to be automatically re-built and re-published when changes are made to the configuration, and made available to any CERN user and the batch service. This container~\cite{docker} eliminated the need to set up the simulation environment on each machine, and ensures that the simulation is run in a consistent environment, and enabled the use of HTCondor's GPU resources. 
 
 \begin{figure}
   \centering
@@ -2046,9 +2052,9 @@ To submit the simulation jobs to the batch processing service, the simulation so
 \end{figure}
 
 
-\chapter{Analysis}
+\chapter{Analysis and Comparison of Results}
 
-\verb|Xsuite| was successfully used to simulate RFKO slow extraction at the PS. This section presents the results of this simulation, comparing both
+\verb|Xsuite| was successfully used to simulate RFKO slow extraction at the PS. This section presents the results of this simulation, comparing:
 \begin{itemize}
   \item the computation time between different platforms, and
   \item the results of the simulation with the results of the real machine.
@@ -2056,39 +2062,86 @@ To submit the simulation jobs to the batch processing service, the simulation so
 
 \section{Computation Time}
 
-Previous work~\cite{Schicho:2039579} on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of
+Previous work on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}~\cite[Figure 3]{Schicho:2039579}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of 28 minutes (\qty{1682}{\second}) for \qty{100000}{turns} and \qty{100000}{particles}. This is an order of magnitude faster than previous work, for the same order of magnitude of turns, and two orders of magnitude more particles. This allows for significantly higher resolution simulations to be performed in a reasonable amount of time: 1 million particles were simulated over \qty{10000}{turns} in just 1 hour 13 minutes (\qty{4397}{\second}).
 
+\begin{figure}[h]
+  \centering
+  \includegraphics*[width=0.7\linewidth]{GPU_graph_per_turn.png}
+  \caption{Simulation time (s) for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
+\end{figure}
 
-% [TODO) PRESENT simulation time results, and how much faster GPU acceleration is
+When comparing simulation times across a wide range of number of particles and turns, a \textit{bottleneck} can be identified.~\autoref{fig:gpu_graph_per_turn} shows the results of benchmarking the simulation code for numbers of particles $N_p$ from $10^0$ to $10^7$, and numbers of turns $N_t$ from $10^0$ to $10^6$. The total simulation time elapsed was recorded, and divided by the number of turns simulated, to give the time per turn. 
 
+For small $N_p$, a $\mathcal{O}(1)$ dependancy is achieved: that is, for a small number of operations the total computational time required is linearly proportional to the number of turns. For $N_p>10^4$ however, the time per turn increases to $\mathcal{O}(N_p)$, indicating that the available parallelism of the GPU is fully utilised. 
+Similar research has shown the this same behaviour for GPU accelerated simulations~\cite{Hegglin:2239398}. % [TODO) make this reference better
+The stratification visible across the range of $N_t$ is due to the overhead of memory allocation without \verb|CuPy|. % [TODO) remove overhead from benchmark and re-run
 
+% [TODO) Add graph
+\begin{figure}
+  \centering
+  \includegraphics*[width=0.7\linewidth]{CPU_graph_per_turn.png}
+  \caption{Simulation time (s) for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
+\end{figure}
+
+% [TODO) Write this
+\todo{Some talk about the CPU graph, how it is always $\mathcal{O}(N_p)$, and how it is initially faster than the GPU because of the lack of overhead, but is quickly slower.}
 
 \section{Frequency Response}
-% [TODO) talk about what exactly was measured - spill quality, duty cycle, frequency response
 
-In order to compare the accuracy of RFKO simulations to the implementation on the real machine, analytical tools established by previous work~\cite{Pari:2780495} were used to measure the frequency response of the RFKO system. By varying the rate at which a chirp was repeated, known as the \textit{interval frequency} or \textit{rep rate}, the resulting spill could be characterised. 
+In order to compare the accuracy of RFKO slow extraction simulations to measurements taken from the implementation on the real machine, analytical tools established by previous work~\cite{Pari:2780495} were used to measure the frequency response of the RFKO system. By varying the rate at which a chirp was repeated, known as the \textit{interval frequency} or \textit{rep rate}, the resulting spill could be characterised. 
 
-For the real machine implementation, the spill was measured using N2 gas scintillators~\cite{Actis:bxscint} located in the F61 extraction line (see~\autoref{fig:schematic}). These scintillators are measured by various devices: the interface \verb|BXSCAL| was selected, which provided time-series measurements of particle counts at $\sim$\qty{18.8}{\kilo\hertz}. The spill was measured for a range of interval frequencies.
+\subsection{Machine Implementation Analysis}
+
+For the real machine implementation, the spill was measured using an $N_2$ gas scintillator~\cite{Actis:bxscint} located in the F61 extraction line (see~\autoref{fig:schematic}). This scintillator is measured by various devices: the interface \verb|BXSCAL| was selected, which provided time-series measurements of particle counts at $\sim$\qty{18.8}{\kilo\hertz}. The spill was measured for a range of interval frequencies using an automated script interfacing with the \textit{Java API for Parameter Control} (JAPC) software at CERN. Multiple sets of data were taken for each interval frequency, for a range of peak voltages applied to the TFB kicker. 
+
+\begin{figure}
+  \centering
+  \includegraphics*[width=0.7\linewidth]{raw_signal.png}
+  \cprotect\caption{Example signals recorded by the \verb|BXSCAL| scintillator at various \textit{rep-rate} intervals.}\label{fig:raw_signal}
+\end{figure}
+
+Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CERN's logging database~\cite{nxcals}. An example of this data can be found in~\autoref{fig:raw_signal}, showing a range of rep-rate intervals. The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. 
+
+
+% ^^^ [TODO) Expanding on this section with plots and graphs ^^^%
+% - Show graphs of raw count √
+% - Show the FFTs
+
+\begin{figure}
+  \centering
+  \includegraphics*[width=0.8\linewidth]{sample_rate_variation.png}
+  \caption{Box-plot of the variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement. Box shows the \nth{25} to \nth{75} percentile, with error bars bounding the \nth{10} and \nth{90} percentile. Outliers outside of this range are shown as diamond points.}\label{fig:sample_rate_variation}
+\end{figure} % [TODO) Find source/citation for variation in sampling frequency
+
+Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples). A peak-finding algorithm was used to identify this interval rate, allowing for a slight variation in the spill measurement frequency. Over the measurements used, the \verb|BXSCAL| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). As this variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected. The peak-finding algorithm was used to identify the highest peak within a range corresponding to the inter-quartile range of sample rate variance. An example of these DFTs, with the range and selections of the peak-finding algorithm, can be seen in~\autoref{fig:raw_ffts}.
+
+\begin{figure}
+  \centering
+  \includegraphics*[width=0.8\linewidth]{raw_ffts.png}
+  \caption{Discrete Fourier Transforms (DFT) of the spill signals in~\autoref{fig:raw_signal}. The \textit{expected} interval frequency is shown as a dashed line, and the range around which the peak-finding algorithm searched is shaded. The accepted peaks are shown in grey marks, and the selected peak is shown in red.}\label{fig:raw_ffts}
+\end{figure}
+
+This selection process was found to be robus but noisy, especially at higher frequencies, where the variation in the \verb|BXSCAL| sample rate has a higher impact on the accuracy of the DFT. To mitigate this, the peak-finding algorithm was run on multiple repetitions of the same parameters, and the results averaged.
+
+
+% [TODO) Talk about scripts for automated data taking, NXCALS, re-use some IPAC things
+
+\subsection{Simulation Implementation Analysis}
 
 The same was performed for simulations; the turn number at which a particle was lost to the aperture was recorded, along with its longitudinal $\zeta$ variable, defined as
 \begin{equation}
   \zeta = s \frac{\beta}{\beta_0} - \beta c t
 \end{equation}
-where $\beta$ is the relativistic lorentz factor. This was used to reconstruct the exact time at which the particle was lost to the aperture---and thus considered as extracted---using an equation used by the \verb|Exciter| beam element:
+where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct the \textit{lab} time (in real seconds, not turn number) at which the particle was lost to the aperture---and thus considered as extracted---using an equation used by the \verb|Exciter| beam element:
 \begin{equation}
   t = N t_{rev} - \frac\zeta{\beta_0 c}
 \end{equation}
-where $t_{rev}=1/f_{rev}$, the machine revolution time, and $N$ is the turn at which the particle was lost. This time-series data was then re-binned down to the same frequency of the real machine measurement.
+where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N$ is the turn at which the particle was lost. This time-series data was then re-binned down to the same frequency of the real machine measurement.
 
-The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. Using a peak-finding algorithm to allow for slight variation in spill measurement frequency---over the measurements used, the \verb|BXSCAL| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). As this variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected.
 
-\begin{figure}
-  \centering
-  \includegraphics*[width=0.8\linewidth]{sample_rate_variation.png}
-  \caption{Variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement.}\label{fig:sample_rate_variation}
-\end{figure}
+\subsection{Comparative Analysis}
+The magnitude of these selected peaks were plotted against the interval frequency. This analysis was performed for both the real machine and the simulations, with both a bunched beam (with RF cavities enabled) and a coasting/debunched beam (with RF cavities disabled). The results are shown in~\autoref{fig:rf_on} and~\autoref{fig:rf_off} for the bunched and coasting beams respectively.
 
-Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples), and the magnitude of the resulting complex number was plotted against the interval frequency. This analysis was performed for both the real machine and the simulations, with both a bunched beam (with RF cavities enabled) and a coasting/debunched beam (with RF cavities disabled). The results are shown in~\autoref{fig:rf_on} and~\autoref{fig:rf_off} for the bunched and coasting beams respectively.
 
 \begin{figure}[h]
   \centering
@@ -2116,7 +2169,8 @@ Once the DFT was computed, the interval rate for each measurement was selected, 
   \caption{Frequency response of the RFKO system, \textbf{with RF cavities disabled}, both in the real machine and in simulation.}\label{fig:rf_off}
 \end{figure}
 
-A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp008}, is clearly visible in both~\autoref{fig:rf_on} and~\autoref{fig:rf_off}.
+% [TODO) Still waiting on sim_rf_off
+A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp008}, is clearly visible in both~\autoref{fig:rf_on} and~\autoref{fig:rf_off}. For the bunched implementation (\autoref{fig:rf_on}), both simulations and machine data show a drop-off in the frequency response, with a minimum response between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz} for all exciter voltages. This indicates that the system responds to these frequencies the least, and thus the effect of the driving excitation on the spill frequency structure is minimised at these frequencies. 
 
 
 % [TODO) explain the consequences of these graphs
