@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  6 JUL 2023 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  10 JUL 2023 17:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -733,6 +733,8 @@ Package: suffix 2006/07/15 1.5a Variant command support
 \c@CPT@WriteCount=\count370
 \c@CPT@numB=\count371
 \CPT@commandatend@toks=\toks42
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/nth/nth.sty
+Package: nth 2002/02/27
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -763,28 +765,28 @@ Package: amsthm 2020/05/29 v2.20.6
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/draftwatermark/draftwatermark.sty
 Package: draftwatermark 2020/12/08 3.0 Put a gray textual watermark on document pages
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 79.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 80.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -852,29 +854,29 @@ LaTeX Font Info:    ... okay on input line 79.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 79.
+Package hyperref Info: Link coloring ON on input line 80.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 79.
-Package microtype Info: Applying patch `item' on input line 79.
-Package microtype Info: Applying patch `toc' on input line 79.
+LaTeX Info: Redefining \microtypecontext on input line 80.
+Package microtype Info: Applying patch `item' on input line 80.
+Package microtype Info: Applying patch `toc' on input line 80.
 
 
-Package microtype Warning: Unable to apply patch `eqnum' on input line 79.
+Package microtype Warning: Unable to apply patch `eqnum' on input line 80.
 
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 79.
+Package microtype Warning: Unable to apply patch `footnote' on input line 80.
 
-Package microtype Info: Applying patch `verbatim' on input line 79.
+Package microtype Info: Applying patch `verbatim' on input line 80.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 79.
+LaTeX Info: Redefining \showhyphens on input line 80.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -903,11 +905,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
  (/usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 79.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 80.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./titlepage.tex
-<Royal_Holloway_coat_of_arms.png, id=191, 200.75pt x 318.18875pt>
+<Royal_Holloway_coat_of_arms.png, id=203, 200.75pt x 318.18875pt>
 File: Royal_Holloway_coat_of_arms.png Graphic file (type png)
 <use Royal_Holloway_coat_of_arms.png>
 Package pdftex.def Info: Royal_Holloway_coat_of_arms.png  used on input line 22.
@@ -920,7 +922,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<signature.png, id=201, 3645.62pt x 1809.76125pt>
+<signature.png, id=214, 3645.62pt x 1809.76125pt>
 File: signature.png Graphic file (type png)
 <use signature.png>
 Package pdftex.def Info: signature.png  used on input line 12.
@@ -929,9 +931,9 @@ Package pdftex.def Info: signature.png  used on input line 12.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83 \newpage
+l.84 \newpage
               [1 <./signature.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 89.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 90.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -967,20 +969,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [5
 
 ] [6]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 310.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 311.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<fast.png, id=288, 403.2666pt x 148.51485pt>
+<fast.png, id=303, 403.2666pt x 148.51485pt>
 File: fast.png Graphic file (type png)
 <use fast.png>
-Package pdftex.def Info: fast.png  used on input line 320.
+Package pdftex.def Info: fast.png  used on input line 321.
 (pdftex.def)             Requested size: 469.75499pt x 173.00702pt.
  [7 <./fast.png>]
-<fastmulti.png, id=308, 373.27455pt x 172.2435pt>
+<fastmulti.png, id=323, 373.27455pt x 172.2435pt>
 File: fastmulti.png Graphic file (type png)
 <use fastmulti.png>
-Package pdftex.def Info: fastmulti.png  used on input line 330.
+Package pdftex.def Info: fastmulti.png  used on input line 331.
 (pdftex.def)             Requested size: 469.75499pt x 216.77563pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -993,323 +995,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 pdfTeX warning: pdflatex (file ./rhr.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<rhr.pdf, id=351, 463.7325pt x 457.71pt>
+<rhr.pdf, id=366, 463.7325pt x 457.71pt>
 File: rhr.pdf Graphic file (type pdf)
 <use rhr.pdf>
-Package pdftex.def Info: rhr.pdf  used on input line 431.
-(pdftex.def)             Requested size: 115.93283pt x 114.42722pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12 <./rhr.pdf>] [13]
-
-Package siunitx Warning: Unit macro \clight has been deprecated in this
-(siunitx)                release.
-(siunitx)                
-(siunitx)                The BIPM have removed this unit from the SI Brochure.
-(siunitx)                You should define it yourself using \DeclareSIUnit in
-(siunitx)                your source. The current definition is
-(siunitx)                
-(siunitx)                \DeclareSIUnit\clight{\protect \text  {\protect
-(siunitx)                \ensuremath  {c}}_{0}}
-
-[14] [15] [16]
-<guttering.png, id=428, 149.96025pt x 135.26535pt>
-File: guttering.png Graphic file (type png)
-<use guttering.png>
-Package pdftex.def Info: guttering.png  used on input line 910.
-(pdftex.def)             Requested size: 281.85585pt x 254.27408pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17 <./guttering.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
- [21]
-
-LaTeX Warning: Reference `eq:rel_long' on page 22 undefined on input line 1188.
-
-[22]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1306.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@UnitsNiceFrac ' on input line 1306.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1306.
-
-[23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
-<kobayashi.png, id=559, 459.6372pt x 449.88075pt>
-File: kobayashi.png Graphic file (type png)
-<use kobayashi.png>
-Package pdftex.def Info: kobayashi.png  used on input line 1397.
-(pdftex.def)             Requested size: 281.85585pt x 275.87529pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25 <./kobayashi.png>]
-<real-world.png, id=574, 1008.76875pt x 579.16376pt>
-File: real-world.png Graphic file (type png)
-<use real-world.png>
-Package pdftex.def Info: real-world.png  used on input line 1419.
-(pdftex.def)             Requested size: 281.85585pt x 161.82008pt.
-
-Underfull \vbox (badness 3078) has occurred while \output is active []
-
- [26 <./real-world.png>]
-<momentum-driven.png, id=584, 1754.555pt x 994.71625pt>
-File: momentum-driven.png Graphic file (type png)
-<use momentum-driven.png>
-Package pdftex.def Info: momentum-driven.png  used on input line 1433.
-(pdftex.def)             Requested size: 281.85585pt x 159.79533pt.
-<amplitude-driven.png, id=585, 1766.6pt x 978.65625pt>
-File: amplitude-driven.png Graphic file (type png)
-<use amplitude-driven.png>
-Package pdftex.def Info: amplitude-driven.png  used on input line 1439.
-(pdftex.def)             Requested size: 281.85585pt x 156.1402pt.
- [27 <./momentum-driven.png> <./amplitude-driven.png>] [28] [29]
-Chapter 3.
-
-Package siunitx Warning: Unit macro \atomicmassunit has been deprecated in
-(siunitx)                this release.
-(siunitx)                
-(siunitx)                The BIPM have removed this unit from the SI Brochure.
-(siunitx)                You should define it yourself using \DeclareSIUnit in
-(siunitx)                your source. The current definition is
-(siunitx)                
-(siunitx)                \DeclareSIUnit\atomicmassunit{u}
-
-
-Overfull \hbox (14.30252pt too wide) in paragraph at lines 1758--1759
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30
-
-] [31]
-<tunemap.png, id=643, 423.38174pt x 315.94035pt>
-File: tunemap.png Graphic file (type png)
-<use tunemap.png>
-Package pdftex.def Info: tunemap.png  used on input line 1785.
-(pdftex.def)             Requested size: 281.85585pt x 210.32909pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1791.
-
-<cyclegraphs.png, id=644, 570.81255pt x 932.283pt>
-File: cyclegraphs.png Graphic file (type png)
-<use cyclegraphs.png>
-Package pdftex.def Info: cyclegraphs.png  used on input line 1808.
-(pdftex.def)             Requested size: 281.85585pt x 460.36482pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1833.
-
-[33 <./tunemap.png>] [34 <./cyclegraphs.png>]
-<fake-signal.png, id=681, 570.6921pt x 281.853pt>
-File: fake-signal.png Graphic file (type png)
-<use fake-signal.png>
-Package pdftex.def Info: fake-signal.png  used on input line 1848.
-(pdftex.def)             Requested size: 281.85585pt x 139.20155pt.
-<both-chirps.png, id=683, 570.933pt x 281.853pt>
-File: both-chirps.png Graphic file (type png)
-<use both-chirps.png>
-Package pdftex.def Info: both-chirps.png  used on input line 1856.
-(pdftex.def)             Requested size: 281.85585pt x 139.14995pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35 <./fake-signal.png> <./both-chirps.png>]
-<optics.png, id=699, 906.14536pt x 490.11105pt>
-File: optics.png Graphic file (type png)
-<use optics.png>
-Package pdftex.def Info: optics.png  used on input line 1876.
-(pdftex.def)             Requested size: 516.73335pt x 279.49333pt.
-\openout4 = `main-1.cpt'.
-
-
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 1876--1877
- [][] 
- []
-
-(./main-1.cpt) (./main-1.cpt)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[36] [37 <./optics.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1912.
-
-[38] [39]
-Chapter 4.
-[40
-
-]
-<sample_rate_variation.png, id=758, 578.03955pt x 211.87155pt>
-File: sample_rate_variation.png Graphic file (type png)
-<use sample_rate_variation.png>
-Package pdftex.def Info: sample_rate_variation.png  used on input line 2087.
-(pdftex.def)             Requested size: 375.80542pt x 137.7472pt.
-<machine_rf_on.png, id=762, 545.6385pt x 354.123pt>
-File: machine_rf_on.png Graphic file (type png)
-<use machine_rf_on.png>
-Package pdftex.def Info: machine_rf_on.png  used on input line 2096.
-(pdftex.def)             Requested size: 422.77661pt x 274.38844pt.
-<sim_rf_on.png, id=764, 552.02235pt x 354.123pt>
-File: sim_rf_on.png Graphic file (type png)
-<use sim_rf_on.png>
-Package pdftex.def Info: sim_rf_on.png  used on input line 2100.
-(pdftex.def)             Requested size: 422.77661pt x 271.222pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<machine_rf_off.png, id=766, 548.16795pt x 354.123pt>
-File: machine_rf_off.png Graphic file (type png)
-<use machine_rf_off.png>
-Package pdftex.def Info: machine_rf_off.png  used on input line 2109.
-(pdftex.def)             Requested size: 422.77661pt x 273.11862pt.
-<sim_rf_off.png, id=768, 74.2775pt x 50.1875pt>
-File: sim_rf_off.png Graphic file (type png)
-<use sim_rf_off.png>
-Package pdftex.def Info: sim_rf_off.png  used on input line 2113.
-(pdftex.def)             Requested size: 422.77661pt x 285.76456pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[41 <./sample_rate_variation.png>] [42 <./machine_rf_on.png> <./sim_rf_on.png>] [43 <./machine_rf_off.png> <./sim_rf_off.png>]
-Chapter 5.
-[44
-
-]
-Chapter 6.
-(./main.bbl [45
-
-]
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-[46
-
-] [47]
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-) [48]
-Appendix A.
-[49
-
-]
-Appendix B.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 2154.
- (./code/kick_angle.py
-
-LaTeX Font Warning: Font shape `T1/cmtt/m/n' in size <18.42809> not available
-(Font)              size <17.28> substituted on input line 38.
-
-[50
-
-]) (./code/generate_chirp.py) [51]
-Appendix C.
-[52
-
-] (./main.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.14809pt have occurred.
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B3B6FE25342FAEB31D210A95059C4EF2;7488.
- ) 
-Here is how much of TeX's memory you used:
- 35873 strings out of 476025
- 724316 string characters out of 5790017
- 2142388 words of memory out of 5000000
- 55018 multiletter control sequences out of 15000+600000
- 612738 words of font info for 345 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 84i,13n,89p,1360b,2842s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
-
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (53 pages, 9373612 bytes).
-PDF statistics:
- 1112 PDF objects out of 1200 (max. 8388607)
- 951 compressed objects within 10 object streams
- 329 named destinations out of 1000 (max. 500000)
- 103435 words of extra memory for PDF output out of 106986 (max. 10000000)
-
+Package pdftex.def Info: rhr.pdf  used on input line 432.
+(pdftex.def)             Requested size: 115.93283
