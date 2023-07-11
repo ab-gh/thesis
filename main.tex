@@ -1154,7 +1154,7 @@ Expanding on the idea of matrix formalism and the phase space ellipse, many part
   \end{pmatrix}
 \end{equation}
 
-\section{Longitudinal Dynamics}
+\section{Longitudinal Dynamics}\label{sec:long}
 
 Where the transverse planes principally consider bending and focussing effects from magnetic fields, the longitudinal plane considers acceleration effects from RF fields. Returning again to~\autoref{eq:lorentz}, we instead now consider the \textit{electric} component:
 \begin{equation}
@@ -1235,7 +1235,7 @@ This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, caus
 \textit{At} this transition energy, both effects compensate, and so $f_{rev}$ becomes independent of $\Delta p$. Here, the \textit{synchrotron} longitudinal oscillations stop, and particles not on the synchronous phase $\phi_s$ will rapidly gain energy, and become lost due to dispersion $D$.
 
 
-\subsection{Longitudinal Phase Space}
+\subsection{Longitudinal Phase Space}\label{sec:long_phase_space}
 
 These effects can be analysed by considering phase space coordinates---this time in the longitudinal plane. This space is constructed with variables $(\phi , \Delta p/p)$, and shown in~\autoref{fig:long_phase_space}. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, where the synchronous phase $\phi_s$ defines the orbit with zero longitudinal oscillation. Outside of the stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
 
@@ -1465,61 +1465,6 @@ A variety of slow extraction implementations can be found across particle accele
 \end{itemize}
 These accelerators and techniques are mentioned for illustrative purposes: it is not an exhaustive list, and most accelerators employ multiple methods.
 
-% \subsubsection{Betatron Core}
-
-% A simple treatment of momentum-driven slow extraction is through the use of a \textit{betatron core}. Used by accelerators such as the \textit{National Center for Oncological Hadrontherapy}~\cite{Falbo:IPAC2018-TUZGBF3} (CNAO) and MedAustron~\cite{pablo}, a beatron core is a circular magnet placed around the beam to produce a longitudinal voltage along $s$. Both the CNAO and MedAustron designs, and many more medical machines, were based on a landmark report \textit{Proton-Ion Medical Machine Study}~\cite{PIMMS} (PIMMS), with the Betatron Core particularly referencing earlier work~\cite{betatroncore}.
-
-% Recalling~\autoref{eq:chroma}, a beam with non-zero (and typically negative) chromaticity $Q'$ can have its tune distance $\delta Q$ controlled by momentum $\Delta p/p$. The longitudinal voltage from the betatron core provides the resonance driving effect (red arrow in~\autoref{fig:momentum-driven}), accelerating particles into resonance. Particles then experience unstable betatron oscillation, jumping between separatrices, before encountering an electrostatic septum, where they receive an extraction kick.
-
-% \subsubsection{Tune Sweep}
-% Tune sweep operates somewhat as the opposite of Betatron Core: rather than controlling the beam's tune distance away from resonance ($\delta Q$), moving the beam into resonance, the reference transverse tune of the machine ($Q_x$) is moved through the stationary waiting beam. This is illustrated, with a Stienbach diagram, in~\autoref{fig:tune-sweep}.
-
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.6\linewidth]{tune-sweep.png}
-%   \caption{Stienbach diagram of tune-sweep slow extraction. Waiting beam in black, tune sweep effect in red, unstable beam in grey.}\label{fig:tune-sweep}
-% \end{figure}
-
-% For a small momentum spread $\Delta p/p$, the tune's dependency on quadrupole strength can be assumed as linear, so a simple quadrupole strength sweep is all that is required for tune-sweep.
-
-% There are, however disadvantages to this approach. Changing the quadrupole strength requires changing the optics of the machine, effectively creating a spread of magnetic rigidity ($B\rho$,~\autoref{eq:brho}) in the beam. The effect of this is illustrated in~\autoref{fig:hardt}: particles excited into instability with different amplitudes will ``lock on'' to separatrices at different phase-space locations. The result is a range in angle of particles extracted at the electrostatic septum (located at, for example $x=0.3$ in~\autoref{fig:hardt}).
-
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.6\linewidth]{hardt.png}
-%   \caption{Phase-space map of three initial particles on the Kobayashi Hamiltonian, and one of their separatrices. An example electrostatic septum location is shown (dashed line).}\label{fig:hardt}
-% \end{figure}
-
-% Recalling~\autoref{eq:steinbach}, amplitude $A$ is correlated with momentum difference $\Delta p/p$. Given a real dispersion value (\autoref{eq:dispersion}), a condition can be computed which would align all separatrices on the septum:
-% \begin{equation}
-%   D_n\cos(\pi-\Delta\phi)+D'_n\sin(\pi-\Delta\phi)=-\frac{4\pi}3Q'_x
-%   \label{eq:hardt}
-% \end{equation}
-% This condition, known as the Hardt condition~\cite{hardt}, will align the separatrices, given a phase advance $\Delta\phi$ and dispersion coefficients $D_n, D'_n$. However, in the context of tune-sweep extraction, the Hardt condition proves ineffective: a changing momentum will change dispersion coefficients, causing the separatrices to misalign.
-
-% \subsubsection{COSE}
-% To combat the effect of misaligned separatrices and differences in optics, \textit{Constant-Optics Slow Extraction} (COSE) employs techniques of both betatron core and tune-sweep: the magnetc rigidity $B\rho$ (or reference momentum) of the beam is increased simultaneously with the tune-sweep. 
-
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=0.6\linewidth]{cose.png}
-%   \caption{Stienbach diagram of COSE slow extraction. Waiting beam in black, tune sweep and optics ramp effect in red, unstable beam in grey.}\label{fig:cose}
-% \end{figure}
-
-% This extraction method can be considered as betatron core extraction in the $p_0$ (reference momentum) frame of reference, rather than the $p$ (particle momentum) frame of reference. By reformulating~\autoref{eq:chroma} using $p_0$, the following equation for tune distance $\delta Q$ is obtained:
-% \begin{equation}
-%   \delta Q=Q'_x\frac{p-p_0}{p_0}
-% \end{equation}
-% In this equation, betatron core slow extraction reduced $\delta Q$ towards zero by changing $p$; COSE does this by instead varying $p_0$. 
-
-% The exact process of COSE, and the other methods previously mentioned, varies between implementations. However, all of these methods are momentum-driven extraction, sharing the same principles and similar drawbacks. The most notable of these is high sensitivity to slight variations in machine optics (magnetic strengths). Small power supply ripples can have significant impacts to the ``spill quality'' obtained from these techniques. A betatron core with large inductance can reduce the effect of ripples by ``smoothing out'' current variations, but has the consequence of reducing the response rate, reducing the precision and controllability. 
-
-% Another potential drawback arises when the beam is de-bunched during extraction so that the momentum of particles does not change~\cite{brown:ripples}. If the extraction process is not complete and some particles remain in the waiting beam, they may have to be re-bunched and re-accelerated in order to be extracted, a process prone to inefficiency and losses.
-
-
-%
-
-%\subsubsection{Radio-Frequency Knock-Out}\label{sec:rfko}
  
 % [TODO) Why RFKO?
 % [TODO) Spill Quality
@@ -1766,7 +1711,7 @@ As shown in~\autoref{fig:schematic}, the closed orbit of the PS differs at extra
 
 The electrostatic septum, placed before the magnetic septa, is not used in this study, as it is skipped by the beam during ion extraction. It was decided that a proton implementation closer to the ion configuration would be advtangeous, so that results can be compared to work carried out by CHIMERA.
 
-\subsection{Magnetic Cycle}\label{sec:magcycle}
+\subsection{Cycle Parameters}\label{sec:magcycle}
 
 The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} proton beam is \qty{0.257}{\tesla}, which provides the configuration for the PS Main Unit being magnets. In order to control the third-order resonance, and align the separatrices with the septum blade, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
@@ -1812,6 +1757,8 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
   \includegraphics[width=\linewidth]{cyclegraphs.png}
   \caption{The high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
 \end{figure}
+
+The RF system in the PS (\autoref{sec:long}) is used to accelerate the beam up to \qty{5.392}{\giga\electronvolt} during the \textit{ramp} period, and to maintain bunching during \textit{flat-top}. An East-type beam in the PS is bunched at the \nth{8} harmonic, or can be disabled to \textit{debunch} the beam (known as a coasting beam). RFKO can be performed with both a bunched and coasting beam, and both scenarios will be examined.
 
 \subsection{Transverse Excitation}\label{sec:trans_exc}
 Once a basic, stable cycle is configured in the PS, the transverse excitation is implemented. This uses a transverse kicker located at section 97 of the PS, \verb|KFB97|, a $\sim$\qty{1}{\meter} long strip-line kicker, with both horizontal and vertical planes~\cite{Sterbini:2158994}. With a peak RF power of \qty{5000}{\watt} across the two electrodes, and an impedance of \qty{100}{\ohm}, the transverse feedback (TFB) kicker can provide a peak voltage at \qty{1000}{\volt} and current of \qty{10}{\ampere}. The electric and magnetic fields are then, defined as
@@ -1872,11 +1819,11 @@ As motivated in~\autoref{sec:motivation}, the majority of work surrounding the r
 
 A variety of simulation software packages for accelerator physics are available, each having their own optimisations, and application areas amongst the accelerator physics community. For this study, the \verb|MAD-X|~\cite{Iselin:MAD} and \verb|Xsuite|~\cite{xsuite} packages were used.~\verb|MAD-X| remains the standard tool in the area of optics and beam transfer, and CERN provides a common optics repository---\verb|acc-models|~\cite{optics-repo}---containing \verb|MAD-X| \textit{sequence} files which describe the optics lattices for the CERN accelerator complex. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction.
 
-\verb|Xsuite|---a relatively recent simulation tool, first made available in 2021---is a Python package which shares many similarities with \verb|MAD-X|, and can import \verb|MAD-X| sequences into its own lattice definitions.~\verb|Xsuite| provides many functions which build upon \verb|MAD-X|'s capabilities, such as \textit{context} management, which provides the ability to run simulations on different hardware---namely GPUs. This is achieved by using the \verb|cupy|~\cite{CuPy} package, which provides a drop-in replacement for \verb|numpy|, but with optimisations for accelerating workloads on GPUs. Additionally, \verb|Xsuite| also has an existing \verb|Exciter| beam element, which can model the time-dependent transverse kicker used in RFKO. These two capabilities motivated its use in this study.
+\verb|Xsuite|---a relatively recent simulation tool, first made available in 2021---is a Python package which shares many similarities with \verb|MAD-X|, and can import \verb|MAD-X| sequences into its own lattice definitions. However, \verb|Xsuite| has additional capabilities, such as \textit{context} management, which provides the ability to run simulations on different hardware---namely GPUs. This is achieved by using the \verb|cupy|~\cite{CuPy} package, which provides a drop-in replacement for \verb|numpy|, but with optimisations for accelerating workloads on GPUs. Additionally, \verb|Xsuite| also has an existing \verb|Exciter| beam element, which can model the time-dependent transverse kicker used in RFKO. There has been a rapid increase in the use of \verb|Xsuite| within the accelerator physics community at CERN, which---combined with the additional capabilities beyond \verb|MAD-X|---motivated its use in this study.
 
 \subsection{Lattice Configuration} % needs a better title
 
-The \textit{East Area Extraction} scenario provided by \verb|acc-models| was used as the basis for all simulation models, and was modified to include the parameters outlined in~\autoref{sec:magcycle}. This generated lattice file---defining the strengths and location for all 2664 beam elements---was used to produce the optics plots shown in~\autoref{fig:acc-models-optics}, which displays how the kicker magnets create large displacements at the extraction septa, and how dispersion is controlled by the extraction quadrupoles.
+The \textit{East Area Extraction} scenario provided by \verb|acc-models| was used as the basis for all simulation models, and was modified to include the parameters outlined in~\autoref{sec:magcycle}. This generated lattice file---defining the strengths and location for all 1326 beam elements---was used to produce the optics plots shown in~\autoref{fig:acc-models-optics}, which displays how the kicker magnets create large displacements at the extraction septa, and how dispersion is controlled by the extraction quadrupoles.
 
 \begin{figure}[h]
   \centering
@@ -2100,6 +2047,8 @@ The stratification visible across the range of $N_t$ is due to the overhead of m
 
 % [TODO) Write this
 \todo{Some talk about the CPU graph, how it is always $\mathcal{O}(N_p)$, and how it is initially faster than the GPU because of the lack of overhead, but is quickly slower.}
+
+These findings motivated the selection of paramters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallism becomes saturated around \qty{500000}{particles}. This number of particles was selected for the final simulations, as it is the largest number of particles that can be simulated in a reasonable amount of time.
 
 \section{Frequency Response}
 
