@@ -1766,13 +1766,13 @@ As shown in~\autoref{fig:schematic}, the closed orbit of the PS differs at extra
 
 The electrostatic septum, placed before the magnetic septa, is not used in this study, as it is skipped by the beam during ion extraction. It was decided that a proton implementation closer to the ion configuration would be advtangeous, so that results can be compared to work carried out by CHIMERA.
 
-\subsection{Magnetic Cycle}
+\subsection{Magnetic Cycle}\label{sec:magcycle}
 
 The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} proton beam is \qty{0.257}{\tesla}, which provides the configuration for the PS Main Unit being magnets. In order to control the third-order resonance, and align the separatrices with the septum blade, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
-A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ satisfies the aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction, and are presented in~\autoref{tab:params}. 
+A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ satisfies the aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction. 
 
-Also present in~\autoref{tab:params} are values for the high-level tune control knobs. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity (tune spread) was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. This tune control is shown in~\autoref{fig:tunemap}, which plots vertical tune against horizontal tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
+The high-level tune control knobs were also configured for RFKO. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. This tune control is shown in~\autoref{fig:tunemap}, which plots vertical tune against horizontal tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
 
 \begin{equation}
   m\cdot Q_x+n\cdot Q_y\neq p
@@ -1788,27 +1788,29 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
   \caption{A fractional tune map, plotting horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$. Dashed lines indicate some of the first order (red), second order (green) and third order (blue) resonances.}\label{fig:tunemap}
 \end{figure}
 
-\begin{center}
-  \centering
-  \begin{table}[]
-    \centering
-    \begin{tabular}{lllll}
-    Parameter & Value   & Ramp Up Time & Ramp Down Time & Ramp Time Length \\ \hline\hline
-    \verb|QSE|& 0.1225  & 800          & 1690           & 200              \\
-    \verb|XSE|& 0.7097  & 410          & 1845           & 90               \\
-    $Q_x$     & 0.0302  & 460          & 2300           & 40               \\
-    $Q'_x$    & -0.3211 & 410          & 2000           & 90               \\
-    $Q_y$     & -0.02   & 0            & 2200           & 80               \\
-    $Q'_y$    & 0       & \textit{n/a} & \textit{n/a}   & \textit{n/a}     \\
-    \end{tabular}
-    \caption{Table of configured high-level parameters for the implementation of East Area RFKO slow extraction.}\label{tab:params}
-    \end{table}
-\end{center}
+% vvvvvvvv [TODO) Probably Don't Need This Table  vvvvvvv
+% \begin{center}
+%   \centering
+%   \begin{table}[]
+%     \centering
+%     \begin{tabular}{lllll}
+%     Parameter & Value   & Ramp Up Time & Ramp Down Time & Ramp Time Length \\ \hline\hline
+%     \verb|QSE|& 0.1225  & 800          & 1690           & 200              \\
+%     \verb|XSE|& 0.7097  & 410          & 1845           & 90               \\
+%     $Q_x$     & 0.0302  & 460          & 2300           & 40               \\
+%     $Q'_x$    & -0.3211 & 410          & 2000           & 90               \\
+%     $Q_y$     & -0.02   & 0            & 2200           & 80               \\
+%     $Q'_y$    & 0       & \textit{n/a} & \textit{n/a}   & \textit{n/a}     \\
+%     \end{tabular}
+%     \caption{Table of configured high-level parameters for the implementation of East Area RFKO slow extraction.}\label{tab:params}
+%     \end{table}
+% \end{center}
+% ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{cyclegraphs.png}
-  \caption{Graphs of the parameters presented in~\autoref{tab:params}, showing the high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
+  \caption{The high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
 \end{figure}
 
 \subsection{Transverse Excitation}\label{sec:trans_exc}
@@ -1829,7 +1831,7 @@ where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and mag
   \label{eq:kick-magnetic}
 \end{equation} where $L$ is the electrode length \qty{935}{\milli\meter}. The stripline components $B$ and $E$ both contribute to the kick, and so the summation of these two angles provides a maximum deflection of \qty{10.814605}{\micro\radian}.
 
-To drive this transverse kicker, two systems were used. Initially, the \verb|Qmeter| control program~\cite{Gasior:895142} provided an interface to this kicker. While the program was designed---and used extensively in this study---for tune measurements, it can be exploited to provide a frequency-modulated \textit{chirp} signal across the transverse kicker. The program was used to configure the \textit{start} and \textit{stop} frequencies for the frequency-modulated chirp (as unit interval multiples of the revolution frequency $f_{rev}$), chirp length (in $2^n$ revolutions), and the time after which the chirp would repeat (in milliseconds). This produced the effect of a frequency-modulated chirp windowed by a square signal (\autoref{fig:qmeter-signal}). Previous studies~\cite{ipac} found suitable parameters to produce a baseline RFKO extraction implementation, tabulated in~\autoref{tab:qmeter-params}, and found a significant dependancy of spill quality on the chirp repetition rate.
+To drive this transverse kicker, two systems were used. Initially, the \verb|Qmeter| control program~\cite{Gasior:895142} provided an interface to this kicker. While the program was designed---and used extensively in this study---for tune measurements, it can be exploited to provide a frequency-modulated \textit{chirp} signal crossing the \nth{3}-order resonance to the TFB plates. The program was used to configure the \textit{start} and \textit{stop} frequencies for the frequency-modulated chirp (as unit interval multiples of the revolution frequency $f_{rev}$), chirp length (in $2^n$ revolutions), and the time after which the chirp would repeat (in milliseconds). This produced the effect of a repeated frequency-modulated chirp windowed by a square signal (\autoref{fig:qmeter-signal}). Previous studies~\cite{ipac} found suitable parameters to produce a baseline RFKO extraction implementation, tabulated in~\autoref{tab:qmeter-params}, and found a significant dependancy of spill quality on the chirp repetition rate.
 
 \begin{table}[]
   \centering
@@ -1874,7 +1876,7 @@ A variety of simulation software packages for accelerator physics are available,
 
 \subsection{Lattice Configuration} % needs a better title
 
-The \textit{East Area Extraction} scenario provided by \verb|acc-models| was used as the basis for all simulation models, and was modified to include the parameters outlined in~\autoref{tab:params}. This generated lattice file---defining the strengths and location for all 2664 beam elements---was used to produce the optics plots shown in~\autoref{fig:acc-models-optics}, which displays how the kicker magnets create large displacements at the extraction septa, and how dispersion is controlled by the extraction quadrupoles.
+The \textit{East Area Extraction} scenario provided by \verb|acc-models| was used as the basis for all simulation models, and was modified to include the parameters outlined in~\autoref{sec:magcycle}. This generated lattice file---defining the strengths and location for all 2664 beam elements---was used to produce the optics plots shown in~\autoref{fig:acc-models-optics}, which displays how the kicker magnets create large displacements at the extraction septa, and how dispersion is controlled by the extraction quadrupoles.
 
 \begin{figure}[h]
   \centering
@@ -1892,8 +1894,8 @@ This lattice was then imported to \verb|Xsuite|, where the custom RFKO beam elem
 \subsubsection{Exciter}
 Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function (\autoref{lst:kick_angle}) was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function (\autoref{lst:generate_chirp}) was written to generate the chirp signal as generated by \textit{Qmeter} and the AFG. This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
 
-\subsubsection{Septum}
-The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular aperture \verb|LimitRect|. By setting this aperture to coordinates corresponding to the window of the septum, particles which are lost to the aperture can be considered as extracted. As this is the only aperture modelled, it can be assumed that particles lost to an aperture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum. 
+\subsubsection{Septum}\label{sec:septum}
+The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular aperture \verb|LimitRect|. By setting this aperture to coordinates corresponding to the window of the septum, particles which are lost to the aperture can be considered as extracted. In the real machine, particles recieve two magnetic septum kicks, from \verb|SMH57| and \verb|SMH61|, but this study only considered the first septum to simplify the model and avoid simulating lost particles for longer than necessary. As only one aperture is modelled, it can be assumed that particles lost to an aperture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum and were extracted. 
 
 \subsubsection{RF Cavity}
 
@@ -1909,7 +1911,7 @@ To accurately simulate the conditions used in the RFKO studies, the initial part
   \item Longitudinal RMS emittance $\varepsilon_x$ [\si{\electronvolt\second}]
 \end{itemize}  
 
-These values were obtained during machine studies. The beam momentum and intensity were fixed values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the longitudinal emittance $\varepsilon_z$ using tomography of the Beam Current Transformer (BCT) profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|.
+These values were obtained during machine studies. The beam momentum and intensity were fixed values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the longitudinal emittance $\varepsilon_z$ using tomography of the Beam Current Transformer (BCT) profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|. An example of the generated distribution is shown in~\autoref{fig:initial-dist}.
 
 It was decided that the simulation code will generate a new distribution each time it was initiated. With a sufficiently large number of particles, these random distributions will be statistically similar. This prevented the need to transfer a large, persistent file to each simulation job; this transfer time was, qualitatively, found to be longer than the time taken to generate a new distribution file of the same size.
 
@@ -1920,11 +1922,17 @@ It was decided that the simulation code will generate a new distribution each ti
   Parameter                                       & Value \\ \hline \hline
   Beam Momentum $p$ [GeV/c]                       & $5.392$ \\
   Intensity $N$ [proton/bunch]                    & $3\times10^{11}$ \\
-  Horizontal Emittance $\varepsilon_x$ [mm mrad]  & $2.38$ \\
+  Transverse Emittance $\varepsilon_{x,y}$ [mm mrad]  & $2.38$ \\
   RMS Longitudinal Emittance [eVs]                & $0.276$
   \end{tabular}
   \caption{Initial parameters particle generation, corresponding to measurements made during machine studies.}\label{tab:initial-conditions}
 \end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics*[width=\linewidth]{initial-dist.png}
+  \cprotect\caption{An example of an initial distribution generated by \verb|Xsuite|, for number of particles $N_p=3000$, with parameters as shown in~\autoref{tab:initial-conditions}. Also plotted on each are the $1\sigma, 2\sigma, 3\sigma$ emittance ellipses, and the closed orbit particle (red).}\label{fig:initial-dist}
+\end{figure}
 
 \subsection{Simulation Process}\label{sec:sim_process}
 
@@ -1935,6 +1943,12 @@ To accelerate the simulation speed to a more reasonable rate, two tools were emp
 To submit the simulation jobs to the batch processing service, the simulation software was \textit{containerised} using a Docker~\cite{merkel2014docker} image. This image provides a complete environment for the simulation, including a distribution of Python, the \verb|Xsuite| package, the \verb|CuPy| package, and various other dependencies. 
 
 This image was made available on CERN's image registry using a \textit{continuous integration} platform, allowing the image to be automatically re-built and re-published when changes are made to the configuration, and made available to any CERN user and the batch service. This container~\cite{docker} eliminated the need to set up the simulation environment on each machine, and ensures that the simulation is run in a consistent environment, and enabled the use of HTCondor's GPU resources. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{phase-space-sim.png}
+  \cprotect\caption{Phase-space distribution of the RFKO simulation at the \verb|SMH57| septum location, plotting all particles for the first 1000 turns (approx.\qty{2.128}{\milli\second} in lab time). Color scale indicates turn number. Inset shows extracted particle distribution and a spiral step of $\Delta X_3\approx$\qty{6.1}{\milli\meter}.}
+\end{figure}
 
 \begin{figure}
   \centering
@@ -2060,6 +2074,7 @@ This image was made available on CERN's image registry using a \textit{continuou
   \item the results of the simulation with the results of the real machine.
 \end{itemize}
 
+
 \section{Computation Time}
 
 Previous work on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}~\cite[Figure 3]{Schicho:2039579}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of 28 minutes (\qty{1682}{\second}) for \qty{100000}{turns} and \qty{100000}{particles}. This is an order of magnitude faster than previous work, for the same order of magnitude of turns, and two orders of magnitude more particles. This allows for significantly higher resolution simulations to be performed in a reasonable amount of time: 1 million particles were simulated over \qty{10000}{turns} in just 1 hour 13 minutes (\qty{4397}{\second}).
@@ -2103,9 +2118,6 @@ For the real machine implementation, the spill was measured using an $N_2$ gas s
 Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CERN's logging database~\cite{nxcals}. An example of this data can be found in~\autoref{fig:raw_signal}, showing a range of rep-rate intervals. The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. 
 
 
-% ^^^ [TODO) Expanding on this section with plots and graphs ^^^%
-% - Show graphs of raw count √
-% - Show the FFTs
 
 \begin{figure}
   \centering
@@ -2184,6 +2196,10 @@ A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp0
 \end{equation}
 
 \chapter{Conclusion}
+
+\section{Outlook}
+
+As mentioned in~\autoref{sec:septum}, only one of the magnetic septa---\verb|SMH57|---was modelled for extraction. The accuracy of the simulation model would benefit from future development to simulate particles through both the septa and into the F61 line. 
 
 % [TODO) step 4: profit
 

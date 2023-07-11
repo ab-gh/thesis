@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1689001922 "main.aux" "main.bbl" "main" 1689001940 0
+["bibtex main"] 1689078856 "main.aux" "main.bbl" "main" 1689078939 0
   "./refs.bib" 1688997490 31211 6625607e127761bcac01aa35203ff64f ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1689001940 37692 9cdf14475cf75db8237fa764a71d8210 "pdflatex"
+  "main.aux" 1689078939 38297 72ade64ed62bddae3fa93183e6faccb5 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1689001922 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1689001940 0
-  "/Users/ash/cernbox/publications/MSc/main.tex" 1689001913 180159 2af5801e35c788c0104a8c5b87ffd5e6 ""
+["pdflatex"] 1689078919 "/Users/ash/cernbox/publications/MSc/main.tex" "main.pdf" "main" 1689078939 0
+  "/Users/ash/cernbox/publications/MSc/main.tex" 1689078919 181785 af9afcfbac5f8a291fc1d5b03bab77ac ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -267,18 +267,22 @@
   "fast.png" 1685694831 158315 98e334274c75f5992b619764c6c4f710 ""
   "fastmulti.png" 1685694955 233793 70fa34efa8e94ae675911aa797fc994a ""
   "guttering.png" 1686915137 474936 fd6a9042e5d4cc50cf53e175565b3f62 ""
+  "initial-dist.png" 1689067407 231228 02d4f1a5d3271dd34e3a0e036f8e51b7 ""
   "kobayashi.png" 1687351062 1391763 2349f12b5e5181c80e65ad2e20ce86fd ""
   "machine_rf_off.png" 1688483041 823393 6ec5fe46088cf604dfebc33b9ad5e672 ""
   "machine_rf_on.png" 1688483025 665872 f7238b370f0651c07ee52689f61640cd ""
-  "main-1.cpt" 1689001932 426 82b077d493abe06d53600ea3d3ee53ba "pdflatex"
-  "main-2.cpt" 1689001935 106 752e83dd54b2350d0709b7913d4867d7 "pdflatex"
-  "main.aux" 1689001940 37692 9cdf14475cf75db8237fa764a71d8210 "pdflatex"
-  "main.bbl" 1689001922 11480 277fe0c13351b0e4703606e9472ebb73 "bibtex main"
-  "main.out" 1689001940 8256 4c2a39c18049da96f30e299dabf0b161 "pdflatex"
-  "main.tex" 1689001913 180159 2af5801e35c788c0104a8c5b87ffd5e6 ""
-  "main.toc" 1689001940 4479 766c261970dc74c5cbb9e773f1c9b0ef "pdflatex"
+  "main-1.cpt" 1689078929 426 82b077d493abe06d53600ea3d3ee53ba "pdflatex"
+  "main-2.cpt" 1689078932 285 8d1efb1a1b5a0d34f61cd8978d26b22f "pdflatex"
+  "main-3.cpt" 1689078932 333 bb4b44e7cd5d48f19a4dd087bced4463 "pdflatex"
+  "main-4.cpt" 1689078934 106 752e83dd54b2350d0709b7913d4867d7 "pdflatex"
+  "main.aux" 1689078939 38297 72ade64ed62bddae3fa93183e6faccb5 "pdflatex"
+  "main.bbl" 1689078856 11480 277fe0c13351b0e4703606e9472ebb73 "bibtex main"
+  "main.out" 1689078939 8346 934eecd807cfcd94a0f19855a3ef05eb "pdflatex"
+  "main.tex" 1689078919 181785 af9afcfbac5f8a291fc1d5b03bab77ac ""
+  "main.toc" 1689078939 4547 3b49f94944acfb795be31dd74158f55d "pdflatex"
   "momentum-driven.png" 1687859000 69578 757f4377b1e25144e1aa6dd0cb91e558 ""
   "optics.png" 1688132761 1341413 9ef7ce087d03327fa16f66f73b6d17a3 ""
+  "phase-space-sim.png" 1689061642 1636824 580cb2898139017ff025df6717681bad ""
   "raw_ffts.png" 1689000431 504832 bce476e88660f8661f504585c37f2100 ""
   "raw_signal.png" 1688998843 621533 43f670200a32a47781de93eeab3835d8 ""
   "real-world.png" 1687426138 39847 0eda19ba3370e54de22f001a512bf7b5 ""
@@ -293,6 +297,8 @@
   (generated)
   "main-1.cpt"
   "main-2.cpt"
+  "main-3.cpt"
+  "main-4.cpt"
   "main.aux"
   "main.log"
   "main.out"
@@ -301,3 +307,5 @@
   (rewritten before read)
   "main-1.cpt"
   "main-2.cpt"
+  "main-3.cpt"
+  "main-4.cpt"
