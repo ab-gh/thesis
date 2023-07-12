@@ -2024,29 +2024,36 @@ This image was made available on CERN's image registry using a \textit{continuou
 
 \section{Computation Time}
 
-Previous work on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}~\cite[Figure 3]{Schicho:2039579}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of 28 minutes (\qty{1682}{\second}) for \qty{100000}{turns} and \qty{100000}{particles}. This is an order of magnitude faster than previous work, for the same order of magnitude of turns, and two orders of magnitude more particles. This allows for significantly higher resolution simulations to be performed in a reasonable amount of time: 1 million particles were simulated over \qty{10000}{turns} in just 1 hour 13 minutes (\qty{4397}{\second}).
+In order to compare the advantages of GPU acceleration provided by \verb|Xsuite|, the simulation processe described in~\autoref{sec:sim_process} was implemented and run on both a CPU context and CUDA GPU context using CERN's batch processing service. Simulations were run for a range of numbers of particles and turns, and both the CPU and real-time (\textit{wall-clock}) duration of the simulation was recorded. These results are presented in~\autoref{fig:cpu_graph_per_turn} and~\autoref{fig:gpu_graph_per_turn}. The number of particles in a simulation---$N_p$---effectively controls the computational intensity, as it determines the number of calculations which must be performed per iteration (turn). The number of turns---$N_t$---controls the number of iterations, and is therefore used to normalise computation time between simulation runs.
+
+These figures show significantly different dependancy of simulation time on the operational intensity between CPU and GPU workloads. For CPU tasks there is no parallelism available, so for $N_p>10^2$---where performance isn't dominated by constant-time \textit{overhead} processes---performance is dependant on $N_p$.
+
+For GPU tasks, however, there is a significant inital overhead process of allocating and transferring memory from the CPU to GPU. This is apparent from the stratification of performance (time per turn) in~\autoref{fig:gpu_graph_per_turn}. The performance, however, is not dependent on $N_p$ for $N_p<10^6$, where the performance is dominated by the constant-time parallelism available.
+
+GPUs employ a \textit{Single-Instruction Multiple-Data} (SIMD) architecture to execute a single operation on multiple data points (\textit{vectors}) concurrently. This is in contrast to CPUs, which employ a \textit{Single-Instruction Single-Data} (SISD) architecture, where each operation is performed on a single data point at a time. This means that the GPU can perform $N_p$ operations in the same time as a CPU can perform a single operation, and so the performance is not dependant on $N_p$. The GPU constant-time performance is saturated for $N_p>10^6$, where all available parallelism is being used, and performance is once again dependant on $N_p$. Previous research has shown similar performance dependancy on $N_p$ for GPU accelerated simulations~\cite{Hegglin:2239398}.
+
+\begin{figure}
+  \centering
+  \includegraphics*[width=0.7\linewidth]{CPU_graph_per_turn.png}
+  \caption{\textit{Wall-clock} simulation time (s) per turn for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
+\end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.7\linewidth]{GPU_graph_per_turn.png}
-  \caption{Simulation time (s) for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
+  \caption{\textit{Wall-clock} simulation time (s) per turn for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
 \end{figure}
 
-When comparing simulation times across a wide range of number of particles and turns, a \textit{bottleneck} can be identified.~\autoref{fig:gpu_graph_per_turn} shows the results of benchmarking the simulation code for numbers of particles $N_p$ from $10^0$ to $10^7$, and numbers of turns $N_t$ from $10^0$ to $10^6$. The total simulation time elapsed was recorded, and divided by the number of turns simulated, to give the time per turn. 
 
-For small $N_p$, a $\mathcal{O}(1)$ dependancy is achieved: that is, for a small number of operations the total computational time required is linearly proportional to the number of turns. For $N_p>10^4$ however, the time per turn increases to $\mathcal{O}(N_p)$, indicating that the available parallelism of the GPU is fully utilised. 
-Similar research has shown the this same behaviour for GPU accelerated simulations~\cite{Hegglin:2239398}. % [TODO) make this reference better
-The stratification visible across the range of $N_t$ is due to the overhead of memory allocation without \verb|CuPy|. % [TODO) remove overhead from benchmark and re-run
+Previous work on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}~\cite[Figure 3]{Schicho:2039579}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of 
 
-% [TODO) Add graph
-\begin{figure}
-  \centering
-  \includegraphics*[width=0.7\linewidth]{CPU_graph_per_turn.png}
-  \caption{Simulation time (s) for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
-\end{figure}
 
-% [TODO) Write this
-\todo{Some talk about the CPU graph, how it is always $\mathcal{O}(N_p)$, and how it is initially faster than the GPU because of the lack of overhead, but is quickly slower.}
+%1 hour 19 minutes (\qty{4742}{\second}) for \qty{31622}{turns} and \qty{1000000}{particles}. 
+
+
+This is an order of magnitude faster than previous work, for the same order of magnitude of turns, and two orders of magnitude more particles. This allows for significantly higher resolution simulations to be performed in a reasonable amount of time: 1 million particles were simulated over \qty{10000}{turns} in just 1 hour 13 minutes (\qty{4397}{\second}).
+
+
 
 These findings motivated the selection of paramters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallism becomes saturated around \qty{500000}{particles}. This number of particles was selected for the final simulations, as it is the largest number of particles that can be simulated in a reasonable amount of time.
 

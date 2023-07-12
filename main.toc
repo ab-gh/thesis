@@ -39,9 +39,9 @@
 \contentsline {subsection}{\numberline {3.2.4}Simulation Process}{38}{subsection.3.2.4}%
 \contentsline {chapter}{\numberline {4}Analysis and Comparison of Results}{42}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Computation Time}{42}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Frequency Response}{43}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Frequency Response}{44}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Machine Implementation Analysis}{44}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Simulation Implementation Analysis}{45}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Simulation Implementation Analysis}{46}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Comparative Analysis}{46}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Spill Duty Factor}{46}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Conclusion}{49}{chapter.5}%

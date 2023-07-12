@@ -150,14 +150,14 @@ D.~Merkel, ``Docker: lightweight linux containers for consistent development and
 ``Xsuite-batch docker image.'' [Online]. Available: \url{https://gitlab.cern.ch/tbass/xsuite-docker}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Schicho:2039579}
-\BIBentryALTinterwordspacing
-P.~Schicho, ``{Optimizing Simulation Times of SPS Slow Extraction using MAD-X},'' 2015. [Online]. Available: \url{http://cds.cern.ch/record/2039579}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Hegglin:2239398}
 \BIBentryALTinterwordspacing
 S.~E. Hegglin, ``{Simulating Collective Effects on GPUs},'' 2016, presented 10 Feb 2016. [Online]. Available: \url{https://cds.cern.ch/record/2239398}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Schicho:2039579}
+\BIBentryALTinterwordspacing
+P.~Schicho, ``{Optimizing Simulation Times of SPS Slow Extraction using MAD-X},'' 2015. [Online]. Available: \url{http://cds.cern.ch/record/2039579}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Pari:2780495}

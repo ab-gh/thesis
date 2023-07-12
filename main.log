@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  11 JUL 2023 15:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  12 JUL 2023 17:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1194,74 +1194,71 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [38] [39 <./initial-dist.png>] [40 <./phase-space-sim.png>] [41]
 Chapter 4.
-<GPU_graph_per_turn.png, id=781, 538.4115pt x 338.34406pt>
+<CPU_graph_per_turn.png, id=784, 538.6524pt x 338.34406pt>
+File: CPU_graph_per_turn.png Graphic file (type png)
+<use CPU_graph_per_turn.png>
+Package pdftex.def Info: CPU_graph_per_turn.png  used on input line 2037.
+(pdftex.def)             Requested size: 328.82706pt x 206.55476pt.
+<GPU_graph_per_turn.png, id=786, 538.6524pt x 338.34406pt>
 File: GPU_graph_per_turn.png Graphic file (type png)
 <use GPU_graph_per_turn.png>
-Package pdftex.def Info: GPU_graph_per_turn.png  used on input line 2031.
-(pdftex.def)             Requested size: 328.82706pt x 206.63737pt.
+Package pdftex.def Info: GPU_graph_per_turn.png  used on input line 2043.
+(pdftex.def)             Requested size: 328.82706pt x 206.55476pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CPU_graph_per_turn.png, id=785, 1177.39874pt x 664.4825pt>
-File: CPU_graph_per_turn.png Graphic file (type png)
-<use CPU_graph_per_turn.png>
-Package pdftex.def Info: CPU_graph_per_turn.png  used on input line 2044.
-(pdftex.def)             Requested size: 328.82706pt x 185.57729pt.
-
-Underfull \vbox (badness 2762) has occurred while \output is active []
-
- [42
+[42
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43 <./GPU_graph_per_turn.png> <./CPU_graph_per_turn.png>]
-<raw_signal.png, id=808, 715.473pt x 426.393pt>
+ [43 <./CPU_graph_per_turn.png> <./GPU_graph_per_turn.png>]
+<raw_signal.png, id=810, 715.473pt x 426.393pt>
 File: raw_signal.png Graphic file (type png)
 <use raw_signal.png>
-Package pdftex.def Info: raw_signal.png  used on input line 2063.
+Package pdftex.def Info: raw_signal.png  used on input line 2070.
 (pdftex.def)             Requested size: 328.82706pt x 195.96748pt.
 \openout4 = `main-4.cpt'.
 
  (./main-4.cpt) (./main-4.cpt)
-<sample_rate_variation.png, id=812, 578.03955pt x 211.87155pt>
+<sample_rate_variation.png, id=814, 578.03955pt x 211.87155pt>
 File: sample_rate_variation.png Graphic file (type png)
 <use sample_rate_variation.png>
-Package pdftex.def Info: sample_rate_variation.png  used on input line 2073.
+Package pdftex.def Info: sample_rate_variation.png  used on input line 2080.
 (pdftex.def)             Requested size: 375.80542pt x 137.7472pt.
- [44 <./raw_signal.png> <./sample_rate_variation.png>]
-<raw_ffts.png, id=828, 715.473pt x 426.393pt>
+ [44 <./raw_signal.png>]
+<raw_ffts.png, id=829, 715.473pt x 426.393pt>
 File: raw_ffts.png Graphic file (type png)
 <use raw_ffts.png>
-Package pdftex.def Info: raw_ffts.png  used on input line 2081.
+Package pdftex.def Info: raw_ffts.png  used on input line 2088.
 (pdftex.def)             Requested size: 375.80542pt x 223.96378pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45 <./raw_ffts.png>]
-<machine_rf_on.png, id=843, 545.6385pt x 354.123pt>
+ [45 <./sample_rate_variation.png> <./raw_ffts.png>]
+<machine_rf_on.png, id=844, 545.6385pt x 354.123pt>
 File: machine_rf_on.png Graphic file (type png)
 <use machine_rf_on.png>
-Package pdftex.def Info: machine_rf_on.png  used on input line 2110.
+Package pdftex.def Info: machine_rf_on.png  used on input line 2117.
 (pdftex.def)             Requested size: 422.77661pt x 274.38844pt.
-<sim_rf_on.png, id=845, 552.02235pt x 354.123pt>
+<sim_rf_on.png, id=846, 552.02235pt x 354.123pt>
 File: sim_rf_on.png Graphic file (type png)
 <use sim_rf_on.png>
-Package pdftex.def Info: sim_rf_on.png  used on input line 2114.
+Package pdftex.def Info: sim_rf_on.png  used on input line 2121.
 (pdftex.def)             Requested size: 422.77661pt x 271.222pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<machine_rf_off.png, id=847, 548.16795pt x 354.123pt>
+<machine_rf_off.png, id=848, 548.16795pt x 354.123pt>
 File: machine_rf_off.png Graphic file (type png)
 <use machine_rf_off.png>
-Package pdftex.def Info: machine_rf_off.png  used on input line 2123.
+Package pdftex.def Info: machine_rf_off.png  used on input line 2130.
 (pdftex.def)             Requested size: 422.77661pt x 273.11862pt.
-<sim_rf_off.png, id=849, 74.2775pt x 50.1875pt>
+<sim_rf_off.png, id=850, 74.2775pt x 50.1875pt>
 File: sim_rf_off.png Graphic file (type png)
 <use sim_rf_off.png>
-Package pdftex.def Info: sim_rf_off.png  used on input line 2127.
+Package pdftex.def Info: sim_rf_off.png  used on input line 2134.
 (pdftex.def)             Requested size: 422.77661pt x 285.76456pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1296,7 +1293,7 @@ Appendix B.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 2173.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 2180.
  (./code/kick_angle.py
 
 LaTeX Font Warning: Font shape `T1/cmtt/m/n' in size <18.42809> not available
@@ -1361,10 +1358,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (58 pages, 12368705 bytes).
+Output written on main.pdf (58 pages, 12725755 bytes).
 PDF statistics:
- 1197 PDF objects out of 1200 (max. 8388607)
- 1012 compressed objects within 11 object streams
+ 1200 PDF objects out of 1200 (max. 8388607)
+ 1015 compressed objects within 11 object streams
  345 named destinations out of 1000 (max. 500000)
  103527 words of extra memory for PDF output out of 106986 (max. 10000000)
 
