@@ -2107,7 +2107,7 @@ Once the DFT was computed, the interval rate for each measurement was selected, 
   \caption{Discrete Fourier Transforms (DFT) of the spill signals in~\autoref{fig:raw_signal}. The \textit{expected} interval frequency is shown as a dashed line, and the range around which the peak-finding algorithm searched is shaded. The accepted peaks are shown in grey marks, and the selected peak is shown in red.}\label{fig:raw_ffts}
 \end{figure}
 
-This selection process was found to be robus but noisy, especially at higher frequencies, where the variation in the \verb|BXSCAL| sample rate has a higher impact on the accuracy of the DFT. To mitigate this, the peak-finding algorithm was run on multiple repetitions of the same parameters, and the results averaged.
+This selection process was found to be robust but noisy, especially at higher frequencies, where the variation in the \verb|BXSCAL| sample rate has a higher impact on the accuracy of the DFT. To mitigate this, the peak-finding algorithm was run on multiple repetitions of the same parameters, and the results averaged.
 
 % [TODO) Talk about scripts for automated data taking, NXCALS, re-use some IPAC things
 
@@ -2181,18 +2181,12 @@ The simulated frequency response characteristics are shown in~\autoref{fig:freq_
   \caption{Graph comparing the averaged frequency response curves for bunched beams between machine data (black) and simulations (red, dashed). Shaded is the $1\sigma$ standard deviation.}\label{fig:simvmeas_bunched}
 \end{figure}
 
-
-
-
-% [TODO) explain the consequences of these graphs
-
 \section{Spill Duty Factor}\label{results:sdf}
 
-% [TODO) step 3: ???
-
+Another analytical tool for quantifying slow extraction spill quality establsihed by previous work is the \textit{spill duty factor}. This quantity is defined as~\cite{Sorge_2018}
 \begin{equation}
-  \tau = \frac{\langle x\rangle^2}{\langle x^2\rangle}
-\end{equation}
+  \mathcal{F} = \frac{\langle x\rangle^2}{\langle x^2\rangle}
+\end{equation} where $\langle x\rangle$ denotes the average of variable $x$. By calculating this quantity within a rolling time window, a rolling average of spill quality can be calculated. 
 
 \chapter{Conclusion}
 
