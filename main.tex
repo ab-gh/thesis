@@ -371,7 +371,7 @@ To construct accurate simulations of slow extraction methods, one must first und
 
 The coordinate systems used to describe the dynamic motion of particles in an accelerator such as the PS relies on the periodic nature of a circular accelerator. Using a traditional Cartesian coordinate system would quickly introduce complications when describing circular trajectories, and so a local curvilinear coordinate system is used~\cite{BDSIM}.
 
-The basis vectors for this system, $(\hat x, \hat y, \hat s)$, rotate in space as the reference particle moves along the accelerator. The longitudinal vector $\hat s$ is tangent to the particle's orbit, and the $\hat x$ direction is parallel to the radius of the accelerator. The absolute direction of $\hat y$ does not change, but makes one complete rotation in one closed orbit of the reference particle through the accelerator. This system is shown in Figure~\ref{fig:frenet-serret}, along with the radius of the circular trajectory $\rho$, and the angle from the origin $s=0$. 
+The basis vectors for this system, $(\hat x, \hat y, \hat s)$, rotate in space as the reference particle moves along the accelerator. The longitudinal vector $\hat s$ is tangent to the reference particle's trajectory, and the $\hat x$ direction is parallel to the radius of the accelerator.  This system is shown in Figure~\ref{fig:frenet-serret}, along with the radius of the circular trajectory $\rho$, and the angle from the origin $s=0$. 
 
 \begin{figure}[!h]
 \begin{center}
@@ -427,7 +427,7 @@ This coordinate system is known as a {\it Frenet-Serret} coordinate system, and 
 \begin{pmatrix}\hat T\\\hat N\\\hat B \end{pmatrix}=\begin{pmatrix}\hat s\\-\hat x\\\hat y \end{pmatrix}
 \end{equation}
 
-The coordinate system $(\hat x, \hat y, \hat s)$ relies on the right-hand chirality (Figure~\ref{fig:rhr}) of the vector cross product for the $\hat x$ vector to point radially outwards from the centre of the machine, the $\hat y$ vector points upwards, and the $\hat s$ vector points in the direction of motion. The direction of $\hat x$ to point outwards from the centre of revolution is chosen as injection and extraction line apertures will therefore be located in the positive $\hat x$.
+The coordinate system $(\hat x, \hat y, \hat s)$ relies on the right-hand chirality (Figure~\ref{fig:rhr}) of the vector cross product for the $\hat x$ vector to point radially outwards from the centre of the machine, the $\hat y$ vector points upwards, and the $\hat s$ vector points in the direction of motion.
 
 \begin{figure}[!h]
 \begin{center}
@@ -777,14 +777,11 @@ To correct for this, synchrotrons use quadrupole elements to ``focus'' the beam 
 \label{fig:quadrupole}
 \end{figure}
 
+%%%%%%%%%%%%%%% REMOVE THIS BASIC ANALOGY NO ONE NEEDS IT %%%%%%%%%%%%%%%%%%%%%
 
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.6\linewidth]{optics-example.png}
-%   \caption{A diagram showing how Dipoles, Quadrupoles, and Sextupoles are used together to create the desired beam dynamics for particles with different energies.}\label{fig:optics}
-% \end{figure}
+Sextupoles provide additional correction to the beam. Depicted in~\autoref{fig:sextupole}, these can be understood by expanding on the optical analogy used thus far, where the Dipole takes the role of a prism, bending the light. As with prisms, beams with higher energy are bent less than low energy, and so the component wavelengths (or energies) in the beam beam are dispersed. The sextupole is analogous to an aspherical element, correcting for chromatic aberration introduced by the focussing quadrupole. Again, as with its optical analogue---a focussing lens---the quadrupole has shorter focal length for higher energy particles. The sextupole acts as a focussing lens at high energy and diverging lens at low energy, correcting for this chromatic effect.
 
-Sextupoles---third order magnets---provide additional correction to the beam. Depicted in~\autoref{fig:sextupole}, these can be understood by expanding on the optical analogy used thus far, where the Dipole takes the role of a prism, bending the light. As with prisms, beams with higher energy are bent less than low energy, and so the component wavelengths (or energies) in the beam beam are dispersed. The sextupole is analogous to an aspherical element, correcting for chromatic aberration introduced by the focussing quadrupole. Again, as with its optical analogue---a focussing lens---the quadrupole has shorter focal length for higher energy particles. The sextupole acts as a focussing lens at high energy and diverging lens at low energy, correcting for this chromatic effect.
+%%%%%%%% ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
     \centering
@@ -879,43 +876,28 @@ Sextupoles---third order magnets---provide additional correction to the beam. De
 
 
 \end{tikzpicture}
-
     \caption{A diagram showing the field of a \textit{normal} oriented sextupole. The force experienced by a positively-charged particle is shown as dashed arrows.}
     \label{fig:sextupole}
 \end{figure}
 
 
-Now that the basic magnetic elements have been introduced, and an understanding of the beam's momentum $p$ has been formed, we can redefine our transverse coordinates in terms of momentum: $p_x=x'\cdot p$ and $p_y=y'\cdot p$ now define our transverse coordinates. These coordinates will allow us to build a picture of the multi-particle transverse dynamics of the beam.
-
 \subsection{Single-Particle Oscillatory Motion}
 
 In a periodic (circular) accelerator, the linear equation for transverse motion takes the form of a differential equation:
-
 \begin{equation}
   x''-x\cdot\left(k-\frac{1}{\rho^2}\right)=0
   \label{eq:diff_motion}
 \end{equation} 
-where $x$ is the transverse displacement as a function of longitudinal position $s$, and $k$ is the quadrupole focussing coefficient, defined as
+where $k$ is the normalised quadrupole coefficient, defined as
 \begin{equation}
   k=\frac{q}{p}\cdot\frac{dB_y}{dx}
   \label{eq:quadrupole}
 \end{equation}
-The $1/\rho^2$ term represents the effect of the dipole bending field, providing a weak focussing effect. If we enforce the periodicity\footnote{i.e. that the quadrupoles do not change between consecutive revolutions} in $s$ of $k$, Equation~\ref{eq:diff_motion} can be rewritten in a compact form
+The periodicity of a circular accelerators requires that this $k$ is also periodic, and the same gradient is seen after one turn. The $1/\rho^2$ term represents the effect of the dipole bending field, providing a weak focussing effect. If we enforce the periodicity\footnote{i.e. that the quadrupoles do not change between consecutive revolutions} in $s$ of $k$, Equation~\ref{eq:diff_motion} can be rewritten in a compact form
 \begin{equation}
   x''(s)-\tilde{k}(s)x(s)=0
   \label{eq:hill}
-\end{equation} where the quadrupole focussing component $\tilde{k}(s)$ is now a function of $s$. 
-
-This equation can be physically understood with another analogous example: one where the weak focussing effect of the dipoles are modelled as the curved sides of a toroidal, akin to a circular gutter pipe, illustrated in~\ref{fig:guttering}. The weak focussing effect creates harmonic motion for particles not on the ideal zero-amplitude path. This describes how the harmonic motion, described by~\autoref{eq:hill}, relates to motion around an ideal orbit.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics*[width=0.6\linewidth]{guttering}
-  \caption{A diagram showing the analogy between the transverse motion of a particle in a circular accelerator and a ball rolling in a circular gutter.}\label{fig:guttering}
-\end{figure}
-
-With the given periodic boundary condition $\tilde k(s+L)=\tilde{k}(s)$,~\ref{eq:hill} is known as the Hill's equation. 
-
+\end{equation} where the quadrupole focussing component $\tilde{k}(s)$ is now a function of $s$. With the given periodic boundary condition $\tilde k(s+L)=\tilde{k}(s)$,~\ref{eq:hill} is known as the Hill's equation. 
 Following Floquet's theorem~\cite{Rossbach:247501}, general solution to this equation takes the form of
 \begin{equation}
 x(s) =\sqrt{\varepsilon}\sqrt{\beta(s)}\cos(\varphi(s)-\varphi_0)
@@ -935,21 +917,18 @@ x'(s)=\sqrt{\varepsilon}\sqrt{\beta(s)}\left(\frac12\beta'(s)\cos(\varphi(s)-\va
 \label{eq:motion_px}
 \end{equation}
 
-A basic analysis of~\eqref{eq:phase_and_beta} shows that at locations with large $\beta$ amplitude (and thus a large transverse displacement), phase advance $\varphi$ is small, and vice versa. The overall phase advance of transverse oscillations over one revolution of $2\pi$ is known as the \textit{betatron tune} of the accelerator, and is defined as
+The overall phase advance of transverse oscillations over one revolution of $2\pi$ is known as the \textit{betatron tune} of the accelerator, and is defined as
 \begin{equation}
-  Q=\frac12\oint\frac{ds}{\beta(s)}
+  Q=\frac1{2\pi}\oint\frac{ds}{\beta(s)}
   \label{eq:betatron_tune}
 \end{equation}
-This quantity, often simply referred to as \textit{tune}, effectively indicates how many complete transverse oscillations a particle makes in one turn. The fractional part of this value is the most significant, and often a tune will be reference to the integer part; a tune of $Q=6.\dot 3=19/3$ is, for the purposes of this thesis, equivalent to $Q=1/3$.
+This quantity, often simply referred to as \textit{tune}, effectively indicates how many complete transverse oscillations a particle makes in one turn. The fractional part of this value is the most significant, and the integer part of a referenced tune may sometimes be omitted.
 
-The final quantity of interest from these expressions is an effect of non-linearities in quadrupoles. Particles with momentum different to the reference particle $p_0$ will experience different focussing effects in quadrupoles. This slight change in focussing will effect the oscillatory motion of off-momentum particles, and result in a spread of tunes throughout a distribution of particles. The variation of this tune, with respect to the variation in momentum, is characterised by the \textit{chromaticity}, variously defined as $Q'$ or $\eta$:
+Particles with momentum different to the reference particle $p_0$ will experience different focussing effects in quadrupoles. This slight change in focussing will effect the oscillatory motion of off-momentum particles, and result in a spread of tunes throughout a distribution of particles. The variation of this tune, with respect to the variation in momentum, is characterised by the \textit{chromaticity}, variously defined as $Q'$ or $\eta$:
 \begin{equation}
   Q' = \frac{\delta Q/Q}{\delta p/p}
   \label{eq:chroma}
 \end{equation}
-A machine with non-zero chromaticity will necessarily have a tune spread, which can be controlled with the use of sextupoles.
-
-
 
 \subsection{Phase Space}\label{subsec:trans_phase_space}
 
@@ -966,10 +945,9 @@ A machine with non-zero chromaticity will necessarily have a tune spread, which 
   \gamma(s) = \frac{1+\alpha^2(s)}{\beta(s)}
   \label{eq:gamma}
 \end{eqnarray}
+These two values, along with $\beta$, form the \textit{Courant-Snyder Parameters}~\cite{courantsnyder}, commonly referred to as the \textit{twiss} parameters\footnote{Even Richard Q. Twiss, a British astronomer, was himself unsure as to how the parameters became attributed to him~\cite{richardtwiss}.}. 
 
-These further two constants, along with $\beta$, form the \textit{Courant-Snyder Parameters}~\cite{courantsnyder}, commonly referred to as the \textit{twiss} parameters\footnote{Even Richard Q. Twiss, a British astronomer, was himself unsure as to how the parameters became attributed to him~\cite{richardtwiss}.}. 
-
-These parameters can be readily understood in the \textit{phase space}\footnote{This is opposed to the more formal phase space $(x, p_x)$, which does not provide these insights as succinctly.} of $(x, x')$. Illustrated in~\autoref{fig:twiss-phase-space}, \autoref{eq:emittance} describes an ellipse, which covers the area of the particle ensemble in phase space. The area of this ellipse is given by $\pi\cdot\varepsilon$, and may be interchangeably defined as the emittance. 
+These parameters can be readily understood in the \textit{phase space} of $(x, x')$. Illustrated in~\autoref{fig:twiss-phase-space}, \autoref{eq:emittance} describes an ellipse, which covers the area of the particle ensemble in phase space, the area of which is given by $\pi\cdot\varepsilon$. 
 
 \begin{figure}[h]
   \centering
@@ -1035,7 +1013,7 @@ These parameters can be readily understood in the \textit{phase space}\footnote{
   
   
   \end{tikzpicture}
-  \caption{Phase space in $(x, x')$ showing the ellipse formed by a particle, and its relation to the Twiss parameters.}
+  \caption{A phase space ellipse in $(x, x')$ and its relation to the Twiss parameters.}
   \label{fig:twiss-phase-space}
 \end{figure}
 
@@ -1043,9 +1021,9 @@ Liouville's theorem states that, under conservative forces, this emittance is co
 
 \subsection{Dispersion}\label{sec:transdisp}
 
-We now consider the oscillatory motion of \textit{multiple} multi-energetic particles, with reference to the ideal particle. This ideal particle, with momentum $p_0$ and initial conditions all equating to zero, has a path through the field centre of all quadrupoles, and so experiences no quadrupole effect $k$. This means that its motion is controlled by the weak dipole focussing $1/\rho^2$. A nominal particle, still with momentum $p_0$ but with initial displacement and/or angle conditions, will perform closed-loop betatron oscillations around this path. 
+We now consider the oscillatory motion of \textit{multiple} multi-energetic beams, with reference to the ideal particle. This ideal particle, with reference momentum $p_0$ and initial conditions all equating to zero, has a path through the field centre of all quadrupoles, and so experiences no quadrupole effect $k$. This means that its motion is controlled by the weak dipole focussing $1/\rho^2$. A nominal particle, still with momentum $p_0$ but with initial displacement and/or angle conditions, will perform closed-loop betatron oscillations around this path. 
 
-A particle with a momentum offset, $\Delta p = p-p_0 > 0$, will still satisfy~\ref{eq:diff_motion} from before, but the inhomogeneous form
+A particle with a momentum offset, $\Delta p = p-p_0$, will still satisfy~\ref{eq:diff_motion} from before, but the inhomogeneous form
 \begin{equation}
   x''(s)-x\left(k-\frac 1{\rho^2}\right)=\frac 1\rho\frac{\Delta p}{p_0}
 \end{equation}
@@ -1061,7 +1039,7 @@ This dispersion function satisfies, for the circumference of the machine:
 
 \subsection{Matrix Formalism}\label{sec:matrix}
 
-Outside of the context of periodic boundary conditions, \autoref{eq:motion_x} and \autoref{eq:motion_px} can be solved by imposing initial conditions $x_0$ and $x'_0$:
+\autoref{eq:motion_x} and \autoref{eq:motion_px} can be solved by imposing initial conditions $x_0$ and $x'_0$ instead of periodic boundary conditions:
 \begin{equation}
   x(s)=x_0\cos\left(\sqrt{K}\cdot s\right)+\frac{x'_0}{\sqrt{K}}\sin\left(\sqrt{K}\cdot s\right)
 \end{equation}
@@ -1116,23 +1094,7 @@ For a normal dipole magnet bending only horizontally, where $k=0$ and $K_x=1/\rh
   \bf{M}_{dipole,y}=\bf{M}_{drift,y}
 \end{equation}
 
-For a normal quadrupole, where $K_x=-k$ and $K_y=k$, the transfer matrix is:
-\begin{equation}
-  \bf{M}_{quad,x}=
-  \begin{pmatrix}
-    \cos\left(\sqrt{-k}\cdot L\right) & \frac1{\sqrt{-k}}\sin\left(\sqrt{-k}\cdot L\right) \\
-    -\sqrt{-k}\sin\left(\sqrt{-k}\cdot L\right) & \cos\left(\sqrt{-k}\cdot L\right)
-  \end{pmatrix}
-\end{equation}
-\begin{equation}
-  \bf{M}_{quad,y}=
-  \begin{pmatrix}
-    \cos\left(\sqrt{k}\cdot L\right) & \frac1{\sqrt{k}}\sin\left(\sqrt{k}\cdot L\right) \\
-    -\sqrt{k}\sin\left(\sqrt{k}\cdot L\right) & \cos\left(\sqrt{k}\cdot L\right)
-  \end{pmatrix}
-\end{equation}
-
-If we define the properties of each element in the accelerator (the lattice), we can then define the transfer matrix for the entire accelerator as the product of the transfer matrices of each element. For example, a FODO lattice with an initial bending dipole can be defined as:
+Further matrix equations can be defined for other magnets. If we define the properties of each element in the accelerator (the lattice), we can then define the transfer matrix for the entire accelerator as the product of the transfer matrices of each element. For example, a FODO lattice with an initial bending dipole can be defined as:
 \begin{equation}
   \bf{M}_{total} = \bf{M}_{dipole} + \bf{M}_{quad} + \bf{M}_{drift} - \bf{M}_{quad} + \bf{M}_{drift} +\cdots
 \end{equation}
@@ -1308,7 +1270,7 @@ Now that the fundamentals of accelerator beam physics are established, this sect
 
 \subsection{Sextupoles and $\nicefrac 13$-Integer Resonance}
 
-\autoref{sec:transdisp} introduced the concept of dispersion in reference to a multi-energetic beam. A simplified mono-energetic accelerator model can be constructed using only dipoles and quadrupoles, but dispersive effects require the use of sextupole magnets. The transverse field of a sextupole magnet has the form
+\autoref{sec:transdisp} introduced the concept of dispersion in reference to a multi-energetic beam. These effects are controlled with the use of sextupole magnets. The transverse field of a sextupole magnet has the form
 \begin{equation}
   B_x = -6B_3xy
 \end{equation}
@@ -1318,7 +1280,7 @@ Now that the fundamentals of accelerator beam physics are established, this sect
 \begin{equation}
   B_3=-\frac 16\left(\frac{d^2B_y}{dx^2}\right)_0
 \end{equation}
-\todo{Taylor Expansion?}
+
 In \textit{normalised} coordinates (\autoref{sec:normalised}), these effect of these fields (in a thin-lens approximation) becomes
 \begin{align*}
   \Delta x&=0 & \Delta x'&=S(x^2-\frac{\beta_y}{\beta_x}y^2) \\
@@ -1332,9 +1294,7 @@ where $S$, the normalised sextupole strength, is
 \begin{equation}
   k'=-6\frac{B_3}{B\rho}
 \end{equation}
-For horizontal transverse extraction, such as will be studied in this thesis, the vertical $y$ component if the sextupole field is neglected, as the ratio on which it depends,  $\beta_y/\beta_x$, is vanishingly small: the amplitude of oscillations in the vertical plane is significantly less than in horizontal.
-
-Recalling the matrix formalism established in~\autoref{sec:matrix}, we use a general transfer matrix for $n$ turns with a betatron tune $Q$:
+For extraction driven in the horizontal transverse plane, the dynamics of the vertical transverse plane are neglected as these remain independent. Recalling the matrix formalism established in~\autoref{sec:matrix}, we use a general transfer matrix for $n$ turns with a betatron tune $Q$:
 \begin{equation}
   \bf M_n=
   \begin{pmatrix}
@@ -1380,7 +1340,7 @@ The tune distance, $\delta Q$, is therefore the distance of the particle from th
     x\\x'
   \end{pmatrix}_0
 \end{equation}
-Therefore, a particle with $\delta Q=0$, i.e.\ exactly on resonance, will return to its original position after three turns. For such a particle, the change in normalised position $x$ and divergence $x'$ from initial conditions $(x_0, x'_0)$ after three turns is therefore calculated as
+Therefore, a particle with $\delta Q=0$, i.e.\ exactly on resonance, will return to its original position after three turns. For such a particle, the change in position $x$ and divergence $x'$ from initial conditions $(x_0, x'_0)$ after three turns is therefore calculated as
 \begin{equation}
   \Delta x_3 = \mu x'_0 + \frac 23 S x_0x'_0
   \label{eq:spiral_step}
@@ -1422,7 +1382,7 @@ The fundamental principle of slow extraction exploits the unstable boundary crea
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{real-world.png}
-  \caption{A real-world diagram of momentum-driven slow extraction, looking along the $s$ direction at the magnetic septum location. The waiting beam approaches resonance (dashed), and some particles begin large turn-by-turn oscillations (increasing shaded gradient with turn number) before they jump the septum blade (thick black line) and will be extracted.}\label{fig:real-world}
+  \caption{A real-space diagram of momentum-driven slow extraction, looking along the $s$ direction at the magnetic septum location. The waiting beam approaches resonance (dashed), and some particles begin large turn-by-turn oscillations (increasing shaded gradient with turn number) before they jump the septum blade (thick black line) and will be extracted.}\label{fig:real-world}
 \end{figure}
 
 There are a variety of methods to provide acceleration of the beam towards resonance, which fall into two categories: \textit{momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$, whereas \textit{amplitude-driven} methods use transverse noise or RF excitation at the beam's revolution frequency to create increasing betatron amplitudes.
@@ -1455,11 +1415,6 @@ If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\
 
 \subsection{Slow Extraction Techniques}\label{sec:rfko}
 
-% [TODO) ========================================================== %
-% I recommend you shorten this part to discuss only discuss RFKO.   %
-% There are just too many method, some which don't accelerate       %
-% the beam in any way                                               %
-% ==================================================================%
 
 A variety of slow extraction implementations can be found across particle accelerators. While all will vary to some degree, most can be categorised. For example:
 \begin{itemize}
@@ -1474,6 +1429,8 @@ These accelerators and techniques are mentioned for illustrative purposes: it is
 % [TODO) Spill Quality
 
 % [TODO) Link this in the flow
+
+
 Unlike the previously mentioned slow-extraction methods, Radio-Frequency Knock-Out (RFKO) is an amplitude- and sextupole-driven method. The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to excite particles into the resonant instability region by providing transverse ``heating'' of the beam---using a radio-frequency exciter to provide a small transverse kick to the beam, increasing its amplitude. This kick is provided at a third-integer fraction of the betatron tune, but a range of excitation frequency (frequency modulation, FM) is required as there is a range of momentum in the beam, and thus a range of tunes. 
 
 \begin{figure}
@@ -1737,25 +1694,6 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
   \caption{A fractional tune map, plotting horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$. Dashed lines indicate some of the first order (red), second order (green) and third order (blue) resonances.}\label{fig:tunemap}
 \end{figure}
 
-% vvvvvvvv [TODO) Probably Don't Need This Table  vvvvvvv
-% \begin{center}
-%   \centering
-%   \begin{table}[]
-%     \centering
-%     \begin{tabular}{lllll}
-%     Parameter & Value   & Ramp Up Time & Ramp Down Time & Ramp Time Length \\ \hline\hline
-%     \verb|QSE|& 0.1225  & 800          & 1690           & 200              \\
-%     \verb|XSE|& 0.7097  & 410          & 1845           & 90               \\
-%     $Q_x$     & 0.0302  & 460          & 2300           & 40               \\
-%     $Q'_x$    & -0.3211 & 410          & 2000           & 90               \\
-%     $Q_y$     & -0.02   & 0            & 2200           & 80               \\
-%     $Q'_y$    & 0       & \textit{n/a} & \textit{n/a}   & \textit{n/a}     \\
-%     \end{tabular}
-%     \caption{Table of configured high-level parameters for the implementation of East Area RFKO slow extraction.}\label{tab:params}
-%     \end{table}
-% \end{center}
-% ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{cyclegraphs.png}
@@ -1846,7 +1784,7 @@ This lattice was then imported to \verb|Xsuite|, where the custom RFKO beam elem
 Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function (\autoref{lst:kick_angle}) was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function (\autoref{lst:generate_chirp}) was written to generate the chirp signal as generated by \textit{Qmeter} and the AFG. This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
 
 \subsubsection{Septum}\label{sec:septum}
-The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular aperture \verb|LimitRect|. By setting this aperture to coordinates corresponding to the window of the septum, particles which are lost to the aperture can be considered as extracted. In the real machine, particles recieve two magnetic septum kicks, from \verb|SMH57| and \verb|SMH61|, but this study only considered the first septum to simplify the model and avoid simulating lost particles for longer than necessary. As only one aperture is modelled, it can be assumed that particles lost to an aperture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum and were extracted. 
+The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular aperture \verb|LimitRect|. By setting this aperture to coordinates corresponding to the window of the septum, particles which are lost to the aperture can be considered as extracted. In the real machine, particles recieve two magnetic septum kicks, from \verb|SMH57| and \verb|SMH61|, but this study only considered the first septum to simplify the model and avoid simulating lost particles for longer than necessary. As only one aperture is modelled, it can be assumed that particles lost to an aperture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum and were extracted. % [TODO) Lost to aperture walls?
 
 \subsubsection{RF Cavity}
 
