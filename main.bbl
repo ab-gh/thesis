@@ -180,4 +180,14 @@ J.~Wozniak and C.~Roderick, ``{NXCALS - Architecture and Challenges of the Next 
 K.~Okamura, Y.~Arakaki, T.~Kimura, S.~Murasugi, R.~Muto, Y.~Shirakabe, M.~Tomizawa, and E.~Yanaoka, ``\BIBforeignlanguage{en}{A consideration on the transfer function between rq field and slow extraction spill in the main ring of j-parc},'' \emph{\BIBforeignlanguage{en}{Proceedings of the 10th Int. Particle Accelerator Conf.}}, vol. IPAC2019, p. Australia, 2019. [Online]. Available: \url{http://jacow.org/ipac2019/doi/JACoW-IPAC2019-WEPMP008.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Sorge_2018}
+\BIBentryALTinterwordspacing
+S.~Sorge, P.~Forck, and R.~Singh, ``Measurements and simulations of the spill quality of slowly extracted beams from the sis-18 synchrotron,'' \emph{Journal of Physics: Conference Series}, vol. 1067, no.~5, p. 052003, sep 2018. [Online]. Available: \url{https://dx.doi.org/10.1088/1742-6596/1067/5/052003}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Pullia:313678}
+\BIBentryALTinterwordspacing
+M.~Pullia, ``{Transit time for third order resonance extraction},'' CERN, Geneva, Tech. Rep., 1996. [Online]. Available: \url{https://cds.cern.ch/record/313678}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

@@ -1383,9 +1383,11 @@ The tune distance, $\delta Q$, is therefore the distance of the particle from th
 Therefore, a particle with $\delta Q=0$, i.e.\ exactly on resonance, will return to its original position after three turns. For such a particle, the change in normalised position $x$ and divergence $x'$ from initial conditions $(x_0, x'_0)$ after three turns is therefore calculated as
 \begin{equation}
   \Delta x_3 = \mu x'_0 + \frac 23 S x_0x'_0
+  \label{eq:spiral_step}
 \end{equation}
 \begin{equation}
   \Delta x'_3 = -\mu x_0 + \frac 34 S (x_0^2-x'^2_0)
+  \label{eq:spiral_kick}
 \end{equation}
 where $\mu$, the \textit{modified tune distance}, is defined as $\mu = 6\pi\cdot\delta Q$, and $S$ is the normalised sextupole strength (\autoref{eq:normalised_sextupole_strength}).
 
@@ -2073,11 +2075,12 @@ Previous work on optimising simulations slow extraction (at the SPS) achieved a 
 
 These findings motivated the selection of paramters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallism becomes saturated around \qty{500000}{particles}. By not exceeding this amount, the simulation can complete in a reasonable amount of time.
 
+\newpage
 \section{Frequency Response}
 
 In order to compare the accuracy of RFKO slow extraction simulations to measurements taken from the implementation on the real machine, analytical tools established by previous work~\cite{Pari:2780495} were used to measure the frequency response of the RFKO system. By varying the rate at which a chirp was repeated, known as the \textit{interval frequency} or \textit{rep rate}, the resulting spill could be characterised. 
 
-\subsection{Machine Implementation Analysis}
+\subsection{Machine Analysis Methodology}\label{sec:machine_freq_anal_method}
 
 For the real machine implementation, the spill was measured using an $N_2$ gas scintillator~\cite{Actis:bxscint} located in the F61 extraction line (see~\autoref{fig:schematic}). This scintillator is measured by various devices: the interface \verb|BXSCAL| was selected, which provided time-series measurements of particle counts at $\sim$\qty{18.8}{\kilo\hertz}. The spill was measured for a range of interval frequencies using an automated script interfacing with the \textit{Java API for Parameter Control} (JAPC) software at CERN. Multiple sets of data were taken for each interval frequency, for a range of peak voltages applied to the TFB kicker. 
 
@@ -2106,12 +2109,45 @@ Once the DFT was computed, the interval rate for each measurement was selected, 
 
 This selection process was found to be robus but noisy, especially at higher frequencies, where the variation in the \verb|BXSCAL| sample rate has a higher impact on the accuracy of the DFT. To mitigate this, the peak-finding algorithm was run on multiple repetitions of the same parameters, and the results averaged.
 
-
 % [TODO) Talk about scripts for automated data taking, NXCALS, re-use some IPAC things
 
-\subsection{Simulation Implementation Analysis}
+\subsection{Machine Analysis Results}
+\autoref{fig:freq_response_machine} presents the results of the analytical method described by~\autoref{sec:machine_freq_anal_method}. The graphs characterise the \textit{frequency response} of the spill to different chirp signal \textit{rep-rate} intervals, and indicate how this frequency propogates from the input (TFB system) to the output (spill). The frequency response of the RFKO system is shown for both a bunched beam (upper image) and a coasting beam (lower image). Visable in both \textit{log-log} plots is a distinct \textit{low-pass filter} effect, where the frequency response is reduced at higher frequencies. This effect, also observed by previous studies~\cite{wepmp008,Pari:2780495}, results in higher frequencies being ``smoothed out'' by the RFKO system. Both plots also show a \textit{minimum transfer characteristic}, where the frequency response is at its lowest: for bunched beams, this minima is at \qty{4}{\kilo\hertz}, meaning a chirp signal repeting every \qty{0.25}{\milli\second} will have the least effect on frequencies present in the spill signal. For coasting beams, this minima is less clear, and appears to shift to higher frequencies with increasing chirp signal voltage.
 
-The same was performed for simulations; the turn number at which a particle was lost to the aperture was recorded, along with its longitudinal $\zeta$ variable, defined as
+This low-pass filter effect, and corresponding minimum transfer characteristic, can be explained by the time $T_s$ the particles need to transit from a stable phase-space area to the magnetic septum~\cite{Sorge_2018}. The transit time, in units of 3 turns, is given by~\cite{Pullia:313678}:
+\begin{equation}
+  T_{tr} = \frac 1{\sqrt{3}\mu} \ln \left| \frac n{n+3} \frac 3{\frac {\dot \mu}\mu - \frac 1{\sqrt 3}\frac{\dot\mu}{\mu^2}}\right|
+  \label{eq:transit_time}
+\end{equation} 
+The first fraction within the lograithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$, accounts for the time taken to move from a fixed point $O'$ to the magnetic septum, where the distance between the edge of the stable phase space area and the septum is $|X_{MS}|$, and the distance between the edge of the stable phase space area enclosed by the separatrices and its center is $|X_{sep}|$. The second fraction, where $\mu$ was defined as the modified tune distance in~\autoref{eq:spiral_step} and~\autoref{eq:spiral_kick}, accounts for time taken to move along the side of a stable triangle to the fixed point $O'$.
+
+In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultanously will arrive at the septum. This results in a \textit{limiting frequency} $f_{lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. 
+
+The this limiting frequency can be approximated to a first order simply as:
+\begin{equation}
+  f_{lim} = \frac 1{T_{tr}\cdot 3\cdot T_{rev}} \approx \frac 1{3\cdot T_{rev}\times 1/\sqrt{3}\cdot 6\pi\cdot\delta Q}
+\end{equation}
+For a limiting frequency $f_{lim}$ of \qty{4}{\kilo\hertz}, and a revolution period of $\sim$\qty{2.4}{\micro\second}, a tune distance of $\delta Q=\sqrt{3}/625\pi\approx 0.0087$ is found. This is close to the tune distance targeted of $\delta Q=0.01$ (\autoref{fig:cycle}).
+
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.9\linewidth}
+    \includegraphics*[width=\linewidth]{machine_rf_on.png}
+    \caption{Frequency response of machine measurements with a \textbf{bunched} beam.}\label{machine_rf_on}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.9\linewidth}
+    \includegraphics*[width=\linewidth]{machine_rf_off.png}
+    \caption{Frequency response of machine measurements with a \textbf{coasting} beam.}\label{machine_rf_off}
+  \end{subfigure}
+  \caption{Frequency response of the RFKO system as implemented in the PS, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_machine}
+\end{figure}
+
+
+
+\subsection{Simulation Analysis Methodology}\label{sec:sim_analysis_method}
+
+The same analytical process as described in~\autoref{sec:machine_freq_anal_method} was performed for simulations; the turn number at which a particle was lost to the aperture was recorded, along with its longitudinal $\zeta$ variable, defined as
 \begin{equation}
   \zeta = s \frac{\beta}{\beta_0} - \beta c t
 \end{equation}
@@ -2119,42 +2155,33 @@ where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct t
 \begin{equation}
   t = N t_{rev} - \frac\zeta{\beta_0 c}
 \end{equation}
-where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N$ is the turn at which the particle was lost. This time-series data was then re-binned down to the same frequency of the real machine measurement.
+where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N$ is the turn at which the particle was lost. The extraction time data for each particle was then used to reconstruct the time-series extraction data (\autoref{lst:time_series_calculation}). The same peak-finding algorithm as used for machine data was then used to generate frequency response data for simulations.
 
-
-\subsection{Comparative Analysis}\label{results:freq_response}
-The magnitude of these selected peaks were plotted against the interval frequency. This analysis was performed for both the real machine and the simulations, with both a bunched beam (with RF cavities enabled) and a coasting/debunched beam (with RF cavities disabled). The results are shown in~\autoref{fig:rf_on} and~\autoref{fig:rf_off} for the bunched and coasting beams respectively.
-
+\subsection{Simulation Analysis Results}
+The simulated frequency response characteristics are shown in~\autoref{fig:freq_response_sim}, using the same parameter ranges as~\autoref{fig:freq_response_machine}. The bunched beam frequency response shows the same minima characteristic as the real machine, with a minimum at \qty{4}{\kilo\hertz}. The coasting beam simulations, however, do not have the same accuracy. The frequency response minima seen in~\autoref{machine_rf_off} is still present at \qty{4}{\kilo\hertz}, but the typical low-pass filter effect is not seen, with the response returning to a high level as the chirp frequency approaches \qty{10}{\kilo\hertz}.
 
 \begin{figure}[h]
   \centering
-  \begin{subfigure}[b]{0.9\linewidth}
-    \includegraphics*[width=\linewidth]{machine_rf_on.png}
-    \caption{Frequency response of machine measurements.}
-  \end{subfigure}
   \begin{subfigure}[b]{0.9\linewidth}
     \includegraphics*[width=\linewidth]{sim_rf_on.png}
-    \caption{Frequency response of simulations.}
-  \end{subfigure}
-  \caption{Frequency response of the RFKO system, \textbf{with RF cavities enabled}, both in the real machine and in simulation.}\label{fig:rf_on}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}[b]{0.9\linewidth}
-    \includegraphics*[width=\linewidth]{machine_rf_off.png}
-    \caption{Frequency response of machine measurements.}
+    \caption{Frequency response of simulations with a \textbf{bunched} beam.}\label{sim_rf_on}
   \end{subfigure}
   \begin{subfigure}[b]{0.9\linewidth}
     \includegraphics*[width=\linewidth]{sim_rf_off.png}
-    \caption{Frequency response of simulations.}
+    \caption{Frequency response of simulations with a \textbf{coasting} beam.}\label{sim_rf_off}
   \end{subfigure}
-  \caption{Frequency response of the RFKO system, \textbf{with RF cavities disabled}, both in the real machine and in simulation.}\label{fig:rf_off}
+  \cprotect\caption{Frequency response of the RFKO system as simulated in \verb|Xsuite|, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_sim}
 \end{figure}
 
-Previous studies which performed similar slow extraction implementations have observed a \textit{low-pass} filter effect in the spill frequency response~\cite{wepmp008,Pari:2780495}, where the beam spill ``smoothens out'' higher frequency excitation. This characteristic, and where this smoothing effect is greatest (i.e. the frequency response is at a minimum), is one of particular interest in determining the optimal RFKO signal configuration, and will be used to compare the results of the real machine and the simulations.
+\subsection{Comparative Analysis}\label{results:freq_response}
+\autoref{fig:simvmeas_bunched} compares the frequency response graphs seen before, by averaging the response curves of different voltages and plotting the machine and simulation curves together. While less pronounced in a \textit{log-log} graph, the similarities in the limiting response frequency is clear between the curves. 
 
-For the bunched implementation (\autoref{fig:rf_on}), both simulations and machine data show a drop-off in the frequency response, with a minimum response between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz} for all exciter voltages. This indicates that the system responds to these frequencies the least, and thus the effect of the driving excitation on the spill frequency structure is minimised at these frequencies. 
+\begin{figure}
+  \includegraphics*[width=0.9\linewidth]{simvmeas_bunched.png}
+  \caption{Graph comparing the averaged frequency response curves for bunched beams between machine data (black) and simulations (red, dashed). Shaded is the $1\sigma$ standard deviation.}\label{fig:simvmeas_bunched}
+\end{figure}
+
+
 
 
 % [TODO) explain the consequences of these graphs
@@ -2203,6 +2230,8 @@ In order to relate the dispersive and chromatic functions produced by \verb|MAD-
 \lstinputlisting[language=python, label={lst:kick_angle}, caption=Python code to calculate angle kick produced by the TFB system (\autoref{sec:trans_exc}).]{code/kick_angle.py}
 
 \lstinputlisting[language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Abritary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
+
+\lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the lab time of particle extraction and reconstruct the time-series spill array (\autoref{sec:sim_analysis_method}).]{code/time_series.py}
 
 
 \chapter{Data and Plots}
