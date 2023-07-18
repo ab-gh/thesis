@@ -24,6 +24,8 @@
 \usepackage{subcaption}
 \usepackage{cprotect}
 \usepackage[super]{nth}
+\usepackage{cite}
+
 
 \usepackage[capitalise]{cleveref}
 \creflabelformat{equation}{#2\textup{#1}#3}
@@ -1905,8 +1907,7 @@ This image was made available on CERN's image registry using a \textit{continuou
   \centering
     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,508); %set diagram left start at 0, and has height of 508
-
+    %uncomment if require: \path (0,732); %set diagram left start at 0, and has height of 732
     %Right Arrow [id:dp1466614121100427] 
     \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (180,295) -- (204,295) -- (204,290) -- (220,300) -- (204,310) -- (204,305) -- (180,305) -- cycle ;
     %Right Arrow [id:dp2179744625009341] 
@@ -1917,26 +1918,25 @@ This image was made available on CERN's image registry using a \textit{continuou
     \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (26,175) -- (26,190.9) .. controls (26,204.07) and (36.68,214.75) .. (49.85,214.75) -- (207.5,214.75) -- (207.5,220) -- (230,208) -- (207.5,196) -- (207.5,201.25) -- (49.85,201.25) .. controls (44.13,201.25) and (39.5,196.62) .. (39.5,190.9) -- (39.5,175) -- cycle ;
     %Flowchart: Process [id:dp8355453639545734] 
     \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (10,70) -- (202,70) -- (202,178) -- (10,178) -- cycle ;
-
     %Shape: Rectangle [id:dp4361762877298698] 
-    \draw   (21,99) -- (193,99) -- (193,128) -- (21,128) -- cycle ;
+    \draw   (21,99) -- (150,99) -- (150,128) -- (21,128) -- cycle ;
     %Shape: Rectangle [id:dp7642379398785082] 
-    \draw   (21,139) -- (132,139) -- (132,165) -- (21,165) -- cycle ;
-    %Flowchart: Process [id:dp6525347157854502] 
-    \draw   (230,310) -- (481,310) -- (481,462) -- (230,462) -- cycle ;
-    %Shape: Rectangle [id:dp11017046539363262] 
-    \draw   (243,342) -- (467,342) -- (467,371) -- (243,371) -- cycle ;
-    %Shape: Rectangle [id:dp4979424465747375] 
-    \draw   (243,382) -- (464,382) -- (464,411) -- (243,411) -- cycle ;
-    %Shape: Rectangle [id:dp6592088940340548] 
-    \draw   (243,422) -- (297,422) -- (297,451) -- (243,451) -- cycle ;
+    \draw   (21,139) -- (150,139) -- (150,165) -- (21,165) -- cycle ;
+    %Flowchart: Process [id:dp1894681798582507] 
+    \draw   (230,430) -- (481,430) -- (481,582) -- (230,582) -- cycle ;
+    %Shape: Rectangle [id:dp8360467611560176] 
+    \draw   (243,462) -- (467,462) -- (467,491) -- (243,491) -- cycle ;
+    %Shape: Rectangle [id:dp8688566949763479] 
+    \draw   (243,502) -- (464,502) -- (464,531) -- (243,531) -- cycle ;
+    %Shape: Rectangle [id:dp676780539177714] 
+    \draw   (243,542) -- (297,542) -- (297,571) -- (243,571) -- cycle ;
+    %Bend Arrow [id:dp4131598597904875] 
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (262,571) -- (262,581.48) .. controls (262,587.57) and (266.93,592.5) .. (273.02,592.5) -- (475.5,592.5) -- (475.5,600) -- (490,586.5) -- (475.5,573) -- (475.5,580.5) -- (274,580.5) .. controls (274,580.5) and (274,580.5) .. (274,580.5) -- (274,571) -- cycle ;
     %Flowchart: Data [id:dp9926111004732121] 
     \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (39.56,3) -- (159,3) -- (131.44,43) -- (12,43) -- cycle ;
     %Flowchart: Data [id:dp47351299680241055] 
     \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (272.56,75) -- (392,75) -- (364.44,115) -- (245,115) -- cycle ;
 
-    %Bend Arrow [id:dp8843271122457683] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (262,451) -- (262,461.48) .. controls (262,467.57) and (266.93,472.5) .. (273.02,472.5) -- (475.5,472.5) -- (475.5,480) -- (490,466.5) -- (475.5,453) -- (475.5,460.5) -- (274,460.5) .. controls (274,460.5) and (274,460.5) .. (274,460.5) -- (274,451) -- cycle ;
     %Flowchart: Document [id:dp9868456802201346] 
     \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (60,190) -- (130,190) -- (130,223) .. controls (86.25,223) and (95,234.9) .. (60,227.2) -- cycle ;
 
@@ -1948,41 +1948,34 @@ This image was made available on CERN's image registry using a \textit{continuou
     %Flowchart: Document [id:dp019749160188852866] 
     \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (30,282) -- (190,282) -- (190,315) .. controls (90,315) and (110,326.9) .. (30,319.2) -- cycle ;
     %Rounded Rect [id:dp9845321255243744] 
-    \draw   (220,298) .. controls (220,288.06) and (228.06,280) .. (238,280) -- (502,280) .. controls (511.94,280) and (520,288.06) .. (520,298) -- (520,472) .. controls (520,481.94) and (511.94,490) .. (502,490) -- (238,490) .. controls (228.06,490) and (220,481.94) .. (220,472) -- cycle ;
-    %Flowchart: Data [id:dp12022932129321529] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (512.56,421) -- (632,421) -- (604.44,480) -- (485,480) -- cycle ;
+    \draw   (220,296) .. controls (220,289.7) and (225.1,284.6) .. (231.4,284.6) -- (498.6,284.6) .. controls (504.9,284.6) and (510,289.7) .. (510,296) -- (510,598.6) .. controls (510,604.9) and (504.9,610) .. (498.6,610) -- (231.4,610) .. controls (225.1,610) and (220,604.9) .. (220,598.6) -- cycle ;
     %Bend Arrow [id:dp5368424116868331] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (330,237) -- (368.36,237) .. controls (375.49,237) and (381.26,242.78) .. (381.26,249.9) -- (381.26,258.5) -- (385.56,258.5) -- (374.81,280) -- (364.06,258.5) -- (368.36,258.5) -- (368.36,249.9) .. controls (368.36,249.9) and (368.36,249.9) .. (368.36,249.9) -- (330,249.9) -- cycle ;
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (326.72,237.56) -- (361.42,237.56) .. controls (369.12,237.56) and (375.36,243.8) .. (375.36,251.49) -- (375.36,260.78) -- (380,260.78) -- (368.39,284) -- (356.78,260.78) -- (361.42,260.78) -- (361.42,251.49) .. controls (361.42,251.49) and (361.42,251.49) .. (361.42,251.49) -- (326.72,251.49) -- cycle ;
     %Bend Arrow [id:dp3452563524807608] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (291.64,237) -- (330,237) .. controls (337.12,237) and (342.9,242.78) .. (342.9,249.9) -- (342.9,258.5) -- (347.2,258.5) -- (336.45,280) -- (325.7,258.5) -- (330,258.5) -- (330,249.9) .. controls (330,249.9) and (330,249.9) .. (330,249.9) -- (291.64,249.9) -- cycle ;
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (289.93,237.56) -- (324.64,237.56) .. controls (332.33,237.56) and (338.57,243.8) .. (338.57,251.49) -- (338.57,260.78) -- (343.21,260.78) -- (331.6,284) -- (319.99,260.78) -- (324.64,260.78) -- (324.64,251.49) .. controls (324.64,251.49) and (324.64,251.49) .. (324.64,251.49) -- (289.93,251.49) -- cycle ;
     %Bend Arrow [id:dp47460506979421724] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (260,237) -- (291.64,237) .. controls (298.76,237) and (304.54,242.78) .. (304.54,249.9) -- (304.54,258.5) -- (308.84,258.5) -- (298.09,280) -- (287.34,258.5) -- (291.64,258.5) -- (291.64,249.9) .. controls (291.64,249.9) and (291.64,249.9) .. (291.64,249.9) -- (260,249.9) -- cycle ;
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (259.59,237.56) -- (287.85,237.56) .. controls (295.54,237.56) and (301.78,243.8) .. (301.78,251.49) -- (301.78,260.78) -- (306.42,260.78) -- (294.81,284) -- (283.2,260.78) -- (287.85,260.78) -- (287.85,251.49) .. controls (287.85,251.49) and (287.85,251.49) .. (287.85,251.49) -- (259.59,251.49) -- cycle ;
     %Right Arrow [id:dp14885018643483505] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (265,230) -- (265,258.74) -- (270,258.74) -- (260,277.9) -- (250,258.74) -- (255,258.74) -- (255,230) -- cycle ;
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (264.38,230) -- (264.38,261.04) -- (269.18,261.04) -- (259.59,281.73) -- (250,261.04) -- (254.79,261.04) -- (254.79,230) -- cycle ;
     %Shape: Rectangle [id:dp5191472214273694] 
     \draw   (390,240) -- (580,240) -- (580,269) -- (390,269) -- cycle ;
+    %Flowchart: Process [id:dp30179423761545277] 
+    \draw   (230,310) -- (481,310) -- (481,420) -- (230,420) -- cycle ;
+    %Shape: Rectangle [id:dp32838679005965243] 
+    \draw   (243,342) -- (451.4,342) -- (451.4,371) -- (243,371) -- cycle ;
+    %Shape: Rectangle [id:dp26512796432746977] 
+    \draw   (243,378) -- (409.4,378) -- (409.4,407) -- (243,407) -- cycle ;
+    %Flowchart: Data [id:dp49769744087255896] 
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (512.56,541) -- (632,541) -- (604.44,600) -- (485,600) -- cycle ;
+    %Right Arrow [id:dp4509210111562849] 
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (352,412) -- (352,428.74) -- (357,428.74) -- (347,439.9) -- (337,428.74) -- (342,428.74) -- (342,412) -- cycle ;
 
     % Text Node
     \draw (35.5,14.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {acc-models-ps};
     % Text Node
-    \draw (32,105.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {flatten and match tune};
+    \draw (31,104) node [anchor=north west][inner sep=0.75pt]   [align=left] {flatten sequence};
     % Text Node
-    \draw (31,143.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {thin elements};
-    % Text Node
-    \draw (237,318) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Xsuite}};
-    % Text Node
-    \draw (250,348.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {generate and match distribution};
-    % Text Node
-    \draw (254,387.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {add septum aperture, TFB, RF};
-    % Text Node
-    \draw (254,428.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {track};
-    % Text Node
-    \draw (516,431.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{59.41pt}\setlength\topsep{0pt}
-    \begin{center}
-    particles lost\\to aperture
-    \end{center}
-
-    \end{minipage}};
+    \draw (31,142) node [anchor=north west][inner sep=0.75pt]   [align=left] {set SX magnets};
     % Text Node
     \draw (237,148) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Batch Submission}};
     % Text Node
@@ -2009,13 +2002,32 @@ This image was made available on CERN's image registry using a \textit{continuou
     \end{minipage}};
     % Text Node
     \draw (401,246.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {one job per parameter set};
+    % Text Node
+    \draw (237,318) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{MAD-X}};
+    % Text Node
+    \draw (250,348.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {load lattice and match to tune};
+    % Text Node
+    \draw (250,384.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {thin and slice elements};
+    % Text Node
+    \draw (237,438) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Xsuite}};
+    % Text Node
+    \draw (250,468.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {generate and match distribution};
+    % Text Node
+    \draw (254,507.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {add septum aperture, TFB, RF};
+    % Text Node
+    \draw (254,548.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {track};
+    % Text Node
+    \draw (516,551.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{59.41pt}\setlength\topsep{0pt}
+    \begin{center}
+    particles lost\\to aperture
+    \end{center}
 
+    \end{minipage}};
 
     \end{tikzpicture}
 
     \caption{A flowchart describing an overview of the simulation process}\label{fig:flowchart}
 \end{figure}
-
 
 \chapter{Analysis and Comparison of Results}
 
@@ -2028,7 +2040,7 @@ This image was made available on CERN's image registry using a \textit{continuou
 
 \section{Computation Time}
 
-In order to compare the advantages of GPU acceleration provided by \verb|Xsuite|, the simulation process described in~\autoref{sec:sim_process} was implemented and run using CERN's batch service. The simulations used single-CPU compute nodes, either using \verb|Xsuite|'s CPU context, or GPU context with additional Nvidia GPUs via \verb|Xsuite|'s CUDA interface. Simulations were run for a range of numbers of particles and turns, and both the instruction-time (\textit{process time}) and real-time (\textit{wall-clock}) duration of the simulation was recorded. These results are presented in~\autoref{fig:cpu_graph_per_turn} and~\autoref{fig:gpu_graph_per_turn}. The number of particles in a simulation---$N_p$---effectively controls the computational intensity, as it determines the number of calculations which must be performed per iteration (turn). The number of turns---$N_t$---controls the number of iterations, and is therefore used to normalise computation time between simulation runs.
+In order to compare the advantages of GPU acceleration provided by \verb|Xsuite|, the simulation process described in~\autoref{sec:sim_process} was implemented and run using CERN's batch service. The simulations used single-CPU compute nodes, either using \verb|Xsuite|'s CPU context, or GPU context with additional Nvidia GPUs via \verb|Xsuite|'s CUDA interface. Simulations were run for a range of numbers of particles and turns, and the real-time (\textit{wall-clock}) duration of the simulation was recorded. These results are presented in~\autoref{fig:cpu_graph_per_turn} and~\autoref{fig:gpu_graph_per_turn}. The number of particles in a simulation---$N_p$---effectively controls the computational intensity, as it determines the number of calculations which must be performed per iteration (turn). The number of turns---$N_t$---controls the number of iterations, and is therefore used to normalise computation time between simulation runs.
 
 These figures show significantly different dependancy of simulation process time on the operational intensity between CPU and GPU workloads. For CPU tasks there is no parallelism available, so for $N_p>10^2$---where performance isn't dominated by constant-time \textit{overhead} processes---performance is dependant on $N_p$.
 
@@ -2039,38 +2051,27 @@ GPUs employ a \textit{Single-Instruction Multiple-Data} (SIMD) architecture to e
 \begin{figure}
   \centering
   \includegraphics*[width=0.7\linewidth]{CPU_graph_per_turn.png}
-  \caption{Process simulation time (s) per turn for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
+  \caption{Real simulation time (s) per turn for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.7\linewidth]{GPU_graph_per_turn.png}
-  \caption{Process simulation time (s) per turn for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
+  \caption{Real simulation time (s) per turn for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
 \end{figure}
 
 
 \begin{figure}
   \centering
   \includegraphics*[width=0.7\linewidth]{COMPARISON_graph_per_turn.png}
-  \cprotect\caption{Process simulation time (s) per turn for CPU workload divided by GPU workload for the same $N_p, N_t$, showing the relative performance increase of GPU acceleration. All other parameters (e.g. number of compute cores) are held constant.}\label{fig:comparison_graph_per_turn}
+  \cprotect\caption{Real (\textit{wall time}) simulation time (s) per turn for CPU workload divided by GPU workload for the same $N_p, N_t$, showing the relative performance increase of GPU acceleration. All other parameters (e.g. number of compute cores) are held constant.}\label{fig:comparison_graph_per_turn}
 \end{figure}
 
-These optimisation improvements make a clear justification for the use of GPU-accelerated workflows.~\autoref{fig:comparison_graph_per_turn} shows the relative performance increase of GPU acceleration over CPU-only simulations, for the same $N_p, N_t$. In the best case, with $N_p, N_t \approx 5\times 10^4$, the GPU-accelerated simulation can be $10^7$ times faster than the CPU-only simulation. At more reasonable $N_p, N_t$, GPU simulations are still several orders of magnitudes faster than a CPU, and only slower at $N_p, N_t < 10^1$.
+These optimisation improvements make a clear justification for the use of GPU-accelerated workflows.~\autoref{fig:comparison_graph_per_turn} shows the relative performance increase of GPU acceleration over CPU-only simulations, for the same $N_p, N_t$. In the best case, with $N_p, N_t \approx 5\times 10^4$, the GPU-accelerated simulation can be $\sim 500$ times faster than the CPU-only simulation. At more reasonable $N_p, N_t$, GPU simulations are still several orders of magnitudes faster than a CPU, and only slower at $N_p, N_t < 10^1$.
 
-For example, a simulation of $N_t=$\qty{10000}{turns} and $N_p=$\qty{1000}{particles} 
+Previous work on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}~\cite[Figure 3]{Schicho:2039579}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of 13 minutes (\qty{779.8}{\second}) for the same number of particles and turns running on a GPU platform. This represents a $\times 34$ speed improvement.
 
-%requires \qty{3440}{\second} ($\sim$\qty{1}{hr}) to complete on a CPU, and only \qty{65}{\second} ($\sim$\qty{1}{min}) on a GPU, offering a $\times 60$ speed improvement.
-
-
-
-Previous work on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}~\cite[Figure 3]{Schicho:2039579}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of 
-
-
-%1 hour 19 minutes (\qty{4742}{\second}) for \qty{31622}{turns} and \qty{1000000}{particles}. 
-
-
-
-These findings motivated the selection of paramters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallism becomes saturated around \qty{500000}{particles}. This number of particles was selected for the final simulations, as it is the largest number of particles that can be simulated in a reasonable amount of time.
+These findings motivated the selection of paramters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallism becomes saturated around \qty{500000}{particles}. By not exceeding this amount, the simulation can complete in a reasonable amount of time.
 
 \section{Frequency Response}
 
@@ -2087,7 +2088,6 @@ For the real machine implementation, the spill was measured using an $N_2$ gas s
 \end{figure}
 
 Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CERN's logging database~\cite{nxcals}. An example of this data can be found in~\autoref{fig:raw_signal}, showing a range of rep-rate intervals. The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. 
-
 
 
 \begin{figure}
@@ -2122,7 +2122,7 @@ where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct t
 where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N$ is the turn at which the particle was lost. This time-series data was then re-binned down to the same frequency of the real machine measurement.
 
 
-\subsection{Comparative Analysis}
+\subsection{Comparative Analysis}\label{results:freq_response}
 The magnitude of these selected peaks were plotted against the interval frequency. This analysis was performed for both the real machine and the simulations, with both a bunched beam (with RF cavities enabled) and a coasting/debunched beam (with RF cavities disabled). The results are shown in~\autoref{fig:rf_on} and~\autoref{fig:rf_off} for the bunched and coasting beams respectively.
 
 
@@ -2152,13 +2152,14 @@ The magnitude of these selected peaks were plotted against the interval frequenc
   \caption{Frequency response of the RFKO system, \textbf{with RF cavities disabled}, both in the real machine and in simulation.}\label{fig:rf_off}
 \end{figure}
 
-% [TODO) Still waiting on sim_rf_off
-A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp008}, is clearly visible in both~\autoref{fig:rf_on} and~\autoref{fig:rf_off}. For the bunched implementation (\autoref{fig:rf_on}), both simulations and machine data show a drop-off in the frequency response, with a minimum response between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz} for all exciter voltages. This indicates that the system responds to these frequencies the least, and thus the effect of the driving excitation on the spill frequency structure is minimised at these frequencies. 
+Previous studies which performed similar slow extraction implementations have observed a \textit{low-pass} filter effect in the spill frequency response~\cite{wepmp008,Pari:2780495}, where the beam spill ``smoothens out'' higher frequency excitation. This characteristic, and where this smoothing effect is greatest (i.e. the frequency response is at a minimum), is one of particular interest in determining the optimal RFKO signal configuration, and will be used to compare the results of the real machine and the simulations.
+
+For the bunched implementation (\autoref{fig:rf_on}), both simulations and machine data show a drop-off in the frequency response, with a minimum response between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz} for all exciter voltages. This indicates that the system responds to these frequencies the least, and thus the effect of the driving excitation on the spill frequency structure is minimised at these frequencies. 
 
 
 % [TODO) explain the consequences of these graphs
 
-\section{Spill Duty Factor}
+\section{Spill Duty Factor}\label{results:sdf}
 
 % [TODO) step 3: ???
 
@@ -2167,6 +2168,13 @@ A low-pass filter effect, which was anticipated by previous studies~\cite{wepmp0
 \end{equation}
 
 \chapter{Conclusion}
+
+This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results presented in~\autoref{results:freq_response} and~\autoref{results:sdf} show that the system is capable of producing spills with a flat freqyency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors of up to \qty{90}{\percent} for bunched beams, and \qty{50}{\percent} for coasting beams.
+
+This thesis also demonstrates significant agreement between the frequency response of this RFKO implementation and the characteristics observed in previous studies~\cite{wepmp008,Pari:2780495}. This agreement is well-observed between the real machine and simulations with a bunched beam, where both datasets place the optimum repetition frequency (minimising the presence of this frequency in the spill) for a RFKO-driving chirp signal between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz}. 
+
+This agreement is less well-observed for coasting beams, where the simulations show lower frequency response minima than machine observations. 
+
 
 \section{Outlook}
 
