@@ -1342,36 +1342,36 @@ The tune distance, $\delta Q$, is therefore the distance of the particle from th
 \end{equation}
 Therefore, a particle with $\delta Q=0$, i.e.\ exactly on resonance, will return to its original position after three turns. For such a particle, the change in position $x$ and divergence $x'$ from initial conditions $(x_0, x'_0)$ after three turns is therefore calculated as
 \begin{equation}
-  \Delta x_3 = \mu x'_0 + \frac 23 S x_0x'_0
+  \Delta x_3 = \varepsilon_Q x'_0 + \frac 23 S x_0x'_0
   \label{eq:spiral_step}
 \end{equation}
 \begin{equation}
-  \Delta x'_3 = -\mu x_0 + \frac 34 S (x_0^2-x'^2_0)
+  \Delta x'_3 = -\varepsilon_Q x_0 + \frac 34 S (x_0^2-x'^2_0)
   \label{eq:spiral_kick}
 \end{equation}
-where $\mu$, the \textit{modified tune distance}, is defined as $\mu = 6\pi\cdot\delta Q$, and $S$ is the normalised sextupole strength (\autoref{eq:normalised_sextupole_strength}).
+where $\varepsilon_Q$, the \textit{modified tune distance}, is defined as $\varepsilon_Q = 6\pi\cdot\delta Q$, and $S$ is the normalised sextupole strength (\autoref{eq:normalised_sextupole_strength}).
 
 The values of $\Delta x_3$ and $\Delta x'_3$ are known as the \textit{spiral step} and \textit{spiral kick}.
 The \textit{Hamiltonian} is now used to analyse this motion in phase-space. The Hamiltonian, $\bf H$ is a time-independent constant of motion, the contours of which describe the \textit{phase-space map}, the motion of a particle in normalised phase-space. Assuming the 3-turn time is small enough to be continuous, the \textit{Kobayashi Hamiltonian}~\cite{kobayashi} is defined as
 \begin{equation}
-  \textbf{H} =\frac\mu 2(x^2+x'^2)+\frac S4(3xx'^2-x^3)
+  \textbf{H} =\frac\varepsilon_Q 2(x^2+x'^2)+\frac S4(3xx'^2-x^3)
 \end{equation}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{kobayashi.png}
-  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio $\mu/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines.}\label{fig:kobayashi}
+  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio $\varepsilon_Q/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines.}\label{fig:kobayashi}
 \end{figure}
 
-The first term describes the typical circular phase-space motion familiar from~\autoref{subsec:trans_phase_space}, with a sextupole strength $S=0$ (i.e. a linear machine). The second term describes the sextupole effect, transforming the elliptical map into a triangular trajectory for increasing values of $x$ and $x'$. The phase-space map is shown in~\autoref{fig:kobayashi}. A boundary triangle is easily identified from the map, which defines the trajectory of the stable particle with greatest possible amplitude, before the motion becomes unstable. Outside of this stable region, the particle trajectories do not close on themselves, and the particle will rapidly gain amplitude. The region bounded by this \textit{separatrix} is known as the \textit{acceptance} the size of which is defined by $|\mu /S|$, and can be found by factorising $\bf H$ at at a value of $(2\mu /3)^3/S^2$, which factorisses to three points:
+The first term describes the typical circular phase-space motion familiar from~\autoref{subsec:trans_phase_space}, with a sextupole strength $S=0$ (i.e. a linear machine). The second term describes the sextupole effect, transforming the elliptical map into a triangular trajectory for increasing values of $x$ and $x'$. The phase-space map is shown in~\autoref{fig:kobayashi}. A boundary triangle is easily identified from the map, which defines the trajectory of the stable particle with greatest possible amplitude, before the motion becomes unstable. Outside of this stable region, the particle trajectories do not close on themselves, and the particle will rapidly gain amplitude. The region bounded by this \textit{separatrix} is known as the \textit{acceptance} the size of which is defined by $|\varepsilon_Q /S|$, and can be found by factorising $\bf H$ at at a value of $(2\varepsilon_Q /3)^3/S^2$, which factorisses to three points:
 \begin{eqnarray}
-  P_1 &=& \left(\frac 43 \frac\mu S,    0                       \right) \\
-  P_2 &=& \left(-\frac 23 \frac \mu S,  -\frac{2\mu}{\sqrt 3 S} \right) \\
-  P_3 &=& \left(-\frac 23 \frac \mu S,  \frac{2\mu}{\sqrt 3 S} \right)
+  P_1 &=& \left(\frac 43 \frac\varepsilon_Q S,    0                       \right) \\
+  P_2 &=& \left(-\frac 23 \frac \varepsilon_Q S,  -\frac{2\varepsilon_Q}{\sqrt 3 S} \right) \\
+  P_3 &=& \left(-\frac 23 \frac \varepsilon_Q S,  \frac{2\varepsilon_Q}{\sqrt 3 S} \right)
 \end{eqnarray}
 The $x$ location of the stable particle, $h$ can also be defined as
 \begin{equation}
-  h=\frac 23 \frac \mu S = \frac{4\pi}S\delta Q
+  h=\frac 23 \frac \varepsilon_Q S = \frac{4\pi}S\delta Q
   \label{eq:apothem}
 \end{equation}
 Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$ (solid lines in \autoref{fig:kobayashi}), along with the vertical line at $-h$ (dashed line in \autoref{fig:kobayashi}), define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 4 h^2$.
@@ -2061,22 +2061,90 @@ where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N
 \subsection{Results of Frequency Response Analysis} % [TODO) Better wording first sentence
 \autoref{fig:freq_response_machine} presents the results of the analytical method described in~\autoref{sec:machine_freq_anal_method} applied to data measured from the PS. The graphs characterise the \textit{frequency response} of the spill to different chirp signal \textit{rep-rate} intervals, and indicate how this frequency propagates to the output (spill). The frequency response of the RFKO system is shown for both a bunched beam (upper image) and a coasting beam (lower image). Visible in both \textit{log-log} plots is a distinct \textit{low-pass filter} effect, where the frequency response is reduced at higher frequencies. This effect, also observed by previous studies~\cite{wepmp008,Pari:2780495}, results in higher frequencies being ``smoothed out'' by the RFKO system. Both plots also show a \textit{minimum transfer characteristic}, where the frequency response is at its lowest: for bunched beams, this minima is at \qty{4}{\kilo\hertz}, meaning a chirp signal repeating every \qty{0.25}{\milli\second} will have the least effect on frequencies present in the spill signal. For coasting beams, this minima is less clear, and appears to shift to higher frequencies with increasing chirp signal voltage.
 
-This low-pass filter effect, and corresponding minimum transfer characteristic, can be explained by the time taken for particles to move from a stable phase-space area to the magnetic septum~\cite{Sorge_2018}. This time $T_{tr}$, in units of 3 turns, is known as the \textit{transit time}, and is given by~\cite{Pullia:313678}:
+This low-pass filter effect, and corresponding minimum transfer characteristic, can be explained by the time taken for particles to move from a stable phase-space area to the magnetic septum~\cite{Sorge_2018}. This time $T_{tr}$, in units of 3 turns, is known as the \textit{transit time}, and is given by~\cite{Pullia:313678, Bryant:CAS}:
 \begin{equation}
-  T_{tr} = \frac 1{\sqrt{3}\mu} \ln \left| \frac n{n+3} \frac 3{\frac {\dot \mu}\mu - \frac 1{\sqrt 3}\frac{\dot\mu}{\mu^2}}\right|
+  T_{tr} = \frac 1{\sqrt{3}\varepsilon_Q} \ln \left| \frac n{n+3} \frac 3{\frac {\dot \varepsilon_Q}\varepsilon_Q - \frac 1{\sqrt 3}\frac{\dot\varepsilon_Q}{\varepsilon_Q^2}}\right|
   \label{eq:transit_time}
 \end{equation} 
-The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$, accounts for the time taken to move from a fixed point $O'$ to the magnetic septum, where the distance between the edge of the stable phase space area and the septum is $|X_{MS}|$, and the distance between the edge of the stable phase space area enclosed by the separatrices and its center is $|X_{sep}|$. The second fraction, where $\mu$ was defined as the modified tune distance in~\autoref{eq:spiral_step} and~\autoref{eq:spiral_kick}, accounts for time taken to move along the side of a stable triangle to the fixed point $O'$.
+The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$, accounts for the time taken to move from a fixed point $O'$ to the magnetic septum, where the distance between the edge of the stable phase space area and the septum is $|X_{MS}|$, and the distance between the edge of the stable phase space area enclosed by the separatrices and its center is $|X_{sep}|$. The second fraction, where $\varepsilon_Q$ was defined as the modified tune distance in~\autoref{eq:spiral_step} and~\autoref{eq:spiral_kick}, accounts for time taken to move along the side of a stable triangle to the fixed point $O'$.~\autoref{fig:transit_time} illustrates this transit time in phase-space.
 
-\todo{Diagram for transit time? Relate to spiral step?} % [TODO)
+\begin{figure}
+  \centering
+    \
 
-In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. 
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+    
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    %uncomment if require: \path (0,397); %set diagram left start at 0, and has height of 397
+    
+    %Shape: Axis 2D [id:dp3507079173629164] 
+    \draw  (110,125.6) -- (400.8,125.6)(208.8,17.6) -- (208.8,321.6) (393.8,120.6) -- (400.8,125.6) -- (393.8,130.6) (203.8,24.6) -- (208.8,17.6) -- (213.8,24.6)  ;
+    %Shape: Triangle [id:dp5315823452406125] 
+    \draw  [line width=2.25]  (355.94,199.74) -- (210.22,272.6) -- (210.22,126.88) -- cycle ;
+    %Straight Lines [id:da5154304089622499] 
+    \draw [line width=2.25]  [dash pattern={on 6.75pt off 4.5pt}]  (138.8,22.6) -- (138.8,323.6) ;
+    %Shape: Circle [id:dp6756665677727705] 
+    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (204,243.4) .. controls (204,240.42) and (206.42,238) .. (209.4,238) .. controls (212.38,238) and (214.8,240.42) .. (214.8,243.4) .. controls (214.8,246.38) and (212.38,248.8) .. (209.4,248.8) .. controls (206.42,248.8) and (204,246.38) .. (204,243.4) -- cycle ;
+    %Curve Lines [id:da15345268152200053] 
+    \draw    (204,243.4) .. controls (203.8,214.2) and (201.88,162.71) .. (203.68,130.54) ;
+    \draw [shift={(203.8,128.6)}, rotate = 93.58] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Curve Lines [id:da36062807938449915] 
+    \draw    (205,117.4) .. controls (204.81,104.08) and (177.79,96.17) .. (161.53,92.93) ;
+    \draw [shift={(159.8,92.6)}, rotate = 10.62] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+    %Straight Lines [id:da7608519264572098] 
+    \draw    (94.8,67.6) -- (355.94,199.74) ;
+    %Straight Lines [id:da45182359084023216] 
+    \draw    (418.8,168.6) -- (210.22,272.6) ;
+    %Shape: Circle [id:dp5351045582621758] 
+    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (134,89.4) .. controls (134,86.42) and (136.42,84) .. (139.4,84) .. controls (142.38,84) and (144.8,86.42) .. (144.8,89.4) .. controls (144.8,92.38) and (142.38,94.8) .. (139.4,94.8) .. controls (136.42,94.8) and (134,92.38) .. (134,89.4) -- cycle ;
+    
+    % Text Node
+    \draw (220,58) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x'$};
+    % Text Node
+    \draw (411,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+    % Text Node
+    \draw (83,315) node [anchor=north west][inner sep=0.75pt]   [align=left] {Septum};
+    % Text Node
+    \draw (224,103) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle O'$};
+    % Text Node
+    \draw (240,179) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{39.19pt}\setlength\topsep{0pt}
+    \begin{center}
+    Stable \\Triangle
+    \end{center}
+    
+    \end{minipage}};
+    % Text Node
+    \draw (41,76) node [anchor=north west][inner sep=0.75pt]   [align=left] {Separatrix};
+    % Text Node
+    \draw (145,249) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle ( X_{0} ,Y_{0})$};
+    % Text Node
+    \draw (166,187) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{t}{}_{r,\ 1}$};
+    % Text Node
+    \draw (159,65) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{t}{}_{r,\ 2}$};
+    
+    \end{tikzpicture}    
+    \caption{A phase-space diagram illustrating the transit time $T_{tr}$ elapsed between leaving the last stable triangle and arriving at the septum. The particle motion (and transit time) is presented in units of three turns; in real-time, the particle moves between the three separatrix arms. The Kobayashi Hamiltonian forms the separatrices of the stable triangle. Total transit time $T_{tr}=T_{tr,1} + T_{tr,2}$ depends both on the distance $(x_0, y_0)$ of the particle from a fixed point $O'$ ($T_{tr,1}$) and the distance from $O'$ to the septum blade ($T_{tr,2}$).}\label{fig:transit_time}
+\end{figure}
 
-The this limiting frequency can be approximated to a first order simply as:
+In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. To obtain an equation for $\Delta T_{tr}$, the total effect of all sextupoles (\verb|XSE01| and \verb|XSE07| in~\autoref{fig:schematic}) is approximated as a single \textit{virtual} sextupole~\cite{PIMMS}. The strength of this sextupole, $S$, defines $|X_{sep}|$ as 
 \begin{equation}
-  f_{lim} = \frac 1{T_{tr}\cdot 3\cdot T_{rev}} \approx \frac 1{3\cdot T_{rev}\times 1/\sqrt{3}\cdot 6\pi\cdot\delta Q}
+  |X_{sep}| = \frac 23\left|\frac\varepsilon_Q S\right|
+  \label{eq:xsep}
 \end{equation}
-For a limiting frequency $f_{lim}$ of \qty{4}{\kilo\hertz}, and a revolution period of $\sim$\qty{2.4}{\micro\second}, a tune distance of $\delta Q=\sqrt{3}/625\pi\approx 0.0087$ is found. This is close to the tune distance targeted of $\delta Q=0.01$ (\autoref{fig:cycle}).
+As mentioned before, $|X_{sep}|$ defines the area of the stable phase space (the last stable triangle). This area must be larger than the phase space area of the beam ($\pi\varepsilon$, where $\varepsilon$ is the beam emittance).~\autoref{eq:xsep} provides the approximate relation $\varepsilon_Q\propto|S|$, neglecting deviations due to momentum spread. The spread of transit times is therefore approximately
+\begin{equation}
+  \Delta T_{tr}\approx\frac{dT_{tr}}{d\varepsilon_Q}\Delta\varepsilon_Q
+\end{equation}
+
+
+
+% The this limiting frequency can be approximated to a first order simply as:
+% \begin{equation}
+%   f_{lim} = \frac 1{T_{tr}\cdot 3\cdot T_{rev}} \approx \frac 1{3\cdot T_{rev}\times 1/\sqrt{3}\cdot 6\pi\cdot\delta Q}
+% \end{equation}
+
+
+% For a limiting frequency $f_{lim}$ of \qty{4}{\kilo\hertz}, and a revolution period of $\sim$\qty{2.4}{\micro\second}, a tune distance of $\delta Q=\sqrt{3}/625\pi\approx 0.0087$ is found. This is close to the tune distance targeted of $\delta Q=0.01$ (\autoref{fig:cycle}).
 
 \begin{figure}
   \centering
@@ -2127,7 +2195,7 @@ Another analytical tool for quantifying slow extraction spill quality establishe
   \caption{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 turn windows.}\label{fig:sdf_example}
 \end{figure}
 
-By calculating the spill duty factor across a range of chirp repetition frequencies and voltages, a heatmap of spill quality can be generated.~\autoref{fig:sdf_meas} shows the spill duty factor heatmaps for the RFKO system as measured in the machine, both with a bunched and coasting beam. Qualitative analysis of the heatmaps identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. 
+By calculating the spill duty factor across a range of chirp repetition frequencies and voltages, a heatmap of spill quality can be generated.~\autoref{fig:sdf_meas} shows the spill duty factor heatmaps for the RFKO system as measured in the machine, both with a bunched and coasting beam. Qualitative analysis of the heatmaps identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
 
 
 
@@ -2182,7 +2250,7 @@ In order to relate the dispersive and chromatic functions produced by \verb|MAD-
 
 \lstinputlisting[language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Abritary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
 
-\lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the lab time of particle extraction and reconstruct the time-series spill array (\autoref{sec:sim_analysis_method}).]{code/time_series.py}
+\lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the lab time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
 
 
 \chapter{Data and Plots}
