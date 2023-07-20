@@ -122,7 +122,7 @@ T.~Bass, ``\BIBforeignlanguage{english}{Benchmarking simulations of slow extract
 ``Xsuite.'' [Online]. Available: \url{xsuite.web.cern.ch}
 \BIBentrySTDinterwordspacing
 
-\bibitem{optics-repo}
+\bibitem{optics_repo}
 \BIBentryALTinterwordspacing
 ``Cern optics repository.'' [Online]. Available: \url{https://acc-models.web.cern.ch/acc-models/}
 \BIBentrySTDinterwordspacing
@@ -195,14 +195,19 @@ M.~Pullia, ``{Transit time for third order resonance extraction},'' CERN, Geneva
 P.~J. Bryant, ``Resonant extraction,'' 2018. [Online]. Available: \url{https://doi.org/10.23730/CYRSP-2018-005.315}
 \BIBentrySTDinterwordspacing
 
-\bibitem{PIMMS}
+\bibitem{PhysRevApplied.13.044076}
 \BIBentryALTinterwordspacing
-L.~Badano, M.~Benedikt, P.~J. Bryant, M.~Crescenti, P.~Holy, A.~T. Maier, M.~Pullia, S.~Rossi, and P.~Knaus, \emph{{Proton-Ion Medical Machine Study (PIMMS), 1}}, 2000. [Online]. Available: \url{https://cds.cern.ch/record/385378}
+R.~Singh, P.~Forck, and S.~Sorge, ``Reducing fluctuations in slow-extraction beam spill using transit-time-dependent tune modulation,'' \emph{Phys. Rev. Appl.}, vol.~13, p. 044076, Apr 2020. [Online]. Available: \url{https://link.aps.org/doi/10.1103/PhysRevApplied.13.044076}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Cappi:134321}
 \BIBentryALTinterwordspacing
 R.~Cappi and C.~Steinbach, ``{Low frequency duty factor improvement for the CERN PS slow extraction using rf phase displacement techniques},'' \emph{IEEE Trans. Nucl. Sci.}, vol.~28, pp. 2806--2808, 1981. [Online]. Available: \url{https://cds.cern.ch/record/134321}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Roderick:1215575}
+\BIBentryALTinterwordspacing
+C.~Roderick and R.~Billen, ``{The LSA Database to Drive the Accelerator Settings},'' CERN, Geneva, Tech. Rep., 2009. [Online]. Available: \url{https://cds.cern.ch/record/1215575}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

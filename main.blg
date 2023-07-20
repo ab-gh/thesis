@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: refs.bib
+Warning--entry type for "Hegglin:2239398" isn't style-file defined
+--line 659 of file refs.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty booktitle in Fraser:CAS
+Warning--empty journal in Iselin:MAD
+Warning--empty journal in Rossbach:247501
+Warning--empty journal in Sterbini:2158994
+Warning--empty journal in Gasior:895142
+Warning--empty journal in Schicho:2039579
+Warning--empty journal in nxcals
+Warning--empty booktitle in Bryant:CAS
+
+Done.
+You've used 40 entries,
+            4087 wiz_defined-function locations,
+            1112 strings with 15731 characters,
+and the built_in function-call counts, 27024 in all, are:
+= -- 2351
+> -- 590
+< -- 131
++ -- 311
+- -- 121
+* -- 1318
+:= -- 4397
+add.period$ -- 83
+call.type$ -- 40
+change.case$ -- 40
+chr.to.int$ -- 240
+cite$ -- 48
+duplicate$ -- 2053
+empty$ -- 2087
+format.name$ -- 144
+if$ -- 6225
+int.to.chr$ -- 0
+int.to.str$ -- 40
+missing$ -- 384
+newline$ -- 213
+num.names$ -- 37
+pop$ -- 887
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 2179
+stack$ -- 0
+substring$ -- 778
+swap$ -- 1599
+text.length$ -- 51
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 40
+warning$ -- 8
+while$ -- 85
+width$ -- 42
+write$ -- 494
+(There were 9 warnings)

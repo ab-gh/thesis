@@ -1342,36 +1342,36 @@ The tune distance, $\delta Q$, is therefore the distance of the particle from th
 \end{equation}
 Therefore, a particle with $\delta Q=0$, i.e.\ exactly on resonance, will return to its original position after three turns. For such a particle, the change in position $x$ and divergence $x'$ from initial conditions $(x_0, x'_0)$ after three turns is therefore calculated as
 \begin{equation}
-  \Delta x_3 = \varepsilon_Q x'_0 + \frac 23 S x_0x'_0
+  \Delta x_3 = {\varepsilon_Q} x'_0 + \frac 23 S x_0x'_0
   \label{eq:spiral_step}
 \end{equation}
 \begin{equation}
-  \Delta x'_3 = -\varepsilon_Q x_0 + \frac 34 S (x_0^2-x'^2_0)
+  \Delta x'_3 = -{\varepsilon_Q} x_0 + \frac 34 S (x_0^2-x'^2_0)
   \label{eq:spiral_kick}
 \end{equation}
-where $\varepsilon_Q$, the \textit{modified tune distance}, is defined as $\varepsilon_Q = 6\pi\cdot\delta Q$, and $S$ is the normalised sextupole strength (\autoref{eq:normalised_sextupole_strength}).
+where ${\varepsilon_Q}$, the \textit{modified tune distance}, is defined as ${\varepsilon_Q} = 6\pi\cdot\delta Q$, and $S$ is the normalised sextupole strength (\autoref{eq:normalised_sextupole_strength}).
 
 The values of $\Delta x_3$ and $\Delta x'_3$ are known as the \textit{spiral step} and \textit{spiral kick}.
 The \textit{Hamiltonian} is now used to analyse this motion in phase-space. The Hamiltonian, $\bf H$ is a time-independent constant of motion, the contours of which describe the \textit{phase-space map}, the motion of a particle in normalised phase-space. Assuming the 3-turn time is small enough to be continuous, the \textit{Kobayashi Hamiltonian}~\cite{kobayashi} is defined as
 \begin{equation}
-  \textbf{H} =\frac\varepsilon_Q 2(x^2+x'^2)+\frac S4(3xx'^2-x^3)
+  \textbf{H} =\frac{\varepsilon_Q} 2(x^2+x'^2)+\frac S4(3xx'^2-x^3)
 \end{equation}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{kobayashi.png}
-  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio $\varepsilon_Q/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines.}\label{fig:kobayashi}
+  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio ${\varepsilon_Q}/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines.}\label{fig:kobayashi}
 \end{figure}
 
-The first term describes the typical circular phase-space motion familiar from~\autoref{subsec:trans_phase_space}, with a sextupole strength $S=0$ (i.e. a linear machine). The second term describes the sextupole effect, transforming the elliptical map into a triangular trajectory for increasing values of $x$ and $x'$. The phase-space map is shown in~\autoref{fig:kobayashi}. A boundary triangle is easily identified from the map, which defines the trajectory of the stable particle with greatest possible amplitude, before the motion becomes unstable. Outside of this stable region, the particle trajectories do not close on themselves, and the particle will rapidly gain amplitude. The region bounded by this \textit{separatrix} is known as the \textit{acceptance} the size of which is defined by $|\varepsilon_Q /S|$, and can be found by factorising $\bf H$ at at a value of $(2\varepsilon_Q /3)^3/S^2$, which factorisses to three points:
+The first term describes the typical circular phase-space motion familiar from~\autoref{subsec:trans_phase_space}, with a sextupole strength $S=0$ (i.e. a linear machine). The second term describes the sextupole effect, transforming the elliptical map into a triangular trajectory for increasing values of $x$ and $x'$. The phase-space map is shown in~\autoref{fig:kobayashi}. A boundary triangle is easily identified from the map, which defines the trajectory of the stable particle with greatest possible amplitude, before the motion becomes unstable. Outside of this stable region, the particle trajectories do not close on themselves, and the particle will rapidly gain amplitude. The region bounded by this \textit{separatrix} is known as the \textit{acceptance} the size of which is defined by $|{\varepsilon_Q} /S|$, and can be found by factorising $\bf H$ at at a value of $(2{\varepsilon_Q} /3)^3/S^2$, which factorisses to three points:
 \begin{eqnarray}
-  P_1 &=& \left(\frac 43 \frac\varepsilon_Q S,    0                       \right) \\
-  P_2 &=& \left(-\frac 23 \frac \varepsilon_Q S,  -\frac{2\varepsilon_Q}{\sqrt 3 S} \right) \\
-  P_3 &=& \left(-\frac 23 \frac \varepsilon_Q S,  \frac{2\varepsilon_Q}{\sqrt 3 S} \right)
+  P_1 &=& \left(\frac 43 \frac{\varepsilon_Q} S,    0                       \right) \\
+  P_2 &=& \left(-\frac 23 \frac {\varepsilon_Q} S,  -\frac{2{\varepsilon_Q}}{\sqrt 3 S} \right) \\
+  P_3 &=& \left(-\frac 23 \frac {\varepsilon_Q} S,  \frac{2{\varepsilon_Q}}{\sqrt 3 S} \right)
 \end{eqnarray}
 The $x$ location of the stable particle, $h$ can also be defined as
 \begin{equation}
-  h=\frac 23 \frac \varepsilon_Q S = \frac{4\pi}S\delta Q
+  h=\frac 23 \frac {\varepsilon_Q} S = \frac{4\pi}S\delta Q
   \label{eq:apothem}
 \end{equation}
 Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$ (solid lines in \autoref{fig:kobayashi}), along with the vertical line at $-h$ (dashed line in \autoref{fig:kobayashi}), define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 4 h^2$.
@@ -1753,13 +1753,13 @@ To aid in the research in this paper, and future use-cases of RFKO at the PS, a 
 configures the AFG for RFKO extraction, and provides a Python class for modifying the chirp-generation parameters in terms of the revolution frequency $f_{rev}$, and the chirp length in milliseconds. This package was used to control the AFG for the results presented in this paper.
 
 
-\section{RFKO Slow Extraction in Simulation}
+\section{RFKO Slow Extraction in Simulation}\label{sec:rfko_sim}
 
 As motivated in~\autoref{sec:motivation}, the majority of work surrounding the results presented in this thesis was towards developing a simulation framework to accurately model the spill structure of RFKO at the PS. This section will detail the simulation tools used, the implementation of the RFKO extraction simulation, and the methods used to compare the simulation results to machine data.
 
 \subsection{Simulation Tools}
 
-A variety of simulation software packages for accelerator physics are available, each having their own optimisations, and application areas amongst the accelerator physics community. For this study, the \verb|MAD-X|~\cite{Iselin:MAD} and \verb|Xsuite|~\cite{xsuite} packages were used.~\verb|MAD-X| remains the standard tool in the area of optics and beam transfer, and CERN provides a common optics repository---\verb|acc-models|~\cite{optics-repo}---containing \verb|MAD-X| \textit{sequence} files which describe the optics lattices for the CERN accelerator complex. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction.
+A variety of simulation software packages for accelerator physics are available, each having their own optimisations, and application areas amongst the accelerator physics community. For this study, the \verb|MAD-X|~\cite{Iselin:MAD} and \verb|Xsuite|~\cite{xsuite} packages were used.~\verb|MAD-X| remains the standard tool in the area of optics and beam transfer, and CERN provides a common optics repository---\verb|acc-models|~\cite{optics_repo}---containing \verb|MAD-X| \textit{sequence} files which describe the optics lattices for the CERN accelerator complex. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction.
 
 \verb|Xsuite|---a relatively recent simulation tool, first made available in 2021---is a Python package which shares many similarities with \verb|MAD-X|, and can import \verb|MAD-X| sequences into its own lattice definitions. However, \verb|Xsuite| has additional capabilities, such as \textit{context} management, which provides the ability to run simulations on different hardware---namely GPUs. This is achieved by using the \verb|cupy|~\cite{CuPy} package, which provides a drop-in replacement for \verb|numpy|, but with optimisations for accelerating workloads on GPUs. Additionally, \verb|Xsuite| also has an existing \verb|Exciter| beam element, which can model the time-dependent transverse kicker used in RFKO. There has been a rapid increase in the use of \verb|Xsuite| within the accelerator physics community at CERN, which---combined with the additional capabilities beyond \verb|MAD-X|---motivated its use in this study.
 
@@ -1838,7 +1838,7 @@ This image was made available on CERN's image registry using a \textit{continuou
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{phase-space-sim.png}
-  \cprotect\caption{Phase-space distribution of the RFKO simulation at the \verb|SMH57| septum location, plotting all particles for the first 1000 turns (approx.\qty{2.128}{\milli\second} in lab time). Color scale indicates turn number. Inset shows extracted particle distribution and a spiral step of $\Delta X_3\approx$\qty{6.1}{\milli\meter}.}\label{fig:phase-space-sim}
+  \cprotect\caption{Phase-space distribution of the RFKO simulation at the \verb|SMH57| septum location, plotting all particles for the first 1000 turns (approx.\qty{2.128}{\milli\second} in lab time). RFKO driven by a transverse excitation frequency chirp across $f_{rev}/3$ at a \textit{rep-rate} of \qty{0.12}{\milli\second}. Color scale indicates turn number. Inset shows extracted particle distribution and a spiral step of $\Delta X_3\approx$\qty{6.1}{\milli\meter}.}\label{fig:phase-space-sim}
 \end{figure}
 
 
@@ -2014,7 +2014,7 @@ Previous work on optimising simulations slow extraction (at the SPS) achieved a 
 These findings motivated the selection of parameters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallelism becomes saturated around \qty{500000}{particles}. By not exceeding this amount, the simulation can complete in a reasonable amount of time.
 
 \clearpage
-\section{Frequency Response}
+\section{Frequency Response}\label{results:freq_response}
 
 In order to compare the accuracy of RFKO slow extraction simulations to measurements taken from the implementation on the real machine, analytical tools established by previous work~\cite{Pari:2780495} were used to measure the frequency response of the RFKO system. By varying the rate at which a chirp was repeated, known as the \textit{interval frequency} or \textit{rep rate}, the resulting spill could be characterised. 
 
@@ -2028,7 +2028,7 @@ For the machine implementation, the spill was measured using an $N_2$ gas scinti
   \cprotect\caption{Example signals recorded by the \verb|BXSCAL| scintillator at various \textit{rep-rate} intervals.}\label{fig:raw_signal}
 \end{figure}
 
-Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CERN's logging database~\cite{nxcals}. An example of this data can be found in~\autoref{fig:raw_signal}, showing a range of rep-rate intervals. The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. 
+Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CERN's logging database~\cite{nxcals}. This time-series scintillator provides a signal proportional to the instantanous number of particles passing through the F61 extraction line, and can therefore be used as the extraction rate spill signal. An example of this data can be found in~\autoref{fig:raw_signal}, showing a range of rep-rate intervals. The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. 
 
 
 \begin{figure}
@@ -2063,10 +2063,10 @@ where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N
 
 This low-pass filter effect, and corresponding minimum transfer characteristic, can be explained by the time taken for particles to move from a stable phase-space area to the magnetic septum~\cite{Sorge_2018}. This time $T_{tr}$, in units of 3 turns, is known as the \textit{transit time}, and is given by~\cite{Pullia:313678, Bryant:CAS}:
 \begin{equation}
-  T_{tr} = \frac 1{\sqrt{3}\varepsilon_Q} \ln \left| \frac n{n+3} \frac 3{\frac {\dot \varepsilon_Q}\varepsilon_Q - \frac 1{\sqrt 3}\frac{\dot\varepsilon_Q}{\varepsilon_Q^2}}\right|
+  T_{tr} = \frac 1{\sqrt{3}{\varepsilon_Q}} \ln \left| \frac n{n+3} \frac 3{\frac {\dot {\varepsilon_Q}}{\varepsilon_Q} - \frac 1{\sqrt 3}\frac{\dot{{\varepsilon_Q}}}{{{\varepsilon_Q}}^2}}\right|
   \label{eq:transit_time}
 \end{equation} 
-The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$, accounts for the time taken to move from a fixed point $O'$ to the magnetic septum, where the distance between the edge of the stable phase space area and the septum is $|X_{MS}|$, and the distance between the edge of the stable phase space area enclosed by the separatrices and its center is $|X_{sep}|$. The second fraction, where $\varepsilon_Q$ was defined as the modified tune distance in~\autoref{eq:spiral_step} and~\autoref{eq:spiral_kick}, accounts for time taken to move along the side of a stable triangle to the fixed point $O'$.~\autoref{fig:transit_time} illustrates this transit time in phase-space.
+The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$, accounts for the time taken to move from a fixed point $O'$ to the magnetic septum, where the distance between the edge of the stable phase space area and the septum is $|X_{MS}|$, and the distance between the edge of the stable phase space area enclosed by the separatrices and its center is $|X_{sep}|$. The second fraction, where ${\varepsilon_Q}$ was defined as the modified tune distance in~\autoref{eq:spiral_step} and~\autoref{eq:spiral_kick}, accounts for time taken to move along the side of a stable triangle to the fixed point $O'$.~\autoref{fig:transit_time} illustrates this transit time in phase-space.
 
 \begin{figure}
   \centering
@@ -2126,23 +2126,12 @@ The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$,
     \caption{A phase-space diagram illustrating the transit time $T_{tr}$ elapsed between leaving the last stable triangle and arriving at the septum. The particle motion (and transit time) is presented in units of three turns; in real-time, the particle moves between the three separatrix arms. The Kobayashi Hamiltonian forms the separatrices of the stable triangle. Total transit time $T_{tr}=T_{tr,1} + T_{tr,2}$ depends both on the distance $(x_0, y_0)$ of the particle from a fixed point $O'$ ($T_{tr,1}$) and the distance from $O'$ to the septum blade ($T_{tr,2}$).}\label{fig:transit_time}
 \end{figure}
 
-In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. To obtain an equation for $\Delta T_{tr}$, the total effect of all sextupoles (\verb|XSE01| and \verb|XSE07| in~\autoref{fig:schematic}) is approximated as a single \textit{virtual} sextupole~\cite{PIMMS}. The strength of this sextupole, $S$, defines $|X_{sep}|$ as 
+In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. 
+The spread of transit times is therefore approximated to~\cite{PhysRevApplied.13.044076, Pullia:313678}
 \begin{equation}
-  |X_{sep}| = \frac 23\left|\frac\varepsilon_Q S\right|
-  \label{eq:xsep}
-\end{equation}
-As mentioned before, $|X_{sep}|$ defines the area of the stable phase space (the last stable triangle). This area must be larger than the phase space area of the beam ($\pi\varepsilon$, where $\varepsilon$ is the beam emittance).~\autoref{eq:xsep} provides the approximate relation $\varepsilon_Q\propto|S|$, neglecting deviations due to momentum spread. The spread of transit times is therefore approximately
-\begin{equation}
-  \Delta T_{tr}\approx\frac{dT_{tr}}{d\varepsilon_Q}\Delta\varepsilon_Q
-\end{equation}
-
-
-
-% The this limiting frequency can be approximated to a first order simply as:
-% \begin{equation}
-%   f_{lim} = \frac 1{T_{tr}\cdot 3\cdot T_{rev}} \approx \frac 1{3\cdot T_{rev}\times 1/\sqrt{3}\cdot 6\pi\cdot\delta Q}
-% \end{equation}
-
+  \Delta T_{tr}\approx\frac{dT_{tr}}{d{\varepsilon_Q}}\Delta{\varepsilon_Q}\propto\frac 1{\overline{\varepsilon_Q}^2}\Delta\varepsilon_Q
+\end{equation} where $\overline{\varepsilon_Q}$ is the mean modified tune distance. 
+The consequence of this transit time spread is a spread in septum arrival time between instantaneously excited particles. Should the chirp repetition period be shorter than this interval, the chirp repetition frequency component will be ``washed out'' in the spill structure.
 
 % For a limiting frequency $f_{lim}$ of \qty{4}{\kilo\hertz}, and a revolution period of $\sim$\qty{2.4}{\micro\second}, a tune distance of $\delta Q=\sqrt{3}/625\pi\approx 0.0087$ is found. This is close to the tune distance targeted of $\delta Q=0.01$ (\autoref{fig:cycle}).
 
@@ -2197,6 +2186,8 @@ Another analytical tool for quantifying slow extraction spill quality establishe
 
 By calculating the spill duty factor across a range of chirp repetition frequencies and voltages, a heatmap of spill quality can be generated.~\autoref{fig:sdf_meas} shows the spill duty factor heatmaps for the RFKO system as measured in the machine, both with a bunched and coasting beam. Qualitative analysis of the heatmaps identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
 
+This effect of increased spill duty factor is also an effect of the transit time spread. As the chirp repetition rate approaches the transit time spread, successive excitations will push more particles into resonance and onto the separatrices before the previous particles have encountered the septum. The separation between extraction ``pulses'' then reduces, and the spill duty factor increases (\autoref{fig:sdf_example}).
+
 
 
 \begin{figure}[h]
@@ -2215,18 +2206,21 @@ By calculating the spill duty factor across a range of chirp repetition frequenc
 
 \chapter{Conclusion}
 
-This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results presented in~\autoref{results:freq_response} and~\autoref{results:sdf} show that the system is capable of producing spills with a flat freqyency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors of up to \qty{90}{\percent} for bunched beams, and \qty{50}{\percent} for coasting beams.
+This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) for the East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results of machine studies presented in~\autoref{results:freq_response} and~\autoref{results:sdf} show that the system is capable of producing spills with a flat freqyency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors of up to \qty{80}{\percent} for bunched beams, and \qty{60}{\percent} for coasting beams.
 
-This thesis also demonstrates significant agreement between the frequency response of this RFKO implementation and the characteristics observed in previous studies~\cite{wepmp008,Pari:2780495}. This agreement is well-observed between the real machine and simulations with a bunched beam, where both datasets place the optimum repetition frequency (minimising the presence of this frequency in the spill) for a RFKO-driving chirp signal between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz}. 
-
+This thesis also demonstrates significant agreement between the frequency response of this RFKO implementation and the characteristics observed in previous studies~\cite{wepmp008,Pari:2780495}. This agreement is also well-observed between the real machine and simulations with a bunched beam, where both datasets place the optimum repetition frequency (minimising the presence of this frequency in the spill) for a RFKO-driving chirp signal between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz}. This finding motivates the development of a dedicated signal generator for the PS TFB system for use with RFKO. 
 This agreement is less well-observed for coasting beams, where the simulations show lower frequency response minima than machine observations. 
 
+The implementation of RFKO simulations in \verb|Xsuite| presented in~\autoref{sec:rfko_sim} also show significant performance improvements over previous work simulating Slow Extraction at the SPS with \verb|MAD-X|~\cite{Schicho:2039579}. By exploiting GPU accelerated computing provided by \verb|Xsuite|'s compatability with \verb|CuPy|, CERN's batch-processing service, and containerised environments, the simulations presented in this thesis are up to 400 times more performant in real-world simulation time than CPU-based methods.
 
 \section{Outlook}
 
-As mentioned in~\autoref{sec:septum}, only one of the magnetic septa---\verb|SMH57|---was modelled for extraction. The accuracy of the simulation model would benefit from future development to simulate particles through both the septa and into the F61 line. 
+There are several opportunities for improvements presented in this thesis, both for potential future studies, and for the operational implementation of RFKO at the PS:
+\begin{itemize}
+  \item As mentioned in~\autoref{sec:septum}, only one of the magnetic septa---\verb|SMH57|---was modelled for extraction. The accuracy of the simulation model would benefit from future development to simulate particles through both the septa and into the F61 line. This would require combining the PS optics models with the \textit{F61} optics models provided by \textit{acc-models-tls}~\cite{optics_repo}.
+  \item The setup of the AFG used to generate chirp signals with repetition rates below \qty{1}{\milli\second} (\autoref{sec:magcycle}) was only a temporary solution, and is not suitable for long-term operational use, as it operates entirely independetly from the LHC Software Architecture~\cite{Roderick:1215575} (LSA) database. A dedicated signal generator, with an interface to CERN's Technical Network and LSA would be a significant improvement.
+\end{itemize}
 
-% [TODO) step 4: profit
 
 \chapter{Acknowledgements}
 
