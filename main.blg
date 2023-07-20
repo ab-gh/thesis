@@ -8,6 +8,10 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: refs.bib
+Warning--entry type for "russo" isn't style-file defined
+--line 12 of file refs.bib
+Warning--entry type for "brunner" isn't style-file defined
+--line 21 of file refs.bib
 Warning--entry type for "Hegglin:2239398" isn't style-file defined
 --line 659 of file refs.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
@@ -16,6 +20,7 @@ Warning--entry type for "Hegglin:2239398" isn't style-file defined
 Warning--empty booktitle in Fraser:CAS
 Warning--empty journal in Iselin:MAD
 Warning--empty journal in Rossbach:247501
+Warning--empty booktitle in Furukawa2002PROGRESSOR
 Warning--empty journal in Sterbini:2158994
 Warning--empty journal in Gasior:895142
 Warning--empty journal in Schicho:2039579
@@ -23,45 +28,45 @@ Warning--empty journal in nxcals
 Warning--empty booktitle in Bryant:CAS
 
 Done.
-You've used 40 entries,
+You've used 48 entries,
             4087 wiz_defined-function locations,
-            1112 strings with 15731 characters,
-and the built_in function-call counts, 27024 in all, are:
-= -- 2351
-> -- 590
-< -- 131
-+ -- 311
-- -- 121
-* -- 1318
-:= -- 4397
-add.period$ -- 83
-call.type$ -- 40
-change.case$ -- 40
-chr.to.int$ -- 240
-cite$ -- 48
-duplicate$ -- 2053
-empty$ -- 2087
-format.name$ -- 144
-if$ -- 6225
+            1165 strings with 17699 characters,
+and the built_in function-call counts, 32635 in all, are:
+= -- 2830
+> -- 725
+< -- 165
++ -- 383
+- -- 148
+* -- 1584
+:= -- 5290
+add.period$ -- 99
+call.type$ -- 48
+change.case$ -- 49
+chr.to.int$ -- 306
+cite$ -- 57
+duplicate$ -- 2471
+empty$ -- 2515
+format.name$ -- 176
+if$ -- 7523
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 384
-newline$ -- 213
-num.names$ -- 37
-pop$ -- 887
+int.to.str$ -- 48
+missing$ -- 461
+newline$ -- 249
+num.names$ -- 45
+pop$ -- 1068
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2179
+skip$ -- 2628
 stack$ -- 0
-substring$ -- 778
-swap$ -- 1599
-text.length$ -- 51
+substring$ -- 966
+swap$ -- 1932
+text.length$ -- 63
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 40
-warning$ -- 8
-while$ -- 85
-width$ -- 42
-write$ -- 494
-(There were 9 warnings)
+type$ -- 48
+warning$ -- 9
+while$ -- 105
+width$ -- 50
+write$ -- 586
+(There were 12 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  20 JUL 2023 09:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  20 JUL 2023 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -913,7 +913,7 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./titlepage.tex
-<Royal_Holloway_coat_of_arms.png, id=203, 200.75pt x 318.18875pt>
+<Royal_Holloway_coat_of_arms.png, id=195, 200.75pt x 318.18875pt>
 File: Royal_Holloway_coat_of_arms.png Graphic file (type png)
 <use Royal_Holloway_coat_of_arms.png>
 Package pdftex.def Info: Royal_Holloway_coat_of_arms.png  used on input line 22.
@@ -926,7 +926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<signature.png, id=214, 3645.62pt x 1809.76125pt>
+<signature.png, id=205, 3645.62pt x 1809.76125pt>
 File: signature.png Graphic file (type png)
 <use signature.png>
 Package pdftex.def Info: signature.png  used on input line 12.
@@ -977,19 +977,23 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 31
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<fast.png, id=303, 403.2666pt x 148.51485pt>
+<fast.png, id=293, 403.2666pt x 148.51485pt>
 File: fast.png Graphic file (type png)
 <use fast.png>
 Package pdftex.def Info: fast.png  used on input line 323.
 (pdftex.def)             Requested size: 469.75499pt x 173.00702pt.
  [7 <./fast.png>]
-<fastmulti.png, id=323, 373.27455pt x 172.2435pt>
+<fastmulti.png, id=314, 373.27455pt x 172.2435pt>
 File: fastmulti.png Graphic file (type png)
 <use fastmulti.png>
 Package pdftex.def Info: fastmulti.png  used on input line 333.
 (pdftex.def)             Requested size: 469.75499pt x 216.77563pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Warning: Citation `brunner' on page 8 undefined on input line 337.
+
+
+Underfull \vbox (badness 6047) has occurred while \output is active []
 
  [8 <./fastmulti.png>] [9] [10]
 Chapter 2.
@@ -997,419 +1001,4 @@ Chapter 2.
 
 ]
 
-pdfTeX warning: pdflatex (file ./rhr.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<rhr.pdf, id=373, 463.7325pt x 457.71pt>
-File: rhr.pdf Graphic file (type pdf)
-<use rhr.pdf>
-Package pdftex.def Info: rhr.pdf  used on input line 434.
-(pdftex.def)             Requested size: 115.93283pt x 114.42722pt.
-[12 <./rhr.pdf>] [13]
-
-Package siunitx Warning: Unit macro \clight has been deprecated in this
-(siunitx)                release.
-(siunitx)                
-(siunitx)                The BIPM have removed this unit from the SI Brochure.
-(siunitx)                You should define it yourself using \DeclareSIUnit in
-(siunitx)                your source. The current definition is
-(siunitx)                
-(siunitx)                \DeclareSIUnit\clight{\protect \text  {\protect
-(siunitx)                \ensuremath  {c}}_{0}}
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-Underfull \vbox (badness 3872) has occurred while \output is active []
-
- [15]
-Underfull \vbox (badness 2401) has occurred while \output is active []
-
- [16]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 2662) has occurred while \output is active []
-
- [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-
-LaTeX Warning: Reference `eq:rel_long' on page 20 undefined on input line 1153.
-
-
-Underfull \vbox (badness 4543) has occurred while \output is active []
-
- [20]
-Underfull \vbox (badness 2717) has occurred while \output is active []
-
- [21]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1271.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@UnitsNiceFrac ' on input line 1271.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1271.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-<kobayashi.png, id=558, 459.6372pt x 449.88075pt>
-File: kobayashi.png Graphic file (type png)
-<use kobayashi.png>
-Package pdftex.def Info: kobayashi.png  used on input line 1362.
-(pdftex.def)             Requested size: 281.85585pt x 275.87529pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24 <./kobayashi.png>]
-<real-world.png, id=575, 1008.76875pt x 579.16376pt>
-File: real-world.png Graphic file (type png)
-<use real-world.png>
-Package pdftex.def Info: real-world.png  used on input line 1384.
-(pdftex.def)             Requested size: 281.85585pt x 161.82008pt.
-<momentum-driven.png, id=576, 1754.555pt x 994.71625pt>
-File: momentum-driven.png Graphic file (type png)
-<use momentum-driven.png>
-Package pdftex.def Info: momentum-driven.png  used on input line 1398.
-(pdftex.def)             Requested size: 281.85585pt x 159.79533pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25 <./real-world.png>]
-<amplitude-driven.png, id=584, 1766.6pt x 978.65625pt>
-File: amplitude-driven.png Graphic file (type png)
-<use amplitude-driven.png>
-Package pdftex.def Info: amplitude-driven.png  used on input line 1404.
-(pdftex.def)             Requested size: 281.85585pt x 156.1402pt.
-
-Underfull \vbox (badness 2799) has occurred while \output is active []
-
- [26 <./momentum-driven.png> <./amplitude-driven.png>] [27] [28]
-Chapter 3.
-
-Package siunitx Warning: Unit macro \atomicmassunit has been deprecated in
-(siunitx)                this release.
-(siunitx)                
-(siunitx)                The BIPM have removed this unit from the SI Brochure.
-(siunitx)                You should define it yourself using \DeclareSIUnit in
-(siunitx)                your source. The current definition is
-(siunitx)                
-(siunitx)                \DeclareSIUnit\atomicmassunit{u}
-
-
-Overfull \hbox (14.30252pt too wide) in paragraph at lines 1665--1666
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29
-
-] [30]
-<tunemap.png, id=640, 423.38174pt x 315.94035pt>
-File: tunemap.png Graphic file (type png)
-<use tunemap.png>
-Package pdftex.def Info: tunemap.png  used on input line 1693.
-(pdftex.def)             Requested size: 281.85585pt x 210.32909pt.
-<cyclegraphs.png, id=641, 715.35255pt x 715.473pt>
-File: cyclegraphs.png Graphic file (type png)
-<use cyclegraphs.png>
-Package pdftex.def Info: cyclegraphs.png  used on input line 1699.
-(pdftex.def)             Requested size: 469.75499pt x 469.8337pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[31]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1725.
-
-<fake-signal.png, id=659, 565.51276pt x 281.853pt>
-File: fake-signal.png Graphic file (type png)
-<use fake-signal.png>
-Package pdftex.def Info: fake-signal.png  used on input line 1740.
-(pdftex.def)             Requested size: 281.85585pt x 140.47887pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32 <./tunemap.png>]
-<both-chirps.png, id=674, 570.933pt x 281.853pt>
-File: both-chirps.png Graphic file (type png)
-<use both-chirps.png>
-Package pdftex.def Info: both-chirps.png  used on input line 1748.
-(pdftex.def)             Requested size: 281.85585pt x 139.14995pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33 <./cyclegraphs.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./fake-signal.png> <./both-chirps.png>]
-<optics.png, id=694, 906.14536pt x 490.11105pt>
-File: optics.png Graphic file (type png)
-<use optics.png>
-Package pdftex.def Info: optics.png  used on input line 1772.
-(pdftex.def)             Requested size: 422.77661pt x 228.66956pt.
-\openout4 = `main-1.cpt'.
-
- (./main-1.cpt) (./main-1.cpt)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[35] [36 <./optics.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1807.
-
-<initial-dist.png, id=723, 642.4803pt x 640.3122pt>
-File: initial-dist.png Graphic file (type png)
-<use initial-dist.png>
-Package pdftex.def Info: initial-dist.png  used on input line 1822.
-(pdftex.def)             Requested size: 469.75499pt x 468.17633pt.
-\openout4 = `main-2.cpt'.
-
-(./main-2.cpt) (./main-2.cpt) [37] [38 <./initial-dist.png>]
-<phase-space-sim.png, id=752, 591.4095pt x 393.99194pt>
-File: phase-space-sim.png Graphic file (type png)
-<use phase-space-sim.png>
-Package pdftex.def Info: phase-space-sim.png  used on input line 1840.
-(pdftex.def)             Requested size: 422.77661pt x 281.64798pt.
-\openout4 = `main-3.cpt'.
-
- (./main-3.cpt) (./main-3.cpt)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[39 <./phase-space-sim.png>] [40]
-Chapter 4.
-<CPU_graph_per_turn.png, id=768, 538.6524pt x 338.34406pt>
-File: CPU_graph_per_turn.png Graphic file (type png)
-<use CPU_graph_per_turn.png>
-Package pdftex.def Info: CPU_graph_per_turn.png  used on input line 1993.
-(pdftex.def)             Requested size: 328.82706pt x 206.55476pt.
-[41
-
-]
-<GPU_graph_per_turn.png, id=776, 538.4115pt x 338.34406pt>
-File: GPU_graph_per_turn.png Graphic file (type png)
-<use GPU_graph_per_turn.png>
-Package pdftex.def Info: GPU_graph_per_turn.png  used on input line 1999.
-(pdftex.def)             Requested size: 328.82706pt x 206.63737pt.
-<COMPARISON_graph_per_turn.png, id=778, 538.4115pt x 338.34406pt>
-File: COMPARISON_graph_per_turn.png Graphic file (type png)
-<use COMPARISON_graph_per_turn.png>
-Package pdftex.def Info: COMPARISON_graph_per_turn.png  used on input line 2006.
-(pdftex.def)             Requested size: 328.82706pt x 206.63737pt.
-\openout4 = `main-4.cpt'.
-
- (./main-4.cpt) (./main-4.cpt) [42 <./CPU_graph_per_turn.png> <./GPU_graph_per_turn.png>] [43 <./COMPARISON_graph_per_turn.png>]
-<raw_signal.png, id=804, 715.473pt x 426.393pt>
-File: raw_signal.png Graphic file (type png)
-<use raw_signal.png>
-Package pdftex.def Info: raw_signal.png  used on input line 2027.
-(pdftex.def)             Requested size: 328.82706pt x 195.96748pt.
-\openout4 = `main-5.cpt'.
-
- (./main-5.cpt) (./main-5.cpt)
-<sample_rate_variation.png, id=808, 578.03955pt x 211.87155pt>
-File: sample_rate_variation.png Graphic file (type png)
-<use sample_rate_variation.png>
-Package pdftex.def Info: sample_rate_variation.png  used on input line 2036.
-(pdftex.def)             Requested size: 375.80542pt x 137.7472pt.
-<raw_ffts.png, id=812, 715.473pt x 426.393pt>
-File: raw_ffts.png Graphic file (type png)
-<use raw_ffts.png>
-Package pdftex.def Info: raw_ffts.png  used on input line 2044.
-(pdftex.def)             Requested size: 375.80542pt x 223.96378pt.
-
-Underfull \vbox (badness 3189) has occurred while \output is active []
-
- [44
-
- <./raw_signal.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45 <./sample_rate_variation.png> <./raw_ffts.png>]
-<machine_rf_on.png, id=850, 545.6385pt x 354.123pt>
-File: machine_rf_on.png Graphic file (type png)
-<use machine_rf_on.png>
-Package pdftex.def Info: machine_rf_on.png  used on input line 2141.
-(pdftex.def)             Requested size: 422.77661pt x 274.38844pt.
-<machine_rf_off.png, id=852, 548.16795pt x 354.123pt>
-File: machine_rf_off.png Graphic file (type png)
-<use machine_rf_off.png>
-Package pdftex.def Info: machine_rf_off.png  used on input line 2145.
-(pdftex.def)             Requested size: 422.77661pt x 273.11862pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46]
-<sim_rf_on.png, id=873, 545.6385pt x 354.123pt>
-File: sim_rf_on.png Graphic file (type png)
-<use sim_rf_on.png>
-Package pdftex.def Info: sim_rf_on.png  used on input line 2156.
-(pdftex.def)             Requested size: 422.77661pt x 274.38844pt.
-<sim_rf_off.png, id=875, 545.6385pt x 354.123pt>
-File: sim_rf_off.png Graphic file (type png)
-<use sim_rf_off.png>
-Package pdftex.def Info: sim_rf_off.png  used on input line 2160.
-(pdftex.def)             Requested size: 422.77661pt x 274.38844pt.
-\openout4 = `main-6.cpt'.
-
- (./main-6.cpt) (./main-6.cpt)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<simvmeas_bunched.png, id=878, 512.3943pt x 338.34406pt>
-File: simvmeas_bunched.png Graphic file (type png)
-<use simvmeas_bunched.png>
-Package pdftex.def Info: simvmeas_bunched.png  used on input line 2169.
-(pdftex.def)             Requested size: 422.77661pt x 279.17342pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[47] [48 <./machine_rf_on.png> <./machine_rf_off.png>] [49 <./sim_rf_on.png> <./sim_rf_off.png>] [50 <./simvmeas_bunched.png>]
-<sdfs.png, id=911, 715.473pt x 426.393pt>
-File: sdfs.png Graphic file (type png)
-<use sdfs.png>
-Package pdftex.def Info: sdfs.png  used on input line 2183.
-(pdftex.def)             Requested size: 375.80542pt x 223.96378pt.
-<sdf_on_meas.png, id=917, 473.72984pt x 309.5565pt>
-File: sdf_on_meas.png Graphic file (type png)
-<use sdf_on_meas.png>
-Package pdftex.def Info: sdf_on_meas.png  used on input line 2196.
-(pdftex.def)             Requested size: 422.77661pt x 276.2649pt.
-<sdf_off_meas.png, id=919, 473.72984pt x 309.5565pt>
-File: sdf_off_meas.png Graphic file (type png)
-<use sdf_off_meas.png>
-Package pdftex.def Info: sdf_off_meas.png  used on input line 2200.
-(pdftex.def)             Requested size: 422.77661pt x 276.2649pt.
-\openout4 = `main-7.cpt'.
-
- (./main-7.cpt) (./main-7.cpt)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[51
-
- <./sdfs.png>] [52 <./sdf_on_meas.png> <./sdf_off_meas.png>]
-Chapter 5.
-
-Underfull \vbox (badness 8151) has occurred while \output is active []
-
- [53
-
-] [54]
-Chapter 6.
-(./main.bbl [55
-
-]
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-[56
-
-] [57]
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `en'. Using the pattern for
-** the default language instead.
-) [58]
-Appendix A.
-[59
-
-]
-Appendix B.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 2243.
- (./code/kick_angle.py
-
-LaTeX Font Warning: Font shape `T1/cmtt/m/n' in size <18.42809> not available
-(Font)              size <17.28> substituted on input line 38.
-
-[60
-
-]) (./code/generate_chirp.py) (./code/time_series.py) [61]
-Appendix C.
-[62
-
-] (./main.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.14809pt have occurred.
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C98A0371F7DDD52C207485CF1FAE5FD2;8169.
- ) 
-Here is how much of TeX's memory you used:
- 36253 strings out of 476025
- 731007 string characters out of 5790017
- 2142388 words of memory out of 5000000
- 55302 multiletter control sequences out of 15000+600000
- 615766 words of font info for 349 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 84i,13n,89p,1360b,2842s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
-
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (63 pages, 16351140 bytes).
-PDF statistics:
- 1292 PDF objects out of 1440 (max. 8388607)
- 1089 compressed objects within 11 object streams
- 369 named destinations out of 1000 (max. 500000)
- 107653 words of extra memory for PDF output out of 128383 (max. 10000000)
-
+pdfTeX warning: pdflatex (file ./rhr.pdf): PDF inclusion: found PDF version <1.7>, but at most versio

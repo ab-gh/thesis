@@ -326,7 +326,7 @@ As previously mentioned, \textit{fast} extraction provides a spill of particles 
 
 This method of \textbf{\textit{single-turn} fast extraction} (~\autoref{fig:fast_diagram}) is used at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating rings in the LHC~\cite{Fraser:CAS}. The PSB uses the same method, but has the added complexity of ``merging'' four seperate stacked rings to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems are shown in~\ref{fig:chain}, where red diamonds mark fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain to discard the circulating beam at the SPS and LHC.
 
-In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is almost approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters across, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, coined as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum. In its current implementation in the PS, the beam is bumped similarly to single-turn fast extraction, but is instead forced over the blade of an electrostatic septum (ES), such that a segment the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is kicked back onto its orbit. The next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until the finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
+In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is almost approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters across, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, coined as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum~\cite{PhysRevSTAB.14.030101}. Previously implemented in extraction from the PS, the beam was bumped similarly to single-turn fast extraction, but was instead forced over the blade of an electrostatic septum (ES), such that a segment the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is then kicked back onto its orbit. The next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until the finally the remaining core of the beam is bumped directly to the magnetic septum. This provided a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
 
 \begin{figure}[hb]
   \centering
@@ -334,9 +334,7 @@ In accelerator-to-accelerator contexts, the synchronous nature of fast extractio
   \caption{Diagram of a general multi-turn fast extraction system~\cite{Fraser:CAS}.}\label{fig:fast_multi_diagram}
 \end{figure}
 
-This method of increasing the spill time is, however, limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large.
-
-For example, if a 50\% extraction efficiency is desired over $10^4$ turns, the beam thickness sliced off by the ES must be the same as the thickness of the blade itself. For the SPS, the ES has blade thickness of \qty{25}{\micro\meter}. The required diameter of the beam, therefore, would be $2\cdot 25\mu m\cdot 10^4 = $ \qty{0.5}{\meter}. This diameter is already lager than the beam pipes, clearly physically impossible.
+This method of increasing the spill time is, however, limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large. For example, if a 50\% extraction efficiency is desired over $10^4$ turns, the beam thickness sliced off by the ES must be the same as the thickness of the blade itself. For the SPS, the ES has blade thickness of \qty{25}{\micro\meter}. The required diameter of the beam, therefore, would be $2\cdot 25\mu m\cdot 10^4 = $ \qty{0.5}{\meter}~\cite{brunner}. This diameter is already lager than the beam pipes, clearly physically impossible.
 
 In order to provide spills over a longer duration, over many thousands of turns, \textit{slow extraction} must be used. 
 
@@ -522,100 +520,64 @@ Again referring to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a 
 
 \begin{figure}[h]
   \centering
+  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
+  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+  %uncomment if require: \path (0,420); %set diagram left start at 0, and has height of 420
   
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,420); %set diagram left start at 0, and has height of 420
-
-%Shape: Rectangle [id:dp3699492063250047] 
-\draw   (100,70) -- (250,70) -- (250,130) -- (100,130) -- cycle ;
-%Curve Lines [id:da992200965639283] 
-\draw [line width=2.25]    (90,100) .. controls (139.78,99.61) and (233.94,90.96) .. (286.81,71.22) ;
-\draw [shift={(290,70)}, rotate = 158.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=2.25]    (17.49,-5.26) .. controls (11.12,-2.23) and (5.29,-0.48) .. (0,0) .. controls (5.29,0.48) and (11.12,2.23) .. (17.49,5.26)   ;
-%Shape: Rectangle [id:dp8960939916911084] 
-\draw   (320,70) -- (390,70) -- (390,130) -- (320,130) -- cycle ;
-%Shape: Rectangle [id:dp004915718994831897] 
-\draw   (320,60) -- (390,60) -- (390,70) -- (320,70) -- cycle ;
-%Shape: Rectangle [id:dp9834216786415646] 
-\draw   (320,130) -- (390,130) -- (390,140) -- (320,140) -- cycle ;
-%Straight Lines [id:da9215546463069324] 
-\draw    (330,80) -- (330,117) ;
-\draw [shift={(330,120)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da4829295704205643] 
-\draw    (380,80) -- (380,117) ;
-\draw [shift={(380,120)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da5246257542758568] 
-\draw    (355,80) -- (355,117) ;
-\draw [shift={(355,120)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da3445329346880859] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (90,100) -- (290,100) ;
-%Straight Lines [id:da3150179528223387] 
-\draw    (290,100) -- (290,73) ;
-\draw [shift={(290,70)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Flowchart: Summing Junction [id:dp7903638162414015] 
-\draw   (107,114.9) .. controls (107,110.43) and (110.63,106.8) .. (115.1,106.8) .. controls (119.57,106.8) and (123.2,110.43) .. (123.2,114.9) .. controls (123.2,119.37) and (119.57,123) .. (115.1,123) .. controls (110.63,123) and (107,119.37) .. (107,114.9) -- cycle ; \draw   (109.37,109.17) -- (120.83,120.63) ; \draw   (120.83,109.17) -- (109.37,120.63) ;
-
-% Text Node
-\draw (334.5,42) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{27.66pt}\setlength\topsep{0pt}
-\begin{center}
-North
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (336,141) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{29.38pt}\setlength\topsep{0pt}
-\begin{center}
-South
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (361,84) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{9.78pt}\setlength\topsep{0pt}
-\begin{center}
-$\displaystyle \vec{B}$
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (289,48) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
-\begin{center}
-$\displaystyle \vec{v}$
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (292,73) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{9.14pt}\setlength\topsep{0pt}
-\begin{center}
-$\displaystyle \vec{F}$
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (153,42) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{31.64pt}\setlength\topsep{0pt}
-\begin{center}
-Dipole
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (123.5,171) node [anchor=north west][inner sep=0.75pt]   [align=left] {Top-down View};
-% Text Node
-\draw (311,172) node [anchor=north west][inner sep=0.75pt]   [align=left] {Front-on View};
-% Text Node
-\draw (128,101) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{9.78pt}\setlength\topsep{0pt}
-\begin{center}
-$\displaystyle \vec{B}$
-\end{center}
-
-\end{minipage}};
-
-
-\end{tikzpicture}
+  %Shape: Rectangle [id:dp8960939916911084] 
+  \draw   (104.63,81.43) -- (233.66,81.43) -- (233.66,168.29) -- (104.63,168.29) -- cycle ;
+  %Shape: Rectangle [id:dp004915718994831897] 
+  \draw   (104.63,66.95) -- (233.66,66.95) -- (233.66,81.43) -- (104.63,81.43) -- cycle ;
+  %Shape: Rectangle [id:dp9834216786415646] 
+  \draw   (104.63,168.29) -- (233.66,168.29) -- (233.66,182.77) -- (104.63,182.77) -- cycle ;
+  %Straight Lines [id:da9215546463069324] 
+  \draw    (123.07,95.91) -- (123.07,150.81) ;
+  \draw [shift={(123.07,153.81)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+  %Straight Lines [id:da4829295704205643] 
+  \draw    (215.23,95.91) -- (215.23,150.81) ;
+  \draw [shift={(215.23,153.81)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+  %Straight Lines [id:da5246257542758568] 
+  \draw    (169.15,95.91) -- (169.15,150.81) ;
+  \draw [shift={(169.15,153.81)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+  %Flowchart: Summing Junction [id:dp9967505452618075] 
+  \draw   (161.85,124.86) .. controls (161.85,120.83) and (165.12,117.56) .. (169.15,117.56) .. controls (173.18,117.56) and (176.45,120.83) .. (176.45,124.86) .. controls (176.45,128.89) and (173.18,132.16) .. (169.15,132.16) .. controls (165.12,132.16) and (161.85,128.89) .. (161.85,124.86) -- cycle ; \draw   (163.99,119.7) -- (174.31,130.02) ; \draw   (174.31,119.7) -- (163.99,130.02) ;
+  %Straight Lines [id:da705900304054244] 
+  \draw    (169.15,124.86) -- (198.2,124.86) ;
+  \draw [shift={(200.2,124.86)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
   
-  \caption{A dipole magnet, showing the direction of the magnetic field $\vec B$ into the page (left, upwards in front-on view), the current velocity of a positively charged particle $\vec v$, and the Lorentz force $\vec F$, as calculated by $\vec F=q\vec v\times\vec B$}\label{fig:dipole}
+  % Text Node
+  \draw (150.15,45.7) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{27.66pt}\setlength\topsep{0pt}
+  \begin{center}
+  North
+  \end{center}
+  
+  \end{minipage}};
+  % Text Node
+  \draw (148.65,188.02) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{29.38pt}\setlength\topsep{0pt}
+  \begin{center}
+  South
+  \end{center}
+  
+  \end{minipage}};
+  % Text Node
+  \draw (108.27,101.07) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{9.78pt}\setlength\topsep{0pt}
+  \begin{center}
+  $\displaystyle \vec{B}$
+  \end{center}
+  
+  \end{minipage}};
+  % Text Node
+  \draw (191.27,98.07) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{9.14pt}\setlength\topsep{0pt}
+  \begin{center}
+  $\displaystyle \vec{F}$
+  \end{center}
+  
+  \end{minipage}};
+  
+  \end{tikzpicture}  
+  
+  \caption{A ``front-on'' view of a dipole magnet, showing its magnetic field pointing down, and the Lorentz force experienced by a positively charged particle travelling into the page.}\label{fig:dipole}
 \end{figure}
 
 If $\alpha$ is the bending angle of a single MU, then $\alpha$ can be related to the magnetic rigidity by
@@ -631,49 +593,7 @@ This provides one of the first key insights which is not obvious at first---that
 
 \subsection{Focussing and Multipoles}
 
-\begin{figure}[h]
-\centering
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,556); %set diagram left start at 0, and has height of 556
-%Curve Lines [id:da992200965639283] 
-\draw [line width=2.25]    (191.6,294.6) .. controls (253.97,235.2) and (403.57,229.71) .. (486.12,291.7) ;
-\draw [shift={(488.6,293.6)}, rotate = 217.97] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=2.25]    (17.49,-5.26) .. controls (11.12,-2.23) and (5.29,-0.48) .. (0,0) .. controls (5.29,0.48) and (11.12,2.23) .. (17.49,5.26)   ;
-%Shape: Trapezoid [id:dp1586228139836543] 
-\draw   (420,190) -- (371.6,320) -- (288.4,320) -- (240,190) -- cycle ;
-%Flowchart: Summing Junction [id:dp5579894688888893] 
-\draw   (251,205) .. controls (251,201.13) and (254.13,198) .. (258,198) .. controls (261.87,198) and (265,201.13) .. (265,205) .. controls (265,208.87) and (261.87,212) .. (258,212) .. controls (254.13,212) and (251,208.87) .. (251,205) -- cycle ; \draw   (253.05,200.05) -- (262.95,209.95) ; \draw   (262.95,200.05) -- (253.05,209.95) ;
-%Straight Lines [id:da5730652497322037] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (288.4,320) -- (329.6,434.6) ;
-%Straight Lines [id:da7372483569632045] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (371.6,320) -- (329.6,434.6) ;
-%Curve Lines [id:da13311837170498553] 
-\draw [line width=2.25]    (265.6,255.6) .. controls (329.95,242.73) and (391.36,225.94) .. (497.37,236.28) ;
-\draw [shift={(500.6,236.6)}, rotate = 185.82] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=2.25]    (17.49,-5.26) .. controls (11.12,-2.23) and (5.29,-0.48) .. (0,0) .. controls (5.29,0.48) and (11.12,2.23) .. (17.49,5.26)   ;
-%Straight Lines [id:da8412635645751751] 
-\draw    (500.19,238.56) -- (489.01,291.64) ;
-\draw [shift={(488.6,293.6)}, rotate = 281.89] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(500.6,236.6)}, rotate = 101.89] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-
-% Text Node
-\draw (481,302) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle p_{0}$};
-% Text Node
-\draw (267,193) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \vec{B}$};
-% Text Node
-\draw (491,206) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle p_{0} +\delta p$};
-% Text Node
-\draw (324,383) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \theta $};
-% Text Node
-\draw (502,254) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle D( s) \delta $};
-
-\end{tikzpicture}
-\caption{A top-down diagram of a sector dipole illustrating how small changes in the beam's momentum ($\delta = (p-p_0)/p_0$), lead to changes in the bending effect of a dipole, known as dispersion.}
-\label{fig:dipole_error}
-\end{figure}
-
-\autoref{fig:dipole_error} illustrates the need for corrective elements in the beamline. If a particle is displaced slightly from the design orbit ($x=0$) or has a variation in momentum ($\delta$) before a dipole element (marked with a downwards magnetic field $\vec B$), the bending effect will differ, and the particle will be displaced from the design orbit after the dipole. This difference in bending effect is known as \textit{dispersion}, and will be analysed in~\autoref{sec:transdisp}.
-
-To correct for this, synchrotrons use quadrupole elements to ``focus'' the beam in one transverse plane. An arrangement of four magnetic poles creates a field stronger at higher $|x|$ displacement, causing particles to be pulled back towards the design orbit. However, particles off-axis in the other transverse plane will be pushed further off-axis. To correct for this, a second quadrupole is placed further along in the beamline, with the magnetic poles arranged in the opposite orientation. This arrangement, known as a FODO lattice, is shown in \autoref{fig:quadrupole} (right).
+While single-pair dipole magnets are used to bend the beam along the circular path, double-pair \textit{quadrupole} magnets are used to bound the transverse motion, and to prevent the beam from spreading (increasing in size) due to the intrinsic spread of position and angle. An arrangement of four magnetic poles creates a field stronger at higher $|x|$ displacement, causing particles to be pulled back towards the design orbit, ``focussing'' the beam in one transverse plane (while necessarily defocussing in the other). To correct for the defocussing in the other plane, a second quadrupole is placed further along in the beamline, with the magnetic poles arranged in the opposite orientation. This arrangement, known as a FODO lattice, is shown in \autoref{fig:quadrupole} (right).~\autoref{fig:sextupole} depicts a \textit{sextupole} magnet, with three pole pairs, which is used to correct for the dispersion effect of a dipole. % [TODO) Check, is this better?
 
 \begin{figure}
 \centering
@@ -777,12 +697,6 @@ To correct for this, synchrotrons use quadrupole elements to ``focus'' the beam 
 \label{fig:quadrupole}
 \end{figure}
 
-%%%%%%%%%%%%%%% REMOVE THIS BASIC ANALOGY NO ONE NEEDS IT %%%%%%%%%%%%%%%%%%%%%
-
-Sextupoles provide additional correction to the beam. Depicted in~\autoref{fig:sextupole}, these can be understood by expanding on the optical analogy used thus far, where the Dipole takes the role of a prism, bending the light. As with prisms, beams with higher energy are bent less than low energy, and so the component wavelengths (or energies) in the beam beam are dispersed. The sextupole is analogous to an aspherical element, correcting for chromatic aberration introduced by the focussing quadrupole. Again, as with its optical analogue---a focussing lens---the quadrupole has shorter focal length for higher energy particles. The sextupole acts as a focussing lens at high energy and diverging lens at low energy, correcting for this chromatic effect.
-
-%%%%%%%% ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ %%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{figure}
     \centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -880,7 +794,6 @@ Sextupoles provide additional correction to the beam. Depicted in~\autoref{fig:s
     \label{fig:sextupole}
 \end{figure}
 
-
 \subsection{Single-Particle Oscillatory Motion}
 
 In a periodic (circular) accelerator, the linear equation for transverse motion takes the form of a differential equation:
@@ -902,14 +815,12 @@ Following Floquet's theorem~\cite{Rossbach:247501}, general solution to this equ
 \begin{equation}
 x(s) =\sqrt{\varepsilon}\sqrt{\beta(s)}\cos(\varphi(s)-\varphi_0)
 \label{eq:motion_x}
-\end{equation} where $\varepsilon$ and $\varphi_0$ are integration constants characterising the initial conditions of the particle, and $\beta(s)$ and $\varphi(s)$ are the amplitude and phase functions (respectively) of the oscillation.
-
-The $\beta$ twiss function must also satisfy the periodic constraint $\beta(s+L)=\beta(s)$, and is related to the $\varphi$ phase function by the following equation:
+\end{equation} 
+where $\varphi(s)$ is the oscillation phase, $\varphi_0$ is the initial condition, and $\varepsilon$ is an integration constant. $\varphi_0$ and $\varepsilon$ are constants of a trajectory, and so the transverse oscillation of a particle is given by the special $\beta$ function. The $\beta$ function must also satisfy the periodic constraint $\beta(s+L)=\beta(s)$, and is related to the $\varphi$ phase function by the following equation:
 \begin{eqnarray}
   \varphi(s) = \int^s_0\frac{ds}{\beta(s)}
   \label{eq:phase_and_beta}
 \end{eqnarray}
-
 
 Taking the derivative of~\eqref{eq:motion_x} with respect to $s$ gives an equation for the angle of the trajectory:
 \begin{equation}
@@ -1101,21 +1012,20 @@ Further matrix equations can be defined for other magnets. If we define the prop
 
 This is the principle by which \textit{particle tracking codes}, such as \verb|MAD-X|, operate. An input lattice file defines the structure and properties of the magnets composing the accelerator, and particle variables are then computed with matrix multiplication. 
 
-\subsection{Normalised Phase Space}\label{sec:normalised}
-
 Expanding on the idea of matrix formalism and the phase space ellipse, many particle tracking codes operate in \textit{normalised} phase space $(x_n, x'_n)$---that is, where the phase space of $(x, x')$ is linearly transformed in a way which results in the phase space ellipse becoming circular. The matrix transformation is therefore defined as
 \begin{equation}
   \begin{pmatrix}
-    x \\
-    x'
+    x_n \\
+    x'_n
   \end{pmatrix} = 
   \begin{pmatrix}
     \frac{1}{\sqrt{\beta_x}} & 0 \\
     \frac{\alpha_x}{\sqrt{\beta_x}} & \sqrt{\beta_x}
   \end{pmatrix} \begin{pmatrix}
-    x_n \\
-    x'_n
+    x \\
+    x'
   \end{pmatrix}
+  \label{eq:normalised}
 \end{equation}
 
 \section{Longitudinal Dynamics}\label{sec:long}
@@ -1137,10 +1047,6 @@ In a synchrotron, where the orbit of particles is of constant radius, the magnet
   \frac{2\pi\rho}{v_s}=\frac h{\omega_{RF}}
 \end{equation} where $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference. 
 
-% ==== ==== %
-
-\subsection{Magnetic Ramping}
-
 To keep a particle with increasing energy bent along a path of constant radius, the magnetic field $B$ of the bending dipoles must increase as RF acceleration occurs. Recalling~\autoref{eq:brho}, and deriving by time, obtains
 \begin{equation}
   \frac{dp}{dt} = q\rho\dot B
@@ -1149,8 +1055,7 @@ For one turn in a synchrotron, this results in a momentum gain
 \begin{equation}
   \Delta p_{rev} = q\rho\dot B T_{rev}=\frac{Lq\rho~R\dot B}v
 \end{equation} where $L$ is the machine length. 
-
-Recalling~\autoref{eq:rel_long}, $\Delta E=v\Delta p$, and so the energy gain per revolution is
+The energy gain $\Delta E=v\Delta p$ per revolution is therefore
 \begin{equation}
   \Delta E_{rev} = Lq\rho~R\dot B=qV\sin \phi_s
   \label{eq:ef_sin}
@@ -1159,14 +1064,6 @@ Recalling~\autoref{eq:rel_long}, $\Delta E=v\Delta p$, and so the energy gain pe
   \phi_s=\arcsin\left(L\rho\frac{\dot B}{V_{RF}}\right)
   \label{eq:sync_phase}
 \end{equation}
-
-
-The RF frequency must also ramp as particles increase in energy, and revolution frequency increases. From the earlier definition $\omega_{RF} = \omega h$:
-\begin{equation}
-  \frac{f_{RF}}h = f_{rev} = \frac{v}{2\pi R} = \frac 1{2\pi}\frac{qc^2}E\frac\rho R B
-\end{equation}
-
-% [TODO) ^^^^ Wrap This Up ^^^^ %
 
 \subsection{Dispersion}
 
@@ -1281,7 +1178,7 @@ Now that the fundamentals of accelerator beam physics are established, this sect
   B_3=-\frac 16\left(\frac{d^2B_y}{dx^2}\right)_0
 \end{equation}
 
-In \textit{normalised} coordinates (\autoref{sec:normalised}), these effect of these fields (in a thin-lens approximation) becomes
+In \textit{normalised} coordinates (\autoref{eq:normalised}), these effect of these fields (in a thin-lens approximation) becomes
 \begin{align*}
   \Delta x&=0 & \Delta x'&=S(x^2-\frac{\beta_y}{\beta_x}y^2) \\
   \Delta y&=0 & \Delta y'&=-2S\frac{\beta_y}{\beta_x}xy
@@ -1420,18 +1317,14 @@ A variety of slow extraction implementations can be found across particle accele
 \begin{itemize}
   \item The \textit{National Center for Oncological Hadrontherapy} (CNAO) uses \textbf{Betatron Core} slow extraction~\cite{Falbo:IPAC2018-TUZGBF3}: a circular magnet produces a longitudinal acceleration, driving particles into 1/3rd-integer resonance.
   \item The \textit{MedAustron} facility has also used \textbf{Constant Optics Slow Extraction} (COSE)~\cite{ArrutiaSota:2845862}, simultaneously scaling the magnetic strength of bending dipoles, and sweeping the betatron tune. This method allows for the alignment of separatrices at different momentum, improving the spill quality.
+  \item \textbf{Phase Displacement Extraction} (PDE) allows for resonant extraction without the need for ramping magnetic elements. This avoids pertubations or ramp-rate limits which could arise, and has been tested at both the PS and MedAustron~\cite{Maksimov:1996xb, ARRUTIASOTA2022167007}.
   \item The \textit{Xi’an Proton Application Facility} (XiPAF) uses \textbf{Radio-Frequency Knock Out} (RFKO) extraction~\cite{Yao:2016cnf}, an amplitude-driven method which transversely ``heats'' (excites) the beam, increasing emittance and amplitude into unstable regions.
 \end{itemize}
-These accelerators and techniques are mentioned for illustrative purposes: it is not an exhaustive list, and most accelerators employ multiple methods.
-
+These accelerators and techniques are mentioned for illustrative purposes: it is not an exhaustive list, and most accelerators can employ multiple methods.
  
-% [TODO) Why RFKO?
-% [TODO) Spill Quality
+The work in this thesis will focus on implementing \textit{Radio-Frequency Knock Out} (RFKO), an amplitude- and sextupole-driven method. A variety of reasons motivate this: RFKO can be performed with both bunched (particles are longitudinally trapped by RF cavities) and coasting (debunched, particles spread along the entire ring circumference) beams. Performing bunched RFKO allows for the same beam to be re-accelerated and re-extracted multiple times~\cite{russo}. Additionally, this method is typically quicker to respond (i.e. turning on and off extraction) than other methods~\cite{Furukawa2002PROGRESSOR, FURUKAWA200259, NODA2002241}.
 
-% [TODO) Link this in the flow
-
-
-Unlike the previously mentioned slow-extraction methods, Radio-Frequency Knock-Out (RFKO) is an amplitude- and sextupole-driven method. The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to excite particles into the resonant instability region by providing transverse ``heating'' of the beam---using a radio-frequency exciter to provide a small transverse kick to the beam, increasing its amplitude. This kick is provided at a third-integer fraction of the betatron tune, but a range of excitation frequency (frequency modulation, FM) is required as there is a range of momentum in the beam, and thus a range of tunes. 
+The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to excite particles into the resonant instability region by providing transverse ``heating'' of the beam---using a radio-frequency exciter to provide a small transverse kick to the beam, increasing its amplitude. This kick is provided at a third-integer fraction of the betatron tune, but a range of excitation frequency (frequency modulation, FM) is required as there is a range of momentum in the beam, and thus a range of tunes. 
 
 \begin{figure}
   \centering
@@ -1802,7 +1695,9 @@ To accurately simulate the conditions used in the RFKO studies, the initial part
 
 These values were obtained during machine studies. The beam momentum and intensity were fixed values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the longitudinal emittance $\varepsilon_z$ using tomography of the Beam Current Transformer (BCT) profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|. An example of the generated distribution is shown in~\autoref{fig:initial-dist}.
 
-It was decided that the simulation code will generate a new distribution each time it was initiated. With a sufficiently large number of particles, these random distributions will be statistically similar. This prevented the need to transfer a large, persistent file to each simulation job; this transfer time was, qualitatively, found to be longer than the time taken to generate a new distribution file of the same size.
+It was decided that the simulation code will generate a new distribution each time it was initiated, rather than loading a pre-generated distribution from a file. This was done to allow for the random distributions to be generated with a different random seed each time, to avoid the same distribution being used for each simulation, avoiding any bias in the results due to the initial distribution. This also allowed for the particle generation parameters to be dynamically adjusted on a per-simulation basis, enabling the testing and optimisation of these parameters. This design choice ensured the simulation code was flexible and could be used for a wide range of studies at different beam energies and intensities.
+
+With a sufficiently large number of particles, these random distributions will be statistically similar. This prevented the need to transfer a large, persistent file to each simulation job; this transfer time was, qualitatively, found to be longer than the time taken to generate a new distribution file of the same size.
 
 \begin{table}[]
   \centering
@@ -2219,11 +2114,12 @@ There are several opportunities for improvements presented in this thesis, both 
 \begin{itemize}
   \item As mentioned in~\autoref{sec:septum}, only one of the magnetic septa---\verb|SMH57|---was modelled for extraction. The accuracy of the simulation model would benefit from future development to simulate particles through both the septa and into the F61 line. This would require combining the PS optics models with the \textit{F61} optics models provided by \textit{acc-models-tls}~\cite{optics_repo}.
   \item The setup of the AFG used to generate chirp signals with repetition rates below \qty{1}{\milli\second} (\autoref{sec:magcycle}) was only a temporary solution, and is not suitable for long-term operational use, as it operates entirely independetly from the LHC Software Architecture~\cite{Roderick:1215575} (LSA) database. A dedicated signal generator, with an interface to CERN's Technical Network and LSA would be a significant improvement.
+  \item While simulations for bunched beams show good agreement with the machine implementation, the results of coasting (debunched) beams are less clear. The longitudinal dynamics of the coasting beams in RFKO would require further characterisation to fully understand the differences between the simulations and the machine.
 \end{itemize}
 
 
 \chapter{Acknowledgements}
-
+\input{ack.tex}
 \bibliographystyle{IEEEtran} 
 \bibliography{refs} 
 

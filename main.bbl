@@ -38,6 +38,16 @@ K.~D. Metzmacher and L.~Sermeus, ``{The PSB Ejection and Recombination Kicker Sy
 \bibitem{Ghithan:2017wpd}
 S.~Ghithan, G.~Roy, and S.~Schuh, ``{Design study of beam transport lines for BioLEIR facility at CERN},'' \emph{JINST}, vol.~12, no.~09, p. P09019, 2017.
 
+\bibitem{PhysRevSTAB.14.030101}
+\BIBentryALTinterwordspacing
+J.~Barranco~Garc\'{\i}a and S.~Gilardoni, ``Simulation and optimization of beam losses during continuous transfer extraction at the cern proton synchrotron,'' \emph{Phys. Rev. ST Accel. Beams}, vol.~14, p. 030101, Mar 2011. [Online]. Available: \url{https://link.aps.org/doi/10.1103/PhysRevSTAB.14.030101}
+\BIBentrySTDinterwordspacing
+
+\bibitem{brunner}
+\BIBentryALTinterwordspacing
+K.~Brunner, ``{Improving the slow extraction efﬁciency of the CERN Super Proton Synchrotron},'' 2018, presented 2018. [Online]. Available: \url{https://cds.cern.ch/record/2650734}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Couteur_1951}
 \BIBentryALTinterwordspacing
 K.~J. le~Couteur, ``The regenerative deflector for synchro-cyclotrons,'' \emph{Proceedings of the Physical Society. Section B}, vol.~64, no.~12, p. 1073, dec 1951. [Online]. Available: \url{https://dx.doi.org/10.1088/0370-1301/64/12/308}
@@ -94,8 +104,34 @@ Y.~Kobayashi, ``Theory of the resonant beam ejection from synchrotrons,'' \emph{
 L.~Falbo, E.~Bressi, S.~Foglio, and C.~Priano, ``\BIBforeignlanguage{english}{{B}etatron {C}ore {S}low {E}xtraction at {CNAO}},'' in \emph{\BIBforeignlanguage{english}{Proc. 9th International Particle Accelerator Conference (IPAC'18), Vancouver, BC, Canada, April 29-May 4, 2018}}, ser. International Particle Accelerator Conference, no.~9.\hskip 1em plus 0.5em minus 0.4em\relax Geneva, Switzerland: JACoW Publishing, June 2018, paper TUZGBF3, pp. 1237--1239, https://doi.org/10.18429/JACoW-IPAC2018-TUZGBF3. [Online]. Available: \url{http://jacow.org/ipac2018/papers/tuzgbf3.pdf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Maksimov:1996xb}
+A.~Maksimov, ``{Some aspects of phase displacement method},'' \emph{Conf. Proc. C}, vol. 960610, pp. 2415--2416, 1996.
+
+\bibitem{ARRUTIASOTA2022167007}
+\BIBentryALTinterwordspacing
+P.~A. {Arrutia Sota}, P.~N. Burrows, M.~A. Fraser, and F.~M. Velotti, ``Millisecond burst extractions from synchrotrons using rf phase displacement acceleration,'' \emph{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, vol. 1039, p. 167007, 2022. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S0168900222004363}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Yao:2016cnf}
 H.~Yao, X.~Guan, G.~Li, X.~Wang, Q.~Zhang, and S.-x. Zheng, ``{RF-Knockout Slow Extraction Design for XiPAF Synchrotron},'' in \emph{{57th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams}}, 2016, p. MOPR005.
+
+\bibitem{russo}
+\BIBentryALTinterwordspacing
+G.~Russo, ``Radio frequency knockout (rfko) extraction: Hardware analysis and beam optics simulation and optimization,'' Mar 2019. [Online]. Available: \url{http://webthesis.biblio.polito.it/id/eprint/10253}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Furukawa2002PROGRESSOR}
+T.~Furukawa, K.~Noda, S.~Shibuya, M.~Muramatsu, M.~Kanazawa, E.~Takada, and S.~Yamada, ``Progress of rf-knockout extraction for ion therapy,'' 2002.
+
+\bibitem{FURUKAWA200259}
+\BIBentryALTinterwordspacing
+T.~Furukawa and K.~Noda, ``Fast beam cut-off method in rf-knockout extraction for spot-scanning,'' \emph{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, vol. 489, no.~1, pp. 59--67, 2002. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S0168900202008951}
+\BIBentrySTDinterwordspacing
+
+\bibitem{NODA2002241}
+\BIBentryALTinterwordspacing
+K.~Noda, T.~Furukawa, S.~Shibuya, M.~Muramatsu, T.~Uesugi, M.~Kanazawa, M.~Torikoshi, E.~Takada, and S.~Yamada, ``Source of spill ripple in the rf-ko slow-extraction method with fm and am,'' \emph{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, vol. 492, no.~1, pp. 241--252, 2002. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S0168900202013189}
+\BIBentrySTDinterwordspacing
 
 \bibitem{Sterbini:2158994}
 \BIBentryALTinterwordspacing
