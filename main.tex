@@ -70,7 +70,7 @@
 %% ========================
 %% [TODO)
 %% REMOVE BEFORE SUBMISSION
- \usepackage[angle=0, fontsize=0.03\paperwidth, vpos=0.027\paperheight, color=red]{draftwatermark}
+ \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray]{draftwatermark}
 %% ========================
 
 %\setcitestyle{aysep={,}}
@@ -95,7 +95,7 @@ Resonant slow extraction is a beam extraction method which provides a continuous
 
 \end{abstract}
 \vspace*{\fill}
-\keywords{Beam Physics, Slow Extraction, Radio-Frequency Knock-Out, Simulation, Xsuite}
+\keywords{Beam Physics, Computational Physics, Slow Extraction, Radio-Frequency Knock-Out, Simulation, Xsuite}
 \vspace*{\fill}
 
 
@@ -2125,14 +2125,14 @@ There are several opportunities for improvements presented in this thesis, both 
 
 \begin{appendices}
 
-\chapter{Derivations}
+% \chapter{Derivations}
 
-\section{Relating longitudinal variables}
+% \section{Relating longitudinal variables}
 
-In order to relate the dispersive and chromatic functions produced by \verb|MAD-X| to those calculated by \verb|Xtrack|, we must multiply \verb|MAD-X|'s results by the relativistic Lorentz factor $\beta=v/c$. This is because \verb|MAD-X| uses the relative momentum error $\delta_p$ as a longitudinal variable, defined as
-\begin{equation}
-\delta_p=\frac{p-p_0}{p_0}
-\end{equation}, where $p$ is the momentum of the particle, and $p_0$ the momentum of the {\it reference} (or {\it design}) particle, whereas \verb|Xtrack| uses the relative energy error
+% In order to relate the dispersive and chromatic functions produced by \verb|MAD-X| to those calculated by \verb|Xtrack|, we must multiply \verb|MAD-X|'s results by the relativistic Lorentz factor $\beta=v/c$. This is because \verb|MAD-X| uses the relative momentum error $\delta_p$ as a longitudinal variable, defined as
+% \begin{equation}
+% \delta_p=\frac{p-p_0}{p_0}
+% \end{equation}, where $p$ is the momentum of the particle, and $p_0$ the momentum of the {\it reference} (or {\it design}) particle, whereas \verb|Xtrack| uses the relative energy error
 
 \chapter{Code Snippets}
 
@@ -2143,7 +2143,7 @@ In order to relate the dispersive and chromatic functions produced by \verb|MAD-
 \lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the lab time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
 
 
-\chapter{Data and Plots}
+% \chapter{Data and Plots}
 
 \end{appendices}
 
