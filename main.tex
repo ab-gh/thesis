@@ -31,6 +31,8 @@
 \creflabelformat{equation}{#2\textup{#1}#3}
 \usepackage{amsthm}
 
+\DeclareSIUnit\eVperc{\eV\per\clight}
+\DeclareSIUnit\clight{\text{\ensuremath{c}}}
 
 \makeatletter
   \renewcommand*\tagform@[1]{\maketag@@@{Eq.~\ignorespaces #1\unskip\@@italiccorr}}
@@ -499,7 +501,6 @@ An understanding of particle dynamics in an accelerator can be built upon the Lo
 This equation can already show why magnetic fields are typically used to bend particles along a circular trajectory and not electric fields; a particle with higher velocity $v$ will experience a greater force from a constant magnetic field $\vec B$, whereas the contribution from the electric field $\vec E$ will not benefit from the increasing velocity of a particle.
 
 The other force experienced by a particle in an accelerator is a consequence of conservation of momentum:
-%centripetal\footnote{While the coordinate system used allows for a reference frame whose orientation follows the orbit, this frame is not co-moving with the particles, but still fixed in the ``laboratory'' frame---otherwise, complex Lorentz transformations would be required.} force:
 \begin{equation}
 \vec F_{\text{centrif.}}=\frac{m_0v^2}{\rho}\label{eq:centrifugal}
 \end{equation} where $m_0$ is the particle's rest mass, and $\rho$ is the radius of the particle's orbit inside the accelerator.
@@ -957,7 +958,7 @@ This dispersion function satisfies, for the circumference of the machine:
 \begin{equation}
   x'(s)=-x_0\sqrt{K}\sin\left(\sqrt{K}\cdot s\right)+x'_0\cos\left(\sqrt{K}\cdot s\right)
 \end{equation}
-where $K$ now defines the quadrupole focussing effect $k$ (\autoref{eq:quadrupole}) and the dipole weak focussing effect:
+where $K$ now combines the quadrupole focussing effect $k$ (\autoref{eq:quadrupole}) and the dipole weak focussing effect:
 \begin{eqnarray}
   K=\frac1{\rho^2}-k
 \end{eqnarray}
@@ -1410,26 +1411,27 @@ A variety of different signals can be used to drive the excitation: theoreticall
 
 \section{RFKO Slow Extraction at the CERN PS}
 
-For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent energy was used.
+For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent magnetic rigidity was used.
 
 This equivalency can be calculated using~\autoref{eq:brho}, \autoref{eq:relativistic_energy}, and \autoref{eq:relativistic_momentum}, producing an equation for the total momentum of an ion beam:
 \begin{equation}
-  pc=E_0\sqrt{\left(\frac{E_{kin}}{E_0}+1\right)^2-1}
+  pc=E_0\sqrt{\left( \frac{E_{kin}}{E_0}+1\right)^2-1}
   \label{eq:ion_momentum}
-\end{equation} where $E_0$ is the rest mass of the ion, and the relativistic gamma factor $\gamma = \frac E{E_0}=frac{E_0+E_{kin}}{E_0}=\frac{E_{kin}}{E_0}+1$.
+\end{equation} where $E_0$ is the rest mass of the ion, and the relativistic gamma factor $\gamma = \frac{E}{E_0}=\frac{E_0+E_{kin}}{E_0}=\frac{E_{kin}}{E_0}+1$.
 
-A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at kinetic energy \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} will have an atomic mass $A$ of \qty{208}{\atomicmassunit}, and so a kinetic energy of 
+A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at kinetic energy \qty[per-mode=symbol]{750}{\mega\eVperc\per nucleon} will have an atomic mass $A$ of \qty{208}{\atomicmassunit}, and so a kinetic energy of 
 \begin{equation}
   E_{kin}=E_{kin/u}*A=\qty{750}{\mega\electronvolt}\cdot 208=\qty{156}{\giga\electronvolt}
 \end{equation}
-This ion will have a rest mass of
-\begin{eqnarray}
-  m_{Pb54+}= Z\cdot m_p + N\cdot m_n + n_e\cdot m_e - m_{binding}
-\end{eqnarray} where $m_p, m_n, m_e$ are the masses of a proton, neutron, and electron. The mass defect $m_{binding}$ is found using
-\begin{eqnarray}
-  m_{binding}=Z\cdot m_p + N\cdot m_n + n_e\cdot m_e - A\cdot m_u
-\end{eqnarray} where $m_u$ is the atomic mass unit. 
-These values, when computed, result in a rest \ch{Pb^{+54}} mass of \qty{193.74}{\giga\electronvolt\per\clight\squared}. The equivalent proton momentum, using~\autoref{eq:ion_momentum} and~\autoref{eq:brho}, is then calculated as \qty{5.397}{\giga\electronvolt}. 
+%This ion will have a rest mass of
+%\begin{eqnarray}
+%  m_{Pb54+}= Z\cdot m_p + N\cdot m_n + n_e\cdot m_e - m_{binding}
+%\end{eqnarray} where $m_p, m_n, m_e$ are the masses of a proton, neutron, and electron. The mass defect $m_{binding}$ is found using
+%\begin{eqnarray}
+%  m_{binding}=Z\cdot m_p + N\cdot m_n + n_e\cdot m_e - A\cdot m_u
+%\end{eqnarray} where $m_u$ is the atomic mass unit. 
+%These values, when computed, result in a 
+and a rest mass of \qty{193.74}{\giga\electronvolt\per\clight\squared}. The equivalent proton momentum, using~\autoref{eq:ion_momentum} and~\autoref{eq:brho}, is then calculated as \qty{5.397}{\giga\electronvolt}. 
 
 Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles\per bunch}) \qty{5.397}{\giga\electronvolt} proton beam was chosen, injected to the PS through a single PSB ring (ring 3). The cycle was configured to use two basic beam-cycle periods of \qty{1.2}{\second}, in order to extend the window available for a spill to \qty{500}{\milli\second}.
 
@@ -1556,12 +1558,12 @@ Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles
   % Text Node
   \draw (550.59,398.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Extraction}\\\textit{Trajectory}};
   \end{tikzpicture}
-  \caption{A schematic of the PS East extraction system, as configured for RFKO slow extraction. All important beamline elements are labelled with their CERN layout code. Also shown is the nominal orbit trajectory (solid line), the bumped trajectory (dashed line) created by the kicker magnets, and the extracted trajectory (double line) created by the magnetic septa.}\label{fig:schematic}
+  \caption{A schematic of the PS Ring and East extraction system, as configured for RFKO slow extraction. All important beamline elements are labelled with their CERN layout code. Also shown is the reference orbit (solid line), the bumped orbit (dashed line) created by the kicker magnets, and the extracted trajectory (double line) created by the magnetic septa.}\label{fig:schematic}
 \end{figure}
 
 \subsection{Closed Orbit and Extraction Trajectory}
 
-As shown in~\autoref{fig:schematic}, the closed orbit of the PS differs at extraction than to that in normal operation. Four \textit{bump} magnets, (\verb|BSW|) create a large horizontal displacement at the two septa \verb|SMH57| and \verb|SMH61|. This brings the closed orbit within range of the septum blades, where resonant particles can then cross the blade and enter the septum window.
+As shown in~\autoref{fig:schematic}, the closed orbit of the PS at extraction differs to that of the nominal orbit. Four \textit{bump} magnets, (\verb|BSW|) create a large horizontal displacement at the two septa \verb|SMH57| and \verb|SMH61|. This brings the closed orbit within range of the septum blades, where resonant particles can then cross the blade and enter the septum window.
 
 The electrostatic septum, placed before the magnetic septa, is not used in this study, as it is skipped by the beam during ion extraction. It was decided that a proton implementation closer to the ion configuration would be advantageous, so that results can be compared to work carried out by CHIMERA.
 
@@ -1569,13 +1571,12 @@ The electrostatic septum, placed before the magnetic septa, is not used in this 
 
 The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} proton beam is \qty{0.257}{\tesla}, which provides the configuration for the PS Main Unit being magnets. In order to control the third-order resonance, and align the separatrices with the septum blade, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
-A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ satisfies the aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction. 
+A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction. % [TODO) Link back to Hardt
 
-The high-level tune control knobs were also configured for RFKO. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. This tune control is shown in~\autoref{fig:tunemap}, which plots vertical tune against horizontal tune. This provides an easy understanding of first, second, and third order resonances caused by coupling between the two planes. This coupling resonance is avoided by the following condition:
-
+The high-level tune control knobs were also configured for RFKO. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. This tune control is shown in~\autoref{fig:tunemap}, which plots vertical tune against horizontal tune. This provides a convenient visualisation of first, second, and third order resonances. These resonances are defined by
 \begin{equation}
   m\cdot Q_x+n\cdot Q_y\neq p
-\end{equation} where $m$, $n$, and $p$ are arbitrary integers. Also used is the fractional tune split, $\Delta$, defined as
+\end{equation} where $m$, $n$, and $p$ are arbitrary integers, where $|m|+|n|$ defines the resonance order. Also used is the fractional tune split, $\Delta$, defined as
 \begin{equation}
   \Delta = Q_x-Q_y-p
 \end{equation}
@@ -1584,7 +1585,7 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{tunemap.png}
-  \caption{A fractional tune map, plotting horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$. Dashed lines indicate some of the first order (red), second order (green) and third order (blue) resonances.}\label{fig:tunemap}
+  \caption{A fractional tune map, plotting the evolution of horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$. Color scale indicates time. Dashed lines indicate some of the first order (red), second order (green) and third order (blue) resonances. Black lines at $Q_x=0.319, Q_y=0.249$ are the final tunes reached at the extraction period. Integer part for all tunes is 6.}\label{fig:tunemap}
 \end{figure}
 
 \begin{figure}[h]
@@ -1642,17 +1643,16 @@ To explore chirp repetition rates above the \qty{1}{\kilo\hertz} (below \qty{1}{
   \caption{An example of the chirp signal generated by \textit{Qmeter} (top) and by the arbitrary function generator (AFG) (bottom).}\label{eq:both-chirps}
 \end{figure}
 
-To aid in the research in this paper, and future use-cases of RFKO at the PS, a package was written to simplify the interface with the AFG via the \textit{Standard Commands for Programmable Instruments} (SCPI) protocol. This interface---available as part of the \textit{CERN General Devices} package--- % [TODO) Do I need to cite this? 
-configures the AFG for RFKO extraction, and provides a Python class for modifying the chirp-generation parameters in terms of the revolution frequency $f_{rev}$, and the chirp length in milliseconds. This package was used to control the AFG for the results presented in this paper.
+To aid in the research in this paper, and future use-cases of RFKO at the PS, a package was written to simplify the interface with the AFG via the \textit{Standard Commands for Programmable Instruments} (SCPI) protocol. This interface---available as part of the \textit{CERN General Devices} package~\cite{cgd}---configures the AFG for RFKO extraction, and provides a Python class for modifying the chirp-generation parameters in terms of the revolution frequency $f_{rev}$, and the chirp length in milliseconds. This package was used to control the AFG for the results presented in this paper.
 
 
-\section{RFKO Slow Extraction in Simulation}\label{sec:rfko_sim}
+\section{Modelling RFKO Slow Extraction}\label{sec:rfko_sim}
 
 As motivated in~\autoref{sec:motivation}, the majority of work surrounding the results presented in this thesis was towards developing a simulation framework to accurately model the spill structure of RFKO at the PS. This section will detail the simulation tools used, the implementation of the RFKO extraction simulation, and the methods used to compare the simulation results to machine data.
 
 \subsection{Simulation Tools}
 
-A variety of simulation software packages for accelerator physics are available, each having their own optimisations, and application areas amongst the accelerator physics community. For this study, the \verb|MAD-X|~\cite{Iselin:MAD} and \verb|Xsuite|~\cite{xsuite} packages were used.~\verb|MAD-X| remains the standard tool in the area of optics and beam transfer, and CERN provides a common optics repository---\verb|acc-models|~\cite{optics_repo}---containing \verb|MAD-X| \textit{sequence} files which describe the optics lattices for the CERN accelerator complex. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction.
+A variety of simulation software packages for accelerator physics are available, each having their own optimisations, and application areas amongst the accelerator physics community. For this study, the \verb|MAD-X|~\cite{Iselin:MAD} and \verb|Xsuite|~\cite{xsuite} packages were used.~\verb|MAD-X| is a common tool in the area of optics and beam transfer, and CERN provides a common optics repository---\verb|acc-models|~\cite{optics_repo}---containing \verb|MAD-X| \textit{sequence} files which describe the optics lattices for the CERN accelerator complex. For the PS, many \textit{scenarios} are provided alongside the operational models, one of which is a pre-configured for East Area slow extraction.
 
 \verb|Xsuite|---a relatively recent simulation tool, first made available in 2021---is a Python package which shares many similarities with \verb|MAD-X|, and can import \verb|MAD-X| sequences into its own lattice definitions. However, \verb|Xsuite| has additional capabilities, such as \textit{context} management, which provides the ability to run simulations on different hardware---namely GPUs. This is achieved by using the \verb|cupy|~\cite{CuPy} package, which provides a drop-in replacement for \verb|numpy|, but with optimisations for accelerating workloads on GPUs. Additionally, \verb|Xsuite| also has an existing \verb|Exciter| beam element, which can model the time-dependent transverse kicker used in RFKO. There has been a rapid increase in the use of \verb|Xsuite| within the accelerator physics community at CERN, which---combined with the additional capabilities beyond \verb|MAD-X|---motivated its use in this study.
 
@@ -1687,10 +1687,10 @@ A single RF cavity was added to the model, corresponding to the RF system of the
 
 To accurately simulate the conditions used in the RFKO studies, the initial particle distribution must be generated using machine measurements. The parameters used included:
 \begin{itemize}
-  \item Beam momentum $p$ [\si{\giga\electronvolt\per\clight}]
+  \item Beam momentum $p$ [\si{\giga\eVperc}]
   \item Intensity $I$ [\si{proton \per bunch}]
-  \item Horizontal RMS emittance $\varepsilon_x$
-  \item Longitudinal RMS emittance $\varepsilon_x$ [\si{\electronvolt\second}]
+  \item Horizontal RMS emittance $\varepsilon_x$ [\si{\milli\meter\milli\radian}]
+  \item Longitudinal RMS emittance $\varepsilon_s$ [\si{\electronvolt\second}]
 \end{itemize}  
 
 These values were obtained during machine studies. The beam momentum and intensity were fixed values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the longitudinal emittance $\varepsilon_z$ using tomography of the Beam Current Transformer (BCT) profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|. An example of the generated distribution is shown in~\autoref{fig:initial-dist}.
@@ -1733,7 +1733,7 @@ This image was made available on CERN's image registry using a \textit{continuou
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{phase-space-sim.png}
-  \cprotect\caption{Phase-space distribution of the RFKO simulation at the \verb|SMH57| septum location, plotting all particles for the first 1000 turns (approx.\qty{2.128}{\milli\second} in lab time). RFKO driven by a transverse excitation frequency chirp across $f_{rev}/3$ at a \textit{rep-rate} of \qty{0.12}{\milli\second}. Color scale indicates turn number. Inset shows extracted particle distribution and a spiral step of $\Delta X_3\approx$\qty{6.1}{\milli\meter}.}\label{fig:phase-space-sim}
+  \cprotect\caption{Phase-space distribution of the RFKO simulation at the \verb|SMH57| septum location, plotting all particles for the first 1000 turns (approx.\qty{2.128}{\milli\second} in laboratory time). RFKO driven by a transverse excitation frequency chirp across $f_{rev}/3$ at a \textit{rep-rate} of \qty{0.12}{\milli\second}. Color scale indicates turn number. Inset shows extracted particle distribution and a spiral step of $\Delta X_3\approx$\qty{6.1}{\milli\meter}.}\label{fig:phase-space-sim}
 \end{figure}
 
 
@@ -1946,7 +1946,7 @@ This same analytical method was performed for simulations; the turn number at wh
 \begin{equation}
   \zeta = s \frac{\beta}{\beta_0} - \beta c t
 \end{equation}
-where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct the \textit{lab} time (in real seconds, not turn number) at which the particle was lost to the aperture---and thus considered as extracted---using an equation used by the \verb|Exciter| beam element:
+where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct the \textit{laboratory} time (in real seconds, not turn number) at which the particle was lost to the aperture---and thus considered as extracted---using an equation used by the \verb|Exciter| beam element:
 \begin{equation}
   t = N t_{rev} - \frac\zeta{\beta_0 c}
 \end{equation}
@@ -2119,7 +2119,7 @@ There are several opportunities for improvements presented in this thesis, both 
 
 
 \chapter{Acknowledgements}
-\input{ack.tex}
+%\input{ack.tex}
 \bibliographystyle{IEEEtran} 
 \bibliography{refs} 
 
@@ -2140,7 +2140,7 @@ There are several opportunities for improvements presented in this thesis, both 
 
 \lstinputlisting[language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Abritary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
 
-\lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the lab time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
+\lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the laboratory time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
 
 
 % \chapter{Data and Plots}
