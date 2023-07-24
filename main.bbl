@@ -153,6 +153,11 @@ M.~Gasior and R.~Jones, ``{High Sensitivity Tune Measurement by Direct Diode Det
 T.~Bass, ``\BIBforeignlanguage{english}{Benchmarking simulations of slow extraction driven by rf transverse excitation at the cern proton synchrotron},'' in \emph{\BIBforeignlanguage{english}{Proc. IPAC'23}}, ser. IPAC'23 - 14th International Particle Accelerator Conference, no.~14.\hskip 1em plus 0.5em minus 0.4em\relax JACoW Publishing, Geneva, Switzerland, 05 2023, paper TUPM116, pp. 2458--2461. [Online]. Available: \url{https://indico.jacow.org/event/41/contributions/1678}
 \BIBentrySTDinterwordspacing
 
+\bibitem{cgd}
+\BIBentryALTinterwordspacing
+``Cern general devices.'' [Online]. Available: \url{https://gitlab.cern.ch/abt-optics-and-code-repository/commissioning-tools/cern-general-devices}
+\BIBentrySTDinterwordspacing
+
 \bibitem{xsuite}
 \BIBentryALTinterwordspacing
 ``Xsuite.'' [Online]. Available: \url{xsuite.web.cern.ch}
@@ -244,6 +249,11 @@ R.~Cappi and C.~Steinbach, ``{Low frequency duty factor improvement for the CERN
 \bibitem{Roderick:1215575}
 \BIBentryALTinterwordspacing
 C.~Roderick and R.~Billen, ``{The LSA Database to Drive the Accelerator Settings},'' CERN, Geneva, Tech. Rep., 2009. [Online]. Available: \url{https://cds.cern.ch/record/1215575}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Nagaslaev:2011zz}
+\BIBentryALTinterwordspacing
+V.~Nagaslaev, J.~Amundson, J.~Johnstone, C.~Park, and S.~Werkema, ``Third integer resonance slow extraction using rfko at high space charge.'' 2011. [Online]. Available: \url{https://accelconf.web.cern.ch/IPAC2011/papers/thps058.pdf}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

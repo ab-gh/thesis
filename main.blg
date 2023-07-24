@@ -13,7 +13,7 @@ Warning--entry type for "russo" isn't style-file defined
 Warning--entry type for "brunner" isn't style-file defined
 --line 21 of file refs.bib
 Warning--entry type for "Hegglin:2239398" isn't style-file defined
---line 659 of file refs.bib
+--line 664 of file refs.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -28,45 +28,45 @@ Warning--empty journal in nxcals
 Warning--empty booktitle in Bryant:CAS
 
 Done.
-You've used 48 entries,
+You've used 50 entries,
             4087 wiz_defined-function locations,
-            1165 strings with 17699 characters,
-and the built_in function-call counts, 32635 in all, are:
-= -- 2830
-> -- 725
+            1173 strings with 18049 characters,
+and the built_in function-call counts, 33423 in all, are:
+= -- 2881
+> -- 747
 < -- 165
-+ -- 383
-- -- 148
-* -- 1584
-:= -- 5290
-add.period$ -- 99
-call.type$ -- 48
-change.case$ -- 49
++ -- 394
+- -- 153
+* -- 1616
+:= -- 5416
+add.period$ -- 103
+call.type$ -- 50
+change.case$ -- 51
 chr.to.int$ -- 306
-cite$ -- 57
-duplicate$ -- 2471
-empty$ -- 2515
-format.name$ -- 176
-if$ -- 7523
+cite$ -- 59
+duplicate$ -- 2537
+empty$ -- 2592
+format.name$ -- 182
+if$ -- 7698
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 461
-newline$ -- 249
-num.names$ -- 45
-pop$ -- 1068
+int.to.str$ -- 50
+missing$ -- 478
+newline$ -- 259
+num.names$ -- 46
+pop$ -- 1127
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2628
+skip$ -- 2685
 stack$ -- 0
-substring$ -- 966
-swap$ -- 1932
+substring$ -- 968
+swap$ -- 1968
 text.length$ -- 63
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 48
+type$ -- 50
 warning$ -- 9
-while$ -- 105
-width$ -- 50
-write$ -- 586
+while$ -- 106
+width$ -- 52
+write$ -- 604
 (There were 12 warnings)

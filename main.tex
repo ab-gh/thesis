@@ -113,198 +113,14 @@ The CERN Proton Synchrotron (PS), alongside providing intermediary acceleration 
 Ongoing experiments in these facilities such as the CHARM High-energy Ions for Micro Electronics Reliability Assurance (CHIMERA)~\cite{Fraser:feasibility} use high-Z ions (Pb) to simulate the harsh radiation environment of cosmic rays which satellites experience. Using low-intensity (\qty{<e6}{ions/spill}), high-energy (\qty{>100}{\MeV / u}) beams, customers such as the European Space Agency can assess the reliability of new materials in these environments.~\autoref{fig:chain} illustrates the two injection chains of the PS, either with Lead ions sourced from the Linear Accelerator 3 (Linac3) and Low Energy Ion Ring (LEIR) chain, or protons from the Linac4 and the Proton Synchrotron Booster (PSB).
 
 \begin{figure}
-  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-  %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-  
-  %Shape: Arc [id:dp13623924019589717] 
-  \draw  [draw opacity=0][line width=3]  (23.16,157.13) .. controls (40.51,146.27) and (61.02,140) .. (83,140) .. controls (145.41,140) and (196,190.59) .. (196,253) .. controls (196,257.08) and (195.78,261.12) .. (195.36,265.09) -- (83,253) -- cycle ; \draw  [line width=3]  (23.16,157.13) .. controls (40.51,146.27) and (61.02,140) .. (83,140) .. controls (145.41,140) and (196,190.59) .. (196,253) .. controls (196,257.08) and (195.78,261.12) .. (195.36,265.09) ;  
-  %Straight Lines [id:da9881615579049192] 
-  \draw [line width=3]    (80,140) -- (540,140) ;
-  %Curve Lines [id:da41561885076946403] 
-  \draw [line width=3]    (160,140) .. controls (220.2,139.6) and (190.2,178.6) .. (260,180) ;
-  %Straight Lines [id:da9738553160260242] 
-  \draw [line width=3]    (260,170) -- (260,190) ;
-  %Curve Lines [id:da062105937338959416] 
-  \draw [line width=3]    (160,140) .. controls (220.2,139.6) and (190.2,98.6) .. (260,100) ;
-  %Curve Lines [id:da9621165186674936] 
-  \draw [line width=3]    (260,100) .. controls (320.2,99.6) and (320.2,68.6) .. (390,70) ;
-  %Curve Lines [id:da22957973507324092] 
-  \draw [line width=3]    (260,100) .. controls (320.2,99.6) and (470.2,98.6) .. (540,100) ;
-  %Curve Lines [id:da814674780127862] 
-  \draw [line width=3]    (390,70) .. controls (450.2,69.6) and (418.8,38.6) .. (540,40) ;
-  %Curve Lines [id:da1370169663287728] 
-  \draw [line width=3]    (390,70) .. controls (450.2,69.6) and (470.2,68.6) .. (540,70) ;
-  %Shape: Parallelogram [id:dp6647261304834908] 
-  \draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (477.7,30) -- (540,30) -- (532.3,50) -- (470,50) -- cycle ;
-  %Shape: Parallelogram [id:dp21515901263901416] 
-  \draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (367.7,129) -- (430,129) -- (422.3,149) -- (360,149) -- cycle ;
-  %Shape: Parallelogram [id:dp5134940082894275] 
-  \draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (457.7,129) -- (520,129) -- (512.3,149) -- (450,149) -- cycle ;
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (206,240) -- (196,260) -- (186,240) -- (196,250) -- cycle ;
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (139,130) -- (159,140) -- (139,150) -- (149,140) -- cycle ;
-  
-  % Text Node
-  \draw (151,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {F61};
-  % Text Node
-  \draw (271,171) node [anchor=north west][inner sep=0.75pt]   [align=left] {F6D East Dump};
-  % Text Node
-  \draw (551,132) node [anchor=north west][inner sep=0.75pt]   [align=left] {T8 24 GeV/c};
-  % Text Node
-  \draw (241,82) node [anchor=north west][inner sep=0.75pt]   [align=left] {F62};
-  % Text Node
-  \draw (371,52) node [anchor=north west][inner sep=0.75pt]   [align=left] {F63};
-  % Text Node
-  \draw (551,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {T11 3.5 GeV/c};
-  % Text Node
-  \draw (551,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {T10 7 GeV/c};
-  % Text Node
-  \draw (551,92) node [anchor=north west][inner sep=0.75pt]   [align=left] {T9 15 GeV/c};
-  % Text Node
-  \draw (478.7,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {CLOUD};
-  % Text Node
-  \draw (371.7,131) node [anchor=north west][inner sep=0.75pt]   [align=left] {IRRAD};
-  % Text Node
-  \draw (456.7,131) node [anchor=north west][inner sep=0.75pt]   [align=left] {CHARM};
-  % Text Node
-  \draw (114,246) node [anchor=north west][inner sep=0.75pt]   [align=left] {CERN PS};
-  
-  
-  \end{tikzpicture}
-  
-\caption{Layout diagram of the CERN East Area (EA) beamlines, their proton momenta, and experiments.}\label{fig:eadiagram}
+  \centering
+  \includegraphics[width=\linewidth]{east-area.png}
+  \caption{Layout diagram of the CERN East Area (EA) beamlines, their proton momenta, and experiments.}\label{fig:eadiagram}
 \end{figure}
 
 \begin{figure}
   \centering
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,715); %set diagram left start at 0, and has height of 715
-    %Curve Lines [id:da12691543918942427] 
-    \draw [line width=3]    (402.5,510) .. controls (308.4,510.6) and (214.4,353.6) .. (212.4,293.6) ;
-    %Curve Lines [id:da8510608919978877] 
-    \draw [color={rgb, 255:red, 255; green, 255; blue, 255 }  ,draw opacity=1 ][line width=6]    (230,480) .. controls (274.2,480.4) and (281.4,441.8) .. (301.2,406.2) ;
-    %Curve Lines [id:da7502083546431804] 
-    \draw [line width=3]    (292.5,365) .. controls (329.8,368.6) and (340.8,338.6) .. (402.5,335) ;
-    %Curve Lines [id:da14243393865149923] 
-    \draw [color={rgb, 255:red, 255; green, 255; blue, 255 }  ,draw opacity=1 ][line width=6]    (301.2,406.2) .. controls (310.2,387.2) and (334,364.5) .. (330,327.5) ;
-    %Curve Lines [id:da9690549021376971] 
-    \draw [line width=3]    (543.4,398) .. controls (503.4,397) and (515.2,402.2) .. (455.2,351.2) ;
-    %Curve Lines [id:da18378599113206628] 
-    \draw [color={rgb, 255:red, 255; green, 255; blue, 255 }  ,draw opacity=1 ][line width=6]    (299,536) .. controls (353.8,538.6) and (318.8,481.6) .. (315,422.5) ;
-    %Curve Lines [id:da36505385427145587] 
-    \draw [line width=3]    (184,195.8) .. controls (238,240.8) and (289,280.8) .. (423.4,282.8) ;
-    %Curve Lines [id:da4662172894678054] 
-    \draw [color={rgb, 255:red, 255; green, 255; blue, 255 }  ,draw opacity=1 ][line width=6]    (212.4,293.6) .. controls (211.4,225.6) and (303.4,216.6) .. (297,156.4) ;
-    %Straight Lines [id:da6403083893101353] 
-    \draw [line width=3]    (221,536.6) -- (285,536.2) ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (238,526.6) -- (258,536.6) -- (238,546.6) -- (248,536.6) -- cycle ;
-    %Curve Lines [id:da1754170813900049] 
-    \draw [line width=3]    (230,480) .. controls (274.2,480.4) and (281.4,441.8) .. (301.2,406.2) ;
-    %Shape: Parallelogram [id:dp9764670224277929] 
-    \draw  [fill={rgb, 255:red, 248; green, 200; blue, 220 }  ,fill opacity=1 ] (165.24,468.7) -- (240,468.7) -- (230.76,489.3) -- (156,489.3) -- cycle ;
-    %Shape: Circle [id:dp8387090420566679] 
-    \draw  [line width=3]  (315,422.5) .. controls (315,374.18) and (354.18,335) .. (402.5,335) .. controls (450.82,335) and (490,374.18) .. (490,422.5) .. controls (490,470.82) and (450.82,510) .. (402.5,510) .. controls (354.18,510) and (315,470.82) .. (315,422.5) -- cycle ;
-
-    %Shape: Parallelogram [id:dp16681512555108147] 
-    \draw  [fill={rgb, 255:red, 200; green, 209; blue, 248 }  ,fill opacity=1 ] (154.24,525.1) -- (229,525.1) -- (219.76,545.7) -- (145,545.7) -- cycle ;
-    %Rounded Rect [id:dp7810492177412798] 
-    \draw  [line width=3]  (264,553.2) .. controls (264,543.81) and (271.61,536.2) .. (281,536.2) -- (340,536.2) .. controls (349.39,536.2) and (357,543.81) .. (357,553.2) -- (357,573.2) .. controls (357,582.59) and (349.39,590.2) .. (340,590.2) -- (281,590.2) .. controls (271.61,590.2) and (264,582.59) .. (264,573.2) -- cycle ;
-
-    %Shape: Circle [id:dp8690695581292782] 
-    \draw  [line width=3]  (255,327.5) .. controls (255,306.79) and (271.79,290) .. (292.5,290) .. controls (313.21,290) and (330,306.79) .. (330,327.5) .. controls (330,348.21) and (313.21,365) .. (292.5,365) .. controls (271.79,365) and (255,348.21) .. (255,327.5) -- cycle ;
-
-    %Curve Lines [id:da8738392345224177] 
-    \draw [line width=3]    (299,536) .. controls (353.8,538.6) and (318.8,481.6) .. (315,422.5) ;
-    %Curve Lines [id:da06171309257415403] 
-    \draw [line width=3]    (301.2,406.2) .. controls (310.2,387.2) and (334,364.5) .. (330,327.5) ;
-    %Shape: Circle [id:dp2990909311240957] 
-    \draw  [line width=3]  (297,156.4) .. controls (297,86.59) and (353.59,30) .. (423.4,30) .. controls (493.21,30) and (549.8,86.59) .. (549.8,156.4) .. controls (549.8,226.21) and (493.21,282.8) .. (423.4,282.8) .. controls (353.59,282.8) and (297,226.21) .. (297,156.4) -- cycle ;
-
-    %Curve Lines [id:da4359851548001026] 
-    \draw [line width=3]    (212.4,293.6) .. controls (211.4,225.6) and (303.4,216.6) .. (297,156.4) ;
-    %Curve Lines [id:da274114148545888] 
-    \draw [line width=3]    (591.4,278.2) .. controls (570.4,233.2) and (545,228.8) .. (549.8,156.4) ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (255.98,465.42) -- (276.1,455.68) -- (271.82,477.62) -- (270,463.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (234.46,385.29) -- (232.92,362.98) -- (251.69,375.14) -- (238,371.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (298.27,275.28) -- (282.53,259.4) -- (304.68,256.33) -- (292,262.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (575.52,230.9) -- (577.09,253.21) -- (558.3,241.08) -- (572,244.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (319.57,521.14) -- (328.45,500.62) -- (339.54,520.03) -- (329,510.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (264.87,317.47) -- (255.13,337.6) -- (244.87,317.73) -- (255,327.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (499.87,415.47) -- (490.13,435.6) -- (479.87,415.73) -- (490,425.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (292.5,118.22) -- (307.94,102.04) -- (311.62,124.1) -- (305,111.6) -- cycle ;
-    %Shape: Parallelogram [id:dp44568506950093134] 
-    \draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (542.7,386.6) -- (605,386.6) -- (597.3,406.6) -- (535,406.6) -- cycle ;
-
-    %Curve Lines [id:da33904147754615943] 
-    \draw [line width=3]    (576.4,91.2) .. controls (536.4,90.2) and (541.3,35) .. (423.4,30) ;
-    %Shape: Parallelogram [id:dp12091233534601331] 
-    \draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (576.05,81.1) -- (638.35,81.1) -- (630.65,101.1) -- (568.35,101.1) -- cycle ;
-
-    %Shape: Parallelogram [id:dp5163558794702339] 
-    \draw  [fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (565.7,272.5) -- (628,272.5) -- (620.3,292.5) -- (558,292.5) -- cycle ;
-
-    %Shape: Parallelogram [id:dp272340165402827] 
-    \draw  [fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (159.7,179.5) -- (222,179.5) -- (214.3,199.5) -- (152,199.5) -- cycle ;
-
-    %Shape: Circle [id:dp7045680303037196] 
-    \draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (458.3,366) .. controls (458.3,360.37) and (462.87,355.8) .. (468.5,355.8) .. controls (474.13,355.8) and (478.7,360.37) .. (478.7,366) .. controls (478.7,371.63) and (474.13,376.2) .. (468.5,376.2) .. controls (462.87,376.2) and (458.3,371.63) .. (458.3,366) -- cycle ;
-    %Shape: Circle [id:dp32158368251877056] 
-    \draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (413.2,30) .. controls (413.2,24.37) and (417.77,19.8) .. (423.4,19.8) .. controls (429.03,19.8) and (433.6,24.37) .. (433.6,30) .. controls (433.6,35.63) and (429.03,40.2) .. (423.4,40.2) .. controls (417.77,40.2) and (413.2,35.63) .. (413.2,30) -- cycle ;
-    %Shape: Diamond [id:dp31203439752356044] 
-    \draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (423.4,271.9) -- (434.3,282.8) -- (423.4,293.7) -- (412.5,282.8) -- cycle ;
-    %Shape: Diamond [id:dp6382505727207815] 
-    \draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (549.8,145.5) -- (560.7,156.4) -- (549.8,167.3) -- (538.9,156.4) -- cycle ;
-    %Shape: Diamond [id:dp5390326130566805] 
-    \draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (292.5,354.1) -- (303.4,365) -- (292.5,375.9) -- (281.6,365) -- cycle ;
-    %Shape: Diamond [id:dp5200471044055353] 
-    \draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (402.5,499.1) -- (413.4,510) -- (402.5,520.9) -- (391.6,510) -- cycle ;
-    %Shape: Diamond [id:dp7886775170755231] 
-    \draw  [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (308,525.1) -- (318.9,536) -- (308,546.9) -- (297.1,536) -- cycle ;
-    %Flowchart: Extract [id:dp08878903500639956] 
-    \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (315,434.13) -- (305.85,416.87) -- (324.15,416.87) -- cycle ;
-    %Flowchart: Extract [id:dp9656797323718738] 
-    \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (330,336.13) -- (320.85,318.87) -- (339.15,318.87) -- cycle ;
-    %Flowchart: Extract [id:dp5122273231460892] 
-    \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (402.5,343.63) -- (393.35,326.37) -- (411.65,326.37) -- cycle ;
-    %Flowchart: Extract [id:dp5713318862416517] 
-    \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (297,165.03) -- (287.85,147.77) -- (306.15,147.77) -- cycle ;
-    %Flowchart: Extract [id:dp21956273109076396] 
-    \draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (281,544.83) -- (271.85,527.57) -- (290.15,527.57) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (322.84,599.76) -- (303,589.44) -- (323.16,579.76) -- (313,589.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (514.52,388.1) -- (534.99,397.11) -- (515.5,408.08) -- (525,397.6) -- cycle ;
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (552.24,72.28) -- (566.04,89.88) -- (543.68,90.36) -- (557,85.6) -- cycle ;
-
-    % Text Node
-    \draw (407.4,147.9) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{23.13pt}\setlength\topsep{0pt}
-    \begin{center}
-    SPS
-    \end{center}
-    \end{minipage}};
-    % Text Node
-    \draw (276.5,319) node [anchor=north west][inner sep=0.75pt]   [align=left] {PSB};
-    % Text Node
-    \draw (391.5,414) node [anchor=north west][inner sep=0.75pt]   [align=left] {PS};
-    % Text Node
-    \draw (293,554.7) node [anchor=north west][inner sep=0.75pt]   [align=left] {LEIR};
-    % Text Node
-    \draw (549.7,388.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {EAST};
-    % Text Node
-    \draw (575.85,82.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {NORTH};
-    % Text Node
-    \draw (571,274) node [anchor=north west][inner sep=0.75pt]   [align=left] {LHC 2};
-    % Text Node
-    \draw (165,181) node [anchor=north west][inner sep=0.75pt]   [align=left] {LHC 1};
-    % Text Node
-    \draw (171,470.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {LINAC4};
-    % Text Node
-    \draw (160,526.9) node [anchor=north west][inner sep=0.75pt]   [align=left] {LINAC3};
-    % Text Node
-    \draw (101,469.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Protons};
-    % Text Node
-    \draw (73,527.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {Lead Ions};
-    \end{tikzpicture}
+  \includegraphics*[width=0.8\linewidth]{complex.png}
   \caption{Layout diagram of the primary injection chain at CERN. Particles are sourced from either Linac 3 (for Lead ions) or Linac 4 (for Protons), and accelerated through the LEIR or PSB respectively. After injection and acceleration in the PS, beams are extracted either to the SPS or East Area (EA). Particles at the SPS are either extracted at two LHC extraction locations, or towards the North area. Red diamonds mark Fast extraction locations, and blue circles mark Slow extraction regions. Grey triangles mark injection regions.}\label{fig:chain}
 \end{figure}
 
@@ -442,31 +258,31 @@ The equations of motion in this thesis consider particles moving at extremely hi
 
 The Lorentz factor $\gamma$ is defined as the derivative of \textit{coordinate} time $t$ in the relativistic particle's reference frame, with respect to the \textit{proper} or \textit{lab} time $\tau$ in the observer's reference frame. It is calculated as:
 \begin{equation}
-    \gamma = \frac 1{\sqrt{1-\frac{v^2}{c^2}}}
+    \gamma_c = \frac 1{\sqrt{1-\frac{v^2}{c^2}}}
 \end{equation}
 Also defined is the $\beta$ factor
 \begin{equation}
-    \beta = \frac vc
+    \beta_c = \frac vc
 \end{equation}
 and the $\alpha$ factor
 \begin{equation}
-    \alpha = \frac 1\gamma
+    \alpha_c = \frac 1\gamma
 \end{equation}
 
-For reasons that will become clear in \autoref{subsec:trans_phase_space}, these factors will be referred to as $\alpha_c, \beta_c, \gamma_c$.
+These factors will be referred to as $\alpha_c, \beta_c, \gamma_c$ to distinguish them from other parameters using $\alpha, \beta, \gamma$ (\autoref{subsec:trans_phase_space}).
 
 One important distinction in a relativistic reference frame is the \textit{invariant} mass $m_0$ versus the \text{relativistic} mass $m$. The invariant mass, or \text{rest} mass of any object is the Newtonian mass measured in its own reference frame. From the \textit{lab} reference frame, this mass is measured as the relativistic mass, defined as
 \begin{equation}
-    m=\gamma m_0
+    m=\gamma_c m_0
 \end{equation}
 This relativistic mass is conserved just the same as rest mass, and follows the $p=mv$ formula the same as in the rest frame. 
 The rest \text{energy} $E_0$ and \textit{momentum} $m_0$ are likewise defined in the relativistic frame:
 \begin{equation}
-    E=\gamma m_0c^2
+    E=\gamma_c m_0c^2
     \label{eq:relativistic_energy}
 \end{equation}
 \begin{equation}
-    p=\gamma m_0v
+    p=\gamma_c m_0v
     \label{eq:relativistic_momentum}
 \end{equation}
 For brevity, this report will always assume a relativistic frame, and all mentions of mass $m$, momentum $p$, or energy $E$ should be assumed to be relativistic unless otherwise stated.
@@ -1074,23 +890,24 @@ Next, akin to~\autoref{sec:transdisp}, we consider small perturbations in moment
 \end{equation} where $\alpha_p$, the \textit{momentum compaction factor}, is distinct from the relativistic $\alpha_c$ and Twiss parameter $\alpha$.
 \begin{equation}
   \eta = \frac{\Delta f_{rev}/f_{rev}}{\Delta p/p}
+  \label{eq:slip_factor}
 \end{equation} where $\eta$, the \textit{slip factor}, is the relative change of revolution frequency with momentum.
 
 Using the dispersion function~\autoref{eq:dispersion}, we can relate the momentum compaction factor to its effect on orbit length $s_0$~\cite[5.1]{lbd:tecker}
 \begin{equation}
-  \alpha_c=\frac 1L\int\frac{D_x(s)}{\rho(s)}\ ds_0
+  \alpha_p=\frac 1L\int\frac{D_x(s)}{\rho(s)}\ ds_0
 \end{equation}
 
 Using the revolution frequency\footnote{NB: $\beta_c$ here refers to the relativistic Lorentz factor $v/c$ } $f_{rev}=\beta_c c/2\pi R$, we define the relative revolution frequency change $\Delta f_{rev}$ as
 \begin{equation}
-  \Delta f_{rev} = \frac{d\beta_c}{\beta_c}-\frac{dR}R=\frac{d\beta_c}{\beta_c}-\alpha_c\frac{dp}p
+  \Delta f_{rev} = \frac{d\beta_c}{\beta_c}-\frac{dR}R=\frac{d\beta_c}{\beta_c}-\alpha_p\frac{dp}p
 \end{equation} 
 
 
 
 This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, causing no change in revolution frequency $f_{rev}$ for a small momentum change $\Delta p$:
 \begin{equation}
-  \gamma_{tr}=\frac 1{\sqrt{\alpha_c}}
+  \gamma_{tr}=\frac 1{\sqrt{\alpha_p}}
 \end{equation}
 \textit{Above} this transition energy, where $\eta<0$, the particle has velocity $v\rightarrow c$, and so the path-length change dominates the velocity change. This is the standard configuration of accelerators.
 \textit{Below} this transition energy, where $\eta >0$, the increase of velocity is significantly larger than the path-length change effect.
@@ -1099,7 +916,7 @@ This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, caus
 
 \subsection{Longitudinal Phase Space}\label{sec:long_phase_space}
 
-These effects can be analysed by considering phase space coordinates---this time in the longitudinal plane. This space is constructed with variables $(\phi , \Delta p/p)$, and shown in~\autoref{fig:long_phase_space}. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, where the synchronous phase $\phi_s$ defines the orbit with zero longitudinal oscillation. Outside of the stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
+These effects can be analysed by considering phase space coordinates---this time in the longitudinal plane. This space is constructed with variables $(\phi , \Delta p/p)$, and shown in~\autoref{fig:long_phase_space}. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, where the synchronous phase $\phi_s$ defines the orbit with zero longitudinal (synchrotron) oscillation. Outside of the stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
 
 \begin{figure}[h]
   \centering
@@ -1289,21 +1106,21 @@ Other methods involve moving the resonance itself, by changing the tune of the m
 
 These categories are not mutually exclusive, and some of the methods discussed will use a combination of effects to achieve slow extraction.
 
-\subsection{Steinbach Diagram}
+\subsection{Steinbach Diagram}\label{sec:steinbach}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.6\linewidth]{momentum-driven.png}
-  \caption{Stienbach diagram of momentum-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:momentum-driven}
+  \caption{Steinbach diagram of momentum-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:momentum-driven}
 \end{figure}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.6\linewidth]{amplitude-driven.png}
-  \caption{Stienbach diagram of amplitude-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:amplitude-driven}
+  \caption{Steinbach diagram of amplitude-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:amplitude-driven}
 \end{figure}
 
-The two beam-moving methods of momentum- and amplitude-driven slow extraction can be compared using a Stienbach\footnote{Attributed to C. Steinbach, CERN} diagram. This plots the beam amplitude $A_x$ as a function of momentum $\Delta p/p_0$. The sextupole instability is shown as a triangle, within which is the unstable region beyond the phase-space map separatrices.~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} illustrate \textit{momentum} and \textit{amplitude} driven slow extraction respectively.
+The two beam-moving methods of momentum- and amplitude-driven slow extraction can be compared using a Steinbach\footnote{Attributed to C. Steinbach, CERN} diagram. This plots the beam amplitude $A_x$ as a function of momentum $\Delta p/p_0$. The sextupole instability is shown as a triangle, within which is the unstable region beyond the phase-space map separatrices.~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} illustrate \textit{momentum} and \textit{amplitude} driven slow extraction respectively.
 In order for a particle to be considered stable, its single-particle emittance $\epsilon$ must be lower or equal to the area of the separatrix triangle. Using~\autoref{eq:apothem}, this condition is expressed as
 \begin{equation}
   A^2\pi\le\frac{48\sqrt 3\pi}{S^2}\delta Q^2\pi
@@ -1417,7 +1234,7 @@ This equivalency can be calculated using~\autoref{eq:brho}, \autoref{eq:relativi
 \begin{equation}
   pc=E_0\sqrt{\left( \frac{E_{kin}}{E_0}+1\right)^2-1}
   \label{eq:ion_momentum}
-\end{equation} where $E_0$ is the rest mass of the ion, and the relativistic gamma factor $\gamma = \frac{E}{E_0}=\frac{E_0+E_{kin}}{E_0}=\frac{E_{kin}}{E_0}+1$.
+\end{equation} where $E_0$ is the rest mass of the ion, and the relativistic gamma factor $\gamma_c = \frac{E}{E_0}=\frac{E_0+E_{kin}}{E_0}=\frac{E_{kin}}{E_0}+1$.
 
 A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at kinetic energy \qty[per-mode=symbol]{750}{\mega\eVperc\per nucleon} will have an atomic mass $A$ of \qty{208}{\atomicmassunit}, and so a kinetic energy of 
 \begin{equation}
@@ -1885,20 +1702,20 @@ GPUs employ a \textit{Single-Instruction Multiple-Data} (SIMD) architecture to e
 
 \begin{figure}
   \centering
-  \includegraphics*[width=0.7\linewidth]{CPU_graph_per_turn.png}
+  \includegraphics*[width=0.8\linewidth]{CPU_graph_per_turn.png}
   \caption{Real simulation time (s) per turn for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
 \end{figure}
 
 \begin{figure}[h]
   \centering
-  \includegraphics*[width=0.7\linewidth]{GPU_graph_per_turn.png}
+  \includegraphics*[width=0.8\linewidth]{GPU_graph_per_turn.png}
   \caption{Real simulation time (s) per turn for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
 \end{figure}
 
 
 \begin{figure}
   \centering
-  \includegraphics*[width=0.7\linewidth]{COMPARISON_graph_per_turn.png}
+  \includegraphics*[width=0.8\linewidth]{COMPARISON_graph_per_turn.png}
   \cprotect\caption{Real (\textit{wall time}) simulation time (s) per turn for CPU workload divided by GPU workload for the same $N_p, N_t$, showing the relative performance increase of GPU acceleration. All other parameters (e.g. number of compute cores) are held constant.}\label{fig:comparison_graph_per_turn}
 \end{figure}
 
@@ -2081,9 +1898,21 @@ Another analytical tool for quantifying slow extraction spill quality establishe
 
 By calculating the spill duty factor across a range of chirp repetition frequencies and voltages, a heatmap of spill quality can be generated.~\autoref{fig:sdf_meas} shows the spill duty factor heatmaps for the RFKO system as measured in the machine, both with a bunched and coasting beam. Qualitative analysis of the heatmaps identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
 
-This effect of increased spill duty factor is also an effect of the transit time spread. As the chirp repetition rate approaches the transit time spread, successive excitations will push more particles into resonance and onto the separatrices before the previous particles have encountered the septum. The separation between extraction ``pulses'' then reduces, and the spill duty factor increases (\autoref{fig:sdf_example}).
+The mechanism behind the spill dury factor improvement with bunching can be understood by examining how the stable phase space behaves with respect to synchrotron oscillation. As covered in~\autoref{sec:long_phase_space}, particles moving within longitudinal RF buckets will undergo longitudinal oscillations around the synchronous particle, known as synchrotron oscillations\footnote{As opposed to the transverse betatron oscillations.}. This can be calculated as
+\begin{equation}
+  Q_s = \sqrt{\frac{hqV_{rf}|\eta|\cos\phi_s}{2\pi\beta_0^2E_{tot}}}
+\end{equation} where $h$ is the RF harmonic, $V_{rf}$ the RF voltage, $q$ the particle charge, $\eta$ the slip factor (\autoref{eq:slip_factor}), $\phi_s$ the synchronous phase, and $E_{tot}$ the total energy. It can also be found by simulation; for the configuration outlined in preceeding sections, the synchrotron tune was found to be $Q_s = 0.0052$. 
+In a Steinbach diagram (\autoref{sec:steinbach}), this has the effect of shifting the particle horizontally. This has two consequences: the particles remain at the edge of the unstable region for a shorter amount of time, as the synchrotron motion changes the particle's tune enough to move it into resonance, reducing the effect of the excitation structures. Additionally, it can reduce the effect of magnet ripples changing the shape of the unstable region.
 
+\begin{figure}
+  \centering
+  \includegraphics*[width=0.7\linewidth]{synch-motion.png}
+  \caption{Steinbach diagrams showing the effect of synchrotron motion in a bunched beam (bottom) compared to a coasting beam (top). For a small sextupole ripple, reducing the unstable region width (stopband), a coasting particle approaching resonance may become \textit{recaptured} into the stable region before amplitude growth and extraction can occour. A bunched particle, however, would have a higher probability of remaining inside the unstable region, as the synchrotron motion changes the tune towards resonance.}\label{fig:synch-steinbach}
+\end{figure}
 
+To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised with a Steinbach diagram. Illustrated in~\autoref{fig:synch-steinbach}, particles undergoing slow synchrotron motion in a bunched beam would have a higher chance of remaining inside the unstable region than a coasting beam during changes in stopband width (e.g. due to sextupole ripple)~\cite{Sorge_2018}. This effect diminishes at higher synchrotron tunes, however. As the particle's syncrotron period decreases, has a higher probability of moving back out of resonance too fast to be captured, and this ripple mitigation effect reduces. The bucket hight (synchrotron oscillation amplitude) is proportional to $\sqrt{h}$ (harmonic number); for PS East extraction, at the \nth{8} harmonic, this ripple mitigation effect is still present. 
+
+This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}).
 
 \begin{figure}[h]
   \centering
@@ -2114,6 +1943,7 @@ There are several opportunities for improvements presented in this thesis, both 
 \begin{itemize}
   \item As mentioned in~\autoref{sec:septum}, only one of the magnetic septa---\verb|SMH57|---was modelled for extraction. The accuracy of the simulation model would benefit from future development to simulate particles through both the septa and into the F61 line. This would require combining the PS optics models with the \textit{F61} optics models provided by \textit{acc-models-tls}~\cite{optics_repo}.
   \item The setup of the AFG used to generate chirp signals with repetition rates below \qty{1}{\milli\second} (\autoref{sec:magcycle}) was only a temporary solution, and is not suitable for long-term operational use, as it operates entirely independetly from the LHC Software Architecture~\cite{Roderick:1215575} (LSA) database. A dedicated signal generator, with an interface to CERN's Technical Network and LSA would be a significant improvement.
+  \item The extraction procedure outlined in this thesis only used frequency-modulated chirp signals to sweep across the range of particle tunes. Other work has used signals such as coloured noise~\cite{Nagaslaev:2011zz}. These signals, and others such as dual-band frequencies, could be explored in future studies, using the same equiptment and methods as presented in this thesis.
   \item While simulations for bunched beams show good agreement with the machine implementation, the results of coasting (debunched) beams are less clear. The longitudinal dynamics of the coasting beams in RFKO would require further characterisation to fully understand the differences between the simulations and the machine.
 \end{itemize}
 
