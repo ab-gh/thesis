@@ -246,6 +246,11 @@ R.~Singh, P.~Forck, and S.~Sorge, ``Reducing fluctuations in slow-extraction bea
 R.~Cappi and C.~Steinbach, ``{Low frequency duty factor improvement for the CERN PS slow extraction using rf phase displacement techniques},'' \emph{IEEE Trans. Nucl. Sci.}, vol.~28, pp. 2806--2808, 1981. [Online]. Available: \url{https://cds.cern.ch/record/134321}
 \BIBentrySTDinterwordspacing
 
+\bibitem{PhysRevAccelBeams.26.014402}
+\BIBentryALTinterwordspacing
+S.~Sorge, P.~Forck, and R.~Singh, ``Spill ripple mitigation by bunched beam extraction with high frequency synchrotron motion,'' \emph{Phys. Rev. Accel. Beams}, vol.~26, p. 014402, Jan 2023. [Online]. Available: \url{https://link.aps.org/doi/10.1103/PhysRevAccelBeams.26.014402}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Roderick:1215575}
 \BIBentryALTinterwordspacing
 C.~Roderick and R.~Billen, ``{The LSA Database to Drive the Accelerator Settings},'' CERN, Geneva, Tech. Rep., 2009. [Online]. Available: \url{https://cds.cern.ch/record/1215575}

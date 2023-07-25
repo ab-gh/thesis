@@ -1845,8 +1845,6 @@ The spread of transit times is therefore approximated to~\cite{PhysRevApplied.13
 \end{equation} where $\overline{\varepsilon_Q}$ is the mean modified tune distance. 
 The consequence of this transit time spread is a spread in septum arrival time between instantaneously excited particles. Should the chirp repetition period be shorter than this interval, the chirp repetition frequency component will be ``washed out'' in the spill structure.
 
-% For a limiting frequency $f_{lim}$ of \qty{4}{\kilo\hertz}, and a revolution period of $\sim$\qty{2.4}{\micro\second}, a tune distance of $\delta Q=\sqrt{3}/625\pi\approx 0.0087$ is found. This is close to the tune distance targeted of $\delta Q=0.01$ (\autoref{fig:cycle}).
-
 \begin{figure}
   \centering
   \begin{subfigure}[b]{0.9\linewidth}
@@ -1902,17 +1900,18 @@ The mechanism behind the spill dury factor improvement with bunching can be unde
 \begin{equation}
   Q_s = \sqrt{\frac{hqV_{rf}|\eta|\cos\phi_s}{2\pi\beta_0^2E_{tot}}}
 \end{equation} where $h$ is the RF harmonic, $V_{rf}$ the RF voltage, $q$ the particle charge, $\eta$ the slip factor (\autoref{eq:slip_factor}), $\phi_s$ the synchronous phase, and $E_{tot}$ the total energy. It can also be found by simulation; for the configuration outlined in preceeding sections, the synchrotron tune was found to be $Q_s = 0.0052$. 
-In a Steinbach diagram (\autoref{sec:steinbach}), this has the effect of shifting the particle horizontally. This has two consequences: the particles remain at the edge of the unstable region for a shorter amount of time, as the synchrotron motion changes the particle's tune enough to move it into resonance, reducing the effect of the excitation structures. Additionally, it can reduce the effect of magnet ripples changing the shape of the unstable region.
+In a Steinbach diagram (\autoref{sec:steinbach}), this has the effect of shifting the particle horizontally, in addition to the vertical push from the exciter. This has two consequences: the particles remain at the edge of the unstable region for a shorter amount of time, as the synchrotron motion changes the particle's tune enough to move it into resonance, reducing the effect of the excitation structures. Additionally, it can reduce the effect of magnet ripples changing the shape of the unstable region.
 
 \begin{figure}
   \centering
-  \includegraphics*[width=0.7\linewidth]{synch-motion.png}
-  \caption{Steinbach diagrams showing the effect of synchrotron motion in a bunched beam (bottom) compared to a coasting beam (top). For a small sextupole ripple, reducing the unstable region width (stopband), a coasting particle approaching resonance may become \textit{recaptured} into the stable region before amplitude growth and extraction can occour. A bunched particle, however, would have a higher probability of remaining inside the unstable region, as the synchrotron motion changes the tune towards resonance.}\label{fig:synch-steinbach}
+  \includegraphics*[width=0.7\linewidth]{synch-phase-space.png}
+  \caption{Phase space of a particle approaching the separatrix in a coasting beam (top) and a bunched beam (bottom), both with a small sextupole ripple component.}
+  \label{fig:synch-phase-space}
 \end{figure}
 
-To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised with a Steinbach diagram. Illustrated in~\autoref{fig:synch-steinbach}, particles undergoing slow synchrotron motion in a bunched beam would have a higher chance of remaining inside the unstable region than a coasting beam during changes in stopband width (e.g. due to sextupole ripple)~\cite{Sorge_2018}. This effect diminishes at higher synchrotron tunes, however. As the particle's syncrotron period decreases, has a higher probability of moving back out of resonance too fast to be captured, and this ripple mitigation effect reduces. The bucket hight (synchrotron oscillation amplitude) is proportional to $\sqrt{h}$ (harmonic number); for PS East extraction, at the \nth{8} harmonic, this ripple mitigation effect is still present. 
+To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised in phase space in \autoref{fig:synch-phase-space}. The upper figure is the case for a coasting beam with no synchrotron motion: particles experience no change in tune, and so a small ripple in sextupole field could increase the stable region area and ``recapture'' the particle back into the stable region, preventing the particle's extraction. The lower figure describes the case for a bunched beam with slow synchrotron motion: the particles recieve a kick (RFKO) \textit{and} and periodic tune change (RF cavity), which reduces the stable phase space area. This reduces the chance of a particle being recaptured by a sextupole ripple, pushes the particle deeper into resonance quicker, and ``smoothens'' out the spill signal. There is however a limit to this ripple mitigation, where the synchrotron oscillation is too fast for particles to remain in the unstable region.~\cite{Sorge_2018,PhysRevAccelBeams.26.014402}.
 
-This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}).
+This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}). Both of these effects, and the the limiting frequency obtained from transit time spread, contribute to the optimal selection of parameters for an RFKO driving signal.
 
 \begin{figure}[h]
   \centering
@@ -1949,7 +1948,7 @@ There are several opportunities for improvements presented in this thesis, both 
 
 
 \chapter{Acknowledgements}
-%\input{ack.tex}
+\input{ack.tex}
 \bibliographystyle{IEEEtran} 
 \bibliography{refs} 
 
