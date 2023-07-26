@@ -1063,14 +1063,14 @@ The frequency response $H(f)$ of a low-pass filter can be approximated as
 \end{eqnarray}
 where $f_c$ is the cutoff frequency, $n$ is the order of the filter (which determines the steepness of the roll-off), and $A$ is a gain constant. The frequency response curve at each gain was fitted to this function, and the fitted curve and variance error are shown in red in~\autoref{fig:freq_response_machine} and~\autoref{sec:machine_freq_anal_method}.
 
-For \textbf{bunched beams}, the low-pass filter was found to have a cutoff frequency of \qty[separate-uncertainty = true]{1.23(0.21)}{\kilo\hertz} in machine measurements, and \qty[separate-uncertainty = true]{1.49(0.26)}{\kilo\hertz} in simulation. Both machine measurement and simulation fits resulted in an order of exactly 1, to 7 decimal places.
+For \textbf{bunched beams}, the low-pass filter was found to have a cutoff frequency of \qty[separate-uncertainty = true]{1.23(0.21)}{\kilo\hertz} in machine measurements, and \qty[separate-uncertainty = true]{1.49(0.26)}{\kilo\hertz} in simulation. Both machine measurement and simulation fits resulted in an order of exactly 1, to 7 decimal places. These results show good agreements
 
 For \textbf{coasting beams}, the fitted low-pass filter has a cutoff frequency of \qty[separate-uncertainty = true]{4.39(1.64)}{\kilo\hertz}
 
 
 Both plots also show a \textit{minimum transfer characteristic}, where the frequency response is at its lowest: for bunched beams, this minima is at \qty{4}{\kilo\hertz}, meaning a chirp signal repeating every \qty{0.25}{\milli\second} will have the least effect on frequencies present in the spill signal. For coasting beams, this minima is less clear, and appears to shift to higher frequencies with increasing chirp signal voltage.
 
-This low-pass filter effect, and corresponding minimum transfer characteristic, can be explained by the time taken for particles to move from a stable phase-space area to the magnetic septum~\cite{Sorge_2018}. This time $T_{tr}$, in units of 3 turns, is known as the \textit{transit time}, and is given by~\cite{Pullia:313678, Bryant:CAS}:
+The low-pass filter effect, and corresponding cutoff frequency and minimum transfer characteristics, can be explained by the time taken for particles to move from a stable phase-space area to the magnetic septum~\cite{Sorge_2018}. This time $T_{tr}$, in units of 3 turns, is known as the \textit{transit time}, and is given by~\cite{Pullia:313678, Bryant:CAS}:
 \begin{equation}
   T_{tr} = \frac 1{\sqrt{3}{\varepsilon_Q}} \ln \left| \frac n{n+3} \frac 3{\frac {\dot {\varepsilon_Q}}{\varepsilon_Q} - \frac 1{\sqrt 3}\frac{\dot{{\varepsilon_Q}}}{{{\varepsilon_Q}}^2}}\right|
   \label{eq:transit_time}
@@ -1083,14 +1083,16 @@ The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$,
   \caption{A phase-space diagram illustrating the transit time $T_{tr}$ elapsed between leaving the last stable triangle and arriving at the septum. The particle motion (and transit time) is presented in units of three turns; in real-time, the particle moves between the three separatrix arms. The Kobayashi Hamiltonian forms the separatrices of the stable triangle. Total transit time $T_{tr}=T_{tr,1} + T_{tr,2}$ depends both on the distance $(x_0, y_0)$ of the particle from a fixed point $O'$ ($T_{tr,1}$) and the distance from $O'$ to the septum blade ($T_{tr,2}$).}\label{fig:transit_time}
 \end{figure}
 
-In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. 
+In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{\lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. 
 The spread of transit times is therefore approximated to~\cite{PhysRevApplied.13.044076, Pullia:313678}
 \begin{equation}
   \Delta T_{tr}\approx\frac{dT_{tr}}{d{\varepsilon_Q}}\Delta{\varepsilon_Q}\propto\frac 1{\overline{\varepsilon_Q}^2}\Delta\varepsilon_Q
 \end{equation} where $\overline{\varepsilon_Q}$ is the mean modified tune distance. 
 The consequence of this transit time spread is a spread in septum arrival time between instantaneously excited particles. Should the chirp repetition period be shorter than this interval, the chirp repetition frequency component will be ``washed out'' in the spill structure.
 
-\begin{figure}
+The simulated frequency response characteristics are shown in~\autoref{fig:freq_response_sim}, using the same parameter ranges as~\autoref{fig:freq_response_machine}. The bunched beam frequency response shows the same minima characteristic as the real machine, with a minimum at \qty{4}{\kilo\hertz}. The coasting beam simulations, however, do not have the same accuracy. The frequency response minima seen in~\autoref{machine_rf_off} is still present at \qty{4}{\kilo\hertz}, but the typical low-pass filter effect is not seen, with the response returning to a high level as the chirp frequency approaches \qty{10}{\kilo\hertz}.
+
+\begin{figure}[h]
   \centering
   \begin{subfigure}[b]{0.9\linewidth}
     \includegraphics*[width=\linewidth]{machine_rf_on.png}
@@ -1102,8 +1104,6 @@ The consequence of this transit time spread is a spread in septum arrival time b
   \end{subfigure}
   \caption{Frequency response of the RFKO system as implemented in the PS, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_machine}
 \end{figure}
-
-The simulated frequency response characteristics are shown in~\autoref{fig:freq_response_sim}, using the same parameter ranges as~\autoref{fig:freq_response_machine}. The bunched beam frequency response shows the same minima characteristic as the real machine, with a minimum at \qty{4}{\kilo\hertz}. The coasting beam simulations, however, do not have the same accuracy. The frequency response minima seen in~\autoref{machine_rf_off} is still present at \qty{4}{\kilo\hertz}, but the typical low-pass filter effect is not seen, with the response returning to a high level as the chirp frequency approaches \qty{10}{\kilo\hertz}.
 
 \begin{figure}[h]
   \centering
