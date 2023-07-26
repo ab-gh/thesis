@@ -176,7 +176,7 @@ Simulations can there provide an important tool in understanding slow extraction
 
 To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard within CERN's beam physics community. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
 
-Newer tools are introducing improvements such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarassingly parallel}\footnote{A problem which requires minimal no effort to be separated into a large number of independent, concurrently-processed tasks.} can be run on large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or discrete computer host on a batch-processing network.
+Newer tools are introducing improvements such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarassingly parallel}\footnote{A problem which requires minimal no effort to be separated into a large number of independent, concurrently-processed tasks.} tasks can be run on large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or discrete computer host on a batch-processing network.
 
 \chapter{Accelerator Physics Theory}\label{chap:theory}
 
@@ -190,52 +190,9 @@ The coordinate systems used to describe the dynamic motion of particles in an ac
 The basis vectors for this system, $(\hat x, \hat y, \hat s)$, rotate in space as the reference particle moves along the accelerator. The longitudinal vector $\hat s$ is tangent to the reference particle's trajectory, and the $\hat x$ direction is parallel to the radius of the accelerator.  This system is shown in Figure~\ref{fig:frenet-serret}, along with the radius of the circular trajectory $\rho$, and the angle from the origin $s=0$. 
 
 \begin{figure}[!h]
-\begin{center}
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-
-%uncomment if require: \path (0,455); %set diagram left start at 0, and has height of 455
-
-%Shape: Ellipse [id:dp0798878508534051] 
-\draw   (142,162.5) .. controls (142,129.09) and (199.08,102) .. (269.5,102) .. controls (339.92,102) and (397,129.09) .. (397,162.5) .. controls (397,195.91) and (339.92,223) .. (269.5,223) .. controls (199.08,223) and (142,195.91) .. (142,162.5) -- cycle ;
-%Straight Lines [id:da3917612889933506] 
-\draw    (269.5,162.5) -- (269.5,57) ;
-\draw [shift={(269.5,55)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da9587552919771436] 
-\draw    (397,162.5) -- (269.5,162.5) ;
-%Straight Lines [id:da15722891342539147] 
-\draw    (269.5,162.5) -- (322.59,215.59) ;
-\draw [shift={(324,217)}, rotate = 225] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da7846346908558013] 
-\draw    (324,217) -- (242.93,235.34) ;
-\draw [shift={(240,236)}, rotate = 347.25] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
-%Straight Lines [id:da569421074096844] 
-\draw    (324,217) -- (324,141) ;
-\draw [shift={(324,138)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
-%Straight Lines [id:da7806312488509295] 
-\draw    (324,217) -- (345.88,238.88) ;
-\draw [shift={(348,241)}, rotate = 225] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
-%Curve Lines [id:da9180655893242637] 
-\draw    (280,173) .. controls (284,177) and (291,162) .. (287,163) ;
-
-% Text Node
-\draw (406,153.4) node [anchor=north west][inner sep=0.75pt]    {$s=0$};
-% Text Node
-\draw (294,166.4) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
-% Text Node
-\draw (271,177.4) node [anchor=north west][inner sep=0.75pt]    {$\rho $};
-% Text Node
-\draw (320,113.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{y}$};
-% Text Node
-\draw (224,230.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{s}$};
-% Text Node
-\draw (350,244.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{x}$};
-
-
-\end{tikzpicture}
-\end{center}
-\caption{The vectors used to define the Frenet-Serret coordinate system.}\label{fig:frenet-serret}
+  \centering
+  \includegraphics*[width=0.5\linewidth]{coordinate-system.png}
+  \caption{The vectors used to define the Frenet-Serret coordinate system.}\label{fig:frenet-serret}
 \end{figure}
 
 This coordinate system is known as a {\it Frenet-Serret} coordinate system, and can be rigorously defined by the unit vector {\it tangent} to the curve $\hat T$ (pointing in the direction of motion), the unit vector {\it normal} to the tangent and on the tangential plane $\hat N$, and the binormal unit vector $\hat B$, the cross product of $\hat T$ and $\hat N$. These unit vectors, forming an orthonormal basis spanning $\mathbb{R}^3$ are equal to the vectors $\hat x, \hat y, \hat s$ by:
@@ -337,63 +294,7 @@ Again referring to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a 
 
 \begin{figure}[h]
   \centering
-  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-  %uncomment if require: \path (0,420); %set diagram left start at 0, and has height of 420
-  
-  %Shape: Rectangle [id:dp8960939916911084] 
-  \draw   (104.63,81.43) -- (233.66,81.43) -- (233.66,168.29) -- (104.63,168.29) -- cycle ;
-  %Shape: Rectangle [id:dp004915718994831897] 
-  \draw   (104.63,66.95) -- (233.66,66.95) -- (233.66,81.43) -- (104.63,81.43) -- cycle ;
-  %Shape: Rectangle [id:dp9834216786415646] 
-  \draw   (104.63,168.29) -- (233.66,168.29) -- (233.66,182.77) -- (104.63,182.77) -- cycle ;
-  %Straight Lines [id:da9215546463069324] 
-  \draw    (123.07,95.91) -- (123.07,150.81) ;
-  \draw [shift={(123.07,153.81)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  %Straight Lines [id:da4829295704205643] 
-  \draw    (215.23,95.91) -- (215.23,150.81) ;
-  \draw [shift={(215.23,153.81)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  %Straight Lines [id:da5246257542758568] 
-  \draw    (169.15,95.91) -- (169.15,150.81) ;
-  \draw [shift={(169.15,153.81)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  %Flowchart: Summing Junction [id:dp9967505452618075] 
-  \draw   (161.85,124.86) .. controls (161.85,120.83) and (165.12,117.56) .. (169.15,117.56) .. controls (173.18,117.56) and (176.45,120.83) .. (176.45,124.86) .. controls (176.45,128.89) and (173.18,132.16) .. (169.15,132.16) .. controls (165.12,132.16) and (161.85,128.89) .. (161.85,124.86) -- cycle ; \draw   (163.99,119.7) -- (174.31,130.02) ; \draw   (174.31,119.7) -- (163.99,130.02) ;
-  %Straight Lines [id:da705900304054244] 
-  \draw    (169.15,124.86) -- (198.2,124.86) ;
-  \draw [shift={(200.2,124.86)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  
-  % Text Node
-  \draw (150.15,45.7) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{27.66pt}\setlength\topsep{0pt}
-  \begin{center}
-  North
-  \end{center}
-  
-  \end{minipage}};
-  % Text Node
-  \draw (148.65,188.02) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{29.38pt}\setlength\topsep{0pt}
-  \begin{center}
-  South
-  \end{center}
-  
-  \end{minipage}};
-  % Text Node
-  \draw (108.27,101.07) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{9.78pt}\setlength\topsep{0pt}
-  \begin{center}
-  $\displaystyle \vec{B}$
-  \end{center}
-  
-  \end{minipage}};
-  % Text Node
-  \draw (191.27,98.07) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{9.14pt}\setlength\topsep{0pt}
-  \begin{center}
-  $\displaystyle \vec{F}$
-  \end{center}
-  
-  \end{minipage}};
-  
-  \end{tikzpicture}  
-  
+  \includegraphics*[width=0.2\linewidth]{dipole-bending.png}
   \caption{A ``front-on'' view of a dipole magnet, showing its magnetic field pointing down, and the Lorentz force experienced by a positively charged particle travelling into the page.}\label{fig:dipole}
 \end{figure}
 
@@ -401,12 +302,7 @@ If $\alpha$ is the bending angle of a single MU, then $\alpha$ can be related to
 \begin{equation}
 \alpha=\frac{ds}\rho=\frac{B\ ds}{B\rho}
 \end{equation}
-Integrating this over all magnets in the ring, therefore, must be equal to one full revolution, $2\pi$
-\begin{equation}
-\frac{\int B\ ds}{B\rho}\equiv2\pi
-\end{equation}
-
-This provides one of the first key insights which is not obvious at first---that ``circular'' accelerators are in fact more complex shapes, with bending magnets at each vertex, and a \textit{drift} (accelerator sections without any significant electromagnetic field) or other non-bending multipole magnet at each side: in the case of the LHC, 1,232 dipole magnets are used to keep the beam on it's circular path; in the PS---100.
+Integrating this over all magnets in the ring, therefore, must be equal to one full revolution, $2\pi$. This provides one of the first key insights which is not obvious at first---that ``circular'' accelerators are in fact more complex shapes, with bending magnets at each vertex, and a \textit{drift} (accelerator sections without any significant electromagnetic field) or other non-bending multipole magnet at each side: in the case of the LHC, 1,232 dipole magnets are used to keep the beam on it's circular path; in the PS---100.
 
 \subsection{Focussing and Multipoles}
 
@@ -414,201 +310,14 @@ While single-pair dipole magnets are used to bend the beam along the circular pa
 
 \begin{figure}
 \centering
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-%Shape: Rectangle [id:dp16895106513799774] 
-\draw   (165.86,51.72) -- (208.28,94.14) -- (194.14,108.28) -- (151.72,65.86) -- cycle ;
-%Shape: Rectangle [id:dp7670602245044726] 
-\draw   (75.86,141.72) -- (118.28,184.14) -- (104.14,198.28) -- (61.72,155.86) -- cycle ;
-%Shape: Rectangle [id:dp12217894090817283] 
-\draw   (208.28,155.86) -- (165.86,198.28) -- (151.72,184.14) -- (194.14,141.72) -- cycle ;
-%Shape: Rectangle [id:dp07589692725962705] 
-\draw   (118.28,65.86) -- (75.86,108.28) -- (61.72,94.14) -- (104.14,51.72) -- cycle ;
-%Curve Lines [id:da018342825147440456] 
-\draw    (80,100) .. controls (88.56,113.58) and (88.29,136.15) .. (81.62,147.61) ;
-\draw [shift={(80,150)}, rotate = 308.25] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da03259735785014195] 
-\draw    (110,70) .. controls (123.98,76.99) and (145.42,74.17) .. (157.17,70.87) ;
-\draw [shift={(160,70)}, rotate = 161.57] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da729590423325807] 
-\draw    (89.2,96.6) .. controls (103.87,116.48) and (102.52,130.21) .. (90.54,151.28) ;
-\draw [shift={(89.2,153.6)}, rotate = 300.51] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da08909499648653463] 
-\draw    (96.2,89.6) .. controls (115.5,106) and (114.31,137.31) .. (98.03,158.35) ;
-\draw [shift={(96.2,160.6)}, rotate = 310.6] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da4406082857174254] 
-\draw    (184.42,100.04) .. controls (170.84,119.33) and (173.24,133.1) .. (186.2,154.6) ;
-\draw [shift={(186.2,97.6)}, rotate = 127.04] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da930807564323026] 
-\draw    (176.7,92.71) .. controls (158.78,110.22) and (161.37,141.44) .. (179.04,161.6) ;
-\draw [shift={(179.04,90.6)}, rotate = 140.27] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da5120218997402282] 
-\draw    (111.04,172.69) .. controls (130.22,159.71) and (143.94,162.15) .. (165.29,174.83) ;
-\draw [shift={(108.29,174.63)}, rotate = 323.78] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da8390452720928254] 
-\draw    (103.45,165.31) .. controls (121.22,147.77) and (154.92,149.37) .. (172.32,167.85) ;
-\draw [shift={(101.32,167.61)}, rotate = 310.56] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da6235876089908017] 
-\draw    (113.26,178.83) .. controls (130.38,174.41) and (148.87,172.99) .. (160.29,179.63) ;
-\draw [shift={(110.29,179.63)}, rotate = 344.31] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da24851523512173146] 
-\draw    (106.29,76.02) .. controls (126.22,89.93) and (139.95,88.6) .. (160.98,77.12) ;
-\draw [shift={(163.29,75.83)}, rotate = 150.49] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da9241759818534776] 
-\draw    (99.32,82.71) .. controls (115.79,101.04) and (149.72,100.86) .. (168.35,84.34) ;
-\draw [shift={(170.32,82.48)}, rotate = 134.64] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da909413050316068] 
-\draw    (191.13,103.88) .. controls (185.3,123.95) and (186.46,138.2) .. (192,151) ;
-\draw [shift={(192,101)}, rotate = 107.47] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da22347636828081718] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (52,124.8) -- (128,124.8) ;
-\draw [shift={(130,124.8)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da5667501984477679] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (142,124.8) -- (162.2,124.8) -- (218,124.8) ;
-\draw [shift={(140,124.8)}, rotate = 0] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da690213494533449] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (135,119.8) -- (135,46.6) ;
-\draw [shift={(135,44.6)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da4326059970165157] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (135,128.8) -- (135,207.6) ;
-\draw [shift={(135,209.6)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Shape: Ellipse [id:dp34626752560776697] 
-\draw   (340.2,124) .. controls (340.2,104.12) and (344.63,88) .. (350.1,88) .. controls (355.57,88) and (360,104.12) .. (360,124) .. controls (360,143.88) and (355.57,160) .. (350.1,160) .. controls (344.63,160) and (340.2,143.88) .. (340.2,124) -- cycle ;
-%Straight Lines [id:da6277807791700993] 
-\draw [line width=2.25]    (350,100) -- (526.15,148.93) ;
-\draw [shift={(530,150)}, rotate = 195.52] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=2.25]    (17.49,-5.26) .. controls (11.12,-2.23) and (5.29,-0.48) .. (0,0) .. controls (5.29,0.48) and (11.12,2.23) .. (17.49,5.26)   ;
-%Shape: Path Data [id:dp6636836986240371] 
-\draw   (430,160) .. controls (432.76,160) and (435,144.33) .. (435,125) .. controls (435,105.67) and (432.76,90) .. (430,90) -- (450,90) .. controls (447.24,90) and (445,105.67) .. (445,125) .. controls (445,144.33) and (447.24,160) .. (450,160) -- (430,160) -- cycle ;
-%Shape: Ellipse [id:dp8228024181704114] 
-\draw   (520,124) .. controls (520,104.12) and (524.43,88) .. (529.9,88) .. controls (535.37,88) and (539.8,104.12) .. (539.8,124) .. controls (539.8,143.88) and (535.37,160) .. (529.9,160) .. controls (524.43,160) and (520,143.88) .. (520,124) -- cycle ;
-%Straight Lines [id:da023007468461673675] 
-\draw [line width=2.25]    (320,110) -- (346.21,101.26) ;
-\draw [shift={(350,100)}, rotate = 161.57] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=2.25]    (17.49,-5.26) .. controls (11.12,-2.23) and (5.29,-0.48) .. (0,0) .. controls (5.29,0.48) and (11.12,2.23) .. (17.49,5.26)   ;
-%Straight Lines [id:da4640302291959706] 
-\draw [line width=2.25]    (530,150) -- (556.21,141.26) ;
-\draw [shift={(560,140)}, rotate = 161.57] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=2.25]    (17.49,-5.26) .. controls (11.12,-2.23) and (5.29,-0.48) .. (0,0) .. controls (5.29,0.48) and (11.12,2.23) .. (17.49,5.26)   ;
-%Straight Lines [id:da879655645129539] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (312.8,125) -- (568.8,125) ;
-
-% Text Node
-\draw (84,72) node [anchor=north west][inner sep=0.75pt]   [align=left] {N};
-% Text Node
-\draw (175,162) node [anchor=north west][inner sep=0.75pt]   [align=left] {N};
-% Text Node
-\draw (175,71) node [anchor=north west][inner sep=0.75pt]   [align=left] {S};
-% Text Node
-\draw (85,163) node [anchor=north west][inner sep=0.75pt]   [align=left] {S};
-% Text Node
-\draw (223,111) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \vec{F}$};
-% Text Node
-\draw (331,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {Focus};
-% Text Node
-\draw (412,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {Defocus};
-% Text Node
-\draw (511,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {Focus};
-
-
-\end{tikzpicture}
-\caption{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. The force experienced by a positively-charged particle is shown as dashed arrows. Right-hand diagram illustrates a FODO cell.}
-\label{fig:quadrupole}
+  \includegraphics*[width=0.9\linewidth]{fodo.png}
+  \caption{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. The force experienced by a positively-charged particle is shown as dashed arrows. Right-hand diagram illustrates a FODO cell.}\label{fig:quadrupole}
 \end{figure}
 
 \begin{figure}
     \centering
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-
-%Curve Lines [id:da930807564323026] 
-\draw    (432.99,71.24) .. controls (448.36,77.05) and (460.19,72.18) .. (460,50) ;
-\draw [shift={(430,70)}, rotate = 24.34] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Shape: Rectangle [id:dp013004832065804717] 
-\draw   (440,30.17) -- (501.96,30.17) -- (501.96,50.83) -- (440,50.83) -- cycle ;
-
-%Shape: Rectangle [id:dp0046311061182631175] 
-\draw   (439.17,157.34) -- (501.13,157.34) -- (501.13,177.99) -- (439.17,177.99) -- cycle ;
-%Shape: Rectangle [id:dp39817022789023415] 
-\draw   (519.02,40) -- (550,93.66) -- (532.11,103.99) -- (501.13,50.33) -- cycle ;
-%Shape: Rectangle [id:dp567141395429372] 
-\draw   (550,114.34) -- (519.02,168) -- (501.13,157.67) -- (532.11,104.01) -- cycle ;
-%Shape: Rectangle [id:dp6785221133592134] 
-\draw   (421.28,167.66) -- (390.3,114) -- (408.19,103.67) -- (439.17,157.34) -- cycle ;
-%Shape: Rectangle [id:dp9504575123901953] 
-\draw   (440,50.83) -- (409.02,104.49) -- (391.13,94.16) -- (422.11,40.5) -- cycle ;
-%Curve Lines [id:da6493708735943702] 
-\draw    (507.27,71.56) .. controls (493.1,78.82) and (480.19,72.18) .. (480,50) ;
-\draw [shift={(510,70)}, rotate = 147.72] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da44762366064755477] 
-\draw    (422.66,91.45) .. controls (438.47,100.7) and (435.01,111.07) .. (420,120) ;
-\draw [shift={(420,90)}, rotate = 27.05] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da5120715001347833] 
-\draw    (460,156.95) .. controls (459.28,136.09) and (443.18,131.02) .. (430,140) ;
-\draw [shift={(460,160)}, rotate = 271.96] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da6084093795236516] 
-\draw    (480.19,156.95) .. controls (482.15,136.18) and (496.44,131.98) .. (510,140) ;
-\draw [shift={(480,160)}, rotate = 271.96] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da5911117332573328] 
-\draw    (517.64,91.9) .. controls (504.95,102.7) and (506.58,112.06) .. (520,120) ;
-\draw [shift={(520,90)}, rotate = 142.65] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da5901005430959838] 
-\draw    (426.74,80.35) .. controls (444.51,88.37) and (469.61,85.37) .. (469.8,50.6) ;
-\draw [shift={(424,79)}, rotate = 28.34] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da8751448369534596] 
-\draw    (516.87,81.2) .. controls (491.9,90.27) and (469.61,85.74) .. (469.8,50.6) ;
-\draw [shift={(520,80)}, rotate = 157.97] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da9461247171380158] 
-\draw    (516.97,81.35) .. controls (493.68,92.74) and (492.8,118.16) .. (516.8,131.6) ;
-\draw [shift={(520,80)}, rotate = 157.97] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da7812886061149489] 
-\draw    (470.09,156.32) .. controls (472.82,135.68) and (492.1,118.3) .. (516.8,131.6) ;
-\draw [shift={(469.8,159.6)}, rotate = 272.6] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da44163958826831395] 
-\draw    (469.77,156.33) .. controls (468.41,135.88) and (445.75,120.25) .. (425.8,132.6) ;
-\draw [shift={(469.8,159.6)}, rotate = 272.6] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Curve Lines [id:da9043992183966973] 
-\draw    (426.82,80.67) .. controls (445.85,93.18) and (445.86,120.18) .. (425.8,132.6) ;
-\draw [shift={(424,79)}, rotate = 28.02] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da30983223241313596] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (477,104.99) -- (559.8,104.99) ;
-\draw [shift={(561.8,104.99)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da8507080419890842] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (475.01,97.87) -- (520,21) ;
-\draw [shift={(474,99.6)}, rotate = 300.34] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da6355057362290828] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (469.2,110.6) -- (422.86,184.9) ;
-\draw [shift={(421.8,186.6)}, rotate = 301.95] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da969743497305056] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (475.78,111.35) -- (516.8,184.6) ;
-\draw [shift={(474.8,109.6)}, rotate = 60.75] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da24617235587316455] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (463.2,104.99) -- (375.8,104.99) ;
-\draw [shift={(465.2,104.99)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da15527343167894903] 
-\draw  [dash pattern={on 4.5pt off 4.5pt}]  (468.2,100.6) -- (422.82,24.32) ;
-\draw [shift={(421.8,22.6)}, rotate = 59.25] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-
-% Text Node
-\draw (360.61,92.7) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \vec{F}$};
-% Text Node
-\draw (464.98,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {N};
-% Text Node
-\draw (464.15,159.16) node [anchor=north west][inner sep=0.75pt]   [align=left] {S};
-% Text Node
-\draw (519.57,127.51) node [anchor=north west][inner sep=0.75pt]   [align=left] {N};
-% Text Node
-\draw (519.57,63.49) node [anchor=north west][inner sep=0.75pt]   [align=left] {S};
-% Text Node
-\draw (409.57,63.99) node [anchor=north west][inner sep=0.75pt]   [align=left] {S};
-% Text Node
-\draw (408.73,127.17) node [anchor=north west][inner sep=0.75pt]   [align=left] {N};
-% Text Node
-\draw (567.61,91.7) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \vec{F}$};
-
-
-\end{tikzpicture}
-    \caption{A diagram showing the field of a \textit{normal} oriented sextupole. The force experienced by a positively-charged particle is shown as dashed arrows.}
-    \label{fig:sextupole}
+    \includegraphics*[width=0.4\linewidth]{sextupole.png}
+    \caption{A diagram showing the field of a \textit{normal} oriented sextupole. The force experienced by a positively-charged particle is shown as dashed arrows.}\label{fig:sextupole}
 \end{figure}
 
 \subsection{Single-Particle Oscillatory Motion}
@@ -679,68 +388,7 @@ These parameters can be readily understood in the \textit{phase space} of $(x, x
 
 \begin{figure}[h]
   \centering
-  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-  %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-  
-  %Straight Lines [id:da9035065264450608] 
-  \draw    (330,290) -- (330,12) ;
-  \draw [shift={(330,10)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Straight Lines [id:da452302761105561] 
-  \draw    (190,150) -- (468,150) ;
-  \draw [shift={(470,150)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Shape: Ellipse [id:dp6041133983422828] 
-  \draw   (407.78,72.22) .. controls (419.93,84.37) and (394.95,129.04) .. (352,172) .. controls (309.04,214.95) and (264.37,239.93) .. (252.22,227.78) .. controls (240.07,215.63) and (265.05,170.96) .. (308,128) .. controls (350.96,85.05) and (395.63,60.07) .. (407.78,72.22) -- cycle ;
-  %Straight Lines [id:da2286251239967374] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (410,80) -- (410,260) ;
-  %Straight Lines [id:da9188194183446701] 
-  \draw    (350,250) -- (332,250) ;
-  \draw [shift={(330,250)}, rotate = 360] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  %Straight Lines [id:da052944294077684084] 
-  \draw    (390,250) -- (408,250) ;
-  \draw [shift={(410,250)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  %Straight Lines [id:da26164850536705697] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (400,70) -- (220,70) ;
-  %Straight Lines [id:da5891228483681046] 
-  \draw    (230,100) -- (230,72) ;
-  \draw [shift={(230,70)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  %Straight Lines [id:da503222730024451] 
-  \draw    (230,120) -- (230,148) ;
-  \draw [shift={(230,150)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  %Straight Lines [id:da3735583359226975] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (430,50) -- (220,260) ;
-  %Straight Lines [id:da030558782090539305] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (400,70) -- (400,30) ;
-  %Straight Lines [id:da1130230393821896] 
-  \draw    (332,50) -- (398,50) ;
-  \draw [shift={(400,50)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  \draw [shift={(330,50)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  %Straight Lines [id:da9823091980720369] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (410,80) -- (460,80) ;
-  %Straight Lines [id:da26364391504483] 
-  \draw    (440,148) -- (440,82) ;
-  \draw [shift={(440,80)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  \draw [shift={(440,150)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
-  
-  % Text Node
-  \draw (475,139) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
-  % Text Node
-  \draw (304,2) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x'$};
-  % Text Node
-  \draw (352,237) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sqrt{\varepsilon \beta }$};
-  % Text Node
-  \draw (214,99) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sqrt{\varepsilon \gamma }$};
-  % Text Node
-  \draw (441,21.4) node [anchor=north west][inner sep=0.75pt]    {$\tan 2\theta =\frac{2\alpha }{\gamma -\beta }$};
-  % Text Node
-  \draw (331,11) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle -\alpha \sqrt{\nicefrac{\varepsilon}{\gamma}}$};
-  % Text Node
-  \draw (447,92) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle -\alpha \sqrt{\nicefrac{\varepsilon}{\beta}}$};
-  % Text Node
-  \draw (181,180) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle A=\pi \varepsilon $};
-  
-  
-  \end{tikzpicture}
+  \includegraphics*[width=0.6\linewidth]{phase-space-with-twiss.png}
   \caption{A phase space ellipse in $(x, x')$ and its relation to the Twiss parameters.}
   \label{fig:twiss-phase-space}
 \end{figure}
@@ -920,63 +568,7 @@ These effects can be analysed by considering phase space coordinates---this time
 
 \begin{figure}[h]
   \centering
-  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-  %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-  %Shape: Axis 2D [id:dp650692499821311] 
-  \draw  (29.2,137.04) -- (531,137.04)(133.57,45.4) -- (133.57,223) (524,132.04) -- (531,137.04) -- (524,142.04) (128.57,52.4) -- (133.57,45.4) -- (138.57,52.4)  ;
-  %Shape: Ellipse [id:dp962064306053843] 
-  \draw   (311,138) .. controls (311,118.67) and (335.62,103) .. (366,103) .. controls (396.38,103) and (421,118.67) .. (421,138) .. controls (421,157.33) and (396.38,173) .. (366,173) .. controls (335.62,173) and (311,157.33) .. (311,138) -- cycle ;
-  %Shape: Ellipse [id:dp42298450906410845] 
-  \draw   (241,138) .. controls (241,102.1) and (288.01,73) .. (346,73) .. controls (403.99,73) and (451,102.1) .. (451,138) .. controls (451,173.9) and (403.99,203) .. (346,203) .. controls (288.01,203) and (241,173.9) .. (241,138) -- cycle ;
-  %Curve Lines [id:da48360196382099097] 
-  \draw [line width=1.5]    (164.47,137.04) .. controls (203.07,100.6) and (259.03,53.6) .. (321,53) ;
-  %Curve Lines [id:da022264838147681987] 
-  \draw [line width=1.5]    (164.47,137.04) .. controls (127.07,175.6) and (107.03,198.6) .. (78.8,213) ;
-  %Curve Lines [id:da025245126351781666] 
-  \draw [line width=1.5]    (493.11,138) .. controls (468.06,103.6) and (414.52,50.6) .. (321,53) ;
-  %Curve Lines [id:da5340411120336765] 
-  \draw [line width=1.5]    (493.11,138) .. controls (502.48,147.6) and (510.13,155.6) .. (521.8,163) ;
-  %Curve Lines [id:da8940900702477439] 
-  \draw [line width=1.5]    (164.47,137.96) .. controls (203.07,174.4) and (259.03,221.4) .. (321,222) ;
-  %Curve Lines [id:da20522381968541414] 
-  \draw [line width=1.5]    (164.47,137.96) .. controls (127.07,99.4) and (107.03,76.4) .. (78.8,62) ;
-  %Curve Lines [id:da7107422824952221] 
-  \draw [line width=1.5]    (493.11,137) .. controls (465.19,180.6) and (436.51,224.6) .. (321,222) ;
-  %Curve Lines [id:da16381474238957106] 
-  \draw [line width=1.5]    (493.11,137) .. controls (502.48,127.4) and (510.13,119.4) .. (521.8,112) ;
-  %Shape: Circle [id:dp7206380160494676] 
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (361,138) .. controls (361,135.24) and (363.24,133) .. (366,133) .. controls (368.76,133) and (371,135.24) .. (371,138) .. controls (371,140.76) and (368.76,143) .. (366,143) .. controls (363.24,143) and (361,140.76) .. (361,138) -- cycle ;
-  %Shape: Circle [id:dp4946649169960704] 
-  \draw   (384,91) .. controls (384,88.24) and (386.24,86) .. (389,86) .. controls (391.76,86) and (394,88.24) .. (394,91) .. controls (394,93.76) and (391.76,96) .. (389,96) .. controls (386.24,96) and (384,93.76) .. (384,91) -- cycle ;
-  %Shape: Circle [id:dp3701340668351334] 
-  \draw   (148,177) .. controls (148,174.24) and (150.24,172) .. (153,172) .. controls (155.76,172) and (158,174.24) .. (158,177) .. controls (158,179.76) and (155.76,182) .. (153,182) .. controls (150.24,182) and (148,179.76) .. (148,177) -- cycle ;
-  %Straight Lines [id:da8814571161987692] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (195.8,53.6) -- (186.52,77.73) ;
-  \draw [shift={(185.8,79.6)}, rotate = 291.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Straight Lines [id:da4939647425580147] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}]  (450.2,59.6) -- (400.54,87.62) ;
-  \draw [shift={(398.8,88.6)}, rotate = 330.57] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Shape: Circle [id:dp39758145155315083] 
-  \draw   (176,94) .. controls (176,91.24) and (178.24,89) .. (181,89) .. controls (183.76,89) and (186,91.24) .. (186,94) .. controls (186,96.76) and (183.76,99) .. (181,99) .. controls (178.24,99) and (176,96.76) .. (176,94) -- cycle ;
-  %Shape: Circle [id:dp9212570769255528] 
-  \draw   (331,177) .. controls (331,174.24) and (333.24,172) .. (336,172) .. controls (338.76,172) and (341,174.24) .. (341,177) .. controls (341,179.76) and (338.76,182) .. (336,182) .. controls (333.24,182) and (331,179.76) .. (331,177) -- cycle ;
-  %Shape: Circle [id:dp05255760054649272] 
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (160,138) .. controls (160,135.24) and (162.24,133) .. (165,133) .. controls (167.76,133) and (170,135.24) .. (170,138) .. controls (170,140.76) and (167.76,143) .. (165,143) .. controls (162.24,143) and (160,140.76) .. (160,138) -- cycle ;
-
-  % Text Node
-  \draw (190,35) node [anchor=north west][inner sep=0.75pt]   [align=left] {Unstable};
-  % Text Node
-  \draw (430,41) node [anchor=north west][inner sep=0.75pt]   [align=left] {Stable};
-  % Text Node
-  \draw (540,130.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
-  % Text Node
-  \draw (114,20.4) node [anchor=north west][inner sep=0.75pt]    {$\Delta p/p$};
-  % Text Node
-  \draw (359,113.4) node [anchor=north west][inner sep=0.75pt]    {$\phi _{s}$};
-  % Text Node
-  \draw (385,221) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Separatrix}};
-  \end{tikzpicture}
+  \includegraphics*[width=0.9\linewidth]{long-phase-space.png}
   \caption{Longitudinal Phase Space, showing particles at the synchronous phase $\phi_s$, inside stability, and in unstable motion. The separatrix, bold, separates these two regions.}\label{fig:long_phase_space}
 \end{figure}
 
@@ -1146,75 +738,7 @@ The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to e
 
 \begin{figure}
   \centering
-  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-  %uncomment if require: \path (0,452); %set diagram left start at 0, and has height of 452
-  %Straight Lines [id:da9035065264450608] 
-  \draw    (330,350) -- (330,72) ;
-  \draw [shift={(330,70)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Straight Lines [id:da452302761105561] 
-  \draw    (190,210) -- (468,210) ;
-  \draw [shift={(470,210)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-  %Shape: Ellipse [id:dp6041133983422828] 
-  \draw  [dash pattern={on 4.5pt off 4.5pt}] (345.69,170.58) .. controls (361.66,176.94) and (367.57,199.74) .. (358.9,221.51) .. controls (350.24,243.28) and (330.27,255.77) .. (314.31,249.42) .. controls (298.34,243.06) and (292.43,220.26) .. (301.1,198.49) .. controls (309.76,176.72) and (329.73,164.23) .. (345.69,170.58) -- cycle ;
-  %Shape: Triangle [id:dp17885754120034103] 
-  \draw   (330,96) -- (440,280) -- (220,280) -- cycle ;
-  %Shape: Boxed Line [id:dp24732846841788847] 
-  \draw    (330,96) -- (478.46,344.33) ;
-  \draw [shift={(480,346.91)}, rotate = 239.13] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  %Straight Lines [id:da6649994270519657] 
-  \draw    (440,280) -- (153,280) ;
-  \draw [shift={(150,280)}, rotate = 360] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  %Straight Lines [id:da8593771826164245] 
-  \draw    (368.46,31.67) -- (220,280) ;
-  \draw [shift={(370,29.09)}, rotate = 120.87] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-  %Shape: Circle [id:dp7640749842332906] 
-  \draw   (356,185) .. controls (356,182.24) and (358.24,180) .. (361,180) .. controls (363.76,180) and (366,182.24) .. (366,185) .. controls (366,187.76) and (363.76,190) .. (361,190) .. controls (358.24,190) and (356,187.76) .. (356,185) -- cycle ;
-  %Shape: Circle [id:dp7481027632003878] 
-  \draw   (348,230) .. controls (348,227.24) and (350.24,225) .. (353,225) .. controls (355.76,225) and (358,227.24) .. (358,230) .. controls (358,232.76) and (355.76,235) .. (353,235) .. controls (350.24,235) and (348,232.76) .. (348,230) -- cycle ;
-  %Shape: Circle [id:dp890588918004473] 
-  \draw   (298,193) .. controls (298,190.24) and (300.24,188) .. (303,188) .. controls (305.76,188) and (308,190.24) .. (308,193) .. controls (308,195.76) and (305.76,198) .. (303,198) .. controls (300.24,198) and (298,195.76) .. (298,193) -- cycle ;
-  %Shape: Ellipse [id:dp2663264472016629] 
-  \draw   (358.95,137.3) .. controls (388.39,149.02) and (399.3,191.07) .. (383.31,231.23) .. controls (367.33,271.38) and (330.5,294.43) .. (301.05,282.7) .. controls (271.61,270.98) and (260.7,228.93) .. (276.69,188.77) .. controls (292.67,148.62) and (329.5,125.57) .. (358.95,137.3) -- cycle ;
-  %Shape: Circle [id:dp3251227574823683] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 136; green, 136; blue, 136 }  ,fill opacity=1 ] (374,240) .. controls (374,237.24) and (376.24,235) .. (379,235) .. controls (381.76,235) and (384,237.24) .. (384,240) .. controls (384,242.76) and (381.76,245) .. (379,245) .. controls (376.24,245) and (374,242.76) .. (374,240) -- cycle ;
-  %Shape: Circle [id:dp6181136216525858] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 136; green, 136; blue, 136 }  ,fill opacity=1 ] (268,200) .. controls (268,197.24) and (270.24,195) .. (273,195) .. controls (275.76,195) and (278,197.24) .. (278,200) .. controls (278,202.76) and (275.76,205) .. (273,205) .. controls (270.24,205) and (268,202.76) .. (268,200) -- cycle ;
-  %Shape: Circle [id:dp4892889212345095] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 136; green, 136; blue, 136 }  ,fill opacity=1 ] (387,199) .. controls (387,196.24) and (389.24,194) .. (392,194) .. controls (394.76,194) and (397,196.24) .. (397,199) .. controls (397,201.76) and (394.76,204) .. (392,204) .. controls (389.24,204) and (387,201.76) .. (387,199) -- cycle ;
-  %Shape: Circle [id:dp9890009774262618] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 85; green, 85; blue, 85 }  ,fill opacity=1 ] (407,232) .. controls (407,229.24) and (409.24,227) .. (412,227) .. controls (414.76,227) and (417,229.24) .. (417,232) .. controls (417,234.76) and (414.76,237) .. (412,237) .. controls (409.24,237) and (407,234.76) .. (407,232) -- cycle ;
-  %Shape: Circle [id:dp8817132678405959] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 51; green, 51; blue, 51 }  ,fill opacity=1 ] (448,302) .. controls (448,299.24) and (450.24,297) .. (453,297) .. controls (455.76,297) and (458,299.24) .. (458,302) .. controls (458,304.76) and (455.76,307) .. (453,307) .. controls (450.24,307) and (448,304.76) .. (448,302) -- cycle ;
-  %Shape: Circle [id:dp018107412529074995] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 85; green, 85; blue, 85 }  ,fill opacity=1 ] (308,124) .. controls (308,121.24) and (310.24,119) .. (313,119) .. controls (315.76,119) and (318,121.24) .. (318,124) .. controls (318,126.76) and (315.76,129) .. (313,129) .. controls (310.24,129) and (308,126.76) .. (308,124) -- cycle ;
-  %Shape: Circle [id:dp7932320278220062] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 51; green, 51; blue, 51 }  ,fill opacity=1 ] (352,52) .. controls (352,49.24) and (354.24,47) .. (357,47) .. controls (359.76,47) and (362,49.24) .. (362,52) .. controls (362,54.76) and (359.76,57) .. (357,57) .. controls (354.24,57) and (352,54.76) .. (352,52) -- cycle ;
-  %Shape: Circle [id:dp40201674798839093] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 136; green, 136; blue, 136 }  ,fill opacity=1 ] (336,280) .. controls (336,277.24) and (338.24,275) .. (341,275) .. controls (343.76,275) and (346,277.24) .. (346,280) .. controls (346,282.76) and (343.76,285) .. (341,285) .. controls (338.24,285) and (336,282.76) .. (336,280) -- cycle ;
-  %Shape: Circle [id:dp47096972082930977] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 85; green, 85; blue, 85 }  ,fill opacity=1 ] (307,280) .. controls (307,277.24) and (309.24,275) .. (312,275) .. controls (314.76,275) and (317,277.24) .. (317,280) .. controls (317,282.76) and (314.76,285) .. (312,285) .. controls (309.24,285) and (307,282.76) .. (307,280) -- cycle ;
-  %Shape: Circle [id:dp9654344972682185] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 51; green, 51; blue, 51 }  ,fill opacity=1 ] (238,280) .. controls (238,277.24) and (240.24,275) .. (243,275) .. controls (245.76,275) and (248,277.24) .. (248,280) .. controls (248,282.76) and (245.76,285) .. (243,285) .. controls (240.24,285) and (238,282.76) .. (238,280) -- cycle ;
-  %Shape: Circle [id:dp2388193861763539] 
-  \draw  [draw opacity=0][fill={rgb, 255:red, 51; green, 51; blue, 51 }  ,fill opacity=1 ] (188,280) .. controls (188,277.24) and (190.24,275) .. (193,275) .. controls (195.76,275) and (198,277.24) .. (198,280) .. controls (198,282.76) and (195.76,285) .. (193,285) .. controls (190.24,285) and (188,282.76) .. (188,280) -- cycle ;
-  %Straight Lines [id:da04893363450000132] 
-  \draw [line width=1.5]    (313.8,174.6) -- (297.05,156.73) ;
-  \draw [shift={(295,154.55)}, rotate = 46.85] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5]    (14.21,-4.28) .. controls (9.04,-1.82) and (4.3,-0.39) .. (0,0) .. controls (4.3,0.39) and (9.04,1.82) .. (14.21,4.28)   ;
-  %Straight Lines [id:da19998826820150062] 
-  \draw [line width=1.5]    (302.8,248.6) -- (287.53,270.15) ;
-  \draw [shift={(285.8,272.6)}, rotate = 305.31] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5]    (14.21,-4.28) .. controls (9.04,-1.82) and (4.3,-0.39) .. (0,0) .. controls (4.3,0.39) and (9.04,1.82) .. (14.21,4.28)   ;
-  %Straight Lines [id:da7385093899038133] 
-  \draw [line width=1.5]    (358.9,221.51) -- (380.53,230.12) ;
-  \draw [shift={(383.31,231.23)}, rotate = 201.71] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5]    (14.21,-4.28) .. controls (9.04,-1.82) and (4.3,-0.39) .. (0,0) .. controls (4.3,0.39) and (9.04,1.82) .. (14.21,4.28)   ;
-
-  % Text Node
-  \draw (475,199) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
-  % Text Node
-  \draw (304,62) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x'$};
-
-
-  \end{tikzpicture}
+  \includegraphics*[width=0.6\linewidth]{rfko-phase-space-schematic.png}
   \caption{A phase-space schematic of RFKO, showing the emittance growth (dashed to solid ellipse) increasing the amplitude of a stable particle (white) into the unstable region (grey), where it moves along the separatrices (arrows) into extraction.}\label{fig:rfko_phase_space}
 \end{figure}
 
@@ -1254,127 +778,7 @@ Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles
 
 \begin{figure}
   \centering
-  \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-  %uncomment if require: \path (0,568); %set diagram left start at 0, and has height of 568
-  %Shape: Circle [id:dp4360533755906091] 
-  \draw  [line width=2.25]  (80.32,314.78) .. controls (80.32,219.52) and (157.55,142.29) .. (252.81,142.29) .. controls (348.07,142.29) and (425.3,219.52) .. (425.3,314.78) .. controls (425.3,410.04) and (348.07,487.27) .. (252.81,487.27) .. controls (157.55,487.27) and (80.32,410.04) .. (80.32,314.78) -- cycle ;
-  %Straight Lines [id:da2494545420685086] 
-  \draw [line width=0.75]    (285.62,66.74) -- (475.35,60.89)(285.71,69.74) -- (475.44,63.89) ;
-  %Curve Lines [id:da6716090984381062] 
-  \draw [line width=0.75]    (112.79,210.58) .. controls (138.41,228.67) and (157.23,236.24) .. (171.41,236.24) .. controls (185.35,236.24) and (194.61,228.75) .. (201.39,217.1) .. controls (209.63,202.94) and (214.28,182.71) .. (218.96,161.75) .. controls (219.2,160.63) and (219.45,159.51) .. (219.7,158.39) .. controls (220.13,156.48) and (220.55,154.57) .. (220.99,152.66) .. controls (229.34,115.57) and (239.49,78.86) .. (269.24,69.21) .. controls (274.15,67.62) and (279.6,66.75) .. (285.66,66.74)(111.06,213.04) .. controls (137.44,231.65) and (156.84,239.24) .. (171.41,239.24) .. controls (186.49,239.24) and (196.61,231.27) .. (203.98,218.61) .. controls (212.36,204.22) and (217.13,183.7) .. (221.88,162.4) .. controls (222.13,161.28) and (222.38,160.16) .. (222.63,159.04) .. controls (223.06,157.14) and (223.48,155.23) .. (223.91,153.32) .. controls (231.97,117.57) and (241.25,81.45) .. (270.16,72.06) .. controls (274.8,70.56) and (279.94,69.75) .. (285.67,69.74) ;
-  %Curve Lines [id:da6025792203191416] 
-  \draw [line width=4.5]  [dash pattern={on 10.13pt off 4.5pt}]  (111.93,211.81) .. controls (207,240.64) and (268.83,-2.35) .. (357.95,177.6) ;
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (440.95,52.81) -- (466.64,63.22) -- (441.27,74.38) -- (453.88,63.41) -- cycle ;
-  %Straight Lines [id:da915547711912303] 
-  \draw [line width=1.5]    (286.99,61.49) -- (264.38,64.44)(286.61,58.51) -- (264,61.47) ;
-  %Straight Lines [id:da9850433501051643] 
-  \draw [line width=1.5]    (288.99,78.49) -- (266.38,81.44)(288.61,75.51) -- (266,78.47) ;
-  %Straight Lines [id:da44900355078086096] 
-  \draw [line width=1.5]    (194.17,220.24) -- (174.2,231.25)(192.72,217.61) -- (172.75,228.62) ;
-  %Straight Lines [id:da9829920819111375] 
-  \draw [line width=1.5]    (202.24,235.33) -- (182.27,246.34)(200.79,232.71) -- (180.82,243.72) ;
-  %Straight Lines [id:da103675692067275] 
-  \draw [line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (134.55,373.79) -- (145.2,393.96) ;
-  %Straight Lines [id:da5577474129336584] 
-  \draw [line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (149.79,366) -- (160.44,386.16) ;
-  %Shape: Square [id:dp7735035598499707] 
-  \draw   (66.42,300.88) -- (94.22,300.88) -- (94.22,328.68) -- (66.42,328.68) -- cycle ;
-  %Shape: Regular Polygon [id:dp566622906757484] 
-  \draw   (217.29,480.88) -- (206.15,492.22) -- (190.76,488.24) -- (186.51,472.92) -- (197.65,461.58) -- (213.04,465.56) -- cycle ;
-  %Shape: Regular Polygon [id:dp08230363062956059] 
-  \draw   (268.71,487.27) -- (260.76,501.04) -- (244.86,501.04) -- (236.91,487.27) -- (244.86,473.5) -- (260.76,473.5) -- cycle ;
-  %Shape: Circle [id:dp13046177720564178] 
-  \draw   (97.42,211.81) .. controls (97.42,203.8) and (103.92,197.3) .. (111.93,197.3) .. controls (119.94,197.3) and (126.44,203.8) .. (126.44,211.81) .. controls (126.44,219.82) and (119.94,226.32) .. (111.93,226.32) .. controls (103.92,226.32) and (97.42,219.82) .. (97.42,211.81) -- cycle ;
-  %Shape: Circle [id:dp9715108921064219] 
-  \draw   (209.42,143.81) .. controls (209.42,135.8) and (215.92,129.3) .. (223.93,129.3) .. controls (231.94,129.3) and (238.44,135.8) .. (238.44,143.81) .. controls (238.44,151.82) and (231.94,158.32) .. (223.93,158.32) .. controls (215.92,158.32) and (209.42,151.82) .. (209.42,143.81) -- cycle ;
-  %Shape: Circle [id:dp7073804916758779] 
-  \draw   (269.42,145.81) .. controls (269.42,137.8) and (275.92,131.3) .. (283.93,131.3) .. controls (291.94,131.3) and (298.44,137.8) .. (298.44,145.81) .. controls (298.44,153.82) and (291.94,160.32) .. (283.93,160.32) .. controls (275.92,160.32) and (269.42,153.82) .. (269.42,145.81) -- cycle ;
-  %Shape: Circle [id:dp7206118228317531] 
-  \draw   (343.44,177.6) .. controls (343.44,169.58) and (349.94,163.09) .. (357.95,163.09) .. controls (365.96,163.09) and (372.45,169.58) .. (372.45,177.6) .. controls (372.45,185.61) and (365.96,192.1) .. (357.95,192.1) .. controls (349.94,192.1) and (343.44,185.61) .. (343.44,177.6) -- cycle ;
-  %Shape: Circle [id:dp10965352351173308] 
-  \draw   (128.44,447.6) .. controls (128.44,439.58) and (134.94,433.09) .. (142.95,433.09) .. controls (150.96,433.09) and (157.45,439.58) .. (157.45,447.6) .. controls (157.45,455.61) and (150.96,462.1) .. (142.95,462.1) .. controls (134.94,462.1) and (128.44,455.61) .. (128.44,447.6) -- cycle ;
-  %Shape: Circle [id:dp8327271515160117] 
-  \draw   (69.44,348.6) .. controls (69.44,340.58) and (75.94,334.09) .. (83.95,334.09) .. controls (91.96,334.09) and (98.45,340.58) .. (98.45,348.6) .. controls (98.45,356.61) and (91.96,363.1) .. (83.95,363.1) .. controls (75.94,363.1) and (69.44,356.61) .. (69.44,348.6) -- cycle ;
-  %Shape: Square [id:dp4297325683155273] 
-  \draw   (373,418.4) -- (388.7,395.46) -- (411.64,411.16) -- (395.95,434.1) -- cycle ;
-  \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (435.66,301.64) -- (424.88,327.17) -- (414.09,301.64) -- (424.88,314.41) -- cycle ;
-  %Rounded Rect [id:dp9606106824220724] 
-  \draw   (310.64,474.16) .. controls (309.54,472.36) and (310.11,470.01) .. (311.91,468.92) -- (359.28,440.11) .. controls (361.08,439.02) and (363.42,439.59) .. (364.51,441.39) -- (370.46,451.15) .. controls (371.55,452.95) and (370.98,455.29) .. (369.18,456.39) -- (321.81,485.2) .. controls (320.02,486.29) and (317.67,485.72) .. (316.58,483.92) -- cycle ;
-  %Shape: Circle [id:dp3067165923156243] 
-  \draw   (520.74,128.15) .. controls (520.74,121.61) and (526.04,116.3) .. (532.59,116.3) .. controls (539.13,116.3) and (544.44,121.61) .. (544.44,128.15) .. controls (544.44,134.7) and (539.13,140) .. (532.59,140) .. controls (526.04,140) and (520.74,134.7) .. (520.74,128.15) -- cycle ;
-  %Shape: Square [id:dp6781934588967109] 
-  \draw   (520.74,154.13) -- (544.44,154.13) -- (544.44,177.83) -- (520.74,177.83) -- cycle ;
-  %Shape: Regular Polygon [id:dp9839109234760322] 
-  \draw   (545.9,210.98) -- (539.25,222.51) -- (525.93,222.51) -- (519.27,210.98) -- (525.93,199.44) -- (539.25,199.44) -- cycle ;
-  %Rounded Rect [id:dp2839967132311991] 
-  \draw   (481.02,249.26) .. controls (481.02,247.16) and (482.72,245.45) .. (484.83,245.45) -- (540.27,245.45) .. controls (542.37,245.45) and (544.08,247.16) .. (544.08,249.26) -- (544.08,260.69) .. controls (544.08,262.8) and (542.37,264.5) .. (540.27,264.5) -- (484.83,264.5) .. controls (482.72,264.5) and (481.02,262.8) .. (481.02,260.69) -- cycle ;
-  %Shape: Rectangle [id:dp9746922607668036] 
-  \draw   (474.8,91) -- (658,91) -- (658,438.6) -- (474.8,438.6) -- cycle ;
-  %Straight Lines [id:da266654966043008] 
-  \draw [line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (519.55,290.79) -- (542.8,290.79) ;
-  %Straight Lines [id:da35491577225141113] 
-  \draw [line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (519.55,300.79) -- (542.8,300.79) ;
-  %Straight Lines [id:da983348025185443] 
-  \draw [line width=1.5]    (543.8,333.29) -- (520.55,333.29)(543.8,330.29) -- (520.55,330.29) ;
-  %Straight Lines [id:da2907421543237383] 
-  \draw [line width=1.5]    (543.8,343.29) -- (520.55,343.29)(543.8,340.29) -- (520.55,340.29) ;
-  %Straight Lines [id:da32184687439357584] 
-  \draw [line width=3.75]  [dash pattern={on 9pt off 4.5pt}]  (498.8,375) -- (541.8,375) ;
-  %Straight Lines [id:da6279639155188272] 
-  \draw [line width=0.75]    (498.8,413.5) -- (541.8,413.5)(498.8,416.5) -- (541.8,416.5) ;
-
-  % Text Node
-  \draw (488.76,43.14) node [anchor=north west][inner sep=0.75pt]   [align=left] {F61\\to EAST};
-  % Text Node
-  \draw (46.59,194.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {BSW53};
-  % Text Node
-  \draw (169.39,115.59) node [anchor=north west][inner sep=0.75pt]   [align=left] {BSW59};
-  % Text Node
-  \draw (253.18,162.85) node [anchor=north west][inner sep=0.75pt]   [align=left] {BSW61};
-  % Text Node
-  \draw (373.62,158.99) node [anchor=north west][inner sep=0.75pt]   [align=left] {BSW67};
-  % Text Node
-  \draw (193.53,242.53) node [anchor=north west][inner sep=0.75pt]   [align=left] {SMH57};
-  % Text Node
-  \draw (285.53,42.53) node [anchor=north west][inner sep=0.75pt]   [align=left] {SMH61};
-  % Text Node
-  \draw (162.53,364.53) node [anchor=north west][inner sep=0.75pt]   [align=left] {SEH23};
-  % Text Node
-  \draw (18.59,348.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {BSW27};
-  % Text Node
-  \draw (81.59,455.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {BSW19};
-  % Text Node
-  \draw (139.59,476.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {XSE07};
-  % Text Node
-  \draw (194.59,498.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {XSE01};
-  % Text Node
-  \draw (13.59,297.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {QSE29};
-  % Text Node
-  \draw (408.59,394.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {QSE87};
-  % Text Node
-  \draw (350.59,305.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{PS Ring}};
-  % Text Node
-  \draw (361.59,464.43) node [anchor=north west][inner sep=0.75pt]   [align=left] {KFB97};
-  % Text Node
-  \draw (551.59,119.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Kicker (Dipole)}};
-  % Text Node
-  \draw (551.59,147.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Extraction }\\\textit{Quadrupole}};
-  % Text Node
-  \draw (552.59,191.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Extraction }\\\textit{Sextupole}};
-  % Text Node
-  \draw (552.59,235.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Feedback}\\\textit{Kicker}};
-  % Text Node
-  \draw (540.4,95.65) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Legend}};
-  % Text Node
-  \draw (552.59,278.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Electrostatic}\\\textit{Septum}};
-  % Text Node
-  \draw (550.59,319.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Magnetic}\\\textit{Septum}};
-  % Text Node
-  \draw (550.59,358.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Bumped}\\\textit{Trajectory}};
-  % Text Node
-  \draw (550.59,398.98) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textit{Extraction}\\\textit{Trajectory}};
-  \end{tikzpicture}
+  \includegraphics*[width=\linewidth]{ps-sx-system.png}
   \caption{A schematic of the PS Ring and East extraction system, as configured for RFKO slow extraction. All important beamline elements are labelled with their CERN layout code. Also shown is the reference orbit (solid line), the bumped orbit (dashed line) created by the kicker magnets, and the extracted trajectory (double line) created by the magnetic septa.}\label{fig:schematic}
 \end{figure}
 
@@ -1557,128 +961,8 @@ This image was made available on CERN's image registry using a \textit{continuou
 
 \begin{figure}[h]
   \centering
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,732); %set diagram left start at 0, and has height of 732
-    %Right Arrow [id:dp1466614121100427] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (180,295) -- (204,295) -- (204,290) -- (220,300) -- (204,310) -- (204,305) -- (180,305) -- cycle ;
-    %Right Arrow [id:dp2179744625009341] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (305,112) -- (305,128.74) -- (310,128.74) -- (300,139.9) -- (290,128.74) -- (295,128.74) -- (295,112) -- cycle ;
-    %Right Arrow [id:dp0012956125617427094] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (85,42.1) -- (85,58.84) -- (90,58.84) -- (80,70) -- (70,58.84) -- (75,58.84) -- (75,42.1) -- cycle ;
-    %Bend Arrow [id:dp6247242963939457] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (26,175) -- (26,190.9) .. controls (26,204.07) and (36.68,214.75) .. (49.85,214.75) -- (207.5,214.75) -- (207.5,220) -- (230,208) -- (207.5,196) -- (207.5,201.25) -- (49.85,201.25) .. controls (44.13,201.25) and (39.5,196.62) .. (39.5,190.9) -- (39.5,175) -- cycle ;
-    %Flowchart: Process [id:dp8355453639545734] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (10,70) -- (202,70) -- (202,178) -- (10,178) -- cycle ;
-    %Shape: Rectangle [id:dp4361762877298698] 
-    \draw   (21,99) -- (150,99) -- (150,128) -- (21,128) -- cycle ;
-    %Shape: Rectangle [id:dp7642379398785082] 
-    \draw   (21,139) -- (150,139) -- (150,165) -- (21,165) -- cycle ;
-    %Flowchart: Process [id:dp1894681798582507] 
-    \draw   (230,430) -- (481,430) -- (481,582) -- (230,582) -- cycle ;
-    %Shape: Rectangle [id:dp8360467611560176] 
-    \draw   (243,462) -- (467,462) -- (467,491) -- (243,491) -- cycle ;
-    %Shape: Rectangle [id:dp8688566949763479] 
-    \draw   (243,502) -- (464,502) -- (464,531) -- (243,531) -- cycle ;
-    %Shape: Rectangle [id:dp676780539177714] 
-    \draw   (243,542) -- (297,542) -- (297,571) -- (243,571) -- cycle ;
-    %Bend Arrow [id:dp4131598597904875] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (262,571) -- (262,581.48) .. controls (262,587.57) and (266.93,592.5) .. (273.02,592.5) -- (475.5,592.5) -- (475.5,600) -- (490,586.5) -- (475.5,573) -- (475.5,580.5) -- (274,580.5) .. controls (274,580.5) and (274,580.5) .. (274,580.5) -- (274,571) -- cycle ;
-    %Flowchart: Data [id:dp9926111004732121] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (39.56,3) -- (159,3) -- (131.44,43) -- (12,43) -- cycle ;
-    %Flowchart: Data [id:dp47351299680241055] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (272.56,75) -- (392,75) -- (364.44,115) -- (245,115) -- cycle ;
-
-    %Flowchart: Document [id:dp9868456802201346] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (60,190) -- (130,190) -- (130,223) .. controls (86.25,223) and (95,234.9) .. (60,227.2) -- cycle ;
-
-    %Flowchart: Process [id:dp2876501690947346] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (230,140) -- (450,140) -- (450,230) -- (230,230) -- cycle ;
-    %Shape: Rectangle [id:dp9456627735383678] 
-    \draw   (240,170) -- (412,170) -- (412,199) -- (240,199) -- cycle ;
-
-    %Flowchart: Document [id:dp019749160188852866] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (30,282) -- (190,282) -- (190,315) .. controls (90,315) and (110,326.9) .. (30,319.2) -- cycle ;
-    %Rounded Rect [id:dp9845321255243744] 
-    \draw   (220,296) .. controls (220,289.7) and (225.1,284.6) .. (231.4,284.6) -- (498.6,284.6) .. controls (504.9,284.6) and (510,289.7) .. (510,296) -- (510,598.6) .. controls (510,604.9) and (504.9,610) .. (498.6,610) -- (231.4,610) .. controls (225.1,610) and (220,604.9) .. (220,598.6) -- cycle ;
-    %Bend Arrow [id:dp5368424116868331] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (326.72,237.56) -- (361.42,237.56) .. controls (369.12,237.56) and (375.36,243.8) .. (375.36,251.49) -- (375.36,260.78) -- (380,260.78) -- (368.39,284) -- (356.78,260.78) -- (361.42,260.78) -- (361.42,251.49) .. controls (361.42,251.49) and (361.42,251.49) .. (361.42,251.49) -- (326.72,251.49) -- cycle ;
-    %Bend Arrow [id:dp3452563524807608] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (289.93,237.56) -- (324.64,237.56) .. controls (332.33,237.56) and (338.57,243.8) .. (338.57,251.49) -- (338.57,260.78) -- (343.21,260.78) -- (331.6,284) -- (319.99,260.78) -- (324.64,260.78) -- (324.64,251.49) .. controls (324.64,251.49) and (324.64,251.49) .. (324.64,251.49) -- (289.93,251.49) -- cycle ;
-    %Bend Arrow [id:dp47460506979421724] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (259.59,237.56) -- (287.85,237.56) .. controls (295.54,237.56) and (301.78,243.8) .. (301.78,251.49) -- (301.78,260.78) -- (306.42,260.78) -- (294.81,284) -- (283.2,260.78) -- (287.85,260.78) -- (287.85,251.49) .. controls (287.85,251.49) and (287.85,251.49) .. (287.85,251.49) -- (259.59,251.49) -- cycle ;
-    %Right Arrow [id:dp14885018643483505] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (264.38,230) -- (264.38,261.04) -- (269.18,261.04) -- (259.59,281.73) -- (250,261.04) -- (254.79,261.04) -- (254.79,230) -- cycle ;
-    %Shape: Rectangle [id:dp5191472214273694] 
-    \draw   (390,240) -- (580,240) -- (580,269) -- (390,269) -- cycle ;
-    %Flowchart: Process [id:dp30179423761545277] 
-    \draw   (230,310) -- (481,310) -- (481,420) -- (230,420) -- cycle ;
-    %Shape: Rectangle [id:dp32838679005965243] 
-    \draw   (243,342) -- (451.4,342) -- (451.4,371) -- (243,371) -- cycle ;
-    %Shape: Rectangle [id:dp26512796432746977] 
-    \draw   (243,378) -- (409.4,378) -- (409.4,407) -- (243,407) -- cycle ;
-    %Flowchart: Data [id:dp49769744087255896] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (512.56,541) -- (632,541) -- (604.44,600) -- (485,600) -- cycle ;
-    %Right Arrow [id:dp4509210111562849] 
-    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (352,412) -- (352,428.74) -- (357,428.74) -- (347,439.9) -- (337,428.74) -- (342,428.74) -- (342,412) -- cycle ;
-
-    % Text Node
-    \draw (35.5,14.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {acc-models-ps};
-    % Text Node
-    \draw (31,104) node [anchor=north west][inner sep=0.75pt]   [align=left] {flatten sequence};
-    % Text Node
-    \draw (31,142) node [anchor=north west][inner sep=0.75pt]   [align=left] {set SX magnets};
-    % Text Node
-    \draw (237,148) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Batch Submission}};
-    % Text Node
-    \draw (251,176.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {submit jobs to schedd};
-    % Text Node
-    \draw (279.5,86.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {parameters};
-    % Text Node
-    \draw (17,78) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{MAD-X}};
-    % Text Node
-    \draw (225,288) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{HTCondor}};
-    % Text Node
-    \draw (72,196.4) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{32.78pt}\setlength\topsep{0pt}
-    \begin{center}
-    \textit{ps.seq}
-    \end{center}
-
-    \end{minipage}};
-    % Text Node
-    \draw (39.5,291) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{97.4pt}\setlength\topsep{0pt}
-    \begin{center}
-    Xsuite Docker Image
-    \end{center}
-
-    \end{minipage}};
-    % Text Node
-    \draw (401,246.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {one job per parameter set};
-    % Text Node
-    \draw (237,318) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{MAD-X}};
-    % Text Node
-    \draw (250,348.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {load lattice and match to tune};
-    % Text Node
-    \draw (250,384.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {thin and slice elements};
-    % Text Node
-    \draw (237,438) node [anchor=north west][inner sep=0.75pt]   [align=left] {\textbf{Xsuite}};
-    % Text Node
-    \draw (250,468.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {generate and match distribution};
-    % Text Node
-    \draw (254,507.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {add septum aperture, TFB, RF};
-    % Text Node
-    \draw (254,548.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {track};
-    % Text Node
-    \draw (516,551.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{59.41pt}\setlength\topsep{0pt}
-    \begin{center}
-    particles lost\\to aperture
-    \end{center}
-
-    \end{minipage}};
-
-    \end{tikzpicture}
-
-    \caption{A flowchart describing an overview of the simulation process}\label{fig:flowchart}
+  \includegraphics*[width=\linewidth]{simulation-flowchart.png}
+  \caption{A flowchart describing an overview of the simulation process}\label{fig:flowchart}
 \end{figure}
 
 \chapter{Analysis and Comparison of Results}
@@ -1771,7 +1055,20 @@ where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N
 
 
 \subsection{Results of Frequency Response Analysis} % [TODO) Better wording first sentence
-\autoref{fig:freq_response_machine} presents the results of the analytical method described in~\autoref{sec:machine_freq_anal_method} applied to data measured from the PS. The graphs characterise the \textit{frequency response} of the spill to different chirp signal \textit{rep-rate} intervals, and indicate how this frequency propagates to the output (spill). The frequency response of the RFKO system is shown for both a bunched beam (upper image) and a coasting beam (lower image). Visible in both \textit{log-log} plots is a distinct \textit{low-pass filter} effect, where the frequency response is reduced at higher frequencies. This effect, also observed by previous studies~\cite{wepmp008,Pari:2780495}, results in higher frequencies being ``smoothed out'' by the RFKO system. Both plots also show a \textit{minimum transfer characteristic}, where the frequency response is at its lowest: for bunched beams, this minima is at \qty{4}{\kilo\hertz}, meaning a chirp signal repeating every \qty{0.25}{\milli\second} will have the least effect on frequencies present in the spill signal. For coasting beams, this minima is less clear, and appears to shift to higher frequencies with increasing chirp signal voltage.
+\autoref{fig:freq_response_machine} presents the results of the analytical method described in~\autoref{sec:machine_freq_anal_method} applied to data measured from the PS. The graphs characterise the \textit{frequency response} of the spill to different chirp signal \textit{rep-rate} intervals, and indicate how this frequency propagates to the output (spill). The frequency response of the RFKO system is shown for both a bunched beam (upper image) and a coasting beam (lower image). Visible in both \textit{log-log} plots is a distinct \textit{low-pass filter} effect, where the frequency response is reduced at higher frequencies. This effect, also observed by previous studies~\cite{wepmp008,Pari:2780495}, results in higher frequencies being ``smoothed out'' by the RFKO system. 
+
+The frequency response $H(f)$ of a low-pass filter can be approximated as
+\begin{eqnarray}
+  H(f) = A\cdot \frac 1{1 + \left( \frac{f}{f_c} \right)^{2n}}
+\end{eqnarray}
+where $f_c$ is the cutoff frequency, $n$ is the order of the filter (which determines the steepness of the roll-off), and $A$ is a gain constant. The frequency response curve at each gain was fitted to this function, and the fitted curve and variance error are shown in red in~\autoref{fig:freq_response_machine} and~\autoref{sec:machine_freq_anal_method}.
+
+For \textbf{bunched beams}, the low-pass filter was found to have a cutoff frequency of \qty[separate-uncertainty = true]{1.23(0.21)}{\kilo\hertz} in machine measurements, and \qty[separate-uncertainty = true]{1.49(0.26)}{\kilo\hertz} in simulation. Both machine measurement and simulation fits resulted in an order of exactly 1, to 7 decimal places.
+
+For \textbf{coasting beams}, the fitted low-pass filter has a cutoff frequency of \qty[separate-uncertainty = true]{4.39(1.64)}{\kilo\hertz}
+
+
+Both plots also show a \textit{minimum transfer characteristic}, where the frequency response is at its lowest: for bunched beams, this minima is at \qty{4}{\kilo\hertz}, meaning a chirp signal repeating every \qty{0.25}{\milli\second} will have the least effect on frequencies present in the spill signal. For coasting beams, this minima is less clear, and appears to shift to higher frequencies with increasing chirp signal voltage.
 
 This low-pass filter effect, and corresponding minimum transfer characteristic, can be explained by the time taken for particles to move from a stable phase-space area to the magnetic septum~\cite{Sorge_2018}. This time $T_{tr}$, in units of 3 turns, is known as the \textit{transit time}, and is given by~\cite{Pullia:313678, Bryant:CAS}:
 \begin{equation}
@@ -1782,60 +1079,8 @@ The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$,
 
 \begin{figure}
   \centering
-    \
-
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-    
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,397); %set diagram left start at 0, and has height of 397
-    
-    %Shape: Axis 2D [id:dp3507079173629164] 
-    \draw  (110,125.6) -- (400.8,125.6)(208.8,17.6) -- (208.8,321.6) (393.8,120.6) -- (400.8,125.6) -- (393.8,130.6) (203.8,24.6) -- (208.8,17.6) -- (213.8,24.6)  ;
-    %Shape: Triangle [id:dp5315823452406125] 
-    \draw  [line width=2.25]  (355.94,199.74) -- (210.22,272.6) -- (210.22,126.88) -- cycle ;
-    %Straight Lines [id:da5154304089622499] 
-    \draw [line width=2.25]  [dash pattern={on 6.75pt off 4.5pt}]  (138.8,22.6) -- (138.8,323.6) ;
-    %Shape: Circle [id:dp6756665677727705] 
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (204,243.4) .. controls (204,240.42) and (206.42,238) .. (209.4,238) .. controls (212.38,238) and (214.8,240.42) .. (214.8,243.4) .. controls (214.8,246.38) and (212.38,248.8) .. (209.4,248.8) .. controls (206.42,248.8) and (204,246.38) .. (204,243.4) -- cycle ;
-    %Curve Lines [id:da15345268152200053] 
-    \draw    (204,243.4) .. controls (203.8,214.2) and (201.88,162.71) .. (203.68,130.54) ;
-    \draw [shift={(203.8,128.6)}, rotate = 93.58] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-    %Curve Lines [id:da36062807938449915] 
-    \draw    (205,117.4) .. controls (204.81,104.08) and (177.79,96.17) .. (161.53,92.93) ;
-    \draw [shift={(159.8,92.6)}, rotate = 10.62] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-    %Straight Lines [id:da7608519264572098] 
-    \draw    (94.8,67.6) -- (355.94,199.74) ;
-    %Straight Lines [id:da45182359084023216] 
-    \draw    (418.8,168.6) -- (210.22,272.6) ;
-    %Shape: Circle [id:dp5351045582621758] 
-    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (134,89.4) .. controls (134,86.42) and (136.42,84) .. (139.4,84) .. controls (142.38,84) and (144.8,86.42) .. (144.8,89.4) .. controls (144.8,92.38) and (142.38,94.8) .. (139.4,94.8) .. controls (136.42,94.8) and (134,92.38) .. (134,89.4) -- cycle ;
-    
-    % Text Node
-    \draw (220,58) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x'$};
-    % Text Node
-    \draw (411,120) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
-    % Text Node
-    \draw (83,315) node [anchor=north west][inner sep=0.75pt]   [align=left] {Septum};
-    % Text Node
-    \draw (224,103) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle O'$};
-    % Text Node
-    \draw (240,179) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{39.19pt}\setlength\topsep{0pt}
-    \begin{center}
-    Stable \\Triangle
-    \end{center}
-    
-    \end{minipage}};
-    % Text Node
-    \draw (41,76) node [anchor=north west][inner sep=0.75pt]   [align=left] {Separatrix};
-    % Text Node
-    \draw (145,249) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle ( X_{0} ,Y_{0})$};
-    % Text Node
-    \draw (166,187) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{t}{}_{r,\ 1}$};
-    % Text Node
-    \draw (159,65) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{t}{}_{r,\ 2}$};
-    
-    \end{tikzpicture}    
-    \caption{A phase-space diagram illustrating the transit time $T_{tr}$ elapsed between leaving the last stable triangle and arriving at the septum. The particle motion (and transit time) is presented in units of three turns; in real-time, the particle moves between the three separatrix arms. The Kobayashi Hamiltonian forms the separatrices of the stable triangle. Total transit time $T_{tr}=T_{tr,1} + T_{tr,2}$ depends both on the distance $(x_0, y_0)$ of the particle from a fixed point $O'$ ($T_{tr,1}$) and the distance from $O'$ to the septum blade ($T_{tr,2}$).}\label{fig:transit_time}
+  \includegraphics*[width=0.6\linewidth]{transit-time-phase-space.png}
+  \caption{A phase-space diagram illustrating the transit time $T_{tr}$ elapsed between leaving the last stable triangle and arriving at the septum. The particle motion (and transit time) is presented in units of three turns; in real-time, the particle moves between the three separatrix arms. The Kobayashi Hamiltonian forms the separatrices of the stable triangle. Total transit time $T_{tr}=T_{tr,1} + T_{tr,2}$ depends both on the distance $(x_0, y_0)$ of the particle from a fixed point $O'$ ($T_{tr,1}$) and the distance from $O'$ to the septum blade ($T_{tr,2}$).}\label{fig:transit_time}
 \end{figure}
 
 In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. 
@@ -1886,7 +1131,7 @@ The simulated frequency response characteristics are shown in~\autoref{fig:freq_
 Another analytical tool for quantifying slow extraction spill quality established by previous work is the \textit{spill duty factor}. This quantity is defined as~\cite{Sorge_2018}
 \begin{equation}
   \mathcal{F} = \frac{\langle x\rangle^2}{\langle x^2\rangle}
-\end{equation} where $\langle x\rangle$ denotes the average of variable $x$. By calculating this quantity within a rolling time window, a rolling average of spill quality can be calculated.~\autoref{fig:sdf_example} presents an example of these calculations: a flatter spill will produce a duty factor closer to $\mathcal{F}=1$, while a highly pulsed spill approaches $\mathcal{F}=0$.
+\end{equation} where $\langle x\rangle$ denotes the average of variable $x$. By calculating this quantity within a rolling time window, a rolling average of spill quality can be calculated.~\autoref{fig:sdf_example} presents an example of these calculations for the spill signals in~\autoref{fig:raw_signal}: a flatter spill will produce a duty factor closer to $\mathcal{F}=1$, while a highly pulsed spill approaches $\mathcal{F}=0$.
 
 \begin{figure}
   \centering
@@ -1894,7 +1139,7 @@ Another analytical tool for quantifying slow extraction spill quality establishe
   \caption{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 turn windows.}\label{fig:sdf_example}
 \end{figure}
 
-By calculating the spill duty factor across a range of chirp repetition frequencies and voltages, a heatmap of spill quality can be generated.~\autoref{fig:sdf_meas} shows the spill duty factor heatmaps for the RFKO system as measured in the machine, both with a bunched and coasting beam. Qualitative analysis of the heatmaps identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
+~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies. These are presented in a heatmap, and a ualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
 
 The mechanism behind the spill duty factor improvement with bunching can be understood by examining how the stable phase space behaves with respect to synchrotron oscillation. As covered in~\autoref{sec:long_phase_space}, particles moving within longitudinal RF buckets will undergo longitudinal oscillations around the synchronous particle, known as synchrotron oscillations\footnote{As opposed to the transverse betatron oscillations.}. This can be calculated as
 \begin{equation}
@@ -1912,6 +1157,9 @@ In a Steinbach diagram (\autoref{sec:steinbach}), this has the effect of shiftin
 To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised in phase space in \autoref{fig:synch-phase-space}. The upper figure is the case for a coasting beam with no synchrotron motion: particles experience no change in tune, and so a small ripple in sextupole field could increase the stable region area and ``recapture'' the particle back into the stable region, preventing the particle's extraction. The lower figure describes the case for a bunched beam with slow synchrotron motion: the particles receive a kick (RFKO) \textit{and} and periodic tune change (RF cavity), which reduces the stable phase space area. This reduces the chance of a particle being recaptured by a sextupole ripple, pushes the particle deeper into resonance quicker, and ``smoothens'' out the spill signal. There is however a limit to this ripple mitigation, where the synchrotron oscillation is too fast for particles to remain in the unstable region.~\cite{Sorge_2018,PhysRevAccelBeams.26.014402}.
 
 This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}). Both of these effects, and the the limiting frequency obtained from transit time spread, contribute to the optimal selection of parameters for an RFKO driving signal.
+
+% [TODO)
+\todo{These heatmaps need a better introduction}
 
 \begin{figure}[h]
   \centering
