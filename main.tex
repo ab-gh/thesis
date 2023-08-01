@@ -128,7 +128,7 @@ Ongoing experiments in these facilities such as the CHARM High-energy Ions for M
 
 The CHIMERA experiment, and other experiments located at the East Area and its higher-energy sister site at the SPS North Area, are referred to as fixed-target experiments. These experiments require a semi-continuous flux of particles: if the entire beam of the PS was delivered to a material sample, for example, in an effectively instantaneous ``spill'' (a controlled removal of particles from the circular accelerator), any sensitive acquisition equipment would become saturated, and the fixed target itself likely destroyed.
 
-At a beam momentum of \qty{5.4}{\giga\electronvolt} in the PS, the revolution of the beam is around \qty{470}{kHz}. Therefore, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as \textit{fast} extraction, is commonly used to transfer particles between successive accelerators, where the bunched time-structure of the beam must be preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, much longer than the revolution period, a ``slow'' extraction system is employed.
+At a beam momentum of \qty{5.4}{\giga\electronvolt} in the PS, the revolution frequency of the beam is around \qty{470}{kHz}. Therefore, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as \textit{fast} extraction, is commonly used to transfer particles between successive accelerators, where the bunched time-structure of the beam must be preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, much longer than the revolution period, a ``slow'' extraction system is employed.
 
 \subsection{Extraction Methods}
 
@@ -164,11 +164,11 @@ This resonant effect is usually carefully avoided in particle accelerators. Howe
 
 The exploitation of resonance to induce extraction is by no means novel; a method akin to slow extraction was first proposed by J. Tuck and L. Teng in 1951~\cite{Couteur_1951}, and performed by Le Couteur at the Liverpool cyclotron in 1954~\cite{Couteur_1955}. Many such applications of slow extraction exist, using different effects to drive particles into resonance. This thesis will present some of these methods, particularly focussing on Radio-Frequency Knock-Out slow extraction.
 
-Many medical synchrotrons, such as the MedAustron Synchrotron, use slow extraction to deliver beam to patients for ion beam cancer therapy~\cite{ArrutiaSota:2845862}, producing spills of up to \qty{30}{\second} can be produced\footnote{Limited to \qty{10}{\second} for patient treatment}. In human medical applications, safety is paramount. Therefore, the slow extraction process must be fully understood. Ripples in the intensity of beam have to be carefully controlled in order to provide a steady, predictable irradiation dose to patients.
+Many medical synchrotrons, such as the MedAustron Synchrotron, use slow extraction to deliver beam to patients for ion beam cancer therapy~\cite{ArrutiaSota:2845862}, producing spills of up to \qty{30}{\second}\footnote{Limited to \qty{10}{\second} for patient treatment}. In human medical applications, safety is paramount. Therefore, the slow extraction process must be fully understood. Ripples in the intensity of beam have to be carefully controlled in order to provide a steady, predictable irradiation dose to patients.
 
-Small medical synchrotrons are simpler\footnote{The PS contains 100 bending magnets along its circumference, as opposed to MedAustron's 16}, newer\footnote{The PS began operation in 1959, and is CERN's oldest accelerator still in operation. MedAustron was first certified in 2016.}, and having a far higher operational availability requirement than research accelerators such as the PS. At CERN's PS, however, that benefit cannot be relied upon. Machine time is in high demand, and studies are time-shared between machine development (MD), fixed-target experimental areas, LHC physics injection, and a wide array of other facilities. 
+Small medical synchrotrons are simpler\footnote{The PS contains 100 bending magnets along its circumference, as opposed to MedAustron's 16}, newer\footnote{The PS began operation in 1959, and is CERN's oldest accelerator still in operation. MedAustron was first certified in 2016.}, and have a far higher operational availability requirement than research accelerators such as the PS. At CERN's PS, however, that benefit cannot be relied upon. Machine time is in high demand, and studies are time-shared between machine development (MD), fixed-target experimental areas, LHC physics injection, and a wide array of other facilities. 
 
-Simulations can there provide an important tool in understanding slow extraction spills. New methods can be rapidly developed and tested without requiring extensive (and expensive) machine studies, and wide parameter spaces can be explored to construct functional relationships between input parameters and spill output characteristics. 
+Simulations can therefore provide an important tool in understanding slow extraction spills. New methods can be rapidly developed and tested without requiring extensive (and expensive) machine studies, and wide parameter spaces can be explored to construct functional relationships between input parameters and spill output characteristics. 
 
 \section{Modelling Slow Extraction}
 
@@ -176,7 +176,7 @@ Simulations can there provide an important tool in understanding slow extraction
 
 To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard within CERN's beam physics community. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
 
-Newer tools are introducing improvements such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarassingly parallel}\footnote{A problem which requires minimal no effort to be separated into a large number of independent, concurrently-processed tasks.} tasks can be run on large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or discrete computer host on a batch-processing network.
+Newer tools are introducing improvements such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarassingly parallel}\footnote{A problem which requires minimal to no effort to be separated into a large number of independent, concurrently-processed tasks.} tasks can be run on large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or discrete computer host on a batch-processing network.
 
 \chapter{Accelerator Physics Theory}\label{chap:theory}
 
@@ -344,7 +344,7 @@ x(s) =\sqrt{\varepsilon}\sqrt{\beta(s)}\cos(\varphi(s)-\varphi_0)
 \end{equation} 
 where $\varphi(s)$ is the oscillation phase, $\varphi_0$ is the initial condition, and $\varepsilon$ is an integration constant. $\varphi_0$ and $\varepsilon$ are constants of a trajectory, and so the transverse oscillation of a particle is given by the special $\beta$ function. The $\beta$ function must also satisfy the periodic constraint $\beta(s+L)=\beta(s)$, and is related to the $\varphi$ phase function by the following equation:
 \begin{eqnarray}
-  \varphi(s) = \int^s_0\frac{ds}{\beta(s)}
+  \varphi(s) = \int^s_0\frac{ds'}{\beta(s')}
   \label{eq:phase_and_beta}
 \end{eqnarray}
 
@@ -403,7 +403,7 @@ A particle with a momentum offset, $\Delta p = p-p_0$, will still satisfy~\ref{e
 \begin{equation}
   x''(s)-x\left(k-\frac 1{\rho^2}\right)=\frac 1\rho\frac{\Delta p}{p_0}
 \end{equation}
-We can use the homogenous solution previously found to form the complete solution $x(s)=x_h(s)+x_i(s)$. This inhomogeneous term $x_i(s)$, is normalised by the momentum difference to produce the Dispersion function
+We can use the homogeneous solution previously found to form the complete solution $x(s)=x_h(s)+x_i(s)$. This inhomogeneous term $x_i(s)$, is normalised by the momentum difference to produce the Dispersion function
 \begin{equation}
   D(s)=\frac{x_i(s)}{\nicefrac{\Delta p}{p_0}}
   \label{eq:dispersion}
@@ -694,7 +694,7 @@ The fundamental principle of slow extraction exploits the unstable boundary crea
 
 There are a variety of methods to provide acceleration of the beam towards resonance, which fall into two categories: \textit{momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$, whereas \textit{amplitude-driven} methods use transverse noise or RF excitation at the beam's revolution frequency to create increasing betatron amplitudes.
 
-Other methods involve moving the resonance itself, by changing the tune of the machine. This can be accomplished by using quadrupoles (probably the first and simplest method devised) or sextupoles, but is rarely due to an array of complications arising from the changing transverse optics. Implementations would require active compensation to maintain the beam's position, size, and ultimately stability. Quadrupole-driven extraction is, additionally, highly sensitive to power-supply ripples---residual variation in the voltage/current produced by AC-DC power converters. 
+Other methods involve moving the resonance itself, by changing the tune of the machine. This can be accomplished by using quadrupoles (probably the first and simplest method devised) or sextupoles, but is rarely used due to an array of complications arising from the changing transverse optics. Implementations would require active compensation to maintain the beam's position, size, and ultimately stability. Quadrupole-driven extraction is, additionally, highly sensitive to power-supply ripples---residual variation in the voltage/current produced by AC-DC power converters. 
 
 These categories are not mutually exclusive, and some of the methods discussed will use a combination of effects to achieve slow extraction.
 
@@ -752,7 +752,7 @@ A variety of different signals can be used to drive the excitation: theoreticall
 
 \section{RFKO Slow Extraction at the CERN PS}
 
-For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent magnetic rigidity was used.
+For implementation at the PS, and for use in extraction to East Area, a basic beam is set up and configured for the East area. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent magnetic rigidity was used.
 
 This equivalency can be calculated using~\autoref{eq:brho}, \autoref{eq:relativistic_energy}, and \autoref{eq:relativistic_momentum}, producing an equation for the total momentum of an ion beam:
 \begin{equation}
