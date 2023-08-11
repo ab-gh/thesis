@@ -128,7 +128,7 @@ Ongoing experiments in these facilities such as the CHARM High-energy Ions for M
 
 The CHIMERA experiment, and other experiments located at the East Area and its higher-energy sister site at the SPS North Area, are referred to as fixed-target experiments. These experiments require a semi-continuous flux of particles: if the entire beam of the PS was delivered to a material sample, for example, in an effectively instantaneous ``spill'' (a controlled removal of particles from the circular accelerator), any sensitive acquisition equipment would become saturated, and the fixed target itself likely destroyed.
 
-At a beam momentum of \qty{5.4}{\giga\electronvolt} in the PS, the revolution of the beam is around \qty{470}{kHz}. Therefore, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as \textit{fast} extraction, is commonly used to transfer particles between successive accelerators, where the bunched time-structure of the beam must be preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, much longer than the revolution period, a ``slow'' extraction system is employed.
+At a beam momentum of \qty{5.4}{\giga\electronvolt} in the PS, the revolution frequency of the beam is around \qty{470}{kHz}. Therefore, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as \textit{fast} extraction, is commonly used to transfer particles between successive accelerators, where the bunched time-structure of the beam must be preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, much longer than the revolution period, a ``slow'' extraction system is employed.
 
 \subsection{Extraction Methods}
 
@@ -152,23 +152,21 @@ In accelerator-to-accelerator contexts, the synchronous nature of fast extractio
   \caption{Diagram of a general multi-turn fast extraction system~\cite{Fraser:CAS}.}\label{fig:fast_multi_diagram}
 \end{figure}
 
-This method of increasing the spill time is, however, limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large. For example, if a 50\% extraction efficiency is desired over $10^4$ turns, the beam thickness sliced off by the ES must be the same as the thickness of the blade itself. For the SPS, the ES has blade thickness of \qty{25}{\micro\meter}. The required diameter of the beam, therefore, would be $2\cdot 25\mu m\cdot 10^4 = $ \qty{0.5}{\meter}~\cite{brunner}. This diameter is already lager than the beam pipes, clearly physically impossible.
+This method of increasing the spill time is, however, limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large. For example, if a 50\% extraction efficiency is desired over $10^4$ turns, the beam thickness sliced off by the Electrostatic Septum (ES) must be the same as the thickness of the blade itself. For the SPS, the ES has an effective blade thickness of \qty{500}{\micro\meter}~\cite{sps-es.23.023501}. The required diameter of the beam, therefore, would be $2\cdot 25\mu m\cdot 10^4 = $ \qty{10}{\meter}~\cite{brunner}. This diameter is already lager than the beam pipes, clearly physically impossible.
 
 In order to provide spills over a longer duration, over many thousands of turns, \textit{slow extraction} must be used. 
 
 \subsection{Introduction to Slow Extraction}
 
-\textbf{Slow extraction} instead relies on exploiting resonance of the beam as it oscillates around the orbit of the machine. A full theoretical description of these effects will be detailed in \autoref{chap:theory}, but a brief explanation is offered here: the oscillatory motion of a beam can be controlled such that it returns to the same point along the accelerators circumference with the same oscillation phase. The particles will, therefore, travel through the same field of a magnet, and experience the same force on consecutive turns, rapidly becoming unstable.
-
-This resonant effect is usually carefully avoided in particle accelerators. However, with the right configuration, this amplitude growth can be used alongside an ES to separate particles from their orbit, towards an MS, and into the extraction transfer line. Should the effect be slow enough, a small fraction of particles will reach the MS per turns.
+\textbf{Slow extraction} instead relies on exploiting resonance of the beam as it oscillates around the orbit of the machine. A full theoretical description of these effects will be detailed in \autoref{chap:theory}, but a brief explanation is offered here: the oscillatory motion of a beam can be controlled such that it returns to the same point along the accelerators circumference with the same oscillation phase, in order to be in harmonic resonance with the periodic field distribution of the ring. This resonant effect is usually carefully avoided in particle accelerators. However, with the correct configuration, this amplitude growth can be used alongside an ES to separate particles from their orbit, towards an MS, and into the extraction transfer line. Should the effect be slow enough, a small fraction of particles will reach the MS per turns.
 
 The exploitation of resonance to induce extraction is by no means novel; a method akin to slow extraction was first proposed by J. Tuck and L. Teng in 1951~\cite{Couteur_1951}, and performed by Le Couteur at the Liverpool cyclotron in 1954~\cite{Couteur_1955}. Many such applications of slow extraction exist, using different effects to drive particles into resonance. This thesis will present some of these methods, particularly focussing on Radio-Frequency Knock-Out slow extraction.
 
-Many medical synchrotrons, such as the MedAustron Synchrotron, use slow extraction to deliver beam to patients for ion beam cancer therapy~\cite{ArrutiaSota:2845862}, producing spills of up to \qty{30}{\second} can be produced\footnote{Limited to \qty{10}{\second} for patient treatment}. In human medical applications, safety is paramount. Therefore, the slow extraction process must be fully understood. Ripples in the intensity of beam have to be carefully controlled in order to provide a steady, predictable irradiation dose to patients.
+Many medical synchrotrons, such as the MedAustron Synchrotron, use slow extraction to deliver beam to patients for ion beam cancer therapy~\cite{ArrutiaSota:2845862}, producing spills of up to \qty{30}{\second}\footnote{Limited to \qty{10}{\second} for patient treatment}. In human medical applications, safety is paramount. Therefore, the slow extraction process must be fully understood. Ripples in the intensity of beam have to be carefully controlled in order to provide a steady, predictable irradiation dose to patients.
 
-Small medical synchrotrons are simpler\footnote{The PS contains 100 bending magnets along its circumference, as opposed to MedAustron's 16}, newer\footnote{The PS began operation in 1959, and is CERN's oldest accelerator still in operation. MedAustron was first certified in 2016.}, and having a far higher operational availability requirement than research accelerators such as the PS. At CERN's PS, however, that benefit cannot be relied upon. Machine time is in high demand, and studies are time-shared between machine development (MD), fixed-target experimental areas, LHC physics injection, and a wide array of other facilities. 
+Small medical synchrotrons are simpler\footnote{The PS contains 100 bending magnets along its circumference, as opposed to MedAustron's 16}, newer\footnote{The PS began operation in 1959, and is CERN's oldest accelerator still in operation. MedAustron was first certified in 2016.}, and have a far higher operational availability requirement than research accelerators such as the PS. At CERN's PS, however, that benefit cannot be relied upon. Machine time is in high demand, and studies are time-shared between machine development (MD), fixed-target experimental areas, LHC physics injection, and a wide array of other facilities. 
 
-Simulations can there provide an important tool in understanding slow extraction spills. New methods can be rapidly developed and tested without requiring extensive (and expensive) machine studies, and wide parameter spaces can be explored to construct functional relationships between input parameters and spill output characteristics. 
+Simulations can therefore provide an important tool in understanding slow extraction spills. New methods can be rapidly developed and tested without requiring extensive (and expensive) machine studies, and wide parameter spaces can be explored to construct functional relationships between input parameters and spill output characteristics. 
 
 \section{Modelling Slow Extraction}
 
@@ -176,7 +174,7 @@ Simulations can there provide an important tool in understanding slow extraction
 
 To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard within CERN's beam physics community. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
 
-Newer tools are introducing improvements such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarassingly parallel}\footnote{A problem which requires minimal no effort to be separated into a large number of independent, concurrently-processed tasks.} tasks can be run on large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or discrete computer host on a batch-processing network.
+Newer tools are introducing improvements such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarassingly parallel}\footnote{A problem which requires minimal to no effort to be separated into a large number of independent, concurrently-processed tasks.} tasks can be run on large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or discrete computer host on a batch-processing network.
 
 \chapter{Accelerator Physics Theory}\label{chap:theory}
 
@@ -344,7 +342,7 @@ x(s) =\sqrt{\varepsilon}\sqrt{\beta(s)}\cos(\varphi(s)-\varphi_0)
 \end{equation} 
 where $\varphi(s)$ is the oscillation phase, $\varphi_0$ is the initial condition, and $\varepsilon$ is an integration constant. $\varphi_0$ and $\varepsilon$ are constants of a trajectory, and so the transverse oscillation of a particle is given by the special $\beta$ function. The $\beta$ function must also satisfy the periodic constraint $\beta(s+L)=\beta(s)$, and is related to the $\varphi$ phase function by the following equation:
 \begin{eqnarray}
-  \varphi(s) = \int^s_0\frac{ds}{\beta(s)}
+  \varphi(s) = \int^s_0\frac{ds'}{\beta(s')}
   \label{eq:phase_and_beta}
 \end{eqnarray}
 
@@ -361,9 +359,9 @@ The overall phase advance of transverse oscillations over one revolution of $2\p
 \end{equation}
 This quantity, often simply referred to as \textit{tune}, effectively indicates how many complete transverse oscillations a particle makes in one turn. The fractional part of this value is the most significant, and the integer part of a referenced tune may sometimes be omitted.
 
-Particles with momentum different to the reference particle $p_0$ will experience different focussing effects in quadrupoles. This slight change in focussing will effect the oscillatory motion of off-momentum particles, and result in a spread of tunes throughout a distribution of particles. The variation of this tune, with respect to the variation in momentum, is characterised by the \textit{chromaticity}, variously defined as $Q'$ or $\eta$:
+Particles with momentum different to the reference particle $p_0$ will experience different focussing effects in quadrupoles. This slight change in focussing will effect the oscillatory motion of off-momentum particles, and result in a spread of tunes throughout a distribution of particles. The variation of this tune, with respect to the variation in momentum, is characterised by the \textit{normalised chromaticity} (where it is divided by $Q$), variously defined as $Q'$ or $\eta$:
 \begin{equation}
-  Q' = \frac{\delta Q/Q}{\delta p/p}
+  Q' = \frac{\Delta Q/Q}{\Delta p/p}
   \label{eq:chroma}
 \end{equation}
 
@@ -393,7 +391,7 @@ These parameters can be readily understood in the \textit{phase space} of $(x, x
   \label{fig:twiss-phase-space}
 \end{figure}
 
-Liouville's theorem states that, under conservative forces, this emittance is conserved, and no external field can change it, and hence~\autoref{eq:motion_x} provides it as an invariant of motion. 
+Liouville's theorem states that, under conservative forces and at fixed energy, this emittance is conserved\footnote{\textit{Normalised} emittance is conserved during acceleration where energy is not fixed}, and no external field can change it. Hence,~\autoref{eq:motion_x} provides it as an invariant of motion. 
 
 \subsection{Dispersion}\label{sec:transdisp}
 
@@ -403,7 +401,7 @@ A particle with a momentum offset, $\Delta p = p-p_0$, will still satisfy~\ref{e
 \begin{equation}
   x''(s)-x\left(k-\frac 1{\rho^2}\right)=\frac 1\rho\frac{\Delta p}{p_0}
 \end{equation}
-We can use the homogenous solution previously found to form the complete solution $x(s)=x_h(s)+x_i(s)$. This inhomogeneous term $x_i(s)$, is normalised by the momentum difference to produce the Dispersion function
+We can use the homogeneous solution previously found to form the complete solution $x(s)=x_h(s)+x_i(s)$. This inhomogeneous term $x_i(s)$, is normalised by the momentum difference to produce the Dispersion function
 \begin{equation}
   D(s)=\frac{x_i(s)}{\nicefrac{\Delta p}{p_0}}
   \label{eq:dispersion}
@@ -510,7 +508,7 @@ An electric field of magnitude $E_0$ travelling in the $s$ direction can be defi
 In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must follow the particle's energy gain. This synchronous condition, for velocities $v\ll c$, is defined as
 \begin{equation}
   \frac{2\pi\rho}{v_s}=\frac h{\omega_{RF}}
-\end{equation} where $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference. 
+\end{equation} where $v_s$ is the synchronous particle velocity and $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference. 
 
 To keep a particle with increasing energy bent along a path of constant radius, the magnetic field $B$ of the bending dipoles must increase as RF acceleration occurs. Recalling~\autoref{eq:brho}, and deriving by time, obtains
 \begin{equation}
@@ -590,8 +588,8 @@ Now that the fundamentals of accelerator beam physics are established, this sect
 
 In \textit{normalised} coordinates (\autoref{eq:normalised}), these effect of these fields (in a thin-lens approximation) becomes
 \begin{align*}
-  \Delta x&=0 & \Delta x'&=S(x^2-\frac{\beta_y}{\beta_x}y^2) \\
-  \Delta y&=0 & \Delta y'&=-2S\frac{\beta_y}{\beta_x}xy
+  \Delta x_n&=0 & \Delta x_n'&=S(x^2-\frac{\beta_y}{\beta_x}y^2) \\
+  \Delta y_n&=0 & \Delta y_n'&=-2S\frac{\beta_y}{\beta_x}xy
 \end{align*}
 where $S$, the normalised sextupole strength, is
 \begin{equation}
@@ -694,7 +692,7 @@ The fundamental principle of slow extraction exploits the unstable boundary crea
 
 There are a variety of methods to provide acceleration of the beam towards resonance, which fall into two categories: \textit{momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$, whereas \textit{amplitude-driven} methods use transverse noise or RF excitation at the beam's revolution frequency to create increasing betatron amplitudes.
 
-Other methods involve moving the resonance itself, by changing the tune of the machine. This can be accomplished by using quadrupoles (probably the first and simplest method devised) or sextupoles, but is rarely due to an array of complications arising from the changing transverse optics. Implementations would require active compensation to maintain the beam's position, size, and ultimately stability. Quadrupole-driven extraction is, additionally, highly sensitive to power-supply ripples---residual variation in the voltage/current produced by AC-DC power converters. 
+Other methods involve moving the resonance itself, by changing the tune of the machine. This can be accomplished by using quadrupoles (probably the first and simplest method devised) or sextupoles, but is rarely used due to an array of complications arising from the changing transverse optics. Implementations would require active compensation to maintain the beam's position, size, and ultimately stability. Quadrupole-driven extraction is, additionally, highly sensitive to power-supply ripples---residual variation in the voltage/current produced by AC-DC power converters. 
 
 These categories are not mutually exclusive, and some of the methods discussed will use a combination of effects to achieve slow extraction.
 
@@ -727,7 +725,7 @@ A variety of slow extraction implementations can be found across particle accele
 \begin{itemize}
   \item The \textit{National Center for Oncological Hadrontherapy} (CNAO) uses \textbf{Betatron Core} slow extraction~\cite{Falbo:IPAC2018-TUZGBF3}: a circular magnet produces a longitudinal acceleration, driving particles into 1/3rd-integer resonance.
   \item The \textit{MedAustron} facility has also used \textbf{Constant Optics Slow Extraction} (COSE)~\cite{ArrutiaSota:2845862}, simultaneously scaling the magnetic strength of bending dipoles, and sweeping the betatron tune. This method allows for the alignment of separatrices at different momentum, improving the spill quality.
-  \item \textbf{Phase Displacement Extraction} (PDE) allows for resonant extraction without the need for ramping magnetic elements. This avoids pertubations or ramp-rate limits which could arise, and has been tested at both the PS and MedAustron~\cite{Maksimov:1996xb, ARRUTIASOTA2022167007}.
+  \item \textbf{Phase Displacement Extraction} (PDE) allows for resonant extraction without the need for ramping magnetic elements. This avoids pertubations or ramp-rate limits which could arise, and has been tested at both the PS and MedAustron~\cite{ARRUTIASOTA2022167007}.
   \item The \textit{Xi’an Proton Application Facility} (XiPAF) uses \textbf{Radio-Frequency Knock Out} (RFKO) extraction~\cite{Yao:2016cnf}, an amplitude-driven method which transversely ``heats'' (excites) the beam, increasing emittance and amplitude into unstable regions.
 \end{itemize}
 These accelerators and techniques are mentioned for illustrative purposes: it is not an exhaustive list, and most accelerators can employ multiple methods.
@@ -752,7 +750,7 @@ A variety of different signals can be used to drive the excitation: theoreticall
 
 \section{RFKO Slow Extraction at the CERN PS}
 
-For implementation at the PS, and for use in extraction to East Area, a basic beam is set-up and configured for the East area. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent magnetic rigidity was used.
+For implementation at the PS, and for use in extraction to East Area, a basic beam is set up and configured for the East area. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent magnetic rigidity was used.
 
 This equivalency can be calculated using~\autoref{eq:brho}, \autoref{eq:relativistic_energy}, and \autoref{eq:relativistic_momentum}, producing an equation for the total momentum of an ion beam:
 \begin{equation}
@@ -796,7 +794,7 @@ A high-level parameter \verb|QSE| is also provided, which controls the normalise
 
 The high-level tune control knobs were also configured for RFKO. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. This tune control is shown in~\autoref{fig:tunemap}, which plots vertical tune against horizontal tune. This provides a convenient visualisation of first, second, and third order resonances. These resonances are defined by
 \begin{equation}
-  m\cdot Q_x+n\cdot Q_y\neq p
+  m\cdot Q_x+n\cdot Q_y=p
 \end{equation} where $m$, $n$, and $p$ are arbitrary integers, where $|m|+|n|$ defines the resonance order. Also used is the fractional tune split, $\Delta$, defined as
 \begin{equation}
   \Delta = Q_x-Q_y-p
@@ -820,10 +818,10 @@ The RF system in the PS (\autoref{sec:long}) is used to accelerate the beam up t
 \subsection{Transverse Excitation}\label{sec:trans_exc}
 Once a basic, stable cycle is configured in the PS, the transverse excitation is implemented. This uses a transverse kicker located at section 97 of the PS, \verb|KFB97|, a $\sim$\qty{1}{\meter} long strip-line kicker, with both horizontal and vertical planes~\cite{Sterbini:2158994}. With a peak RF power of \qty{5000}{\watt} across the two electrodes, and an impedance of \qty{100}{\ohm}, the transverse feedback (TFB) kicker can provide a peak voltage at \qty{1000}{\volt} and current of \qty{10}{\ampere}. The electric and magnetic fields are then, defined as
 \begin{equation}
-  \vec E=\frac Vr
+  E=\frac Vr
 \end{equation}
 \begin{equation}
-  \vec B=\frac {2I}{2\pi r}\cdot \mu_0
+  B=\frac {2I}{2\pi r}\cdot \mu_0
 \end{equation}
 where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and magnetic deflection angles are then~\cite[3.1-3.2]{bouvet}
 \begin{equation}
@@ -949,7 +947,7 @@ To submit the simulation jobs to the batch processing service, the simulation so
 
 This image was made available on CERN's image registry using a \textit{continuous integration} platform, allowing the image to be automatically re-built and re-published when changes are made to the configuration. It was also distributed via the \textit{CERN Virtual Machine File System} (CVMFS), which HTCondor can use to initialise machines running batch jobs. This container~\cite{docker} eliminated the need to set up the simulation environment on each machine, ensured that the simulation were run in a consistent environment, and enabled the use of HTCondor's GPU resources. 
 
-\autoref{fig:flowchart} describes the simulation process as successfully implemented. While some efficiency could be made by including shared resources (such as the \verb|ps.seq| lattice file) within the Docker image, developing a general base environment for any \verb|Xsuite| simulation will prove useful in the wider community, and in work outside of the scope of this thesis. Initial test simulations included a \verb|Monitor| object to record the turn-by-turn particle parameters of simulations. This is a very computationally expensive and memory-intensive process, and was removed from the final simulation process, but enabed detailed debugging and analysis of the simulation process. One example,~\autoref{fig:phase-space-sim}, shows the progression of phase-space particle distribution throughout the first \qty{1000}{turns} of a simulation. Here, the Kobayashi Hamiltonian phase-space map (\autoref{fig:kobayashi}) can be seen, in addition to the transverse heating (emittance growth, \autoref{fig:rfko_phase_space}) and extraction separatrices as discussed in~\autoref{sec:rfko}.
+\autoref{fig:flowchart} describes the simulation process as successfully implemented. While some efficiency could be made by including shared resources (such as the \verb|ps.seq| lattice file) within the Docker image, developing a general base environment for any \verb|Xsuite| simulation will prove useful in the wider community, and in work outside of the scope of this thesis. Initial test simulations included a \verb|Monitor| object to record the turn-by-turn particle parameters of simulations. This is a very computationally expensive and memory-intensive process, and was removed from the final simulation process, but enabed detailed debugging and analysis of the simulation process. One example,~\autoref{fig:phase-space-sim}, shows the progression of phase-space particle distribution throughout the first \qty{1000}{turns} of a simulation. Here, the characteristic features of the Kobayashi Hamiltonian phase-space map (\autoref{fig:kobayashi}) can be seen, in addition to the transverse heating (emittance growth, \autoref{fig:rfko_phase_space}) and extraction separatrices as discussed in~\autoref{sec:rfko}.
 
 \begin{figure}[h]
   \centering
@@ -978,9 +976,9 @@ This image was made available on CERN's image registry using a \textit{continuou
 
 In order to compare the advantages of GPU acceleration provided by \verb|Xsuite|, the simulation process described in~\autoref{sec:sim_process} was implemented and run using CERN's batch service. The simulations used single-CPU compute nodes, either using \verb|Xsuite|'s CPU context, or GPU context with additional Nvidia GPUs via \verb|Xsuite|'s CUDA interface. Simulations were run for a range of numbers of particles and turns, and the real-time (\textit{wall-clock}) duration of the simulation was recorded. These results are presented in~\autoref{fig:cpu_graph_per_turn} and~\autoref{fig:gpu_graph_per_turn}. The number of particles in a simulation---$N_p$---effectively controls the computational intensity, as it determines the number of calculations which must be performed per iteration (turn). The number of turns---$N_t$---controls the number of iterations, and is therefore used to normalise computation time between simulation runs.
 
-These figures show significantly different dependency of simulation process time on the operational intensity between CPU and GPU workloads. For CPU tasks there is no parallelism available, so for $N_p>10^2$---where performance isn't dominated by constant-time \textit{overhead} processes---performance is dependant on $N_p$.
+These figures show significantly different dependency of simulation process time on the operational intensity between CPU and GPU workloads. For CPU tasks there is no parallelism available, so for $N_p>10^2$---where performance isn't dominated by constant-time \textit{overhead} processes---performance is dependant on $N_p$. For GPU tasks, however, there is a significant initial overhead process of allocating and transferring data from the CPU to GPU. This is apparent from the stratification of performance (time per turn) in~\autoref{fig:gpu_graph_per_turn}. The performance, however, is not dependent on $N_p$ for $N_p<10^6$, where the performance is dominated by the constant-time parallelism available.
 
-For GPU tasks, however, there is a significant initial overhead process of allocating and transferring data from the CPU to GPU. This is apparent from the stratification of performance (time per turn) in~\autoref{fig:gpu_graph_per_turn}. The performance, however, is not dependent on $N_p$ for $N_p<10^6$, where the performance is dominated by the constant-time parallelism available.
+The performance of both CPU and GPU simulations 
 
 GPUs employ a \textit{Single-Instruction Multiple-Data} (SIMD) architecture to execute a single operation on multiple data points (\textit{vectors}) concurrently. This is in contrast to CPUs, which employ a \textit{Single-Instruction Single-Data} (SISD) architecture, where each operation is performed on a single data point at a time. This means that the GPU can perform $N_p$ operations in the same time as a CPU can perform a single operation, and so the performance is not dependant on $N_p$. The GPU constant-time performance is saturated for $N_p>10^6$, where all available parallelism is being used, and performance is once again dependant on $N_p$. Previous research has shown similar performance dependency on $N_p$ for GPU accelerated simulations~\cite{Hegglin:2239398}.
 
@@ -1014,7 +1012,7 @@ These findings motivated the selection of parameters for later simulations. To s
 
 In order to compare the accuracy of RFKO slow extraction simulations to measurements taken from the implementation on the real machine, analytical tools established by previous work~\cite{Pari:2780495} were used to measure the frequency response of the RFKO system. By varying the rate at which a chirp was repeated, known as the \textit{interval frequency} or \textit{rep rate}, the resulting spill could be characterised. 
 
-\subsection{Analytical Methodology}\label{sec:machine_freq_anal_method}
+\subsection{Analysis Methodology}\label{sec:machine_freq_anal_method}
 
 For the machine implementation, the spill was measured using an $N_2$ gas scintillator~\cite{Actis:bxscint} located in the F61 extraction line (see~\autoref{fig:schematic}). This scintillator is measured by various devices: the interface \verb|BXSCAL| was selected, which provided time-series measurements of particle counts at $\sim$\qty{18.8}{\kilo\hertz}. The spill was measured for a range of interval frequencies using an automated script interfacing with the \textit{Java API for Parameter Control} (JAPC) software at CERN. Multiple sets of data were taken for each interval frequency, for a range of peak voltages applied to the TFB kicker. 
 
@@ -1055,9 +1053,9 @@ where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N
 
 
 \subsection{Results of Frequency Response Analysis} % [TODO) Better wording first sentence
-\autoref{fig:freq_response_machine} presents the results of the analytical method described in~\autoref{sec:machine_freq_anal_method} applied to data measured from the PS. The graphs characterise the \textit{frequency response} of the spill to different chirp signal \textit{rep-rate} intervals, and indicate how this frequency propagates to the output (spill). The frequency response of the RFKO system is shown for both a bunched beam (upper image) and a coasting beam (lower image). Visible in both \textit{log-log} plots is a distinct \textit{low-pass filter} effect, where the frequency response is reduced at higher frequencies. This effect, also observed by previous studies~\cite{wepmp008,Pari:2780495}, results in higher frequencies being ``smoothed out'' by the RFKO system. 
+\autoref{fig:freq_response_machine} presents the results of the analysis method described in~\autoref{sec:machine_freq_anal_method} applied to data measured from the PS. The graphs characterise the \textit{frequency response} of the spill to different chirp signal \textit{rep-rate} intervals, and indicate how this frequency propagates to the output (spill). The frequency response of the RFKO system is shown for both a bunched beam (upper image) and a coasting beam (lower image). Visible in both \textit{log-log} plots is a distinct \textit{low-pass filter} effect, where the frequency response is reduced at higher frequencies. This effect, also observed by previous studies~\cite{wepmp008,Pari:2780495}, results in higher frequencies being ``smoothed out'' by the RFKO system. 
 
-The frequency response $H(f)$ of a low-pass filter can be approximated as
+The frequency response $H(f)$ of a low-pass filter can be approximated to the first order as
 \begin{eqnarray}
   H(f) = A\cdot \frac 1{1 + \left( \frac{f}{f_c} \right)^{2n}}
 \end{eqnarray}
