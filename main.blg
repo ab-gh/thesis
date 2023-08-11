@@ -14,6 +14,7 @@ Warning--entry type for "brunner" isn't style-file defined
 --line 21 of file refs.bib
 Warning--entry type for "Hegglin:2239398" isn't style-file defined
 --line 664 of file refs.bib
+Warning--I didn't find a database entry for "Maksimov:1996xb"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -28,45 +29,45 @@ Warning--empty journal in nxcals
 Warning--empty booktitle in Bryant:CAS
 
 Done.
-You've used 51 entries,
+You've used 50 entries,
             4087 wiz_defined-function locations,
-            1181 strings with 18300 characters,
-and the built_in function-call counts, 34115 in all, are:
-= -- 2950
-> -- 760
-< -- 167
-+ -- 400
-- -- 156
-* -- 1649
-:= -- 5531
-add.period$ -- 105
-call.type$ -- 51
-change.case$ -- 52
-chr.to.int$ -- 306
-cite$ -- 60
-duplicate$ -- 2595
-empty$ -- 2641
-format.name$ -- 186
-if$ -- 7860
+            1175 strings with 18136 characters,
+and the built_in function-call counts, 33215 in all, are:
+= -- 2871
+> -- 746
+< -- 155
++ -- 390
+- -- 155
+* -- 1609
+:= -- 5401
+add.period$ -- 103
+call.type$ -- 50
+change.case$ -- 51
+chr.to.int$ -- 276
+cite$ -- 59
+duplicate$ -- 2535
+empty$ -- 2577
+format.name$ -- 185
+if$ -- 7648
 int.to.chr$ -- 0
-int.to.str$ -- 51
-missing$ -- 487
-newline$ -- 264
-num.names$ -- 47
-pop$ -- 1145
+int.to.str$ -- 50
+missing$ -- 480
+newline$ -- 261
+num.names$ -- 46
+pop$ -- 1133
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2745
+skip$ -- 2673
 stack$ -- 0
-substring$ -- 981
-swap$ -- 2015
-text.length$ -- 65
+substring$ -- 910
+swap$ -- 1959
+text.length$ -- 63
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 51
+type$ -- 50
 warning$ -- 9
-while$ -- 108
-width$ -- 53
-write$ -- 617
-(There were 12 warnings)
+while$ -- 103
+width$ -- 52
+write$ -- 607
+(There were 13 warnings)
