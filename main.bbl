@@ -43,6 +43,11 @@ S.~Ghithan, G.~Roy, and S.~Schuh, ``{Design study of beam transport lines for Bi
 J.~Barranco~Garc\'{\i}a and S.~Gilardoni, ``Simulation and optimization of beam losses during continuous transfer extraction at the cern proton synchrotron,'' \emph{Phys. Rev. ST Accel. Beams}, vol.~14, p. 030101, Mar 2011. [Online]. Available: \url{https://link.aps.org/doi/10.1103/PhysRevSTAB.14.030101}
 \BIBentrySTDinterwordspacing
 
+\bibitem{sps-es.23.023501}
+\BIBentryALTinterwordspacing
+B.~Goddard, B.~Balhan, J.~Borburgh, L.~Esposito, M.~A. Fraser, L.~Jorat, V.~Kain, C.~Lolliot, L.~S. Stoel, P.~van Trappen, F.~M. Velotti, D.~Barna, and D.~Veres, ``Reduction of $400\text{ }\text{ }\mathrm{GeV}/c$ slow extraction beam loss with a wire diffuser at the cern super proton synchrotron,'' \emph{Phys. Rev. Accel. Beams}, vol.~23, p. 023501, Feb 2020. [Online]. Available: \url{https://link.aps.org/doi/10.1103/PhysRevAccelBeams.23.023501}
+\BIBentrySTDinterwordspacing
+
 \bibitem{brunner}
 \BIBentryALTinterwordspacing
 K.~Brunner, ``{Improving the slow extraction efﬁciency of the CERN Super Proton Synchrotron},'' 2018, presented 2018. [Online]. Available: \url{https://cds.cern.ch/record/2650734}
