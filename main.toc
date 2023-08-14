@@ -37,11 +37,11 @@
 \contentsline {subsection}{\numberline {3.2.4}Simulation Process}{35}{subsection.3.2.4}%
 \contentsline {chapter}{\numberline {4}Analysis and Comparison of Results}{39}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Computation Time}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Frequency Response}{42}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Analysis Methodology}{42}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Results of Frequency Response Analysis}{44}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Spill Duty Factor}{50}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusion}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Outlook}{53}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Acknowledgements}{55}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Code Snippets}{60}{appendix.1.A}%
+\contentsline {section}{\numberline {4.2}Frequency Response}{43}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Analysis Methodology}{43}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Results of Frequency Response Analysis}{45}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Spill Duty Factor}{51}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusion}{54}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Outlook}{54}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Acknowledgements}{56}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Code Snippets}{61}{appendix.1.A}%
