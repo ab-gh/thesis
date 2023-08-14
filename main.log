@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  11 AUG 2023 18:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  14 AUG 2023 12:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1218,19 +1218,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [37 <./phase-space-sim.png>] [38 <./simulation-flowchart.png>]
 Chapter 4.
-<CPU_graph_per_turn.png, id=788, 538.6524pt x 338.34406pt>
+<CPU_graph_per_turn.png, id=788, 541.3023pt x 341.8371pt>
 File: CPU_graph_per_turn.png Graphic file (type png)
 <use CPU_graph_per_turn.png>
 Package pdftex.def Info: CPU_graph_per_turn.png  used on input line 987.
-(pdftex.def)             Requested size: 375.80542pt x 236.0648pt.
+(pdftex.def)             Requested size: 375.80542pt x 237.32832pt.
 [39
 
 ]
-<GPU_graph_per_turn.png, id=796, 538.4115pt x 338.34406pt>
+<GPU_graph_per_turn.png, id=796, 541.3023pt x 341.8371pt>
 File: GPU_graph_per_turn.png Graphic file (type png)
 <use GPU_graph_per_turn.png>
 Package pdftex.def Info: GPU_graph_per_turn.png  used on input line 993.
-(pdftex.def)             Requested size: 375.80542pt x 236.15773pt.
+(pdftex.def)             Requested size: 375.80542pt x 237.32832pt.
 <COMPARISON_graph_per_turn.png, id=798, 538.4115pt x 338.34406pt>
 File: COMPARISON_graph_per_turn.png Graphic file (type png)
 <use COMPARISON_graph_per_turn.png>
@@ -1431,7 +1431,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (62 pages, 17671001 bytes).
+Output written on main.pdf (62 pages, 16952747 bytes).
 PDF statistics:
  1356 PDF objects out of 1440 (max. 8388607)
  1115 compressed objects within 12 object streams
