@@ -730,7 +730,7 @@ A variety of slow extraction implementations can be found across particle accele
 \end{itemize}
 These accelerators and techniques are mentioned for illustrative purposes: it is not an exhaustive list, and most accelerators can employ multiple methods.
  
-The work in this thesis will focus on implementing \textit{Radio-Frequency Knock Out} (RFKO), an amplitude- and sextupole-driven method. A variety of reasons motivate this: RFKO can be performed with both bunched (particles are longitudinally trapped by RF cavities) and coasting (debunched, particles spread along the entire ring circumference) beams. Performing bunched RFKO allows for the same beam to be re-accelerated and re-extracted multiple times~\cite{russo}. Additionally, this method is typically quicker to respond (i.e. turning on and off extraction) than other methods~\cite{Furukawa2002PROGRESSOR, FURUKAWA200259, NODA2002241}.
+The work in this thesis will focus on implementing \textit{Radio-Frequency Knock Out} (RFKO), an amplitude-driven method. A variety of reasons motivate this: RFKO can be performed with both bunched (particles are longitudinally trapped by RF cavities) and coasting (debunched, particles spread along the entire ring circumference) beams. Performing bunched RFKO allows for the same beam to be re-accelerated and re-extracted multiple times~\cite{russo}. Additionally, this method is typically quicker to respond (i.e. turning on and off extraction) than other methods~\cite{Furukawa2002PROGRESSOR, FURUKAWA200259, NODA2002241}.
 
 The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to excite particles into the resonant instability region by providing transverse ``heating'' of the beam---using a radio-frequency exciter to provide a small transverse kick to the beam, increasing its amplitude. This kick is provided at a third-integer fraction of the betatron tune, but a range of excitation frequency (frequency modulation, FM) is required as there is a range of momentum in the beam, and thus a range of tunes. 
 
@@ -978,9 +978,12 @@ In order to compare the advantages of GPU acceleration provided by \verb|Xsuite|
 
 These figures show significantly different dependency of simulation process time on the operational intensity between CPU and GPU workloads. For CPU tasks there is no parallelism available, so for $N_p>10^2$---where performance isn't dominated by constant-time \textit{overhead} processes---performance is dependant on $N_p$. For GPU tasks, however, there is a significant initial overhead process of allocating and transferring data from the CPU to GPU. This is apparent from the stratification of performance (time per turn) in~\autoref{fig:gpu_graph_per_turn}. The performance, however, is not dependent on $N_p$ for $N_p<10^6$, where the performance is dominated by the constant-time parallelism available.
 
-The performance of both CPU and GPU simulations 
-
 GPUs employ a \textit{Single-Instruction Multiple-Data} (SIMD) architecture to execute a single operation on multiple data points (\textit{vectors}) concurrently. This is in contrast to CPUs, which employ a \textit{Single-Instruction Single-Data} (SISD) architecture, where each operation is performed on a single data point at a time. This means that the GPU can perform $N_p$ operations in the same time as a CPU can perform a single operation, and so the performance is not dependant on $N_p$. The GPU constant-time performance is saturated for $N_p>10^6$, where all available parallelism is being used, and performance is once again dependant on $N_p$. Previous research has shown similar performance dependency on $N_p$ for GPU accelerated simulations~\cite{Hegglin:2239398}.
+
+The paralellism-saturated performance of both CPU and GPU simulations can be formulated as linear relationships in log-log, using the equation
+\begin{equation}
+    t=\frac{N_p\ ^\alpha \times 10^\beta}{N_t}
+\end{equation} where $\alpha$ and $\beta$ are some constants of the performance of a particular machine. By fitting the linear domain performance to this equation, values of $\alpha$ and $\beta$ can be estimated for particular CPU and GPUs. For these benchmark simulations, various AMD Epyc CPUs were assigned to the machines, and NVIDIA A100 40GB GPUs were used. This specific combination of hardware resulted in $\alpha_{CPU} = 0.95178, \beta_{CPU}=-4.34452$ for CPU-only simulations, and $\alpha_{GPU}=0.97671, \beta_{GPU}=-6.65887$ for GPU simulations (\autoref{fig:cpu_graph_per_turn}, \autoref{fig:gpu_graph_per_turn}).
 
 \begin{figure}
   \centering
