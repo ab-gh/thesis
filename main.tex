@@ -71,7 +71,7 @@
 %% ========================
 %% [TODO)
 %% REMOVE BEFORE SUBMISSION
- \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray]{draftwatermark}
+ \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray, text=DRAFT\ Aug\ 17]{draftwatermark}
 %% ========================
 % BUG
 
@@ -1120,11 +1120,19 @@ The simulated frequency response characteristics are shown in~\autoref{fig:freq_
   \cprotect\caption{Frequency response of the RFKO system as simulated in \verb|Xsuite|, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_sim}
 \end{figure}
 
-\autoref{fig:simvmeas_bunched} directly compares the frequency response between empirical measurements and simulations, by averaging the response curves of different voltages and plotting the machine and simulation curves together. While less pronounced in a \textit{log-log} graph, the similarities in the limiting response frequency is clear between the curves. 
+\autoref{fig:simvmeas_bunched} and \autoref{fig:simvmeas_coasting} directly compare the frequency response between empirical measurements and simulations, 
+for both bunched and coasting beams. These graphs present the average response curve between different voltages, and the fitted low-pass filter model, with the cutoff frequency $f_c$ marked. While less pronounced in a \textit{log-log} graph, the similarities in the response frequency for bunched beams is clearly seen in \autoref{fig:simvmeas_bunched}. For coasting beams (\autoref{fig:simvmeas_coasting}), this similarity is poorly observed, motivating the conclusion that---while the low-pass filter is still present---the coasting beam simulations were innaccurate.   
 
 \begin{figure}[!h]
-  \includegraphics*[width=0.9\linewidth]{simvmeas_bunched.png}
-  \caption{Graph comparing the averaged frequency response curves for bunched beams between machine data (black) and simulations (red, dashed). Shaded is the $1\sigma$ standard deviation.}\label{fig:simvmeas_bunched}
+  \centering
+  \includegraphics*[width=0.8\linewidth]{simvmeas_bunched.png}
+  \caption{Graph comparing the averaged frequency response curves for bunched beams between machine data (black) and simulations (red). Shaded is the $1\sigma$ error, dashed is the fitted low-pass filter model, and vertical dashed is the calculated cutoff frequency $f_c$ and the $1\sigma$ error.}\label{fig:simvmeas_bunched}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics*[width=0.8\linewidth]{simvmeas_coasting.png}
+  \caption{Graph comparing the averaged frequency response curves for coasting beams between machine data (black) and simulations (red). Shaded is the $1\sigma$ error, dashed is the fitted low-pass filter model, and vertical dashed is the calculated cutoff frequency $f_c$ and the $1\sigma$ error.}\label{fig:simvmeas_coasting}
 \end{figure}
 
 \clearpage
@@ -1218,9 +1226,6 @@ There are several opportunities for improvements presented in this thesis, both 
 \lstinputlisting[language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Arbitrary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
 
 \lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the laboratory time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
-
-
-% \chapter{Data and Plots}
 
 \end{appendices}
 

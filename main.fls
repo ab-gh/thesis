@@ -1585,6 +1585,11 @@ INPUT ./simvmeas_bunched.png
 INPUT simvmeas_bunched.png
 INPUT ./simvmeas_bunched.png
 INPUT ./simvmeas_bunched.png
+INPUT ./simvmeas_coasting.png
+INPUT ./simvmeas_coasting.png
+INPUT simvmeas_coasting.png
+INPUT ./simvmeas_coasting.png
+INPUT ./simvmeas_coasting.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
