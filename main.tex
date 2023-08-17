@@ -47,7 +47,6 @@
 \newcommand{\hly}[1]{\colorbox{yellow}{\parbox{\textwidth}{#1}}}
 \newcommand\todo[1]{\textcolor{red}{#1}}
 
-
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
@@ -74,6 +73,7 @@
 %% REMOVE BEFORE SUBMISSION
  \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray]{draftwatermark}
 %% ========================
+% BUG
 
 %\setcitestyle{aysep={,}}
 \renewcommand{\headeright}{M.Sc. Thesis}
@@ -304,7 +304,7 @@ Integrating this over all magnets in the ring, therefore, must be equal to one f
 
 \subsection{Focussing and Multipoles}
 
-While single-pair dipole magnets are used to bend the beam along the circular path, double-pair \textit{quadrupole} magnets are used to bound the transverse motion, and to prevent the beam from spreading (increasing in size) due to the intrinsic spread of position and angle. An arrangement of four magnetic poles creates a field stronger at higher $|x|$ displacement, causing particles to be pulled back towards the design orbit, ``focussing'' the beam in one transverse plane (while necessarily defocussing in the other). To correct for the defocussing in the other plane, a second quadrupole is placed further along in the beamline, with the magnetic poles arranged in the opposite orientation. This arrangement, known as a FODO lattice, is shown in \autoref{fig:quadrupole} (right).~\autoref{fig:sextupole} depicts a \textit{sextupole} magnet, with three pole pairs, which is used to correct for the dispersion effect of a dipole. % [TODO) Check, is this better?
+While single-pair dipole magnets are used to bend the beam along the circular path, double-pair \textit{quadrupole} magnets are used to bound the transverse motion, and to prevent the beam from spreading (increasing in size) due to the intrinsic spread of position and angle. An arrangement of four magnetic poles creates a field stronger at higher $|x|$ displacement, causing particles to be pulled back towards the design orbit, ``focussing'' the beam in one transverse plane (while necessarily defocussing in the other). To correct for the defocussing in the other plane, a second quadrupole is placed further along in the beamline, with the magnetic poles arranged in the opposite orientation. This arrangement, known as a FODO lattice, is shown in \autoref{fig:quadrupole} (right).~\autoref{fig:sextupole} depicts a \textit{sextupole} magnet, with three pole pairs, which is used to correct for the dispersion effect of a dipole.
 
 \begin{figure}
 \centering
@@ -790,7 +790,7 @@ The electrostatic septum, placed before the magnetic septa, is not used in this 
 
 The dipole magnetic field required for a \qty[per-mode=symbol]{5.392}{\giga\electronvolt\per~c} proton beam is \qty{0.257}{\tesla}, which provides the configuration for the PS Main Unit being magnets. In order to control the third-order resonance, and align the separatrices with the septum blade, the extraction sextupole system was enabled. This consists of a high-level parameter \verb|PR.XSE/K|, which controls the sextupole normalised strength $k_2$ of the two extraction sextupoles, \verb|XSE01| and \verb|XSE07| (\autoref{fig:schematic}). 
 
-A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction. % [TODO) Link back to Hardt
+A high-level parameter \verb|QSE| is also provided, which controls the normalised strength $k_1$ for a set of extraction quadrupoles (\autoref{fig:schematic}). These serve to aid in betatron tune $Q_x$ control, and to increase the amplitude $\beta_x$ while decreasing the dispersion $D_x$ at the septa locations. This large $\beta_x$ allows the septum to be placed further from the circulating beam, and the small dispersion $D_x$ aligns the separatrices at different momenta along the septum blade. These two parameters \verb|QSE| and \verb|XSE|, have been pre-configured for nominal East Area slow extraction.
 
 The high-level tune control knobs were also configured for RFKO. These use the Pole Face Winding (PFW) magnets present in every PS Main Unit dipole to control the horizontal and vertical betatron tunes $Q_{x, y}$ and chromaticities $Q'_{x, y}$. Tune control was very important to the set-up of this implementation---the horizontal tune was positioned close to the third-order resonance, at 0.32. The chromaticity was minimised to avoid part of the circulating beam being brought into resonance before the RFKO system was activated, which would cause a low-level initial uncontrolled spill. This tune control is shown in~\autoref{fig:tunemap}, which plots vertical tune against horizontal tune. This provides a convenient visualisation of first, second, and third order resonances. These resonances are defined by
 \begin{equation}
@@ -896,7 +896,7 @@ This lattice was then imported to \verb|Xsuite|, where the custom RFKO beam elem
 Using~\autoref{eq:kick-electric} and~\autoref{eq:kick-magnetic}, a function (\autoref{lst:kick_angle}) was written to convert the voltage applied across the TFB kicker to the angle of deflection generated by the electric and magnetic fields. This value was then used to define the strength of the \verb|Exciter| element, which was placed at the location of the TFB kicker in the lattice. Another function (\autoref{lst:generate_chirp}) was written to generate the chirp signal as generated by \textit{Qmeter} and the AFG. This function was then used to define the \verb|Exciter| element's \verb|samples| parameter, which is used to define the time-dependent kick. 
 
 \subsubsection{Septum}\label{sec:septum}
-The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular aperture \verb|LimitRect|. By setting this aperture to coordinates corresponding to the window of the septum, particles which are lost to the aperture can be considered as extracted. In the real machine, particles recieve two magnetic septum kicks, from \verb|SMH57| and \verb|SMH61|, but this study only considered the first septum to simplify the model and avoid simulating lost particles for longer than necessary. As only one aperture is modelled, it can be assumed that particles lost to an aperture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum and were extracted. % [TODO) Lost to aperture walls?
+The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular aperture \verb|LimitRect|. By setting this aperture to coordinates corresponding to the window of the septum, particles which are lost to the aperture can be considered as extracted. In the real machine, particles recieve two magnetic septum kicks, from \verb|SMH57| and \verb|SMH61|, but this study only considered the first septum to simplify the model and avoid simulating lost particles for longer than necessary. As only one aperture is modelled, it can be assumed that particles lost to an aperture limit---with \verb|Xsuite| particle state \verb|0| (flag \verb|XT_LOST_ON_APERTURE|)---entered the window of the septum and were extracted. 
 
 \subsubsection{RF Cavity}
 
@@ -1032,9 +1032,9 @@ Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CE
   \centering
   \includegraphics*[width=0.8\linewidth]{sample_rate_variation.png}
   \caption{Box-plot of the variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement. Box shows the \nth{25} to \nth{75} percentile, with error bars bounding the \nth{10} and \nth{90} percentile. Outliers outside of this range are shown as diamond points.}\label{fig:sample_rate_variation}
-\end{figure} % [TODO) Find source/citation for variation in sampling frequency
+\end{figure}
 
-Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples). A peak-finding algorithm was used to identify this interval rate, allowing for a slight variation in the spill measurement frequency. Over the measurements used, the \verb|BXSCAL| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). As this variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected. The peak-finding algorithm was used to identify the highest peak within a range corresponding to the inter-quartile range of sample rate variance. An example of these DFTs, with the range and selections of the peak-finding algorithm, can be seen in~\autoref{fig:raw_ffts}.
+Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples). A peak-finding algorithm was used to identify this interval rate, allowing for a slight variation in the spill measurement frequency. Over the measurements used, the \verb|BXSCAL| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). This sample rate variation likely originates from the electrical sampling equiptment, or from changes in gas pressure~\cite{PLUM200274}. As the variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected. The peak-finding algorithm was used to identify the highest peak within a range corresponding to the inter-quartile range of sample rate variance. An example of these DFTs, with the range and selections of the peak-finding algorithm, can be seen in~\autoref{fig:raw_ffts}.
 
 To compensate for the ``noise'' level of the machine data---a result of the measurement device resolution, scintillator ``after-glow'', residual current (``dark current''), or readout noise---the noise level was estimated from signal regions before excitation, then subtracted from the measured frequency amplitudes. Error-bar calculations for both machine and simulation data sets were made using the variance between multiple measurements at the same parameters, the variance between all measurements, and the machine noise level.
 
@@ -1057,7 +1057,7 @@ where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct t
 where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N$ is the turn at which the particle was lost. The extraction time data for each particle was then used to reconstruct the time-series extraction data (\autoref{lst:time_series_calculation}). The same peak-finding algorithm as used for machine data was then used to generate frequency response data for simulations.
 
 
-\subsection{Results of Frequency Response Analysis} % [TODO) Better wording first sentence
+\subsection{Results of Frequency Response Analysis}
 \autoref{fig:freq_response_machine} presents the results of the analysis method described in~\autoref{sec:machine_freq_anal_method} applied to data measured from the PS. The graphs characterise the \textit{frequency response} of the spill to different chirp signal \textit{rep-rate} intervals, and indicate how this frequency propagates to the output (spill). The frequency response of the RFKO system is shown for both a bunched beam (upper image) and a coasting beam (lower image). Visible in both \textit{log-log} plots is a distinct \textit{low-pass filter} effect, where the frequency response is reduced at higher frequencies. This effect, also observed by previous studies~\cite{wepmp008,Pari:2780495}, results in higher frequencies being ``smoothed out'' by the RFKO system. 
 
 The frequency response $H(f)$ of a low-pass filter can be approximated to the first order as
@@ -1141,7 +1141,7 @@ Another analytical tool for quantifying slow extraction spill quality establishe
   \caption{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 turn windows.}\label{fig:sdf_example}
 \end{figure}
 
-~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies. These are presented in a heatmap, and a ualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
+~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies. These are presented in a heatmap, where the lightness of the cell represents a higher spill duty factor, and thus a flatter spill. Qualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
 
 The mechanism behind the spill duty factor improvement with bunching can be understood by examining how the stable phase space behaves with respect to synchrotron oscillation. As covered in~\autoref{sec:long_phase_space}, particles moving within longitudinal RF buckets will undergo longitudinal oscillations around the synchronous particle, known as synchrotron oscillations\footnote{As opposed to the transverse betatron oscillations.}. This can be calculated as
 \begin{equation}
@@ -1159,9 +1159,6 @@ In a Steinbach diagram (\autoref{sec:steinbach}), this has the effect of shiftin
 To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised in phase space in \autoref{fig:synch-phase-space}. The upper figure is the case for a coasting beam with no synchrotron motion: particles experience no change in tune, and so a small ripple in sextupole field could increase the stable region area and ``recapture'' the particle back into the stable region, preventing the particle's extraction. The lower figure describes the case for a bunched beam with slow synchrotron motion: the particles receive a kick (RFKO) \textit{and} and periodic tune change (RF cavity), which reduces the stable phase space area. This reduces the chance of a particle being recaptured by a sextupole ripple, pushes the particle deeper into resonance quicker, and ``smoothens'' out the spill signal. There is however a limit to this ripple mitigation, where the synchrotron oscillation is too fast for particles to remain in the unstable region.~\cite{Sorge_2018,PhysRevAccelBeams.26.014402}.
 
 This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}). Both of these effects, and the the limiting frequency obtained from transit time spread, contribute to the optimal selection of parameters for an RFKO driving signal.
-
-% [TODO)
-\todo{These heatmaps need a better introduction}
 
 \begin{figure}[h]
   \centering

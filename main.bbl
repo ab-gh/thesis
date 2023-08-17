@@ -218,6 +218,11 @@ P.~Actis, T.~Dorenbos, and C.~Johnson, ``{An optically coupled differential beam
 J.~Wozniak and C.~Roderick, ``{NXCALS - Architecture and Challenges of the Next CERN Accelerator Logging Service},'' p. WEPHA163, 2020. [Online]. Available: \url{https://cds.cern.ch/record/2778529}
 \BIBentrySTDinterwordspacing
 
+\bibitem{PLUM200274}
+\BIBentryALTinterwordspacing
+M.~Plum, E.~Bravin, J.~Bosser, and R.~Maccaferri, ``N2 and xe gas scintillation cross-section, spectrum, and lifetime measurements from 50mev to 25gev at the cern ps and booster,'' \emph{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, vol. 492, no.~1, pp. 74--90, 2002. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S0168900202012871}
+\BIBentrySTDinterwordspacing
+
 \bibitem{wepmp008}
 \BIBentryALTinterwordspacing
 K.~Okamura, Y.~Arakaki, T.~Kimura, S.~Murasugi, R.~Muto, Y.~Shirakabe, M.~Tomizawa, and E.~Yanaoka, ``\BIBforeignlanguage{en}{A consideration on the transfer function between rq field and slow extraction spill in the main ring of j-parc},'' \emph{\BIBforeignlanguage{en}{Proceedings of the 10th Int. Particle Accelerator Conf.}}, vol. IPAC2019, p. Australia, 2019. [Online]. Available: \url{http://jacow.org/ipac2019/doi/JACoW-IPAC2019-WEPMP008.html}

@@ -28,45 +28,45 @@ Warning--empty journal in nxcals
 Warning--empty booktitle in Bryant:CAS
 
 Done.
-You've used 51 entries,
+You've used 52 entries,
             4087 wiz_defined-function locations,
-            1180 strings with 18598 characters,
-and the built_in function-call counts, 34247 in all, are:
-= -- 2950
-> -- 799
-< -- 157
-+ -- 416
-- -- 168
-* -- 1662
-:= -- 5546
-add.period$ -- 105
-call.type$ -- 51
-change.case$ -- 52
-chr.to.int$ -- 276
-cite$ -- 60
-duplicate$ -- 2613
-empty$ -- 2646
-format.name$ -- 199
-if$ -- 7890
+            1186 strings with 18866 characters,
+and the built_in function-call counts, 35135 in all, are:
+= -- 3028
+> -- 821
+< -- 165
++ -- 428
+- -- 172
+* -- 1710
+:= -- 5690
+add.period$ -- 107
+call.type$ -- 52
+change.case$ -- 53
+chr.to.int$ -- 291
+cite$ -- 61
+duplicate$ -- 2674
+empty$ -- 2706
+format.name$ -- 204
+if$ -- 8095
 int.to.chr$ -- 0
-int.to.str$ -- 51
-missing$ -- 499
-newline$ -- 266
-num.names$ -- 47
-pop$ -- 1181
+int.to.str$ -- 52
+missing$ -- 510
+newline$ -- 271
+num.names$ -- 48
+pop$ -- 1201
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2753
+skip$ -- 2822
 stack$ -- 0
-substring$ -- 923
-swap$ -- 2026
-text.length$ -- 65
+substring$ -- 959
+swap$ -- 2081
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 51
+type$ -- 52
 warning$ -- 9
-while$ -- 105
-width$ -- 53
-write$ -- 620
+while$ -- 109
+width$ -- 54
+write$ -- 634
 (There were 12 warnings)
