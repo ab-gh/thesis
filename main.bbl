@@ -26,25 +26,25 @@ P.~Actis, T.~Dorenbos, and C.~Johnson.
 P.~A. Arrutia~Sota, P.~Burrows, A.~De~Franco, M.~Fraser, B.~Goddard, V.~Kain, F.~Kuehteubl, M.~Pivi, D.~Prokopovich, and F.~Velotti.
 \newblock {Implementation of a Tune Sweep Slow Extraction with Constant Optics at MedAustron}.
 \newblock {\em JACoW IPAC}, 2022:1715--1717, 2022.
-\newblock URL: \url{https://cds.cern.ch/record/2845862}, \href {https://doi.org/10.18429/JACoW-IPAC2022-WEPOST015} {\path{doi:10.18429/JACoW-IPAC2022-WEPOST015}}.
+\newblock \href {https://doi.org/10.18429/JACoW-IPAC2022-WEPOST015} {\path{doi:10.18429/JACoW-IPAC2022-WEPOST015}}.
 
 \bibitem{ARRUTIASOTA2022167007}
 P.~A. {Arrutia Sota}, P.~N. Burrows, M.~A. Fraser, and F.~M. Velotti.
 \newblock Millisecond burst extractions from synchrotrons using rf phase displacement acceleration.
 \newblock {\em Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, 1039:167007, 2022.
-\newblock URL: \url{https://www.sciencedirect.com/science/article/pii/S0168900222004363}, \href {https://doi.org/10.1016/j.nima.2022.167007} {\path{doi:10.1016/j.nima.2022.167007}}.
+\newblock \href {https://doi.org/10.1016/j.nima.2022.167007} {\path{doi:10.1016/j.nima.2022.167007}}.
 
 \bibitem{PhysRevSTAB.14.030101}
 J.~Barranco~Garc\'{\i}a and S.~Gilardoni.
 \newblock Simulation and optimization of beam losses during continuous transfer extraction at the cern proton synchrotron.
 \newblock {\em Phys. Rev. ST Accel. Beams}, 14:030101, Mar 2011.
-\newblock URL: \url{https://link.aps.org/doi/10.1103/PhysRevSTAB.14.030101}, \href {https://doi.org/10.1103/PhysRevSTAB.14.030101} {\path{doi:10.1103/PhysRevSTAB.14.030101}}.
+\newblock \href {https://doi.org/10.1103/PhysRevSTAB.14.030101} {\path{doi:10.1103/PhysRevSTAB.14.030101}}.
 
 \bibitem{ipac}
 T.~Bass.
 \newblock Benchmarking simulations of slow extraction driven by rf transverse excitation at the cern proton synchrotron.
 \newblock In {\em Proc. IPAC'23}, number~14 in IPAC'23 - 14th International Particle Accelerator Conference, pages 2458--2461. JACoW Publishing, Geneva, Switzerland, 05 2023.
-\newblock URL: \url{https://indico.jacow.org/event/41/contributions/1678}, \href {https://doi.org/doi:10.18429/jacow-ipac2023-tupm116} {\path{doi:doi:10.18429/jacow-ipac2023-tupm116}}.
+\newblock \href {https://doi.org/10.18429/jacow-ipac2023-tupm116} {\path{doi:10.18429/jacow-ipac2023-tupm116}}.
 
 \bibitem{bouvet}
 C.~Bovet, R.~Gouiran, I.~Gumowski, and K.~H. Reich.
@@ -68,13 +68,13 @@ P.~J. Bryant.
 R.~Cappi and C.~Steinbach.
 \newblock {Low frequency duty factor improvement for the CERN PS slow extraction using rf phase displacement techniques}.
 \newblock {\em IEEE Trans. Nucl. Sci.}, 28:2806--2808, 1981.
-\newblock URL: \url{https://cds.cern.ch/record/134321}, \href {https://doi.org/10.1109/TNS.1981.4331919} {\path{doi:10.1109/TNS.1981.4331919}}.
+\newblock \href {https://doi.org/10.1109/TNS.1981.4331919} {\path{doi:10.1109/TNS.1981.4331919}}.
 
 \bibitem{courantsnyder}
 E.~Courant and H.~Snyder.
 \newblock Theory of the alternating-gradient synchrotron.
 \newblock {\em Annals of Physics}, 3(1):1--48, 1958.
-\newblock URL: \url{https://www.sciencedirect.com/science/article/pii/0003491658900125}, \href {https://doi.org/10.1016/0003-4916(58)90012-5} {\path{doi:10.1016/0003-4916(58)90012-5}}.
+\newblock \href {https://doi.org/10.1016/0003-4916(58)90012-5} {\path{doi:10.1016/0003-4916(58)90012-5}}.
 
 \bibitem{Couteur_1955}
 K.~J.~L. Couteur.
@@ -86,13 +86,13 @@ K.~J.~L. Couteur.
 L.~Falbo, E.~Bressi, S.~Foglio, and C.~Priano.
 \newblock {B}etatron {C}ore {S}low {E}xtraction at {CNAO}.
 \newblock In {\em Proc. 9th International Particle Accelerator Conference (IPAC'18), Vancouver, BC, Canada, April 29-May 4, 2018}, number~9 in International Particle Accelerator Conference, pages 1237--1239, Geneva, Switzerland, June 2018. JACoW Publishing.
-\newblock URL: \url{http://jacow.org/ipac2018/papers/tuzgbf3.pdf}, \href {https://doi.org/doi:10.18429/JACoW-IPAC2018-TUZGBF3} {\path{doi:doi:10.18429/JACoW-IPAC2018-TUZGBF3}}.
+\newblock \href {https://doi.org/10.18429/JACoW-IPAC2018-TUZGBF3} {\path{doi:10.18429/JACoW-IPAC2018-TUZGBF3}}.
 
 \bibitem{Fraser:feasibility}
 M.~Fraser, P.~A. Arrutia~Sota, K.~Bi{\l}ko, N.~Charitonidis, S.~Danzeca, M.~Delrieux, M.~Duraffourg, N.~Emriskova, L.~S. Esposito, R.~Garc{\'\i}a~Al{\'\i}a, A.~Guerrero, O.~Hans, G.~Imesch, E.~Johnson, G.~Lerner, I.~Ortega~Ruiz, G.~Pezzullo, D.~Prelipcean, F.~Ravotti, F.~Roncarolo, and A.~Waets.
 \newblock {Feasibility of Slow-Extracted High-Energy Ions From the CERN Proton Synchrotron for CHARM}.
 \newblock {\em JACoW IPAC}, 2022:1703--1706, 2022.
-\newblock URL: \url{https://cds.cern.ch/record/2845894}, \href {https://doi.org/10.18429/JACoW-IPAC2022-WEPOST012} {\path{doi:10.18429/JACoW-IPAC2022-WEPOST012}}.
+\newblock \href {https://doi.org/10.18429/JACoW-IPAC2022-WEPOST012} {\path{doi:10.18429/JACoW-IPAC2022-WEPOST012}}.
 
 \bibitem{Fraser:CAS}
 M.~A. Fraser.
@@ -104,12 +104,13 @@ M.~A. Fraser.
 T.~Furukawa and K.~Noda.
 \newblock Fast beam cut-off method in rf-knockout extraction for spot-scanning.
 \newblock {\em Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, 489(1):59--67, 2002.
-\newblock URL: \url{https://www.sciencedirect.com/science/article/pii/S0168900202008951}, \href {https://doi.org/10.1016/S0168-9002(02)00895-1} {\path{doi:10.1016/S0168-9002(02)00895-1}}.
+\newblock \href {https://doi.org/10.1016/S0168-9002(02)00895-1} {\path{doi:10.1016/S0168-9002(02)00895-1}}.
 
 \bibitem{Furukawa2002PROGRESSOR}
 T.~Furukawa, K.~Noda, S.~Shibuya, M.~Muramatsu, M.~Kanazawa, E.~Takada, and S.~Yamada.
 \newblock Progress of rf-knockout extraction for ion therapy.
 \newblock 2002.
+\newblock URL: \url{https://cds.cern.ch/record/585180}.
 
 \bibitem{Gasior:895142}
 M.~Gasior and R.~Jones.
@@ -127,7 +128,7 @@ S.~Ghithan, G.~Roy, and S.~Schuh.
 B.~Goddard, B.~Balhan, J.~Borburgh, L.~Esposito, M.~A. Fraser, L.~Jorat, V.~Kain, C.~Lolliot, L.~S. Stoel, P.~van Trappen, F.~M. Velotti, D.~Barna, and D.~Veres.
 \newblock Reduction of $400\text{ }\text{ }\mathrm{GeV}/c$ slow extraction beam loss with a wire diffuser at the cern super proton synchrotron.
 \newblock {\em Phys. Rev. Accel. Beams}, 23:023501, Feb 2020.
-\newblock URL: \url{https://link.aps.org/doi/10.1103/PhysRevAccelBeams.23.023501}, \href {https://doi.org/10.1103/PhysRevAccelBeams.23.023501} {\path{doi:10.1103/PhysRevAccelBeams.23.023501}}.
+\newblock \href {https://doi.org/10.1103/PhysRevAccelBeams.23.023501} {\path{doi:10.1103/PhysRevAccelBeams.23.023501}}.
 
 \bibitem{Hancock:960231}
 S.~Hancock and S.~A. J-L.
@@ -151,7 +152,7 @@ F.~C. Iselin.
 Y.~Kobayashi.
 \newblock Theory of the resonant beam ejection from synchrotrons.
 \newblock {\em Nuclear Instruments and Methods}, 83(1):77--87, 1970.
-\newblock URL: \url{https://www.sciencedirect.com/science/article/pii/0029554X70905379}, \href {https://doi.org/10.1016/0029-554X(70)90537-9} {\path{doi:10.1016/0029-554X(70)90537-9}}.
+\newblock \href {https://doi.org/10.1016/0029-554X(70)90537-9} {\path{doi:10.1016/0029-554X(70)90537-9}}.
 
 \bibitem{Couteur_1951}
 K.~J. le~Couteur.
@@ -180,7 +181,7 @@ K.~D. Metzmacher and L.~Sermeus.
 V.~Nagaslaev, J.~Amundson, J.~Johnstone, C.~Park, and S.~Werkema.
 \newblock Third integer resonance slow extraction using rfko at high space charge.
 \newblock 2011.
-\newblock URL: \url{https://accelconf.web.cern.ch/IPAC2011/papers/thps058.pdf}, \href {https://doi.org/10.48550/arXiv.1209.5967} {\path{doi:10.48550/arXiv.1209.5967}}.
+\newblock \href {https://doi.org/10.48550/arXiv.1209.5967} {\path{doi:10.48550/arXiv.1209.5967}}.
 
 \bibitem{BDSIM}
 L.~Nevay, J.~Snuverink, A.~Abramov, L.~Deacon, H.~Garcia-Morales, H.~Lefebvre, S.~Gibson, R.~Kwee-Hinzmann, W.~Shields, S.~Walker, and S.~Boogert.
@@ -192,13 +193,13 @@ L.~Nevay, J.~Snuverink, A.~Abramov, L.~Deacon, H.~Garcia-Morales, H.~Lefebvre, S
 K.~Noda, T.~Furukawa, S.~Shibuya, M.~Muramatsu, T.~Uesugi, M.~Kanazawa, M.~Torikoshi, E.~Takada, and S.~Yamada.
 \newblock Source of spill ripple in the rf-ko slow-extraction method with fm and am.
 \newblock {\em Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, 492(1):241--252, 2002.
-\newblock URL: \url{https://www.sciencedirect.com/science/article/pii/S0168900202013189}, \href {https://doi.org/10.1016/S0168-9002(02)01318-9} {\path{doi:10.1016/S0168-9002(02)01318-9}}.
+\newblock \href {https://doi.org/10.1016/S0168-9002(02)01318-9} {\path{doi:10.1016/S0168-9002(02)01318-9}}.
 
 \bibitem{wepmp008}
 K.~Okamura, Y.~Arakaki, T.~Kimura, S.~Murasugi, R.~Muto, Y.~Shirakabe, M.~Tomizawa, and E.~Yanaoka.
 \newblock A consideration on the transfer function between rq field and slow extraction spill in the main ring of j-parc.
 \newblock {\em Proceedings of the 10th Int. Particle Accelerator Conf.}, IPAC2019:Australia, 2019.
-\newblock URL: \url{http://jacow.org/ipac2019/doi/JACoW-IPAC2019-WEPMP008.html}, \href {https://doi.org/10.18429/JACOW-IPAC2019-WEPMP008} {\path{doi:10.18429/JACOW-IPAC2019-WEPMP008}}.
+\newblock \href {https://doi.org/10.18429/JACOW-IPAC2019-WEPMP008} {\path{doi:10.18429/JACOW-IPAC2019-WEPMP008}}.
 
 \bibitem{CuPy}
 R.~Okuta, Y.~Unno, D.~Nishino, S.~Hido, and C.~Loomis.
@@ -210,13 +211,13 @@ R.~Okuta, Y.~Unno, D.~Nishino, S.~Hido, and C.~Loomis.
 M.~Pari, F.~M. Velotti, M.~A. Fraser, V.~Kain, and O.~Michels.
 \newblock {Characterization of the slow extraction frequency response}.
 \newblock {\em Phys. Rev. Accel. Beams}, 24(8):083501, 2021.
-\newblock URL: \url{https://cds.cern.ch/record/2780495}, \href {https://doi.org/10.1103/PhysRevAccelBeams.24.083501} {\path{doi:10.1103/PhysRevAccelBeams.24.083501}}.
+\newblock \href {https://doi.org/10.1103/PhysRevAccelBeams.24.083501} {\path{doi:10.1103/PhysRevAccelBeams.24.083501}}.
 
 \bibitem{PLUM200274}
 M.~Plum, E.~Bravin, J.~Bosser, and R.~Maccaferri.
 \newblock N2 and xe gas scintillation cross-section, spectrum, and lifetime measurements from 50mev to 25gev at the cern ps and booster.
 \newblock {\em Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}, 492(1):74--90, 2002.
-\newblock URL: \url{https://www.sciencedirect.com/science/article/pii/S0168900202012871}, \href {https://doi.org/10.1016/S0168-9002(02)01287-1} {\path{doi:10.1016/S0168-9002(02)01287-1}}.
+\newblock \href {https://doi.org/10.1016/S0168-9002(02)01287-1} {\path{doi:10.1016/S0168-9002(02)01287-1}}.
 
 \bibitem{Pullia:313678}
 M.~Pullia.
@@ -234,7 +235,7 @@ C.~Roderick and R.~Billen.
 J.~Rossbach and P.~Schm{\"u}ser.
 \newblock {Basic course on accelerator optics}.
 \newblock 1994.
-\newblock URL: \url{http://cds.cern.ch/record/247501}, \href {https://doi.org/10.5170/CERN-1994-001.17} {\path{doi:10.5170/CERN-1994-001.17}}.
+\newblock \href {https://doi.org/10.5170/CERN-1994-001.17} {\path{doi:10.5170/CERN-1994-001.17}}.
 
 \bibitem{russo}
 G.~Russo.
@@ -245,7 +246,7 @@ G.~Russo.
 R.~D. Ruth.
 \newblock { An Introduction to Particle Accelerators }.
 \newblock {\em Physics Today}, 55(8):52--52, 08 2002.
-\newblock \href {https://arxiv.org/abs/https://pubs.aip.org/physicstoday/article-pdf/55/8/52/8316551/52\_1\_online.pdf} {\path{arXiv:https://pubs.aip.org/physicstoday/article-pdf/55/8/52/8316551/52\_1\_online.pdf}}, \href {https://doi.org/10.1063/1.1510283} {\path{doi:10.1063/1.1510283}}.
+\newblock \href {https://doi.org/10.1063/1.1510283} {\path{doi:10.1063/1.1510283}}.
 
 \bibitem{Schicho:2039579}
 P.~Schicho.
@@ -257,7 +258,7 @@ P.~Schicho.
 R.~Singh, P.~Forck, and S.~Sorge.
 \newblock Reducing fluctuations in slow-extraction beam spill using transit-time-dependent tune modulation.
 \newblock {\em Phys. Rev. Appl.}, 13:044076, Apr 2020.
-\newblock URL: \url{https://link.aps.org/doi/10.1103/PhysRevApplied.13.044076}, \href {https://doi.org/10.1103/PhysRevApplied.13.044076} {\path{doi:10.1103/PhysRevApplied.13.044076}}.
+\newblock \href {https://doi.org/10.1103/PhysRevApplied.13.044076} {\path{doi:10.1103/PhysRevApplied.13.044076}}.
 
 \bibitem{Sorge_2018}
 S.~Sorge, P.~Forck, and R.~Singh.
@@ -269,7 +270,7 @@ S.~Sorge, P.~Forck, and R.~Singh.
 S.~Sorge, P.~Forck, and R.~Singh.
 \newblock Spill ripple mitigation by bunched beam extraction with high frequency synchrotron motion.
 \newblock {\em Phys. Rev. Accel. Beams}, 26:014402, Jan 2023.
-\newblock URL: \url{https://link.aps.org/doi/10.1103/PhysRevAccelBeams.26.014402}, \href {https://doi.org/10.1103/PhysRevAccelBeams.26.014402} {\path{doi:10.1103/PhysRevAccelBeams.26.014402}}.
+\newblock \href {https://doi.org/10.1103/PhysRevAccelBeams.26.014402} {\path{doi:10.1103/PhysRevAccelBeams.26.014402}}.
 
 \bibitem{Sterbini:2158994}
 G.~Sterbini, A.~Blas, and S.~Gilardoni.
@@ -283,17 +284,11 @@ F.~Tecker.
 \newblock In {\em {CAS - CERN Accelerator School 2019}: {Introduction to Accelerator Physics}}, 11 2020.
 \newblock \href {https://arxiv.org/abs/2011.02932} {\path{arXiv:2011.02932}}.
 
-\bibitem{Wiedemann}
-H.~Wiedemann.
-\newblock {\em Introduction to Accelerator Physics}, pages 3--41.
-\newblock Springer International Publishing, Cham, 2015.
-\newblock \href {https://doi.org/10.1007/978-3-319-18317-6_1} {\path{doi:10.1007/978-3-319-18317-6_1}}.
-
 \bibitem{nxcals}
 J.~Wozniak and C.~Roderick.
 \newblock {NXCALS - Architecture and Challenges of the Next CERN Accelerator Logging Service}.
 \newblock page WEPHA163, 2020.
-\newblock URL: \url{https://cds.cern.ch/record/2778529}, \href {https://doi.org/10.18429/JACoW-ICALEPCS2019-WEPHA163} {\path{doi:10.18429/JACoW-ICALEPCS2019-WEPHA163}}.
+\newblock \href {https://doi.org/10.18429/JACoW-ICALEPCS2019-WEPHA163} {\path{doi:10.18429/JACoW-ICALEPCS2019-WEPHA163}}.
 
 \bibitem{Yao:2016cnf}
 H.~Yao, X.~Guan, G.~Li, X.~Wang, Q.~Zhang, and S.-x. Zheng.

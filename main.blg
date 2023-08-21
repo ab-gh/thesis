@@ -13,7 +13,8 @@ Warning--entry type for "russo" isn't style-file defined
 Warning--entry type for "brunner" isn't style-file defined
 --line 26 of file refs.bib
 Warning--entry type for "Hegglin:2239398" isn't style-file defined
---line 622 of file refs.bib
+--line 570 of file refs.bib
+Warning--I didn't find a database entry for "Wiedemann"
 Warning--to sort, need author or key in cgd
 Warning--to sort, need author or key in xsuite
 Warning--to sort, need author or key in optics_repo
@@ -28,45 +29,45 @@ Warning--empty journal in Rossbach:247501
 Warning--empty journal in Schicho:2039579
 Warning--empty journal in Sterbini:2158994
 Warning--empty journal in nxcals
-You've used 52 entries,
+You've used 51 entries,
             2943 wiz_defined-function locations,
-            1024 strings with 17277 characters,
-and the built_in function-call counts, 26366 in all, are:
-= -- 2825
-> -- 1073
-< -- 10
-+ -- 413
-- -- 344
-* -- 1606
-:= -- 3687
-add.period$ -- 200
-call.type$ -- 52
-change.case$ -- 331
+            995 strings with 15913 characters,
+and the built_in function-call counts, 25175 in all, are:
+= -- 2650
+> -- 1065
+< -- 9
++ -- 406
+- -- 342
+* -- 1502
+:= -- 3564
+add.period$ -- 197
+call.type$ -- 51
+change.case$ -- 328
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 748
-empty$ -- 2347
-format.name$ -- 344
-if$ -- 6811
+cite$ -- 65
+duplicate$ -- 692
+empty$ -- 2200
+format.name$ -- 342
+if$ -- 6462
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 42
-newline$ -- 304
-num.names$ -- 96
-pop$ -- 621
+int.to.str$ -- 51
+missing$ -- 40
+newline$ -- 299
+num.names$ -- 94
+pop$ -- 590
 preamble$ -- 1
-purify$ -- 276
+purify$ -- 273
 quote$ -- 0
-skip$ -- 1798
+skip$ -- 1721
 stack$ -- 0
-substring$ -- 944
-swap$ -- 229
-text.length$ -- 82
+substring$ -- 914
+swap$ -- 219
+text.length$ -- 75
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
+type$ -- 202
 warning$ -- 14
-while$ -- 132
-width$ -- 54
-write$ -- 660
-(There were 17 warnings)
+while$ -- 127
+width$ -- 53
+write$ -- 627
+(There were 18 warnings)
