@@ -169,7 +169,7 @@ Small medical synchrotrons are simpler\footnote{The PS contains 100 bending magn
 
 Simulations can therefore provide an important tool in understanding slow extraction spills. New methods can be rapidly developed and tested without requiring extensive (and expensive) machine studies, and wide parameter spaces can be explored to construct functional relationships between input parameters and spill output characteristics. 
 
-\section{Modelling Slow Extraction}
+\section{Modelling Slow Extraction}\label{sec:modelling-slow-extraction}
 
 \Cref{sec:matrix} will introduce a mathematical model which can be used to numerically calculate particle trajectories in simple machines. However, with even the simplest of accelerators at CERN containing hundreds of components, computational models quickly become necessary. In addition, slow extraction can operate over many more accelerator turns than other processes, such as fast single-turn injection. In the PS, a spill length of \qty{0.5}{\second} would require approximate 230,000 turns. For even a reasonably powerful machine, these computational simulations quickly become time-consuming. 
 
@@ -216,11 +216,11 @@ The Lorentz factor $\gamma$ is defined as the derivative of \textit{coordinate} 
 \begin{equation}
     \gamma_c = \frac 1{\sqrt{1-\frac{v^2}{c^2}}}
 \end{equation}
-Also defined is the $\beta$ factor
+Also defined is the factor $\beta$
 \begin{equation}
     \beta_c = \frac vc
 \end{equation}
-and the $\alpha$ factor
+and the factor $\alpha$
 \begin{equation}
     \alpha_c = \frac 1\gamma
 \end{equation}
@@ -745,6 +745,8 @@ The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to e
 
 \chapter{Implementation and Simulation}
 
+This chapter presents the novel implementation of RFKO slow extraction at the PS, providing a spill to the East Area fixed-target experiments. As motivated in~\autoref{sec:modelling-slow-extraction}, this chapter will also outline the development of simulation models for the RFKO system using existing particle tracking and accelerator optics software. Significant effort was made to streamline the simulation process, leverage the GPU acceleration available in \verb|Xsuite|, and to make full use of the computing platforms available at CERN.
+
 \section{RFKO Slow Extraction at the CERN PS}
 
 For the implementation of RFKO extraction to the East Area, a basic EA-type beam was set up and configured as follows. For preliminary studies, a \qty[per-mode=symbol]{750}{\mega\electronvolt\per~c\per nucleon} Lead (\ch{Pb^{+54}}) ion beam was used, produced by Linac 3 and injected from LEIR. This is the beam configuration used by the CHIMERA experiment, as it provides the correct energy, flux, and beam size for its requirements. After these tests, when an ion beam was no longer available, a proton beam with equivalent magnetic rigidity was used.
@@ -960,13 +962,9 @@ This image was made available on CERN's image registry using a \textit{continuou
   \caption{A flowchart describing an overview of the simulation process}\label{fig:flowchart}
 \end{figure}
 
-\chapter{Analysis and Comparison of Results}
 
-\verb|Xsuite| was successfully used to simulate RFKO slow extraction at the PS. This section presents the results of this simulation, comparing:
-\begin{itemize}
-  \item the computation time between different platforms, and
-  \item the results of the simulation with the results of the real machine.
-\end{itemize}
+\chapter{Analysis and Comparison of Results}
+This chapter presents the methodology and results of experiments seeking to confirm the successful implementation of RFKO slow extraction at the PS for East Area spills. The accuracy of the simulation models will be confirmed by analysing the spill characteristics, compared between experimental data taken in June 2023 and the results of simulations. This chapter will also seek to demonstrate the benefits of GPU-accelerated particle simulations using \verb|Xsuite|, as compared to typical CPU workflows.
 
 
 \section{Computation Time}
