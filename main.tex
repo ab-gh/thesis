@@ -107,7 +107,10 @@ This thesis presents the novel implementation and simulation of RFKO slow extrac
 \newpage
 \tableofcontents
 \listoffigures
+\begingroup
+\let\clearpage\relax
 \listoftables
+\endgroup
 \newpage
 
 \chapter{Introduction}
@@ -318,7 +321,7 @@ While single-pair dipole magnets are used to bend the beam along the circular pa
 \begin{figure}
     \centering
     \includegraphics*[width=0.4\linewidth]{sextupole.png}
-    \caption{A diagram showing the field of a \textit{normal} oriented sextupole. The force experienced by a positively-charged particle is shown as dashed arrows.}\label{fig:sextupole}
+    \caption[Diagram of a sextupole magnetic field]{A diagram showing the field of a \textit{normal} oriented sextupole. The force experienced by a positively-charged particle is shown as dashed arrows.}\label{fig:sextupole}
 \end{figure}
 
 \subsection{Single-Particle Oscillatory Motion}
@@ -390,7 +393,7 @@ These parameters can be readily understood in the \textit{phase space} of $(x, x
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.6\linewidth]{phase-space-with-twiss.png}
-  \caption{A phase space ellipse in $(x, x')$ and its relation to the Twiss parameters.}
+  \caption{A phase-space ellipse in $(x, x')$ and its relation to the Twiss parameters.}
   \label{fig:twiss-phase-space}
 \end{figure}
 
@@ -478,7 +481,7 @@ Further matrix equations can be defined for other magnets. If we define the prop
 
 This is the principle by which \textit{particle tracking codes}, such as \verb|MAD-X|, operate. An input lattice file defines the structure and properties of the magnets composing the accelerator, and particle variables are then computed with matrix multiplication. 
 
-Expanding on the idea of matrix formalism and the phase space ellipse, many particle tracking codes operate in \textit{normalised} phase space $(x_n, x'_n)$---that is, where the phase space of $(x, x')$ is linearly transformed in a way which results in the phase space ellipse becoming circular. The matrix transformation is therefore defined as
+Expanding on the idea of matrix formalism and the phase-space ellipse, many particle tracking codes operate in \textit{normalised} phase space $(x_n, x'_n)$---that is, where the phase space of $(x, x')$ is linearly transformed in a way which results in the phase-space ellipse becoming circular. The matrix transformation is therefore defined as
 \begin{equation}
   \begin{pmatrix}
     x_n \\
@@ -565,12 +568,12 @@ This defines a \textit{transition energy} $\gamma_{tr}$ such that $\eta=0$, caus
 
 \subsection{Longitudinal Phase Space}\label{sec:long_phase_space}
 
-These effects can be analysed by considering phase space coordinates---this time in the longitudinal plane. This space is constructed with variables $(\phi , \Delta p/p)$, and shown in~\autoref{fig:long_phase_space}. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, where the synchronous phase $\phi_s$ defines the orbit with zero longitudinal (synchrotron) oscillation. Outside of the stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
+These effects can be analysed by considering phase-space coordinates---this time in the longitudinal plane. This space is constructed with variables $(\phi , \Delta p/p)$, and shown in~\autoref{fig:long_phase_space}. A full derivation for the longitudinal motion invariants can be found in~\cite{lbd:tecker}, where the synchronous phase $\phi_s$ defines the orbit with zero longitudinal (synchrotron) oscillation. Outside of the stable envelope, demarcated by the \textit{separatrix}, particles are lost to instability. The region within the separatrix is known as the \textit{RF bucket}, and the area occupied by stable particles, the \textit{RF emittance}.
 
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.9\linewidth]{long-phase-space.png}
-  \caption{Longitudinal Phase Space, showing particles at the synchronous phase $\phi_s$, inside stability, and in unstable motion. The separatrix, bold, separates these two regions.}\label{fig:long_phase_space}
+  \caption[Longitudinal phase space and particle stability]{Longitudinal phase space, showing particles at the synchronous phase $\phi_s$, inside stability, and in unstable motion. The separatrix, bold, separates these two regions.}\label{fig:long_phase_space}
 \end{figure}
 
 \section{Slow Extraction}\label{sx}
@@ -668,7 +671,7 @@ The \textit{Hamiltonian} is now used to analyse this motion in phase-space. The 
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{kobayashi.png}
-  \caption{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio ${\varepsilon_Q}/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines.}\label{fig:kobayashi}
+  \caption[Phase-space map of the Kobayashi Hamiltonian]{Normalised phase-space map of the Kobayashi Hamiltonian, for a ratio ${\varepsilon_Q}/S=0.188$. The points $P_1, P_2, P_3$ are shown, with connecting lines.}\label{fig:kobayashi}
 \end{figure}
 
 The first term describes the typical circular phase-space motion familiar from~\autoref{subsec:trans_phase_space}, with a sextupole strength $S=0$ (i.e. a linear machine). The second term describes the sextupole effect, transforming the elliptical map into a triangular trajectory for increasing values of $x$ and $x'$. The phase-space map is shown in~\autoref{fig:kobayashi}. A boundary triangle is easily identified from the map, which defines the trajectory of the stable particle with greatest possible amplitude, before the motion becomes unstable. Outside of this stable region, the particle trajectories do not close on themselves, and the particle will rapidly gain amplitude. The region bounded by this \textit{separatrix} is known as the \textit{acceptance} the size of which is defined by $|{\varepsilon_Q} /S|$, and can be found by factorising $\bf H$ at at a value of $(2{\varepsilon_Q} /3)^3/S^2$, which factorisses to three points:
@@ -690,7 +693,7 @@ The fundamental principle of slow extraction exploits the unstable boundary crea
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{real-world.png}
-  \caption{A real-space diagram of momentum-driven slow extraction, looking along the $s$ direction at the magnetic septum location. The waiting beam approaches resonance (dashed), and some particles begin large turn-by-turn oscillations (increasing shaded gradient with turn number) before they jump the septum blade (thick black line) and will be extracted.}\label{fig:real-world}
+  \caption[Real-space diagram of momentum-driven slow extraction]{A real-space diagram of momentum-driven slow extraction, looking along the $s$ direction at the magnetic septum location. The waiting beam approaches resonance (dashed), and some particles begin large turn-by-turn oscillations (increasing shaded gradient with turn number) before they jump the septum blade (thick black line) and will be extracted.}\label{fig:real-world}
 \end{figure}
 
 There are a variety of methods to provide acceleration of the beam towards resonance, which fall into two categories. \textit{Momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$. \textit{Amplitude-driven} methods, however, use transverse noise or RF excitation at the beam's revolution frequency to create increasing betatron amplitudes. 
@@ -704,13 +707,13 @@ These various categories are not mutually exclusive, and some of the methods dis
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.6\linewidth]{momentum-driven.png}
-  \caption{Steinbach diagram of momentum-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:momentum-driven}
+  \caption[Steinbach diagram of momentum-driven slow extraction]{Steinbach diagram of momentum-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:momentum-driven}
 \end{figure}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.6\linewidth]{amplitude-driven.png}
-  \caption{Steinbach diagram of amplitude-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:amplitude-driven}
+  \caption[Steinbach diagram of amplitude-driven slow extraction]{Steinbach diagram of amplitude-driven slow extraction. Waiting beam in black, resonance driving effect in red, unstable beam in grey.}\label{fig:amplitude-driven}
 \end{figure}
 
 The two beam-moving methods of momentum and amplitude-driven slow extraction can be compared using a Steinbach\footnote{Attributed to C. Steinbach, CERN} diagram. This plots the beam amplitude $A_x$ as a function of momentum $\Delta p/p_0$. The sextupole instability is shown as a triangle, within which is the unstable region beyond the phase-space map separatrices.~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} illustrate \textit{momentum} and \textit{amplitude} driven slow extraction respectively.
@@ -722,7 +725,6 @@ In order for a particle to be considered stable, its single-particle emittance $
 If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\autoref{fig:momentum-driven} and~\autoref{fig:amplitude-driven} is seen. The width of this unstable triangle, known as the \textit{stopband}, is proportional to $S$.
 
 \subsection{Slow Extraction Techniques}\label{sec:rfko}
-
 
 A variety of slow extraction implementations can be found across particle accelerators. While all will vary to some degree, most can be categorised by which parameter is used to control extraction, and which equipment or magnet is employed. For example:
 \begin{itemize}
@@ -742,7 +744,7 @@ The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to e
 \begin{figure}
   \centering
   \includegraphics*[width=0.6\linewidth]{rfko-phase-space-schematic.png}
-  \caption{A phase-space schematic of RFKO, showing the emittance growth (dashed to solid ellipse) increasing the amplitude of a stable particle (white) into the unstable region (grey), where it moves along the separatrices (arrows) into extraction.}\label{fig:rfko_phase_space}
+  \caption[Phase-space schematic of RFKO slow extraction]{A phase-space schematic of RFKO, showing the emittance growth (dashed to solid ellipse) increasing the amplitude of a stable particle (white) into the unstable region (grey), where it moves along the separatrices (arrows) into extraction.}\label{fig:rfko_phase_space}
 \end{figure}
 
 \chapter{Implementation and Simulation}
@@ -778,7 +780,7 @@ Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles
 \begin{figure}
   \centering
   \includegraphics*[width=\linewidth]{ps-sx-system.png}
-  \caption{A schematic of the PS Ring and East extraction system, as configured for RFKO slow extraction. All important beamline elements are labelled with their CERN layout code. Also shown is the reference orbit (solid line), the bumped orbit (dashed line) created by the kicker magnets, and the extracted trajectory (double line) created by the magnetic septa.}\label{fig:schematic}
+  \caption[Schematic of the PS Ring and East extraction system configured for RFKO slow extraction]{A schematic of the PS Ring and East extraction system, as configured for RFKO slow extraction. All important beamline elements are labelled with their CERN layout code. Also shown is the reference orbit (solid line), the bumped orbit (dashed line) created by the kicker magnets, and the extracted trajectory (double line) created by the magnetic septa.}\label{fig:schematic}
 \end{figure}
 
 \subsection{Closed Orbit and Extraction Trajectory}
@@ -805,13 +807,13 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{tunemap.png}
-  \caption{A fractional tune map, plotting the evolution of horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$. Color scale indicates time. Dashed lines indicate some of the first order (red), second order (green) and third order (blue) resonances. Black lines at $Q_x=0.319, Q_y=0.249$ are the final tunes reached at the extraction period. Integer part for all tunes is 6.}\label{fig:tunemap}
+  \caption[Fractional tune map during RFKO slow extraction]{A fractional tune map, plotting the evolution of horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$ during RFKO slow extraction. Color scale indicates time. Dashed lines indicate some of the first order (red), second order (green) and third order (blue) resonances. Black lines at $Q_x=0.319, Q_y=0.249$ are the final tunes reached at the extraction period. Integer part for all tunes is 6.}\label{fig:tunemap}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{cyclegraphs.png}
-  \caption{The high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
+  \caption[High-level parameter graphs and tune measurements during RFKO slow extraction]{The high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
 \end{figure}
 
 The RF system in the PS (\autoref{sec:long}) is used to accelerate the beam up to \qty{5.392}{\giga\electronvolt} during the \textit{ramp} period, and to maintain bunching during \textit{flat-top}. An East-type beam in the PS is bunched at the \nth{8} harmonic, or can be disabled to \textit{debunch} the beam (known as a coasting beam). RFKO can be performed with both a bunched and coasting beam, and both scenarios will be examined.
@@ -846,13 +848,13 @@ To drive this transverse kicker, two systems were used. Initially, the \verb|Qme
   Chirp Repetition $[ms]$   & 1                      \\
   Chirp Turns               & 256                   
   \end{tabular}
-  \caption{Initial parameters for RFKO extraction using the \textit{Qmeter} control program.}\label{tab:qmeter-params}
+  \caption[Initial \textit{Qmeter} parameters]{Initial parameters for RFKO extraction using the \textit{Qmeter} control program.}\label{tab:qmeter-params}
 \end{table}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{fake-signal.png}
-  \caption{An example of the chirp signal generated by the \textit{Qmeter} application; a frequency-modulated chirp windowed by a square signal. Top plot shows the signal (amplitude, black) and frequency modulation (red) in the time-frame of one repetition. Bottom plot shows multiple repetitions over the span of 10 ms.}\label{fig:qmeter-signal}
+  \caption[Example chirp signals generated by \textit{Qmeter}]{An example of the chirp signal generated by the \textit{Qmeter} application; a frequency-modulated chirp windowed by a square signal. Top plot shows the signal (amplitude, black) and frequency modulation (red) in the time-frame of one repetition. Bottom plot shows multiple repetitions over the span of 10 ms.}\label{fig:qmeter-signal}
 \end{figure}
 
 To explore chirp repetition rates above the \qty{1}{\kilo\hertz} (below \qty{1}{\milli\second}) limit of \verb|Qmeter|, a new signal generator was configured to control the TFB kicker plates. This function generator was configured as a two-channel source, channel 1 being a sine wave with a frequency modulated by channel 2, a ramp/sawtooth wave. By choosing a central frequency and frequency deviation corresponding to the chirp generated by \verb|Qmeter|, the function generator was able to produce a similar signal to that of the \verb|Qmeter| system, but not windowed by a square function (\autoref{eq:both-chirps}). This allowed for chirp repetition rates of \qty{1}{\kilo\hertz} and above, and was used to explore the effect of chirp repetition rate on spill quality.
@@ -860,7 +862,7 @@ To explore chirp repetition rates above the \qty{1}{\kilo\hertz} (below \qty{1}{
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{both-chirps.png}
-  \caption{An example of the chirp signal generated by \textit{Qmeter} (top) and by the arbitrary function generator (AFG) (bottom).}\label{eq:both-chirps}
+  \caption[Comparison of chirp signals generated by \textit{Qmeter} and the AFG]{An example of the chirp signal generated by \textit{Qmeter} (top) and by the arbitrary function generator (AFG) (bottom).}\label{eq:both-chirps}
 \end{figure}
 
 To aid in the research in this paper, and future use-cases of RFKO at the PS, a package was written to simplify the interface with the AFG via the \textit{Standard Commands for Programmable Instruments} (SCPI) protocol. This interface---available as part of the \textit{CERN General Devices} package~\cite{cgd}---configures the AFG for RFKO extraction, and provides a Python class for modifying the chirp-generation parameters in terms of the revolution frequency $f_{rev}$, and the chirp length in milliseconds. This package was used to control the AFG for the results presented in this paper.
@@ -883,7 +885,7 @@ The \textit{East Area Extraction} scenario provided by \verb|acc-models| was use
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{optics.png}
-  \cprotect\caption{Optics plots of the closed orbit for the \verb|acc-models| PS East Area extraction scenario. Top figure shows horizontal closed orbit $x$, middle figure shows Twiss beta function $\beta$, and bottom figure shows transverse dispersion $D_x$. Also labelled are key extraction elements: the magnetic septa (\verb|SMH|), the extraction quadrupoles (\verb|QSE|), extraction sextupoles (\verb|XSE|), and kickers (\verb|BSW|)}\label{fig:acc-models-optics}
+  \cprotect\caption[Closed-orbit optics plots of the PS EA extraction model]{Optics plots of the closed orbit for the \verb|acc-models| PS East Area extraction scenario. Top figure shows horizontal closed orbit $x$, middle figure shows Twiss beta function $\beta$, and bottom figure shows transverse dispersion $D_x$. Also labelled are key extraction elements: the magnetic septa (\verb|SMH|), the extraction quadrupoles (\verb|QSE|), extraction sextupoles (\verb|XSE|), and kickers (\verb|BSW|)}\label{fig:acc-models-optics}
 \end{figure}
 
 This lattice was then imported to \verb|Xsuite|, where the custom RFKO beam elements could be included. These elements were:
@@ -929,13 +931,13 @@ With a sufficiently large number of particles, these random distributions will b
   Transverse Emittance $\varepsilon_{x,y}$ [mm mrad]  & $2.38$ \\
   RMS Longitudinal Emittance [eVs]                & $0.276$
   \end{tabular}
-  \caption{Initial parameters particle generation, corresponding to measurements made during machine studies.}\label{tab:initial-conditions}
+  \caption[Initial particle generation parameters]{Initial parameters for particle generation, corresponding to measurements made during machine studies.}\label{tab:initial-conditions}
 \end{table}
 
 \begin{figure}
   \centering
   \includegraphics*[width=\linewidth]{initial-dist.png}
-  \cprotect\caption{Examples of initial distributions generated by \verb|Xsuite|, for number of particles $N_p=3000$, with parameters as shown in~\autoref{tab:initial-conditions}. Also plotted on each are the $1\sigma, 2\sigma, 3\sigma$ emittance ellipses, and the closed orbit particle (red). Top plots show transverse phase space distribution for all simulation types. Bottom plots show longitudinal phase space distribution for a \textit{bunched} (RF system active) beam (left) and \textit{debunched} (RF inactive) beam (right).}\label{fig:initial-dist}
+  \cprotect\caption[Initial particle distributions generated by \verb|Xsuite|]{Examples of initial distributions generated by \verb|Xsuite|, for number of particles $N_p=3000$, with parameters as shown in~\autoref{tab:initial-conditions}. Also plotted on each are the $1\sigma, 2\sigma, 3\sigma$ emittance ellipses, and the closed orbit particle (red). Top plots show transverse phase-space distribution for all simulation types. Bottom plots show longitudinal phase-space distribution for a \textit{bunched} (RF system active) beam (left) and \textit{debunched} (RF inactive) beam (right).}\label{fig:initial-dist}
 \end{figure}
 
 \subsection{Simulation Process}\label{sec:sim_process}
@@ -953,7 +955,7 @@ This image was made available on CERN's image registry using a \textit{continuou
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\linewidth]{phase-space-sim.png}
-  \cprotect\caption{Phase-space distribution of the RFKO simulation at the \verb|SMH57| septum location, plotting all particles for the first 1000 turns (approx.\qty{2.128}{\milli\second} in laboratory time). RFKO driven by a transverse excitation frequency chirp across $f_{rev}/3$ at a \textit{rep-rate} of \qty{0.12}{\milli\second}. Color scale indicates turn number. Inset shows extracted particle distribution and a spiral step of $\Delta X_3\approx$\qty{6.1}{\milli\meter}.}\label{fig:phase-space-sim}
+  \cprotect\caption[Simulated RFKO phase-space distribution at extraction septum]{Phase-space distribution of the RFKO simulation at the \verb|SMH57| septum location, plotting all particles for the first 1000 turns (approx.\qty{2.128}{\milli\second} in laboratory time). RFKO driven by a transverse excitation frequency chirp across $f_{rev}/3$ at a \textit{rep-rate} of \qty{0.12}{\milli\second}. Color scale indicates turn number. Inset shows extracted particle distribution and a spiral step of $\Delta X_3\approx$\qty{6.1}{\milli\meter}.}\label{fig:phase-space-sim}
 \end{figure}
 
 
@@ -985,19 +987,19 @@ The paralellism-saturated performance of both CPU and GPU simulations can be for
 \begin{figure}
   \centering
   \includegraphics*[width=0.77\linewidth]{CPU_graph_per_turn.png}
-  \caption{Real simulation time (s) per turn for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
+  \caption[CPU-bound simulation time performance]{Real simulation time (s) per turn for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.77\linewidth]{GPU_graph_per_turn.png}
-  \caption{Real simulation time (s) per turn for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
+  \caption[GPU-accelerated simulation time performance]{Real simulation time (s) per turn for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics*[width=0.77\linewidth]{COMPARISON_graph_per_turn.png}
-  \cprotect\caption{Real (\textit{wall time}) simulation time (s) per turn for CPU workload divided by GPU workload for the same $N_p, N_t$, showing the relative performance increase of GPU acceleration. All other parameters (e.g. number of compute cores) are held constant.}\label{fig:comparison_graph_per_turn}
+  \cprotect\caption[Comparison of simulation time performance between CPU and GPU workloads]{Real (\textit{wall time}) simulation time (s) per turn for CPU workload divided by GPU workload for the same $N_p, N_t$, showing the relative performance increase of GPU acceleration. All other parameters (e.g. number of compute cores) are held constant.}\label{fig:comparison_graph_per_turn}
 \end{figure}
 
 These optimisation improvements make a clear justification for the use of GPU-accelerated workflows.~\autoref{fig:comparison_graph_per_turn} shows the relative performance increase of GPU acceleration over CPU-only simulations, for the same $N_p, N_t$. In the best case, with $N_p, N_t \approx 5\times 10^4$, the GPU-accelerated simulation can be $\sim 500$ times faster than the CPU-only simulation. At more reasonable $N_p, N_t$, GPU simulations are still several orders of magnitudes faster than a CPU, and only slower at $N_p, N_t < 10^1$.
@@ -1027,7 +1029,7 @@ Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CE
 \begin{figure}
   \centering
   \includegraphics*[width=0.8\linewidth]{sample_rate_variation.png}
-  \caption{Box-plot of the variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement. Box shows the \nth{25} to \nth{75} percentile, with error bars bounding the \nth{10} and \nth{90} percentile. Data points outside of this range are considered outliers and shown as diamond points.}\label{fig:sample_rate_variation}
+  \caption[Sample rate variation of the \texttt{BXSCAL} scintillator device]{Box-plot of the variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement. Box shows the \nth{25} to \nth{75} percentile, with error bars bounding the \nth{10} and \nth{90} percentile. Data points outside of this range are considered outliers and shown as diamond points.}\label{fig:sample_rate_variation}
 \end{figure}
 
 Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples). A peak-finding algorithm was used to identify this interval rate, allowing for a slight variation in the spill measurement frequency. Over the measurements used, the \verb|BXSCAL| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). This sample rate variation likely originates from the electrical sampling equiptment, or from changes in gas pressure~\cite{PLUM200274}. As the variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected. The peak-finding algorithm was used to identify the highest peak within a range corresponding to the inter-quartile range of sample rate variance. An example of these DFTs, with the range and selections of the peak-finding algorithm, can be seen in~\autoref{fig:raw_ffts}.
@@ -1037,7 +1039,7 @@ To compensate for the ``noise'' level of the machine data---a result of the meas
 \begin{figure}
   \centering
   \includegraphics*[width=0.8\linewidth]{raw_ffts.png}
-  \caption{Example Discrete Fourier Transforms (DFT) of the spill signals in~\autoref{fig:raw_signal}. The \textit{expected} interval frequency is shown as a dashed line, and the range around which the peak-finding algorithm searched is shaded. The accepted peaks are shown in grey marks, and the selected peak is shown in red.}\label{fig:raw_ffts}
+  \caption[Example Fourier transforms of spill signals]{Example Discrete Fourier Transforms (DFT) of the spill signals in~\autoref{fig:raw_signal}. The \textit{expected} interval frequency is shown as a dashed line, and the range around which the peak-finding algorithm searched is shaded. The accepted peaks are shown in grey marks, and the selected peak is shown in red.}\label{fig:raw_ffts}
 \end{figure}
 
 This selection process was found to be robust but noisy, especially at higher frequencies, where the variation in the \verb|BXSCAL| sample rate has a higher impact on the accuracy of the DFT. To mitigate this, the peak-finding algorithm was run on multiple repetitions of the same parameters, and the results averaged.
@@ -1073,12 +1075,12 @@ The low-pass filter effect, and corresponding cutoff frequency and minimum trans
   T_{tr} = \frac 1{\sqrt{3}{\varepsilon_Q}} \ln \left| \frac n{n+3} \frac 3{\frac {\dot {\varepsilon_Q}}{\varepsilon_Q} - \frac 1{\sqrt 3}\frac{\dot{{\varepsilon_Q}}}{{{\varepsilon_Q}}^2}}\right|
   \label{eq:transit_time}
 \end{equation} 
-The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$, accounts for the time taken to move from a fixed point $O'$ to the magnetic septum, where the distance between the edge of the stable phase space area and the septum is $|X_{MS}|$, and the distance between the edge of the stable phase space area enclosed by the separatrices and its center is $|X_{sep}|$. The second fraction, where ${\varepsilon_Q}$ was defined as the modified tune distance in~\autoref{eq:spiral_step} and~\autoref{eq:spiral_kick}, accounts for time taken to move along the side of a stable triangle to the fixed point $O'$.~\autoref{fig:transit_time} illustrates this transit time in phase-space.
+The first fraction within the logarithm, where $n=|\vec X_{MS}|/|\vec X_{sep}|$, accounts for the time taken to move from a fixed point $O'$ to the magnetic septum, where the distance between the edge of the stable phase-space area and the septum is $|X_{MS}|$, and the distance between the edge of the stable phase-space area enclosed by the separatrices and its center is $|X_{sep}|$. The second fraction, where ${\varepsilon_Q}$ was defined as the modified tune distance in~\autoref{eq:spiral_step} and~\autoref{eq:spiral_kick}, accounts for time taken to move along the side of a stable triangle to the fixed point $O'$.~\autoref{fig:transit_time} illustrates this transit time in phase-space.
 
 \begin{figure}
   \centering
   \includegraphics*[width=0.6\linewidth]{transit-time-phase-space.png}
-  \caption{A phase-space diagram illustrating the transit time $T_{tr}$ elapsed between leaving the last stable triangle and arriving at the septum. The particle motion (and transit time) is presented in units of three turns; in real-time, the particle moves between the three separatrix arms. The Kobayashi Hamiltonian forms the separatrices of the stable triangle. Total transit time $T_{tr}=T_{tr,1} + T_{tr,2}$ depends both on the distance $(x_0, y_0)$ of the particle from a fixed point $O'$ ($T_{tr,1}$) and the distance from $O'$ to the septum blade ($T_{tr,2}$).}\label{fig:transit_time}
+  \caption[Phase-space digram of extracted particle transit time]{A phase-space diagram illustrating the transit time $T_{tr}$ elapsed between leaving the last stable triangle and arriving at the septum. The particle motion (and transit time) is presented in units of three turns; in real-time, the particle moves between the three separatrix arms. The Kobayashi Hamiltonian forms the separatrices of the stable triangle. Total transit time $T_{tr}=T_{tr,1} + T_{tr,2}$ depends both on the distance $(x_0, y_0)$ of the particle from a fixed point $O'$ ($T_{tr,1}$) and the distance from $O'$ to the septum blade ($T_{tr,2}$).}\label{fig:transit_time}
 \end{figure}
 
 In a machine with a chromatic tune spread, this transit time $T_{tr}$ will have a spread of values $\Delta T_{tr}$, which represents a time interval within which particles which leave the stable phase space simultaneously will arrive at the septum. This results in a \textit{limiting frequency} $f_{\lim}=1/\Delta T_{tr}$, above which frequencies in the spill structure are ``washed out''. 
@@ -1100,7 +1102,7 @@ The simulated frequency response characteristics are shown in~\autoref{fig:freq_
     \includegraphics*[width=\linewidth]{machine_rf_off.png}
     \caption{Frequency response of machine measurements with a \textbf{coasting} beam.}\label{machine_rf_off}
   \end{subfigure}
-  \caption{Frequency response of the RFKO system as implemented in the PS, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_machine}
+  \caption[Measured RFKO frequency response]{Frequency response of the RFKO system as implemented in the PS, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_machine}
 \end{figure}
 
 \begin{figure}[h]
@@ -1113,7 +1115,7 @@ The simulated frequency response characteristics are shown in~\autoref{fig:freq_
     \includegraphics*[width=\linewidth]{sim_rf_off.png}
     \caption{Frequency response of simulations with a \textbf{coasting} beam.}\label{sim_rf_off}
   \end{subfigure}
-  \cprotect\caption{Frequency response of the RFKO system as simulated in \verb|Xsuite|, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_sim}
+  \cprotect\caption[Simulated RFKO frequency response]{Frequency response of the RFKO system as simulated in \verb|Xsuite|, both with a bunched beam (upper image) and coasting beam (lower image).}\label{fig:freq_response_sim}
 \end{figure}
 
 \autoref{fig:simvmeas_bunched} and \autoref{fig:simvmeas_coasting} directly compare the frequency response between empirical measurements and simulations, 
@@ -1122,13 +1124,13 @@ for both bunched and coasting beams. These graphs present the average response c
 \begin{figure}[!h]
   \centering
   \includegraphics*[width=0.8\linewidth]{simvmeas_bunched.png}
-  \caption{Graph comparing the averaged frequency response curves for bunched beams between machine data (black) and simulations (red). Shaded is the $1\sigma$ error, dashed is the fitted low-pass filter model, and vertical dashed is the calculated cutoff frequency $f_c$ and the $1\sigma$ error.}\label{fig:simvmeas_bunched}
+  \caption[Comparisons of machine and simulation data of RFKO with \textbf{bunched} beams]{Graph comparing the averaged frequency response curves for bunched beams between machine data (black) and simulations (red). Shaded is the $1\sigma$ error, dashed is the fitted low-pass filter model, and vertical dashed is the calculated cutoff frequency $f_c$ and the $1\sigma$ error.}\label{fig:simvmeas_bunched}
 \end{figure}
 
 \begin{figure}[!h]
   \centering
   \includegraphics*[width=0.8\linewidth]{simvmeas_coasting.png}
-  \caption{Graph comparing the averaged frequency response curves for coasting beams between machine data (black) and simulations (red). Shaded is the $1\sigma$ error, dashed is the fitted low-pass filter model, and vertical dashed is the calculated cutoff frequency $f_c$ and the $1\sigma$ error.}\label{fig:simvmeas_coasting}
+  \caption[Comparisons of machine and simulation data of RFKO with \textbf{coasting} beams]{Graph comparing the averaged frequency response curves for coasting beams between machine data (black) and simulations (red). Shaded is the $1\sigma$ error, dashed is the fitted low-pass filter model, and vertical dashed is the calculated cutoff frequency $f_c$ and the $1\sigma$ error.}\label{fig:simvmeas_coasting}
 \end{figure}
 
 \clearpage
@@ -1142,7 +1144,7 @@ Another analytical tool for quantifying slow extraction spill quality establishe
 \begin{figure}
   \centering
   \includegraphics[width=0.8\linewidth]{sdfs.png}
-  \caption{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 turn windows.}\label{fig:sdf_example}
+  \caption[Example spill duty factor calculations]{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 turn windows.}\label{fig:sdf_example}
 \end{figure}
 
 ~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies. These are presented in a heatmap, where the lightness of the cell represents a higher spill duty factor, and thus a flatter spill. Qualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled, compared to beams with RF cavities disabled~\cite{Cappi:134321}.
@@ -1156,11 +1158,11 @@ In a Steinbach diagram (\autoref{sec:steinbach}), this has the effect of shiftin
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.66\linewidth]{synch-phase-space.png}
-  \caption{Phase space of a particle approaching the separatrix in a coasting beam (top) and a bunched beam (bottom), both with a small sextupole ripple component.}
+  \caption[Phase-space diagram of bunched beam effect on sextupole ripple]{Phase space of a particle approaching the separatrix in a coasting beam (top) and a bunched beam (bottom), both with a small sextupole ripple component.}
   \label{fig:synch-phase-space}
 \end{figure}
 
-To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised in phase space in \autoref{fig:synch-phase-space}. The upper figure is the case for a coasting beam with no synchrotron motion: particles experience no change in tune, and so a small ripple in sextupole field could increase the stable region area and ``recapture'' the particle back into the stable region, preventing the particle's extraction. The lower figure describes the case for a bunched beam with slow synchrotron motion: the particles receive a kick (RFKO) \textit{and} and periodic tune change (RF cavity), which reduces the stable phase space area. This reduces the chance of a particle being recaptured by a sextupole ripple, pushes the particle deeper into resonance quicker, and ``smoothens'' out the spill signal. There is, however, a limit to this ripple mitigation, where the synchrotron oscillation is too fast for particles to remain in the unstable region.~\cite{Sorge_2018,PhysRevAccelBeams.26.014402}.
+To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised in phase space in \autoref{fig:synch-phase-space}. The upper figure is the case for a coasting beam with no synchrotron motion: particles experience no change in tune, and so a small ripple in sextupole field could increase the stable region area and ``recapture'' the particle back into the stable region, preventing the particle's extraction. The lower figure describes the case for a bunched beam with slow synchrotron motion: the particles receive a kick (RFKO) \textit{and} and periodic tune change (RF cavity), which reduces the stable phase-space area. This reduces the chance of a particle being recaptured by a sextupole ripple, pushes the particle deeper into resonance quicker, and ``smoothens'' out the spill signal. There is, however, a limit to this ripple mitigation, where the synchrotron oscillation is too fast for particles to remain in the unstable region.~\cite{Sorge_2018,PhysRevAccelBeams.26.014402}.
 
 This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}). Both of these effects, and the limiting frequency obtained from transit time spread, contribute to the optimal selection of parameters for an RFKO driving signal.
 
@@ -1174,7 +1176,7 @@ This synchrotron motion also effects the extraction transit time. The distance o
     \includegraphics*[width=\linewidth]{sdf_off_meas.png}
     \caption{Spill duty factor heatmap for \textbf{coasting} beam as measured in the machine.}\label{sdf_off_meas}
   \end{subfigure}
-  \cprotect\caption{Spill duty factor ($\mathcal{F}$) heatmaps for the RFKO system as measured in the machine, both with a bunched beam (upper image) and coasting beam (lower image), as a function of chirp repetition frequency (log-scale) and voltage (linear). Color scale represents $\mathcal{F}$.}\label{fig:sdf_meas}
+  \cprotect\caption[Spill duty factor heatmaps for bunched and coasting beams]{Spill duty factor ($\mathcal{F}$) heatmaps for the RFKO system as measured in the machine, both with a bunched beam (upper image) and coasting beam (lower image), as a function of chirp repetition frequency (log-scale) and voltage (linear). Color scale represents $\mathcal{F}$.}\label{fig:sdf_meas}
 \end{figure}
 
 
