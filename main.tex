@@ -72,13 +72,15 @@
 %% ========================
 %% [TODO)
 %% REMOVE BEFORE SUBMISSION
- \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray, text=DRAFT\ Aug\ 21]{draftwatermark}
+ \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray, text=DRAFT\ Aug\ 22]{draftwatermark}
 %% ========================
 % BUG
 
 %\setcitestyle{aysep={,}}
-\renewcommand{\headeright}{M.Sc. Thesis}
-\renewcommand{\shorttitle}{Simulating RFKO Slow Extraction}
+%\renewcommand{\headeright}{M.Sc. Thesis}
+\renewcommand{\headeright}{\textsc{\rightmark}}
+\renewcommand{\shorttitle}{}
+
 
 \setlength{\parindent}{20pt}
 \onehalfspacing
@@ -104,7 +106,8 @@ This thesis presents the novel implementation and simulation of RFKO slow extrac
 
 \newpage
 \tableofcontents
-
+\listoffigures
+\listoftables
 \newpage
 
 \chapter{Introduction}
@@ -116,13 +119,13 @@ Ongoing experiments in these facilities such as the CHARM High-energy Ions for M
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{east-area.png}
-  \caption{Layout diagram of the CERN East Area (EA) beamlines, their proton momenta, and experiments.}\label{fig:eadiagram}
+  \caption[Layout of the CERN East Area beamlines]{Layout diagram of the CERN East Area (EA) beamlines, their proton momenta, and experiments.}\label{fig:eadiagram}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics*[width=0.8\linewidth]{complex.png}
-  \caption{Layout diagram of the primary injection chain at CERN. Particles are sourced from either Linac 3 (for Lead ions) or Linac 4 (for Protons), and accelerated through the LEIR or PSB respectively. After injection and acceleration in the PS, beams are extracted either to the SPS or East Area (EA). Particles at the SPS are either extracted at two LHC extraction locations, or towards the North area. Red diamonds indicate Fast extraction locations, and blue indicate mark Slow extraction regions. Grey triangles indicate injection regions.}\label{fig:chain}
+  \caption[Layout of the primary injectors and accelerators of the CERN complex]{Layout diagram of the primary injection chain at CERN. Particles are sourced from either Linac 3 (for Lead ions) or Linac 4 (for Protons), and accelerated through the LEIR or PSB respectively. After injection and acceleration in the PS, beams are extracted either to the SPS or East Area (EA). Particles at the SPS are either extracted at two LHC extraction locations, or towards the North area. Red diamonds indicate Fast extraction locations, and blue indicate mark Slow extraction regions. Grey triangles indicate injection regions.}\label{fig:chain}
 \end{figure}
 
 \section{Motivation}\label{sec:motivation}
@@ -191,7 +194,7 @@ The basis vectors for this system, $(\hat x, \hat y, \hat s)$, rotate in space a
 \begin{figure}[!h]
   \centering
   \includegraphics*[width=0.5\linewidth]{coordinate-system.png}
-  \caption{The vectors used to define the Frenet-Serret coordinate system.}\label{fig:frenet-serret}
+  \caption[Local coordinate system]{The vectors used to define the Frenet-Serret coordinate system.}\label{fig:frenet-serret}
 \end{figure}
 
 This coordinate system is known as a {\it Frenet-Serret} coordinate system, and can be rigorously defined by the unit vector {\it tangent} to the curve $\hat T$ (pointing in the direction of motion), the unit vector {\it normal} to the tangent and on the tangential plane $\hat N$, and the binormal unit vector $\hat B$, the cross product of $\hat T$ and $\hat N$. These unit vectors, forming an orthonormal basis spanning $\mathbb{R}^3$ are equal to the vectors $\hat x, \hat y, \hat s$ by:
@@ -202,10 +205,9 @@ This coordinate system is known as a {\it Frenet-Serret} coordinate system, and 
 The coordinate system $(\hat x, \hat y, \hat s)$ relies on the right-hand chirality (Figure~\ref{fig:rhr}) of the vector cross product for the $\hat x$ vector to point radially outwards from the centre of the machine, the $\hat y$ vector points upwards, and the $\hat s$ vector points in the direction of motion.
 
 \begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.25]{rhr.pdf}
-\caption{The right-hand chirality rule defining the direction of $\hat x = \hat y \times \hat s$}\label{fig:rhr}
-\end{center}
+  \centering
+  \includegraphics[scale=.25]{rhr.pdf}
+  \caption[The right-hand rule]{The right-hand chirality rule defining the direction of $\hat x = \hat y \times \hat s$}\label{fig:rhr}
 \end{figure}
 
 \subsection{Special Relativity}
@@ -294,7 +296,7 @@ Referring again to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a 
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.2\linewidth]{dipole-bending.png}
-  \caption{A ``front-on'' view of a dipole magnet, showing its magnetic field pointing down, and the Lorentz force experienced by a positively charged particle travelling into the page.}\label{fig:dipole}
+  \caption[Illustration of the force experienced by a charged particle in a magnetic dipole field.]{A ``front-on'' view of a dipole magnet, showing its magnetic field pointing down, and the Lorentz force experienced by a positively charged particle travelling into the page.}\label{fig:dipole}
 \end{figure}
 
 If $\alpha$ is the bending angle of a single MU, then $\alpha$ can be related to the magnetic rigidity by
@@ -310,7 +312,7 @@ While single-pair dipole magnets are used to bend the beam along the circular pa
 \begin{figure}
 \centering
   \includegraphics*[width=0.9\linewidth]{fodo.png}
-  \caption{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. The force experienced by a positively-charged particle is shown as dashed arrows. Right-hand diagram illustrates a FODO cell, where the structure of repeting focussing and defocussing quadrupoles can be related to the optical analogy of lenses.}\label{fig:quadrupole}
+  \caption[Diagrams of a quadrupole magnetic field, and a FODO cell]{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. The force experienced by a positively-charged particle is shown as dashed arrows. Right-hand diagram illustrates a FODO cell, where the structure of repeting focussing and defocussing quadrupoles can be related to the optical analogy of lenses.}\label{fig:quadrupole}
 \end{figure}
 
 \begin{figure}
@@ -899,7 +901,7 @@ The first magnetic septum, \verb|SMH57|, was modelled as a simple rectangular ap
 
 \subsubsection{RF Cavity}
 
-A single RF cavity was added to the model, corresponding to the RF system of the PS. While the real system comprises of many such cavities, modelling a single cavity with the total RF voltage applied provides an accurate representation of the longitudinal dynamics of the beam, given there are no other longitudinal elements present in the model.
+A single RF cavity was added to the model, corresponding to the RF system of the PS. While the real system comprises of many such cavities, modelling a single cavity with the total RF voltage applied provides an accurate representation of the longitudinal dynamics of the beam, given that there are no other longitudinal elements present in the model.
 
 \subsection{Distribution Generation}
 
@@ -911,11 +913,11 @@ To accurately simulate the conditions used in the RFKO studies, the initial part
   \item Longitudinal RMS emittance $\varepsilon_s$ [\si{\electronvolt\second}]
 \end{itemize}  
 
-These values were obtained during machine studies. The beam momentum and intensity were fixed values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the longitudinal emittance $\varepsilon_z$ using tomography of the beam current profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|. An example of the generated distribution is shown in~\autoref{fig:initial-dist}.
+These values were obtained during machine studies. The beam momentum and intensity were fixed values, configured by high-level machine parameters. The horizontal emittance $\varepsilon_x$ was measured using Secondary Emission Monitor (SEM) grids~\cite{Martini:324553}, and the longitudinal emittance $\varepsilon_z$ using tomography of the beam current profile~\cite{Hancock:960231}. The measured values are shown in~\autoref{tab:initial-conditions}. The beam distribution was then generated according to these parameters, and ``matched'' to the model longitudinal dynamics of the model by \verb|Xsuite|. An example of the generated distribution is shown in~\autoref{fig:initial-dist}.
 
-It was decided that the simulation code will generate a new distribution each time it was initiated, rather than loading a pre-generated distribution from a file. This was done to allow for the random distributions to be generated with a different random seed each time, to avoid the same distribution being used for each simulation, avoiding any bias in the results due to the initial distribution. This also allowed for the particle generation parameters to be dynamically adjusted on a per-simulation basis, enabling the testing and optimisation of these parameters. This design choice ensured the simulation code was flexible and could be used for a wide range of studies at different beam energies and intensities.
+It was decided that the simulation code will generate a new distribution each time it was initiated, rather than loading a pre-generated distribution from a file. This was done to allow for the random distributions to be generated with a different random seed each time, avoiding the same distribution being used for each simulation which could introduce bias in the results. This also allowed for the particle generation parameters to be dynamically adjusted on a per-simulation basis, enabling the testing and optimisation of these parameters. This design choice ensured the simulation code was flexible and could be used for a wide range of studies at different beam energies and intensities.
 
-With a sufficiently large number of particles, these random distributions will be statistically similar. This prevented the need to transfer a large, persistent file to each simulation job; this transfer time was, qualitatively, found to be longer than the time taken to generate a new distribution file of the same size.
+With a sufficiently large number of particles, these random distributions will be statistically similar. This obviated the need to transfer a large, persistent file to each simulation job; this transfer time was, qualitatively, found to be longer than the time taken to generate a new distribution file of the same size.
 
 \begin{table}[]
   \centering
@@ -946,7 +948,7 @@ To submit the simulation jobs to the batch processing service, the simulation so
 
 This image was made available on CERN's image registry using a \textit{continuous integration} platform, allowing the image to be automatically re-built and re-published when changes are made to the configuration. It was also distributed via the \textit{CERN Virtual Machine File System} (CVMFS), which HTCondor can use to initialise machines running batch jobs. This container~\cite{docker} eliminated the need to set up the simulation environment on each machine, ensured that the simulation were run in a consistent environment, and enabled the use of HTCondor's GPU resources. 
 
-\autoref{fig:flowchart} describes the simulation process as successfully implemented. While some efficiency could be made by including shared resources (such as the \verb|ps.seq| lattice file) within the Docker image, developing a general base environment for any \verb|Xsuite| simulation will prove useful in the wider community, and in work outside of the scope of this thesis. Initial test simulations included a \verb|Monitor| object to record the turn-by-turn particle parameters of simulations. This is a very computationally expensive and memory-intensive process, and was removed from the final simulation process, but enabed detailed debugging and analysis of the simulation process. One example,~\autoref{fig:phase-space-sim}, shows the progression of phase-space particle distribution throughout the first \qty{1000}{turns} of a simulation. Here, the characteristic features of the Kobayashi Hamiltonian phase-space map (\autoref{fig:kobayashi}) can be seen, in addition to the transverse heating (emittance growth, \autoref{fig:rfko_phase_space}) and extraction separatrices as discussed in~\autoref{sec:rfko}.
+\autoref{fig:flowchart} shows a flowchart describing the simulation process as successfully implemented. While some efficiency could be made by including shared resources (such as the \verb|ps.seq| lattice file) within the Docker image, developing a general base environment for any \verb|Xsuite| simulation will prove useful in the wider community, and in work outside of the scope of this thesis. Initial test simulations included a \verb|Monitor| object to record the turn-by-turn particle parameters of simulations. This is a very computationally expensive and memory-intensive process, and was removed from the final simulation process, but enabed detailed debugging and analysis of the simulation process. One example,~\autoref{fig:phase-space-sim}, shows the progression of phase-space particle distribution throughout the first \qty{1000}{turns} of a simulation. Here, the characteristic features of the Kobayashi Hamiltonian phase-space map (\autoref{fig:kobayashi}) can be seen, in addition to the transverse heating (emittance growth, \autoref{fig:rfko_phase_space}) and extraction separatrices as discussed in~\autoref{sec:rfko}.
 
 \begin{figure}[h]
   \centering
@@ -982,20 +984,19 @@ The paralellism-saturated performance of both CPU and GPU simulations can be for
 
 \begin{figure}
   \centering
-  \includegraphics*[width=0.8\linewidth]{CPU_graph_per_turn.png}
+  \includegraphics*[width=0.77\linewidth]{CPU_graph_per_turn.png}
   \caption{Real simulation time (s) per turn for CPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:cpu_graph_per_turn}
 \end{figure}
 
 \begin{figure}[h]
   \centering
-  \includegraphics*[width=0.8\linewidth]{GPU_graph_per_turn.png}
+  \includegraphics*[width=0.77\linewidth]{GPU_graph_per_turn.png}
   \caption{Real simulation time (s) per turn for GPU workload per turn as a function of number of particles. Line color indicates number of turns simulated.}\label{fig:gpu_graph_per_turn}
 \end{figure}
 
-
 \begin{figure}
   \centering
-  \includegraphics*[width=0.8\linewidth]{COMPARISON_graph_per_turn.png}
+  \includegraphics*[width=0.77\linewidth]{COMPARISON_graph_per_turn.png}
   \cprotect\caption{Real (\textit{wall time}) simulation time (s) per turn for CPU workload divided by GPU workload for the same $N_p, N_t$, showing the relative performance increase of GPU acceleration. All other parameters (e.g. number of compute cores) are held constant.}\label{fig:comparison_graph_per_turn}
 \end{figure}
 
@@ -1003,7 +1004,7 @@ These optimisation improvements make a clear justification for the use of GPU-ac
 
 Previous work on optimising simulations slow extraction (at the SPS) achieved a simulation time of 7 hours 30 minutes (\qty{27000}{\second}) for a total of \qty{200000}{turns} and \qty{1000}{particles}~\cite[Figure 3]{Schicho:2039579}, using a similar batching process, but without the advantage of GPU acceleration. The simulation process described in~\autoref{sec:sim_process} achieved a total time of 13 minutes (\qty{779.8}{\second}) for the same number of particles and turns running on a GPU platform. This represents a $\times 34$ speed improvement.
 
-These findings motivated the selection of parameters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallelism becomes saturated around \qty{500000}{particles}. By not exceeding this amount, the simulation can complete in a reasonable amount of time.
+These findings motivated the selection of parameters for later simulations. To simulate the full \qty{500}{\milli\second} extraction period requires \qty{235000}{turns} to be simulated. At this number of turns, the available GPU parallelism becomes saturated around \qty{500000}{particles}. By not exceeding this amount, the simulation can complete in a reasonable amount of time and still yield significant results.
 
 \clearpage
 \section{Frequency Response}\label{results:freq_response}
@@ -1020,13 +1021,13 @@ For the machine implementation, the spill was measured using an $N_2$ gas scinti
   \cprotect\caption{Example signals recorded by the \verb|BXSCAL| scintillator at various \textit{rep-rate} intervals.}\label{fig:raw_signal}
 \end{figure}
 
-Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CERN's logging database~\cite{nxcals}. This time-series scintillator provides a signal proportional to the instantaneous number of particles passing through the F61 extraction line, and can therefore be used as the extraction rate spill signal. An example of this data can be found in~\autoref{fig:raw_signal}, showing a range of rep-rate intervals. The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. 
+Once the scripts completed, the \verb|BXSCAL| data was retrieved from NXCALS, CERN's logging database~\cite{nxcals}. This time-series scintillator provides a signal proportional to the instantaneous number of particles passing through the F61 extraction line, and can, therefore, be used as the extraction rate spill signal. An example of this data can be found in~\autoref{fig:raw_signal}, showing a range of rep-rate intervals. The time-series spill signal was then analysed using a discrete Fourier transform (DFT) to obtain the frequency response of the system. 
 
 
 \begin{figure}
   \centering
   \includegraphics*[width=0.8\linewidth]{sample_rate_variation.png}
-  \caption{Box-plot of the variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement. Box shows the \nth{25} to \nth{75} percentile, with error bars bounding the \nth{10} and \nth{90} percentile. Outliers outside of this range are shown as diamond points.}\label{fig:sample_rate_variation}
+  \caption{Box-plot of the variation in sample rate of the \texttt{BXSCAL} device over the course of the measurement. Box shows the \nth{25} to \nth{75} percentile, with error bars bounding the \nth{10} and \nth{90} percentile. Data points outside of this range are considered outliers and shown as diamond points.}\label{fig:sample_rate_variation}
 \end{figure}
 
 Once the DFT was computed, the interval rate for each measurement was selected, normalised by the DFT DC component (the \qty{0}{\hertz} term, equivalent to the average of all samples). A peak-finding algorithm was used to identify this interval rate, allowing for a slight variation in the spill measurement frequency. Over the measurements used, the \verb|BXSCAL| sample rate varied between \qty{18.6}{\kilo\hertz} and \qty{18.95}{\kilo\hertz} (\autoref{fig:sample_rate_variation}). This sample rate variation likely originates from the electrical sampling equiptment, or from changes in gas pressure~\cite{PLUM200274}. As the variation was evenly distributed around the mean value of \qty{18.78}{\kilo\hertz}, the DFT was largely unaffected. The peak-finding algorithm was used to identify the highest peak within a range corresponding to the inter-quartile range of sample rate variance. An example of these DFTs, with the range and selections of the peak-finding algorithm, can be seen in~\autoref{fig:raw_ffts}.
@@ -1045,11 +1046,11 @@ This same analytical method was performed for simulations; the turn number at wh
 \begin{equation}
   \zeta = s \frac{\beta}{\beta_0} - \beta c t
 \end{equation}
-where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct the \textit{laboratory} time (in real seconds, not turn number) at which the particle was lost to the aperture---and thus considered as extracted---using an equation used by the \verb|Exciter| beam element:
+where $\beta$ is the relativistic Lorentz factor. This was used to reconstruct the \textit{laboratory} time (in real seconds, not turn number) at which the particle was lost to the aperture---and thus considered as extracted---using the equation
 \begin{equation}
   t = N t_{rev} - \frac\zeta{\beta_0 c}
 \end{equation}
-where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N$ is the turn at which the particle was lost. The extraction time data for each particle was then used to reconstruct the time-series extraction data (\autoref{lst:time_series_calculation}). The same peak-finding algorithm as used for machine data was then used to generate frequency response data for simulations.
+where $t_{rev}=1/f_{rev}$, the revolution time of the reference particle, and $N$ is the turn at which the particle was lost. This equation can also be found in the source code for the \verb|Exciter| element. The extraction time data for each particle was then used to reconstruct the time-series extraction data (\autoref{lst:time_series_calculation}). The same peak-finding algorithm as used for machine data was then employed to generate frequency response data for simulations.
 
 
 \subsection{Results of Frequency Response Analysis}
@@ -1136,7 +1137,7 @@ for both bunched and coasting beams. These graphs present the average response c
 Another analytical tool for quantifying slow extraction spill quality established by previous work is the \textit{spill duty factor}. This quantity is defined as~\cite{Sorge_2018}
 \begin{equation}
   \mathcal{F} = \frac{\langle x\rangle^2}{\langle x^2\rangle}
-\end{equation} where $\langle x\rangle$ denotes the average of variable $x$. By calculating this quantity within a rolling time window, a rolling average of spill quality can be calculated.~\autoref{fig:sdf_example} presents an example of these calculations for the spill signals in~\autoref{fig:raw_signal}: a flatter spill will produce a duty factor closer to $\mathcal{F}=1$, while a highly pulsed spill approaches $\mathcal{F}=0$.
+\end{equation} where $\langle x\rangle$ denotes the average of an arbitrary variable $x$. By calculating this quantity within a rolling time window, a rolling average of spill quality can be calculated.~\autoref{fig:sdf_example} presents an example of these calculations for the spill signals in~\autoref{fig:raw_signal}: a flatter spill will produce a duty factor closer to $\mathcal{F}=1$, while a highly pulsed spill approaches $\mathcal{F}=0$.
 
 \begin{figure}
   \centering
@@ -1144,7 +1145,7 @@ Another analytical tool for quantifying slow extraction spill quality establishe
   \caption{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 turn windows.}\label{fig:sdf_example}
 \end{figure}
 
-~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies. These are presented in a heatmap, where the lightness of the cell represents a higher spill duty factor, and thus a flatter spill. Qualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled compared to beams with RF cavities disabled~\cite{Cappi:134321}.
+~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies. These are presented in a heatmap, where the lightness of the cell represents a higher spill duty factor, and thus a flatter spill. Qualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled, compared to beams with RF cavities disabled~\cite{Cappi:134321}.
 
 The mechanism behind the spill duty factor improvement with bunching can be understood by examining how the stable phase space behaves with respect to synchrotron oscillation. As covered in~\autoref{sec:long_phase_space}, particles moving within longitudinal RF buckets will undergo longitudinal oscillations around the synchronous particle, known as synchrotron oscillations\footnote{As opposed to the transverse betatron oscillations.}. This can be calculated as
 \begin{equation}
@@ -1152,16 +1153,16 @@ The mechanism behind the spill duty factor improvement with bunching can be unde
 \end{equation} where $h$ is the RF harmonic, $V_{rf}$ the RF voltage, $q$ the particle charge, $\eta$ the slip factor (\autoref{eq:slip_factor}), $\phi_s$ the synchronous phase, and $E_{tot}$ the total energy. It can also be found by simulation; for the configuration outlined in preceding sections, the synchrotron tune was found to be $Q_s = 0.0052$. 
 In a Steinbach diagram (\autoref{sec:steinbach}), this has the effect of shifting the particle horizontally, in addition to the vertical push from the exciter. This has two consequences: the particles remain at the edge of the unstable region for a shorter amount of time, as the synchrotron motion changes the particle's tune enough to move it into resonance, reducing the effect of the excitation structures. Additionally, it can reduce the effect of magnet ripples changing the shape of the unstable region.
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics*[width=0.7\linewidth]{synch-phase-space.png}
+  \includegraphics*[width=0.66\linewidth]{synch-phase-space.png}
   \caption{Phase space of a particle approaching the separatrix in a coasting beam (top) and a bunched beam (bottom), both with a small sextupole ripple component.}
   \label{fig:synch-phase-space}
 \end{figure}
 
-To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised in phase space in \autoref{fig:synch-phase-space}. The upper figure is the case for a coasting beam with no synchrotron motion: particles experience no change in tune, and so a small ripple in sextupole field could increase the stable region area and ``recapture'' the particle back into the stable region, preventing the particle's extraction. The lower figure describes the case for a bunched beam with slow synchrotron motion: the particles receive a kick (RFKO) \textit{and} and periodic tune change (RF cavity), which reduces the stable phase space area. This reduces the chance of a particle being recaptured by a sextupole ripple, pushes the particle deeper into resonance quicker, and ``smoothens'' out the spill signal. There is however a limit to this ripple mitigation, where the synchrotron oscillation is too fast for particles to remain in the unstable region.~\cite{Sorge_2018,PhysRevAccelBeams.26.014402}.
+To see this, we will consider the two cases of a particle approaching resonance in a coasting beam and in a bunched beam, visualised in phase space in \autoref{fig:synch-phase-space}. The upper figure is the case for a coasting beam with no synchrotron motion: particles experience no change in tune, and so a small ripple in sextupole field could increase the stable region area and ``recapture'' the particle back into the stable region, preventing the particle's extraction. The lower figure describes the case for a bunched beam with slow synchrotron motion: the particles receive a kick (RFKO) \textit{and} and periodic tune change (RF cavity), which reduces the stable phase space area. This reduces the chance of a particle being recaptured by a sextupole ripple, pushes the particle deeper into resonance quicker, and ``smoothens'' out the spill signal. There is, however, a limit to this ripple mitigation, where the synchrotron oscillation is too fast for particles to remain in the unstable region.~\cite{Sorge_2018,PhysRevAccelBeams.26.014402}.
 
-This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}). Both of these effects, and the the limiting frequency obtained from transit time spread, contribute to the optimal selection of parameters for an RFKO driving signal.
+This synchrotron motion also effects the extraction transit time. The distance of a particle from the separatrix while in the unstable region grows with each synchrotron period. This reduces the transit time. Therefore, there exists an optimum synchrotron tune, where particles are more likely to remain within the unstable region, but the transit time remains long enough to smoothen the spill ``pulses'' between successive excitations (\autoref{fig:sdf_example}). Both of these effects, and the limiting frequency obtained from transit time spread, contribute to the optimal selection of parameters for an RFKO driving signal.
 
 \begin{figure}[h]
   \centering
