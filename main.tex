@@ -6,6 +6,7 @@
 % \usepackage[colorlinks=true, linkcolor=black, citecolor=blue, urlcolor=blue]{hyperref}       % hyperlinks
 \usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}       % hyperlinks
 \usepackage{url}            % simple URL typesetting
+\def\UrlBreaks{\do\/\do-}
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
@@ -1220,13 +1221,13 @@ There are several opportunities for improvements presented in this thesis, both 
 % \delta_p=\frac{p-p_0}{p_0}
 % \end{equation}, where $p$ is the momentum of the particle, and $p_0$ the momentum of the {\it reference} (or {\it design}) particle, whereas \verb|Xtrack| uses the relative energy error
 
-\chapter{Code Snippets}
+\chapter{Code Listings}
 
-\lstinputlisting[language=python, label={lst:kick_angle}, caption=Python code to calculate angle kick produced by the TFB system (\autoref{sec:trans_exc}).]{code/kick_angle.py}
+\lstinputlisting[captionpos=t, language=python, label={lst:kick_angle}, caption=Python code to calculate angle kick produced by the TFB system (\autoref{sec:trans_exc}).]{code/kick_angle.py}
 
-\lstinputlisting[language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Arbitrary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
-
-\lstinputlisting[language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the laboratory time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
+\lstinputlisting[captionpos=t, language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Arbitrary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
+\clearpage
+\lstinputlisting[captionpos=t, language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the laboratory time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
 
 \end{appendices}
 
