@@ -79,7 +79,7 @@ FUNCTION {init.urlbst.variables}
   "PMID:" 'pubmedprefix :=	% text prefix printed before PUBMED ref
   "cited " 'citedstring :=	% label in "lastchecked" remark
   "https://doi.org/" 'doiurl :=	% prefix to make URL from DOI
-  "URLs: " 'urlintro :=	% text prefix before URL
+  "\\URL: " 'urlintro :=	% text prefix before URL
   "[link]" 'linktextstring :=	% anonymous link text
   "http://www.ncbi.nlm.nih.gov/pubmed/" 'pubmedurl :=	% prefix to make URL from PUBMED
   "arXiv:" 'eprintprefix :=	% text prefix printed before eprint ref
