@@ -79,11 +79,11 @@ FUNCTION {init.urlbst.variables}
   "PMID:" 'pubmedprefix :=	% text prefix printed before PUBMED ref
   "cited " 'citedstring :=	% label in "lastchecked" remark
   "https://doi.org/" 'doiurl :=	% prefix to make URL from DOI
-  "\\URL: " 'urlintro :=	% text prefix before URL
+  "\textsc{Url}: " 'urlintro :=	% text prefix before URL
   "[link]" 'linktextstring :=	% anonymous link text
   "http://www.ncbi.nlm.nih.gov/pubmed/" 'pubmedurl :=	% prefix to make URL from PUBMED
   "arXiv:" 'eprintprefix :=	% text prefix printed before eprint ref
-  "doi:" 'doiprefix :=	% printed text to introduce DOI
+  "" 'doiprefix :=	% printed text to introduce DOI
   "online" 'onlinestring :=	% label that a resource is online
   "https://arxiv.org/abs/" 'eprinturl :=	% prefix to make URL from eprint ref
 
@@ -782,8 +782,9 @@ FUNCTION {format.doi}
     { doi parse.doi % leaves "https://doi.org/DOI" DOI on the stack
       's := 't :=
       doiform #1 =
-        { "\doi{" s * "}" * }
-        { doiprefix s * t make.href }
+        { % special case -- add HyperTeX specials
+         doiprefix "\doi{" s * "}" * s make.href.hypertex * }
+       { doiprefix "\doi{" * s * "}" * }
       if$
     }
   if$
@@ -897,7 +898,7 @@ FUNCTION {webpage}
   new.block
   title empty$ 'skip$ 'possibly.setup.inlinelink if$
   format.title "title" output.check
-  inbrackets onlinestring output
+  output
   new.block
   year empty$
     'skip$

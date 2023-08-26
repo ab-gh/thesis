@@ -73,7 +73,7 @@
 %% ========================
 %% [TODO)
 %% REMOVE BEFORE SUBMISSION
- \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray, text=DRAFT\ Aug\ 23]{draftwatermark}
+ \usepackage[angle=0, fontsize=0.04\paperwidth, vpos=0.027\paperheight, color=gray, text=DRAFT\ Aug\ 24]{draftwatermark}
 %% ========================
 % BUG
 
@@ -82,11 +82,13 @@
 \renewcommand{\headeright}{\textsc{\rightmark}}
 \renewcommand{\shorttitle}{}
 
+\renewcommand*{\doitext}[1]{\noexpand\textsc{Doi:} #1}
+
 
 \setlength{\parindent}{20pt}
 \onehalfspacing
 \begin{document}
-\newgeometry{left=3cm,right=3cm,top=2cm,bottom=1cm}
+\newgeometry{left=3cm,right=3cm,top=2cm,bottom=0.5cm}
 \input{./titlepage.tex}
 \restoregeometry
 \newpage
@@ -947,7 +949,7 @@ With a sufficiently large number of particles, these random distributions will b
 
 Once an initial simulation process was built, one issue became immediately apparent: to simulate the full \qty{0.5}{\second} extraction region (\autoref{fig:cycle}), the simulation needed to process approximately 235,000 turns. To produce a statistically significant extraction rate, a sufficient number of particles---roughly 500,000---needed to be generated and simulated. A typical desktop computer, for instance, would require over 600 hours to complete such a simulation, at a rate of roughly \qty{13}{\second\per iteration}.
 
-To accelerate the simulation speed to a more reasonable rate, two tools were employed. While not unique to Xsuite, they are both simplified by the package. The first method was the simplest: as mentioned previously, \verb|Xsuite| provides ready-to-go compatibility with \verb|CuPy| and CUDA GPU acceleration. The second method relies on CERN's Batch Service, a high-throughput computing service which allows users to submit jobs via the \textit{HTCondor} framework. 
+To accelerate the simulation speed to a more reasonable rate, two tools were employed. While not unique to Xsuite, they are both simplified by the package. The first method was the simplest: as mentioned previously, \verb|Xsuite| provides ready-to-go compatibility with \verb|CuPy| and CUDA GPU acceleration. The second method relies on CERN's Batch Service, a high-throughput computing service which allows users to submit jobs via the \textit{HTCondor}~\cite{htcondor} framework. 
 
 To submit the simulation jobs to the batch processing service, the simulation software was \textit{containerised} using a Docker~\cite{merkel2014docker} image. This image provides a complete environment for the simulation, including a distribution of Python, the \verb|Xsuite| package, the \verb|CuPy| package, and various other dependencies. 
 
