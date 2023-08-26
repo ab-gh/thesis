@@ -44,4 +44,4 @@
 \contentsline {chapter}{\numberline {5}Conclusion}{60}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Outlook}{61}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Acknowledgements}{62}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Code Snippets}{68}{appendix.1.A}%
+\contentsline {chapter}{\numberline {A}Code Listings}{68}{appendix.1.A}%

@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: abbrvurl.bst
+The style file: abbrvurlcust.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -18,7 +18,12 @@ Warning--I didn't find a database entry for "Wiedemann"
 Warning--to sort, need author or key in cgd
 Warning--to sort, need author or key in xsuite
 Warning--to sort, need author or key in optics_repo
+Warning--to sort, need author or key in htcondor
 Warning--to sort, need author or key in docker
+You can't pop an empty literal stack for entry cgd
+while executing---line 1484 of file abbrvurlcust.bst
+You can't pop an empty literal stack for entry optics_repo
+while executing---line 1484 of file abbrvurlcust.bst
 Warning--empty booktitle in Bryant:CAS
 Warning--empty booktitle in Fraser:CAS
 Warning--empty booktitle in Furukawa2002PROGRESSOR
@@ -29,45 +34,45 @@ Warning--empty journal in Rossbach:247501
 Warning--empty journal in Schicho:2039579
 Warning--empty journal in Sterbini:2158994
 Warning--empty journal in nxcals
-You've used 51 entries,
-            2943 wiz_defined-function locations,
-            995 strings with 15913 characters,
-and the built_in function-call counts, 25175 in all, are:
-= -- 2650
-> -- 1065
+You've used 52 entries,
+            2947 wiz_defined-function locations,
+            997 strings with 16191 characters,
+and the built_in function-call counts, 25246 in all, are:
+= -- 2644
+> -- 1067
 < -- 9
-+ -- 406
++ -- 397
 - -- 342
-* -- 1502
-:= -- 3564
-add.period$ -- 197
-call.type$ -- 51
-change.case$ -- 328
+* -- 1460
+:= -- 3582
+add.period$ -- 199
+call.type$ -- 52
+change.case$ -- 331
 chr.to.int$ -- 0
-cite$ -- 65
-duplicate$ -- 692
-empty$ -- 2200
+cite$ -- 67
+duplicate$ -- 701
+empty$ -- 2242
 format.name$ -- 342
-if$ -- 6462
+if$ -- 6516
 int.to.chr$ -- 0
-int.to.str$ -- 51
+int.to.str$ -- 52
 missing$ -- 40
-newline$ -- 299
+newline$ -- 303
 num.names$ -- 94
-pop$ -- 590
+pop$ -- 603
 preamble$ -- 1
-purify$ -- 273
+purify$ -- 275
 quote$ -- 0
-skip$ -- 1721
+skip$ -- 1751
 stack$ -- 0
-substring$ -- 914
-swap$ -- 219
-text.length$ -- 75
+substring$ -- 909
+swap$ -- 164
+text.length$ -- 65
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 202
-warning$ -- 14
+type$ -- 206
+warning$ -- 15
 while$ -- 127
-width$ -- 53
-write$ -- 627
-(There were 18 warnings)
+width$ -- 54
+write$ -- 636
+(There were 2 error messages)
