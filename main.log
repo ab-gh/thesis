@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  16 NOV 2023 14:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  16 NOV 2023 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1429,6 +1429,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX Warning: Reference `sec:transdisp' on page 1 undefined on input line 602.
 
 
+LaTeX Warning: Citation `PIMMS' on page 25 undefined on input line 602.
+
+
 LaTeX Warning: Reference `eq:normalised' on page 25 undefined on input line 613.
 
 
@@ -1593,4 +1596,123 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [31 <./rfko-phase-space-schematic.png>]
 Chapter 3.
 
-LaTeX Warning: 
+LaTeX Warning: Reference `sec:modelling-slow-extraction' on page 32 undefined on input line 770.
+
+
+LaTeX Warning: Reference `eq:brho' on page 32 undefined on input line 776.
+
+
+LaTeX Warning: Reference `eq:relativistic_energy' on page 32 undefined on input line 776.
+
+
+LaTeX Warning: Reference `eq:relativistic_momentum' on page 32 undefined on input line 776.
+
+
+Package siunitx Warning: Unit macro \atomicmassunit has been deprecated in
+(siunitx)                this release.
+(siunitx)                
+(siunitx)                The BIPM have removed this unit from the SI Brochure.
+(siunitx)                You should define it yourself using \DeclareSIUnit in
+(siunitx)                your source. The current definition is
+(siunitx)                
+(siunitx)                \DeclareSIUnit\atomicmassunit{u}
+
+
+LaTeX Warning: Reference `eq:ion_momentum' on page 32 undefined on input line 794.
+
+
+LaTeX Warning: Reference `eq:brho' on page 32 undefined on input line 794.
+
+
+Underfull \vbox (badness 2932) has occurred while \output is active []
+
+ [32
+
+]
+<ps-sx-system.png, id=359, 2584.65625pt x 1877.0125pt>
+File: ps-sx-system.png Graphic file (type png)
+<use ps-sx-system.png>
+Package pdftex.def Info: ps-sx-system.png  used on input line 800.
+(pdftex.def)             Requested size: 426.79135pt x 309.92282pt.
+
+
+LaTeX Warning: Reference `fig:schematic' on page 33 undefined on input line 806.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33 <./ps-sx-system.png>]
+
+LaTeX Warning: Reference `fig:schematic' on page 34 undefined on input line 812.
+
+
+LaTeX Warning: Reference `fig:schematic' on page 34 undefined on input line 814.
+
+
+LaTeX Warning: Reference `fig:tunemap' on page 34 undefined on input line 816.
+
+
+LaTeX Warning: Reference `fig:cycle' on page 34 undefined on input line 823.
+
+<tunemap.png, id=370, 423.38174pt x 315.94035pt>
+File: tunemap.png Graphic file (type png)
+<use tunemap.png>
+Package pdftex.def Info: tunemap.png  used on input line 827.
+(pdftex.def)             Requested size: 256.07741pt x 191.09387pt.
+<cyclegraphs.png, id=371, 715.35255pt x 715.473pt>
+File: cyclegraphs.png Graphic file (type png)
+<use cyclegraphs.png>
+Package pdftex.def Info: cyclegraphs.png  used on input line 833.
+(pdftex.def)             Requested size: 384.1096pt x 384.17714pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `sec:long' on page 34 undefined on input line 837.
+
+
+LaTeX Warning: Citation `Sterbini:2158994' on page 34 undefined on input line 840.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34]
+
+LaTeX Warning: Citation `bouvet' on page 35 undefined on input line 847.
+
+
+LaTeX Warning: Citation `Gasior:895142' on page 35 undefined on input line 857.
+
+
+LaTeX Warning: Reference `fig:qmeter-signal' on page 35 undefined on input line 857.
+
+
+LaTeX Warning: Citation `ipac' on page 35 undefined on input line 857.
+
+
+LaTeX Warning: Reference `tab:qmeter-params' on page 35 undefined on input line 857.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[35 <

@@ -19,7 +19,7 @@
 18. p23: Corrected synchronous condition eq2.40. ✅
 19. p24: "Eight stable 'particles'" -> "eight stable bunches". ✅
 20. p24: Removed 'R' in eq2.42 and 2.43 (accidentally left over from removing 2pi by R=L/2pi). ✅
-21. p25: "rapidly gain energy" + "or lose". 🟡
+21. p25: "rapidly gain energy" + "or lose". ✅
 22. p26: Reference sec 2.4 of PIMMS. 🟡
 23. p26: Better argument for vertical transverse plane being neglected, as y is present (considered small?). 🟡
 24. p27: eq2.60 (2/3) -> (3/2). 🟡

@@ -113,6 +113,12 @@ F.~Tecker.
 \newblock In {\em {CAS - CERN Accelerator School 2019}: {Introduction to Accelerator Physics}}, 11 2020.
 \newblock \href {https://arxiv.org/abs/2011.02932} {\path{arXiv:2011.02932}}.
 
+\bibitem{PIMMS}
+L.~Badano, M.~Benedikt, P.~J. Bryant, M.~Crescenti, P.~Holy, A.~T. Maier, M.~Pullia, S.~Rossi, and P.~Knaus.
+\newblock {\em {Proton-Ion Medical Machine Study (PIMMS), 1}}.
+\newblock 2000.
+\newblock \textsc{Url}: \url{https://cds.cern.ch/record/385378}.
+
 \bibitem{kobayashi}
 Y.~Kobayashi.
 \newblock Theory of the resonant beam ejection from synchrotrons.
