@@ -156,7 +156,7 @@ As previously mentioned, \textit{fast} extraction provides a spill of particles 
 
 This method of \textbf{\textit{single-turn} fast extraction} (~\autoref{fig:fast_diagram}) is used at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating rings in the LHC~\cite{Fraser:CAS}. The PSB uses the same method, but has the added complexity of ``merging'' four separate stacked rings to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems is shown in~\ref{fig:chain}, where red diamonds indicate fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain to discard the circulating beam at the SPS and LHC.
 
-In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters in radius, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, known as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum~\cite{PhysRevSTAB.14.030101}. Previously implemented in extraction from the PS, the beam orbit was bumped similarly to single-turn fast extraction, but was instead forced over the blade of an electrostatic septum (ES), such that a segment of the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is then kicked back onto its orbit. After the next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
+In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters in radius, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, known as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum~\cite{PhysRevSTAB.14.030101}. Previously implemented in extraction from the PS, the beam orbit was bumped similarly to single-turn fast extraction, but was instead forced over the blade of an electrostatic septum (ES), such that a segment of the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is then kicked back onto its orbit. After the next turn, the beam has been ``rotated'' in phase space by a quarter turn, and the process repeats, until finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
 
 \begin{figure}[hb]
   \centering
@@ -187,6 +187,10 @@ Simulations can, therefore, provide an important tool in understanding slow extr
 To aid with the design and construction of CERN's Large Electron-Positron collider (LEP, the predecessor to LHC), the \textit{Methodical Accelerator Design Program} (MAD)~\cite{Iselin:MAD} was developed. This FORTRAN-based scripting tool allowed physicists to define the arrangement and strengths of magnetic elements around an accelerator (the \textit{lattice}), define beam parameters, and calculate the resulting motion of particles (the \textit{optics}). MAD, and its latest version, \verb|MAD-X|, quickly became the \textit{de facto} standard within CERN's beam physics community. However, in the twenty years since the release of \verb|MAD-X|, the landscape of computational accelerator physics has become awash with a wide array of tools, codes, and standards, each with their own specialisations. 
 
 Newer tools are introducing improvements such as ``ready-to-go'' compatibility with General-Purpose Graphical Processing Unit (GPGPU) acceleration. GPUs are specialised hardware capable of performing highly optimised matrix and vector calculations. This makes them ideal for the matrix calculations required for particle accelerator simulations. Additionally, \textit{embarrassingly parallel}\footnote{A problem which requires minimal to no effort to be separated into a large number of independent, concurrently-processed tasks.} tasks can be run on a large number of smaller processing platforms, rather than a single large platform. These platforms could be processing units within a GPGPU, or a discrete computer host on a batch-processing network.
+
+\section{Outline and Aims}
+
+This thesis will present the novel implementation and simulation of a Slow Extraction method at the East Area experimental facility, with the aim to confirm both the accuracy of the simulated frequency response, and the benefits of GPU-accelerated simulation software. To fully understand the effects of the beam extraction method, the challenges in accurate simulation, and the benefits gained, this thesis will outline the theory required to construct these simulations (\autoref{chap:theory}), the implementation of the chosen slow extraction method both in the real-world at the PS, and in simulation (\autoref{chap:implementation}), and the analysis and results of the simulations (\autoref{chap:results}). Finally, the conclusions of the work will be presented, and future work outlined (\autoref{chap:conclusion}).
 
 \chapter{Accelerator Physics Theory}\label{chap:theory}
 
@@ -733,7 +737,7 @@ If this condition is plotted on a $(Q, A)$ graph, the stable triangle shown in~\
 
 A variety of slow extraction implementations can be found across particle accelerators. While all will vary to some degree, most can be categorised by which parameter is used to control extraction, and which equipment or magnet is employed. For example:
 \begin{itemize}
-  \item The \textit{National Center for Oncological Hadrontherapy} (CNAO) uses \textbf{Betatron Core} slow extraction~\cite{Falbo:IPAC2018-TUZGBF3}: a circular magnet produces a longitudinal acceleration, driving particles into 1/3rd-integer resonance.
+  \item The \textit{National Center for Oncological Hadron Therapy} (CNAO) uses \textbf{Betatron Core} slow extraction~\cite{Falbo:IPAC2018-TUZGBF3}: a circular magnet produces a longitudinal acceleration, driving particles into 1/3rd-integer resonance.
   \item The \textit{MedAustron} facility has also used \textbf{Constant Optics Slow Extraction} (COSE)~\cite{ArrutiaSota:2845862}, simultaneously scaling the magnetic strength of bending dipoles, and sweeping the betatron tune. This method allows for the alignment of separatrices at different momenta, improving the spill quality.
   \item \textbf{Phase Displacement Extraction} (PDE) allows for resonant extraction without the need for ramping magnetic elements. This avoids perturbations or ramp-rate limits which could arise, and has been tested at both the PS and MedAustron~\cite{ARRUTIASOTA2022167007}.
   \item The \textit{Xi’an Proton Application Facility} (XiPAF) uses \textbf{Radio-Frequency Knock Out} (RFKO) extraction~\cite{Yao:2016cnf}, an amplitude-driven method that transversely ``heats'' (excites) the beam, increasing emittance and amplitude into unstable regions.
@@ -752,7 +756,7 @@ The principle of RFKO, as illustrated in~\autoref{fig:rfko_phase_space}, is to e
   \caption[Phase-space schematic of RFKO slow extraction]{A phase-space schematic of RFKO, showing the emittance growth (dashed to solid ellipse) increasing the amplitude of a stable particle (white) into the unstable region (grey), where it moves along the separatrices (arrows) into extraction.}\label{fig:rfko_phase_space}
 \end{figure}
 
-\chapter{Implementation and Simulation}
+\chapter{Implementation and Simulation}\label{chap:implementation}
 
 This chapter presents the novel implementation of RFKO slow extraction at the PS, providing a spill to the East Area fixed-target experiments. As motivated in~\autoref{sec:modelling-slow-extraction}, this chapter will also outline the development of simulation models for the RFKO system using existing particle tracking and accelerator optics software. Significant effort was made to streamline the simulation process, leverage the GPU acceleration available in \verb|Xsuite|, and make full use of the computing platforms available at CERN.
 
@@ -780,7 +784,7 @@ A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at 
 %These values, when computed, result in a 
 and a rest mass of \qty{193.74}{\giga\electronvolt\per\clight\squared}. The equivalent proton momentum, using~\autoref{eq:ion_momentum} and~\autoref{eq:brho}, is then calculated as \qty{5.397}{\giga\electronvolt}. 
 
-Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles\per bunch}) \qty{5.397}{\giga\electronvolt} proton beam was chosen, and injected into the PS through a single PSB ring (ring 3). The cycle was configured to use two basic beam-cycle periods of \qty{1.2}{\second}, in order to extend the window available for a spill to \qty{500}{\milli\second}.
+Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles\per bunch}) \qty{5.397}{\giga\electronvolt}\footnote{a low intensity \textit{beam} of a single, high-intensity bunch} proton beam was chosen, and injected into the PS through a single PSB ring (ring 3). The cycle was configured to use two basic beam-cycle periods of \qty{1.2}{\second}, in order to extend the window available for a spill to \qty{500}{\milli\second}.
 
 \begin{figure}
   \centering
@@ -839,7 +843,7 @@ where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and mag
 \begin{equation}
   \theta_B = \frac{B\cdot L}{p}
   \label{eq:kick-magnetic}
-\end{equation} where $L$ is the electrode length \qty{935}{\milli\meter}. The stripline components $B$ and $E$ both contribute to the kick, and so the summation of these two angles provides a maximum deflection of \qty{10.814605}{\micro\radian}.
+\end{equation} where $L$ is the electrode length \qty{935}{\milli\meter}. The stripline components $B$ and $E$ both contribute to the kick, and so the summation of these two angles provides a maximum deflection of \qty{10.81}{\micro\radian} for the \qty{5.397}{\giga\electronvolt} proton beam.
 
 To drive this transverse kicker, two systems were used. Initially, the \verb|Qmeter| control program~\cite{Gasior:895142} provided an interface to this kicker. While the program was designed---and used extensively in this study---for tune measurements, it can be exploited to provide a frequency-modulated \textit{chirp} signal crossing the \nth{3}-order resonance to the TFB plates. The program was used to configure the \textit{start} and \textit{stop} frequencies for the frequency-modulated chirp (as unit interval multiples of the revolution frequency $f_{rev}$), chirp length (in $2^n$ revolutions), and the time after which the chirp would repeat (in milliseconds). This produced the effect of a repeated frequency-modulated chirp windowed by a square signal (\autoref{fig:qmeter-signal}). Previous studies~\cite{ipac} found suitable parameters to produce a baseline RFKO extraction implementation, tabulated in~\autoref{tab:qmeter-params}, and found a significant dependency of spill quality on the chirp repetition rate.
 
@@ -972,7 +976,7 @@ This image was made available on CERN's image registry using a \textit{continuou
 \end{figure}
 
 
-\chapter{Analysis and Comparison of Results}
+\chapter{Analysis and Comparison of Results}\label{chap:results}
 This chapter presents the methodology and results of experiments seeking to confirm the successful implementation of RFKO slow extraction at the PS for East Area spills. The accuracy of the simulation models will be confirmed by analysing the spill characteristics, compared between experimental data taken in June 2023 and the results of simulations. This chapter will also seek to demonstrate the benefits of GPU-accelerated particle simulations using \verb|Xsuite|, as compared to typical CPU workflows.
 
 
@@ -1071,7 +1075,7 @@ where $f_c$ is the cutoff frequency, $n$ is the order of the filter (which deter
 
 For \textbf{bunched beams}, the low-pass filter was found to have a cutoff frequency of \qty[separate-uncertainty = true]{1.14(0.173)}{\kilo\hertz} in machine measurements, and \qty[separate-uncertainty = true]{1.49(0.257)}{\kilo\hertz} in simulation. Both machine measurement and simulation fits resulted in an order of exactly 1, to 7 decimal places. These results show that the frequency characteristics of the bunched-beam RFKO simulations are accurate to the machine implementation.
 
-For \textbf{coasting beams}, the fitted low-pass filter has a cutoff frequency of \qty[separate-uncertainty = true]{1.12(0.190)}{\kilo\hertz} in machine measurements, and \qty[separate-uncertainty = true]{5.26(1.03)}{\kilo\hertz}. While these results have a significantly larger error than the bunched beam results, they are still in agreement with each other. The filter order $n$, however, is inconsistent between simulation and measurements: in simulation, the curve is fit to $n=10$, a very steep roll-off; for the machine measurements, the curve is fit to $n=1$.
+For \textbf{coasting beams}, the fitted low-pass filter has a cutoff frequency of \qty[separate-uncertainty = true]{1.12(0.190)}{\kilo\hertz} in machine measurements, and \qty[separate-uncertainty = true]{5.26(1.03)}{\kilo\hertz} in simulation. While these results have a significantly larger error than the bunched beam results, they are still in agreement with each other. The filter order $n$, however, is inconsistent between simulation and measurements: in simulation, the curve is fit to $n=10$, a very steep roll-off; for the machine measurements, the curve is fit to $n=1$.
 
 Both plots also show a \textit{minimum transfer characteristic}, where the frequency response is at its lowest: for bunched beams, this minimum is at \qty{4}{\kilo\hertz}, meaning a chirp signal repeating every \qty{0.25}{\milli\second} will have the least effect on frequencies present in the spill signal. For coasting beams, this minimum is less clear, and appears to shift to higher frequencies with increasing chirp signal voltage.
 
@@ -1185,7 +1189,7 @@ This synchrotron motion also effects the extraction transit time. The distance o
 \end{figure}
 
 
-\chapter{Conclusion}
+\chapter{Conclusion}\label{chap:conclusion}
 
 This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) for the East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed-target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results of machine studies presented in~\autoref{results:freq_response} and~\autoref{results:sdf} use both time-domain and frequency-domain analysis to show that the system is capable of producing spills with a flat frequency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors of up to \qty{80}{\percent} for bunched beams, and \qty{60}{\percent} for coasting beams.
 

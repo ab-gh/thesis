@@ -14,64 +14,59 @@ Warning--entry type for "brunner" isn't style-file defined
 --line 26 of file refs.bib
 Warning--entry type for "Hegglin:2239398" isn't style-file defined
 --line 570 of file refs.bib
-Warning--to sort, need author or key in cgd
-Warning--to sort, need author or key in xsuite
-Warning--to sort, need author or key in optics_repo
-Warning--to sort, need author or key in htcondor
-Warning--to sort, need author or key in docker
+Warning--empty booktitle in Fraser:CAS
+Warning--empty journal in Iselin:MAD
+Warning--empty journal in Rossbach:247501
+Warning--empty booktitle in Furukawa2002PROGRESSOR
+Warning--empty journal in Sterbini:2158994
+Warning--empty journal in Gasior:895142
 You can't pop an empty literal stack for entry cgd
 while executing---line 1484 of file abbrvurlcust.bst
 You can't pop an empty literal stack for entry optics_repo
 while executing---line 1484 of file abbrvurlcust.bst
-Warning--empty booktitle in Bryant:CAS
-Warning--empty booktitle in Fraser:CAS
-Warning--empty booktitle in Furukawa2002PROGRESSOR
-Warning--empty journal in Gasior:895142
-Warning--empty journal in Iselin:MAD
-Warning--empty booktitle in Nagaslaev:2011zz
-Warning--empty journal in Rossbach:247501
 Warning--empty journal in Schicho:2039579
-Warning--empty journal in Sterbini:2158994
 Warning--empty journal in nxcals
+Warning--empty booktitle in Bryant:CAS
+Warning--empty booktitle in Nagaslaev:2011zz
 You've used 53 entries,
             2947 wiz_defined-function locations,
             1001 strings with 16293 characters,
-and the built_in function-call counts, 25599 in all, are:
-= -- 2681
-> -- 1075
+and the built_in function-call counts, 19498 in all, are:
+= -- 1970
+> -- 683
 < -- 9
-+ -- 400
-- -- 344
-* -- 1473
-:= -- 3632
++ -- 225
+- -- 172
+* -- 960
+:= -- 2500
 add.period$ -- 203
 call.type$ -- 53
-change.case$ -- 334
+change.case$ -- 56
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 713
-empty$ -- 2281
-format.name$ -- 344
-if$ -- 6613
+cite$ -- 63
+duplicate$ -- 607
+empty$ -- 2117
+format.name$ -- 172
+if$ -- 5566
 int.to.chr$ -- 0
 int.to.str$ -- 53
 missing$ -- 42
 newline$ -- 309
-num.names$ -- 96
-pop$ -- 616
+num.names$ -- 48
+pop$ -- 439
 preamble$ -- 1
-purify$ -- 278
+purify$ -- 0
 quote$ -- 0
-skip$ -- 1778
+skip$ -- 1576
 stack$ -- 0
-substring$ -- 916
+substring$ -- 648
 swap$ -- 165
 text.length$ -- 67
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
-warning$ -- 15
-while$ -- 129
+type$ -- 0
+warning$ -- 10
+while$ -- 81
 width$ -- 55
 write$ -- 648
 (There were 2 error messages)
