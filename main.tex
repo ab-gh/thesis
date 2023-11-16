@@ -97,7 +97,7 @@
 \thispagestyle{empty}
 \begin{abstract}
   \setlength{\parindent}{20pt}
-Radio-Frequency Knockout (RFKO) is a method of resonant slow beam extraction which is able to produce continuous particle spills over durations longer than can be achieved with fast single-turn or non-resonant multi-turn extraction. By using transverse excitation to gradually drive the circulating particles into resonance, spills can be produced over many thousands of turns, at a low intensity, and with a flat time profile.These spills can be delivered to facilities---such as fixed-target experiments or hadron therapy gantries---which require a continuous, low-intensity particle flux of durations significantly longer than the particle revolution period.
+Radio-Frequency Knockout (RFKO) is a method of resonant slow beam extraction which is able to produce continuous particle spills over durations longer than can be achieved with fast single-turn or non-resonant multi-turn extraction. By using transverse excitation to gradually drive the circulating particles into resonance, spills can be produced over many thousands of turns, at a low intensity, and with a flat time profile. These spills can be delivered to facilities---such as fixed-target experiments or hadron therapy gantries---which require a continuous, low-intensity particle flux of durations significantly longer than the particle revolution period.
 
 In order to accurately and efficiently simulate this extraction process over a wide range of timescales, new modelling tools and computing platforms must be explored. By utilising optimised computational hardware---such as General-Purpose Graphics Processing Units (GPGPUs), and next-generation simulation software (such as \verb|Xsuite|), computation times for simulations can be reduced by several orders of magnitude while remaining accurate compared to empirical measurements.
 
@@ -156,7 +156,7 @@ As previously mentioned, \textit{fast} extraction provides a spill of particles 
 
 This method of \textbf{\textit{single-turn} fast extraction} (~\autoref{fig:fast_diagram}) is used at two locations in the SPS---Long Straight Sections (LSS) 4 and 6---to fill the two counter-rotating rings in the LHC~\cite{Fraser:CAS}. The PSB uses the same method, but has the added complexity of ``merging'' four separate stacked rings to one transfer line~\cite{Metzmacher:2061508}. LEIR likewise performs fast extraction~\cite{Ghithan:2017wpd}. The general layout of these systems is shown in~\ref{fig:chain}, where red diamonds indicate fast extraction locations. Fast extraction systems are also used at the beam dump facilities at various stages of the accelerator chain to discard the circulating beam at the SPS and LHC.
 
-In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters across, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, known as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum~\cite{PhysRevSTAB.14.030101}. Previously implemented in extraction from the PS, the beam orbit was bumped similarly to single-turn fast extraction, but was instead forced over the blade of an electrostatic septum (ES), such that a segment of the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is then kicked back onto its orbit. After the next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
+In accelerator-to-accelerator contexts, the synchronous nature of fast extraction allows particles to remain bunched.~\textbf{Multi-turn fast extraction} extends this benefit, and is performed when filling the SPS for its fixed-target experiments (North Area) from the PS. As the SPS (\qty{6.9}{km}) is approximately 11 times longer in circumference than the PS\footnote{The PS is 100 meters in radius, and therefore $200\pi$\si{m}} (\qty{628}{m}), the entire SPS can be filled by 11 successive extractions of the full PS. This method, known as \textit{continuous transfer} (CT), introduces the concept of ``shaving'' the beam with an electrostatic septum~\cite{PhysRevSTAB.14.030101}. Previously implemented in extraction from the PS, the beam orbit was bumped similarly to single-turn fast extraction, but was instead forced over the blade of an electrostatic septum (ES), such that a segment of the beam is `sliced' off, kicked towards a magnetic septum (MS), and extracted. The remaining beam is then kicked back onto its orbit. After the next turn, the beam has been ``rotated'' by a quarter turn, and the process repeats, until finally the remaining core of the beam is bumped directly to the magnetic septum. This provides a spill to the SPS of five bunches over five beam rotations from a single PS bunch.
 
 \begin{figure}[hb]
   \centering
@@ -164,7 +164,7 @@ In accelerator-to-accelerator contexts, the synchronous nature of fast extractio
   \caption{Diagram of a general multi-turn fast extraction system~\cite{Fraser:CAS}.}\label{fig:fast_multi_diagram}
 \end{figure}
 
-However, this method of increasing the spill time is limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large. For example, if a 50\% extraction efficiency is desired over $10^4$ turns, the beam thickness sliced off by the Electrostatic Septum (ES) must be the same as the thickness of the blade itself. For the SPS, the ES has an effective blade thickness of \qty{500}{\micro\meter}~\cite{sps-es.23.023501}. The required diameter of the beam, therefore, would be $2\cdot 25\mu m\cdot 10^4 = $ \qty{10}{\meter}~\cite{brunner}. This diameter would be larger than the beam pipes, and clearly physically impossible.
+However, this method of increasing the spill time is limited by the width of the septum blades. As the amount of beam scraped off per turn decreases, the effect of the particles lost on the septum blade increases. To maintain a reasonable extraction efficiency, the beam size would have to become exponentially large. For example, if a 50\% extraction efficiency is desired over $10^4$ turns, the beam thickness sliced off by the Electrostatic Septum (ES) must be the same as the thickness of the blade itself. For the SPS, the ES has an effective blade thickness of \qty{500}{\micro\meter}~\cite{sps-es.23.023501}. The required diameter of the beam, therefore, would be $2\cdot 500\mu m\cdot 10^4 = $ \qty{10}{\meter}~\cite{brunner}. This diameter would be larger than the beam pipes, and clearly physically impossible.
 
 In order to provide spills over a longer duration, over many thousands of turns, \textit{slow extraction} must be used. 
 
@@ -242,7 +242,7 @@ One important distinction in a relativistic reference frame is the \textit{invar
     m=\gamma_c m_0
 \end{equation}
 This relativistic mass is conserved just the same as rest mass, and follows the $p=mv$ formula as in the rest frame. 
-The rest \text{energy} $E_0$ and \textit{momentum} $m_0$ are likewise defined in the relativistic frame:
+The rest \text{energy} $E_0$ and \textit{mass} $m_0$ are likewise defined in the relativistic frame:
 \begin{equation}
     E=\gamma_c m_0c^2
     \label{eq:relativistic_energy}
@@ -272,7 +272,7 @@ Following the basis vectors defining the coordinate system, the following variab
     %\item $p_t(s)=\Delta E/pc$~---~the particle's energy difference, divided by the reference momentum times the speed of light $c$.
 \end{itemize} 
 
-These variables provide 6 vectors fully describing the position of a particle. However, for the remainder of this thesis, the pair of longitudinal variables $(z, \delta)$ will be treated separately to the transverse variable pairs $(x, x')$ and $(y, y')$. This enables a simpler understanding of the effects of beam bending and focussing magnets, as these effects are independent of the longitudinal variables.
+These variables provide 6 vectors fully describing the position of a particle. However, for the remainder of this thesis, the pair of longitudinal variables $(z, \delta)$ will be treated separately to the transverse variable pairs $(x, x')$ and $(y, y')$, enabling a simpler understanding of the effects of beam bending and focussing magnets.
 
 \subsection{Design Orbit and Dipoles}
 
@@ -284,17 +284,17 @@ This equation can already show why magnetic fields are typically used to bend pa
 
 The other force experienced by a particle in an accelerator is a consequence of conservation of momentum:
 \begin{equation}
-\vec F_{\text{centrif.}}=\frac{m_0v^2}{\rho}\label{eq:centrifugal}
-\end{equation} where $m_0$ is the particle's rest mass, and $\rho$ is the radius of the particle's orbit inside the accelerator.
+\vec F_{\text{centrif.}}=\frac{mv^2}{\rho}\label{eq:centrifugal}
+\end{equation} where mass $m = m_0\gamma_c$ is the particle's rest mass times the relativistic gamma factor, and $\rho$ is the radius of the particle's orbit inside the accelerator.
 
 Equating equations~\ref{eq:centrifugal} and~\ref{eq:lorentz} yields
 \begin{equation}
 B\rho=\frac pq
 \label{eq:brho}
 \end{equation}
-The quantity $B\rho$ is known as the \textit{magnetic rigidity} of a beam, and defines the bending angle of a particle for a given magnetic field. 
+The quantity $B\rho$ is known as the \textit{magnetic rigidity} of a beam, and defines the bending radius of a particle for a given magnetic field. 
 
-If the relativistic momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight\per amu} (atomic mass unit), the magnetic rigidity can be expressed in Tesla-meters:
+If the relativistic momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight}, the magnetic rigidity can be expressed in Tesla-meters:
 \begin{equation}
 B\rho \left[\unit{\tesla\meter}\right] = 3.3356\cdot p\left[\unit{\giga\electronvolt\per\clight}\right]
 \label{tesla-meters}

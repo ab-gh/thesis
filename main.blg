@@ -14,7 +14,6 @@ Warning--entry type for "brunner" isn't style-file defined
 --line 26 of file refs.bib
 Warning--entry type for "Hegglin:2239398" isn't style-file defined
 --line 570 of file refs.bib
-Warning--I didn't find a database entry for "Wiedemann"
 Warning--to sort, need author or key in cgd
 Warning--to sort, need author or key in xsuite
 Warning--to sort, need author or key in optics_repo
@@ -34,45 +33,45 @@ Warning--empty journal in Rossbach:247501
 Warning--empty journal in Schicho:2039579
 Warning--empty journal in Sterbini:2158994
 Warning--empty journal in nxcals
-You've used 52 entries,
+You've used 53 entries,
             2947 wiz_defined-function locations,
-            997 strings with 16191 characters,
-and the built_in function-call counts, 25246 in all, are:
-= -- 2644
-> -- 1067
+            1001 strings with 16293 characters,
+and the built_in function-call counts, 25599 in all, are:
+= -- 2681
+> -- 1075
 < -- 9
-+ -- 397
-- -- 342
-* -- 1460
-:= -- 3582
-add.period$ -- 199
-call.type$ -- 52
-change.case$ -- 331
++ -- 400
+- -- 344
+* -- 1473
+:= -- 3632
+add.period$ -- 203
+call.type$ -- 53
+change.case$ -- 334
 chr.to.int$ -- 0
-cite$ -- 67
-duplicate$ -- 701
-empty$ -- 2242
-format.name$ -- 342
-if$ -- 6516
+cite$ -- 68
+duplicate$ -- 713
+empty$ -- 2281
+format.name$ -- 344
+if$ -- 6613
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 40
-newline$ -- 303
-num.names$ -- 94
-pop$ -- 603
+int.to.str$ -- 53
+missing$ -- 42
+newline$ -- 309
+num.names$ -- 96
+pop$ -- 616
 preamble$ -- 1
-purify$ -- 275
+purify$ -- 278
 quote$ -- 0
-skip$ -- 1751
+skip$ -- 1778
 stack$ -- 0
-substring$ -- 909
-swap$ -- 164
-text.length$ -- 65
+substring$ -- 916
+swap$ -- 165
+text.length$ -- 67
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 206
+type$ -- 208
 warning$ -- 15
-while$ -- 127
-width$ -- 54
-write$ -- 636
+while$ -- 129
+width$ -- 55
+write$ -- 648
 (There were 2 error messages)

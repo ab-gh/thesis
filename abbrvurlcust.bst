@@ -1439,9 +1439,9 @@ FUNCTION {presort}
   'sort.key$ :=
 }
 
-ITERATE {presort}
+% ITERATE {presort}
 
-SORT
+% SORT
 
 STRINGS { longest.label }
 

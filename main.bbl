@@ -288,6 +288,12 @@ F.~Tecker.
 \newblock In {\em {CAS - CERN Accelerator School 2019}: {Introduction to Accelerator Physics}}, 11 2020.
 \newblock \href {https://arxiv.org/abs/2011.02932} {\path{arXiv:2011.02932}}.
 
+\bibitem{Wiedemann}
+H.~Wiedemann.
+\newblock {\em Particle Accelerator Physics}.
+\newblock Springer International Publishing, 2015.
+\newblock \doi{10.1007/978-3-319-18317-6}.
+
 \bibitem{nxcals}
 J.~Wozniak and C.~Roderick.
 \newblock {NXCALS - Architecture and Challenges of the Next CERN Accelerator Logging Service}.
