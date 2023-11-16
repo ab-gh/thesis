@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  16 NOV 2023 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  16 NOV 2023 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,8 +766,6 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip78
 \thm@headsep=\skip79
 \dth@everypar=\toks48
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/draftwatermark/draftwatermark.sty
-Package: draftwatermark 2020/12/08 3.0 Put a gray textual watermark on document pages
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 90.
  (./main.aux)
@@ -921,10 +919,10 @@ File: Royal_Holloway_coat_of_arms.png Graphic file (type png)
 <use Royal_Holloway_coat_of_arms.png>
 Package pdftex.def Info: Royal_Holloway_coat_of_arms.png  used on input line 22.
 (pdftex.def)             Requested size: 149.37958pt x 236.78143pt.
- [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
+ [1
 
 
- <./Royal_Holloway_coat_of_arms.png>]) (./declaration.tex
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Royal_Holloway_coat_of_arms.png>]) (./declaration.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
@@ -1115,16 +1113,16 @@ LaTeX Warning: Reference `sec:matrix' on page 1 undefined on input line 185.
 LaTeX Warning: Citation `Iselin:MAD' on page 11 undefined on input line 187.
 
 
-LaTeX Warning: Reference `chap:theory' on page 11 undefined on input line 193.
+LaTeX Warning: Reference `chap:theory' on page 1 undefined on input line 193.
 
 
-LaTeX Warning: Reference `chap:implementation' on page 11 undefined on input line 193.
+LaTeX Warning: Reference `chap:implementation' on page 1 undefined on input line 193.
 
 
-LaTeX Warning: Reference `chap:results' on page 11 undefined on input line 193.
+LaTeX Warning: Reference `chap:results' on page 1 undefined on input line 193.
 
 
-LaTeX Warning: Reference `chap:conclusion' on page 11 undefined on input line 193.
+LaTeX Warning: Reference `chap:conclusion' on page 1 undefined on input line 193.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1341,6 +1339,16 @@ LaTeX Warning: Reference `eq:motion_px' on page 21 undefined on input line 431.
 LaTeX Warning: Reference `eq:quadrupole' on page 21 undefined on input line 438.
 
 
+LaTeX Warning: Citation `Hillert:2107.02614' on page 21 undefined on input line 456.
+
+
+LaTeX Warning: Citation `Hillert:2107.02614' on page 21 undefined on input line 465.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1349,13 +1357,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Reference `eq:lorentz' on page 22 undefined on input line 511.
+LaTeX Warning: Reference `eq:lorentz' on page 22 undefined on input line 520.
 
 
-LaTeX Warning: Reference `eq:brho' on page 22 undefined on input line 528.
+LaTeX Warning: Citation `Tecker:2674860' on page 22 undefined on input line 532.
 
 
-Underfull \vbox (badness 5652) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1367,17 +1375,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22]
 
-LaTeX Warning: Reference `sec:transdisp' on page 23 undefined on input line 548.
+LaTeX Warning: Reference `eq:brho' on page 23 undefined on input line 537.
 
 
-LaTeX Warning: Reference `eq:dispersion' on page 23 undefined on input line 557.
+LaTeX Warning: Reference `sec:transdisp' on page 23 undefined on input line 557.
 
 
-LaTeX Warning: Citation `lbd:tecker' on page 23 undefined on input line 557.
+LaTeX Warning: Reference `eq:dispersion' on page 23 undefined on input line 566.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+LaTeX Warning: Citation `lbd:tecker' on page 23 undefined on input line 566.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1388,31 +1395,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [23]
 
-LaTeX Warning: Reference `fig:long_phase_space' on page 24 undefined on input line 580.
+LaTeX Warning: Reference `fig:long_phase_space' on page 24 undefined on input line 589.
 
 
-LaTeX Warning: Citation `lbd:tecker' on page 24 undefined on input line 580.
+LaTeX Warning: Citation `lbd:tecker' on page 24 undefined on input line 589.
 
-<long-phase-space.png, id=267, 2097.8375pt x 863.225pt>
+<long-phase-space.png, id=266, 2097.8375pt x 863.225pt>
 File: long-phase-space.png Graphic file (type png)
 <use long-phase-space.png>
-Package pdftex.def Info: long-phase-space.png  used on input line 584.
+Package pdftex.def Info: long-phase-space.png  used on input line 593.
 (pdftex.def)             Requested size: 384.1096pt x 158.04765pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 591.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@UnitsNiceFrac ' on input line 591.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 591.
-
-
-LaTeX Warning: Reference `sec:transdisp' on page 1 undefined on input line 593.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1422,13 +1414,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24 <./long-phase-space.png>]
 
-LaTeX Warning: Reference `eq:normalised' on page 25 undefined on input line 604.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 600.
 
 
-LaTeX Warning: Reference `sec:matrix' on page 25 undefined on input line 617.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@UnitsNiceFrac ' on input line 600.
 
 
-Underfull \vbox (badness 7759) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 600.
+
+
+LaTeX Warning: Reference `sec:transdisp' on page 1 undefined on input line 602.
+
+
+LaTeX Warning: Reference `eq:normalised' on page 25 undefined on input line 613.
+
+
+LaTeX Warning: Reference `sec:matrix' on page 25 undefined on input line 626.
+
+
+Underfull \vbox (badness 3989) has occurred while \output is active []
 
 
 
@@ -1440,21 +1447,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [25]
 
-LaTeX Warning: Reference `eq:normalised_sextupole_strength' on page 26 undefined on input line 672.
+LaTeX Warning: Reference `eq:normalised_sextupole_strength' on page 26 undefined on input line 681.
 
 
-LaTeX Warning: Citation `kobayashi' on page 26 undefined on input line 675.
+LaTeX Warning: Citation `kobayashi' on page 26 undefined on input line 684.
 
-<kobayashi.png, id=294, 459.6372pt x 449.88075pt>
+<kobayashi.png, id=293, 459.6372pt x 449.88075pt>
 File: kobayashi.png Graphic file (type png)
 <use kobayashi.png>
-Package pdftex.def Info: kobayashi.png  used on input line 682.
+Package pdftex.def Info: kobayashi.png  used on input line 691.
 (pdftex.def)             Requested size: 256.07741pt x 250.64781pt.
 
-LaTeX Warning: Reference `subsec:trans_phase_space' on page 26 undefined on input line 686.
+LaTeX Warning: Reference `subsec:trans_phase_space' on page 26 undefined on input line 695.
 
 
-LaTeX Warning: Reference `fig:kobayashi' on page 26 undefined on input line 686.
+LaTeX Warning: Reference `fig:kobayashi' on page 26 undefined on input line 695.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1467,52 +1474,48 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26 <./kobayashi.png>]
+[26]
 
-LaTeX Warning: Reference `fig:kobayashi' on page 27 undefined on input line 697.
-
-
-LaTeX Warning: Reference `fig:kobayashi' on page 27 undefined on input line 697.
+LaTeX Warning: Reference `fig:kobayashi' on page 27 undefined on input line 706.
 
 
-LaTeX Warning: Reference `fig:real-world' on page 27 undefined on input line 700.
+LaTeX Warning: Reference `fig:kobayashi' on page 27 undefined on input line 706.
 
-<real-world.png, id=306, 1008.76875pt x 579.16376pt>
+
+LaTeX Warning: Reference `fig:real-world' on page 27 undefined on input line 709.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27 <./kobayashi.png>]
+<real-world.png, id=314, 1008.76875pt x 579.16376pt>
 File: real-world.png Graphic file (type png)
 <use real-world.png>
-Package pdftex.def Info: real-world.png  used on input line 704.
+Package pdftex.def Info: real-world.png  used on input line 713.
 (pdftex.def)             Requested size: 256.07741pt x 147.01758pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[27]
-<momentum-driven.png, id=314, 1754.555pt x 994.71625pt>
+<momentum-driven.png, id=315, 1754.555pt x 994.71625pt>
 File: momentum-driven.png Graphic file (type png)
 <use momentum-driven.png>
-Package pdftex.def Info: momentum-driven.png  used on input line 718.
+Package pdftex.def Info: momentum-driven.png  used on input line 727.
 (pdftex.def)             Requested size: 256.07741pt x 145.17879pt.
-<amplitude-driven.png, id=315, 1766.6pt x 978.65625pt>
+<amplitude-driven.png, id=316, 1766.6pt x 978.65625pt>
 File: amplitude-driven.png Graphic file (type png)
 <use amplitude-driven.png>
-Package pdftex.def Info: amplitude-driven.png  used on input line 724.
+Package pdftex.def Info: amplitude-driven.png  used on input line 733.
 (pdftex.def)             Requested size: 256.07741pt x 141.84926pt.
 
 
-LaTeX Warning: Reference `fig:momentum-driven' on page 28 undefined on input line 728.
+LaTeX Warning: Reference `fig:momentum-driven' on page 28 undefined on input line 737.
 
 
-LaTeX Warning: Reference `fig:amplitude-driven' on page 28 undefined on input line 728.
+LaTeX Warning: Reference `fig:amplitude-driven' on page 28 undefined on input line 737.
 
 
-LaTeX Warning: Reference `eq:apothem' on page 28 undefined on input line 729.
+LaTeX Warning: Reference `eq:apothem' on page 28 undefined on input line 738.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1521,27 +1524,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28 <./real-world.png> <./momentum-driven.png>]
+[28 <./real-world.png>]
 
-LaTeX Warning: Reference `fig:momentum-driven' on page 29 undefined on input line 734.
-
-
-LaTeX Warning: Reference `fig:amplitude-driven' on page 29 undefined on input line 734.
+LaTeX Warning: Reference `fig:momentum-driven' on page 29 undefined on input line 743.
 
 
-LaTeX Warning: Citation `Falbo:IPAC2018-TUZGBF3' on page 29 undefined on input line 740.
+LaTeX Warning: Reference `fig:amplitude-driven' on page 29 undefined on input line 743.
 
 
-LaTeX Warning: Citation `ArrutiaSota:2845862' on page 29 undefined on input line 741.
+LaTeX Warning: Citation `Falbo:IPAC2018-TUZGBF3' on page 29 undefined on input line 749.
 
 
-LaTeX Warning: Citation `ARRUTIASOTA2022167007' on page 29 undefined on input line 742.
-
-
-LaTeX Warning: Citation `Yao:2016cnf' on page 29 undefined on input line 743.
-
-
-Underfull \vbox (badness 1824) has occurred while \output is active []
+Underfull \vbox (badness 1755) has occurred while \output is active []
 
 
 
@@ -1551,26 +1545,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29 <./amplitude-driven.png>]
+[29 <./momentum-driven.png> <./amplitude-driven.png>]
 
-LaTeX Warning: Citation `russo' on page 30 undefined on input line 747.
-
-
-LaTeX Warning: Citation `Furukawa2002PROGRESSOR' on page 30 undefined on input line 747.
+LaTeX Warning: Citation `ArrutiaSota:2845862' on page 30 undefined on input line 750.
 
 
-LaTeX Warning: Citation `FURUKAWA200259' on page 30 undefined on input line 747.
+LaTeX Warning: Citation `ARRUTIASOTA2022167007' on page 30 undefined on input line 751.
 
 
-LaTeX Warning: Citation `NODA2002241' on page 30 undefined on input line 747.
+LaTeX Warning: Citation `Yao:2016cnf' on page 30 undefined on input line 752.
 
 
-LaTeX Warning: Reference `fig:rfko_phase_space' on page 30 undefined on input line 751.
+LaTeX Warning: Citation `russo' on page 30 undefined on input line 756.
 
-<rfko-phase-space-schematic.png, id=335, 1342.01375pt x 1288.815pt>
+
+LaTeX Warning: Citation `Furukawa2002PROGRESSOR' on page 30 undefined on input line 756.
+
+
+LaTeX Warning: Citation `FURUKAWA200259' on page 30 undefined on input line 756.
+
+
+LaTeX Warning: Citation `NODA2002241' on page 30 undefined on input line 756.
+
+
+LaTeX Warning: Reference `fig:rfko_phase_space' on page 30 undefined on input line 760.
+
+<rfko-phase-space-schematic.png, id=336, 1342.01375pt x 1288.815pt>
 File: rfko-phase-space-schematic.png Graphic file (type png)
 <use rfko-phase-space-schematic.png>
-Package pdftex.def Info: rfko-phase-space-schematic.png  used on input line 755.
+Package pdftex.def Info: rfko-phase-space-schematic.png  used on input line 764.
 (pdftex.def)             Requested size: 256.07741pt x 245.91968pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1590,474 +1593,4 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [31 <./rfko-phase-space-schematic.png>]
 Chapter 3.
 
-LaTeX Warning: Reference `sec:modelling-slow-extraction' on page 32 undefined on input line 761.
-
-
-LaTeX Warning: Reference `eq:brho' on page 32 undefined on input line 767.
-
-
-LaTeX Warning: Reference `eq:relativistic_energy' on page 32 undefined on input line 767.
-
-
-LaTeX Warning: Reference `eq:relativistic_momentum' on page 32 undefined on input line 767.
-
-
-Package siunitx Warning: Unit macro \atomicmassunit has been deprecated in
-(siunitx)                this release.
-(siunitx)                
-(siunitx)                The BIPM have removed this unit from the SI Brochure.
-(siunitx)                You should define it yourself using \DeclareSIUnit in
-(siunitx)                your source. The current definition is
-(siunitx)                
-(siunitx)                \DeclareSIUnit\atomicmassunit{u}
-
-
-LaTeX Warning: Reference `eq:ion_momentum' on page 32 undefined on input line 785.
-
-
-LaTeX Warning: Reference `eq:brho' on page 32 undefined on input line 785.
-
-
-Underfull \vbox (badness 2932) has occurred while \output is active []
-
- [32
-
-]
-<ps-sx-system.png, id=358, 2584.65625pt x 1877.0125pt>
-File: ps-sx-system.png Graphic file (type png)
-<use ps-sx-system.png>
-Package pdftex.def Info: ps-sx-system.png  used on input line 791.
-(pdftex.def)             Requested size: 426.79135pt x 309.92282pt.
-
-
-LaTeX Warning: Reference `fig:schematic' on page 33 undefined on input line 797.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[33 <./ps-sx-system.png>]
-
-LaTeX Warning: Reference `fig:schematic' on page 34 undefined on input line 803.
-
-
-LaTeX Warning: Reference `fig:schematic' on page 34 undefined on input line 805.
-
-
-LaTeX Warning: Reference `fig:tunemap' on page 34 undefined on input line 807.
-
-
-LaTeX Warning: Reference `fig:cycle' on page 34 undefined on input line 814.
-
-<tunemap.png, id=369, 423.38174pt x 315.94035pt>
-File: tunemap.png Graphic file (type png)
-<use tunemap.png>
-Package pdftex.def Info: tunemap.png  used on input line 818.
-(pdftex.def)             Requested size: 256.07741pt x 191.09387pt.
-<cyclegraphs.png, id=370, 715.35255pt x 715.473pt>
-File: cyclegraphs.png Graphic file (type png)
-<use cyclegraphs.png>
-Package pdftex.def Info: cyclegraphs.png  used on input line 824.
-(pdftex.def)             Requested size: 384.1096pt x 384.17714pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `sec:long' on page 34 undefined on input line 828.
-
-
-LaTeX Warning: Citation `Sterbini:2158994' on page 34 undefined on input line 831.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[34]
-
-LaTeX Warning: Citation `bouvet' on page 35 undefined on input line 838.
-
-
-LaTeX Warning: Citation `Gasior:895142' on page 35 undefined on input line 848.
-
-
-LaTeX Warning: Reference `fig:qmeter-signal' on page 35 undefined on input line 848.
-
-
-LaTeX Warning: Citation `ipac' on page 35 undefined on input line 848.
-
-
-LaTeX Warning: Reference `tab:qmeter-params' on page 35 undefined on input line 848.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[35 <./tunemap.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[36 <./cyclegraphs.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 850.
-
-<fake-signal.png, id=395, 565.51276pt x 281.853pt>
-File: fake-signal.png Graphic file (type png)
-<use fake-signal.png>
-Package pdftex.def Info: fake-signal.png  used on input line 865.
-(pdftex.def)             Requested size: 256.07741pt x 127.62831pt.
-
-LaTeX Warning: Reference `eq:both-chirps' on page 37 undefined on input line 869.
-
-<both-chirps.png, id=396, 570.933pt x 281.853pt>
-File: both-chirps.png Graphic file (type png)
-<use both-chirps.png>
-Package pdftex.def Info: both-chirps.png  used on input line 873.
-(pdftex.def)             Requested size: 256.07741pt x 126.4198pt.
-
-LaTeX Warning: Citation `cgd' on page 37 undefined on input line 877.
-
-
-LaTeX Warning: Reference `sec:motivation' on page 37 undefined on input line 882.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[37 <./fake-signal.png>]
-
-LaTeX Warning: Citation `Iselin:MAD' on page 38 undefined on input line 886.
-
-
-LaTeX Warning: Citation `xsuite' on page 38 undefined on input line 886.
-
-
-LaTeX Warning: Citation `optics_repo' on page 38 undefined on input line 886.
-
-
-LaTeX Warning: Citation `CuPy' on page 38 undefined on input line 888.
-
-
-LaTeX Warning: Reference `sec:magcycle' on page 38 undefined on input line 892.
-
-
-LaTeX Warning: Reference `fig:acc-models-optics' on page 38 undefined on input line 892.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[38 <./both-chirps.png>]
-<optics.png, id=413, 906.14536pt x 490.11105pt>
-File: optics.png Graphic file (type png)
-<use optics.png>
-Package pdftex.def Info: optics.png  used on input line 896.
-(pdftex.def)             Requested size: 384.1096pt x 207.75224pt.
-\openout4 = `main-1.cpt'.
-
-\openout4 = `main-2.cpt'.
-
- (./main-2.cpt) (./main-2.cpt)
-
-LaTeX Warning: Reference `eq:kick-electric' on page 39 undefined on input line 908.
-
-
-LaTeX Warning: Reference `eq:kick-magnetic' on page 39 undefined on input line 908.
-
-
-LaTeX Warning: Reference `lst:kick_angle' on page 39 undefined on input line 908.
-
-
-LaTeX Warning: Reference `lst:generate_chirp' on page 39 undefined on input line 908.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[39 <./optics.png>]
-
-LaTeX Warning: Citation `Martini:324553' on page 40 undefined on input line 927.
-
-
-LaTeX Warning: Citation `Hancock:960231' on page 40 undefined on input line 927.
-
-
-LaTeX Warning: Reference `tab:initial-conditions' on page 40 undefined on input line 927.
-
-
-LaTeX Warning: Reference `fig:initial-dist' on page 40 undefined on input line 927.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[40]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 933.
-
-<initial-dist.png, id=429, 642.4803pt x 640.3122pt>
-File: initial-dist.png Graphic file (type png)
-<use initial-dist.png>
-Package pdftex.def Info: initial-dist.png  used on input line 948.
-(pdftex.def)             Requested size: 426.79135pt x 425.35281pt.
-\openout4 = `main-3.cpt'.
-
-\openout4 = `main-4.cpt'.
-
-(./main-4.cpt
-
-LaTeX Warning: Reference `tab:initial-conditions' on page 41 undefined on input line 1.
-
-) (./main-4.cpt
-
-LaTeX Warning: Reference `tab:initial-conditions' on page 41 undefined on input line 1.
-
-)
-
-LaTeX Warning: Reference `fig:cycle' on page 41 undefined on input line 954.
-
-
-LaTeX Warning: Citation `htcondor' on page 41 undefined on input line 956.
-
-
-LaTeX Warning: Citation `merkel2014docker' on page 41 undefined on input line 958.
-
-
-LaTeX Warning: Citation `docker' on page 41 undefined on input line 960.
-
-
-LaTeX Warning: Reference `fig:flowchart' on page 41 undefined on input line 962.
-
-
-LaTeX Warning: Reference `fig:phase-space-sim' on page 41 undefined on input line 962.
-
-
-LaTeX Warning: Reference `fig:kobayashi' on page 41 undefined on input line 962.
-
-
-LaTeX Warning: Reference `fig:rfko_phase_space' on page 41 undefined on input line 962.
-
-
-LaTeX Warning: Reference `sec:rfko' on page 41 undefined on input line 962.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[41]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[42 <./initial-dist.png>]
-<phase-space-sim.png, id=444, 591.4095pt x 393.99194pt>
-File: phase-space-sim.png Graphic file (type png)
-<use phase-space-sim.png>
-Package pdftex.def Info: phase-space-sim.png  used on input line 966.
-(pdftex.def)             Requested size: 384.1096pt x 255.88731pt.
-\openout4 = `main-5.cpt'.
-
-\openout4 = `main-6.cpt'.
-
- (./main-6.cpt) (./main-6.cpt)
-<simulation-flowchart.png, id=445, 2502.34875pt x 2441.12pt>
-File: simulation-flowchart.png Graphic file (type png)
-<use simulation-flowchart.png>
-Package pdftex.def Info: simulation-flowchart.png  used on input line 974.
-(pdftex.def)             Requested size: 362.77525pt x 353.89746pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[43 <./phase-space-sim.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[44 <./simulation-flowchart.png>]
-Chapter 4.
-
-LaTeX Warning: Reference `sec:sim_process' on page 45 undefined on input line 985.
-
-
-LaTeX Warning: Reference `fig:cpu_graph_per_turn' on page 45 undefined on input line 985.
-
-
-LaTeX Warning: Reference `fig:gpu_graph_per_turn' on page 45 undefined on input line 985.
-
-
-LaTeX Warning: Reference `fig:gpu_graph_per_turn' on page 45 undefined on input line 987.
-
-
-LaTeX Warning: Citation `Hegglin:2239398' on page 45 undefined on input line 989.
-
-[45
-
-]
-
-LaTeX Warning: Reference `fig:cpu_graph_per_turn' on page 46 undefined on input line 994.
-
-
-LaTeX Warning: Reference `fig:gpu_graph_per_turn' on page 46 undefined on input line 994.
-
-<CPU_graph_per_turn.png, id=468, 541.3023pt x 341.8371pt>
-File: CPU_graph_per_turn.png Graphic file (type png)
-<use CPU_graph_per_turn.png>
-Package pdftex.def Info: CPU_graph_per_turn.png  used on input line 998.
-(pdftex.def)             Requested size: 328.63115pt x 207.5397pt.
-<GPU_graph_per_turn.png, id=470, 541.3023pt x 341.8371pt>
-File: GPU_graph_per_turn.png Graphic file (type png)
-<use GPU_graph_per_turn.png>
-Package pdftex.def Info: GPU_graph_per_turn.png  used on input line 1004.
-(pdftex.def)             Requested size: 328.63115pt x 207.5397pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<COMPARISON_graph_per_turn.png, id=472, 538.4115pt x 338.34406pt>
-File: COMPARISON_graph_per_turn.png Graphic file (type png)
-<use COMPARISON_graph_per_turn.png>
-Package pdftex.def Info: COMPARISON_graph_per_turn.png  used on input line 1010.
-(pdftex.def)             Requested size: 328.63115pt x 206.51346pt.
-\openout4 = `main-7.cpt'.
-
-\openout4 = `main-8.cpt'.
-
-(./main-8.cpt) (./main-8.cpt)
-
-LaTeX Warning: Reference `fig:comparison_graph_per_turn' on page 46 undefined on input line 1014.
-
-
-Underfull \vbox (badness 7468) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[46 <./CPU_graph_per_turn.png>]
-
-LaTeX Warning: Citation `Schicho:2039579' on page 47 undefined on input line 1016.
-
-
-LaTeX Warning: Reference `sec:sim_process' on page 47 undefined on input line 1016.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[47 <./GPU_graph_per_turn.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[48 <./COMPARISON_graph_per_turn.png>]
-
-LaTeX Warning: Citation `Pari:2780495' on page 49 undefined on input line 1023.
-
-
-LaTeX Warning: Citation `Actis:bxscint' on page 49 undefined on input line 1027.
-
-
-LaTeX Warning: Reference `fig:schematic' on page 49 undefined on input line 1027.
-
-<raw_signal.png, id=496, 715.473pt x 426.393pt>
-File: raw_signal.png Graphic file (type png)
-<use raw_signal.png>
-Package pdftex.def Info: raw_signal.png  used on input line 1031.
-(pdftex.def)             Requested size: 298.75264pt x 178.04283pt.
-\openout4 = `main-9.cpt'.
-
-(./main-9.cpt) (./main-9.cpt)
-
-LaTeX Warning: Citation `nxcals' on page 49 undefined on input line 1035.
-
-
-LaTeX Warning: Reference `fig:raw_signal' on page 49 undefined on input line 1035.
-
-<sample_rate_variation.png, id=498, 578.03955pt x 211.87155pt>
-File: sample_rate_variation.png Graphic file (type png)
-<use sample_rate_variation.png>
-Package pdftex.def Info: sample_rate_variation.png  used on input line 1040.
-(pdftex.def)             Requested size: 341.43437pt x 125.14859pt.
-
-LaTeX Warning: Reference `fig:sample_rate_variation' on page 49 undefined on input line 1044.
-
-
-LaTeX Warning: Citation `PLUM200274' on page 49 undefined on input line 1044.
-
-
-LaTeX Warning: Reference `fig:raw_ffts' on page 49 undefined on 
+LaTeX Warning: 

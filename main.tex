@@ -190,7 +190,7 @@ Newer tools are introducing improvements such as ``ready-to-go'' compatibility w
 
 \section{Outline and Aims}
 
-This thesis will present the novel implementation and simulation of a Slow Extraction method at the East Area experimental facility, with the aim to confirm both the accuracy of the simulated frequency response, and the benefits of GPU-accelerated simulation software. To fully understand the effects of the beam extraction method, the challenges in accurate simulation, and the benefits gained, this thesis will outline the theory required to construct these simulations (\autoref{chap:theory}), the implementation of the chosen slow extraction method both in the real-world at the PS, and in simulation (\autoref{chap:implementation}), and the analysis and results of the simulations (\autoref{chap:results}). Finally, the conclusions of the work will be presented, and future work outlined (\autoref{chap:conclusion}).
+This thesis will present the novel implementation and simulation of a Slow Extraction method at the East Area experimental facility, with the aim to confirm both the accuracy of the simulated frequency response, and the benefits of GPU-accelerated simulation software. To fully understand the effects of the beam extraction method, the challenges in accurate simulation, and the benefits gained, this thesis will outline the theory required to construct these simulations (\cref{chap:theory}), the implementation of the chosen slow extraction method both in the real-world at the PS, and in simulation (\cref{chap:implementation}), and the analysis and results of the simulations (\cref{chap:results}). Finally, the conclusions of the work will be presented, and future work outlined (\cref{chap:conclusion}).
 
 \chapter{Accelerator Physics Theory}\label{chap:theory}
 
@@ -319,18 +319,18 @@ Integrating this over all magnets in the ring, therefore, must be equal to one f
 
 \subsection{Focussing and Multipoles}
 
-While single-pair dipole magnets are used to bend the beam along the circular path, double-pair \textit{quadrupole} magnets are used to bound the transverse motion, and to prevent the beam from spreading (increasing in size) due to the intrinsic spread of position and angle. An arrangement of four magnetic poles creates a field stronger at higher $|x|$ displacement, causing particles to be pulled back towards the design orbit, ``focussing'' the beam in one transverse plane (while necessarily defocussing in the other). To correct for the defocussing in the other plane, a second quadrupole is placed further along in the beamline, with the magnetic poles arranged in the opposite orientation. This arrangement, known as a FODO lattice, is shown in \autoref{fig:quadrupole} (right).~\autoref{fig:sextupole} depicts a \textit{sextupole} magnet, with three pole pairs, which is used to correct for the dispersion effect of a dipole.
+While single-pair dipole magnets are used to bend the beam along the circular path, double-pair \textit{quadrupole} magnets are used to bound the transverse motion, and to prevent the beam from spreading (increasing in size) due to the intrinsic spread of position and angle. An arrangement of four magnetic poles creates a field stronger at higher $|x|$ displacement, causing particles to be pulled back towards the design orbit, ``focussing'' the beam in one transverse plane (while necessarily defocussing in the other). To correct for the defocussing in the other plane, a second quadrupole is placed further along in the beamline, with the magnetic poles arranged in the opposite orientation. This arrangement, known as a FODO lattice, is shown in \autoref{fig:quadrupole} (right).~\autoref{fig:sextupole} depicts a \textit{sextupole} magnet, with three pole pairs, which is used to correct for chromaticity by exploiting dispersive effects.
 
 \begin{figure}
 \centering
   \includegraphics*[width=0.9\linewidth]{fodo.png}
-  \caption[Diagrams of a quadrupole magnetic field, and a FODO cell]{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. The force experienced by a positively-charged particle is shown as dashed arrows. Right-hand diagram illustrates a FODO cell, where the structure of repeating focussing and defocussing quadrupoles can be related to the optical analogy of lenses.}\label{fig:quadrupole}
+  \caption[Diagrams of a quadrupole magnetic field, and a FODO cell]{Diagram (left) showing the field of a \textit{normal} oriented quadrupole, providing focussing in $x$ but defocussing in $y$. The force experienced by a positively-charged particle moving out of the page plane is shown as dashed arrows. Right-hand diagram illustrates a FODO cell, where the structure of repeating focussing and defocussing quadrupoles can be related to the optical analogy of lenses.}\label{fig:quadrupole}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics*[width=0.4\linewidth]{sextupole.png}
-    \caption[Diagram of a sextupole magnetic field]{A diagram showing the field of a \textit{normal} oriented sextupole. The force experienced by a positively-charged particle is shown as dashed arrows.}\label{fig:sextupole}
+    \caption[Diagram of a sextupole magnetic field]{A diagram showing the field of a \textit{normal} oriented sextupole. The force experienced by a positively-charged particle moving in to the page plane is shown as dashed arrows.}\label{fig:sextupole}
 \end{figure}
 
 \subsection{Single-Particle Oscillatory Motion}
@@ -447,22 +447,31 @@ These two equations can be written as a matrix equation:
     x'
   \end{pmatrix}
   =
-  \bf{M}
+  \bf{M_{foc}}
   \begin{pmatrix}
     x_0 \\
     x'_0
   \end{pmatrix}
 \end{equation}
-where $\bf{M}$ is the transfer matrix
+where $\bf{M_{foc}}$ is the focussing quadrupole transfer matrix~\cite{Hillert:2107.02614}
 \begin{equation}
-  \bf{M}=
+  \bf{M_{foc}}=
   \begin{pmatrix}
     \cos\left(\sqrt{K}\cdot s\right) & \frac1{\sqrt{K}}\sin\left(\sqrt{K}\cdot s\right) \\
     -\sqrt{K}\sin\left(\sqrt{K}\cdot s\right) & \cos\left(\sqrt{K}\cdot s\right)
   \end{pmatrix}
 \end{equation}
 
-The definition of this transfer matrix $\bf M$ can be expanded to define the variety of magnets used in an accelerator. In the simple case, where no magnet is present, we define the transfer matrix for a drift space of length $L$:
+The transfer matrix for a defocussing quadrupole can also be defined as~\cite{Hillert:2107.02614}:
+\begin{equation}
+  \bf{M_{defoc}}=
+  \begin{pmatrix}
+    \cosh\left(\sqrt{K}\cdot s\right) & \frac1{\sqrt{K}}\sinh\left(\sqrt{K}\cdot s\right) \\
+    \sqrt{K}\sinh\left(\sqrt{K}\cdot s\right) & \cosh\left(\sqrt{K}\cdot s\right)
+  \end{pmatrix}
+\end{equation}
+
+The definition of this transfer matrix $\bf M_{foc}$ can be expanded to define the variety of magnets used in an accelerator. In the simple case, where no magnet is present, we define the transfer matrix for a drift space of length $L$:
 \begin{equation}
   \bf{M}_{drift,x}=\bf{M}_{drift,y}=
   \begin{pmatrix}
@@ -485,7 +494,7 @@ For a normal dipole magnet bending only horizontally, where $k=0$ and $K_x=1/\rh
 
 Further matrix equations can be defined for other magnets. If we define the properties of each element in the accelerator (the lattice), we can then define the transfer matrix for the entire accelerator as the product of the transfer matrices of each element. For example, a FODO lattice with an initial bending dipole can be defined as:
 \begin{equation}
-  \bf{M}_{total} = \bf{M}_{dipole} + \bf{M}_{quad} + \bf{M}_{drift} - \bf{M}_{quad} + \bf{M}_{drift} +\cdots
+  \bf{M}_{total} = \bf{M}_{foc} \cdot \bf{M}_{drift} \cdot \bf{M}_{defoc} \cdot \bf{M}_{drift} \cdot\cdots
 \end{equation}
 
 This is the principle by which \textit{particle tracking codes}, such as \verb|MAD-X|, operate. An input lattice file defines the structure and properties of the magnets composing the accelerator, and particle variables are then computed with matrix multiplication. 
@@ -517,13 +526,13 @@ An electric field of magnitude $E_0$ travelling in the $s$ direction can be defi
   E_s = E_0\cos(\omega_{RF}t)
 \end{equation} where $\omega_{RF}$ is the RF frequency. Therefore, for a synchronous particle with synchronous phase $\phi_s$, the rate of energy gain is
 \begin{equation}
-  \frac{dE_s}{ds}=eE_0\sin\phi_s
+  \frac{dE_s}{ds}=\frac{dp_s}{dt}=eE_0\sin\phi_s
 \end{equation}
 
-In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must follow the particle's energy gain. This synchronous condition, for velocities $v\ll c$, is defined as
+In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must follow the particle's energy gain. This synchronous condition, for velocities $v\ll c$, is defined as~\cite{Tecker:2674860}
 \begin{equation}
-  \frac{2\pi\rho}{v_s}=\frac h{\omega_{RF}}
-\end{equation} where $v_s$ is the synchronous particle velocity and $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable ``particles'', spread equidistantly around the ring circumference. 
+  \frac{2\pi\rho}{v_s}=\frac h{f_{RF}}
+\end{equation} where $v_s$ is the synchronous particle velocity and $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable bunches, spread equidistantly around the ring circumference. 
 
 To keep a particle with increasing energy bent along a path of constant radius, the magnetic field $B$ of the bending dipoles must increase as RF acceleration occurs. Recalling~\autoref{eq:brho}, and deriving by time, obtains
 \begin{equation}
@@ -531,11 +540,11 @@ To keep a particle with increasing energy bent along a path of constant radius, 
 \end{equation}
 For one turn in a synchrotron, this results in a momentum gain
 \begin{equation}
-  \Delta p_{rev} = q\rho\dot B T_{rev}=\frac{Lq\rho~R\dot B}v
+  \Delta p_{rev} = q\rho\dot B T_{rev}=\frac{Lq\rho~\dot B}v
 \end{equation} where $L$ is the machine length. 
 The energy gain $\Delta E=v\Delta p$ per revolution is therefore
 \begin{equation}
-  \Delta E_{rev} = Lq\rho~R\dot B=qV\sin \phi_s
+  \Delta E_{rev} = Lq\rho~\dot B=qV\sin \phi_s
   \label{eq:ef_sin}
 \end{equation} where $\phi_s$ is the synchronous phase. This stable phase therefore changes while energy is ramped:
 \begin{equation}

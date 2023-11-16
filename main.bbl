@@ -96,6 +96,17 @@ R.~D. Ruth.
 \newblock {\em Physics Today}, 55(8):52--52, 08 2002.
 \newblock \doi{10.1063/1.1510283}.
 
+\bibitem{Hillert:2107.02614}
+W.~Hillert.
+\newblock Transverse linear beam dynamics, 2021.
+\newblock \doi{10.48550/ARXIV.2107.02614}.
+
+\bibitem{Tecker:2674860}
+F.~Tecker.
+\newblock {Longitudinal Beam Dynamics - Recap}.
+\newblock {\em CERN Yellow Rep. School Proc.}
+\newblock \href {https://arxiv.org/abs/2004.11908} {\path{arXiv:2004.11908}}, \doi{10.23730/CYRSP-2018-005.31}.
+
 \bibitem{lbd:tecker}
 F.~Tecker.
 \newblock {Longitudinal Beam Dynamics in Circular Accelerators}.
