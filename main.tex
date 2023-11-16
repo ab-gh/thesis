@@ -140,7 +140,7 @@ Ongoing experiments in these facilities, such as the CHARM High-energy Ions for 
 
 The CHIMERA experiment, and other experiments located at the East Area and its higher-energy sister site at the SPS North Area, are referred to as fixed-target experiments. These experiments require a semi-continuous flux of particles at lower intensities than those produced by the PS. For example, if the entire beam of the PS was delivered to a material sample in an effectively instantaneous ``spill'' (a controlled removal of particles from the circular accelerator), any sensitive acquisition equipment would become saturated, and the fixed target itself likely destroyed.
 
-At a beam momentum of \qty{5.4}{\giga\electronvolt} in the PS, the revolution frequency of the beam is around \qty{470}{kHz}. Therefore, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as \textit{fast} extraction, is commonly used to transfer particles between successive accelerators where the bunched time structure of the beam is preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, much longer than the revolution period, a ``slow'' extraction system is employed.
+At a beam momentum of \qty{5.4}{\giga\eVperc} in the PS, the revolution frequency of the beam is around \qty{470}{kHz}. Therefore, delivering particles over the period of one turn could, at most, provide a spill time on the order of \qty{2}{\micro\second}. This extraction method, known as \textit{fast} extraction, is commonly used to transfer particles between successive accelerators where the bunched time structure of the beam is preserved. To provide spills on the order of $\sim$\qty{100}{\ms} required for these experiments, much longer than the revolution period, a ``slow'' extraction system is employed.
 
 \subsection{Extraction Methods}
 
@@ -599,7 +599,7 @@ Now that the fundamentals of accelerator beam physics are established, this sect
 
 \subsection{Sextupoles and $\nicefrac 13$-Integer Resonance}
 
-\Cref{sec:transdisp} introduced the concept of dispersion in reference to a multi-energetic beam. These effects are controlled with the use of sextupole magnets. The transverse field of a sextupole magnet has the form~\cite[Ch.2.4]{PIMMS}
+\Cref{sec:transdisp} introduced the concept of dispersion in reference to a multi-energetic beam. These effects are controlled with the use of sextupole magnets. The transverse field of a sextupole magnet has the form~\cite[Ch 2.4]{PIMMS}
 \begin{equation}
   B_x = -6B_3xy
 \end{equation}
@@ -623,7 +623,7 @@ where $S$, the normalised sextupole strength, is
 \begin{equation}
   k'=-6\frac{B_3}{B\rho}
 \end{equation}
-For extraction driven in the horizontal transverse plane, the dynamics of the vertical transverse plane are neglected as these remain independent. Recalling the matrix formalism established in~\autoref{sec:matrix}, we use a general transfer matrix for $n$ turns with a betatron tune $Q$:
+For extraction driven in the horizontal transverse plane, the dynamics of the vertical transverse plane are neglected as these terms remain insignificant to the first order~\cite[Ch 2.2]{PIMMS}. Recalling the matrix formalism established in~\autoref{sec:matrix}, we use a general transfer matrix for $n$ turns with a betatron tune $Q$:
 \begin{equation}
   \bf M_n=
   \begin{pmatrix}
@@ -635,7 +635,7 @@ The tune of a particle is then defined as a third-integer, i.e.
 \begin{equation}
   Q_x=i\pm\nicefrac 13 +\delta Q,\ i\in\mathbb{Z}, |\delta Q|\ll\nicefrac 13
 \end{equation} 
-The tune distance, $\delta Q$, is therefore the distance of the particle from the resonance. The $n$-turn matrix can then be approximated for \textit{modulo}-3 turns:
+The tune distance, $\delta Q$, is therefore the distance of the particle from the resonance. The $n$-turn matrix can then be approximated for \textit{modulo}-3 turns~\cite[Ch 2.4]{PIMMS}:
 \begin{equation}
   \begin{pmatrix}
     x\\x'
@@ -671,7 +671,7 @@ The tune distance, $\delta Q$, is therefore the distance of the particle from th
 \end{equation}
 Therefore, a particle with $\delta Q=0$, i.e.\ exactly on resonance, will return to its original position after three turns. For such a particle, the change in position $x$ and divergence $x'$ from initial conditions $(x_0, x'_0)$ after three turns is therefore calculated as
 \begin{equation}
-  \Delta x_3 = {\varepsilon_Q} x'_0 + \frac 23 S x_0x'_0
+  \Delta x_3 = {\varepsilon_Q} x'_0 + \frac 32 S x_0x'_0
   \label{eq:spiral_step}
 \end{equation}
 \begin{equation}
@@ -703,7 +703,7 @@ The $x$ location of the stable particle, $h$ can also be defined as
   h=\frac 23 \frac {\varepsilon_Q} S = \frac{4\pi}S\delta Q
   \label{eq:apothem}
 \end{equation}
-Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$ (solid lines in \autoref{fig:kobayashi}), along with the vertical line at $-h$ (dashed line in \autoref{fig:kobayashi}), define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 4 h^2$.
+Therefore, the lines connecting $P_1, P_2$ and $P_1, P_3$ (solid lines in \autoref{fig:kobayashi}), along with the vertical line at $-h$ (dashed line in \autoref{fig:kobayashi}), define the separatrix. The acceptance, the area bounded by the separatrices, is defined as $A=3\sqrt 3 h^2$.
 
 \subsection{Slow Extraction Principles}
 The fundamental principle of slow extraction exploits the unstable boundary created by sextupolar fields. After a beam is injected and stable, this \textit{waiting} beam is accelerated towards the $\nicefrac 13$-integer resonance. A particle at resonance will then ``lock on'' to one of the separatrix arms, and its amplitude will grow in steps of three turns, rotating around the three separatrices. By carefully controlling the rate at which particles enter resonance, the 3-turn amplitude growth (spiral step) can be adjusted to create a desired flux of particles entering resonance. After a number of turns of amplitude growth (typically hundreds), an electrostatic septum located at some distance from the waiting beam will provide a kick necessary to extract the particles. A real-world diagram of slow extraction is shown in~\autoref{fig:real-world}.
@@ -714,7 +714,7 @@ The fundamental principle of slow extraction exploits the unstable boundary crea
   \caption[Real-space diagram of momentum-driven slow extraction]{A real-space diagram of momentum-driven slow extraction, looking along the $s$ direction at the magnetic septum location. The waiting beam approaches resonance (dashed), and some particles begin large turn-by-turn oscillations (increasing shaded gradient with turn number) before they jump the septum blade (thick black line) and will be extracted.}\label{fig:real-world}
 \end{figure}
 
-There are a variety of methods to provide acceleration of the beam towards resonance, which fall into two categories. \textit{Momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$. \textit{Amplitude-driven} methods, however, use transverse noise or RF excitation at the beam's revolution frequency to create increasing betatron amplitudes. 
+There are a variety of methods to provide acceleration of the beam towards resonance, which fall into two categories. \textit{Momentum-driven} methods rely on accelerating the beam towards a stationary resonance by controlling the momentum $\Delta p/p$. \textit{Amplitude-driven} methods, however, use transverse noise or RF excitation at a third-integer ($i\pm\frac 13\cdot f_{rev}$) of the beam's revolution frequency to create increasing betatron amplitudes. 
 
 Other methods involve moving the resonance itself, by changing the tune of the machine. This can be accomplished by using dipoles, quadrupoles, or sextupoles, but is susceptible to complications arising from the changing transverse optics. Implementations would require active compensation to maintain the beam's position, size, and, ultimately, stability.% Quadrupole-driven extraction is, additionally, highly sensitive to power-supply ripples---residual variation in the voltage/current produced by AC-DC power converters. 
 
@@ -779,7 +779,7 @@ This equivalency can be calculated using~\autoref{eq:brho}, \autoref{eq:relativi
   \label{eq:ion_momentum}
 \end{equation} where $E_0$ is the rest mass of the ion, and the relativistic gamma factor $\gamma_c = \frac{E}{E_0}=\frac{E_0+E_{kin}}{E_0}=\frac{E_{kin}}{E_0}+1$.
 
-A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at kinetic energy \qty[per-mode=symbol]{750}{\mega\eVperc\per nucleon} will have an atomic mass $A$ of \qty{208}{\atomicmassunit}, and so a kinetic energy of 
+A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at kinetic energy \qty[per-mode=symbol]{750}{\mega\electronvolt\per nucleon} will have an atomic mass $A$ of \qty{208}{\atomicmassunit}, and so a kinetic energy of 
 \begin{equation}
   E_{kin}=E_{kin/u}*A=\qty{750}{\mega\electronvolt}\cdot 208=\qty{156}{\giga\electronvolt}
 \end{equation}
@@ -791,7 +791,7 @@ A (\ch{Pb^{+54}}) ion ($Z=82$ protons, $N=126$ neutrons, $n_e=28$ electrons) at 
 %  m_{binding}=Z\cdot m_p + N\cdot m_n + n_e\cdot m_e - A\cdot m_u
 %\end{eqnarray} where $m_u$ is the atomic mass unit. 
 %These values, when computed, result in a 
-and a rest mass of \qty{193.74}{\giga\electronvolt\per\clight\squared}. The equivalent proton momentum, using~\autoref{eq:ion_momentum} and~\autoref{eq:brho}, is then calculated as \qty{5.397}{\giga\electronvolt}. 
+and a rest mass of \qty{193.74}{\giga\electronvolt\per\clight\squared}. The equivalent proton momentum, using~\autoref{eq:ion_momentum} and~\autoref{eq:brho}, is then calculated as \qty{5.397}{\giga\eVperc}. 
 
 Therefore, a single-bunch, low intensity (\qty[per-mode=symbol]{30d10}{particles\per bunch}) \qty{5.397}{\giga\electronvolt}\footnote{a low intensity \textit{beam} of a single, high-intensity bunch} proton beam was chosen, and injected into the PS through a single PSB ring (ring 3). The cycle was configured to use two basic beam-cycle periods of \qty{1.2}{\second}, in order to extend the window available for a spill to \qty{500}{\milli\second}.
 
@@ -825,7 +825,7 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{tunemap.png}
-  \caption[Fractional tune map during RFKO slow extraction]{A fractional tune map, plotting the evolution of horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$ during RFKO slow extraction. Colour scale indicates time. Dashed lines indicate some of the first-order (red), second-order (green) and third-order (blue) resonances. Black lines at $Q_x=0.319, Q_y=0.249$ are the final tunes reached during the extraction period. Integer part for all tunes is 6.}\label{fig:tunemap}
+  \caption[Fractional tune map during RFKO slow extraction]{A fractional tune map, plotting the evolution of horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$ during RFKO slow extraction. Colour scale indicates time. Dashed lines indicate some of the second-order (red, blue) and third-order (green) resonances. Black lines at $Q_x=0.319, Q_y=0.249$ are the final tunes reached during the extraction period. Integer part for all tunes is 6.}\label{fig:tunemap}
 \end{figure}
 
 \begin{figure}[h]
@@ -834,7 +834,7 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
   \caption[High-level parameter graphs and tune measurements during RFKO slow extraction]{The high-level parameter configuration for the implementation of East Area RFKO slow extraction. Top graph shows the bending dipole $B$ field, points of injection (from PSB) and dumping (internal absorption of the remaining beam), and regions of acceleration (ramp) and stable period for extraction. Second graph shows multipole components $k_n$ for extraction quadrupole ($k=1$) and sextupole ($k=2$). Final graph shows fractional betatron tune measurements for horizontal and vertical plane.}\label{fig:cycle}
 \end{figure}
 
-The RF system in the PS (\autoref{sec:long}) is used to accelerate the beam up to \qty{5.392}{\giga\electronvolt} during the \textit{ramp} period, and to maintain bunching during \textit{flat-top}. An East-type beam in the PS is bunched at the \nth{8} harmonic, or can be disabled to \textit{debunch} the beam (known as a coasting beam). RFKO can be performed with both a bunched and coasting beam, and both scenarios will be examined.
+The RF system in the PS (\autoref{sec:long}) is used to accelerate the beam up to \qty{5.392}{\giga\eVperc} during the \textit{ramp} period, and to maintain bunching during \textit{flat-top}. An East-type beam in the PS is bunched at the \nth{8} harmonic, or can be disabled to \textit{debunch} the beam (known as a coasting beam). RFKO can be performed with both a bunched and coasting beam, and both scenarios will be examined.
 
 \subsection{Transverse Excitation}\label{sec:trans_exc}
 Once a basic, stable cycle is configured in the PS, the transverse excitation is implemented. This uses a transverse kicker located at section 97 of the PS, \verb|KFB97|, a $\sim$\qty{1}{\meter} long stripline kicker, with both horizontal and vertical planes~\cite{Sterbini:2158994}. With a peak RF power of \qty{5000}{\watt} across the two electrodes, and an impedance of \qty{100}{\ohm}, the transverse feedback (TFB) kicker can provide a peak voltage at \qty{1000}{\volt} and a current of \qty{10}{\ampere}. The electric and magnetic fields are then defined as:
@@ -844,7 +844,7 @@ Once a basic, stable cycle is configured in the PS, the transverse excitation is
 \begin{equation}
   B=\frac {2I}{2\pi r}\cdot \mu_0
 \end{equation}
-where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and magnetic deflection angles are then~\cite[3.1-3.2]{bouvet}
+where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and magnetic deflection angles for a proton ($q=1$) are then~\cite[3.1-3.2]{bouvet}
 \begin{equation}
   \theta_E = \frac{E \cdot L}{p\cdot\beta}
   \label{eq:kick-electric}
@@ -852,7 +852,7 @@ where $r$ is the electrode aperture \qty{70}{\milli\meter}. The electric and mag
 \begin{equation}
   \theta_B = \frac{B\cdot L}{p}
   \label{eq:kick-magnetic}
-\end{equation} where $L$ is the electrode length \qty{935}{\milli\meter}. The stripline components $B$ and $E$ both contribute to the kick, and so the summation of these two angles provides a maximum deflection of \qty{10.81}{\micro\radian} for the \qty{5.397}{\giga\electronvolt} proton beam.
+\end{equation} where $\beta$ is the relativistic beta factor and $L$ is the electrode length \qty{935}{\milli\meter}. The stripline components $B$ and $E$ both contribute to the kick, and so the summation of these two angles provides a maximum deflection of \qty{10.81}{\micro\radian} for the \qty{5.397}{\giga\eVperc} proton beam.
 
 To drive this transverse kicker, two systems were used. Initially, the \verb|Qmeter| control program~\cite{Gasior:895142} provided an interface to this kicker. While the program was designed---and used extensively in this study---for tune measurements, it can be exploited to provide a frequency-modulated \textit{chirp} signal crossing the \nth{3}-order resonance to the TFB plates. The program was used to configure the \textit{start} and \textit{stop} frequencies for the frequency-modulated chirp (as unit interval multiples of the revolution frequency $f_{rev}$), chirp length (in $2^n$ revolutions), and the time after which the chirp would repeat (in milliseconds). This produced the effect of a repeated frequency-modulated chirp windowed by a square signal (\autoref{fig:qmeter-signal}). Previous studies~\cite{ipac} found suitable parameters to produce a baseline RFKO extraction implementation, tabulated in~\autoref{tab:qmeter-params}, and found a significant dependency of spill quality on the chirp repetition rate.
 
@@ -999,8 +999,8 @@ GPUs employ a \textit{Single-Instruction Multiple-Data} (SIMD) architecture to e
 
 The parallelism-saturated performance of both CPU and GPU simulations can be formulated as linear relationships in log-log, using the equation
 \begin{equation}
-    t=\frac{N_p\ ^\alpha \times 10^\beta}{N_t}
-\end{equation} where $\alpha$ and $\beta$ are some constants of the performance of a particular machine. By fitting the linear domain performance to this equation, values of $\alpha$ and $\beta$ can be estimated for particular CPUs and GPUs. For these benchmark simulations, various AMD Epyc CPUs were assigned to the machines, and NVIDIA A100 40GB GPUs were used. This specific combination of hardware resulted in $\alpha_{CPU} = 0.95178, \beta_{CPU}=-4.34452$ for CPU-only simulations, and $\alpha_{GPU}=0.97671, \beta_{GPU}=-6.65887$ for GPU simulations (\autoref{fig:cpu_graph_per_turn}, \autoref{fig:gpu_graph_per_turn}).
+  t/N_t = N_p^\alpha \times 10^\beta
+\end{equation} where $t/N_t$ is the real execution time (seconds) per turn, and $\alpha$ and $\beta$ are some constants of the performance of a particular machine. By fitting the linear domain performance to this equation, values of $\alpha$ and $\beta$ can be estimated for particular CPUs and GPUs. For these benchmark simulations, various AMD Epyc CPUs were assigned to the machines, and NVIDIA A100 40GB GPUs were used. This specific combination of hardware resulted in $\alpha_{CPU} = 0.95178, \beta_{CPU}=-4.34452$ for CPU-only simulations, and $\alpha_{GPU}=0.97671, \beta_{GPU}=-6.65887$ for GPU simulations (\autoref{fig:cpu_graph_per_turn}, \autoref{fig:gpu_graph_per_turn}).
 
 \begin{figure}
   \centering
@@ -1162,10 +1162,10 @@ Another analytical tool for quantifying slow extraction spill quality establishe
 \begin{figure}
   \centering
   \includegraphics[width=0.8\linewidth]{sdfs.png}
-  \caption[Example spill duty factor calculations]{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 turn windows.}\label{fig:sdf_example}
+  \caption[Example spill duty factor calculations]{Example rolling spill duty factor ($\mathcal{F}$) of the spill signals in~\autoref{fig:raw_signal}. Calculations made with 10, 50, and 1000 sample windows.}\label{fig:sdf_example}
 \end{figure}
 
-~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies. These are presented in a heatmap, where the lightness of the cell represents a higher spill duty factor, and thus a flatter spill. Qualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled, compared to beams with RF cavities disabled~\cite{Cappi:134321}.
+~\autoref{fig:sdf_meas} shows measurements of spill duty factor for both bunched (top) and coasting (bottom) beam RFKO spills, over a range of TFB signal voltages and chirp repetition frequencies, using a \qty{20}{\kilo\hertz} sample rate. These are presented in a heatmap, where the lightness of the cell represents a higher spill duty factor, and thus a flatter spill. Qualitative analysis identifies regions where the spill quality is optimised (high $\mathcal{F}$), making for optimal parameter selection. For bunched beams, the area of optimal spill quality is large, with a maximum duty factor $\mathcal{F} = 0.8$. For coasting beams, the region of optimal spill quality is much smaller, with a maximum duty factor $\mathcal{F} = 0.6$. Previous work on optimising slow extraction at the PS supports this finding of increased spill duty factor with RF cavities enabled, compared to beams with RF cavities disabled~\cite{Cappi:134321}.
 
 The mechanism behind the spill duty factor improvement with bunching can be understood by examining how the stable phase space behaves with respect to synchrotron oscillation. As covered in~\autoref{sec:long_phase_space}, particles moving within longitudinal RF buckets will undergo longitudinal oscillations around the synchronous particle, known as synchrotron oscillations\footnote{As opposed to transverse betatron oscillations.}. This can be calculated as
 \begin{equation}
@@ -1194,13 +1194,13 @@ This synchrotron motion also effects the extraction transit time. The distance o
     \includegraphics*[width=\linewidth]{sdf_off_meas.png}
     \caption{Spill duty factor heatmap for \textbf{coasting} beam as measured in the machine.}\label{sdf_off_meas}
   \end{subfigure}
-  \cprotect\caption[Spill duty factor heatmaps for bunched and coasting beams]{Spill duty factor ($\mathcal{F}$) heatmaps for the RFKO system as measured in the machine, both with a bunched beam (upper image) and coasting beam (lower image), as a function of chirp repetition frequency (log-scale) and voltage (linear). Colour scale represents $\mathcal{F}$.}\label{fig:sdf_meas}
+  \cprotect\caption[Spill duty factor heatmaps for bunched and coasting beams]{Spill duty factor ($\mathcal{F}$) heatmaps for the RFKO system as measured in the machine, both with a bunched beam (upper image) and coasting beam (lower image), as a function of chirp repetition frequency (log-scale) and voltage (linear). Colour scale represents $\mathcal{F}$ measured at \qty{20}{\kilo\hertz} windows.}\label{fig:sdf_meas}
 \end{figure}
 
 
 \chapter{Conclusion}\label{chap:conclusion}
 
-This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) for the East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed-target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results of machine studies presented in~\autoref{results:freq_response} and~\autoref{results:sdf} use both time-domain and frequency-domain analysis to show that the system is capable of producing spills with a flat frequency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors of up to \qty{80}{\percent} for bunched beams, and \qty{60}{\percent} for coasting beams.
+This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) for the East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed-target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results of machine studies presented in~\autoref{results:freq_response} and~\autoref{results:sdf} use both time-domain and frequency-domain analysis to show that the system is capable of producing spills with a flat frequency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors (measured ) of up to \qty{80}{\percent} for bunched beams, and \qty{60}{\percent} for coasting beams.
 
 This thesis also demonstrates significant agreement between the frequency response of this RFKO implementation and the characteristics observed in previous studies~\cite{wepmp008,Pari:2780495}. This agreement is also well-observed between the real machine and simulations with a bunched beam, where both datasets place the optimum repetition frequency (minimising the presence of this frequency in the spill) for an RFKO-driving chirp signal between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz}. This finding motivates the development of a dedicated signal generator for the PS TFB system for use with RFKO. 
 This agreement is less well-observed for coasting beams, where the simulations show lower frequency response minima than machine observations. 
@@ -1215,7 +1215,7 @@ There are several opportunities for improvements presented in this thesis, both 
   \item The setup of the AFG used to generate chirp signals with repetition rates below \qty{1}{\milli\second} (\autoref{sec:magcycle}) was only a temporary solution, and is not suitable for long-term operational use, as it operates entirely independently from the LHC Software Architecture~\cite{Roderick:1215575} (LSA) database. A dedicated signal generator, with an interface to CERN's Technical Network and LSA, would be a significant improvement.
   \item The extraction procedure outlined in this thesis only used frequency-modulated chirp signals to sweep across the range of particle tunes. Other work has used signals such as coloured noise~\cite{Nagaslaev:2011zz}. These signals, and others such as dual-band frequencies, could be explored in future studies, using the same equipment and methods as presented in this thesis.
   \item In addition to frequency-modulation control, amplitude-modulation control has been studied in the past, and can offer improvements in macro-scale spill structure~\cite{NODA2002241}. This technique could be used to mitigate the exponential decay seen in all spill structures presented in this thesis, and extend spill times to durations significantly longer than \qty{0.5}{\second}.
-  \item While simulations for bunched beams show good agreement with the machine implementation, the results of coasting (debunched) beams are less clear. The longitudinal dynamics of the coasting beams in RFKO would require further characterisation to understand the differences between the simulations and the machine fully.
+  \item While simulations for bunched beams show good agreement with the machine implementation, the results of coasting (debunched) beams are less clear. The complete dynamics of the coasting beams in RFKO would require further characterisation to understand the differences between the simulations and the machine fully.
 \end{itemize}
 
 
