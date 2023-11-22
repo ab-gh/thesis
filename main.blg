@@ -1,0 +1,74 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: abbrvurlcust.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: refs.bib
+Warning--entry type for "russo" isn't style-file defined
+--line 17 of file refs.bib
+Warning--entry type for "brunner" isn't style-file defined
+--line 26 of file refs.bib
+Warning--entry type for "Hegglin:2239398" isn't style-file defined
+--line 579 of file refs.bib
+Warning--empty booktitle in Fraser:CAS
+Warning--empty journal in Iselin:MAD
+Warning--empty journal in Rossbach:247501
+Warning--empty year in Tecker:2674860
+Warning--empty publisher in PIMMS
+Warning--empty booktitle in Furukawa2002PROGRESSOR
+Warning--empty journal in Sterbini:2158994
+Warning--empty journal in Gasior:895142
+You can't pop an empty literal stack for entry cgd
+while executing---line 1484 of file abbrvurlcust.bst
+You can't pop an empty literal stack for entry optics_repo
+while executing---line 1484 of file abbrvurlcust.bst
+Warning--empty journal in Schicho:2039579
+Warning--empty journal in nxcals
+Warning--empty booktitle in Bryant:CAS
+Warning--empty booktitle in Nagaslaev:2011zz
+You've used 56 entries,
+            2947 wiz_defined-function locations,
+            1018 strings with 16755 characters,
+and the built_in function-call counts, 20425 in all, are:
+= -- 2052
+> -- 724
+< -- 9
++ -- 239
+- -- 183
+* -- 1008
+:= -- 2620
+add.period$ -- 214
+call.type$ -- 56
+change.case$ -- 58
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 632
+empty$ -- 2222
+format.name$ -- 183
+if$ -- 5830
+int.to.chr$ -- 0
+int.to.str$ -- 56
+missing$ -- 45
+newline$ -- 326
+num.names$ -- 51
+pop$ -- 474
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1646
+stack$ -- 0
+substring$ -- 652
+swap$ -- 170
+text.length$ -- 71
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 12
+while$ -- 84
+width$ -- 58
+write$ -- 681
+(There were 2 error messages)

@@ -1,16 +1,16 @@
 \begin{thebibliography}{10}
 
-\bibitem{Fraser:CAS}
-M.~A. Fraser.
-\newblock Fast extraction: single and multi-turn.
-\newblock volume Vol 5, page Extraction and Transfer. CERN, 2018.
-\newblock \doi{10.23730/CYRSP-2018-005.285}.
-
 \bibitem{Fraser:feasibility}
 M.~Fraser, P.~A. Arrutia~Sota, K.~Bi{\l}ko, N.~Charitonidis, S.~Danzeca, M.~Delrieux, M.~Duraffourg, N.~Emriskova, L.~S. Esposito, R.~Garc{\'\i}a~Al{\'\i}a, A.~Guerrero, O.~Hans, G.~Imesch, E.~Johnson, G.~Lerner, I.~Ortega~Ruiz, G.~Pezzullo, D.~Prelipcean, F.~Ravotti, F.~Roncarolo, and A.~Waets.
 \newblock {Feasibility of Slow-Extracted High-Energy Ions From the CERN Proton Synchrotron for CHARM}.
 \newblock {\em JACoW IPAC}, 2022:1703--1706, 2022.
 \newblock \doi{10.18429/JACoW-IPAC2022-WEPOST012}.
+
+\bibitem{Fraser:CAS}
+M.~A. Fraser.
+\newblock Fast extraction: single and multi-turn.
+\newblock volume Vol 5, page Extraction and Transfer. CERN, 2018.
+\newblock \doi{10.23730/CYRSP-2018-005.285}.
 
 \bibitem{Metzmacher:2061508}
 K.~D. Metzmacher and L.~Sermeus.
