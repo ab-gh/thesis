@@ -1201,7 +1201,7 @@ This synchrotron motion also effects the extraction transit time. The distance o
 
 \chapter{Conclusion}\label{chap:conclusion}
 
-This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) for the East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed-target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results of machine studies presented in~\autoref{results:freq_response} and~\autoref{results:sdf} use both time-domain and frequency-domain analysis to show that the system is capable of producing spills with a flat frequency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors (measured ) of up to \qty{80}{\percent} for bunched beams, and \qty{60}{\percent} for coasting beams.
+This thesis presents a number of developments towards the operational implementation of Radio Frequency Knockout (RFKO) slow extraction at CERN's Proton Synchrotron (PS) for the East experimental area (EA). Within the goal of producing low intensity, high charge, high energy, and long duration spills for fixed-target experiments, the implementation of RFKO presented shows promising spill frequency structure and duty factor performance. The results of machine studies presented in~\autoref{results:freq_response} and~\autoref{results:sdf} use both time-domain and frequency-domain analysis to show that the system is capable of producing spills with a flat frequency structure at durations significantly longer than \qty{100000}{turns}, and with spill duty factors (measured at \qty{18}{\kilo\hertz}, and calculated with windows between \qty{1}{\kilo\hertz} and \qty{20}{\kilo\hertz}) of up to \qty{80}{\percent} for bunched beams, and \qty{60}{\percent} for coasting beams.
 
 This thesis also demonstrates significant agreement between the frequency response of this RFKO implementation and the characteristics observed in previous studies~\cite{wepmp008,Pari:2780495}. This agreement is also well-observed between the real machine and simulations with a bunched beam, where both datasets place the optimum repetition frequency (minimising the presence of this frequency in the spill) for an RFKO-driving chirp signal between \qty{2}{\kilo\hertz} and \qty{4}{\kilo\hertz}. This finding motivates the development of a dedicated signal generator for the PS TFB system for use with RFKO. 
 This agreement is less well-observed for coasting beams, where the simulations show lower frequency response minima than machine observations. 
@@ -1245,6 +1245,39 @@ There are several opportunities for improvements presented in this thesis, both 
 \lstinputlisting[captionpos=t, language=python, label={lst:generate_chirp}, caption=Python code to generate a single chirp signal as produced by the Arbitrary Function Generator (\autoref{eq:both-chirps}).]{code/generate_chirp.py}
 \clearpage
 \lstinputlisting[captionpos=t, language=python, label={lst:time_series_calculation}, caption=Python code used to calculate the laboratory time of particle extraction and reconstruct the time-series spill array (\autoref{sec:machine_freq_anal_method}).]{code/time_series.py}
+
+\chapter{Spill Duty Factor Plots}
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{sdfs/on_1.png}
+    \caption{First subfigure}
+    \label{fig:sub1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{sdfs/on_5.png}
+    \caption{Second subfigure}
+    \label{fig:sub2}
+  \end{subfigure}
+  
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{sdfs/on_10.png}
+    \caption{Third subfigure}
+    \label{fig:sub3}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{sdfs/on_20.png}
+    \caption{Fourth subfigure}
+    \label{fig:sub4}
+  \end{subfigure}
+  
+  \caption{A figure with four subfigures}
+  \label{fig:test}
+  \end{figure}
 
 \end{appendices}
 
