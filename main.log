@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  22 NOV 2023 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.25)  22 NOV 2023 13:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2062,4 +2062,548 @@ File: sample_rate_variation.png Graphic file (type png)
 Package pdftex.def Info: sample_rate_variation.png  used on input line 1050.
 (pdftex.def)             Requested size: 341.43437pt x 125.14859pt.
 
-LaTeX Warning: Reference `fig:sample_rate_variation' on page 49 undefined on i
+LaTeX Warning: Reference `fig:sample_rate_variation' on page 49 undefined on input line 1054.
+
+
+LaTeX Warning: Citation `PLUM200274' on page 49 undefined on input line 1054.
+
+
+LaTeX Warning: Reference `fig:raw_ffts' on page 49 undefined on input line 1054.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[49
+
+ <./raw_signal.png>]
+<raw_ffts.png, id=510, 715.473pt x 426.393pt>
+File: raw_ffts.png Graphic file (type png)
+<use raw_ffts.png>
+Package pdftex.def Info: raw_ffts.png  used on input line 1060.
+(pdftex.def)             Requested size: 341.43437pt x 203.47566pt.
+
+
+LaTeX Warning: Reference `fig:raw_signal' on page 50 undefined on input line 1061.
+
+
+LaTeX Warning: Reference `fig:raw_signal' on page 50 undefined on input line 1061.
+
+
+LaTeX Warning: Reference `lst:time_series_calculation' on page 50 undefined on input line 1074.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[50 <./sample_rate_variation.png>]
+
+LaTeX Warning: Reference `fig:freq_response_machine' on page 51 undefined on input line 1078.
+
+
+LaTeX Warning: Reference `sec:machine_freq_anal_method' on page 51 undefined on input line 1078.
+
+
+LaTeX Warning: Citation `wepmp008' on page 51 undefined on input line 1078.
+
+
+LaTeX Warning: Citation `Pari:2780495' on page 51 undefined on input line 1078.
+
+
+LaTeX Warning: Reference `fig:freq_response_machine' on page 51 undefined on input line 1084.
+
+
+LaTeX Warning: Reference `sec:machine_freq_anal_method' on page 51 undefined on input line 1084.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[51 <./raw_ffts.png>]
+
+Package siunitx Info: Option "separate-uncertainty" has been deprecated in
+(siunitx)             this release.
+(siunitx)             
+(siunitx)             Use "uncertainty-mode = separate" as a replacement.
+
+
+
+LaTeX Warning: Citation `Sorge_2018' on page 52 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `Pullia:313678' on page 52 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `Bryant:CAS' on page 52 undefined on input line 1092.
+
+
+LaTeX Warning: Reference `eq:spiral_step' on page 52 undefined on input line 1097.
+
+
+LaTeX Warning: Reference `eq:spiral_kick' on page 52 undefined on input line 1097.
+
+
+LaTeX Warning: Reference `fig:transit_time' on page 52 undefined on input line 1097.
+
+<transit-time-phase-space.png, id=530, 1517.67pt x 1264.725pt>
+File: transit-time-phase-space.png Graphic file (type png)
+<use transit-time-phase-space.png>
+Package pdftex.def Info: transit-time-phase-space.png  used on input line 1101.
+(pdftex.def)             Requested size: 256.07741pt x 213.39867pt.
+
+LaTeX Warning: Citation `PhysRevApplied.13.044076' on page 52 undefined on input line 1106.
+
+
+LaTeX Warning: Citation `Pullia:313678' on page 52 undefined on input line 1106.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[52]
+
+LaTeX Warning: Reference `fig:freq_response_sim' on page 53 undefined on input line 1112.
+
+
+LaTeX Warning: Reference `fig:freq_response_machine' on page 53 undefined on input line 1112.
+
+
+LaTeX Warning: Reference `machine_rf_off' on page 53 undefined on input line 1112.
+
+<machine_rf_on.png, id=538, 545.6385pt x 354.123pt>
+File: machine_rf_on.png Graphic file (type png)
+<use machine_rf_on.png>
+Package pdftex.def Info: machine_rf_on.png  used on input line 1117.
+(pdftex.def)             Requested size: 384.1096pt x 249.2947pt.
+<machine_rf_off.png, id=540, 547.8066pt x 354.123pt>
+File: machine_rf_off.png Graphic file (type png)
+<use machine_rf_off.png>
+Package pdftex.def Info: machine_rf_off.png  used on input line 1121.
+(pdftex.def)             Requested size: 384.1096pt x 248.31126pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<sim_rf_on.png, id=542, 545.6385pt x 354.123pt>
+File: sim_rf_on.png Graphic file (type png)
+<use sim_rf_on.png>
+Package pdftex.def Info: sim_rf_on.png  used on input line 1130.
+(pdftex.def)             Requested size: 384.1096pt x 249.2947pt.
+<sim_rf_off.png, id=544, 545.6385pt x 354.123pt>
+File: sim_rf_off.png Graphic file (type png)
+<use sim_rf_off.png>
+Package pdftex.def Info: sim_rf_off.png  used on input line 1134.
+(pdftex.def)             Requested size: 384.1096pt x 249.2947pt.
+\openout4 = `main-10.cpt'.
+
+\openout4 = `main-11.cpt'.
+
+(./main-11.cpt) (./main-11.cpt)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:simvmeas_bunched' on page 53 undefined on input line 1140.
+
+
+LaTeX Warning: Reference `fig:simvmeas_coasting' on page 53 undefined on input line 1140.
+
+
+LaTeX Warning: Reference `fig:simvmeas_bunched' on page 53 undefined on input line 1141.
+
+
+LaTeX Warning: Reference `fig:simvmeas_coasting' on page 53 undefined on input line 1141.
+
+<simvmeas_bunched.png, id=546, 516.0078pt x 351.83446pt>
+File: simvmeas_bunched.png Graphic file (type png)
+<use simvmeas_bunched.png>
+Package pdftex.def Info: simvmeas_bunched.png  used on input line 1145.
+(pdftex.def)             Requested size: 341.43437pt x 232.80199pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<simvmeas_coasting.png, id=548, 516.0078pt x 351.83446pt>
+File: simvmeas_coasting.png Graphic file (type png)
+<use simvmeas_coasting.png>
+Package pdftex.def Info: simvmeas_coasting.png  used on input line 1151.
+(pdftex.def)             Requested size: 341.43437pt x 232.80199pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[53 <./transit-time-phase-space.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[54 <./machine_rf_on.png> <./machine_rf_off.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[55 <./sim_rf_on.png> <./sim_rf_off.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[56 <./simvmeas_bunched.png> <./simvmeas_coasting.png>]
+
+LaTeX Warning: Citation `Sorge_2018' on page 57 undefined on input line 1158.
+
+
+LaTeX Warning: Reference `fig:sdf_example' on page 57 undefined on input line 1161.
+
+
+LaTeX Warning: Reference `fig:raw_signal' on page 57 undefined on input line 1161.
+
+<sdfs.png, id=586, 715.473pt x 426.393pt>
+File: sdfs.png Graphic file (type png)
+<use sdfs.png>
+Package pdftex.def Info: sdfs.png  used on input line 1165.
+(pdftex.def)             Requested size: 341.43437pt x 203.47566pt.
+
+LaTeX Warning: Reference `fig:raw_signal' on page 57 undefined on input line 1166.
+
+
+LaTeX Warning: Reference `fig:raw_signal' on page 57 undefined on input line 1166.
+
+
+LaTeX Warning: Reference `fig:sdf_meas' on page 57 undefined on input line 1169.
+
+
+LaTeX Warning: Citation `Cappi:134321' on page 57 undefined on input line 1169.
+
+
+LaTeX Warning: Reference `sec:long_phase_space' on page 57 undefined on input line 1171.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[57
+
+ <./sdfs.png>]
+
+LaTeX Warning: Reference `eq:slip_factor' on page 58 undefined on input line 1174.
+
+
+LaTeX Warning: Reference `sec:steinbach' on page 58 undefined on input line 1175.
+
+<synch-phase-space.png, id=596, 2569.6pt x 1832.8475pt>
+File: synch-phase-space.png Graphic file (type png)
+<use synch-phase-space.png>
+Package pdftex.def Info: synch-phase-space.png  used on input line 1179.
+(pdftex.def)             Requested size: 281.68385pt x 200.91467pt.
+
+LaTeX Warning: Reference `fig:synch-phase-space' on page 58 undefined on input line 1184.
+
+
+LaTeX Warning: Citation `Sorge_2018' on page 58 undefined on input line 1184.
+
+
+LaTeX Warning: Citation `PhysRevAccelBeams.26.014402' on page 58 undefined on input line 1184.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[58 <./synch-phase-space.png>]
+
+LaTeX Warning: Reference `fig:sdf_example' on page 59 undefined on input line 1186.
+
+<rf_on_heatmap_10.png, id=607, 474.8139pt x 310.0383pt>
+File: rf_on_heatmap_10.png Graphic file (type png)
+<use rf_on_heatmap_10.png>
+Package pdftex.def Info: rf_on_heatmap_10.png  used on input line 1191.
+(pdftex.def)             Requested size: 384.1096pt x 250.80795pt.
+<rf_off_heatmap_10.png, id=609, 474.8139pt x 310.0383pt>
+File: rf_off_heatmap_10.png Graphic file (type png)
+<use rf_off_heatmap_10.png>
+Package pdftex.def Info: rf_off_heatmap_10.png  used on input line 1195.
+(pdftex.def)             Requested size: 384.1096pt x 250.80795pt.
+\openout4 = `main-12.cpt'.
+
+\openout4 = `main-13.cpt'.
+
+(./main-13.cpt) (./main-13.cpt)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[59]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[60 <./rf_on_heatmap_10.png> <./rf_off_heatmap_10.png>]
+Chapter 5.
+
+LaTeX Warning: Reference `results:freq_response' on page 61 undefined on input line 1204.
+
+
+LaTeX Warning: Reference `results:sdf' on page 61 undefined on input line 1204.
+
+
+LaTeX Warning: Citation `wepmp008' on page 61 undefined on input line 1206.
+
+
+LaTeX Warning: Citation `Pari:2780495' on page 61 undefined on input line 1206.
+
+
+LaTeX Warning: Reference `sec:rfko_sim' on page 61 undefined on input line 1209.
+
+
+LaTeX Warning: Citation `Schicho:2039579' on page 61 undefined on input line 1209.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61
+
+]
+
+LaTeX Warning: Reference `sec:septum' on page 62 undefined on input line 1215.
+
+
+LaTeX Warning: Citation `optics_repo' on page 62 undefined on input line 1215.
+
+
+LaTeX Warning: Reference `sec:magcycle' on page 62 undefined on input line 1216.
+
+
+LaTeX Warning: Citation `Roderick:1215575' on page 62 undefined on input line 1216.
+
+
+LaTeX Warning: Citation `Nagaslaev:2011zz' on page 62 undefined on input line 1217.
+
+
+LaTeX Warning: Citation `NODA2002241' on page 62 undefined on input line 1218.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[62]
+Chapter 6.
+(./ack.tex) (./main.bbl [63
+
+] [64
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[65]
+Underfull \hbox (badness 1147) in paragraph at lines 194--196
+\T1/ptm/m/n/10.95 (+20) in-te-gra-tion.  \T1/ptm/m/sc/10.95 (+20) Url\T1/ptm/m/n/10.95 (+20) : [][]$\T1/cmtt/m/n/10.95 https : / / gitlab\OML/cmm/m/it/10.95 :\T1/cmtt/m/n/10.95 cern\OML/cmm/m/it/10.95 :\T1/cmtt/m/n/10.95 ch / abt -[] optics -[] and -[] code -[] repository /
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[66]
+Underfull \hbox (badness 2158) in paragraph at lines 224--226
+[]\T1/ptm/m/n/10.95 (+20) HTCondor, a high-throughput com-put-ing soft-ware frame-work.  \T1/ptm/m/sc/10.95 (+20) Url\T1/ptm/m/n/10.95 (+20) : [][]$\T1/cmtt/m/n/10.95 https : / /
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[67])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[68]
+Appendix A.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1243.
+
+
+LaTeX Warning: Reference `sec:trans_exc' on page 69 undefined on input line 1243.
+
+
+LaTeX Warning: Reference `sec:trans_exc' on page 69 undefined on input line 1243.
+
+(./code/kick_angle.py [69
+
+])
+
+LaTeX Warning: Reference `eq:both-chirps' on page 70 undefined on input line 1245.
+
+
+LaTeX Warning: Reference `eq:both-chirps' on page 70 undefined on input line 1245.
+
+(./code/generate_chirp.py)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[70]
+
+LaTeX Warning: Reference `sec:machine_freq_anal_method' on page 71 undefined on input line 1247.
+
+
+LaTeX Warning: Reference `sec:machine_freq_anal_method' on page 71 undefined on input line 1247.
+
+(./code/time_series.py)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[71
+
+] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  451C3F2B209993DA10EBD99C4AE6AEC9;7507.
+ ) 
+Here is how much of TeX's memory you used:
+ 36265 strings out of 476025
+ 728534 string characters out of 5790017
+ 2136388 words of memory out of 5000000
+ 55143 multiletter control sequences out of 15000+600000
+ 624179 words of font info for 440 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,13n,89p,1421b,2822s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (71 pages, 14369225 bytes).
+PDF statistics:
+ 1058 PDF objects out of 1200 (max. 8388607)
+ 819 compressed objects within 9 object streams
+ 395 named destinations out of 1000 (max. 500000)
+ 109969 words of extra memory for PDF output out of 128383 (max. 10000000)
+
