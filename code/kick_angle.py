@@ -3,6 +3,7 @@ import numpy as np
 
 p = 5.392 # GeV/c, proton momentum for the cycle
 Brho = p*3.3356 # Tm, magnetic rigidity
+charge = 1 # e, particle charge
 
 def kick_angle(voltage):
     """
@@ -12,6 +13,7 @@ def kick_angle(voltage):
     c = const["speed of light in vacuum"][0] # [m/s] speed of light
     E0 = const["proton mass energy equivalent in MeV"][0]*1e6 # eV
     mu0 = const["vacuum mag. permeability"][0] # H/m, vacuum permeability
+    e = const["elementary charge"][0] # C, elementary charge
 
     T = (np.sqrt(p**2+E0/1e9**2)-E0/1e9)*1e9 # eV, proton KE
     P = 5e3 # W, TFB peak power / electrode
@@ -36,7 +38,7 @@ def kick_angle(voltage):
     Bfield = Hfield * mu0
 
     # Angle
-    theta_M = c/1e9*Bfield*L / (cp/10**9)
-    theta_E = Efield/1e9*L / (cp/10**9 * beta)
+    theta_M = c/1e9*Bfield*L*charge*e / (cp/10**9) # Eq 3.8
+    theta_E = (charge*e/c) * (Efield/1e9*L / (cp/10**9 * beta)) # Eq 3.7
     theta = theta_E + theta_M
     return theta
