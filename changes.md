@@ -7,7 +7,7 @@
 6. p17: m_0 -> m * gamma_c * m_0. ✅
 7. p17: "Bending angle" -> "bending radius" below eq2.10. ✅
 8. p17: remove "/atomic mass unit". ✅
-9. p17: Added charge Z (to generalise) and fixed unit formatting (Eq 2.11) ✅
+9. p17: Added charge Z (to generalise) and removed units in formula (Eq 2.11) ✅
 10. p18: Changed figure 2.3 to up-pointing magnetic field. ✅
 11. p18: Clarify particle in figure 2.4 is moving out of the plane. ✅
 12. p18: Clarify sextupoles are used for chromaticity correction, not dispersion (dispersion is corrected by quadrupoles). ✅
