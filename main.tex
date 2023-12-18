@@ -300,7 +300,7 @@ The quantity $B\rho$ is known as the \textit{magnetic rigidity} of a beam, and d
 
 If the relativistic momentum $p=mv$ of the particle is measured in \unit[per-mode = symbol]{\GeV\per\clight}, the magnetic rigidity can be expressed in Tesla-meters~\cite[Eq 4.25]{Wiedemann}:
 \begin{equation}
-B\rho = \frac{3.3356\cdot p}Z
+B\rho = \frac{3.3356\cdot p}Z\ \frac{\text{Tm}}{\text{GeV/c}}
 \label{tesla-meters}
 \end{equation} where $Z=q/e$, the elementary charge of the particle (1 for protons).
 Referring again to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a magnetic field pointed vertically upwards (along the $\hat y$ vector) will cause a positively-charged particle with motion along the $\hat s$ vector to experience a bending force along the $-\hat x$ direction (illustrated in~\autoref{fig:dipole}). This formulation, however, only considers a single dipole. In reality, the bending magnet structure of accelerators typically consists of multiple dipoles placed around the ring, their power converters connecting in series. The arrangements of these bending magnets---referred to as Main Units (MU) in the context of the PS---will define the reference\footnote{Sometimes referred to as \textit{design} orbit} orbit in the accelerator.
@@ -308,7 +308,7 @@ Referring again to~\autoref{eq:lorentz} (with the help of~\autoref{fig:rhr}), a 
 \begin{figure}[h]
   \centering
   \includegraphics*[width=0.2\linewidth]{dipole-bending.png}
-  \caption[Illustration of the force experienced by a charged particle in a magnetic dipole field.]{A ``front-on'' view of a dipole magnet, showing its magnetic field pointing down, and the Lorentz force experienced by a positively charged particle travelling into the page.}\label{fig:dipole}
+  \caption[Illustration of the force experienced by a charged particle in a magnetic dipole field.]{A ``front-on'' view of a dipole magnet, showing its magnetic field pointing up, and the Lorentz force experienced by a positively charged particle travelling into the page.}\label{fig:dipole}
 \end{figure}
 
 If $\alpha$ is the bending angle of a single MU, then $\alpha$ can be related to the magnetic rigidity by
@@ -364,7 +364,7 @@ where $\varphi(s)$ is the oscillation phase, $\varphi_0$ is the initial conditio
 Taking the derivative of~\eqref{eq:motion_x} with respect to $s$ gives an equation for the angle of the trajectory:
 \begin{equation}
 % x'(s)=\sqrt{\varepsilon}\sqrt{\beta(s)}\left(\frac12\beta'(s)\cos(\varphi(s)-\varphi_0)+\sin(\varphi(s))\right)
-x'(s)=\frac{-\sqrt\varepsilon}{\sqrt{\beta(s)}}\sin(\varphi(s)-\varphi_0)+\alpha(s)\cos(\varphi(s)-\varphi_0)
+x'(s)=\frac{-\sqrt\varepsilon}\left[{\sqrt{\beta(s)}}\sin(\varphi(s)-\varphi_0)+\alpha(s)\cos(\varphi(s)-\varphi_0)\right]
 \label{eq:motion_px}
 \end{equation}
 
@@ -524,7 +524,7 @@ Where the transverse planes principally consider bending and focussing effects f
 \end{equation} 
 An electric field of magnitude $E_0$ travelling in the $s$ direction can be defined as
 \begin{equation}
-  E_s = E_0\cos(\omega_{RF}t)
+  E = E_0\cos(\omega_{RF}t)
 \end{equation} where $\omega_{RF}$ is the RF frequency. Therefore, for a synchronous particle with synchronous phase $\phi_s$, the rate of energy gain is
 \begin{equation}
   \frac{dE_s}{ds}=\frac{dp_s}{dt}=eE_0\sin\phi_s
@@ -532,8 +532,8 @@ An electric field of magnitude $E_0$ travelling in the $s$ direction can be defi
 
 In a synchrotron, where the orbit of particles is of constant radius, the magnetic field $B$ needs to increase in time (\textit{ramp}) as the particle is accelerated. Additionally, to keep the particle in phase with the RF cavity, the frequency of the RF $\omega_{RF}$ must follow the particle's energy gain. This synchronous condition, for velocities $v\ll c$, is defined as~\cite{Tecker:2674860}
 \begin{equation}
-  \frac{2\pi\rho}{v_s}=\frac h{f_{RF}}
-\end{equation} where $v_s$ is the synchronous particle velocity and $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable bunches, spread equidistantly around the ring circumference. 
+  \frac{L_D+2\pi\rho}{v_s}=\frac h{f_{RF}}
+\end{equation} where $L_D$ is the total length of drift sections, $v_s$ is the synchronous particle velocity and $h$ is the RF harmonic, the number of RF cycles per revolution. For East Area beams in the PS, $h=8$ acceleration is used. This means that there are eight stable bunches, spread equidistantly around the ring circumference. 
 
 To keep a particle with increasing energy bent along a path of constant radius, the magnetic field $B$ of the bending dipoles must increase as RF acceleration occurs. Recalling~\autoref{eq:brho}, and deriving by time, obtains
 \begin{equation}
@@ -826,7 +826,7 @@ From~\autoref{fig:cycle}, we find the tune split at injection $\Delta=-0.1$, and
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{tunemap.png}
-  \caption[Fractional tune map during RFKO slow extraction]{A fractional tune map, plotting the evolution of horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$ during RFKO slow extraction. Colour scale indicates time. Dashed lines indicate some of the second-order (red, blue) and third-order (green) resonances. Black lines at $Q_x=0.319, Q_y=0.249$ are the final tunes reached during the extraction period. Integer part for all tunes is 6.}\label{fig:tunemap}
+  \caption[Fractional tune map during RFKO slow extraction]{A fractional tune map, plotting the evolution of horizontal fractional tune $Q_x$ against vertical fractional tune $Q_y$ during RFKO slow extraction. Colour scale indicates time. Dashed lines indicate some of the second-order (red) and third-order (green, blue) resonances. Black lines at $Q_x=0.319, Q_y=0.249$ are the final tunes reached during the extraction period. Integer part for all tunes is 6.}\label{fig:tunemap}
 \end{figure}
 
 \begin{figure}[h]
